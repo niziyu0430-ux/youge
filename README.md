@@ -2,7 +2,7 @@
 
 ## GitHub 与线上部署
 
-源码仓库：<https://github.com/niziyu0430-ux/youge>。网站需要 Python 后端，不能直接用 GitHub Pages 运行。Render 免费验证版配置见 `render.yaml`；登录密码在 Render 的 `YOUGE_ACCESS_PASSWORD` 秘密环境变量中设置，不随源码公开。完整部署、域名切换与后续题库同步见[部署维护说明](docs/19-deployment.md)。
+源码仓库：<https://github.com/niziyu0430-ux/youge>。免费验证站：<https://youge.onrender.com>。网站需要 Python 后端，不能直接用 GitHub Pages 运行。Render 配置见 `render.yaml`；登录密码在 Render 的 `YOUGE_ACCESS_PASSWORD` 秘密环境变量中设置，不随源码公开。完整部署、域名切换与后续题库同步见[部署维护说明](docs/19-deployment.md)。
 
 本仓库保留在用网页、人物素材、作品目录、所有题包历史、源码、文档和维护脚本。下载缓存、临时输出、批量审查中间文件及大体积生成报告留在本地，不影响现有网站运行。
 

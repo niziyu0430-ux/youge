@@ -2,6 +2,8 @@
 
 ## 已选方案
 
+2026-11-04首次部署成功：<https://youge.onrender.com>。已通过真实公网登录、16题取题与完整报告、刷新登录入口及退出失效检查；GitHub Actions 检查通过。自定义域名需以下流程完成切换后验收。
+
 - GitHub：`niziyu0430-ux/youge`，公开仓库，主分支 `main`。
 - 网站运行：Render Python Web Service，免费验证方案；域名最终使用 `life-counter.cn`，替换原人生计算器。
 - 后端入口：`gunicorn --config gunicorn.conf.py 'youge.production:create_app()'`。

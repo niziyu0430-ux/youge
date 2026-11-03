@@ -3,6 +3,7 @@ services:
     name: youge
     runtime: python
     plan: free
+    region: singapore
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn --config gunicorn.conf.py 'youge.production:create_app()'
     healthCheckPath: /api/health
