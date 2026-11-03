@@ -2,7 +2,7 @@
 
 ## 已选方案
 
-2026-11-04首次部署成功：<https://youge.onrender.com>。已通过真实公网登录、16题取题与完整报告、刷新登录入口及退出失效检查；GitHub Actions 检查通过。自定义域名需以下流程完成切换后验收。
+2026-11-04首次部署成功：<https://youge.onrender.com>。已通过真实公网登录、16题取题与完整报告、刷新登录入口及退出失效检查；GitHub Actions 检查通过。域名已在Render申请绑定，腾讯云保存DNS记录触发账号本人的微信身份验证；验证完成并实际保存解析前，不代表自定义域名已切换。
 
 - GitHub：`niziyu0430-ux/youge`，公开仓库，主分支 `main`。
 - 网站运行：Render Python Web Service，免费验证方案；域名最终使用 `life-counter.cn`，替换原人生计算器。
@@ -44,7 +44,7 @@ git commit -m "Update authored game questionnaires"
 git push origin main
 ```
 
-上传新题包时同时保留 `config/question-packs-history/` 和当前题库索引，避免旧答卷失去兼容性。首次部署若用公开仓库URL且尚未连接Git提供商，可先在Render中使用 Manual Deploy → Deploy latest commit；连接GitHub提供商后再启用主分支自动部署。连接前应由账号拥有者确认授权范围。域名只需首次配置，之后更新题库不用重复修改DNS。
+上传新题包时同时保留 `config/question-packs-history/` 和当前题库索引，避免旧答卷失去兼容性。本次通过公开仓库URL创建的服务没有自动拉取后续提交，因此当前更新流程必须在推送后进入[Render服务](https://dashboard.render.com/web/srv-dbl0b1942hec73dgu9ng)，使用 Manual Deploy → Deploy latest commit，并等待Live状态与目标提交一致。不要仅凭设置页显示On Commit就认定自动同步可用。后续可连接GitHub提供商或配置受保护的部署钩子，再实际验证自动部署；连接授权应由账号拥有者确认范围。域名只需首次配置，之后更新题库不用重复修改DNS。
 
 免费方案适合本阶段验证；闲置15分钟会休眠，下一位访问者可能需等待约一分钟。正式收费运营前应改用常驻实例，并验证实际访问地区的可用性。
 
