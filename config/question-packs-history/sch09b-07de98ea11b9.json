@@ -1,0 +1,1936 @@
+{
+  "id": "sch09b",
+  "title": "太空化学 SpaceChem",
+  "game_ids": [
+    "steam-92800"
+  ],
+  "scope": "PC官方本体：战役及ResearchNet有既定输入输出的关卡；进度不足可换基础反应器ALT；Sandbox另路，排除63 Corvi与独立Community Edition",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "本体有研究、生产与防御关，均在同一进度路径；每个后期情境另写基础单反应器ALT。",
+    "只把真实成绩目标计k，不声称防御关有普通直方图；不使用社区分支回退、多解槽、漏洞或DLC Quantum Junction。",
+    "每条模式路径均为12专属槽的8项当前行动与4项真实过去回顾；未到进度或未有经历可换题，跨游戏题由主流程另加。"
+  ],
+  "modes": [
+    {
+      "id": "puzzles",
+      "label": "战役／ResearchNet有既定输入输出的关卡",
+      "initial_variants": {}
+    },
+    {
+      "id": "sandbox",
+      "label": "ResearchNet原生Sandbox实验流水线",
+      "initial_variants": {
+        "SCH09B01": "SCH09B01.SANDBOX.V1",
+        "SCH09B02": "SCH09B02.SANDBOX.V1",
+        "SCH09B03": "SCH09B03.SANDBOX.V1",
+        "SCH09B04": "SCH09B04.SANDBOX.V1",
+        "SCH09B05": "SCH09B05.SANDBOX.V1",
+        "SCH09B06": "SCH09B06.SANDBOX.V1",
+        "SCH09B07": "SCH09B07.SANDBOX.V1",
+        "SCH09B08": "SCH09B08.SANDBOX.V1",
+        "SCH09B09": "SCH09B09.SANDBOX.V1",
+        "SCH09B10": "SCH09B10.SANDBOX.V1",
+        "SCH09B11": "SCH09B11.SANDBOX.V1",
+        "SCH09B12": "SCH09B12.SANDBOX.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "SCH09B01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "在本体起步搬运题里，输入与要求输出都是同一种氢分子，红蓝waldo和抓放指令已经可用。你准备写或改一条程序，先愿意做什么？",
+          "scene": "氢分子从左到右",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-store",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前可用的输入、抓取、移动、放下和输出步骤排好顺序，再实际运行",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先查看棋盘已给的输入位置、输出区域与现有指令状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "实际改一段已有箭头或抓放指令，再运行查看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对本题已有教学示范，再继续自己的尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不是知识测验；只问固定棋盘里实际能做的事，不把普通搬运路线计p/i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B01.V1"
+        },
+        {
+          "text": "如果还没有写好整条搬运线，第一题当前已显示一条起始轨迹和左侧输入位置，你先愿意做什么？",
+          "scene": "第一题尚未写好搬运环",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-store",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前已有轨迹、输入和输出要求",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "按眼前可用操作排好放输入指令、抓取和转向的步骤，再运行试一段",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先看本题已经提供的指令说明，再亲手放一条指令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际改一个现有箭头或抓放设置，再运行查看",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "不是知识测验；只问固定棋盘里实际能做的事，不把普通搬运路线计p/i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B01.ALT1"
+        },
+        {
+          "text": "你已在原生Sandbox放好一个分子输入与一座当前可用反应器，准备让它按自己想试的方式循环；没有关卡指定你必须生产哪种分子。你先愿意做什么？",
+          "scene": "自己给定的第一段输入",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-sandboxplay",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前可用指令排好输入、抓放与输出的步骤，再实际运行一版",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先查看自己已设输入、反应器和现有指令状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "直接改一段已有箭头或指令，再运行查看本次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对本体已有基础指令说明，再亲手继续试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不把Sandbox编成无限地图或必须做分子计算机；只用当前真已设输入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B01.SANDBOX.V1"
+        },
+        {
+          "text": "刚进入Sandbox也可：你刚设好一种基础输入和第一座反应器，还没有完整程序，先想做什么？",
+          "scene": "Sandbox刚设好第一种输入",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-sandboxplay",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对这份已设输入、可用指令和反应器当前状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "按输入、抓取与移动的可做步骤排好一轮并运行",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有基础指令示范，再亲手放一条",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际改一个已有箭头或抓放设置，再运行看结果",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "不把Sandbox编成无限地图或必须做分子计算机；只用当前真已设输入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B01.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你在一题已给键合器与两色waldo的关卡里，运行后得到的分子形状不合自己预想，原因尚未查明。指令和键合器可编辑，你先想做什么？",
+          "scene": "键合后的形状不合预想",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-patch",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对棋盘上现有原子位置、键合器与指令状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "实际改一处已有键合/移动指令，再运行查看本次编辑结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先按现有操作排清输入、对位、键合和输出步骤，再实际试一版",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "猜测键合发生时有一颗原子没在键合垫上，只移动那一处键合器、其他程序不变，再从相同输入重跑比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "题干未告诉为什么形状不对；控制改动可不能证实解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B02.V1"
+        },
+        {
+          "text": "还没试键合时，你在基础氢分子搬运题已放好部分路径和一个输出前放下指令，准备处理整个分子进入输出框这一段。你先愿意做什么？",
+          "scene": "基础搬运题的整个输出区域",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-patch",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际移动一个输出前的放下指令，再运行看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前分子位置、输出边界和抓取状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对本题已有输出说明，再亲手继续试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排好移入框内、放下再触发输出的步骤，并实际运行",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "题干未告诉为什么形状不对；控制改动可不能证实解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B02.ALT1"
+        },
+        {
+          "text": "你Sandbox里一段自写程序跑到某处后停住，原因未查明，自己设好的输入不打算改。当前路径和指令可编辑，你先想做什么？",
+          "scene": "循环没有按预想继续",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-tutorial",
+            "sch09b-pipes",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看两色位置、输入输出和现有指令的运行状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "直接改一小段已有路径或指令，再运行查看这次编辑结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "按眼前可用操作排清取料、移动与释放的本轮步骤，再实际试一版",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "猜测输出前分子仍被抓住，只把输出前的一个抓放指令改为放下，其他不动，从相同输入重跑比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不把普通试改等同解释检验；题干未给停住原因。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B02.SANDBOX.V1"
+        },
+        {
+          "text": "刚在Sandbox设好基础输入时，你已有一段从左侧取料的路径和一个输出前放下指令，正准备把分子放到自己选的输出区。你先愿意做什么？",
+          "scene": "沙盒基础输入到所选输出区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-tutorial",
+            "sch09b-pipes",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按移入输出区、放下与触发输出的可做步骤排好这一轮，再运行",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际改一个输出前的放下指令，再运行查看本次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先核对本体已有输出说明，再亲手试一次",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前分子位置、抓取状态和输出边界",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "不把普通试改等同解释检验；题干未给停住原因。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B02.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你当前关卡已能抓取与旋转一段长分子，现有路径能经过它不止一颗原子。棋盘边界固定，程序在转向附近报碰撞，原因还没有查清。你先愿意做什么？",
+          "scene": "长分子转向的空间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际改一段已可用的转向或旋转指令，再运行查看",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先按可用格位排好抓取、平移、旋转与放下步骤，再实际试一版",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "猜测转轴选在分子端部导致扫到边界，只把抓取指令移到同一路径经过的另一颗原子，其他指令不动，再重跑比较",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看碰撞时的原子位置、抓取点与轨迹状态",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "不是最佳走位测验；替换抓取点是单项解释检验，普通重排0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B03.V1"
+        },
+        {
+          "text": "如果还不需要长分子旋转，当前基础搬运路径已经过输入与输出区，已放的抓放图标也能改成单独抓或放。你先愿意做什么？",
+          "scene": "基础题的单独抓取或放下",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清在哪里抓住、沿哪段移过去、在哪里放下的步骤，再实跑",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "主动重复切换抓放设置、撤回与启动，重点练熟自己使用指令菜单的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "实际把一个已有抓放图标改为单独抓取或放下，再运行看结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看waldo当前抓着哪颗原子、指令设置和输出位置",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "不是最佳走位测验；替换抓取点是单项解释检验，普通重排0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B03.ALT1"
+        },
+        {
+          "text": "你Sandbox当前已设置两种可用原料，并有键合器与两色waldo。刚试过的一版分子形状不合预想，原因未明，想按自己设想重接一小段分子。现在先愿意做什么？",
+          "scene": "沙盒里的键合片段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-educator",
+            "sch09b-patch",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前原子、键合器位置与指令状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "直接改一个已有键合指令或键合器布局，再运行查看",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先按输入、对位、键合与输出的可做步骤排好顺序，再实际运行",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "猜测上次多接的一条键来自另一对相邻键合器，只移开那一垫、其他不动，重跑比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "p有自己实际前次的异常前提；基础ALT不需要两种原料或键合经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B03.SANDBOX.V1"
+        },
+        {
+          "text": "还没做复杂键合时，当前Sandbox已设一个H2输入、摆好合法键合垫，也放过一条可编辑键合指令；拆键指令现在可用。想试拆这一条现有键，先做什么？",
+          "scene": "沙盒首次拆开H2的一条键",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-educator",
+            "sch09b-patch",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把一处已有键合指令改为拆键，再运行查看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对本体已有键合/拆键说明，再亲手试这一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先核对输入原子、键的位置与当前键合器状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "按输入、对位、拆键与移开的可做步骤排好程序，再实际运行",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "p有自己实际前次的异常前提；基础ALT不需要两种原料或键合经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B03.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已到可使用Sync的关卡，红蓝轨迹都已写了一段，运行中有一色停住，真实原因还没确定。你先想做什么？",
+          "scene": "两条轨迹在等什么",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动反复放置、撤回并运行一对Sync，重点练熟自己在编辑器里安排两色交接的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先猜测是另一色没有到达对应Sync，只改那一色的一段路径让它触及现有Sync，其余不动再重跑比较",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前两色位置、Sync与输入输出的运行状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "按当前指令排好两色先后到达与交接的步骤，再实际试跑",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "未预先断言停顿一定由Sync造成；t不要求后来更会同步。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B04.V1"
+        },
+        {
+          "text": "还没用过Sync时，基础题的一色waldo经过一个已有指令格却没有做出你预想的动作，原因未明，两色指令都可用。你先做什么？",
+          "scene": "基础题一格指令的颜色",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动重复选色、放指令和启动，重点练熟自己选择指令颜色与编辑的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "猜测那格指令不属于经过的waldo颜色，只在这一格换成另一色的同类指令，其他不动再重跑比较",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先查看两色路径、该格指令颜色与当前状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "直接改一段已有箭头或指令，再运行看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "未预先断言停顿一定由Sync造成；t不要求后来更会同步。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B04.ALT1"
+        },
+        {
+          "text": "你Sandbox已写出两条轨迹，当前Sync可用，想让两色围绕自己设好的原料交接。眼下先愿意做什么？",
+          "scene": "两条自写轨迹的交接",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-educator",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接改一段已有路径或Sync位置，再运行查看这次编辑结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "按两色到达、Sync与交接的可做步骤排好顺序，再实际试跑",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "主动反复放置、撤回和运行一对Sync，重点练熟自己的两色编辑与检查步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前两色位置、Sync和物料的运行状态",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "双线程时间安排本身不是持续经营系统，不强记y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B04.SANDBOX.V1"
+        },
+        {
+          "text": "你Sandbox刚放好两色起始轨迹和一种基础输入，还没用Sync，想让两色承担不同的现成步骤。你先愿意做什么？",
+          "scene": "沙盒两色起始轨迹的分工",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-educator",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动重复选色、放指令和启动，重点练熟自己在两色间编辑的步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先排好一色输入、另一色抓放并送出的步骤，再实际试跑",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前两色路径、输入区与现有指令状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "直接移动一色的起始位置或改一个现有指令，再运行看结果",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "双线程时间安排本身不是持续经营系统，不强记y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B04.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已到有外部管道的生产关，当前可用拆解与装配反应器，两器已各写过一版基础程序，给定输入和目标分子仍可查看。准备接中间产物这段，先做什么？",
+          "scene": "生产关里的中间产物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-pipes"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有拆解程序的输出接到装配器已有输入，运行一次，亲手试这条当前可用的中间产物传递布置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "让输入、各反应器、管道缓存与目标输出连续跑多轮，按等待与堵塞反馈调整整个网络",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前输入、目标、可用反应器类型和管道状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "按现有工具排好拆分、中间产物注释、接管和各器内程序的步骤，再实际试一版",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "普通拆解到装配的现成传递实试0，不因两类机器串接自动计b；多器与管道缓存实际多轮反馈才y，注释和本轮排步骤0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B05.V1"
+        },
+        {
+          "text": "还没到外部管道生产关时，你已在一座基础反应器里见到H2和O2输入、键合器与H2O2输出要求。你先想做什么？",
+          "scene": "单器内H2和O2的初步键合",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-pipes"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对两种给定输入的原子位置、键合器与输出形状",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "按先输入、对位、键合再输出的可做步骤排程序，并实际试跑",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "直接改一个已有键合器位置或键合指令，再运行查看本次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有键合示范，再继续亲手接这一小段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "普通拆解到装配的现成传递实试0，不因两类机器串接自动计b；多器与管道缓存实际多轮反馈才y，注释和本轮排步骤0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B05.ALT1"
+        },
+        {
+          "text": "你Sandbox已放两座当前可用、支持本轮拆键和键合的标准反应器，输入由你设好，准备让一种中间片段传到下游重组。没有官方目标分子，你先愿意做什么？",
+          "scene": "两座反应器的拆分与重组",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-create",
+            "sch09b-educator",
+            "sch09b-pipes"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在两座当前标准反应器内，分别实际加上可用拆键与键合指令，接好中间管道后运行，查看这轮片段传递与重组的编辑结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "让来源、拆分、管道缓存、重组与出口连跑多轮，按等待和堵塞反馈调整整体网络",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前反应器、输入与管道状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "按现有工具排清拆分、注释、接管和下游程序步骤，再实际试一版",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "两标准器普通拆组程序串接实改只0，不为保b虚构专用机型；多器来源管缓存出口实际多轮反馈才y，注释不替真实执行程序。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B05.SANDBOX.V1"
+        },
+        {
+          "text": "还没写多器程序时，你Sandbox刚放两座可用标准反应器，准备把一种简单输入原样从第一座送到第二座，管道与中间产物注释可用。先想做什么？",
+          "scene": "沙盒初次原样跨器传递",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-create",
+            "sch09b-educator",
+            "sch09b-pipes"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排好中间产物注释、接管与原样搬运的可做步骤，再实际试一版",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对两座反应器当前输入输出与管道连接状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "实际改一段已有管道或器内箭头，再运行看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对本体已有中间产物与管道说明，再亲手接一次",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "两标准器普通拆组程序串接实改只0，不为保b虚构专用机型；多器来源管缓存出口实际多轮反馈才y，注释不替真实执行程序。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B05.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你刚完成一题普通研究或生产关，自己的cycles/symbols等成绩与直方图已经出现，原解仍可回来编辑；不是防御关。现在先想做什么？",
+          "scene": "过关后想改哪一项",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-patch"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动反复编辑和运行其中一段，重点练熟自己安排指令与检查的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己提出“这段往返造成了多余周期”的解释，只改那段路径后比较同一题运行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "直接改一处现有指令或布局，再运行查看这次编辑结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "把比自己上次更少cycles或symbols当明确成绩目标，实际回去改解并重跑比较，不要求破纪录",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "k必须明确成绩比较，不把任何优化或过关都计竞争；不声称防御关有同类直方图。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B06.V1"
+        },
+        {
+          "text": "尚未完成基础搬运题时，你已能启动程序，输出计数仍未达到本题所列要求，当前路径可编辑。你先想做什么？",
+          "scene": "基础题尚未达到的输出计数",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-patch"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前输出计数、分子位置和指令状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "直接改一处输出前的抓放或输出指令，再运行看结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "主动多次放指令、撤回与启动，重点练熟自己使用编辑器的步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先让这版按本题已经列出的输出要求继续运行，推进当前目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "k必须明确成绩比较，不把任何优化或过关都计竞争；不声称防御关有同类直方图。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B06.ALT1"
+        },
+        {
+          "text": "你Sandbox已有一版能启动的红蓝程序，本体的镜像与红蓝交换菜单现在可用。你想处理这一版，先愿意做什么？",
+          "scene": "把一版程序镜像看看",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-patch",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前输入、键合器与指令状态，决定是否要改",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "按自己想要的左右对称轨迹图形，实际编辑并取景留图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先核对这两个现有菜单操作的说明，再亲手试一次",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际用镜像或红蓝交换改这版程序，再运行查看本次编辑的结果",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "镜像/换色属于官方2019本体更新；普通试用不自动创新或假说。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B06.SANDBOX.V1"
+        },
+        {
+          "text": "Sandbox里还没有完整循环，当前已有几条可编辑箭头与抓放指令，想处理画出来的这一小段。你先愿意做什么？",
+          "scene": "沙盒一小段箭头与抓放",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-patch",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前输入、抓放状态与轨迹经过的格位",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "按当前可用操作排清抓取、移动与放下的步骤，再实际试一段",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对本体已有箭头与抓放示范，再亲手继续试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "直接改一个现有转向箭头，再运行查看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "镜像/换色属于官方2019本体更新；普通试用不自动创新或假说。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B06.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已经实际到达一个本体防御关，眼前有当前可用的反应器控制、战况显示与供料网络。你准备再试这一段，不要求这次成功守住，先愿意做什么？",
+          "scene": "防御关的供料与控制",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-official",
+            "sch09b-educator"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际改一小段现有反应器程序或管道，再运行查看本次改动",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "主动反复试同一段启动与控制，重点练熟自己在战况中操作这些控制的步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "按现有输入、供料和控制触发排好这轮可做步骤，再实际运行一次",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前网络的输入输出、反应器等待和战况状态",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "防御是本体真实关卡类型，手动控制见官方截图；不把胜负、怪物数量或时间当能力门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B07.V1"
+        },
+        {
+          "text": "还没到防御关时，你的基础搬运程序能试第一轮，但下一轮在输入附近停住，原因未明，现有路径可编辑。你先愿意做什么？",
+          "scene": "下一轮停在输入区的基础程序",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-official",
+            "sch09b-educator"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际移动一个已有输入指令或改一小段路径，再运行看结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清本轮取料、移开输入区、送出与循环回来的步骤，再实际试跑",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "猜测上一批还占着输入区，只改抓取后的一个转向让分子离开该区，其他不动再重跑比较",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看输入区的当前分子、两色位置和指令状态",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "防御是本体真实关卡类型，手动控制见官方截图；不把胜负、怪物数量或时间当能力门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B07.ALT1"
+        },
+        {
+          "text": "你在Sandbox设了一种可原样搬运的基础输入，两色waldo、抓放与输入输出指令均可用。眼下没有外加限制，你先愿意做什么？",
+          "scene": "给自选搬运加分工限制",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-educator",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接改一段已有路径或指令，再运行看本次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前输入、输出区域和两色指令状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "额外定一版规则：只有红色能抓放，蓝色只触发输入/输出，实际排程序运行，不要求跑通",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "照普通可用指令排好两色分工与移动步骤，再试一版",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "与本作双waldo实际机制有关的自限，不能只换顺序即i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B07.SANDBOX.V1"
+        },
+        {
+          "text": "如果只会用其中一色，当前Sandbox刚设好一种基础输入，你先想做什么？",
+          "scene": "沙盒只会一色的起步输入",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-educator",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接改一个已有箭头或抓放设置，再运行查看",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前输入、已放轨迹和指令状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有输入和抓放示范，再继续自己的首次尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按当前可用的输入、抓取与转向步骤排好一轮，再运行",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "与本作双waldo实际机制有关的自限，不能只换顺序即i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B07.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你正在一题原样搬运氢分子的基础题里，两色waldo与抓放、输入输出指令都可用，原本不用额外限制也能尝试。你现在先想做什么？",
+          "scene": "给双waldo搬运加一条规则",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-tutorial",
+            "sch09b-educator"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前输入输出和两色指令状态，再决定这轮怎样继续",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "额外定规则：这一版只让红色抓放分子，蓝色只触发输入或输出，实际排一版运行，不要求跑通",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "按通常可用指令排好两色分工和移动步骤，再实际试一版",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "直接改一段已有路径或指令，再运行查看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "自限排除当前本可用的蓝色抓放，结合本作双线程与输入输出，不是普通换路线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B08.V1"
+        },
+        {
+          "text": "如果只会用其中一色、还未尝试分工，第一题当前已有起始路径与搬运需求。你先愿意做什么？",
+          "scene": "只会一色时的首次搬运",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-tutorial",
+            "sch09b-educator"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前输入、输出和已放下的指令状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有指令说明，再继续自己的首次搬运",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "按当前能用的输入、抓放与转向步骤排好一轮，再运行",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "直接改一个已有箭头或抓放设置，再运行看结果",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "自限排除当前本可用的蓝色抓放，结合本作双线程与输入输出，不是普通换路线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B08.ALT1"
+        },
+        {
+          "text": "Sandbox已接多座反应器，来源、中间产物和出口设好，下游沿自己写好的固定格抓料；试跑出现等待，原因未明。当前上游实际输出程序也可改，先做什么？",
+          "scene": "看整条实验管道能否持续",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-pipes",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接改一个现有反应器程序或外部管道布局，再运行看本次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "连续跑来源、加工、管道缓存和下游消耗，按多轮等待与库存反馈反复调整整个网络",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "提出“上游实际输出的位置使下游抓空”的解释，只改上游这段真实搬放输出的位置、输入和下游程序不动，再重跑比较，不只改注释图",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前管道、各反应器输入输出与等待状态",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "不要求有官方过关配额；姿态解释需真实下游用同一位置接收，允许失败。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B08.SANDBOX.V1"
+        },
+        {
+          "text": "还没有多反应器网络时，你Sandbox已设好两种简单输入，当前一座反应器里有键合器，程序还没完整输出。你先愿意做什么？",
+          "scene": "沙盒单器的两种输入初步键合",
+          "question_type": "situational_action",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-pipes",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动反复放置、撤回与启动这段指令，重点练熟自己编辑和检查的步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "按两种输入、对位、键合与送出的可做步骤排好一轮，再实际运行",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前两种原料、键合器与轨迹状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "实际改一个已有键合指令或移动箭头，再运行看本次结果",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "不要求有官方过关配额；姿态解释需真实下游用同一位置接收，允许失败。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B08.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想自己真正写过并运行的第一条反应器程序，哪件已经做过的事更有分量？不需已经首解成功。",
+          "scene": "回想第一次跑出一批分子",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-tutorial",
+            "sch09b-educator"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾对形状或输出问题提出一个原因，只改一项并从同样输入重跑对照",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己曾按当时可用操作排清步骤，再实际运行这版程序",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "自己曾主动多次放指令、撤回与启动，专门练自己的编辑操作步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为已经尝试过的程序与实际运行结果补记解谜过程",
+              "signal": "puzzle_process_recording"
+            }
+          ],
+          "design_purpose": "不要求首解成功；回顾的是实际操作和投入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B09.V1"
+        },
+        {
+          "text": "还没跑出整批，也可回想自己放过几条指令、实际启动过的一次基础尝试，哪件已经做过的事更有分量？",
+          "scene": "回想未完成整批的指令尝试",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-tutorial",
+            "sch09b-educator"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先核对已有教学，再亲手放指令并运行尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先查看当时输入输出与已有轨迹，再决定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "自己曾实际改一个已有箭头或抓放设置，再运行查看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为已经试过的指令与运行结果补记解谜过程",
+              "signal": "puzzle_process_recording"
+            }
+          ],
+          "design_purpose": "不要求首解成功；回顾的是实际操作和投入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B09.ALT1"
+        },
+        {
+          "text": "回想自己在原生Sandbox真正设输入、写指令并运行的一次经历，哪件已经做过的事更有分量？",
+          "scene": "回想自己的第一条沙盒程序",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾对停顿或形状问题提出一个原因，其他条件不动，只改一处并从同样输入重跑对照",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己曾按当时可用操作排清本轮程序步骤，再实际运行一版",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "自己曾实际改已有路径或指令，再运行查看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为已经试过的程序与实际运行补记解谜过程",
+              "signal": "puzzle_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去，不把自选输入本身当玩家创造新规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B09.SANDBOX.V1"
+        },
+        {
+          "text": "只在Sandbox跑过最早几条指令，也可回想当时哪件自己已经做过的事更有分量。",
+          "scene": "回想Sandbox最早几条指令",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先核对已有基础示范，再亲手放指令尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先查看输入与指令已有状态，再决定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "自己曾实际改一个箭头或抓放设置，再运行查看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为已经试过的指令与结果补记解谜过程",
+              "signal": "puzzle_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去，不把自选输入本身当玩家创造新规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B09.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己在生产关真正接过并运行的多反应器流水线，哪件已经做过的事更有分量？没到这类关可换题。",
+          "scene": "回想多反应器的交接",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-pipes"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾把已有拆解输出接到装配器当时输入，实际跑过这一种可用中间产物传递布置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "自己曾按当时可用工具排清中间产物、接管与各器内程序步骤，再实际运行一版",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经试过的管道、程序与实际运行补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾连续跑输入、拆分、装配、管道缓存与输出多轮，再按等待或堵塞反馈实际调整网络",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "多轮模块依赖才有系统信号，注释或记载本身0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B10.V1"
+        },
+        {
+          "text": "只有单反应器经历，也可回想自己真正写过的一次基础程序，哪件已经做过的事更有分量？",
+          "scene": "回想只有单反应器的程序",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-pipes"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾实际改一个已有指令，再运行查看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先查看棋盘与现有运行状态，再决定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经实际运行过的程序补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按当时可用的输入、抓放与输出步骤排好一轮，再实际运行",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "多轮模块依赖才有系统信号，注释或记载本身0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B10.ALT1"
+        },
+        {
+          "text": "回想自己在Sandbox真正接过并运行的多反应器实验流水线，哪件已经做过的事更有分量？没搭过可换题。",
+          "scene": "回想多反应器的沙盒实验",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-pipes",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾在两座标准反应器内分别改拆分与重组程序，接好当时管道后实际运行，查看那次中间片段传递的结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己曾按当时可用工具排清中间产物、接管与各器内程序的步骤，再实际试过这一轮",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经尝试过的程序与实际运行补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾连续跑来源、中间加工、管道缓存与出口多轮，再按等待或堵塞反馈反复调整网络",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不把单器路径优化硬记经营系统；没有资源成长前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B10.SANDBOX.V1"
+        },
+        {
+          "text": "只运行过单座反应器，也可回想Sandbox当时哪件自己已经做过的事更有分量。",
+          "scene": "回想Sandbox单反应器运行",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-pipes",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾实际改一个已有指令，再运行查看这次编辑结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先核对输入与轨迹已有状态，再决定这次怎么接",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经运行过的单器程序补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按当时可用的输入、抓放与输出步骤排清一轮，再实际运行",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "不把单器路径优化硬记经营系统；没有资源成长前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B10.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想自己在本体防御关真正启动网络、使用控制的一次经历，哪件已经做过的事更有分量？没到这类关可换题，不需已经守住。",
+          "scene": "回想一次防御尝试",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-official",
+            "sch09b-educator"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先查看反应器当时等待、输入输出与战况显示，再决定怎样操作",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经试过的程序与实际运行补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾主动重复同一段启动与控制，专门练自己操作这些控制的步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按当时可做操作排好供料与触发先后，再实际试过这一轮",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "回顾真实尝试，不要求守住或提高操作能力，不硬塞操作爽感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B11.V1"
+        },
+        {
+          "text": "还没防御经历，也可回想自己实际重复试过的一段基础程序，哪件已经做过的事更有分量？",
+          "scene": "回想防御前反复试指令",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-official",
+            "sch09b-educator"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾实际改当时路径，再运行查看这次编辑结果",
+              "signal": "puzzle_program_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经试过的程序与实际结果补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾主动多次放指令、撤回与启动，专门练自己的编辑步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先核对已有指令说明，再亲手运行尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "回顾真实尝试，不要求守住或提高操作能力，不硬塞操作爽感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B11.ALT1"
+        },
+        {
+          "text": "回想自己在Sandbox真正给本可两色抓放的基础搬运新增分工限制，并实际运行的一次经历，哪件已经做过的事更有分量？没做过可换题，不需跑通。",
+          "scene": "回想一版额外自限",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-educator",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾主动重复编辑和运行同一段，专门练自己的指令编排操作步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经实际试过的这版程序与结果补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾主动新增只一色抓放、另一色只触发输入输出的规则，并实际排过一版试跑",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "自己曾对这版卡住提出一个原因，其余程序不动，只改一个节点再重跑对照",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "自限必须真的排除可用手段且试过，不要求成功；没有经历有独立早期ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B11.SANDBOX.V1"
+        },
+        {
+          "text": "没试过自限，也可回想自己在Sandbox实际重复编辑过的一段短程序，哪件已经做过的事更有分量？",
+          "scene": "回想未自限时重复编辑",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-educator",
+            "sch09b-tutorial",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾核对已有基础说明，再亲手放指令尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经试过的程序与实际结果补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾主动多次放指令、撤回与运行，专门练自己的编辑操作步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按当时可做操作排清这一轮步骤，再实际运行尝试",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "自限必须真的排除可用手段且试过，不要求成功；没有经历有独立早期ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B11.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SCH09B12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想自己真正回来看过的一题普通研究或生产关，哪件已经发生的选择更有分量？不要求破纪录、跑通自限或完成图案。",
+          "scene": "回想过关后留下的那张棋盘",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-patch",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时精力充足，下一道新题也能继续，自己仍慢慢整理已熟悉的棋盘，因为喜欢这段认得的安稳编辑过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "自己曾把少于旧cycles或symbols作为明确纪录目标，实际回去改解并重跑比较",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾在本可两色抓放的搬运题，主动新增只一色抓放、另一色只管输入输出的规则，并实际排过一版试跑",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按个人对称轨迹或几何构图主题实际编辑，再给棋盘留下一张图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不要求破纪录、跑通自限或图案完成；无既有成绩可换ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B12.V1"
+        },
+        {
+          "text": "还没过关，也可回想自己真正打开并试过的基础搬运棋盘，哪件已经做过的事更有分量？",
+          "scene": "回想尚未过关的基础棋盘",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-educator",
+            "sch09b-patch",
+            "sch09b-tutorial"
+          ],
+          "modes": [
+            "puzzles"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为实际试过的程序与结果补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己曾主动反复放指令与启动，专门练自己的编辑操作步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾按个人几何图形主题实际排过轨迹，并为棋盘留下自己的构图截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先看当时输入输出与已有路径，再决定下一步",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "不要求破纪录、跑通自限或图案完成；无既有成绩可换ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B12.ALT1"
+        },
+        {
+          "text": "回想自己在原生Sandbox确实选过的一段活动，哪件已经发生的选择更有分量？",
+          "scene": "回想没有指定分子的那一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-sandboxplay",
+            "sch09b-patch",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经实际运行的程序与过程补记这段解谜实验",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己曾按个人对称轨迹或几何构图主题实际编辑，再为棋盘留下一张图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "当时精力充足，新实验也能做，自己仍慢慢整理已熟悉的实验棋盘，因为喜欢这段认得的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "自己曾实际改一个已有指令或管道，再运行查看这次结果",
+              "signal": "puzzle_program_edit_trial"
+            }
+          ],
+          "design_purpose": "没有官方目标分子并不自动等于舒缓/创新；不虚构沙盒直方图或固定过关条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B12.SANDBOX.V1"
+        },
+        {
+          "text": "只在Sandbox试过第一座反应器，也可回想当时哪件已经发生的选择更有分量。",
+          "scene": "回想Sandbox第一座反应器",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "sch09b-sandbox",
+            "sch09b-sandboxplay",
+            "sch09b-patch",
+            "sch09b-create"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为实际试过的短程序与结果补记解谜过程",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己曾按个人几何图形主题实际排过轨迹，再给棋盘留下一张构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "当时精力充足，也有新输入可试，自己仍慢慢整理已熟悉的几条指令，因为喜欢这个安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先查看输入与指令已有状态，再决定下一步",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "没有官方目标分子并不自动等于舒缓/创新；不虚构沙盒直方图或固定过关条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SCH09B12.SANDBOX.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+07de98ea11b9"
+}

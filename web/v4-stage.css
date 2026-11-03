@@ -1,0 +1,67 @@
+/* Large character portraits are the homepage's main visual. */
+body[data-view=home] .hero-character-stage{
+  display:grid;grid-template-columns:43% minmax(0,1fr);align-items:center;
+  min-height:620px;margin-top:14px;border:1px solid #e2e5eb;border-radius:30px;
+  background:linear-gradient(112deg,#fcfbf7 0%,#f8f7f2 42%,#edf1f7 100%);
+  box-shadow:0 18px 64px #26375207;
+}
+.hero-character-stage::before,.hero-character-stage::after{content:none}
+body[data-view=home] .hero-character-stage .hero-copy{position:relative;z-index:1;max-width:none;padding:58px 24px 64px 58px}
+body[data-view=home] .hero-character-stage h1{font-size:clamp(39px,4vw,60px);line-height:1.48;letter-spacing:.5px;margin-top:25px;text-wrap:initial}
+.hero-character-stage .eyebrow{font-size:10px;letter-spacing:2px}
+.hero-character-stage .hero-description{font-size:15px;line-height:2;color:var(--muted);margin-top:26px}
+.hero-character-stage .hero-actions{margin-top:32px;gap:16px}
+.hero-character-stage .hero-actions .primary-button{min-width:0;padding:17px 22px;gap:21px;box-shadow:0 8px 20px #24334d16}
+.hero-character-stage .hero-actions .text-button{font-size:13px;color:var(--muted)}
+.hero-character-stage .hero-actions .primary-button .icon{color:#eaa58b}
+.hero-character-stage .persona-ribbon-large{
+  --ribbon-card-width:310px;--ribbon-gap:14px;
+  align-self:stretch;display:flex;flex-direction:column;justify-content:center;
+  width:100%;min-width:0;max-width:none;margin:0;padding:28px 0 57px;
+  background:radial-gradient(ellipse at 57% 55%,#dce4f16e,transparent 66%);
+}
+.hero-character-stage .persona-ribbon-viewport{padding:0 0 12px;mask-image:linear-gradient(to right,transparent,#000 22px,#000 calc(100% - 18px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 22px,#000 calc(100% - 18px),transparent)}
+.hero-character-stage .ribbon-persona{padding:0 3px 7px;gap:15px;border-radius:22px}
+.hero-character-stage .ribbon-persona img{height:480px}
+.hero-character-stage .ribbon-persona span{font-size:19px;letter-spacing:1px}
+.hero-character-stage .ribbon-persona:hover{background:#ffffff60}
+.hero-character-stage .ribbon-pause{right:25px;bottom:24px;width:44px;height:44px;background:#fffdf7d9;border-color:#ccd5e1;box-shadow:0 4px 16px #24334d08}
+@media(min-width:1540px){body[data-view=home] .hero-character-stage{min-height:660px}.hero-character-stage .persona-ribbon-large{--ribbon-card-width:335px}.hero-character-stage .ribbon-persona img{height:520px}body[data-view=home] .hero-character-stage .hero-copy{padding-left:68px}}
+@media(max-width:1150px) and (min-width:1001px){body[data-view=home] .hero-character-stage .hero-copy{padding-left:38px;padding-right:12px}.hero-character-stage .hero-actions{gap:8px}.hero-character-stage .hero-actions .primary-button{font-size:14px;padding:16px 18px;gap:12px}.hero-character-stage .hero-actions .text-button{font-size:12px}}
+@media(max-width:1000px){
+  body[data-view=home] .hero-character-stage{display:flex;flex-direction:column;min-height:0;margin-top:10px;background:linear-gradient(155deg,#fcfbf7,#f6f6f3 50%,#eef2f8)}
+  body[data-view=home] .hero-character-stage .hero-copy{width:100%;padding:44px 38px 18px;text-align:center}
+  .hero-character-stage .eyebrow{justify-content:center}
+  body[data-view=home] .hero-character-stage h1{font-size:48px;line-height:1.4;margin-top:20px}
+  .hero-character-stage .hero-description{margin:20px auto 0;font-size:15px;line-height:1.9;max-width:none}
+  .hero-character-stage .hero-actions{justify-content:center;align-items:center;flex-direction:row;margin-top:25px}
+  .hero-character-stage .persona-ribbon-large{--ribbon-card-width:260px;--ribbon-gap:14px;width:100%;padding:10px 0 56px}
+  .hero-character-stage .ribbon-persona img{height:380px}
+  .hero-character-stage .ribbon-persona span{font-size:17px}
+}
+@media(max-width:700px){
+  body[data-view=home] .hero-character-stage{margin:5px 12px 0;border-radius:24px}
+  body[data-view=home] .hero-character-stage .hero-copy{padding:25px 23px 14px;text-align:left}
+  .hero-character-stage .eyebrow{justify-content:flex-start;font-size:9px;letter-spacing:1.7px}
+  body[data-view=home] .hero-character-stage h1{font-size:clamp(28px,7.8vw,39px);line-height:1.43;letter-spacing:.1px;margin-top:18px}
+  .hero-character-stage .hero-description{font-size:14px;line-height:1.85;margin-top:18px}
+  .hero-character-stage .hero-actions{justify-content:flex-start;flex-direction:row;flex-wrap:wrap;gap:12px;margin-top:23px}
+  .hero-character-stage .hero-actions .primary-button{width:auto;max-width:none;min-width:0;min-height:51px;font-size:13px;padding:14px 15px;gap:12px}
+  .hero-character-stage .hero-actions .text-button{font-size:12px;min-height:44px;gap:6px}
+  .hero-character-stage .hero-actions .text-button .icon{width:16px;height:16px}
+  .hero-character-stage .persona-ribbon-large{--ribbon-card-width:196px;--ribbon-gap:13px;margin:0;padding:8px 0 54px}
+  .hero-character-stage .ribbon-persona{gap:9px;padding:0 2px 4px}
+  .hero-character-stage .ribbon-persona img{height:298px}
+  .hero-character-stage .ribbon-persona span{font-size:16px;letter-spacing:.3px}
+  .hero-character-stage .ribbon-pause{bottom:12px;right:16px}
+}
+@media(max-width:380px){
+  body[data-view=home] .hero-character-stage .hero-copy{padding-left:20px;padding-right:20px}
+  body[data-view=home] .hero-character-stage h1{font-size:clamp(27px,7.7vw,30px)}
+  .hero-character-stage .hero-description{font-size:13px}
+  .hero-character-stage .hero-actions{gap:7px}
+  .hero-character-stage .hero-actions .primary-button{font-size:12px;padding:13px 13px;gap:10px}
+  .hero-character-stage .hero-actions .text-button{font-size:11px;gap:4px}
+  .hero-character-stage .persona-ribbon-large{--ribbon-card-width:176px;--ribbon-gap:12px}
+  .hero-character-stage .ribbon-persona img{height:264px}
+}

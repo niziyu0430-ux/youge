@@ -1,0 +1,965 @@
+{
+  "id": "darks3v5",
+  "title": "暗黑血统3：狂怒、荒魂与两类强化",
+  "game_ids": [
+    "steam-606280"
+  ],
+  "scope": "单人本体与已取得荒魂",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "仅使用已取得的本体荒魂，锁在进度之后的题提供基础长鞭替代。",
+    "灵魂换属性、精金强化武器与神器升级附魔分别书写；附魔主动和被动严格分开。",
+    "默认或经典模式都可回答，不承诺全部攻击随时取消；不要求DLC。",
+    "严格复核仅按实际行为收紧信号：普通换路、换招、已有配置比较/试用、个人准备与当前资源循环均作0分记录；不为保留标签增强原动机。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "单人本体与已取得荒魂",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DARKS3V501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你已取得火焰荒魂，回到可自由往返的废墟岔口。普通跳跃与火焰跃升可到的高台都看得清，附近还有已记的本体附魔收集缺口与可走主线。先去做什么？",
+          "scene": "火焰荒魂新够到的地方",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_routes",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用火焰跃升到没去过的高台，看看上面通向哪里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先猜普通跳跃与火焰跃升各能接上哪层平台，再分别试一次核对通路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "循着已记下的本体附魔收集缺口回去，先补上明确缺的一项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先沿主线已开放的方向走，想接着看狂怒对七宗罪的追查",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "火焰荒魂的跃升是明确已取得能力，收集有已知缺口。 以已取得火焰跃升和普通跳跃的真实落脚关系提问，不虚构通用门开关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS3V501.V1"
+        },
+        {
+          "text": "还没有火焰荒魂的话：在早期一段能自由行动的废墟里，主路、陌生侧路与普通敌人都能处理。你现在先选什么？",
+          "scene": "火焰荒魂新够到的地方的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_routes",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进陌生侧路，先看倒墙后面接什么空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿主线继续追查，想知道狂怒为何被派来对付这些对象",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "到普通敌人处练闪避后接鞭击，让自己的时机更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "直接挥动长鞭打一轮，享受甩出、命中和收回的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "火焰荒魂的跃升是明确已取得能力，收集有已知缺口。 以已取得火焰跃升和普通跳跃的真实落脚关系提问，不虚构通用门开关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS3V501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "眼前普通遭遇正要开始，你自己的鞭击已收招，能在敌人攻击将命中时闪避，再接奥术反击；也已持有强化所装武器物理与奥术伤害的Fortifier附魔。现在先把注意力给哪段？",
+          "scene": "闪避之后接哪一击",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_patch",
+            "ds3v5_enhance",
+            "ds3v5_souls",
+            "ds3v5_counter_patch",
+            "ds3v5_counter_tips"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "打出熟悉鞭击接反击，直接享受命中、反击与回弹",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把Fortifier装到长鞭，让武器奥术伤害收益接上这把鞭的闪避反击，再试这段组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "按自己设定的贴身追猎者身份，主动以长鞭近身起手，再跟进闪避反击",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "在自己的鞭击已收招后，专练敌招将命中前闪避、随即接奥术反击的时点，只求自己比上一回稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "新版已收招再极限闪避的前提保留；Fortifier奥术收益支持鞭反击是具体互补，贴身追猎者身份实际近身起手；ALT换距离不计i。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V502.V1"
+        },
+        {
+          "text": "还没有附魔的话：眼前普通敌人可以用基础长鞭应对，自己当前鞭击已收招，能在敌招将命中前闪避，再接反击。你此刻先怎么交手？",
+          "scene": "闪避之后接哪一击的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_patch",
+            "ds3v5_enhance",
+            "ds3v5_souls",
+            "ds3v5_counter_patch",
+            "ds3v5_counter_tips"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用熟悉鞭招连着命中，感受声音、回弹与节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把自己当贴身追猎者，主动用长鞭由近处起手而不是一直绕远",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先甩一鞭并等它收招，再侧向闪避后回身接一鞭，亲手换一次起手先后",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "在自己当前鞭击已收招后，专练敌招将命中前闪避、再接基础长鞭反击的时点",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "新版已收招再极限闪避的前提保留；Fortifier奥术收益支持鞭反击是具体互补，贴身追猎者身份实际近身起手；ALT换距离不计i。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已到Vulgrim前，灵魂足够换得一个属性点，背包还存着未打碎的结晶。已通主路、未探侧路与自己记下的附魔缺口都可处理，你先做哪项？",
+          "scene": "Vulgrim与手里的灵魂结晶",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_souls",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去侧路看看，未知地点比眼前升级菜单更吸引我",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先去处理自己已有的一处本体附魔收集缺口，把少的那件补上",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "把足够的灵魂交出并花掉属性点，真正让生命、力量或奥术的一条培养线前进",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先把结晶、身上灵魂与下一次返店时机分开安排，按当前缺口再决定打碎多少",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "灵魂足够且实际花属性点是持续成长；结晶预算与返店安排是个人准备降0。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V503.V1"
+        },
+        {
+          "text": "若结晶还不多：现在Vulgrim前的灵魂够你取得并投入一个属性点，附近普通敌人也可打。你先做什么？",
+          "scene": "Vulgrim与手里的灵魂结晶的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_souls",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回到普通敌人处挥鞭，享受连续命中与反击回弹",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先把这次升级、身上补给与下一次返店的顺序理顺，再按计划出发",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "交出灵魂并实际花属性点，让一条已经在养的属性继续积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先去练闪避反击，重心是自己的时机比刚才稳定",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "灵魂足够且实际花属性点是持续成长；结晶预算与返店安排是个人准备降0。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你在乌坦锻台前，已有本体Fortifier、Chaos附魔、长鞭和一把荒魂武器，神器够升级一条当前分支。Fortifier带生命被动，Chaos有对应武器命中回血；你此刻先做哪件？",
+          "scene": "附魔主动与被动的分工",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只改一枚附魔并切换武器，核对自己对主动、被动条件的判断",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把Chaos的命中回血配到常用长鞭，把Fortifier的生命被动留在另一把武器上，试这组分工",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "实际消耗已有天使或恶魔神器，推进常用附魔的一条永久升级分支",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先把两条分支的材料库存与之后要留的份额排清，避免临出发才发现用光",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "Chaos对应武器命中回血与另一武器Fortifier生命被动有真实主动被动分工；实花神器是永久成长；材料预算及ALT换距离分别降准备和动作。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V504.V1"
+        },
+        {
+          "text": "若还没有可调整附魔：当前普通遭遇只需基础长鞭、闪避与已有动作。你此刻先做什么？",
+          "scene": "附魔主动与被动的分工的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拉开一小段距离，等敌人接近再挥基础鞭击，亲手改一次出手时点",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "反复调整一次闪避后的鞭击，让自己的衔接更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "连着挥动熟悉鞭招，享受命中和回弹",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先猜敌人哪次收招后留下更长空档，再分别交手验证",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "Chaos对应武器命中回血与另一武器Fortifier生命被动有真实主动被动分工；实花神器是永久成长；材料预算及ALT换距离分别降准备和动作。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你在乌坦锻台前，手里有适合当前等级的精金，足够强化一次常用武器；已有附魔与另一把荒魂武器可调整。出发前你先做哪件？",
+          "scene": "乌坦锻台前的精金",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_forge",
+            "ds3v5_enhance",
+            "ds3v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际花精金强化常用武器，让它的培养进展继续留下",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把长鞭、荒魂武器与已持附魔装成互补的一组，再去试组合效果",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把不同等级精金与附魔神器分别整理，安排这次强化和后续返锻台的顺序",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "沿用最喜欢的一把去打一段，优先感受这件武器熟悉的重量与反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "精金实际强化常用武器保留g；泛武器附魔互补不清降配置，精金神器返锻安排降准备；ALT起手距离降动作。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V505.V1"
+        },
+        {
+          "text": "若还没到乌坦的锻台：眼前普通遭遇可以使用基础长鞭与闪避。现在更想先做哪段？",
+          "scene": "乌坦锻台前的精金的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_forge",
+            "ds3v5_enhance",
+            "ds3v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己闪避反击后的下一鞭，让动作比前一回连贯",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "直接用熟悉鞭击接上敌人，感受甩出与回弹的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先从长鞭末端够到的位置起手，再走近接下一段已会鞭招，亲手体验一次不同衔接",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "按自己设定的近身追猎者身份，主动用长鞭贴近起手再跟着敌人移动",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "精金实际强化常用武器保留g；泛武器附魔互补不清降配置，精金神器返锻安排降准备；ALT起手距离降动作。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已取得力量荒魂，回到以前经过的废墟，确认一段旧障碍现在可破。主线另有入口，附近也有你记下的本体附魔缺口。你此刻先处理哪件事？",
+          "scene": "力量荒魂带回的旧墙",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_routes",
+            "ds3v5_core",
+            "ds3v5_enhance",
+            "ds3v5_early"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去补自己已经记下的那枚附魔，重点是补上收藏的一格",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "破开旧障碍后走到没看过的另一面，未知空间本身就值得绕路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先回当前主线入口，接着看狂怒与七宗罪之间已经展开的事情",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "对照旧障碍的材质和力量荒魂，猜破开后会接通哪段路，再实际击碎核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "力量荒魂只在已取得后用于破障；替代完全不需荒魂，仅基础长鞭与跳攀。区分未知侧路、真实未得本体附魔、即时鞭击反馈与通路猜想验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS3V506.V1"
+        },
+        {
+          "text": "若尚未取得任何荒魂：在早期已能回走的废墟里，未走侧路、一枚已看见但漏取的本体附魔、基础跳跃能到的平台和普通敌人都在附近。现在先做什么？",
+          "scene": "力量荒魂带回的旧墙的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_routes",
+            "ds3v5_core",
+            "ds3v5_enhance",
+            "ds3v5_early"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "转去未走侧路看看，不预先规定一定要拿什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先补自己明确记着少的一枚本体附魔",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "用基础长鞭对眼前普通敌人接一轮已会鞭招，感受甩出、命中与回弹",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先猜台沿、可攀位置与普通跳跃怎样接成通路，再亲手走一次核对落脚处",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "力量荒魂只在已取得后用于破障；替代完全不需荒魂，仅基础长鞭与跳攀。区分未知侧路、真实未得本体附魔、即时鞭击反馈与通路猜想验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS3V506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已拥有一把本体荒魂武器、基础长鞭和可调整的已持附魔，眼前普通遭遇没有限定武器。你现在更想先打出什么过程？",
+          "scene": "荒魂武器接回长鞭",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己换回长鞭后常接慢的一鞭，让同一段比上一回顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "继续扮演自己设定的长鞭追猎者，明明可换武器仍先以长鞭贴近起手",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先安排荒魂武器与长鞭的作用，再把相应附魔条件接入这段打法",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "直接打一轮长鞭与荒魂武器的换招，享受挥动、命中与回弹",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "长鞭追猎者身份实约束可选武器起手保留r；泛武器作用和附魔条件没有具体效用降配置，普通换起手方向降动作。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V507.V1"
+        },
+        {
+          "text": "还只有基础长鞭的话：这场普通遭遇可自由选接近路线与已会鞭招。此刻先怎样行动？",
+          "scene": "荒魂武器接回长鞭的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续使出熟悉鞭击，先享受甩出和命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先从敌人的另一侧接近，用同一段基础鞭招开场，亲手体验不同接敌方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "按自定的长鞭追猎者身份，主动贴近并用鞭起手再跟进敌人",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "练一次闪避落点，让自己接回鞭招的动作比刚才稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "长鞭追猎者身份实约束可选武器起手保留r；泛武器作用和附魔条件没有具体效用降配置，普通换起手方向降动作。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已能在Haven安全停留，精力充足，下一段目标也可直接出发。附近能处理资源、查收集缺口，或沿熟悉区域慢走，你现在先选什么？",
+          "scene": "Haven出发前的一段空闲",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_souls",
+            "ds3v5_forge",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看自己追的本体附魔清单，选一个已知缺口去补",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "沿Haven走熟的区域从容慢走，不加新任务，享受已经认识的环境和惯常停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先沿已经开放的主线出发，想接着看狂怒与已遇人物的关系如何变化",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "理清身上灵魂、结晶和下次锻造需求，安排这一趟先处理什么",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "h两种情境都精力足可直接目标而主动熟路安稳；附魔是真未得缺项，灵魂结晶锻造返店均个人准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V508.V1"
+        },
+        {
+          "text": "若还没在Haven停留：在一段已清静的熟悉废墟旁，你精力足，主线入口已能走，也有Vulgrim可达和一条没去过的侧路。现在先做什么？",
+          "scene": "Haven出发前的一段空闲的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_souls",
+            "ds3v5_forge",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "转去未探侧路，先看它连接着什么空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "重走熟悉废墟的小段路，不催自己推进，喜欢看惯环境与自主步速带来的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "接着看当前已开放的主线，想明白狂怒如何面对自己的任务",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把灵魂、补给和下一次回到Vulgrim的顺序排好再走",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "h两种情境都精力足可直接目标而主动熟路安稳；附魔是真未得缺项，灵魂结晶锻造返店均个人准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想三代里一场已经打过的普通遭遇，哪一种经历更让你愿意继续交手？",
+          "scene": "回看闪避反击留下的印象",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_patch",
+            "ds3v5_enhance",
+            "ds3v5_souls"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "试过敌人几次出手与收招，确认了自己关于空档的判断",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "反复练的一次闪避后接鞭，比自己的前一回更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "长鞭回弹、命中与反击的节奏，本身就让我想再打一轮",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "把已有附魔的条件与武器、奥术反击组合起来，并按实际效果调整过",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "真交手过去，空档验证、练习、手感成立；泛附魔条件组合降配置，普通换方向不是新规则。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V509.V1"
+        },
+        {
+          "text": "若还没有附魔：回想最早那些长鞭交手，哪种真实经历比较贴近？",
+          "scene": "回看闪避反击留下的印象的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds3v5_core",
+            "ds3v5_patch",
+            "ds3v5_enhance",
+            "ds3v5_souls"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了弄懂敌人哪次收招更长，交手核对过自己的猜想",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "为让闪避后的下一鞭比刚才稳，主动练过同一段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "因为长鞭甩出、命中和收回的反馈，愿意接着打一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "自己试过从敌人的另一侧接近，再以熟悉鞭招起手，体验了一次不同进场方向",
+              "signal": "route_variant"
+            }
+          ],
+          "design_purpose": "真交手过去，空档验证、练习、手感成立；泛附魔条件组合降配置，普通换方向不是新规则。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想三代里你实际处理过的一段灵魂与资源，哪种投入最让你觉得值得继续？",
+          "scene": "回看灵魂真正变成了什么",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds3v5_souls",
+            "ds3v5_forge",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把结晶、未花灵魂、精金与返店次序分清，资源走向比以前有条理",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "为自己明确缺的一枚本体附魔，专门回去找到并补上",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "为了看一个没去过的侧区，主动暂缓菜单里的升级安排",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把灵魂换成属性点并花下去，或真正强化常用武器，留下了可持续的提升",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "真实属性点或武器强化才记g，真缺附魔记c；结晶灵魂精金返店分类仍只是个人准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V510.V1"
+        },
+        {
+          "text": "若尚未到锻台：回想你在Vulgrim前或早期岔路已经作过的决定，哪一项更像你？",
+          "scene": "回看灵魂真正变成了什么的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds3v5_souls",
+            "ds3v5_forge",
+            "ds3v5_enhance"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "排过灵魂先留多少、何时打碎结晶、何时回店的顺序",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "为了一个已看见却漏拿的本体附魔，折返补过缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "走进了一条没查回报的侧路，想知道另一头是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "实际交出灵魂并投入属性点，喜欢角色成长继续留在后续旅程",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "真实属性点或武器强化才记g，真缺附魔记c；结晶灵魂精金返店分类仍只是个人准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你真的带着已取得的荒魂回访过的一处旧区，哪种片段最像你愿意这样绕行的理由？",
+          "scene": "回看带着荒魂回旧路",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds3v5_routes",
+            "ds3v5_core",
+            "ds3v5_enhance",
+            "ds3v5_early"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "试清新能力、旧障碍与通路之间的关系，解释了此前看见的东西",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自定旧城区巡行者身份后，在主线能直接走时仍先巡了一段熟路再出发",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "补上了之前已记下的一枚本体附魔，让自己追的收藏少一个缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "进入了先前够不到、也不知道里面有什么的空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "能力按实际取得回顾；身份对应可选巡路，不改固定剧情。 未有荒魂的替代只用基础跳跃/长鞭摆荡与真实早期附魔，不要求后期门机关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS3V511.V1"
+        },
+        {
+          "text": "若还没获得荒魂：回想基础长鞭阶段一段真实走过的废墟，哪种停步更像你？",
+          "scene": "回看带着荒魂回旧路的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds3v5_routes",
+            "ds3v5_core",
+            "ds3v5_enhance",
+            "ds3v5_early"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先猜过跳跃或长鞭摆荡与落脚处怎样相接，再亲手试过并确认通路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把自己设成旧城区巡行者，在目标可直接走时仍先巡熟悉的小路再推进",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "回头取了自己已看见却漏下的一件本体附魔",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "去了主路旁原本看不到尽头的一小段侧道",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "能力按实际取得回顾；身份对应可选巡路，不改固定剧情。 未有荒魂的替代只用基础跳跃/长鞭摆荡与真实早期附魔，不要求后期门机关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS3V511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS3V512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想三代里你确实自己决定过的一段行程或交手，哪种经历更能说明你为什么愿意留在这段旅途？",
+          "scene": "回看狂怒旅途中的自选节奏",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds3v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己试过先挥长鞭，等收招后侧移再接下一段鞭招，亲手改变过一次已会动作的先后",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "当时精力足、目标可继续，仍主动重走熟悉安全路段，享受已认识环境与慢行的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为了弄懂狂怒与已遇人物的关系，接着看过已经开放的主线对话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把自己设成长鞭追猎者后，真的以长鞭近身起手，即使已有别的武器可选",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "精力足可推进的自愿熟路保留h；贴身鞭猎人有实际起手选择保留r；换方向或距离均降普通动作变化。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V512.V1"
+        },
+        {
+          "text": "若只玩到开头：回想你确实自由选择过的一个片段，哪种最贴近？",
+          "scene": "回看狂怒旅途中的自选节奏的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds3v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己试过先侧移躲开，等敌招结束后再用长鞭起手，亲手改变过一次出手时点",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足且前路可走，仍在走熟安全废墟慢行，喜欢熟悉景物与从容步速带来的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "沿已经开放的剧情继续看，想知道狂怒这趟任务为何这样展开",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按自定的贴身追猎者身份，主动由近处持鞭接敌，而不是一直绕开",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "精力足可推进的自愿熟路保留h；贴身鞭猎人有实际起手选择保留r；换方向或距离均降普通动作变化。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS3V512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+51df9a6f3b31"
+}

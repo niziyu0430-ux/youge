@@ -1,0 +1,945 @@
+{
+  "id": "rem2v5",
+  "title": "遗迹2",
+  "game_ids": [
+    "steam-1282100"
+  ],
+  "scope": "二代本体职业、改装、随机世界与13号实验区",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "没有默认突变因子；未取得者始终有初始职业与武器改装路径。",
+    "只在完成第一个本体世界后提供对应冒险，不要求隐藏职业、DLC、棱镜或首领速通。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "二代本体职业、改装、随机世界与13号实验区",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "REM2V501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "当前已有不止一种普通职业可换，几种都尚能继续培养，也能应付眼前本体世界。出发前你先做什么？",
+          "scene": "已解锁职业怎样继续",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_class"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照职业技能、已有武器改装与饰品，选一组能互相支持的安排",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "保留已经开始培养的未满级职业，继续积累其独立等级与专长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "换一项平时少用的已解锁职业，认真体验不同的作战过程",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "固定用惯的职业和工具，给这趟定一个自己要练的技能时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "二代职业有独立经验、专长和技能；不按职业名、隐藏解锁或级别判偏好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V501.V1"
+        },
+        {
+          "text": "只有初始职业可用，也还没练满，身边是最早可用的武器与改装。你先怎么准备下一趟？",
+          "scene": "已解锁职业怎样继续的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_class"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这个职业的技能与当前枪械、改装效果配成一套互补用法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "继续带着这个职业走普通本体路线，让其独立等级与专长逐步成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "不添新职业，只换一种少用的武器或技能使用顺序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "保留原配置，专练一次职业技能释放后接回攻击的时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "二代职业有独立经验、专长和技能；不按职业名、隐藏解锁或级别判偏好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "熟悉遭遇前，职业技能有自己的冷却，武器改装则有能量积累；手上各有可用效果。接下来你先怎样用？",
+          "scene": "两种不同的发动条件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_class",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让职业技能与枪械改装分担不同局面，检验一段具体配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "固定原来工具，练一次看准时机交技能、再接回射击",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "用自己最顺手的技能和枪械节奏，享受发动、命中与移动的连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "观察两种发动条件，先解释哪些行动会让它们在不同时间可用",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "技能冷却与改装能量明确分开；不套一代无独立职业技能的起步职业。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V502.V1"
+        },
+        {
+          "text": "还只有初始职业的一项技能和最早武器改装，普通敌人已经认识。你先做什么？",
+          "scene": "两种不同的发动条件的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_class",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把初始职业技能与已有改装安排在彼此能补上的场面",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "只练一次总放得仓促的职业技能，不急着整场结果",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "按自己最合手的射击和技能顺序继续打一段，体会反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "对照技能计时与改装能量，弄清它们为何不是同一种恢复过程",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "技能冷却与改装能量明确分开；不套一代无独立职业技能的起步职业。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "在本体雅莎的帝国花园，你已经遇到符号基座，也看见石刻线索和未探支路；附近暂时没有战斗催促。你先做什么？",
+          "scene": "符号基座与花园岔路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_garden"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已经找到的花园记录，关心这里曾经生活的痕迹",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把查石刻、回基座和经过检查点的顺序排清，沿一趟路执行",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "对照自己见到的石刻与基座符号，提出一组解释再验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "沿未亲自看过的支路走，想知道花园还藏着哪一片空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "不考符号答案或具体奖励；未遇到雅莎、未见这个随机地牢均有早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V503.V1"
+        },
+        {
+          "text": "没有见过花园机关，只在自己第一个本体世界的初期地牢，遇到上下层通道、未探门口和一段可读记录。现在先做什么？",
+          "scene": "符号基座与花园岔路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_garden"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把眼前记录读完，想理解这里的人或设施经历过什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把看记录、经过检查点与返回未完区域接成一趟行程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "对照地图层次与门的位置，自己判断哪条通道能接回原路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "从尚未亲自走过的门口继续看，不先要求一定有奖励",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "不考符号答案或具体奖励；未遇到雅莎、未见这个随机地牢均有早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "已经取得一项枪械突变因子，手头资源够给它继续强化，也有可替换普通武器改装；当前配置仍能继续。你先怎样安排？",
+          "scene": "突变因子并非武器改装",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_mutator",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把少用的已持效果装进方案，试一种自己过去没认真玩的过程",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "比较突变因子的被动效果、武器改装与职业技能，配一组实际联动",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "沿一直在使用的突变因子继续强化，把这项长期投入留在武器方案里",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "读清被动条件和改装触发，先解释它们会在哪些动作上相遇",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "突变因子有独立被动槽，不是主动改装；不要求一开始就有，也不使用已变更的遗物碎片槽。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V504.V1"
+        },
+        {
+          "text": "还没取得任何突变因子，只能用初始职业技能和最早枪械改装。面对下一段熟路你先做什么？",
+          "scene": "突变因子并非武器改装的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_mutator",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "不用新系统，只换一种少用的武器与技能先后认真试一次",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "让技能、枪械和改装在不同局面里互相支持",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "保留原配置，重复练一个释放技能后接回射击的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "对照两种效果条件，弄清先后顺序会怎样影响这段遭遇",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "突变因子有独立被动槽，不是主动改装；不要求一开始就有，也不使用已变更的遗物碎片槽。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "已有几件本体防具可换，眼前几种重量安排都能完成熟悉路线。你先把整备时间放在哪里？",
+          "scene": "防具轮廓和负重",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_mutator",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动挑选头部、躯干与其余部件的轮廓，穿成自己想表达的旅者形象",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "对照重量与回避表现，解释换件后为什么会改变自己的移动节奏",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "固定当前重量，专练一次回避后重新出手的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "挑一组平时少穿的已有防具，用不同负重认真体验同一路线",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "二代防具不沿用一代套装技能或护甲强化；主动穿搭不等于把外观当机制收益。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V505.V1"
+        },
+        {
+          "text": "只有最早一套防具，暂时不比较外观和重量；熟悉敌人与初始工具仍可继续。你先试什么？",
+          "scene": "防具轮廓和负重的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_mutator",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把初始职业技能与最早改装的用途配在一起，调整常用枪械的发动安排后进熟路检验",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "专门观察敌人攻击和场地遮挡，验证一种移动关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "保持原来工具，把一次总仓促的回避接出手练稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "换一段过去没认真使用的近远切换和技能次序",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "二代防具不沿用一代套装技能或护甲强化；主动穿搭不等于把外观当机制收益。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "已经完成自己第一个本体世界，世界设置中能创建该世界冒险，当前战役也可接着走。暂不追新难度，你先选什么？",
+          "scene": "第一个世界完成之后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_class",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已知可在这个世界出现的饰品或武器收藏缺项，开一轮冒险寻找机会",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "再生成这个世界，想遇见没走过的地图连接或另一段故事入口",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "继续带着已选未满级职业走一段，把经验保留为独立成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "回战役接上已经开始的人物经历，想知道调查之后怎样发展",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "先完成世界才给该冒险入口；不清掉战役，不保证随机掉落，不要求DLC独立首发模式。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V506.V1"
+        },
+        {
+          "text": "还没完成第一个世界，当前没有冒险入口，仍有未探支线和能推进的战役。你先怎样接着玩？",
+          "scene": "第一个世界完成之后的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_class",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己早期装备收藏清单，去准备一件当前已知可取得缺项所需的资源",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "进一处尚未亲自探过的支线入口，看看地图会怎样展开",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "沿已经开始的初始职业继续累积经验，给后面的探索保留等级与专长成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "继续当前战役，接着了解已经出现的人物与事件",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "先完成世界才给该冒险入口；不清掉战役，不保证随机掉落，不要求DLC独立首发模式。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "与熟人来到一扇已见过的本体首领门前，大家能沟通，也没有必须立刻开门的催促。你先做什么？",
+          "scene": "门外还可以怎样准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_class",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "调整自己的已持饰品、武器改装与职业技能，检验一套具体方案",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "保留用惯的装备，明确这场只练自己一个仍仓促的回避时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "问清各自想试什么，约好谁先发动哪段工具、什么时候集中推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "再和这几个人一起经历一场就很有意思，先接着聊刚才路上的事",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "协调是与真人协商；不根据谁治疗、谁带狗或承担危险推断责任与人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V507.V1"
+        },
+        {
+          "text": "只单人游玩，还没反复打首领；准备再走第一个世界的一段熟悉普通遭遇。你先做什么？",
+          "scene": "门外还可以怎样准备的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_class",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看敌人从哪边接近、地形能挡住什么，先验证一种解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "同样工具换一段平时不用的接敌与发动次序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "把当前补给、改装准备和经过检查点的顺序排好",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "让初始职业技能与已有武器改装、饰品互相支持",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "协调是与真人协商；不根据谁治疗、谁带狗或承担危险推断责任与人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "回到13号实验区，你精力充足，当前世界还有路线能推进，熟悉人物也有可听的话。你先把下一段给什么？",
+          "scene": "13号实验区里可自由停留",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一项自己少用的已持普通改装，去熟路认真试另一种战斗办法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "去听完相关人物的近况，接上自己上次惦记的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "核对麦凯布处制作、铁匠升级与再出发的需求，排好资源和步骤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "即使还能去新地方，也愿意沿熟悉商铺与世界之石附近慢走，不添制作和成长目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "NPC属于叙事与商铺系统，不算真人关系；舒缓不由疲劳、难度或资源不足触发。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V508.V1"
+        },
+        {
+          "text": "只在最早13号实验区和第一个世界活动，你精力仍好，也能继续探索。当前先做什么？",
+          "scene": "13号实验区里可自由停留的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿现有枪械和初始职业技能，改掉惯常发动顺序试一段熟路",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把一个已能交谈人物的话听完，了解他为何会在这里",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把现有材料、初期武器改装和下一趟出发的顺序接清楚",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "即使还有未探路线，也想在熟悉区域按没有收获目标的节奏待一阵",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "NPC属于叙事与商铺系统，不算真人关系；舒缓不由疲劳、难度或资源不足触发。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想已经走过的本体世界、支线或机关，最有分量的是哪类发现？",
+          "scene": "世界不只是一条主路",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_guide",
+            "rem2v5_garden"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "附近找到的符号、文字或环境位置，终于被自己连成一种能验证的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "未探的入口带来之前没见过的地牢或世界一角",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "读听过的人物与遗留记录，让一片区域有了前后的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己饰品或武器收藏清单里的明确缺项，经过寻找被取得并留存",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "不要求特定随机世界、机关答案、DLC秘密或全收集；收藏是先有缺项的补全。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V509.V1"
+        },
+        {
+          "text": "还没解复杂机关，只回想第一个世界最早的一小片探索，哪件事最难忘？",
+          "scene": "世界不只是一条主路的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_guide",
+            "rem2v5_garden"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从高低层、门和地图位置里弄清了一段原来没连上的通路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "一处自己没有预定收获的支路，真的通向陌生地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "几句已读记录或人物话语，使这里的遭遇有了来由",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己早期装备收藏里预先惦记的一件缺项终于被补上",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "不要求特定随机世界、机关答案、DLC秘密或全收集；收藏是先有缺项的补全。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想和熟人实际做过的一场本体合作，哪类经历最值得留下记录？",
+          "scene": "一场真实合作的记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_class"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "几个人一起遇见的意外与说过的话，让这趟变成彼此记得的事",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "自己试了一种平时少用的职业或改装安排，实际经历了新玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "自己的职业技能、武器改装和饰品在这次遭遇里检验出一段具体配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "大家把各自想试的工具和这段共同目标谈清，过程中还能协商调整",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "不以主客、治疗量、复活次数或谁选某职业推现实关系。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V510.V1"
+        },
+        {
+          "text": "没有真人合作经历，只回想单人在第一个世界实际走过的一段路，哪点最想记下？",
+          "scene": "一场真实合作的记忆的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "rem2v5_core",
+            "rem2v5_class"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把补给、制作准备和再次回到路线排成能接续的流程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "一次反复练的闪避与重新瞄准，后来能主动选择时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "初始技能与最早武器改装开始能互相补上，而不只是轮流发动",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "没有预定收获地进过一条陌生支路，认识了新地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "不以主客、治疗量、复活次数或谁选某职业推现实关系。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想精力充足、还有路线能推进时的几次整备，哪类实际变化最值得记录？",
+          "scene": "回到实验区以后留下什么",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "rem2v5_class",
+            "rem2v5_mutator",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "即使还能去新地方，也愿意回熟悉实验区按无进度要求的节奏慢待一段",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "材料、制作、升级和再进入世界，被自己排得能持续接续",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "未满级职业或常用突变因子经过持续培养，成长保留给之后的世界",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己挑过几件已持防具并实际穿戴，旅者呈现出想表达的轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "本题回顾过去；持久成长不写成防具套装升级，自主舒缓有充分精力与可推进目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V511.V1"
+        },
+        {
+          "text": "还没有突变因子，也没搭过外观，只回想精力仍好、能继续探索时的一次前期整备。最有感的是什么？",
+          "scene": "回到实验区以后留下什么的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "rem2v5_class",
+            "rem2v5_mutator",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "即使还有路线能去，也愿意在熟悉实验区按没有新收获要求的节奏停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "核对现有材料、准备工具和重新出发的过程，被自己安排成了循环",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "初始职业在几趟普通遭遇里逐渐升级，之后仍保留新的专长成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "最早职业技能、枪械和改装被自己接成一段有具体用途的配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "本题回顾过去；持久成长不写成防具套装升级，自主舒缓有充分精力与可推进目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REM2V512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想自己实际打过的一次本体遭遇，哪种经历最让你记住二代的战斗？",
+          "scene": "技能和改装真正衔接",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "rem2v5_class",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照技能冷却与改装能量后，解释清楚了原来混在一起的条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "职业技能发动、射击和命中连续接上，反馈很有节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "自己反复练的技能与回避时机，后来能更主动地选择",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "职业、改装、武器或已持饰品在这场里形成互相支持的方案",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只回顾自己的操作与机制体验，不按职业稀有度、伤害、无伤或通关难度判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V512.V1"
+        },
+        {
+          "text": "只回想初始职业与第一项武器改装参与的一场普通遭遇，哪一点最有感？",
+          "scene": "技能和改装真正衔接的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "rem2v5_class",
+            "rem2v5_guide"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "终于分清技能等冷却、改装积能量各自怎样在这场发生",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "一段自己顺手的技能和射击，持续给出直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "一个总交得仓促的技能，练后开始能主动掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "最初几件工具也会在不同局面里彼此补上",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只回顾自己的操作与机制体验，不按职业稀有度、伤害、无伤或通关难度判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REM2V512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+b95ff603b8a0"
+}

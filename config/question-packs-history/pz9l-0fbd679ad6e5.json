@@ -1,0 +1,2799 @@
+{
+  "id": "pz9l",
+  "title": "僵尸毁灭工程",
+  "game_ids": [
+    "steam-108600"
+  ],
+  "scope": "原生PC：当前Build42稳定版与legacy41实际经历分开；Custom和各风险预设仅按题面当前可用条件，不使用MOD、预发布或计划NPC功能。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "每个玩法保留12个专属主题，每个主题目前有3个经原生玩法资料核对的手写情境。",
+    "保留4道跨游戏题，共16道主问题，最多2道补问；未体验的情境不记为回答。",
+    "换题只用所选玩法中未使用的已核实专属情境，不提供跳过；三候选有限，不代表所有玩家进度均已覆盖。",
+    "最终题干、四个选项、实际绑定的完整解释及适用前提均已逐题复核；尚无真人试测或人格测量有效性结论。",
+    "Build42与legacy41分别作答；42限定已发布稳定版功能，排除42.22预发布；41不借用42动物、季节耕作或新制作系统。"
+  ],
+  "modes": [
+    {
+      "id": "build42",
+      "label": "Build42：工作站、动物、季节耕作与当前稳定版经历",
+      "initial_variants": {
+        "PZ9L01": "PZ9L01.BUILD42.V1",
+        "PZ9L02": "PZ9L02.BUILD42.V1",
+        "PZ9L03": "PZ9L03.BUILD42.V1",
+        "PZ9L04": "PZ9L04.BUILD42.V1",
+        "PZ9L05": "PZ9L05.BUILD42.V1",
+        "PZ9L06": "PZ9L06.BUILD42.V1",
+        "PZ9L07": "PZ9L07.BUILD42.V1",
+        "PZ9L08": "PZ9L08.BUILD42.V1",
+        "PZ9L09": "PZ9L09.BUILD42.V1",
+        "PZ9L10": "PZ9L10.BUILD42.V1",
+        "PZ9L11": "PZ9L11.BUILD42.V1",
+        "PZ9L12": "PZ9L12.BUILD42.V1"
+      }
+    },
+    {
+      "id": "legacy41",
+      "label": "Build41 / legacy41：旧版实际生存经历",
+      "initial_variants": {
+        "PZ9L01": "PZ9L01.LEGACY41.V1",
+        "PZ9L02": "PZ9L02.LEGACY41.V1",
+        "PZ9L03": "PZ9L03.LEGACY41.V1",
+        "PZ9L04": "PZ9L04.LEGACY41.V1",
+        "PZ9L05": "PZ9L05.LEGACY41.V1",
+        "PZ9L06": "PZ9L06.LEGACY41.V1",
+        "PZ9L07": "PZ9L07.LEGACY41.V1",
+        "PZ9L08": "PZ9L08.LEGACY41.V1",
+        "PZ9L09": "PZ9L09.LEGACY41.V1",
+        "PZ9L10": "PZ9L10.LEGACY41.V1",
+        "PZ9L11": "PZ9L11.LEGACY41.V1",
+        "PZ9L12": "PZ9L12.LEGACY41.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "PZ9L01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "Build42里你在已经熟悉的住处，身体与随身食水能查看；门外有能接近但没看过的街区。你自己有精力，角色状态也允许继续搜物或短途走动。先怎样过这一段？",
+          "scene": "Knox住处门外的下一段街区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "走近没看过的街区，想亲眼知道那些建筑里外是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前身体状态与已带食水，再决定这轮怎样活动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "排清已有补给、这一小段去向与回住处的安排，再照这趟准备行动",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "明明能继续出门或搜物，自己也有余力，仍在走熟屋内慢慢收拾，喜欢这里熟悉的日常",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "当前可继续探索而非疲劳迫停，h须主动喜欢熟悉；自身状态/出行准备0与未知发现分开，不造NPC任务或绝对安全。",
+          "interpretation_boundary": "可走不等于无僵尸或绝对安全，身体设置按当前实有，不固定感染、水电关闭日或出生房无敌。",
+          "id": "PZ9L01.BUILD42.V1"
+        },
+        {
+          "text": "尚无自己的住处，可以答42最早搜过的一栋屋：一只容器已打开，物品能取，门外小路可走，身后也有已经走过且当前可返回的位置。你先怎样继续？",
+          "scene": "Knox住处门外的下一段街区的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去看看还没看过的下一处屋外，想亲眼发现那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "只先核对当前身体与随身补给，再决定这轮活动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "按现有物品调整这次携带、存放或丢弃，再继续眼前搜取",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "排清这一趟带什么、走哪段与回已知落脚点的安排，再照准备行动",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "不假定已拥有住所，出行准备只回当前已知位置；真实搜取/携带0、自身状态0和未知发现，不保证无僵尸或全存档规则相同。",
+          "interpretation_boundary": "可走不等于无僵尸或绝对安全，身体设置按当前实有，不固定感染、水电关闭日或出生房无敌。",
+          "id": "PZ9L01.BUILD42.ALT1"
+        },
+        {
+          "text": "Build42初到一栋屋内，电视正在出声，一扇有现成窗帘的临街窗能关帘，后门通向你已看过的院子，院外另有当前可达但没看过的屋角；此刻没有敌人逼到身边。你只准备先处理其中一件事，会怎样选？",
+          "scene": "窗帘、正在出声的电视与第二个入口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先关电视，再靠近门窗听一会儿，分清眼前还听得到哪些动静",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "先拉上临街窗的现成帘子，亲手处理这一处当前能关的遮挡",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "按手头补给排好出后门、经过已看过院子与返回入口的顺序，再走这一趟",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "去看看院子外另一处当前可达、还没看过的屋角，想知道转过去是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "从重复第一件小物取放改为原生房屋声源、窗帘与可用入口的先后取舍；明确关帘不是绝对隐蔽，听动静不是诊断出确定敌人。探索动机只给未知屋角，其余动作不额外判人格。",
+          "interpretation_boundary": "仅当前可操纵电视、已有窗帘和可通行后门；不承诺关电视或窗帘就不会被发现，不编固定按键、报警器关闭或无人房。",
+          "id": "PZ9L01.BUILD42.ALT2"
+        },
+        {
+          "text": "你玩的是原生Build41或legacy41：已经有一处走熟的落脚屋，当前食水可查看，门外有一段能接近但没看过的街道。此刻你自己有精神，角色也能继续活动。你先怎样过这一段？",
+          "scene": "旧41存档里的落脚屋与下一条街",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_41",
+            "PZ9L_LEGACY"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "走近没去过的街道，想亲眼知道那边的建筑与路口是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前身体状态与已带食水，再决定这一轮怎样活动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "排清已有补给、这段去向与回落脚屋的安排，再照这趟准备行动",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "明明能继续去看门外街道，仍在走熟屋内慢慢待着，喜欢这里熟悉的安顿感本身",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "旧41未知街道、当前身体查看与一次外出准备均可做；熟悉停留要求本人有精神且角色有可做活动，不从危险顾虑推h。",
+          "interpretation_boundary": "41的Apocalypse/Survivor/Builder为当时预设，不把当前42预设套过来；具体僵尸、水电与死亡规则仍以本次存档为准。",
+          "id": "PZ9L01.LEGACY41.V1"
+        },
+        {
+          "text": "旧41里你打开容器，发现个人正在留的VHS系列还缺的一集，拿得到且背包装得下；旁边电视和播放设备可用，内容确实有人物或事件能看。已有开罐器与一罐当前可开的食物，你也选过先把这顿准备好的目标。先投入什么？",
+          "scene": "柜里的缺集录像，还是先给自己开这一顿",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这盘明确未拥有的缺集拿回来，想补自己正在留的录像收藏空缺",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先播放这盘当前能看的内容，想跟住其中人物和事件的展开，暂不急着完成收藏整理",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先把自己这轮已选的这一罐食物实际打开并收好，把时间投入这个具体备食目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对已经打开容器里的实有物品和已知存量，再决定这一轮怎样处理",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "最早搜物四中性步骤改为41原生VHS真实缺集、可播放叙事与当轮开罐项目，当前已见可取得缺项才C，不把一切拿物算收藏。",
+          "interpretation_boundary": "内容当前确可播且确谈人物事件，不默认每盘都是叙事/教学或永不断电；开罐是游戏内当前允许操作，不保证食物现实安全或原生自动收藏图鉴。",
+          "id": "PZ9L01.LEGACY41.ALT1"
+        },
+        {
+          "text": "旧41已有地图当前实际能显示位置或标记，附近一段没走过的小路能去；眼前容器还有一张你个人地图收藏确实未拥有的纸地图，当前拿得到、背包装得下。自己这轮已选的已有工具也能沿熟路送到容得下的储物点。先投入什么？",
+          "scene": "旧地图上的陌生方向和眼前那张缺图",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对地图当前实际显示的位置与已有标记，再决定这一段怎样走",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "先沿没走过的小路看看，想亲眼发现那边，暂缓拿缺图与送存",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先取回眼前这张明确未拥有的纸地图，想补自己正在留的地图收藏空缺",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先把自己这轮已选的这批已有工具沿熟路实际送存，推进这个具体目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "打开/收起地图的四方法壳改为41原生地图信息下未知空间、个人实体纸图缺项和真实工具目标。纸图收集与地图查看不同，不用免费地图目录凑C。",
+          "interpretation_boundary": "已有地图显示按当时设置，纸图缺项确实已见可取；不造所有区域自动揭开、NPC标宝藏或取得地图保证有物资。送存有真实路线与容量。",
+          "id": "PZ9L01.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "42里你已在可用工作站选好一项当前能做的原生石器配方，可指定合用输入；所需材料与技能满足。住处另一项已开的干燥架也能用现有材料做，时间只够先推进一项，院外另有可达但没看过的屋角。先投入什么？",
+          "scene": "工作站上的石器，还是先给住处补上干燥架",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42",
+            "PZ9L_STORE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的这件石器实际做成，把当前材料和时间投入这个具体目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先实际搭好当前能做的干燥架，并安排周围已有家具与工具，让这处作坊表达自己想要的住处风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先去没看过的屋角看看，想亲眼发现那里，暂缓两个制作项目",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前配方实际允许且材料够的输入选项，再决定这份材料用哪一种",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "工作站四种菜单方法壳改为42原生石器/干燥架项目背景下的制作目标、个人作坊表达、未知屋角与真正可用输入比较。普通操作仍不凑F/G。",
+          "interpretation_boundary": "只本人当前已开石器配方和工作站、技能与现有材料足够，已有家具当前可摆；不杜撰具体配方数量、所有石器可剥肉、免费材料或新职业NPC。干燥架是已发布建筑，不保证当前任何食物都可挂。 干燥架这一选项实际搭建并表达自己的作坊风格，不只是被题干提到。",
+          "id": "PZ9L02.BUILD42.V1"
+        },
+        {
+          "text": "42里背包有一件未穿、当前菜单确可撕的棉质衬衫；它也能直接穿，另有现成可穿衣物。你这轮已选了从这件衬衫取得布条的目标，附近有容得下产物的箱子和可通行却没看过的屋外。先投入什么？",
+          "scene": "那件旧衬衫，是穿上还是把布料留给本轮项目",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这件衬衫配上已有衣物实际穿好，让幸存者呈现自己想表达的颜色与轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先把自己这轮已选的衬衫实际撕成布条并收好，把这份物品投入具体用料目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先沿没看过的屋外走一段，想发现那边本身，暂缓当前衣物取舍",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对这件当前可撕衣物与已有布条的实际材料状态，再决定这一轮怎样处理",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "原撕衣/看说明/看状态/留携带四微操作改为原生可穿可撕的同一物品去向、本人表达、具体布条目标与未知发现竞争。",
+          "interpretation_boundary": "限当前菜单确可撕且可穿的未穿普通棉衬衫，不泛化袜子/皮革、不保证撕衣出线或固定经验，也不提供现实伤口处理结论。",
+          "id": "PZ9L02.BUILD42.ALT1"
+        },
+        {
+          "text": "42制作面板里一项你这轮已选的干燥架配方当前已开，技能、用具和材料满足；同批可用材料也能先做住处一小段已选木构件，暂不够同时完成。面板能按输入或产物检索，眼前也有可反复试的配方查找操作。先把时间给什么？",
+          "scene": "制作面板先找产物，还是先做储物角",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按产物找到目标，把自己这轮已选的干燥架实际做成，推进这个当前可做项目",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把可用木构件实际做出并摆成自己选定的储物角，让住处表达个人风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "反复练在42面板切换输入和产物检索、确认可用材料，专门把自己的这项界面操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对目标已经显示的用料、技能与工具要求，再决定是否消耗当前材料",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "与02V1重复的四种输入/检索步骤改为42原生产物检索下两个当前材料目标，个人作品与界面精进动机分开。",
+          "interpretation_boundary": "只当前实际已开且分别可做的项目，不假设特定干燥架固定配方、制作无工位/时间、所有木构件可放或看过菜单就已熟练。",
+          "id": "PZ9L02.BUILD42.ALT2"
+        },
+        {
+          "text": "旧41一扇窗当前可加木板，锤子、木板和钉子够你这轮已选的加固目标；屋内已有几件当前可摆物和合法落点，也有已听熟CD与可用播放设备。你有精神，角色允许继续，没有敌人迫近这扇窗。先投入什么？",
+          "scene": "先加这一扇窗，还是把屋内留成自己的样子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的这扇窗实际加固好，把当前材料与时间投入这个具体目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先实际安排屋内已有家具和小物，让这处落脚点表达自己想要的住处风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "窗能继续加、屋里也能改，仍在走熟地方再听熟悉CD一阵，喜欢自主熟悉的日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前木板、钉子与当前已知存量，再决定这一轮怎样取料",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "窗板四取料/查看/一步操作壳改为41具体加固项目、本人3D居所作品与原生熟CD自主停留的时间竞争；一次装板不推F或G。",
+          "interpretation_boundary": "仅这扇当前确可加板且材料足够，不列过时固定板数、不保证绝对挡住敌人；H需要本人有精神和其他真实可做活动，CD设备确能播放，不因疲劳/无路可走留下。",
+          "id": "PZ9L02.LEGACY41.V1"
+        },
+        {
+          "text": "旧41一件未穿棉质上衣当前确可穿也可撕成布条，另有现成可穿衣物；你已选过先从它取一批布条的目标，产物有空位收存。门外另有当前能走却没看过的屋角，没有敌人迫你立即行动。先投入什么？",
+          "scene": "旧衬衫先穿上，还是留下这轮布条",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_ROOT_41_BODY"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这件上衣配上已有衣物实际穿好，让幸存者表达自己选定的颜色和轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先把自己这轮已选的上衣实际撕成布条并收好，把这份物品投入具体用料目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先沿没看过的屋角走一段，想亲眼发现那边，暂缓当前衣物取舍",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对这件已有衣物与现有布条的实际材料状态，再决定这一轮怎样处理",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "四种撕衣方法改为同一原生41衣物穿用/消耗与未知空间的真实选择。与42共有的普通棉上衣互动有各自当前条件，不借42新衣物制作配方。",
+          "interpretation_boundary": "当前菜单明确可撕的未穿普通上衣，不泛化袜子/皮革、不固定线材或经验产量，不给现实医疗/布条消毒建议。",
+          "id": "PZ9L02.LEGACY41.ALT1"
+        },
+        {
+          "text": "旧41你已有两组当前兼容的背挂武器与腰带工具，空位及取用操作可用，眼前一段路能试走并取工具；没有敌人逼近。自己这轮已选的现有物资能送到有空位容器，外面另有没看过的可达街角。先投入什么？",
+          "scene": "背部和腰带这一组，要试配还是先出门",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "分别实际装上两组现有背挂武器和腰带工具，在试走中切换取用，想比较这些配置怎样配合自己的行动",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "专门反复练从当前背挂与腰带位取回合用工具，想把自己的这项快捷取用操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先把自己这轮已选的已有物资沿熟路实际送存，推进这个具体目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先去没看过的街角看看，想发现那边本身，暂缓眼前两套取用试配",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "背挂/腰带/看说明四微操作改为41实际两套兼容配置的功能试用B、个人快捷操作精进T和当前可做目标/未知街角竞争；不把只看槽位算配装实验。",
+          "interpretation_boundary": "两组现有工具/武器必须实际兼容各槽并能取用，真实装上并试切换才B；不保证固定取用速度、所有武器能放腰带或附加伤害。",
+          "id": "PZ9L02.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "42里这批作物是你已种下并照料过、尚未收获的同一批，其中当前能补水；另有空地和两类确实能种的种子，这轮季节与用具条件已确认合用，食水允许继续。你先怎样投入？",
+          "scene": "42季节耕作中的下一轮种植",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_42",
+            "PZ9L_STORE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前两类确实可种的种子和地块条件，再决定这次采用哪一种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "只先查看当前地块、作物和已有材料状态，再决定这一轮怎样处理",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "接着给这批当前能补水的作物浇水，关心同一批植物前几轮投入能延续在它们的成长上",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把留种、种植、补水、收成与之后食物储备连成几轮周转，持续调整供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "42当季可种条件与可补水作物明示；g是同一已投入且尚在成长的植物，不是换批维护地块。普通种子方案比较0，未种过某类不自动计收藏。",
+          "interpretation_boundary": "不固定月份、成长天数、农药或产量；季节不合用时不能拿本题要求玩家实际播种，也不造现实食物安全保证。",
+          "id": "PZ9L03.BUILD42.V1"
+        },
+        {
+          "text": "42里当前合用食材、容器、料理配方与可用炉具都齐，能做这轮已选的一份料理；已知补给处还有能继续取到的食材，容器、燃料或供能与存放能接续几轮。院里另有自己已选且用料够的一段木构件。先投入什么？",
+          "scene": "锅里的一顿，还是先把这批食材留给后续几轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的一份料理实际做出并收好，推进这个当前可做备食目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把取食材、做料理、合用加热和回存接成几轮，持续调整后续能接续的口粮供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先实际调整院里木构件和已有摆件，让这一角表达自己想要的住处风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前食材、容器和已有产物的实际状态，再决定这一轮怎样处理",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "料理四中性步骤改为单餐具体目标、实际多轮供给、本人院落作品与当前状态。只有真正制作UI的部分才可叫制作，不把加热容器自动算78或F。",
+          "interpretation_boundary": "只当时当前合用可加热食物/容器及真正供能，不保证所有容器可加热、炉火永安全或食物不腐；多轮物资已具备，不由一餐完成推运营。",
+          "id": "PZ9L03.BUILD42.ALT1"
+        },
+        {
+          "text": "42里你已有当前可食用口粮和可饮水，身体与补给允许这一小趟；走熟路线能到自己这轮已选的有空位储物点，另一个屋角可达却没看过。当前没敌人逼你立刻移动，你自己也有精神。先投入什么？",
+          "scene": "随身食水够出门，先去哪个已能做的地方",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_STORE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的这批已有补给沿熟路实际送到储物点，推进这个具体目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去没看过的屋角，想亲眼知道那里有什么，暂缓补给送存",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "仍在已经走熟的落脚点从容收拾，喜欢由自己安排的这段熟悉日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前身体状态与已带食水，再决定这一轮怎样活动",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "进食/记录/查看/携带四微操作改为真正可行的补给目的地、未知空间与自主熟悉过程之间选择，食水是可行前提而非把缺粮强迫留家计H。",
+          "interpretation_boundary": "只当前确可吃喝的已有补给与容得下的可达存放点，不给现实食品安全判断，不保证路径安全或自动存入；H明确有精力与可做其他目标。",
+          "id": "PZ9L03.BUILD42.ALT2"
+        },
+        {
+          "text": "旧41里同一批作物已经由你种下并照料过，目前仍在生长、尚未收获，当前确能补水。手边另有两种本次可播的种子和用具，可选空地也具备。你先怎样投入？",
+          "scene": "41已经种过的地块与留种",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前这两种已有种子、已种作物与用水的可见状态，再决定这轮怎样处理",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "直接给当前能补水的一处已种作物浇一次，亲手体验这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "继续回到同一批尚未收获的作物照料，关心此前投入的生长能在它们身上延续",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把留种、种植、补水、收成与后续食物储备接成几轮周转，持续调配供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "已拥有可播种子不冒充收藏；g限定已投入、未收获的同一批生长作物，y才是留种/种植/食物储备的多轮依赖，不借42季节表。",
+          "interpretation_boundary": "不用42最佳播种月份、食草动物产出、固定收成天数或现实可食安全保证；只当时真实可种可做的内容。",
+          "id": "PZ9L03.LEGACY41.V1"
+        },
+        {
+          "text": "旧41里合用食材、容器、已会配方和可用炉具齐全，能做自己这轮已选的一份料理；已知补给处还有可取食材，供能、收存与用具能接续几轮。家里另有可合法摆放的已有家具和小物。先投入什么？",
+          "scene": "这一锅先做出来，还是把口粮周转接上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_STORE",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的一份料理实际做好并收好，推进这个具体备食目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把取食材、做料理、合用加热与回存接成几轮，持续调整之后能接续的口粮供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先实际安排厨房已有家具与小物，让这处生活角落表达自己想要的住处风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前食材、容器与已有产物的实际状态，再决定这一轮怎样处理",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "料理四中性方法改为41原生当前单餐目标、真正多轮口粮供给和个人厨房作品。实际制作界面与容器加热仍区分，不把普通一步操作计F。",
+          "interpretation_boundary": "只当前实际会做且容器可加热、供能正常的一份，不假设42工作站/新保藏配方；不保证无限供电、食物不腐或一顿饭等于持续运营。",
+          "id": "PZ9L03.LEGACY41.ALT1"
+        },
+        {
+          "text": "旧41这处厨房水槽当前实际还能取水，已有合用空水壶能装下自己这轮已选的一份当前可饮用水；补给与角色状态允许沿熟路出门，另一栋能到却没看过的屋也在附近。你有精神，屋内已走熟。先投入什么？",
+          "scene": "水槽还能接水，这一趟先把水壶装好",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_STORE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的出门水壶实际装好，把时间投入这次具体饮水准备目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去那栋没看过的屋看看，想亲眼发现那里，暂缓装水出门",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "还有水可装、新屋可看，仍在走熟厨房从容待着，喜欢自主熟悉的日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前身体状态和已带食水，再决定这一趟要准备多少",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "进食/拿物/记录/状态四壳改为旧41真实可用水槽和出门水壶目标、未知屋与能自主停留的时间竞争；无42先进混液系统。",
+          "interpretation_boundary": "只游戏内当前可饮用水、确还能出水的水槽与合用容量，不保证停水时点/停水后也无限供水；不作现实水质或饮用建议。",
+          "id": "PZ9L03.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "42里你已亲手照料这群鸡，也看过它们对照料的反应；当前食槽和水槽还能补入，已有饲料水和已知可继续取得的补给处。围栏旁木构件与用料够改一小段，你自己有精神，角色也能继续。先投入什么？",
+          "scene": "鸡群能补槽，还是先把饲养点这一角改好",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把几轮取饲料、取水、补槽与补回储备接起来，持续调整之后能接续的饲养供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先把自己这轮已选的食槽和水槽实际补好，把当前饲料水投入这次具体照料目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先实际安排围栏旁木构件与已有摆物，让饲养点表达自己想要的营地风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先为自己此前确实做过的喂养照料步骤和已看见的鸡群反应补记录",
+              "signal": "animal_care_process_recording"
+            }
+          ],
+          "design_purpose": "一次添饲料/排步骤/看状态加H改为原生鸡群的实际多轮供给、当轮补槽目标、个人饲养点作品与真正本人照料历史77。普通照料不自动G。",
+          "interpretation_boundary": "只当前真实可补槽和可继续取的饲料水，动物反应已观察过才77；不保证每只鸡自动亲近/产蛋、固定生长时间或NPC饲养员。",
+          "id": "PZ9L04.BUILD42.V1"
+        },
+        {
+          "text": "42里你在林缘看见动物留下的足迹或粪便，一段痕迹延向还没走过、当前可接近的地方；水和返程路线已备好，今天不必捕到动物。你先怎样用这一趟？",
+          "scene": "林缘的足迹与已经知道的回程",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿眼前能跟的一小段痕迹看看，想亲眼发现它通向哪种地方，不先指定猎物或收益",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先排好水、已知回程和这次跟多远再返回的安排，然后照这趟准备行动",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "只为自己已经看见痕迹的这个位置补上记录，暂不把没去过的方向写成发现",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "先靠近查看眼前已可达的痕迹和地面，再决定是否沿它走",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "以42真实野生动物追踪替代又一轮作物浇水；未知去向与已见痕迹信息分开，不根据足迹直接判唯一动物或保证找到猎物。",
+          "interpretation_boundary": "只眼前实际可见痕迹与可接近路段；不编动物同伴、必定追上、固定刷新、无风险狩猎或NPC委托。",
+          "id": "PZ9L04.BUILD42.ALT1"
+        },
+        {
+          "text": "42里你已住熟一间屋：墙上有一处当前能用原生清洁操作去除的污渍，工具条件满足，附近也有几件已拿到、当前能摆放的旧家具。你自己有精神，角色还能继续整理。先怎样花这段时间？",
+          "scene": "旧墙污渍与还没整理完的屋角",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去掉这处污渍，再把现有家具摆成自己选定的角落，让它呈现想要的住处感觉",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "只对这处当前可清理的墙执行一次清洁，亲手看看本轮发生什么",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排好清哪面墙、移动哪件家具与收尾的编辑步骤，再按这个顺序动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "眼前仍有能清的墙和能摆的家具，也有精力，仍先在走熟屋内慢慢待着，喜欢这里熟悉的日常",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "42官方新增墙面污渍清理与现有家具布局提供独立取舍；A要求实际布局表达，单次清洁中性，H有余力且仍能推进。",
+          "interpretation_boundary": "不指定清洁材料、清理全部墙或一次清洁让房屋安全；只当前菜单真正允许清理的这一处，不当角色能力测试。",
+          "id": "PZ9L04.BUILD42.ALT2"
+        },
+        {
+          "text": "旧41一件外套当前能修补，合用针线与补料够；同一幸存者此前已投入裁缝技能，目前还有能获得相关成长的真实修补机会。备用衣与现有人台也能换装，个人藏书里一卷已见缺项当前可取、背包放得下。先投入什么？",
+          "scene": "针线够这件外套，还是先把幸存者技能练下去",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续让自己此前已练过的同一幸存者做当前可增长的修补，关心原先投入继续留在这个角色的裁缝进度上",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把自己选定的已有衣物实际搭到人台和身上，让幸存者与住处表达想要的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先把自己这轮已选的这件外套实际补好，推进这个当前可做的装备准备目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先去拿那本明确未拥有的缺卷，想让自己正在留的藏书少一个空缺",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "修补四中性步骤改为41原生同一角色裁缝成长、本人穿搭作品、当轮外套目标与真实缺卷竞争。G对象是持续投入的角色，不是一件衣物普通维修。",
+          "interpretation_boundary": "合用针线材料、当前真可增长的角色技能与可补部位都满足，不保证每次动作固定XP/修复成新/防抓免伤；人台真实可用，缺卷已见可取，不加42新盔甲配方。",
+          "id": "PZ9L04.LEGACY41.V1"
+        },
+        {
+          "text": "旧41你已有两套当前兼容可穿的衣物，包含不同外套与内层；已有防护、负重与穿后体温信息可查看，当前位置能停留或走一小段。你也选过把备用衣送回有空位衣物箱的目标。先投入什么？",
+          "scene": "两套现有衣物，先试穿还是先做自己的样子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "分别实际穿上两套现有衣物走动，想比较层次组合与负重、体温显示怎样配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "实际穿上并调整自己选定的已有搭配，让幸存者表达想要的颜色与轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先把自己这轮已选的备用衣实际送回衣物箱，推进这个具体准备目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先比较两套当前已有衣物的实际装备信息，再决定这一轮穿哪套",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "只看衣服/换一件/查说明四壳改为41原生体温衣物下真实组合试用B、个人外观表达A与当前备用衣目标。只看已有数值比较仍0。",
+          "interpretation_boundary": "两套各自当前确能兼容穿用，不主动挨咬试防护；只比较游戏实际显示和走动反馈，不保证每件衣服同温效/无行动影响或推现实体温处理。",
+          "id": "PZ9L04.LEGACY41.ALT1"
+        },
+        {
+          "text": "旧41洗衣机与烘干机当前供水供电正常，已有几批能洗/能烘的衣物、需要的合用物资和收存空位够接续几轮；自己已选了一件这轮要洗好的外套，另有现成可穿备用衣与人台。当前已有洗涤与烘干操作说明可看，先投入什么？",
+          "scene": "洗衣设备还能用，先处理这件还是接上几轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的外套实际按当前可用洗涤操作处理好并收好，推进这个具体目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把取脏衣、洗涤、合用烘干与回存接成几轮，持续调整这处衣物周转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先把自己选定的备用衣实际搭到身上与人台，让幸存者和衣物角呈现想要的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先核对已经出现的洗涤与烘干操作说明，再决定这一轮怎样用",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "一次放洗衣/烘干/看说明改为原生41真实设备的单件目标、多轮衣物流程与本人穿搭作品；一次按开关不算运营或F。",
+          "interpretation_boundary": "当前确能洗能烘且各批物资、收存够，不保证未来不停水电或所有衣物都可烘。中性选项只查看实际已出现的操作说明，不虚构设备供水/供电/连接状态面板。",
+          "id": "PZ9L04.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "42里当前捕鱼工具和水边操作可用；你刚在岸边走跑过，已看见的水面动静一阵变少，但原因未确认，当前位置能停下。你先怎样投入？",
+          "scene": "42水面动静与这次捕鱼",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己猜刚才跑动的声音让鱼暂时避开，保持钓具与位置不变，只改为原地站定再试一段，比较实际水面动静",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "反复练当前捕鱼工具的操作时点，专门把这一项练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "亲手操作这一轮，留意输入、竿线与水面相连的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前身体状态与已带补给，再决定这一轮怎样活动",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "只有水面动静观测与先前活动，不给噪声诊断答案；p由玩家提出解释并改一项行动状态实测，可失败。原生交互捕鱼/噪声有官方支持。",
+          "interpretation_boundary": "不承诺声音降低必有鱼、固定鱼数、必能近战获胜或僵尸绝不会奔跑；只本次实际可用条件。",
+          "id": "PZ9L05.BUILD42.V1"
+        },
+        {
+          "text": "还没捕鱼，可答实际用过的最早近战武器：当前武器可用，眼前一只僵尸可接近，周围能退开恢复。你先怎样投入？",
+          "scene": "42水面动静与这次捕鱼的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练瞄准、推击或退步的时点，专门把这一项操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手打一轮，留意动作、声音与目标反应相连的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "排清接近、出手、退开恢复与再次接近的循环，再照安排尝试",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "D",
+              "label": "只先核对当前身体状态与已有补给，再决定怎样行动",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "未捕鱼的早期近战前提：当前武器、目标和退开恢复空间给足，刻意练时点t、亲手反馈f与当轮能量循环/身体查看0分开，不承诺获胜。",
+          "interpretation_boundary": "不承诺声音降低必有鱼、固定鱼数、必能近战获胜或僵尸绝不会奔跑；只本次实际可用条件。",
+          "id": "PZ9L05.BUILD42.ALT1"
+        },
+        {
+          "text": "42里你已有当前可饮用水，液体转移操作允许，两只空容器能接收；自己这轮已选的出门容器能装下这份水。走熟取水点当前还有可用水能接续几轮，屋内存放有空位，门外另有可达却没看过的小路。先投入什么？",
+          "scene": "出门水壶和留在屋里的储水容器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的出门容器实际装好，推进这次具体饮水准备目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把取水、转移、补随身容器与回补屋内储备接成几轮，持续调整供给衔接",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先沿没看过的小路看看，想发现那边本身，暂缓分装与补储备",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前身体状态和已带饮用补给，再决定这趟要准备多少",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "液体转移四中性步骤壳改为42原生分装下的当前出门目标与真正多轮水储备、未知去向和准确状态。一次倒水不当运营或F。",
+          "interpretation_boundary": "只游戏当前已可饮用水与确能接收的合用容器，不混漂白剂/酒精、不作现实饮用结论；取水点当前有水，不保证断水前后或任何容器无限存水。",
+          "id": "PZ9L05.BUILD42.ALT2"
+        },
+        {
+          "text": "旧41里当前枪械、对应弹药和瞄准操作确实可用，本次已开启适用的目标描边显示；你能看到一只可接近目标，周围也有退开空间，另有一件当前可选装备供比较。你想怎样用这一段？",
+          "scene": "41目标描边与一次实际出手",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练进入瞄准、观察描边与出手的时点，专门把这一项操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手打一轮，喜欢动作、声音与目标反应接连发生的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "排清接近、瞄准出手、退开恢复与再次接近的循环，再照当轮安排尝试",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "D",
+              "label": "只先比较当前已有枪械与装备信息，再决定这一轮采用哪件",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "目标描边是当前开启的旧41选项而非42身体部位瞄准；实际重复练习不要求命中，真实出手手感、战斗恢复安排与两件已有配置比较0可行。",
+          "interpretation_boundary": "不保证绿描边必中、不固定感染或击杀数、不称武器自动静音；只玩家真实已有的工具和场景。",
+          "id": "PZ9L05.LEGACY41.V1"
+        },
+        {
+          "text": "没用过枪，可以答41实际用过的最早近战武器：当前武器能用，眼前一只僵尸可接近，周围能退开。你先怎样投入？",
+          "scene": "41目标描边与一次实际出手的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练推击、挥击和退步的时点，专门把这一项操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手打一轮，喜欢动作、声音与目标反应相连的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "排清接近、出手、退开恢复与再次接近的循环，再照安排尝试",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "D",
+              "label": "只先核对当前身体状态与已有补给，再决定这一轮怎样行动",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "旧41可用近战推击/出手与退步的实际动作；主动重复为练熟t、即时动作反馈f、本轮接敌恢复0与身体查看0，不借枪械描边前提。",
+          "interpretation_boundary": "只旧41当前近战武器与能退开的目标场景，不要求枪械描边、固定感染或伤害，不保证命中、击倒或僵尸类型相同。",
+          "id": "PZ9L05.LEGACY41.ALT1"
+        },
+        {
+          "text": "旧41里你实际开启过原生搜寻模式：眼前已发现一件可拾取物件，正是你自己那套收藏还缺的一项，背包放得下；旁边另有当前可走、尚未搜过的地面，随身有这一趟可用补给，返程已知，搜寻操作提示也已出现。你先怎样投入？",
+          "scene": "搜寻模式里出现的缺项与另一段地面",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_ROOT_SEARCH41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先取回眼前这件已发现的缺项，想把自己一直在补的这套收藏再补上一格",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先沿那段没搜过的地面看看，想亲眼发现还会出现什么，不指定要哪种物品",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前搜寻界面已经显示的操作说明，再决定这轮怎样继续搜",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按已有补给排好这段搜寻范围与回落脚点的先后，再照这趟准备行动",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "原生41搜寻模式与已经发现的真实收藏缺项，明确实际拾取追求C而非种类愿望；另一可走未知区域W和工具说明/本人返程准备0分开，不把单块摆物记F。",
+          "interpretation_boundary": "仅已发现、确可拿的物件及当前可走范围；个人收藏不冒官方图鉴奖励，不保证找到特定物资，不把搜到植物等同可食用，不借42动物痕迹。",
+          "id": "PZ9L05.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "42里你已找到一个当前能进入的地下室入口，附近还拿到一份可读传单，文字确实谈到当地人物或事件；不要求立刻搬家或交战。你先怎样用这一段时间？",
+          "scene": "已可进入的地下室与一份传单",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "读已拿到的传单，把它讲的人和事件与这处地方前后经历接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先查看这个已经可达的地下室入口与进出通道，再决定这一段怎样继续",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "只为已经取得传单与看过的入口补记记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "走进还没看过的地下空间，想亲眼知道里面是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "故事s只实际叙事内容，不把任意广告或操作传单都视人物故事；可进地下室与已有信息记录0前提保留。",
+          "interpretation_boundary": "不保证每栋屋都有地下室、不编新NPC任务、传单具体台词或现场唯一正确解释；旧41不借此新增地下层。",
+          "id": "PZ9L06.BUILD42.V1"
+        },
+        {
+          "text": "没有地下室经历，可答42实际遇过的屋内场景：你已看过一处留下物件或尸体的现场，当前还可回看，外面有一段能走但没看过的路。你先怎样继续？",
+          "scene": "已可进入的地下室与一份传单的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去看看没走过的小路，想亲眼知道转过去有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按当前已有随身物品排清出屋、去可走方向查看与回到已知入口的先后，再照这趟准备行动",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "只是给已见地点与实际体验过的人物线索补记记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "再看已经见过的物件与现场，想理解这里的人之前经历了什么",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "屋内环境叙事既有现场可答，不造地下室或NPC任务；普通本人出行准备0不借记录习惯计身份，已见线索记录与故事理解分开。",
+          "interpretation_boundary": "不保证每栋屋都有地下室、不编新NPC任务、传单具体台词或现场唯一正确解释；旧41不借此新增地下层。",
+          "id": "PZ9L06.BUILD42.ALT1"
+        },
+        {
+          "text": "地下室和屋内现场都没经历过，可以答42实际读过的一份报纸：这份谈人物或事件的文字当前确实能回看，附近有可走但尚未看过的去向。你先怎样继续？",
+          "scene": "没见地下现场时的已读报纸",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "走近没看过的去向，想亲眼知道那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前身体状态与已带补给，再决定这一轮怎样活动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "只给这份已读信息与当前位置补记记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "再读已见文字，把其中的人和事件与前后经历接起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "报纸内容和当前可回看都需明确，不把消耗掉纸张或任意物品说明当故事；不编具体新闻内容。",
+          "interpretation_boundary": "只真实已读文字，不编NPC支线、某一期内容、唯一谜底、地图位置或未发布故事。",
+          "id": "PZ9L06.BUILD42.ALT2"
+        },
+        {
+          "text": "旧41里你已实际见过一处像是人们曾一起看球、聚会或生活过的屋内现场，相关物件当前仍能查看；屋外也有没看过但可走的一段路。你先怎样继续？",
+          "scene": "41屋内留下的聚会现场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "走近没看过的路段，想亲眼知道那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先靠近并查看屋内已经能接近的摆设与物件，确认眼前现场是什么样，再决定这轮活动",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "只为已经体验的地点与人物线索补记记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "回看已经见到的物件和摆设，想理解这里的人之前经历了什么",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "随机聚会现场可联想到人物故事s但不生造NPC；普通眼前场景检查0不同于故事联系，记录员习惯不计身份。",
+          "interpretation_boundary": "只已有现场，不造唯一真相、必触发事件、NPC委托或42新增地下室；停留不等于保证安全。",
+          "id": "PZ9L06.LEGACY41.V1"
+        },
+        {
+          "text": "没遇过聚会现场，可以答41实际看过的车辆残骸或路障：当前位置可停留，附近另有能走但没看过的小路。你先怎样继续？",
+          "scene": "41屋内留下的聚会现场的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去看看没走过的小路，暂不为指定物资而走",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按当前已有补给，先排清这一段可走路口与返回位置的安排，再照这趟准备行动",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "只为已经看过的残骸所在位置与自己走过的路口补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "再看已见车辆与路障，把这里的人之前发生的事与已见线索接起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "残骸现场不假定已取物品，已体验地点信息0准确，不虚构补战利品记录。",
+          "interpretation_boundary": "只已有现场，不造唯一真相、必触发事件、NPC委托或42新增地下室；停留不等于保证安全。",
+          "id": "PZ9L06.LEGACY41.ALT1"
+        },
+        {
+          "text": "旧41已有开罐器与一罐当前菜单确可打开的食物，你这轮已选先备好它；另一扇窗的加固工具、木板和钉子也够，屋内已有小物可摆，门外另有没看过的可达屋角。没有敌人逼你立刻处理窗。先投入什么？",
+          "scene": "开罐器在手，先备这顿还是先补那扇窗",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的这罐食物实际打开并收好，推进这个具体备食目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先实际加固当前能做的那扇窗，并安排窗旁已有小物，让这个角落表达自己想要的住处风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先去没看过的屋角看看，想亲眼发现那边，暂缓开罐和窗边项目",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对窗边已经列出的加固用料与现有木板钉子，再决定是否先做这项",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "开罐四操作步骤壳改为41原生开罐与窗边建筑项目背景下的目标、本人作品和未知去向竞争；标题修正升级为整题真实重写。",
+          "interpretation_boundary": "仅当前确能开的一罐与已具备的窗板工具材料，不列旧上限/所有食物均可用同工具，不保证窗板安全或NPC任务奖励，也不作现实食品结论。",
+          "id": "PZ9L06.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "42里你持有确实有头部或柄部状态、当前仍能用的一把近战武器，另有可用备用武器；附近有可自行接近的目标和退开处，也能暂不交战。自己这轮已选的罐头送存路线可走，目标箱有空位；屋内有这件武器当前确可挂的位置。先投入什么？",
+          "scene": "头柄都还撑得住，先带备用武器出门吗",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用备用武器出门，把这轮已选的已有罐头实际送存，推进这个具体目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先反复练当前原武器的瞄准、出手和退步，专门把自己的操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先实际把当前可挂的武器与已有摆件安排在墙上，让这一角表达自己的住处风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先比较两件当前已有武器及实际部件状态，再决定这一轮采用哪件",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "原头柄状态四取放/查看壳改为部件仍可用条件下的具体送存、个人工具精进与原生挂墙作品。信息比较仍准确0，不造替换组件机制或把维修当G。",
+          "interpretation_boundary": "只当前仍可用的原武器、真实备用武器/可挂权限与可行存放；不假设所有武器有独立头柄、零耐久不坏、固定断裂概率或挂墙自动防守。",
+          "id": "PZ9L07.BUILD42.V1"
+        },
+        {
+          "text": "没用过部件武器，可答实际拥有两件衣物的一段：当前两件都能穿，已有外观或防护信息可看。你先怎样继续？",
+          "scene": "当前武器的头部与柄部状态的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前这两件已有衣物的外观方案，再决定这轮采用哪一种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "实际换上当前这件可穿衣物，亲手体验这项操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "只先比较当前确实已有的衣物与装备信息，再决定这轮穿哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "实际穿上自己选定的已有衣物搭配，想让幸存者表达自己喜欢的颜色与轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "已有两件当前可穿衣物才比较，普通外观方案查看0不以旧制服习惯计身份；个人表达须实际穿，不从所选性别/制服推现实身份。",
+          "interpretation_boundary": "不保证任意衣物防咬、旧物可修、头必会掉或部件替换配方已开，不从制服或性别推现实人格。",
+          "id": "PZ9L07.BUILD42.ALT1"
+        },
+        {
+          "text": "42里这批已有罐头当前能按原生菜单打包成纸箱，材料与存放条件满足；自己这轮已选要打包这一批。附近已见的一件万圣节面具是个人正在留的服装收藏缺项，当前拿得到、背包放得下；家里已有衣物也能放人台。先投入什么？",
+          "scene": "罐头纸箱和还没拿到的那张面具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的这一批罐头实际打包并放好，推进这个具体储备目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去拿那件明确未拥有的面具，想补自己正在留的服装收藏空缺",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先把当前已有衣物搭到可用人台上，让角落表达自己想要的住处风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前这批罐头与已知存量，再决定这一轮打包多少",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "又一组打包/看说明/留工具/看存量四壳改为42原生罐头纸箱、实有缺项面具与原生人台作品之间取舍；个人收藏不是免费衣物目录。",
+          "interpretation_boundary": "当前菜单确允许这批罐头打包，面具已见且可取，已有衣物确能给当前人台穿；不固定箱数/重量效率，不保证所有物可装同箱或所有面具一定刷新。",
+          "id": "PZ9L07.BUILD42.ALT2"
+        },
+        {
+          "text": "旧41里你已有一辆当前确实能发动、能操纵的车，眼前一小段路可走，前方另有没看过而当前能驶近的一段，手头补给够短途返回。你先怎样投入？",
+          "scene": "41实际能开的车与短途移动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "驶近还没看过的下一段路，想亲眼知道那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "排清已有补给、这一小段去向与返回停靠点的安排，再照这趟准备行动",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "反复练这辆车的起步、转向与停下，专门把驾驶操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "亲手开这一段，留意转向、车声与道路变化接着发生的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "未知发现选项明示当前可驶近的新路，不只给熟路；练驾驶和反馈不要求开好或安全无碰撞。",
+          "interpretation_boundary": "不考钥匙、油量或热接线技能门槛，当前可开不表示无碰撞、无僵尸、车不耗油或跨版本车库兼容。",
+          "id": "PZ9L07.LEGACY41.V1"
+        },
+        {
+          "text": "没有开车经历，可以答旧41实际遇过的矮篱笆：这一处能翻越，两侧有能走和停步的位置；旁边另有一条已确认可通行的缺口，移动操作提示已出现。眼前没有逼近的敌人，你先怎样继续？",
+          "scene": "路边矮篱笆与旁边能走的缺口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用这一小段反复练靠近、转向、翻越后停步，想把自己的移动操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "从旁边那个已可走的缺口绕过，亲手体验换个行进方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "只执行一次当前可用的翻越操作，亲手看这次移动怎样发生",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对已经出现的移动与翻越操作说明，再继续自己的尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "原生41低篱笆与可走缺口提供不依赖汽车的具体移动取舍；刻意反复练T和普通一次翻越/绕行/说明0分开，替代再一段泛泛陌生街道。",
+          "interpretation_boundary": "只当前可翻越矮篱笆和已可走缺口，不保证无伤、速度或固定按键；不把42新动物或新地图地点套入旧41。",
+          "id": "PZ9L07.LEGACY41.ALT1"
+        },
+        {
+          "text": "旧41你已有能看当前时刻的数字手表，走熟住处与一个可达路口之间能步行往返，角色补给允许继续；这轮已选的出门水壶也能用当前可取饮水装好，旁边还有可达却没看过的小路。数字手表当前已有操作说明可看，先投入什么？",
+          "scene": "数字手表定一趟自己的往返，还是先装水",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_ROOT_41_BODY"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己定一局往返：出发时按表选一个这轮终止时刻，照自定路线到路口再回屋才完成，超时就回起点另定一轮；实际走试，想造自己的新玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先把自己这轮已选的水壶实际装好，推进这个具体出门准备目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先沿没看过的小路看看，想发现那边本身，暂缓眼前往返小局和装水",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对已经出现的数字手表查看与操作说明，再决定这一段怎样安排",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "闹钟开关/看说明/留物四微操作改为41原生数字手表下实际自定完成/超时重开游戏、当前装水目标和未知发现。I是亲自定规则并玩，不是关一次闹钟。",
+          "interpretation_boundary": "手表当前可见时间、真实可走往返和每轮重新定终止点；没有原生自动计分/排行榜/世界时间回滚，不保证响铃不招敌。手表仅时刻不是地图/定位器/信标，中性选项改为本人当前已出现的实际工具说明。",
+          "id": "PZ9L07.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "42里当前人台可用，已有几件可选衣物，其中一件确能穿到这只人台上；另有当前可摆小物和合法落点。你先怎样布置这处屋内？",
+          "scene": "人台旁的已有衣物与小摆件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_42",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看现有衣物的外观与当前可用布置方案，再决定这一角采用哪一种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "实际搭配已有衣物和摆件位置，想让这个角落表达自己选定的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "直接给这只人台穿上当前合用的一件已有衣物，亲手体验这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "只实际改一件当前可摆物品的位置，亲手看这次编辑结果",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "人台/3D物件41已存在，不误标42专属；未摆齐已有物件不是收藏缺项，普通方案/人台操作/位置编辑0，个人表达实际布置，不凭制服习惯判身份。",
+          "interpretation_boundary": "41也已有3D摆物，不错误排除旧版本；只当前可摆物件，不造任意体积缩放、自绘纹理或一键房屋复制。",
+          "id": "PZ9L08.BUILD42.V1"
+        },
+        {
+          "text": "42里你已有一件当前可挂墙、也仍能持用的枪械或自制近战武器，现有弹药或用具足够当轮操作，另有第二件已拥有、当前可用的备用装备；屋内有合法挂放点和摆物，外面有可自行接近练的已见目标与退开处。自己这轮也已选了把一批钉子打包收好的可做目标。先投入什么？",
+          "scene": "武器挂在墙上，还是拿它去练下一趟",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先实际安排墙面武器与已有摆件，让这一面墙表达自己想要的幸存者住处风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先用这件当前可用武器反复练瞄准与停手退步，专门把自己的这项操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先把自己这轮已选的这批钉子按当前菜单实际打包并收好，推进具体整理目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对两件当前已有可用装备与实际状态，再决定当轮带哪件",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "一件物品挂墙/挪位置/留携带/看说明改为真实武器陈列、个人练习和原生钉子打包项目，挂放本身不当连续F。",
+          "interpretation_boundary": "若选枪械必须当前真有合用弹药，若近战须仍可用；另有第二件已有装备才能比较，两件均已有可用，不造所有武器可挂/必不吸引敌人/安全练枪场。",
+          "id": "PZ9L08.BUILD42.ALT1"
+        },
+        {
+          "text": "42里你实际用过一只可收起并挂到背包的睡袋，当前收装条件满足；营地已走熟，你自己有精神，手边补给允许再走一小段，前面也有当前可达的新去向。你先怎样继续？",
+          "scene": "收起睡袋，还是在熟悉营地再待一会",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先收起这只睡袋并按当前可用方式挂到背包，调整好本轮要带走的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "排好这次携带补给、收营出发与返回已知营地的安排，再走这一趟",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先往没看过的新去向走一小段，想亲眼知道那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "有精神也能出发，仍在已走熟营地慢慢待着，喜欢这份熟悉的停留本身",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "42原生睡袋收装/背包挂载与离营取舍替代又一次换衣；H不由困倦或缺乏可走内容触发，未知发现不保证奖励。",
+          "interpretation_boundary": "不保证睡眠时世界暂停、跳过夜晚、任何背包均可挂或地形安全；只本次实际允许收装的睡袋。",
+          "id": "PZ9L08.BUILD42.ALT2"
+        },
+        {
+          "text": "旧41里你已有一盘实际取得的VHS，当前电视与播放设备能用；这盘你看过的内容确实有人物或事件可回看。你先怎样用这一段时间？",
+          "scene": "41已取得的录像带与能用的设备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接进行一次当前可用的播放操作，亲手体验它怎样发生",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "再看已看过的内容，把其中的人和事件前后接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前身体状态与已经带着的补给，再决定这一轮怎样活动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "只为这盘已经看过的录像与其中已见人物信息补记记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "一盘已得录像不够证明实际未拥有收藏缺口；身体状态/已看信息记录0，真实人物事件联系s和直接播放0分开，不把NPC内容当真人社交。",
+          "interpretation_boundary": "只已取得录像与当前可用设备，不保证全图鉴、技能奖励、供电持续或地图显示未知资源。",
+          "id": "PZ9L08.LEGACY41.V1"
+        },
+        {
+          "text": "旧41枪械、适配弹药与原生装填轮盘当前能用，附近能停留，没有敌人迫近；自己已选的一批备用弹药能沿熟路送到有空位的已知容器。外面另有能走却没看过的屋角，身上补给允许继续。先投入什么？",
+          "scene": "装填轮盘，还是先把已有弹药送回去",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练从当前装填轮盘选合用操作、确认并接回持枪，专门把自己的这项操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先把自己这轮已选的这批已有弹药实际送到已知容器收好，推进具体送存目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先去没看过的屋角看看，想亲眼发现那里，暂缓装填和送存",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对手头实际已有弹药和当前已知存量，再决定这一轮怎样处理",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "装填一次/看说明/留物/看身体四壳改为原生41装填界面个人精进、实有弹药目标与未知屋角竞争；一次选轮盘不算F。",
+          "interpretation_boundary": "仅当前确有合用枪弹与允许的装填操作，不造42精准瞄准系统、无限弹药或快速装填保证；不推现实枪械能力。",
+          "id": "PZ9L08.LEGACY41.ALT1"
+        },
+        {
+          "text": "旧41里你已给同一幸存者练过体能，今天原生锻炼界面也有能做的动作，身体状态与已有说明可看；你晚些还想沿已知路线外出，已有这趟补给。此刻自己有精神，角色还能活动，先怎样安排？",
+          "scene": "继续锻炼同一角色，还是先留出外出时间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_ROOT_EXERCISE41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续让这个已练过的角色做当前可用的锻炼，关心此前投入能延续在它的体能或力量成长上",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先按现有补给排清这趟外出与返回落脚点的先后，把这轮锻炼暂时留后",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前身体状态与已经带着的补给，再决定这一段怎样用",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前已经出现的锻炼玩法说明，再决定这轮做不做",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "用41原生锻炼、同一角色投入和外出时间取舍替代第一件物品；G为持续角色成长动机，自动播放锻炼动作不当玩家时点训练T或操作反馈F。",
+          "interpretation_boundary": "不固定动作名、锻炼时长、加点速度或酸痛延迟，不保证锻炼后更能战斗，也不是现实运动建议；只游戏内此刻可做动作和真实已有角色投入。",
+          "id": "PZ9L08.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想42里真实多次回来改过的同一处住所：当时已有能放的构件与可摆小物。哪种已经做过的投入更贴近愿意保留的体验？",
+          "scene": "真实逐次留下来的同一处住所",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排过那轮添哪处构件、调整哪件摆设与收尾的编辑步骤，再亲手照顺序继续改屋",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "调整过已有摆件与外观，让它表达自己想要的居所风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "当时自己还有精力，角色也能继续改屋或外出，仍在走熟屋内慢慢待着，喜欢这段熟悉日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "只是为已经搭过的构件与实际步骤补记建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "建设过程和布局表达需真改过而非仅住过，明确当时有构件小物；更早只取物/只停留有独立替代，仍不以房屋添物计g。",
+          "interpretation_boundary": "不要求大基地、固定水电设施、无敌防御或角色一直没死；没有多次完善经历时不硬计g。",
+          "id": "PZ9L09.BUILD42.V1"
+        },
+        {
+          "text": "回想42真实用过枪械的一段：当时枪和合用弹药可用，有能自行接近的已见目标及退开空间，角色状态允许，没被迫立刻交战；同一幸存者的瞄准相关技能此前已投入且仍可提升。哪种真实投入最想保留？",
+          "scene": "真实试过42新瞄准的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42",
+            "PZ9L_STORE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练稳定瞄准、选择时机与退开的操作，专门想把自己的枪械操控练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手连续瞄准、开火和处理后续动作一段，喜欢输入、枪声与目标回应接续的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "多次回来继续用同一幸存者练已有瞄准相关技能，关心此前投入继续留在这个角色的成长上",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先把自己那轮已选且确可到达的一批已有弹药送回有空位容器，推进这个具体送存目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "又一次最早小物摆放/收回/记录壳改为42原生精准瞄准的真实反思，个人操控兴趣、持续反馈与同一角色技能成长分开；并保留确可做送存目标。",
+          "interpretation_boundary": "仅当时确有枪弹和可活动目标；送存有真实路线与容量。不开枪必中、不把游戏技能等同现实枪法、不保证噪声不招敌或站定即可绝对安全。",
+          "id": "PZ9L09.BUILD42.ALT1"
+        },
+        {
+          "text": "回想42里实际照料同一处鸡群的几轮：当时有能补料、补水的槽位，已有饲料和水，已知补给处也能继续取用；你确实亲手做过一些照料，也观察过动物对这些照料的实际反应。哪种已经做过的投入最想保留？",
+          "scene": "真实把鸡群饲料与用水接续起来的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把几轮取饲料、取水、补槽和再补回储备接起来，持续调整这处饲养供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "只先核对过当时鸡群、槽位与已有饲料和水的实际状态，再决定那一轮怎样处理",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "只为自己当时实际做过的补料、补水步骤和看见的动物反应补记照料过程",
+              "signal": "animal_care_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "只先核对过眼前可见饲料与当时已知存量，再决定那轮取多少",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "从又一轮同角色裁缝进度改为42原生动物供给；Y要真实几轮取料/水/补槽/补储备的依赖周转，不因照料同群动物就判G。本人真实动物照料记录用77，不套建设或人物地点记录。",
+          "interpretation_boundary": "只当时真实已有鸡群、可补槽位、合用饲料/水与可到达续料处，不保证无限资源、产蛋、繁育或动物成长，不把动物当真人协作。",
+          "id": "PZ9L09.BUILD42.ALT2"
+        },
+        {
+          "text": "回想旧41里真实多次回来完善过的同一处落脚屋：哪种已经做过的投入更贴近愿意保留的体验？",
+          "scene": "真实逐次补起来的41落脚屋",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清当时这一轮已有防御或生活物件的布局、放置与位置调整步骤，再照编辑安排实际试过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "调整过已有摆件与位置，让住处表达自己想要的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "当时自己有精神，角色也能继续搜物或外出，仍在走熟屋内慢慢待着，喜欢熟悉住处的安顿感本身",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "只是为已经做过的构件与实际步骤补记建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "同屋添物不自动等于养成对象；真实编辑步骤0、个人风格a、已建过程记录0，与有余力且仍可推进的主动熟悉h分开。",
+          "interpretation_boundary": "41已有3D摆物，不强加42新建筑、新动物或头柄系统，没有多次完善时不硬计g。",
+          "id": "PZ9L09.LEGACY41.V1"
+        },
+        {
+          "text": "回想旧41真实开车的一段：当时一辆车确能发动操纵，已知转角与停靠位置可到，路段没有逼近目标，角色状态允许；自己那轮已选的一批工具也能运到容得下的已知箱子。哪种真实投入最想保留？",
+          "scene": "真实把车和转角当成自己的停车小局",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41",
+            "PZ9L_STORE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己定过停车小局：沿自定转角到指定停靠位，不碰路边物并停正才完成，碰到或停偏就自行开回起点重来；实际试过，想造自己的新玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "专门反复练起步、转向与停靠，想把自己的驾驶操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "亲手连续开过一段，喜欢转向输入、车声与道路回应接续的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先把自己那轮已选的这批已有工具实际运到目标箱存好，推进这个具体目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "最早小物摆放壳改为41真实车辆操控的本人停车规则游戏、个人精进、持续反馈与真实工具目标。I有实际尝试、完成与重开条件，不是只改一项限制。",
+          "interpretation_boundary": "车已能用、油电/钥匙或其他原生启用条件已满足，不教学热接线，不保证撞击无伤或可以倒转世界时间；自定游戏不是官方停车关卡。",
+          "id": "PZ9L09.LEGACY41.ALT1"
+        },
+        {
+          "text": "回想旧41里真实看过Life and Living烹饪教学的一次：当时节目正在可用电视上播放，同一幸存者先前已有烹饪技能投入；在实际用过的厨房，现有食材也够做一份已会的料理；随身补给够走一段已选搜物路段，也能返回已知住处。哪种你确实做过的取舍最想保留？",
+          "scene": "真实留看过的烹饪教学与下一趟搜物",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先留看当时正在播的教学，之后继续用已有食材料理，关心这些投入能延续在同一角色的烹饪进度上",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先带着当时已有补给走完选定搜物路段，再回已知住处，照这一次出行准备安排过先后",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "只执行过一次当时可用的电视播放或调台交互，亲手体验那次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "只为当时已取得的食材与实际用过的厨房位置补记信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "以旧41实际播出的原生教学窗口和搜物取舍替代又一次裁缝界面练习；G是同一已投入角色继续成长的动机，不保证每节目/重复观看均给经验。",
+          "interpretation_boundary": "只玩家真实碰到的已播出教学与可用电视、食材和已开放料理，不固定时刻、经验倍率、重复奖励或供电持续，不让错过播出的人假想已看。",
+          "id": "PZ9L09.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想42里同一名幸存者真实多次使用制作界面的一段：当时已有能执行的配方、材料与所需设备，也看过这个角色相关技能进度。哪种确实做过的投入最贴近愿意保留的体验？",
+          "scene": "真实同一幸存者的技能与亲手练习",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过在制作面板找配方、核对可用输入与确认执行，专门想把自己的界面操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "只是排清当时这一轮确认用料、执行制作与整理产物的操作顺序，再亲自照安排尝试",
+              "signal": "crafting_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "只是先核对当时已出现的玩法说明，再继续自己的实际尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "多次回来继续练同一角色已有技能，喜欢先前投入逐渐留在等级或可做内容上",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "单次制作界面步骤78不硬计多系统经营；角色技能积累g和玩家主动练操作t分别解释，已有说明0，不以进步或制作成功为入选条件。",
+          "interpretation_boundary": "不要求技能到某级、录像课必有、所有服务器经验倍率相同或角色死后数值必继承。",
+          "id": "PZ9L10.BUILD42.V1"
+        },
+        {
+          "text": "没有技能积累，可以回想42真实最早近战或用工具的一段：当时确有两件可选装备，角色也能活动。哪种确实做过的动作最贴近愿意保留的投入？",
+          "scene": "真实同一幸存者的技能与亲手练习的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_42"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手使用工具或武器，喜欢声音与眼前变化相连的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "只是先核对当时身体状态与已带补给，再决定那轮活动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "只是先比较当时已有装备与组件，再决定那轮怎样安排",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "反复练过瞄准、出手或退步时点，专门让这一项操作更熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "早期工具/近战实际手感f、主动瞄准或退步练习t与已有配置比较/自身状态0；比较所需两件当前可用装备明示，不要求练成或升级。",
+          "interpretation_boundary": "不要求技能到某级、录像课必有、所有服务器经验倍率相同或角色死后数值必继承。",
+          "id": "PZ9L10.BUILD42.ALT1"
+        },
+        {
+          "text": "回想42真实用过一处可翻矮篱笆的一段：当时两侧能走、无逼近敌人，有可自行绕行的转角，角色能持续操作；附近自己那轮已选的一批工具也能送进有空位的已知容器。哪种真实投入最想保留？",
+          "scene": "真实把矮篱笆跑成自己的小路线",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_STORE",
+            "PZ9L_ROOT_42_BODY"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把矮篱笆和转角定成小局：按自定顺序回到起点才完成，偏离或撞停就自行重来；实际跑过，想造自己的新玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "反复练靠近、转向、翻越后停步，专门想把自己的移动操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "亲手连续跑过转角与矮篱笆，喜欢输入、人物动作与落地回应接续的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先把自己那轮已选的这批已有工具实际送入已知容器，推进这个具体目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "一项跨栏T加三中性方法改为真实跑过的本人规则游戏、个人精进、持续移动反馈和工具送存。I须本人确实定规则并玩过，不把原生翻越叫自动计时挑战。",
+          "interpretation_boundary": "自定完成/偏离重开规则不是内置关卡/排行/计时器，不保证篱笆摔落无风险或每名角色都能翻；只有当时确能活动且送存可行才题面成立。",
+          "id": "PZ9L10.BUILD42.ALT2"
+        },
+        {
+          "text": "回想旧41里同一幸存者真实多次使用制作界面的一段：当时已有能执行的配方、材料与所需设备，也看过这个角色相关技能进度。哪种已经做过的投入更贴近愿意保留的体验？",
+          "scene": "真实同一角色的修补制作技能",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过在制作面板找配方、核对用料与确认执行，专门想把自己的界面操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "只是排清当时这一轮确认用料、执行制作与整理产物的操作顺序，再亲自照安排尝试",
+              "signal": "crafting_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "只是先核对当时已经出现的玩法说明，再继续自己的实际尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "继续练同一角色已有技能，喜欢早先投入逐渐留在等级与可做内容上",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "旧41普通单轮制作界面先后用78，不硬计系统经营；同一角色保留技能g、主动练自己操作t与说明0分开，不要求成功或实际提升。",
+          "interpretation_boundary": "不保证任何录像都加经验、固定升级速度、角色死亡后技能继承或41/42存档兼容。",
+          "id": "PZ9L10.LEGACY41.V1"
+        },
+        {
+          "text": "没有技能积累，可以回想41真实最早用过近战工具的一段：当时确有两件可选装备，角色也能活动。哪种已经做过的动作更贴近愿意保留的体验？",
+          "scene": "真实同一角色的修补制作技能的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_41"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手使用工具或武器，喜欢声音与目标变化相连的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "只是先核对当时身体状态与已带补给，再决定那轮活动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "只是先比较当时已有装备与组件，再决定那轮怎样安排",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "反复练过推击、出手或退步时点，专门让这一项操作更熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "旧41早期已有两件配置可比较才问；真实近战反馈f与主动练习t有动机，身体查看/已有配置比较0不借42新技能或头柄。",
+          "interpretation_boundary": "不保证任何录像都加经验、固定升级速度、角色死亡后技能继承或41/42存档兼容。",
+          "id": "PZ9L10.LEGACY41.ALT1"
+        },
+        {
+          "text": "回想旧41里实际处理衣物和体温的一段：当时热量积累比你预想多，原因还没确认；你已穿一件可脱下的外套，身体温度信息能看，另一件可穿的衣物在手边，也有可停留的位置。哪种你确实做过的投入最贴近愿意保留的体验？",
+          "scene": "真实调整过的外套与体温显示",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时想是不是这件外套影响了热量积累，保留其余衣物、留在同一处，只脱这件再观察体温显示，检验自己的猜想",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "只先核对当时已经显示的身体状态与随身补给，再决定那轮怎么活动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "只比较过当时已有外套和备用衣物的装备信息，再决定那轮穿哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "只把当时暂不穿的一件已有衣物放进可用随身栏，实际调整那轮携带",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "用41已实装衣物保温/体温系统提供真实未知原因与一次可失败试验；P要当时自己提出解释并只改该衣物，观察变化不是证明唯一因果；其余状态/比较/携带中性。",
+          "interpretation_boundary": "不预告外套一定是原因，不保证脱衣后温度立即变化、衣物一定更好或现实保暖建议；只游戏内当时确实可见温度与可穿脱衣物。",
+          "id": "PZ9L10.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想42落脚处的一段：当时一台可用收音机或电视正在播你实际听得到、谈人物或事件的节目；自己那轮已选的一份料理也已具备当前合用食材、容器、配方与可用炉具，能做成并收好。你有精神，角色允许继续，屋内已走熟。哪种真实投入最想保留？",
+          "scene": "真实广播还在播时，先听下去还是先做好这一锅",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续听正在播的人物或事件，想把已知前后信息和这个世界的人接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把自己那轮已选的这一份料理实际做好并收好，推进当前可做的备食目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "还有节目可听和料理可做，仍在走熟屋内从容待着，喜欢自己安排的这段熟悉日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先为自己已经听到的那段信息和实际到过的位置补记录，不把后面没听到的写成已知",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "旧工具携带壳改为42原生当前广播叙事、当轮已有料理目标与自主熟悉过程。再将重复罐头打包/送存改成原生料理，减少同一路径相同货物情境；真实正在播放才S。",
+          "interpretation_boundary": "不承诺每个日期/频道都有剧情节目或已断电设备仍能播，具体人物与节目内容不编造；H需要精力和其他真实可做活动，不因为强迫等播放计舒缓。 料理只当时确已可做的合用食材/容器/供能和收存，不假设生食安全、永不断电或所有容器可加热。",
+          "id": "PZ9L11.BUILD42.V1"
+        },
+        {
+          "text": "回想42里实际找到过一份报纸：它是你个人正在保留的那一组还缺的一期，拿得到、背包装得下，也有谈人物或事件的可读内容；当时文字能够回看，身上另有可留放物件，眼前有能存放的位置。哪种确实做过的取舍最想保留？",
+          "scene": "真实找到缺期报纸时先补齐还是读下去",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这期已经发现的缺项拿回来，想让自己一直在补的那组报纸少一个空缺",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "留看当时确实谈人物和事件的文字，把这份报道与已经见过的前后线索接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "只给自己已经读过的报道与实际到过的地点补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "先把当时暂不带的已有物件留在可存放处，实际调整那一轮携带再继续活动",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "把又一次一般文字回看改成实际可得个人缺期与报道叙事的先后取舍；C要明确缺期且真实拿回，S要真实人物事件内容和前后联系；记录/携带0。",
+          "interpretation_boundary": "个人报纸组不冒官方全期图鉴，不编报纸刊号、具体新闻文本、集齐奖励或唯一剧情答案；当时确实可读且可回看才适用。",
+          "id": "PZ9L11.BUILD42.ALT1"
+        },
+        {
+          "text": "回想42真实打开过已有地图的一段：当时实际位置或已知标记可查看，一处没走过的街区当前可接近；另一条熟路能把自己这轮已选的已有罐头送到有空位储物点。角色补给允许继续。哪种真实投入最想保留？",
+          "scene": "真实地图指向的陌生街区和那一趟送存",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_EARLY_GUIDE",
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_STORE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去没走过的街区，想亲眼发现那边本身，暂缓已有物资送存",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按自己给幸存者采用的送货人身份，暂缓原本更想看的陌生街区，先把这批已有物资实际送存，让身份改变优先级",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先把自己那轮已选的这批罐头沿熟路实际送好，主要想推进这个具体目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对地图实际显示的位置与已有标记，再决定这一段怎样走",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "地图打开/看地图/记录加W四壳改为原生可查看地图下未知街区与实有货物目标，角色身份R与同一实务目标82动机分开，信息查看仍0。",
+          "interpretation_boundary": "只当时真的已启用地图信息、可行熟路与储物容量，不造NPC派单/送货职业/剧情奖励，送货人是本人采用且实际改变先后的身份。",
+          "id": "PZ9L11.BUILD42.ALT2"
+        },
+        {
+          "text": "回想旧41在烧毁建筑边实际见过消防员衣物和遗留物的一段：当时一件已见外套当前确可取，是个人服装收藏还缺的一件，背包装得下；已有其他衣物也能穿，附近一处已碎窗当前有合用工具可清残玻璃。角色能停步，也能暂不进入。哪种真实投入最想保留？",
+          "scene": "真实在烧毁建筑边看见的消防员衣物",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "回看已经见到的衣物与烧毁现场，想理解这里的人此前经历过什么，把已有线索接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先拿回眼前这件明确未拥有的外套，想补自己一直在留的服装收藏缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先把自己选定的其他已有衣物实际搭配穿上，让幸存者表达想要的个人风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先把自己那轮已选的这处窗框残玻璃实际清掉，推进这个当前可做的入口处理目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "原与04ALT1几乎仅换过去时的衣物组合试用整题弃用，改为41官方明确的烧毁建筑/消防员服装环境叙事、真实个人缺项、已有外观表达与原生窗框目标之间的真实取舍。",
+          "interpretation_boundary": "仅本人实际见过该环境、当前可取的服装缺项与可清残玻璃；不编发生过救援/牺牲等确定剧情，不造活人NPC，不要求攻击穿制服的僵尸或保证场景无敌。只游戏内可用工具操作，不作现实清玻璃指导；窗清完不等于绝对安全。",
+          "id": "PZ9L11.LEGACY41.V1"
+        },
+        {
+          "text": "回想旧41里真实补过自己一套书的一段：你已留下几本，自己知道还缺哪一卷；当时在眼前容器发现那本当前可读的缺卷，确实拿得到、背包装得下，容器也有可存回已有书的空位。哪种确实做过的投入最想保留？",
+          "scene": "真实拿到过的那本缺卷",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门把这本已发现的缺卷拿回来，想让一直在补的个人藏书少一个空缺",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "只是调整过已有书的携带，把暂不带的物件存回当时可用容器",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "只是为自己已经取得的书与发现地点补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "只实际执行过这一本当时可读书的阅读操作，亲手体验那次交互",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "从又一次初始小物拾取改为明确已知缺卷、当前实际发现且真实带回的收藏C；记录已有书、携带处理和单次阅读不推收藏、剧情或角色技能增长。",
+          "interpretation_boundary": "个人藏书不是官方全书图鉴，未发现或只列愿望不算已经补书；当时这本确实可读才给阅读选项，不保证任何书都给经验或实际升到某级。",
+          "id": "PZ9L11.LEGACY41.ALT1"
+        },
+        {
+          "text": "回想旧41真实到过路易斯维尔一处已知路口的一段：当时已有能发动操纵的车，走熟一小段路能到容得下当前工具的已知存放点；另一段街区可驶近但没看过。当时地图已启用、实际位置和已有标记可看，角色与补给允许这一小趟。哪种真实投入最想保留？",
+          "scene": "真实开到路易斯维尔边上时先走哪段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先驶近没看过的街区，想亲眼发现那里本身，暂缓已有工具送存",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "亲手连续开过已知这一段路，喜欢转向输入、车声与道路回应接续的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先把自己那轮已选的这批已有工具实际送到存放点，推进这个具体目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时已可用地图实际显示的位置和已有标记，再决定那一段怎样走",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "熟悉路口记录/状态/改路四壳改为已发布41路易斯维尔的真实短途驾驶、未知街区与已有工具目标；同一游戏的具体地点和车辆前提不拿42地下室/随机边界补。",
+          "interpretation_boundary": "仅本人当时真到该地且车可用、路线可行、目标容量够，地图确已启用才信息项成立；不保证整座城市清空/安全、固定车刷新或无限燃油。",
+          "id": "PZ9L11.LEGACY41.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PZ9L12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想42里确有其他真人同游的一段：有人想去下一段街区，有人想先补已知住处。哪种你真实做过的动作更贴近愿意保留的投入？",
+          "scene": "真实同游时先搜街还是补住处",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_STORE",
+            "PZ9L_42",
+            "PZ9L_GAME"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只是为已经参与的住处建设与实际步骤补记过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "先谈清这轮共同想完成什么，商量谁带哪些已有物品、谁走哪段与何时再集合",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "先陪同伴在落脚处走走聊天，喜欢大家一起待着的陪伴",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "自己先按当时已有物资，排清这一小段可走去向与返屋的安排，再照这趟准备行动",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "只搜一街区是普通活动范围，不计创新；本人出行准备0、实际共同目标q/陪伴o与已参与建设记录0分别有真实动机，不借计划NPC。",
+          "interpretation_boundary": "不保证世界进度、死亡后人物、物品或MOD跨版本兼容，不要求语音、公共服务器或竞技排行。",
+          "id": "PZ9L12.BUILD42.V1"
+        },
+        {
+          "text": "回想42单人住处的一段：当时已见一件个人玩偶收藏还缺的小物，当前可达可取、背包装得下；家中已有玩偶能用原生3D摆放安排，屋外另有没看过的可达方向。你有精神，角色也有补给继续，住处已走熟。哪种真实投入最想保留？",
+          "scene": "真实在玩偶缺项和熟悉住处之间留过的时间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY",
+            "PZ9L_42",
+            "PZ9L_STORE"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去拿这件明确未拥有的玩偶，想补自己一直在留的收藏空缺",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先把自己已有玩偶和其他摆物实际安排在床边，让住处表达想要的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先走向没看过的那边，想亲眼发现那里本身，暂缓收藏与摆物",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "仍在走熟住处从容待着，喜欢由自己安排的这段熟悉日常，不因没事可做才留下",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "最早收纳/状态/记录加H的重复壳改为42原生玩偶摆放、真实个人缺项与未知空间竞争，不把所有物品目录看作收藏。",
+          "interpretation_boundary": "缺项已经实际见到且当前仍可拿、容量与补给够，已有小物确能放床边；不保证特定Spiffo变体/地图刷新，不把现实收集习惯或人格诊断写入解释。",
+          "id": "PZ9L12.BUILD42.ALT1"
+        },
+        {
+          "text": "回想42里用人台换装准备外出的一次：当时两只可用人台各放着一套当前能穿的衣物，已有外观与防护信息可看，也能按原生交互换上其中一套；补给和返回已知住处的路线都具备。哪种确实做过的投入最贴近想保留的体验？",
+          "scene": "真实用人台换过出行衣物的一次",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_42_BODY"
+          ],
+          "modes": [
+            "build42"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只比较过这两套已有衣物的装备信息，再决定那一趟穿哪套",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "实际换上自己选定的一套，让幸存者的颜色和轮廓呈现想表达的个人风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "只使用过当时确实可用的人台换装交互，亲手体验那次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先按当时已有补给、选定出行去向与返屋路线排好先后，再照那一趟准备行动",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "用42官方原生人台快速换已有衣物的出行用途替代又一次作物浇水；对比装备/单次换装/本人出行准备0与实际穿上表达A分开，区别08主情境以人台布置屋角为目的。",
+          "interpretation_boundary": "只当时确有的两套可穿衣物与可用人台，不固定穿戴槽冲突、防护数值、换装速度或外出安全；不把菜单浏览当已表达风格。",
+          "id": "PZ9L12.BUILD42.ALT2"
+        },
+        {
+          "text": "回想旧41里确有其他真人同游的一段：有人想继续搜物，有人想先补落脚屋。哪种你真实做过的动作更贴近愿意保留的投入？",
+          "scene": "真实41同游时的一段安排",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_41",
+            "PZ9L_STORE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只是为已经参与的住处建设与实际步骤补记过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "先谈清这轮共同想完成什么，商量谁带已有物资、谁走哪段与何时再集合",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "先陪同伴走走、聊眼前看到的东西，喜欢大家一起待着的陪伴",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "自己先按当时已有物资，排清这一小段可走去向与返屋的安排，再照这趟准备行动",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "普通限定一栋屋不是新玩法；本人短途准备0与确有真人的共同目标q/陪伴o分开，不把计划NPC当队友。",
+          "interpretation_boundary": "不要求公共服务器、语音或跨版本好友同游，不保证角色技能、存档、物资或MOD随切分支继承。",
+          "id": "PZ9L12.LEGACY41.V1"
+        },
+        {
+          "text": "回想旧41单人在走熟屋内的一段：当时已听熟的CD和播放设备可用，另一张个人CD收藏缺项已在可达容器见到，当前可取、背包放得下；自己那轮已选的木窗加固也已具备锤子、板钉和可操作窗。你有精神，角色允许继续。哪种真实投入最想保留？",
+          "scene": "真实熟CD、缺张唱片和那扇待补窗之间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_41",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "仍在走熟住处再听熟CD一阵，喜欢这段自己能从容安排的熟悉日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先去拿那张明确未拥有的CD，想补自己一直在留的唱片收藏空缺",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先把自己那轮已选的这扇窗实际加固好，把材料与时间投入这个具体目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "只为自己当时已经取得的CD与实际用过的住处位置补记录，不记未听内容",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "熟CD一次播放/存物/记录壳改为41原生熟悉音乐、真实个人唱片缺项与当前木窗项目的时间竞争；H不是因为无事可做。",
+          "interpretation_boundary": "只当时确能播设备、实际已见可取缺张与已可做窗板条件，不引用音乐歌词、不保证永不断电或关窗后绝对安全；CD不自动映射现实音乐品味或人格诊断。",
+          "id": "PZ9L12.LEGACY41.ALT1"
+        },
+        {
+          "text": "回想旧41里来到一扇已碎窗前的一次：当时有合用工具，菜单确实允许清掉窗框残玻璃；同屋另一扇已检查的门能通行，旁边另有当时可达、还没看过的建筑。角色能停步，操作提示、身体状态和已带补给都能查看。哪种确实做过的动作最想保留？",
+          "scene": "真实在破窗前选择过的另一处入口",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PZ9L_ROOT_41_BODY",
+            "PZ9L_ROOT_EARLY_GUIDE"
+          ],
+          "modes": [
+            "legacy41"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排过取合用工具、处理这处残玻璃与收回工具的先后，再亲手做那一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "从同屋那扇当时已可走的门绕入，亲手体验换个行进方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "先走近旁边没看过的建筑，想亲眼知道里面是什么，暂不为指定物资而去",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "只先核对过当时身体状态与已经带着的补给，再决定那一轮活动",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "从又一次同批作物成长改为41真实碎玻璃处理/可通行门/未知建筑取舍；普通取工具处理序列与绕路/身体查看0，W才是为了新发现改变去向。",
+          "interpretation_boundary": "不要求玩家实际翻过破窗、不保证清玻璃即无伤或门后安全，不给现实伤口处理建议，不固定工具清单或替代工具规则，也不把门旁范围限制计自创新玩法。",
+          "id": "PZ9L12.LEGACY41.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+0fbd679ad6e5"
+}

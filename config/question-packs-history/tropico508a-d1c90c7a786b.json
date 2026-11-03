@@ -1,0 +1,954 @@
+{
+  "id": "tropico508a",
+  "title": "海岛大亨5：船队、王朝和再次回岛",
+  "game_ids": [
+    "steam-245620"
+  ],
+  "scope": "2014五代PC基础本体单人战役或本人沙盒；按当前已开放时代、研究、资金和建设空间适用，不要求DLC、模组、多人。王朝、战役回访等有独立初期沙盒或教程替代。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "五代可从总统府派探索者揭迷雾，不套六代海外劫掠；贸易许可之后仍要分配本作贸易船。",
+    "研究队列及技术解锁建筑按五代，供电按电厂范围和变电站，不套六代蓝图购买或天际线电网。",
+    "同岛战役建设继承与王朝保存是不同系统；王朝实际保留技能的持续培养才g，服装饰品只在本人实际编辑时a。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "2014五代PC基础本体单人战役或本人沙盒；按当前已开放时代、研究、资金和建设空间适用，不要求DLC、模组、多人。王朝、战役回访等有独立初期沙盒或教程替代。",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "TROPICO508A01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "岛上有两处已运转种植园，同作物的产出表现不同，农业覆盖图可查看；其中一处有当前可选的另一作物，远处也有已可查看却没细看的土地。先做什么？",
+          "scene": "种植园位置与另一种作物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_MANUAL",
+            "T508A_TUTORIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前作物、工人住处、道路运输与出口需求一起调整，持续跟进这一片的供给和开支",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先猜这一处差异与作物对当地土地的适应有关，记下当前适宜度与效率，保持地块、岗位和预算，只换为当前可选另一作物，再运行核对该园效率是否按预想变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先把这一处种植园改为另一种当前可选作物，亲手试现有选择在本地的表现",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "移近当前可查看的陌生土地，认识林地、海岸与种植区之间的新空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "主情境只用五代农业覆盖与改作物，不套六代Multiculture。p自提当地适应解释，只改作物并保持地块岗位预算，看适宜度和效率而不直接比较不同作物原始产量；普通试现有作物0。ALT仅初始原料交通与实际出港记录。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A01.V1"
+        },
+        {
+          "text": "最早殖民小镇只有一处已运转种植园，住房、运输办公室与码头都能用；另可建基础牧场和少量住房。先做什么？",
+          "scene": "第一片种植园与可建牧场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_MANUAL",
+            "T508A_TUTORIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按几轮食物与原料库存、工人住处、运输和出口收入，继续调整第一片聚落的人手、道路与基础预算",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先猜种植园货物没出港是运输连接不足，对照两头存货，补一处连接后核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先在当前可建的牧场地块调整放置预览，改它与现有道路的相对位置，亲手查看这次占地再确认",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "给自己已观察过的作物收获、运输和普通出港过程补一段记录",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "主情境只用五代农业覆盖与改作物，不套六代Multiculture。p自提当地适应解释，只改作物并保持地块岗位预算，看适宜度和效率而不直接比较不同作物原始产量；普通试现有作物0。ALT仅初始原料交通与实际出港记录。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "贸易许可已经有了，当前有空闲贸易船；一条已有配船的出口路线进度暂未变化，船只与货物状态可查看，另有一条当前可接路线。两条所需货物都能在本岛生产，码头与运输可调整。先做什么？",
+          "scene": "一艘空闲贸易船怎样分配",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_TUTORIAL",
+            "T508A_PRODUCER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜已配船路线进度慢是货物仍在内陆，对照产地与码头库存，只改这一条供货链的一处运输安排，再等该路线实际装运核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前路线的货物要求、外交条件与本地供给，选好下一条但暂不分船",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先把一艘现有空闲船派到另一条当前可接路线，运行一段，亲手试这项现有安排",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "把空闲船分给一条当前路线，连同本地供货、运输和日常收入一起经营，持续跟进按量完成后的接续",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "五代建立路线需先分空闲船，按量结束释放；主情境已有路线确已配船，p自提内陆供货解释，只改一处到港运输并看实际装运，不写已建路线无船的矛盾。另一条当前可接路线也有本岛可产货，普通试派闲船0，不暗含该船此前已派过。不套六代许可证，普通分配非i或b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A02.V1"
+        },
+        {
+          "text": "还没分配过贸易船，最早原料只由运输办公室送码头、等普通货船自动出口；基础路网和住房可继续投入。先做什么？",
+          "scene": "分船以前的普通货船出港",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_TUTORIAL",
+            "T508A_PRODUCER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜钱没到账只是货仍在码头，对照存货并等实际货船装走后核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先让普通出口继续运行，跟看一辆运输车怎样把现有原料从生产区送进码头",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "给已经建好的码头、生产设施和实际出港经历补一段个人小记",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "把当前原料、人手住处、运输与常规开支一起调，持续跟进普通出港收入",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "五代建立路线需先分空闲船，按量结束释放；主情境已有路线确已配船，p自提内陆供货解释，只改一处到港运输并看实际装运，不写已建路线无船的矛盾。另一条当前可接路线也有本岛可产货，普通试派闲船0，不暗含该船此前已派过。不套六代许可证，普通分配非i或b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "当前还有未揭开的岛内迷雾，总统府的探索命令已能用，资金足够；已揭开地区也有可建设的原料与道路，任期暂有余量。先做什么？",
+          "scene": "总统府能派人去迷雾里",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_TUTORIAL",
+            "T508A_CAMPAIGN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜已知原料不出货是道路没接到，对照设施入口，补线并运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "给已经探明的海岸、资源点和现有道路补一段个人记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "从总统府派出探索者去当前可选的迷雾边缘，待探索结果揭开后认识新发现的地形与资源",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先用已知原料地，把采集、接路、运输和出口接起来，实际建设后持续跟进",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "五代总统府探索命令不是六代海盗湾海外劫掠，未揭迷雾不声称镜头先看得到资源；只对已有区域做经营与验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A03.V1"
+        },
+        {
+          "text": "暂不使用付费探索，最早聚落已揭开区域里有一段还没细看过的海岸和树林；当前能给已有生产区延路，也能建基础住房。先做什么？",
+          "scene": "还没付费探索的已揭开海岸",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_TUTORIAL",
+            "T508A_CAMPAIGN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜一处建筑没开始工作是入口接路不足，补一小段后运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "给已建住房、生产点和当时已揭开的地形补一段个人小记",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "移近已经揭开却没细看过的海岸和林地，认识第一片聚落之外的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把现有产地、工人住房、运输与出口收入接起来，持续跟进基础供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "五代总统府探索命令不是六代海盗湾海外劫掠，未揭迷雾不声称镜头先看得到资源；只对已有区域做经营与验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "殖民时期图书馆已有人任职，但还空着一个合格岗位；Planks研究推进缓慢，后续队列可调，其中一项灰色研究的前提仍是你的卡点。页面允许付费招聘一名合格员工且预算足，岛上已有伐木场与可用道路，财政暂稳。先做什么？",
+          "scene": "Planks在队列里，木材厂还没建",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_TUTORIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只查那项已卡住的灰色研究前提的一小段提示，再继续自己安排",
+              "signal": "guide_hint"
+            },
+            {
+              "id": "B",
+              "label": "把研究接续、木材原料、工人和运输开支一起排入后续建设，研究完成再建厂，并持续跟进生产链",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先猜Planks推进慢主要因为合格岗位未补足，记录当前进度，只按当前招聘操作补一名合格员工，等其抵达任职后运行同样一小段时间，再比较研究推进",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "给自己已经投入的这段研究、当前队列安排与已建伐木设施补一段建设过程小记",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "技术队列可开建筑、真灰项卡点只取局部提示；p限当前有合格空岗且能付费招聘，实际补员到任后对照研究进度，不断言物理通勤决定知识。已投入研究工程记录0，早期仅读劳动力面板0、图书馆摆位编辑0，多轮研究供给财政才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A04.V1"
+        },
+        {
+          "text": "还没建图书馆，初期原料生产、运输和住房能运行；图书馆已可建且付得起，年鉴和建筑人手信息都能查看。先做什么？",
+          "scene": "第一座图书馆还没放下",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_TUTORIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已经安排过的人手、住房与生产开支，以及这次年鉴里看到的反馈补一段经营记录",
+              "signal": "management_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "建图书馆后，按几轮合格岗位是否补足、研究进度、生产出口和常规经费，继续调整人手与基础供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先在年鉴查看当前受教育人手与已出现空岗的要求，核对目前哪些岗位还缺合适人员，暂不改建筑或岗位安排",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先只调整当前图书馆放置预览的位置，让入口贴近现有街路，再确认这次占地",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "技术队列可开建筑、真灰项卡点只取局部提示；p限当前有合格空岗且能付费招聘，实际补员到任后对照研究进度，不断言物理通勤决定知识。已投入研究工程记录0，早期仅读劳动力面板0、图书馆摆位编辑0，多轮研究供给财政才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "当前时代已经能供电，电厂有燃料与工人，一处远端用电设施却还没通电；变电站已开放且付得起，主城暂无危机。先做什么？",
+          "scene": "电厂有产出，远处设施仍没接上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜问题是供电范围而非总产出，对照电网覆盖，补一处变电站后运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把燃料供应、发电人手、范围扩展与新增用电需求接在一起，持续跟进这张网",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先购买电厂面板里当前已开放且付得起的那项升级，先落实这一次现成改进",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "D",
+              "label": "给已经建成的电厂和已铺接路补一段自己的建设过程记录",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "主情境电厂范围可用已开变电站扩展，不套天际线电线；单项电厂升级购买即落实当前改进0，不写购入后暂存；工程记录只记已建电厂与已铺路，不暗含新变电站已造。ALT伐木入口短路编辑0，不把雇工施工等为手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A05.V1"
+        },
+        {
+          "text": "殖民初期还没有电网，已有伐木场、运输办公室与码头，一处已建原料设施停工，入口和道路都可调整；手头还能补基础住房。先做什么？",
+          "scene": "供电以前先接伐木场入口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜停工是接路缺口，对照入口，补一小段后运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把伐木、运输人手、住处和码头出口一起调，持续跟进常规收入",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先在停工设施与现有道路之间预览一小段接路，改动端点位置后放下，亲手查看这次入口连接",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "给已有伐木场、运输办公室和码头接口补一段个人小记",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "主情境电厂范围可用已开变电站扩展，不套天际线电线；单项电厂升级购买即落实当前改进0，不写购入后暂存；工程记录只记已建电厂与已铺路，不暗含新变电站已造。ALT伐木入口短路编辑0，不把雇工施工等为手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你保存的王朝里，一位一直使用的成员已有自己实际投入的技能等级，当前也有可支付的瑞士银行资金；他的外观与经理效果都能查看。先做什么？",
+          "scene": "同一位王朝成员还在继续成长",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_MANUAL",
+            "T508A_PRODUCER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际选择这位成员当前可用的服装、发型与饰品，呈现自己想要的执政人物主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较这位成员已有效果与当前可选经理岗位，选定下一步但暂不指派",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "给这位成员已取得的技能等级、实际任职和已经经历的场景补一段个人记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "继续培养这位已经留下技能进展的成员，实际投入下一次技能升级，并把同一王朝保存下来接着长期使用",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "成长必须同一已保存成员已有投入、继续升级且愿长期保留，不把一次新成员创建或普通指派计g；外观可编辑但不声称会改变技能，NPC不是真人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A06.V1"
+        },
+        {
+          "text": "还没培养过王朝技能，刚创建第一位成员或第一次打开已有成员页面；当前外观可改，基础聚落也已开始运转。先做什么？",
+          "scene": "第一位王朝成员还没有技能投入",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_MANUAL",
+            "T508A_PRODUCER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前页面已显示的技能与经理效果，再定下一步但暂不投入或指派",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "回到聚落，按几轮住房、岗位任职、运输与出口开支，继续调整初期供给和人手",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "给刚创建成员的已有设置和已经查看的技能说明补一段个人记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "实际选择当前可用服装、发型和饰品，让这位人物呈现自己想要的执政主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "成长必须同一已保存成员已有投入、继续升级且愿长期保留，不把一次新成员创建或普通指派计g；外观可编辑但不声称会改变技能，NPC不是真人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "当前已排定选举，但离投票还有时间，年鉴中一项服务幸福度偏低；住房、娱乐和基础服务都有当前可做调整，财政暂稳。先做什么？",
+          "scene": "选举日还没到，年鉴已经能看",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_PRODUCER",
+            "T508A_TUTORIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先启用一项当前已开放、付得起的现有法令，运行一段，只试它在这座岛的表现",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "给自己已实施过的服务安排、当时民意与年鉴里出现的反馈补一段经营记录",
+              "signal": "management_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "把住房、工作、服务容量与常规开支一起调整，运行后持续跟进生活需求和财政",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先猜一项幸福度偏低来自服务容量而非位置，对照当前服务信息，调一处后运行核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "非紧急选举前，NPC民意不是现实社交；已有法令亲试0，实际部门服务安排记录0，小酒馆位置单编辑0；容量假说要实际改后运行核，经营多轮供需财政才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A07.V1"
+        },
+        {
+          "text": "还没有选举，只在最早殖民聚落看见住房、岗位和基础服务需求；当前小酒馆与住房都可建且付得起，年鉴也能看。先做什么？",
+          "scene": "选举以前的第一间小酒馆",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_PRODUCER",
+            "T508A_TUTORIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在已有住房旁预览一间当前可建小酒馆，调整它与街边的相对位置，再确认这次占地",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "给自己已做过的住房与基础服务安排，以及当时年鉴的反馈补一段经营小记",
+              "signal": "management_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "少量建设后，按几轮住房、娱乐使用、岗位与出口收入变化，继续调服务容量、接路和开支",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先猜服务使用少与住处离得远有关，对照现有居民和建筑位置，补一处住处后运行核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "非紧急选举前，NPC民意不是现实社交；已有法令亲试0，实际部门服务安排记录0，小酒馆位置单编辑0；容量假说要实际改后运行核，经营多轮供需财政才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "这次战役又回到以前经营过的同一座岛，原有街区与设施仍在；当前目标已出现，预算允许一轮调整，也有已揭开却没细看过的岛角。先做什么？",
+          "scene": "战役再一次回到自己原先建过的岛",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_CAMPAIGN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前可用住房、道路与装饰实际整理成一处新旧衔接的个人主题街角",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把旧有原料、工业、运输与这次任务需求重新接起来，实际调整后继续经营同一座城",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "回看这次已经出现的人物任务话语与上次实际发生的事件，跟进战役回到此处的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "去细看那段已揭开却没认识的岛角，发现旧城边缘还没见过的空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "同岛战役真实城市继承而非保证国库/所有变量不变；早期ALT退回尚未研究木板的普通原木出口，跟车0、过程记录0、入口检查0和多轮经营不同。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A08.V1"
+        },
+        {
+          "text": "没回访过战役岛，也还没研究木板或建木材厂；只在最早沙盒或教程聚落有伐木场、运输办公室与码头，原木已经能送出，少量基础住房当前可建且付得起。先做什么？",
+          "scene": "回访以前的最早原木出口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_CAMPAIGN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给已建伐木场与码头，以及自己已经观察到的原木运输出港过程补一段小记",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "按几轮原木库存、运输到岗、工人住处与出口开支，继续调整伐木、接路和基础供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先移近现有伐木场与码头，查看两处入口和岸边接路，再决定下一项建设",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "先运行这条已有原木供应，跟看一辆车从伐木场装货到码头、再等这批货随船出港",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "同岛战役真实城市继承而非保证国库/所有变量不变；早期ALT退回尚未研究木板的普通原木出口，跟车0、过程记录0、入口检查0和多轮经营不同。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想一次自己真的经营过的五代贸易或加工，只选实际做过的一种，哪件事更有分量？",
+          "scene": "贸易船和木材链已经实际运作过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_TUTORIAL",
+            "T508A_PRODUCER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把原料、工厂、运输、船只或常规出口接成持续流程，还跟进过完成后的接续",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己猜过一处库存、船只分配或接路原因，改过安排再运行核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾运行一条已有加工或出口供应，跟看过原料怎样进入工厂、成品或原料怎样运去码头的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "自己给那条链已经实际发生的工资、维护支出与出口货款补过经营小记",
+              "signal": "management_process_recording"
+            }
+          ],
+          "design_purpose": "五代主动贸易须分船，普通原料出口不用分船；真实过去供给运输观察0、建筑占地编辑0。主经营补记只记已实际发生工资维护支出与出口货款，不用看库存冒充协议或收支执行；ALT实际生产出港过程补记0，不把施工或货物经过当手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A09.V1"
+        },
+        {
+          "text": "只回想最早殖民聚落的种植园或伐木场、运输办公室与码头已经运行起来的一段，哪项真的发生过？",
+          "scene": "初始原料已经实际送上船",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_TUTORIAL",
+            "T508A_PRODUCER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把原料、人手住处、运输与出口开支一起调过，并继续跟进了供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己猜过一处货物在哪段没接上，改过连接后运行并核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾给最早住房或生产点调整过放置预览的位置和朝向，再确认那次建筑占地",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "自己给已生产过的原料、已建码头和已发生出港补过个人小记",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "五代主动贸易须分船，普通原料出口不用分船；真实过去供给运输观察0、建筑占地编辑0。主经营补记只记已实际发生工资维护支出与出口货款，不用看库存冒充协议或收支执行；ALT实际生产出港过程补记0，不把施工或货物经过当手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "如果自己确实培养或编辑过王朝成员，回想其中已经发生的过程，哪项更有分量？",
+          "scene": "王朝页面里已经留住的变化",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_PRODUCER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己实际选择过服装、发型与饰品，让王朝成员呈现个人的执政形象",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己比较过已经可用的成员效果与经理岗位，先选方案而当时还没指派",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "自己给该成员已取得技能、实际任职或已经历场景补过个人记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己持续使用同一成员，投入过技能升级并保存王朝，后来又在后续场景接着培养这份已保留进展",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "真实回顾持续保存的技能培养才g，首次创建未升级不硬成长；纯看角色不算表达，方案比较不算已装配验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A10.V1"
+        },
+        {
+          "text": "没有技能培养经历，只回想第一次创建成员、改外观或最早聚落已经发生的一段，哪件事更鲜明？",
+          "scene": "没有技能培养时的首次人物编辑",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "T508A_MANUAL",
+            "T508A_PRODUCER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己给已经创建的人物设置和已查看的技能说明补过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己把首片住房、岗位、生产和出口收入调过，并持续跟进了开支",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "自己曾让最早聚落运行，跟看过居民从住处去生产岗位、运输车从产地去码头的一段",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "自己实际选过第一位成员的可用服装、发型与饰品，留下了个人主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真实回顾持续保存的技能培养才g，首次创建未升级不硬成长；纯看角色不算表达，方案比较不算已装配验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想自己实际探索或研究过的五代过程，哪种已经发生的经历更留住你？",
+          "scene": "迷雾与技术曾打开过新的东西",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_MANUAL",
+            "T508A_TUTORIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己猜过一项研究或生产停顿的原因，动手改后运行核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己给已完成的技术、实际投入的研究先后和已有设施补过建设过程小记",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己从总统府派过探索者，后来细看了新揭开土地，认识了原先未知的地形与资源",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己把研究队列、图书馆人手和后续生产需求接在一起，实际跟进过研究到开工的持续流程",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "揭雾需真派探索并认识新空间w，研究工程补记0；研究队列人手后续生产多轮y，p须动手核原因，不把看已得技术当收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A11.V1"
+        },
+        {
+          "text": "还没研究或派过探索者，只回想最早已揭开聚落的一段，哪项真的发生过？",
+          "scene": "没派探索者时已揭开土地的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_MANUAL",
+            "T508A_TUTORIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己猜过一处入口或库存原因，补路后运行核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己给已建码头、住房和当时已经看过的地形补过个人小记",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己细看过当时已揭开却没认识的林地与海岸，发现了新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己把初始原料、工人住处、运输和基础服务一起调过，还跟进了收入",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "揭雾需真派探索并认识新空间w，研究工程补记0；研究队列人手后续生产多轮y，p须动手核原因，不把看已得技术当收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TROPICO508A12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾自己目前实际玩过的一段五代单人战役或沙盒，哪种已发生的过程更有分量？",
+          "scene": "这一回治理确实留下的经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_MANUAL",
+            "T508A_PRODUCER",
+            "T508A_CAMPAIGN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己实际编辑过王朝外观，或安排过住房、道路和可用装饰，留下一个个人主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己读过战役人物已经说出的话与实际任务后续，把一段治理事件接成了故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己持续培养过同一位已有技能投入的成员，保存王朝后又在后续场景接着培养过",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己把原料、研究、工业、运输与经常开支接成过持续运转的一部分",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "只用真实已发生经历，不编造可改固定剧情；g须有同一成员持续投入及保存，不把街区人口和自动升级算成长，单人NPC不计真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A12.V1"
+        },
+        {
+          "text": "只玩过最早沙盒或教程聚落，回想那一小段真实经历，哪件事更有分量？",
+          "scene": "最早沙盒或教程聚落的真实经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "T508A_STORE",
+            "T508A_MANUAL",
+            "T508A_PRODUCER",
+            "T508A_CAMPAIGN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "本来有精力也能继续建，自己仍低速慢逛过熟悉港口与首片聚落，享受已经认得的开岛日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "自己按几轮初始住房、原料库存、运输与出口收入，实际继续调过岗位、基础供给与常规开支",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "自己细看过当时已揭开却没认识的海岸和树林，发现了新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己实际整理过港边住房、道路或可用装饰，留下自己的殖民聚落轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "只用真实已发生经历，不编造可改固定剧情；g须有同一成员持续投入及保存，不把街区人口和自动升级算成长，单人NPC不计真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TROPICO508A12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+d1c90c7a786b"
+}

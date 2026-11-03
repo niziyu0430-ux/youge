@@ -1,0 +1,936 @@
+{
+  "id": "cvlosv5",
+  "title": "恶魔城暗影之王终极版：十字架、光影与旅行之书",
+  "game_ids": [
+    "steam-234080"
+  ],
+  "scope": "终极版本体单人章节",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "不要求Reverie与Resurrection；光影、专注和移动遗物均按已取得条件提问。",
+    "光影资源是当场预算，经验买招才是保留成长；宝石按凑组规则提高容量。",
+    "章节式回访不写成全开放世界；炽天使肩甲不等于自由飞行，固定故事不作可选结局。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "终极版本体单人章节",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "CVLOSV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "一场普通遭遇已经开始，加百列能用战斗十字架的直接鞭击、范围鞭击和闪避；当前没有强制招式。你此刻更想先怎样交手？",
+          "scene": "战斗十字架的直接与范围鞭击",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_core",
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己范围鞭击后接闪避的一段，让这一次比自己的上一回顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "连着甩出熟悉鞭招，享受锁链命中与收回的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "临时规定直接鞭击和范围鞭击轮换起手，把这一场玩成自己的规则",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "维持自己设定的近身守夜骑士身份，主动贴近用直接鞭击起手，不以范围扫击开场",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "基础鞭击可回答；身份仅决定自由战斗起手，不改固定过场。 r明确是自赋近身守夜骑士身份影响直接/范围起手选择，不由固定主角使用十字架自动计角色代入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV501.V1"
+        },
+        {
+          "text": "若更熟悉开头的银匕首：眼前普通敌人可用十字架，手里也有几把能消耗的银匕首。此刻更想先做什么？",
+          "scene": "战斗十字架的直接与范围鞭击的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_core",
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练一次格挡后接十字架的时机，只想比自己的上一回更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先用熟悉鞭招接连命中，享受攻击停顿与锁链回收",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "给这场定成一轮鞭击、一轮匕首起手，试出不同过程",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "延续自定的十字架巡行骑士身份，先持十字架接敌，把匕首留作之后的选择",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "基础鞭击可回答；身份仅决定自由战斗起手，不改固定过场。 r明确是自赋近身守夜骑士身份影响直接/范围起手选择，不由固定主角使用十字架自动计角色代入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已取得光、影两种魔法，当前储量都够用，也有银匕首；加百列略缺生命，眼前普通遭遇可以自由交手。你此刻更想先做什么？",
+          "scene": "光与影的两份储量",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用光魔法配范围鞭击，让多次命中回复生命，再按交手变化切回普通攻击",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先开影魔法打一轮熟悉鞭招，直接享受增强后的打击反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先关魔法练一次同步格挡，只求自己抓到的时机比上一回稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按剩余储量与接下来的路程，安排哪一小段开光、哪一小段关魔法，保留两边余量",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "光回复来自命中，光影不能同时开；魔法槽是临时资源而非保留成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV502.V1"
+        },
+        {
+          "text": "如果目前只有光魔法：当前蓝槽够用，生命并未见底，眼前普通遭遇可用十字架。你此刻先做什么？",
+          "scene": "光与影的两份储量的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先关魔法，练同步格挡后再接鞭击的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿用熟悉鞭招打一轮，享受锁链命中和收回的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "按自定的十字架巡行骑士身份，主动持十字架由近处迎敌，再决定何时开光",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "安排一小段开光回复、余下关掉省储量，把这场和下一段路的消耗接起来",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "光回复来自命中，光影不能同时开；魔法槽是临时资源而非保留成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已能积累战斗专注，也已开放光影魔法，两槽都还能开一小段。眼前普通敌人仍在场，身边已有可吸收的中性能量。你此刻先把注意力给哪一件？",
+          "scene": "专注与中性能量的间隙",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先关魔法，练自己变换招式同时减少被打断的一段操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "继续挥出熟悉十字架招式，享受锁链击中与收回的连续回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "按光影两槽缺口分配眼前能量，再安排下一段魔法开启和关闭的时机",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先猜关魔法与开魔法时专注增长有何不同，分别交手一次核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "专注开启有进度前提，明确魔法开启时不增长专注，不将暂时槽位标g。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV503.V1"
+        },
+        {
+          "text": "若还没开放魔法和专注：眼前是一场能用直接鞭击、范围鞭击、格挡和闪避应对的普通遭遇。现在先做什么？",
+          "scene": "专注与中性能量的间隙的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜敌人哪次出手后更容易留下空档，再交手确认",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "定个每轮换直接与范围起手的小规则，试出一场不重复的交手",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "练一次格挡后接鞭，让自己这一次比上一回稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "用自己喜欢的鞭招打一段，只为连续命中反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "专注开启有进度前提，明确魔法开启时不增长专注，不将暂时槽位标g。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已攒够经验，旅行之书里有不止一项当前可购买的高级动作；现有招式和魔法也可继续用。你现在先处理哪件？",
+          "scene": "旅行之书里可买的招式",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂不添招，回眼前普通遭遇练稳自己已经会却常接断的一段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "真正花经验买下会继续使用的那一招，让加百列的可用动作永久多一项",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "比较现有招式与已开放魔法的接法，选能互相衔接的组合再去试",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "对照几项可购动作的经验需求，排清先买谁、之后再攒哪一份",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "经验购买留下持续成长；练习与组合不由动作购买数量代替。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV504.V1"
+        },
+        {
+          "text": "如果可购招式还少：旅行之书里已有一项当前能支付的基础动作，手里已有银匕首，旁边普通遭遇也可继续。你此刻先做什么？",
+          "scene": "旅行之书里可买的招式的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前经验、这次购买和下一项想学动作的缺口安排清楚",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "花经验买下这项可用动作，喜欢角色留下了一次可继续用的成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先练已有直接鞭击与闪避的衔接，让自己比刚才稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "把银匕首的远投与十字架近身鞭击接成互补的一段，再按实际效果改顺序",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "经验购买留下持续成长；练习与组合不由动作购买数量代替。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "在一段已经能回走的关卡里，你看见可取的宝石线索与兄弟会卷轴，主线出口也在前方，旁边还有未探角落。此刻更想先做什么？",
+          "scene": "倒下的兄弟会骑士旁",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_revisit"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按本关宝石的已知缺口去取这一枚，让自己追的那组少一格",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先走向未探角落，看看主路视线外还有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先观察可攀处、门和机关的连接，动手核对自己猜的通路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先读眼前卷轴，把这位骑士留下的文字接进加百列的旅途",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "宝石的收藏动机与卷轴叙事分开，不暗示每一枚立即提高上限。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV505.V1"
+        },
+        {
+          "text": "若本关宝石还没开始追：可回走的小房间里有已读卷轴、机关、侧门与前进方向，另有一枚已见未取的生命宝石可回头拿。你现在先选什么？",
+          "scene": "倒下的兄弟会骑士旁的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_revisit"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回头拿一枚自己已看见却漏下的生命宝石，补上记着的那格",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "去侧门后看一眼，不先规定一定要拿到物品",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "试一处机关，确认它与门和平台之间的关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "停下来读已有兄弟会卷轴，弄清这处地点发生过的事情",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "宝石的收藏动机与卷轴叙事分开，不暗示每一枚立即提高上限。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已取得旋风靴与炽天使肩甲，能冲刺和二段跳；当前可以返回一个已完成的本体关卡。之前够不到的侧台与自己记下的宝石缺口都在那里，你先做什么？",
+          "scene": "旋风靴与肩甲带来的旧关回访",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_revisit",
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按缺口返回，拿到自己正在追的那枚宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先猜冲刺、二段跳与落台位置该怎样接，试一次核对这条通路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "选一段已经能通过的冲刺接二段跳，反复练起跳与落点，让自己比前一回更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "去那个以前够不到的侧台，看看视线外原来接着怎样的地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "肩甲是二段跳而非自由飞行；本体章节重访不要求DLC。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV506.V1"
+        },
+        {
+          "text": "还没取得这些遗物的话：眼前基础关卡可回走，只需已会的攀爬、跳跃与十字架挂点；也有一枚已见未取的生命宝石和未探侧角。你先做什么？",
+          "scene": "旋风靴与肩甲带来的旧关回访的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_revisit",
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回去拿自己已经看见但漏取的一枚生命宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "观察攀附点和平台的关系，再试自己预测的落脚路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "重复一段已走通的攀爬跳跃，练自己的落地与转向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "到之前未探的侧角看看，不预设那里有奖励",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "肩甲是二段跳而非自由飞行；本体章节重访不要求DLC。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你刚遇过一种普通敌人，相关条目已进旅行之书，也有已录卷轴与人物条目；当前经验还够买一项已开放动作，战斗也可继续。此刻先做什么？",
+          "scene": "旅行之书里的敌人与人物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已够用的经验真正花在准备长期使用的那项动作上，让这条招式培养留下进展",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "回到这类普通敌人处，专练自己同步格挡后接招的一段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "看敌人条目的抗性提示，提出一种应对猜想，再回交手中核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先读人物或卷轴内容，接上这处旅程背后的经历",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "图鉴阅读支持人物叙事或机制解释；已收录条目补读不当收藏。g仅记经验已够、真正购买并留存的常用动作，未翻图鉴的替代只需基础示范与已有卷轴。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV507.V1"
+        },
+        {
+          "text": "若还没翻过敌人图鉴：旅行之书已有基础动作示范、已得卷轴和一项经验正够买的基础动作，眼前也能继续普通交手。现在先做什么？",
+          "scene": "旅行之书里的敌人与人物的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用已够的经验买下那项准备继续练的基础动作，让角色永久多一项可用招式",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "到普通敌人处练一回格挡后的直接鞭击，让自己接得更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "对照招式说明与动画，猜一次出手距离再到交手中验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先读已取得卷轴，想弄明白文字与加百列当前处境的联系",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "图鉴阅读支持人物叙事或机制解释；已收录条目补读不当收藏。g仅记经验已够、真正购买并留存的常用动作，未翻图鉴的替代只需基础示范与已有卷轴。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "加百列正停在一段已清静且能回走的熟悉庭院，精力充足，主线出口也已开放，旅行之书里还有可读卷轴。你此刻更想先做哪件？",
+          "scene": "熟悉庭院里的一段空闲",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_core",
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自定的守夜骑士身份，在出口可直接走时仍先逐一查看庭院入口再出发",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "沿走熟庭院小路从容慢走，不加新目标，享受已认识的环境与惯常停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "读一段已取得的兄弟会卷轴，把人物和地点的前后经历接上",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "到还没看清的侧角看看，未知本身就值得偏离出口",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "舒缓须精力充足；自赋守夜身份落实为可选巡查入口，不改剧情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV508.V1"
+        },
+        {
+          "text": "换成早期的熟悉村道也可以：眼前已无敌人，你精力足，主线与一条没看过的短岔路都能走。现在先做什么？",
+          "scene": "熟悉庭院里的一段空闲的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "cvlosv5_core",
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "延续自己设定的巡行骑士身份，先绕查村道两侧入口再走主线",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "重走熟悉村道，不催自己推进，喜欢看惯环境和自主步速带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "停下读已经取得的卷轴，想弄懂骑士留下的话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "转去短岔路的另一头看一眼，先不打听回报",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "舒缓须精力充足；自赋守夜身份落实为可选巡查入口，不改剧情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你在本作真实用过光、影两种魔法并观察过专注的一场普通遭遇，哪一种已经发生的体验更有分量？",
+          "scene": "回看魔法与专注的取舍",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际试过开魔法与关魔法时的专注变化，理解了两者为何要交替",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把中性能量分给不同魔法槽，并安排开启、关闭的消耗顺序",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "用光魔法配范围鞭击回复，再接其他已有招式，试出了互相支持的一轮",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "喜欢影魔法打击与十字架回收的反馈，主动多打过一段",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "真实回顾临时资源及机制组合，不把槽位或当场加成标成成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV509.V1"
+        },
+        {
+          "text": "若还没完整体验两类魔法与专注：只回想基础十字架和银匕首的交手，哪种真实经历更接近？",
+          "scene": "回看魔法与专注的取舍的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "试过敌人出手与停顿，确认了自己猜的可接近时机",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "安排过这段花几把匕首、余下用十字架，留够下一段的消耗",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "把匕首的远投与十字架的近身接成互补的一段，并改过先后比较",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "单是锁链挥出、命中与收回的节奏，就让我愿意接着打一轮",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "真实回顾临时资源及机制组合，不把槽位或当场加成标成成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你已经回走或重访过的一段本体关卡，不要求取得全部遗物。哪一种实际停留更像你？",
+          "scene": "回看自己为何回到旧关",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "cvlosv5_revisit",
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了看看先前没走过的侧台与转角，没先查奖励就去了",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当时精力足、目标可继续，仍在熟路从容慢行，享受已认识环境与日常步速的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "回读已取得卷轴，想把骑士留下的话与后面经历连接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按宝石或卷轴清单的明确缺口折返，终于补上了那一项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回走与章节重访均可回顾，不强制后期移动能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV510.V1"
+        },
+        {
+          "text": "若尚未重开过章节：回想你在同一关里确实折返过的一小段路，哪种经历更像你？",
+          "scene": "回看自己为何回到旧关的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "cvlosv5_revisit",
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拐回去看了主路旁没探到底的短侧路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足且前路可走，仍重走熟悉安全路段，喜欢看惯环境和从容行走的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为了读完一段已取得的卷轴，主动停下并接上人物的前后事情",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "回头取了自己已看见却漏下的宝石或卷轴，补上记着的一格",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回走与章节重访均可回顾，不强制后期移动能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你在旅行之书中确实购买、练习或搭配过的招式，哪种投入最能让你觉得值得继续？",
+          "scene": "回看经验留下的招式",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有动作与光影魔法配起来，按实际回复、消耗与出手空档改过组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把经验先买谁、之后攒什么排出次序，让几个购买逐步接上旅程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "已经花经验把常用动作买下或升级，可用招式的培养一直留到后面",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "为自己一次格挡或鞭击衔接的改善，主动重复了同一段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "永久购买、自己的练习、机制搭配与经验流程分别解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV511.V1"
+        },
+        {
+          "text": "若只买过最早的基础动作：回想这一小段已经发生的投入，哪种价值更接近？",
+          "scene": "回看经验留下的招式的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "cvlosv5_manual",
+            "cvlosv5_combat"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有范围、直接鞭击与银匕首接成互补顺序，并据实际效果调整过",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "按现有经验和下一项想学招式，安排过当前购买与之后积攒的先后",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "实际花经验买下了一项新动作，喜欢它成为之后仍可用的成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "练过一次直接鞭击接闪避，让自己比前一回更顺",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "永久购买、自己的练习、机制搭配与经验流程分别解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CVLOSV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想本体里一个确实由你自由决定的交手或停步，哪种经历最能说明你愿意这样选择？",
+          "scene": "回看加百列旅途中的选择",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "cvlosv5_core",
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了理解加百列的追寻，读过卷轴或接着看过已开放的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "给自己设了十字架巡行骑士身份，所以真以十字架近身起手，或在目标可走时先巡查入口",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "重复过熟悉鞭招，只为锁链命中与回收的节奏本身过瘾",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "看见机关与通路后提出过猜想，动手核对并解释了两者关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "角色扮演限玩家可选动作，不把固定主线与结局说成可改写。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV512.V1"
+        },
+        {
+          "text": "若只经历了开头章节：回想一个已经实际作出的自由选择，哪种比较像你？",
+          "scene": "回看加百列旅途中的选择的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "cvlosv5_core",
+            "cvlosv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "停下读过兄弟会卷轴，想弄懂加百列此行与已遇人物的关系",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的巡行骑士身份，主动先绕查村道入口，再去已能继续的主线",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "愿意多打一轮普通遭遇，是因为十字架挥击的回馈本身好玩",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "试过一处门或平台机关，弄清它与通路为何连在一起",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "角色扮演限玩家可选动作，不把固定主线与结局说成可改写。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CVLOSV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+9c3412974678"
+}

@@ -1,0 +1,1437 @@
+{
+  "id": "bt19",
+  "title": "气球塔防6",
+  "game_ids": [
+    "steam-960090"
+  ],
+  "scope": "原生PC普通地图与同局塔防；一套default，CHIMPS/沙盒/编辑器/在线合作只真实已解锁并体验的有限替代，不要求Legends DLC、付费专属英雄、MOD或测试版。",
+  "status": "private_authoring_pending_independent_review",
+  "author_review": "handwritten_full_final_read_complete_see_manifest",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12专属主槽各3情境，前8行动后4回顾；4跨游戏与最多2补问由引擎保留。",
+    "普通地图为每槽入口，未知/未熟/真人条件仅需要它的选项或明确真实模式替代。",
+    "三替代不保证每位玩家全部历史都能答完；未体验继续其他已核专属，不跳过。",
+    "2026v57是实际已发布原生版本核源，保留沙盒不获英雄经验、CHIMPS不额外收入等边界。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本人原生PC地图防守与真实已体验替代",
+      "initial_variants": {
+        "BT1901": "BT1901.V1",
+        "BT1902": "BT1902.V1",
+        "BT1903": "BT1903.V1",
+        "BT1904": "BT1904.V1",
+        "BT1905": "BT1905.V1",
+        "BT1906": "BT1906.V1",
+        "BT1907": "BT1907.V1",
+        "BT1908": "BT1908.V1",
+        "BT1909": "BT1909.V1",
+        "BT1910": "BT1910.V1",
+        "BT1911": "BT1911.V1",
+        "BT1912": "BT1912.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "BT1901",
+      "number": 1,
+      "variants": [
+        {
+          "id": "BT1901.V1",
+          "scene": "飞镖能看住两个弯，出口却还空着",
+          "text": "普通单人地图开局，你现有现金够放一只已解锁飞镖猴。一个合法点能覆盖气球两次经过的路段，另一个合法点更接近出口；此时两处都还没有塔。你先把这一只放哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_GEOMETRY",
+            "BT19_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "放在重复经过的路段，按自己这局先在前段持续削层的目标开局",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "放到出口附近，先保自己选定的漏网清理位置，接受前段暂时少一只塔",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看两处实际范围圈、路形和已能摆下的空间，再选位置",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "实际放下这只可用飞镖并开下一轮，亲手体验本次位置怎样工作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "实际路形与一只塔争两个职责；已知覆盖下的真实试用按中性操作，不硬贴P/F。",
+          "interpretation_boundary": "只当前合法可放位置，不保证任一开局必赢；试放实际花钱且不承诺免费撤销，当前模式须允许此塔。"
+        },
+        {
+          "id": "BT1901.ALT1",
+          "scene": "图钉的短射程，刚好够到内弯",
+          "text": "当前普通局有一只已解锁图钉塔可放，现金也够；内弯的合法点能让路线绕着它走，另一处合法点靠近你已经布塔的主阵地，但只擦到一小段路。先怎样分配它？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "放在内弯补一段独立拦截，接受主阵地这次不添塔",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "留在主阵地旁，先完成自己想集中的现有防守安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较图钉当前范围/攻击方式与手头另一只确能买的塔，再决定是否用图钉",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先用当前实际可放的预览操作试这两个位置的范围，亲手确认再落下",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "短射程环向攻击与具体弯道，非换塔名的同一地图问法。",
+          "interpretation_boundary": "不编图钉可跨全图/对所有属性有效，不假预览不合位置也能放；没有该布局就换普通飞镖情境。"
+        },
+        {
+          "id": "BT1901.ALT2",
+          "scene": "水边留给船，还是继续扩陆上阵线",
+          "text": "你当前普通地图有真能放海盗猴的水面，也有能放陆上塔的空地；两边的实际射程各自碰到不同路段。钱暂时只够你当前选中的一只船或一只陆上塔。先补哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_GEOMETRY",
+            "BT19_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用这块水面放当前可用海盗猴，把这次现金投到船能覆盖的那段",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把钱留给陆地上的当前候选，先补自己已选的出口或弯道位置",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较现有船/陆塔实际可买升级、覆盖与自己当前缺口",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若另有一张本人没玩过而已经开放的地图，就另开那张普通局亲自认识道路，接受暂不继续这盘",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "真实水陆位置/覆盖争预算，W仅真实未知地图空间而非新船试用。",
+          "interpretation_boundary": "船与陆塔只当前已解锁合法位置，不能凭空造水池；切另一局以本人当前真可操作为准，不承诺本盘不会丢进度。"
+        }
+      ]
+    },
+    {
+      "id": "BT1902",
+      "number": 2,
+      "variants": [
+        {
+          "id": "BT1902.V1",
+          "scene": "迷彩将到，飞镖还是忍者来补",
+          "text": "普通局里你已有一些能打普通气球的火力，但还没布好这次迷彩覆盖；当前资金能给既有飞镖猴购买已解锁的Enhanced Eyesight，也能在可用地点放已解锁忍者猴，两种花法不能一起做。先选哪种？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_BLOONS",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给当前这只飞镖买已有的识别升级，继续自己这局沿用它的位置与后续路线",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "另放当前可用忍者，把迷彩这份职责交到新位置，接受原飞镖这轮不升级",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较升级后飞镖与新忍者在本图实际覆盖、费用和已有火力",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读当前升级和忍者说明，核实本次能识别什么，再下手",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "相同迷彩缺口的现塔升级与新塔位置真取舍，不发明固定回合提示。",
+          "interpretation_boundary": "只当前已解锁可买候选；不说迷彩识别同时给破铅/破紫，不保证忍者独自撑完整局。"
+        },
+        {
+          "id": "BT1902.ALT1",
+          "scene": "铅层还没处理，预算只够补一处",
+          "text": "你当前普通局已经看见过铅气球，也确认现有普通飞镖没解决那层；现有图钉可购买已解锁Hot Shots，或另放当前可用炸弹塔。两处位置都合法，眼下钱只能先花一次。",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_BLOONS",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给这只图钉买Hot Shots，沿自己已经选定的弯道主力继续补",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "另放炸弹塔补另一段破铅位置，先把当前这份具体缺口做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人当时尚不明白飞镖未削动这层的原因，就提出攻击类型可能不同，实际以当前真能用的两种攻击再对照；别把迷彩或出范围混作同一原因",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对Hot Shots当前已显示的前置、升级价格与自己的现金，确认这次实际能否支付后再决定",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "亲见未削层后的破铅岗位，不把火/爆炸写成任何属性万能。",
+          "interpretation_boundary": "Hot Shots和炸弹只真实已开放，若不是可命中的同类属性不能当单因对照；不保证换一种攻击即获胜。 核对要求项限当前交易的前置/价格/可支付条件，不把看铅层或范围本身解释为已列目标要求。"
+        },
+        {
+          "id": "BT1902.ALT2",
+          "scene": "紫气球过去了，火焰没有替你收尾",
+          "text": "普通局里，你已看见一段紫气球穿过当前火焰/魔法火力后继续前进；这时可合法购买一只飞镖猴，也有另一处现有非火焰火力能继续升级。你更先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_BLOONS",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "补一只当前可用飞镖，按自己选定的非火焰收尾职责处理这段",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把钱继续投入那处真实可升级的非火焰塔，接受暂不新增位置",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "先比较两种当下配置对普通层、紫层与本图覆盖的不同作用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没解释紫层与其他层反应为何不同，就猜属性与攻击种类有关，在后续真实可用的同类波次或已解锁沙盒对照；不拿漏看弹道当免疫证明",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "具体紫层/火系后的补漏，不将所有名为魔法的攻击一概同效。",
+          "interpretation_boundary": "只当前真已见的攻击未奏效与可用候选；沙盒仅真解锁局部，不保证紫气球可被任意飞镖一次打完。"
+        }
+      ]
+    },
+    {
+      "id": "BT1903",
+      "number": 3,
+      "variants": [
+        {
+          "id": "BT1903.V1",
+          "scene": "新农场能买，防线也刚出现缺口",
+          "text": "当前允许额外收入的普通局，你有一块能放香蕉农场的土地，现金够买当前这只基础农场；同一笔钱也能补刚漏过一段的防守。你更愿意先把它投哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_FARM",
+            "BT19_MODES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先买这只现能放的农场，按自己选定的后续收入计划承担眼前仍需守住的风险",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先补刚才真漏掉的防守点，推迟这次农场",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对本局还剩的目标轮次、当前现金和两项实际购买要求",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已有防守塔的可用升级和新塔覆盖，再决定要不要挪这笔钱",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "经济塔与眼前缺口是不同目标，不承诺农场能自动回本或防守已经安全。",
+          "interpretation_boundary": "明确非CHIMPS/Deflation等禁止额外收入情境；农场不攻击，预算/地图实际当前为准。"
+        },
+        {
+          "id": "BT1903.ALT1",
+          "scene": "香蕉落在地上，机枪猴还跟着鼠标转",
+          "text": "你在允许收入的普通局里确有手收香蕉的农场，也正在亲手瞄准可用机枪猴；这一刻香蕉可收，气球也仍在路上。你更想把操作注意力给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_FARM",
+            "BT19_DARTLING"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先亲手来回控制机枪猴准星、追着眼前气球射，喜欢这段连续输入的命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把当前机枪猴按原生可用选项锁在自己已选的射线，再亲自收取眼前香蕉，先落实本轮收入目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握解锁/锁定方向再回去瞄准的操作，就围绕这个实际切换专项练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前香蕉位置、气球行进与自己实际能操作的瞄准区域",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "手收与手瞄真实争注意力；F是本人输入不是农场/炮台自动生产。",
+          "interpretation_boundary": "只原生当前已解锁机枪猴且自己操控，无TechBot/农夫代操作默认；不保证锁定后一定守得住，不依赖香蕉精确过期秒数。"
+        },
+        {
+          "id": "BT1903.ALT2",
+          "scene": "银行钱还在里面，防守升级已经亮了",
+          "text": "普通允许收入的局里，你现有一座真能取款的猴子银行，余额已显示；这次取出后足够完成自己选中的现有防守升级，也能先不取，让钱继续按当前银行规则积累。你先怎样处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_FARM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际取款，买下自己已经选定且当前能付的防守升级",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "这次先留银行余额，按自己后续收入目标继续现有防线，接受现在不添这项升级",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对银行当前余额、可取款状态与这项升级的实际费用",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前银行已经提供的计息、存取说明，再决定什么时候取款",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "银行存留与即时防守的真实时间价值，不写精确利率或满额最佳时刻；题干已说明积累，不再以留一轮看余额硬推P。",
+          "interpretation_boundary": "仅当前能取款银行与合法升级，不编贷款无偿/所有农场是银行；已有说明确可获得才查，不要求承担不可能守住的必败局。"
+        }
+      ]
+    },
+    {
+      "id": "BT1904",
+      "number": 4,
+      "variants": [
+        {
+          "id": "BT1904.V1",
+          "scene": "三连发与弩，两条已开放路线只选一条",
+          "text": "当前这只尚未选定高阶分支的飞镖猴，按本次真实已解锁与前置，确能继续走Triple Shot或Crossbow对应路线；现金只够先推进一边。你想把它接成什么职责？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿三连发路线实际购买，先完成自己偏好的近段多飞镖输出安排",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "沿弩路线实际购买，把这只猴子接到自己已选的更远处覆盖安排",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "先比较两条当前合法升级与现有其他塔互补在哪里，才把钱投下去",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读这只猴子当前升级说明与锁定前置，确认本局真正允许哪一步",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "同一现塔分支投资与职责，普通升级不强行B或长期G。",
+          "interpretation_boundary": "两条候选必须在当前状态真能选择，不编买成三条主线或随时免费洗点；具体射程/火力以当前界面，不引用旧数值。"
+        },
+        {
+          "id": "BT1904.ALT1",
+          "scene": "弹射球想借墙，出口飞镖还没补",
+          "text": "当前普通地图有一段本人实际确认可弹射的实体墙边路段；一只飞镖能按已解锁前置升成Spike-o-pult，也能把钱另用于出口的一只普通飞镖。你先补哪种用途？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当下已选的墙边弹射目标购买现有投石路线，接受出口这次少补一只",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "先在出口放自己能买的普通飞镖，完成这次漏网收尾目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "把当前真正可用的投石升级买出并在这里试打，看这次配置是否合自己的需求",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对可用墙面、路线、射线与出口已有火力的位置",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "真实弹射地形与出口收尾争钱，试已有配置0不假未知机制P。",
+          "interpretation_boundary": "只原生实际可弹射的墙，不说所有装饰/地图边缘都弹；升级合法、钱够，射线与结果不保命中/过关。"
+        },
+        {
+          "id": "BT1904.ALT2",
+          "scene": "昆西已经四级，新切换是快射还是精准",
+          "text": "只按当前已发布版本中，你这局昆西确已到四级且界面真有Focused切换的情况。原模式攻击更快，Focused取更精准、远射程与快弹道而降低攻击速度；眼前快气球与成群气球都有。你先怎样用？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_HERO",
+            "BT19_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "切到当前可用Focused，先完成自己选定的远处快气球处理目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "保留当前较快攻击模式，先照自己选定的密集气球削层安排继续",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较这局两个真实模式与当前其他塔覆盖的互补，再决定切换",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没熟悉这个切换操作，就在当前可行波次亲手切换再回位，专练自己没掌握的那一步",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "2026v57具体新增功能代价，不沿用旧昆西默认无此功能，不把试新模式当W。",
+          "interpretation_boundary": "未到四级/旧版或无按钮者换本槽飞镖情境；不保证Focused必中或一键应付所有波次。"
+        }
+      ]
+    },
+    {
+      "id": "BT1905",
+      "number": 5,
+      "variants": [
+        {
+          "id": "BT1905.V1",
+          "scene": "昆西急速射击已经可按，后面仍有气球",
+          "text": "你这局已放昆西且真实解锁急速射击，当前技能可用，眼前一批气球逼近他的覆盖末端；后面也还有本轮正在来的气球。先把这个冷却给哪一段？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_HERO"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "现在亲手开急速射击，按自己已选的眼前补漏目标投入这一轮技能",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先留技能给后面的气球，接受眼前仍靠现有火力处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握这次开技能与气球进入射程的时机，就用当前真有的窗口专项练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先看当前可用技能说明与实际冷却状态，再定开或留",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "可用能力的即时/后续窗口冲突，不把一次点击夸成持续F。",
+          "interpretation_boundary": "须当前真实已开放且无冷却，不编暂停可倒回或无限技能；不写具体秒数/伤害或保开后不漏。"
+        },
+        {
+          "id": "BT1905.ALT1",
+          "scene": "机枪已锁住直线，另一侧开始进气球",
+          "text": "你有一只当前可手动控制的机枪猴，原生锁定选项正让它守着一条射线；当前地图另一侧也真有气球进入。你先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_DARTLING",
+            "BT19_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "解锁后亲手持续转向、跟上气球移动再拉回射线，享受输入与命中相接的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "保留原来的锁定方向，把当前能付的钱投入另一侧的现有合法防守目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不会这次转向后重新锁回的位置，就在实际能操控时专练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前两边入口、射线与已有塔的覆盖，再安排",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "真实多侧手控/锁定/补塔争注意力，不默认所有机枪猴自动识别迷彩。",
+          "interpretation_boundary": "只本人手动输入，不能将自动锁定射击记F；另一侧可投钱需当前真实合法，非所有地图都两侧。"
+        },
+        {
+          "id": "BT1905.ALT2",
+          "scene": "迫击炮还轰着旧点，气球已转到下一段",
+          "text": "当前这只已解锁迫击炮可由你改落点；原来的路口还有少量气球，更多气球已走到它目前没覆盖的下一段。你先把注意力放哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_DARTLING",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手连续挪动落点、跟着这段气球的移动调整，享受每次落炮的操作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把落点留在自己已选的旧路口，改用当前能买的另一只塔补下一段",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握打开选点再落到具体路段的操作，就专练这次落点切换",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先比较当下真实可用的迫击炮升级与另一只合法可买塔，再决定",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "本人反复选落点才F，固定轰炸自动播放不F；不同于5昆西单次冷却。",
+          "interpretation_boundary": "不保炮弹即时落地或必命中，不用旧按键/精确延迟；无该塔仍可本槽昆西普通入口。"
+        }
+      ]
+    },
+    {
+      "id": "BT1906",
+      "number": 6,
+      "variants": [
+        {
+          "id": "BT1906.V1",
+          "scene": "胶水不靠直接输出，飞镖需要更多时间",
+          "text": "普通局当前能放一只胶水猴，也能补一只飞镖；已有飞镖能伤害这一批普通非迷彩气球，但一部分总在离开射程前没打完。你怎样投入这笔只能先买一只的现金？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_SUPPORT",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把胶水减速与已有飞镖伤害实际接起来，让这批真能减速、命中的气球经过；若自己此前确实玩过单靠飞镖伤害的相近局面，就比较加入减速前后的有效攻击时间与收尾表现，看这套组合是否更合意",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先补另一只飞镖，按自己选定的直接输出目标继续，不加这次减速组件",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较目前胶水、飞镖与已有塔的功能/覆盖，决定这次要哪套",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先查本局胶水当前升级说明和可影响的对象，再买",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不同组件减速+伤害的实际合用B，非同一枪换数值。",
+          "interpretation_boundary": "目标须真能减速/命中，不扩到所有MOAB/BAD或免疫层；真实试玩不保证控制了所有变量或必胜。 构筑比较项还需本人此前有真实玩过、可作相近对照的单独伤害方案；实际合用并比较，不把只买胶水或只读说明算B。"
+        },
+        {
+          "id": "BT1906.ALT1",
+          "scene": "炸弹能破铅，但迷彩还要另有人看见",
+          "text": "当前你这局已有一只确能伤害普通铅层的炸弹塔，另可合法放猴村并买已解锁Radar Scanner；接下来实际要处理的目标同时有迷彩与铅属性。你先怎样补这份缺口？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_SUPPORT",
+            "BT19_BLOONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若我此前真实用过未接雷达的炸弹配置，就把当前村的迷彩识别覆盖到炸弹塔，实际处理这类能命中的目标；与此前可比目标的表现对照，看识别与爆炸伤害接起来后怎样改变结果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "改买自己目前真能付、也确有识别和破铅能力的另一套塔配置，按这次独立补漏目标执行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前已有识别/伤害组件与两套真实可行配置，不把雷达等同MIB",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对猴村范围是否真包括这只炸弹塔及目标经过的位置",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "识别与破铅是不同原生功能，范围实际接上并玩才B，不说雷达包办免疫。",
+          "interpretation_boundary": "仅已有足够预算/合法升级与实际目标；B以真覆盖为前提，不保所有迷彩混合层能全清，另一配置须自己实际有。 B须有本人真实可比的原配置经历，并在新组合中实际交手；若属性、轮次或其他火力不同，就保留这些差别，不冒单因素机制证明。"
+        },
+        {
+          "id": "BT1906.ALT2",
+          "scene": "潜艇够不到远端，岸上的忍者已经看得到",
+          "text": "你这局有一只可按当前前置购买Advanced Intel的潜艇，岸上也有一只现存忍者；忍者实际覆盖一段潜艇原本射程外的水边路线。钱可用于这项情报升级，也可补别处真实能买的防守。先选什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_SUPPORT",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若我此前实际看过这只潜艇本身覆盖下的表现，就把情报借用与忍者的现有覆盖接起来，让当前真能命中的气球经过；与此前相近局面比较远端覆盖和收尾变化，再判断组合是否合意",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "不投这次共享范围，把钱用在自己选定的另一处独立防守目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较现有潜艇/岸塔作用、可用升级和另一处配置，再作选择",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读Advanced Intel的当前说明及已有塔信息，核实此刻借用的是什么",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "情报借用与另一塔的空间覆盖功能有实际配合；不把单纯射程升级称B。",
+          "interpretation_boundary": "只本局真实可用情报升级与可命中对象；不保任何岸塔都识别迷彩/破铅，不把无限射程等同无条件看穿一切。 B还需本人已有潜艇原覆盖的实际经历，真实合用并比较前后效果；新旧波次有其他变化时不把差别都归给这项升级。"
+        }
+      ]
+    },
+    {
+      "id": "BT1907",
+      "number": 7,
+      "variants": [
+        {
+          "id": "BT1907.V1",
+          "scene": "经验够开一个升级，下局钱仍要另赚",
+          "text": "一局后，你在猴子升级页看见自己实际攒出的该塔经验；它够解锁自己当前两项候选之一，但不够同时解锁。你下一局也有一个真实想试的防守目标。先怎样用经验？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_UNLOCK",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "解锁自己下一局已选目标所需的那一步，之后仍按实际局内现金去购买使用",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "先解锁自己一直更想试的另一条当前合法升级路线，接受下局原目标暂缓",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两项已能解锁的功能与自己已有塔配置，再花这份经验",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读当前升级前置和解锁说明，确认经验解锁与局内购买的不同条件",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "帐号塔经验与局内现金真实不同，解锁非当场免费落塔；普通目录解锁不冒C/G。",
+          "interpretation_boundary": "只本人已有足够该塔经验的两个真实候选，不把经验跨塔随意转；不保证新局保留上局场上塔。"
+        },
+        {
+          "id": "BT1907.ALT1",
+          "scene": "猴子知识已经能点，自己常用两类塔都想要",
+          "text": "只按你已经开放猴子知识、有实际可用点数，且两项当前候选前置与可能的货币费用都满足的情况：一项贴近你常用的主力塔，另一项贴近你想继续用的支援体系。先把这一点给谁？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_UNLOCK",
+            "BT19_MODES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "点进自己本次已选的主力塔知识路线，接受支援这一项暂时不加",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "把点投给当前已选支援路线，先完成这次体系补强目标",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "先比较两项真实候选与本人已有知识/实际常用配置的作用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "这次暂不花点，先按自己选定的普通地图目标再玩一局",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "真实已具条件的知识投资，不发明人人开局有知识或将所有永久帐号进度强贴G。",
+          "interpretation_boundary": "不采用旧等级上限/最佳点法，不把知识作用套入CHIMPS；不把付费买点当默认。"
+        },
+        {
+          "id": "BT1907.ALT2",
+          "scene": "展示的瞬间猴正好是自己缺的那一只",
+          "text": "只按你当前v57原生Featured中，确有一项直接展示的具体瞬间猴是本人一直惦记而未拥有的；对应玩法目标已能做，完成后需付的Monkey Money自己也真有。你先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_INSTA",
+            "BT19_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为补这个自己明确未有的具名瞬间猴，实际做其当前玩法目标，达到可兑换条件后用现有货币认领",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先把现有Monkey Money留给自己已选、当前确能解锁的另一位非付费专属英雄，推迟这项收集",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对该项展示物、目标进度与实际兑换费用，再决定",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "若自己只是想试玩法，就先玩目前真能开的普通地图，不把认领这只作为目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "明确个人缺项+实际达成当前目标与兑换，而非随机保中/浏览免费目录C。",
+          "interpretation_boundary": "须本版本真实展示/可完成/可支付，不承诺以后仍有同款；不要求IAP，不把所有玩家都设为有此缺项。"
+        }
+      ]
+    },
+    {
+      "id": "BT1908",
+      "number": 8,
+      "variants": [
+        {
+          "id": "BT1908.V1",
+          "scene": "普通图可以多放，你想不想只用三只",
+          "text": "你当前能开一张已解锁普通单人图，原生规则允许使用超过三只塔；已有可用塔足以让你实际开始尝试。今天有时间玩这一局。你想怎样给自己定目标？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_CORE",
+            "BT19_CUSTOM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自定这次全局最多放三只，实际玩；放出第四只或没守住就记个人失败，下一次真实可开局时调整方案重试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "不加个人上限，按自己原先选定的完成这张图目标实际布塔",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没熟悉当前放置/选择升级的具体操作，就只围绕那个操作练，不另加个人成败",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先查看这张图本次真实难度/模式与限制说明，再定做普通局还是自限",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "原生允许与本人额外规则区分，实际玩/人工失败/再开才I。",
+          "interpretation_boundary": "不冒原生三塔成就/自动判罚，不保证三塔能过任何图；个人失败不强迫立即重开或清空存档。"
+        },
+        {
+          "id": "BT1908.ALT1",
+          "scene": "编辑器里定预算，自己先试它守不守得住",
+          "text": "只按你已经能使用原生挑战编辑器，当前真能设定这张地图的塔限制、起止轮次和现金的情况。你可以在已有合法范围内做一个自己的短挑战，也有普通地图还想打。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_CUSTOM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自设定本次可用塔/预算/轮次，试玩自己的限制；真漏到失败就调整限制或布置后再试，保留自己的可达成目标",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先不做自己的题，去玩那张当前可开的普通地图，把自己原定目标完成",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先用当前编辑器允许的操作实际设入一组条件并试玩，体验这次工具怎样用",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "若有真实愿意一起玩的同好，就先与对方约定本次挑战的玩法范围，再按真实商定条件制作",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "具体编辑器玩法而非虚构MOD；Q只真人真商定且实际执行，不造单人NPC合作。",
+          "interpretation_boundary": "有限条件替代，不假全员已解锁编辑器/分享资格，不用旧最大值/奖品/自动回滚；没玩过换本槽普通自限。"
+        },
+        {
+          "id": "BT1908.ALT2",
+          "scene": "队友差一笔升级钱，你也有自己的购买计划",
+          "text": "只按一局真实在线合作：你有当前可赠的现金，一位真实队友愿意回应并提出当前可买升级的缺款；你自己原先也想用这笔钱买一项已可买的防守。你怎样安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_COOP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和对方核实他补的覆盖与自己接下来负责的路段，按真实商定的分工赠款并执行后续职责",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先保留这笔钱完成自己当前那项防守购买，明确接受队友本次不立即补出那项",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较双方真实已有火力与两项可买升级，弄清钱投哪边实际改变什么",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若彼此愿意，约好这局一起扛眼前这波，按当前各自能做的操作配合，重在一起经历这一段",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "真实赠款与本人购买争同钱；Q有协调执行、O共同经历，不能NPC/机器人。",
+          "interpretation_boundary": "只本人可操作现金/队友真实愿回应，不承诺对方照办或任意区域都能放塔；单人可用本槽另两题。"
+        }
+      ]
+    },
+    {
+      "id": "BT1909",
+      "number": 9,
+      "variants": [
+        {
+          "id": "BT1909.V1",
+          "scene": "飞艇破了，里面的小气球还需要收完",
+          "text": "回想一次普通局：你亲眼见过一只MOAB被打破，里面的陶瓷等子气球仍继续走，自己的后段火力又接着处理了它们；最后守住或漏掉都可以。那次之后你真更想投入哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_BLOONS",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在后来的可行尝试里，给这类子气球补一处当前能买的清理火力，完成自己选定的加强收尾目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先比较当时现有的破外层与清小层配置，判断各自实际负责哪一段",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "若本人当时没解释破外层与后段表现为何不同，就提出外层与子层对火力需求可能不同；后来在真实可比的波次或已开放沙盒分别保留/补清理再看结果，其他属性混入就保留未知",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "若本人当时未练会自己已开放技能的开出时机，就为那次具体窗口在后续可行波次再练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "实际破外层后仍处理子层的回顾，不要求所有替代都曾失败，也不只把2属性行动换过去式。",
+          "interpretation_boundary": "须本人真实见过该过程，不保后段一定清完；沙盒仅已解锁条件，不保证相同升级/波次仍复现或一次试验足够判断。"
+        },
+        {
+          "id": "BT1909.ALT1",
+          "scene": "气球在绕路时又长回去了",
+          "text": "回想你一次真实局中，亲眼看过带再生标记的气球被削层后，绕到后段又恢复过层；原来的分散火力没把这一批收完。后来哪项更贴近你的投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_BLOONS",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在后来真可玩的局里，集中当前能买的火力到同一实际覆盖段，先完成自己选定的这一批清理目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人当时没解释层数为何又回来，就猜标记与恢复有关；后续以真实可比较的再生/非再生目标观察削层间隔和变化，混入别的伤害不当单因证明",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先看当时实际气球标记、经过路段和现有塔能覆盖的位置，再决定怎样改",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "先读自己当时能获得的再生属性说明与相关已解锁塔说明，再安排下一次",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "亲历再生过程后的原因核验与集中防守，P未知local不让玩家先背规则。",
+          "interpretation_boundary": "不造无限再生必现/无限赚钱，不能用不同属性和不同火力的单次结果声称已证；未见者换普通漏子层。"
+        },
+        {
+          "id": "BT1909.ALT2",
+          "scene": "旧塔卖掉变现，原来的那段却再没人补",
+          "text": "只回想一局原生允许出售的普通局：你真实卖掉过原来的防守塔，把到手现金投到别处；后来亲眼看到旧覆盖段漏过气球。那次经历之后，哪种投入更贴近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_MODES",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "后来保留一只自己当时真能付的低阶收尾塔，再把余钱投入原定的新目标，接受少投一点到主力",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按自己原来的主力目标继续把资源集中，接受旧位置仍需靠当前其他可用手段处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若出售后当时确有两种自己仍拥有或现金真能买的收尾配置，就比较它们现在能覆盖的路段和费用，再决定用哪套",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若当时有愿意交流的真人，就把自己这次变现后漏线的经历讲给对方，一起聊那次意外",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "真实撤防变现的后果和再安排，不要求所有玩家会卖塔，不造全额退款。",
+          "interpretation_boundary": "非CHIMPS/禁卖挑战；只实际已卖且漏过的经历，不能借回顾保证买回原塔同价或随时回滚。 配置比较项只供当时仍拥有/确可买的两项候选；历史上已卖掉且当前买不起的原塔不能冒充仍可用配置。"
+        }
+      ]
+    },
+    {
+      "id": "BT1910",
+      "number": 10,
+      "variants": [
+        {
+          "id": "BT1910.V1",
+          "scene": "经验真解锁了升级，进局后现金却还不够",
+          "text": "回想你实际用塔经验解锁过一项升级，后来在一局普通地图里想买它，却发现当时的局内现金还不足。那一刻你也确能买较便宜的现有防守。之后怎样投入更贴近自己？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_UNLOCK",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前现金花在真实付得起的低阶防守上，完成自己当时选定的眼前覆盖目标，推迟原本想买的那项",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把钱继续留给原先已选的那项升级，先用现有火力打后续实际可开的轮次，接受暂不补低阶塔的风险",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较那时真能买的其他塔/升级配置，判断是否有自己更愿意用的替代",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对该升级已解锁状态、当前前置与实际局内费用，再决定还要怎样攒",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "经历过帐号解锁与局内付费条件不同后，立即防守和继续攒钱是真目标冲突；区别7的帐号经验选哪条，也避免与12回归H/W/O近壳。",
+          "interpretation_boundary": "不要求获胜/特定英雄/沙盒或CHIMPS，经验解锁不白送场上升级；不能保当前火力足以撑到买得起。"
+        },
+        {
+          "id": "BT1910.ALT1",
+          "scene": "第一次真在CHIMPS漏掉一只，局面就结束了",
+          "text": "只回想本人实际开过CHIMPS，并因真实漏气球失败的一次；当时不能用出售或额外收入去补这个局面。之后你真正更愿意投入什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_MODES",
+            "BT19_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "重新开始当时真能开的尝试，把每次现有现金投入自己已选的合法防线，接受不能靠卖塔转钱",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人未练会导致这次漏气球的具体技能时机或放置操作，就在后续真实可行局里专练那一步",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先读当前CHIMPS真实限制与已解锁塔说明，核实哪些普通习惯不能用",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "暂不再打这项限制，回自己当前可开的普通模式，完成另一个真实想做的目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "真实严格模式失败后的投入与转目标，非排行榜K，不说任何供给塔在CHIMPS完全无用途。",
+          "interpretation_boundary": "不预设玩家已解锁/玩过；不承诺合作重试/额外生命/免费续关，重开与实际可用重试以当前界面为准。"
+        },
+        {
+          "id": "BT1910.ALT2",
+          "scene": "沙盒试过一批气球，试验还没变成一局胜利",
+          "text": "只回想本人已经解锁沙盒，亲自放过当前可用塔、发出过一批气球，并查看过真实结果的一次。之后你更想做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_PATCH",
+            "BT19_GEOMETRY",
+            "BT19_CUSTOM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当时已试过的实际配置带回一张允许该塔的普通局，用真实预算完成自己选定的地图目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "继续比较自己手上已经可用的另一套组件，再实际试用，看哪套更合自己的需要",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "自己给沙盒这段试验另加一条明确预算/塔数规则，实际照着玩；超出或漏掉就记个人失败，人工清场调整后重试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握发气球、重置计数或选塔的具体操作，就围绕那个当时真可用的操作专练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "实际实验后向正式资源约束/自制玩法/具体操作的不同方向，不将沙盒输出当真实通关。",
+          "interpretation_boundary": "沙盒不耗普通局现金预算的默认安全不能套回地图；英雄沙盒不自动获XP，塔/升级仍本人已解锁，清场只当前真可操作。"
+        }
+      ]
+    },
+    {
+      "id": "BT1911",
+      "number": 11,
+      "variants": [
+        {
+          "id": "BT1911.V1",
+          "scene": "熟悉的单路布阵，到了双入口却漏了另一边",
+          "text": "回想你从一张熟悉单入口地图换到自己当前能玩的多入口图，真实看到气球从两边进入，而原来的集中布阵没有覆盖其中一路。后来什么更贴近你的投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_CORE",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把后来的可用现金和位置分给真实缺防的那一路，先完成自己选定的两边都守目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先比较本人当时已解锁塔的覆盖与实际可用位置，再安排两边分工",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "若本人尚未掌握同时看两侧后及时选塔放置的操作，就在后续真能开的这类图里专项练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "当时精力仍足、也真能继续学新图，仍自主回熟悉单路图，享受自己熟悉的布阵过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "真实换地图暴露漏线后的安排，与1初始两个位置不是同动作过去式。",
+          "interpretation_boundary": "只本人真玩过的多入口图，不假每轮同时两边来；T练本人操作而非要求自动塔练操作，其他选项不锁未熟条件。"
+        },
+        {
+          "id": "BT1911.ALT1",
+          "scene": "还是这一局的同一位英雄，你已经看着他升过级",
+          "text": "回想普通局里自己真正使用的同一位英雄：你确实投入过场上防守和轮次，看见其升级并开放过能力；当前这局还没结束、也未满级，真能继续获得后续经验。昆西或自己实际拥有的其他英雄都可以。你更愿意怎样继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_HERO",
+            "BT19_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续把这局轮次与实际防守投入围绕这位已经成长的英雄安排，想看同一个对象后面继续升级",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "若自己真拥有另一位英雄，就先结束这次投入，另开当前真可玩的局试那位英雄，接受不继承原英雄局内等级",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先看这位英雄当时真实等级、已有能力与后续说明，再决定把时间放哪里",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "若有真实愿意交流的人，就讲这位英雄这局开出能力后发生的具体一波，一起聊亲历的转折",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "唯一G限同一局同一个已投入且见成长英雄继续真实成长，不是新局重放/普通塔维修；不把整槽锁昆西/合作/多地图。",
+          "interpretation_boundary": "不是沙盒；继续必须当前合法且未满级，不保证本局最终达到某级。另开与另一英雄需实际可操作/拥有且不继承原等级，真人局部。"
+        },
+        {
+          "id": "BT1911.ALT2",
+          "scene": "进了Primary Only，平常用的忍者这次不能放",
+          "text": "只回想你真正开过Primary Monkeys Only：原先常用的忍者这次不能放，自己当时也确有可用的初级类猴子能开始防守。你后来怎样投入更贴近自己？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_MODES",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己当时选定的这项受限模式目标，用手上真实可用的初级类塔继续防守，接受这次不能照搬忍者配置",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "回到当前真能开的普通模式，用自己更想玩的忍者配置完成另一个实际目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较当时真正允许的初级类塔与已有升级，决定怎样补原先忍者负责的那段",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读这项模式当前允许的塔类别与自己的候选说明，再决定继续还是换目标",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "实质替换与8赠款同四动机的回顾近壳：已亲历模式塔类别限制后，改合法配置或返回想玩配置有真实代价；不为Q/O配额保同壳。",
+          "interpretation_boundary": "只有本人真实开过该模式且看到限制者；不把所有英雄禁用、不说初级类只等于飞镖；本槽同一已成长英雄与多入口另供普通单人入口。"
+        }
+      ]
+    },
+    {
+      "id": "BT1912",
+      "number": 12,
+      "variants": [
+        {
+          "id": "BT1912.V1",
+          "scene": "知道能换别的图，还是愿意再玩熟悉开局",
+          "text": "回想自己已玩过一段《气球塔防6》，又确实有时间开始下一局；当时有已开放的新图/新目标，也有自己熟悉的普通地图。哪种理由最让你愿意继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_CORE",
+            "BT19_GEOMETRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时精力仍足、也有别的可玩目标，仍自主选熟悉地图、熟悉的早期摆塔和升级，享受这个过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "若某张实际可玩的地图空间本人还没体验，就去亲自认识它的道路、可放位置与布局",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "若本人还有没掌握的具体手动瞄准或技能时机，就为练会那一步开始真实可用的下一局",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若真有愿意交流的同好，就一起讲自己上一局那波气球怎样漏掉或守住，继续分享彼此体验",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "普通回归入口，H主动熟悉不是累了被迫；未知空间/未熟/真人全选项局部。",
+          "interpretation_boundary": "不保证新图都已解锁，不要求付费英雄/高难度/合作；没有手动塔也可用熟悉或新图选项。"
+        },
+        {
+          "id": "BT1912.ALT1",
+          "scene": "农场、补塔和下一轮收入，已经来回改过几次",
+          "text": "只回想你在允许额外收入的同一局里，实际经历了几轮收香蕉或取银行钱、用钱补塔/升级，再根据真漏线或收入改过下一轮支出的过程。什么更让你愿意继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_FARM",
+            "BT19_MODES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把收入时机、留给防守的现金和后续经济投入接起来，真实再跑下一轮，按实际结果调整后继续，让这套循环运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先只完成自己当时已选的某一只防守塔购买，不继续扩整套经济循环",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前已能买的不同防守配置，再决定这一笔钱投给谁",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "当时精力足、也有其他可做安排，仍自主重复自己熟悉的收取和常规整备，享受熟悉节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "本人真实多轮收入→防守/再投资→反馈修改→再跑才Y，不把写计划/一次买农场算体系。",
+          "interpretation_boundary": "非CHIMPS/无收入模式；不造自动赚钱/固定利润或稳赚回本，H不是困倦被迫；只原生实际可收/可买。"
+        },
+        {
+          "id": "BT1912.ALT2",
+          "scene": "已经有一套外观，还惦记另一件具体藏品",
+          "text": "只回想你实际拿到过奖杯商店的外观物件，并在游戏里用过其中的呈现；当前商店另有一件本人一直惦记而确未拥有的具体外观，现有奖杯真能兑换。你更想继续投入哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BT19_TROPHY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己已经持有、当前能应用的外观组合重新调整，实际看本次呈现，直到更像自己想留下的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "为补那件本人明确缺的外观，实际用当前已有奖杯兑换并取得它",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "把奖杯先留给自己另一个已选外观目标，这次不兑换眼前这一件",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若真有愿意看的同好，就一起看自己已经应用过的这套外观、聊各自喜欢的呈现",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "已持呈现调整A与明确未有具名物的真实兑换C不同，不把商店浏览当C或外观当战力升级。",
+          "interpretation_boundary": "物件/应用/当前库存/可支付均须真实；不要求所有玩家买过商店，奖杯来源和花费不编固定数字，同槽有普通入口。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+6a44cd5ef0e3"
+}

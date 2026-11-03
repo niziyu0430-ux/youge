@@ -1,0 +1,988 @@
+{
+  "id": "fac8c",
+  "title": "异星工厂：本体Nauvis的矿炉、机械臂与持续生产",
+  "game_ids": [
+    "steam-427520"
+  ],
+  "scope": "2.0/2.1共有本体Nauvis单人；不要求Space Age，每槽有只用早期燃烧矿炉与基础带的独立替代",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "本包不使用质量、高架、其他行星、太空平台或付费堆叠带，也不假定使用模组；2.1新流体/电路/翻转细则不作2.0共同规则。",
+    "科研、铁路、普通模组、蓝图和混凝土未体验时均有独立手写早期路径；早期无需电网、机器人或正式成绩。",
+    "跨多轮采矿、燃料、冶炼、供电与消耗才y；单次施工排步骤0分，普通摆件和预览0分，蓝图本机保存0分。",
+    "p要求自己的解释或预想及单项实测，b只给兼容模组或两台煤矿机互供燃料的真实配合并运行；i仅明确禁用原本可用地下带且实际绕通。",
+    "不由产量、通关时间、是否遭敌袭推现实能力或人格，不强迫真人合作；替代不宣称统计等值。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "2.0/2.1共有本体Nauvis单人；不要求Space Age，每槽有只用早期燃烧矿炉与基础带的独立替代",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "FAC8C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "Nauvis本体：一排石炉旁的基础带分两道送铁矿与煤，当前有一台间歇停下；原料燃料都还有，空地与备用件可用，也没有来袭危机。先做什么？",
+          "scene": "矿和煤在同一条带上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_BELT",
+            "FAC8C_INS",
+            "FAC8C_FURNACE",
+            "FAC8C_STABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜停顿是否来自其中一种物料没有经过这只臂的取料点，只移动这一处进料位置，再看炉内状态和取料过程核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把采矿、煤供应、冶炼输出与用板需求接成几轮安排，再随库存变化调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有机械臂方向与目标库存说明，再回到这台炉边动手",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "在旁边备用炉上反复做同一种短带取放，专门练熟自己认取放方向的过程",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "双道/机械臂反馈是p可自提模型的对象；y需跨采矿燃料冶炼消耗持续运转，说明0分，t是玩家主动重复练操作而非角色技能。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C01.V1"
+        },
+        {
+          "text": "只有最早矿炉也能答：一台已放好的燃烧采矿机旁有石炉、现有煤和短带，能拆回重放，附近这片地已安全。先把这一段给什么？",
+          "scene": "矿和煤在同一条带上的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS",
+            "FAC8C_STABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜采矿机转向后会把矿落在哪里，只转这台再核对出料位置",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把这台石炉挪到另一处当前能放的位置，亲手看新布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次补燃料、回收旧件与接短带的先后再操作",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先读当前采矿机出料与石炉燃料说明，再回来试自己的这套矿炉",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "双道/机械臂反馈是p可自提模型的对象；y需跨采矿燃料冶炼消耗持续运转，说明0分，t是玩家主动重复练操作而非角色技能。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "本体已有取水、锅炉、蒸汽机与电网，一段供煤臂刚停过，工厂还能低负荷运行，手头有煤和备用件。眼前先投入哪件事？",
+          "scene": "蒸汽机旁的供能停顿",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_POWER",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把取水、燃料、蒸汽供电与用电机器的持续负荷一起调整，跟着后面几轮耗用复核",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先把这次关停哪组负荷、补燃料和重新接通的步骤排清，再按顺序处理",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对这组锅炉的水口蒸汽口与当前电网提示，再继续实际调整",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先提出是不是送煤臂断电使锅炉更缺煤的解释，只给这台锅炉补一次现有煤，再看电网与机械臂恢复情况核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不考锅炉蒸汽机比例；单项补煤核解释p，跨燃料供电生产负荷y，当次处理顺序与读说明均0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C02.V1"
+        },
+        {
+          "text": "还没铺电网：两台燃烧采矿机已放在同一片煤矿上，各自出料朝向可看；其中一台旁有能让另一台相邻对准它的有效空位，两台都能继续覆盖煤，现有启动煤也够。没有来袭急事，先试哪件事？",
+          "scene": "蒸汽机旁的供能停顿的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜一台的出料是否没对准另一台，只移动这一台的位置，再看煤是否真正进入对方燃料槽核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次回收原矿机、放相邻两台和转出料方向的步骤，再照着摆",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前燃烧矿机的燃料与直接出料说明，再回这两台实际尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "把两台的出料口对到彼此燃料入口，实际让采出的煤互相供燃料，再核对两台的取煤与存煤",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "不考锅炉蒸汽机比例；单项补煤核解释p，跨燃料供电生产负荷y，当次处理顺序与读说明均0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "地下带和普通带当前都已可用；两股物料需在一处交叉，现有地下带出口偶有你没预料的物料，另一条绕行走廊也已清空，零件够用。先怎样继续？",
+          "scene": "两股物料在路口交叉",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_BELT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先挪一对现有地下带端点，亲手看看另一种交叉布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先把当前这段要拆、要留与可回收的零件排清，再接这一次路口",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先猜是哪一个端点的方向让物料落错道，只改该端点再观察出口核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "给这次新支路加禁用地下带的规则，明确不用原本可用的工具，实际沿当前可走空廊试接普通带",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i只针对当前确有地下带且普通带绕行可行时的额外禁用规则；普通换路本身不计发明。p改单端点看真实出口。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C03.V1"
+        },
+        {
+          "text": "地下带还没解锁也可以：一条正输铁矿的基础带末端已有带燃料的燃烧机械臂接箱，旁边还有备用箱与能绕开的空地，不用交叉别的生产线。先做什么？",
+          "scene": "两股物料在路口交叉的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有基础带和机械臂连接说明，再回来接自己的箱子",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次回收旧弯、保留箱子和补齐新弯的先后再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "换一节短带的位置和朝向，亲手试一条当前能接通的弯",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先猜末端这一节转向后，物料会送到末端机械臂的取料点，还是停在原带段，再只改它核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "i只针对当前确有地下带且普通带绕行可行时的额外禁用规则；普通换路本身不计发明。p改单端点看真实出口。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "一条本体研究已经投入但未完成，现有科学包能继续送入；原料与电力能维持，实验室有时等料，另有空间加一小段供给。现在先选什么？",
+          "scene": "研究在消耗科学包",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_BELT",
+            "FAC8C_INS",
+            "FAC8C_RESEARCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次加实验室前要备的带、臂和电杆以及施工顺序，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "继续把现有科学包投入同一条研究，想让已经积累的投入留下后面可用的技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先解释实验室等料是否来自一处进料臂，只调整该处再看送入过程核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把矿板、科学包生产、供电与实验室消耗接成持续供给，再按几轮库存复核",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "主情境g为已投入研究的实际持续消耗并保留技术，非只看研究树；y多系统供给循环，单轮编辑清单0。ALT炉中已有煤不等于出板臂有煤；题干只说臂独立燃料状态可查，不先告诉答案。p要自己提出臂缺燃料的解释并只补臂再实跑，普通重摆0、明确为了自己练熟放置朝向而重复搭建才t。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C04.V1"
+        },
+        {
+          "text": "还没做科学包线：石炉内有铁板和足够燃料，负责出板的燃烧机械臂却停了，它自己的燃料状态能单独查看；手上有煤，箱子有空位，旁边还能放一组短连接。先做什么？",
+          "scene": "研究在消耗科学包的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS",
+            "FAC8C_BURNER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用手头备用件在空地重复搭同一种已会的炉到箱连接，专门练熟放臂和改朝向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先提出臂本身缺燃料的解释，只向这只臂加现有煤，保持炉和箱不变，再看是否恢复取板核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把这只臂和箱子移到仍能接炉的另一处，亲手查看本次取放布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次保留炉口、移动箱子与放回机械臂的编辑顺序，再动手",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "主情境g为已投入研究的实际持续消耗并保留技术，非只看研究树；y多系统供给循环，单轮编辑清单0。ALT炉中已有煤不等于出板臂有煤；题干只说臂独立燃料状态可查，不先告诉答案。p要自己提出臂缺燃料的解释并只补臂再实跑，普通重摆0、明确为了自己练熟放置朝向而重复搭建才t。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "本体已有能正常运输矿石的地面铁路，一列车刚在信号前等过；手持普通信号可看区块，燃料供应稳定，也有一批可用混凝土地砖。先做什么？",
+          "scene": "地面铁路前的一次等候",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RAIL",
+            "FAC8C_TILE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先提出等候是否因两处轨道仍在同一区块的解释，只改一个普通信号位置，再看区块预览与下一次列车运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把矿场产量、装卸、车站库存和列车燃料接成几轮供给安排，再随到料情况调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先用已有地砖在站台旁排出自己选定的条带和边框，让车站有想表达的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前普通信号的方向和区块说明，再回来改这一处",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不考信号灯色或最优铁路；p自提区块解释并实际核对，y是矿运燃料持续系统，a是真自选地面图案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C05.V1"
+        },
+        {
+          "text": "还没建铁路：当前只有已运行的矿炉和基础带，原有这段能继续工作，另一片可达空地还没亲自看过。你有精神也有备用件，先做什么？",
+          "scene": "地面铁路前的一次等候的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿安全可达方向看看那片未知空地，不先查会不会有好矿",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "仍沿熟悉矿炉路线收取现有铁板，喜欢这套已认识的过程带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先把一台已有炉子换到当前可放的另一处，亲手看这轮布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对这台炉的输入输出说明，再回自己的短带继续处理",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不考信号灯色或最优铁路；p自提区块解释并实际核对，y是矿运燃料持续系统，a是真自选地面图案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "本体一台组装机有两个可用槽位，当前配方明确能用产能与速度模组，两种普通模组都已持有；原料供电有余但该机偶尔等料，旁边还有能同时接原带与这台机器的备用臂位。先做什么？",
+          "scene": "两种模组与这台组装机",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_MODULE",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜间歇停料是否是进料臂位置造成，只把这只臂移到那处仍能接同一原料带的备用臂位，再看机器输入核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已持模组的实际说明与可用槽位，再决定采用哪一组",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对这台机器当前配方的模组限制说明，再回到现有机器操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际把产能的额外产出与速度效果装在这台允许的机器里一起运行，核对这组组合的产出与用电",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "b是实际同机搭配并核组合效用，不是看菜单；不把质量模组当免费本体。p另查真实供料因果，比较与说明0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C06.V1"
+        },
+        {
+          "text": "还没有模组：一台现有石炉旁的短带可移动，出板所需燃烧机械臂、备用箱及这一轮煤矿都已有，炉子刚间歇停过，不必追任何产量纪录。先做什么？",
+          "scene": "两种模组与这台组装机的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接换一次现有短带的转弯方式，亲手看这轮布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先猜只给炉子补燃料后停顿会不会消失，再只补煤观察核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "重复搭一遍已经会的炉到箱连接，专门练熟自己对出料方向的判断与放置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次移动炉子、回收短带和补燃料的步骤再操作",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "b是实际同机搭配并核组合效用，不是看菜单；不把质量模组当免费本体。p另查真实供料因果，比较与说明0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "本体蓝图工具已经能用；你自己搭的一小组矿炉已运行过，当前能存入本机资料库，空地与零件够再放一组并接料。先选哪项？",
+          "scene": "自己的矿炉蓝图",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_BP",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先只换一次当前蓝图预览的朝向，亲手看看空地上的占位变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先把这次复制需要的炉、臂、带和接料先后排清，再按这一次安排施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把这组已具备保存条件的矿炉收进自己的本机蓝图资料库，保留当前设计",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "D",
+              "label": "先猜蓝图转向后两道原料与机械臂落点会怎样对应，实际放一组接料跑过一轮核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "蓝图保存0分，转向预览本身0分；p必须自己预想后实际摆出接料核对。不要求机器人、在线共享、镜像或跨版本导入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C07.V1"
+        },
+        {
+          "text": "蓝图还没用过：一台石炉已有燃料，旧的原料与产物已取空，手上有铁矿和铜矿，旁边基础带与空箱能重新接。现在先做什么？",
+          "scene": "自己的矿炉蓝图的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS",
+            "FAC8C_AUTO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这一轮挪炉、移箱和接回出板短带的编辑步骤，再照顺序做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对石炉按输入冶炼的已有说明，再回这台炉实际操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜石炉是否会按放入的矿选择冶炼，只放入现有铜矿、保持其余不变，再看真实产物核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前铁矿和铜矿各能冶炼的基础板材与现有材料，再决定这一次烧哪种",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "蓝图保存0分，转向预览本身0分；p必须自己预想后实际摆出接料核对。不要求机器人、在线共享、镜像或跨版本导入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "单人Nauvis工厂已经能稳定运转，没有来袭危机；你精力充足，材料够开新工程，另有未查看的可达空地，也有一批现有地砖。先把空档给什么？",
+          "scene": "熟悉厂区还在运转",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_TILE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次新支线要备的材料、回收点和施工先后，再开始当前工程",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍走熟悉矿炉与装配区的一圈，看看认得的物料流动，喜欢这套熟悉过程的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先去看那片还没亲自查看的空间，未知本身值得过去",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "用现有地砖在非生产空地实际排出自己定的边框与条带图案，让厂区呈现自己的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h是有精力有材料可推进仍主动享受熟悉过程，非等资源；w真实未知；a自选地面表达非最优通行，单次施工排序0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C08.V1"
+        },
+        {
+          "text": "只玩过早期也可以：熟悉矿炉目前燃料与矿够用，你有精神，手上够再搭一小段，也有现成备用箱，另一块安全可达空地还没去看。先做什么？",
+          "scene": "熟悉厂区还在运转的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对现有采矿机出料说明，再回来继续自己这段连接",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "仍沿熟悉矿炉缓缓走一圈收取成品，喜欢这套认得的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先到那块未亲自看过的空地看看，不先问会得到什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "换一次已有箱子与炉边短带的位置，亲手看本次编辑",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "h是有精力有材料可推进仍主动享受熟悉过程，非等资源；w真实未知；a自选地面表达非最优通行，单次施工排序0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你确实做过的本体矿炉与供给，不要求产量、通关时长或没有停机。哪种真实过程更像当时重点？",
+          "scene": "回看一次矿炉供给的调整",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FAC8C_BELT",
+            "FAC8C_INS",
+            "FAC8C_FURNACE",
+            "FAC8C_RELEASE",
+            "FAC8C_RESEARCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过双道或机械臂送不到料的原因，只改一处后实际核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把矿、煤、冶炼和下游用板接成多轮持续供给，并随库存调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "持续投入过同一条已有进度的技术研究，喜欢解锁真的留在这个世界",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先核对过已有机器或取放说明，随后回来实际改过自己的连接",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "主四项均过去：真实多轮供给y、已投入研究的持续技术进展g、自己的单处解释实测p、核规则后实际操作0。ALT也全真实过去：矿机朝向自提预想并单改核落点p，普通位置变化0，主动重复以练熟自己放置操作t，已排好回收放件接带的单次编辑步骤creative_workflow_plan0，不借用资源往返恢复的工具计划文案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C09.V1"
+        },
+        {
+          "text": "只回想最早矿炉：你已经动手放过燃烧矿机、石炉或短带，哪种已发生过程更贴近？",
+          "scene": "回看一次矿炉供给的调整的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过采矿机转向的出料位置，只转这一台再核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "实际换过一段短带或一台炉的位置，亲手看过不同布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "为了练熟放置和朝向，主动重复搭过同一小段矿炉连接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先排清过那一次回收旧件、放回矿炉和接短带的编辑次序，真的按步骤做过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "主四项均过去：真实多轮供给y、已投入研究的持续技术进展g、自己的单处解释实测p、核规则后实际操作0。ALT也全真实过去：矿机朝向自提预想并单改核落点p，普通位置变化0，主动重复以练熟自己放置操作t，已排好回收放件接带的单次编辑步骤creative_workflow_plan0，不借用资源往返恢复的工具计划文案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你已用过本体地下带、也确实动手改过一处路口。哪种已经发生的过程更鲜明？",
+          "scene": "回看交叉口与自己的施工规则",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FAC8C_BELT",
+            "FAC8C_BP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时本能用地下带，却明确给新支路加过禁用它的规则，并在当时可绕的空地实际试接过普通带",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把自己已经能保存的一小组连接存进过本机蓝图资料库",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "C",
+              "label": "主动反复搭过同一种已会的短路口，专门练熟自己的方向与落点操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先猜过一个地下端点为什么把料送到另一道，只改过它并看出口核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "当时原可用该机制却自定禁用，并确实按限制动手试接才i，不要求最终接通，普通换路线不计；保存0分。都为已发生，未用地下带有独立早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C10.V1"
+        },
+        {
+          "text": "没用过地下带也能回顾：你已在煤矿上放过燃烧采矿机，只想实际做过的过程。哪项更贴近当时重点？",
+          "scene": "回看交叉口与自己的施工规则的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过一台出煤为何没进另一台，只移动或转动其中一台，再看真实落煤位置核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "排过那一次回收旧件、放相邻矿机和调整朝向的编辑步骤，并实际照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "核对过已有燃料和矿机出料说明，随后回来亲手调过自己的煤矿机",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "把两台相邻矿机的煤出料实际送进彼此燃料槽，运行并核对过互供与存煤",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "当时原可用该机制却自定禁用，并确实按限制动手试接才i，不要求最终接通，普通换路线不计；保存0分。都为已发生，未用地下带有独立早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你在本体里已经用过普通模组的一台机器，不要求它比谁更高产。哪种真实经历更有分量？",
+          "scene": "回看一次实际用过的模组搭配",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FAC8C_MODULE",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较过当时已持模组与空槽的说明，再决定采用哪一组",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "核对过机器当前配方的模组限制后，回来实际用过自己的那台机器",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "把当时配方允许的产能与速度模组实际搭配运行过，重点看两种效果合起来怎样工作",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先对停料或耗电提出过解释，只改一处供料或一个槽位后核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b要真实兼容组合并运行，p自提模型单改验证；仅比较/查说明0分。不用付费质量或个人操作成绩。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C11.V1"
+        },
+        {
+          "text": "没用过模组：只回想你真实调过的石炉、燃料或基础带。哪项已发生的过程更贴近？",
+          "scene": "回看一次实际用过的模组搭配的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了练熟朝向与放置，重复搭过自己已经会的一小段连接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "按当时已有材料排过一次回收、补件和施工的先后，真的照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先猜过停炉是否缺煤，只补过煤并核对过原料与出板状态",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "换过一个现有箱子或一段带的位置，亲手看过布局变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "b要真实兼容组合并运行，p自提模型单改验证；仅比较/查说明0分。不用付费质量或个人操作成绩。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FAC8C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次本人精力充足、工厂能继续工作且你也有新工程可做的本体游玩。哪种已经发生的停留更像？",
+          "scene": "回想一次自己愿意慢下来的厂区",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FAC8C_TILE",
+            "FAC8C_BP",
+            "FAC8C_DRILL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当时已具备保存条件的自制布局存入过本机蓝图资料库，保留那次设计",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "B",
+              "label": "仍走过熟悉的矿炉与装配路线，喜欢认得物料流的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "走到过当时还没亲自看过的Nauvis空地，单纯想发现新空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "用当时已有地砖做出过自己选的厂区边框或条带图案",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "全部真实过去；h明确精力和可推进，a须实际个人图案，蓝图保存无c/g。默认单人不问NPC或真人合作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C12.V1"
+        },
+        {
+          "text": "只回想早期也可以：当时你有精神，矿炉能继续烧，手里还有材料可搭新段。哪项确实发生过？",
+          "scene": "回想一次自己愿意慢下来的厂区的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FAC8C_RELEASE",
+            "FAC8C_DRILL",
+            "FAC8C_FURNACE",
+            "FAC8C_BELT",
+            "FAC8C_INS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查过已有出料或燃料说明，随后回自己的矿炉实际做过调整",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "还是沿熟悉矿炉慢慢收过成品，喜欢已认识的过程让自己安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看过当时未亲自查看的一片安全可达空地",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "亲手换过现有炉子或短带的位置，看过这次布局变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "全部真实过去；h明确精力和可推进，a须实际个人图案，蓝图保存无c/g。默认单人不问NPC或真人合作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FAC8C12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+4e58ac6e88f1"
+}

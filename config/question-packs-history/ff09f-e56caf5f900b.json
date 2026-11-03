@@ -1,0 +1,1026 @@
+{
+  "id": "ff09f",
+  "title": "最远的边陲 Farthest Frontier",
+  "game_ids": [
+    "steam-1044720"
+  ],
+  "scope": "PC正式本体1.1；Pacifist及其他难度共享聚落经营路径",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "正式1.0已在2025发布，当前采用1.1；1.2预告及Cats and Dogs付费内容不强制。网格/无网格可切换，不重复造模式。",
+    "果农、学院、遗物或后期储存均有早期替代。即时花知识开科技不计养成。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "单人聚落；按已开放工具回答或换早期题",
+      "initial_variants": {
+        "FF09F01": "FF09F01.DEFAULT.V1",
+        "FF09F02": "FF09F02.DEFAULT.V1",
+        "FF09F03": "FF09F03.DEFAULT.V1",
+        "FF09F04": "FF09F04.DEFAULT.V1",
+        "FF09F05": "FF09F05.DEFAULT.V1",
+        "FF09F06": "FF09F06.DEFAULT.V1",
+        "FF09F07": "FF09F07.DEFAULT.V1",
+        "FF09F08": "FF09F08.DEFAULT.V1",
+        "FF09F09": "FF09F09.DEFAULT.V1",
+        "FF09F10": "FF09F10.DEFAULT.V1",
+        "FF09F11": "FF09F11.DEFAULT.V1",
+        "FF09F12": "FF09F12.DEFAULT.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "FF09F01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "已有猎屋和采集点在供食，另一块合法农田也有人员与材料可开垦。食物够支撑眼前一段，开田需要时间；这轮先认真安排一边，你怎样投入？",
+          "scene": "第一年食物与开田时间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_STORE",
+            "FF9F_FOOD",
+            "FF9F_FARM",
+            "FF9F_11"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把季节采食、熏制、农田开工和储存周转连着照看几个周期，依食物损耗、居民消耗与库存再调岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "比较让现有猎屋和采集点继续供食，或先开这块田的当前供给与建设方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先排人员清地、运料与施工的次序，再实际推进当前选项",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "先跟看一轮村民采食、搬运和入库的真实过程",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "开田与早期采食各有时间成本；没有唯一最优答案或饥荒下的能力判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F01.DEFAULT.V1"
+        },
+        {
+          "text": "刚安顿下来时，已有一处采食点在供食，也看得到近处另一种可采或可猎来源。材料与人手够再建一处早期设施，眼前不缺粮。这轮先做什么？",
+          "scene": "第一年食物与开田时间的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_STORE",
+            "FF9F_FOOD",
+            "FF9F_FARM",
+            "FF9F_11"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较继续依靠现有采食点，与新建对应近处另一食源的设施这两种当前可做方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "排清取木料、施工与派工的先后，并照着推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "跟看已有村民把食物搬到仓里的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有的早期采食与储存说明，再继续当前安排",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "开田与早期采食各有时间成本；没有唯一最优答案或饥荒下的能力判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F01.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已有不止一块在用农田，当前可选作物中既有谷物，也有其他食用作物和三叶草，田间维护也能排。各田的三年轮作都可改，储粮暂够。这轮先怎样投入？",
+          "scene": "同一田里的互补轮作",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_FARM",
+            "FF9F_FOOD"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把几块田的农时、食物加工、储存和居民消耗连着照看多个收获周期，按实际库存与劳力再调轮作",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前作物的生长时段、土壤与肥力条件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "自定全部现有田在接下来一个完整三年轮作周期都不种本可种的谷物，实际试靠其他作物和现有食源继续",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "在同一田里配入三叶草、清草石的维护和食用作物，实际运行轮作并对照肥力、草石与收成怎样互相影响",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "b是同一田中肥力、草石维护与食用作物效果的实际组合检验；全田三年禁本可种谷物才是额外规则，不以收成或坚持成功为门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F02.DEFAULT.V1"
+        },
+        {
+          "text": "还没种田时，初期采集、狩猎和熏制都已能安排，仓储与工人可调整，材料也够再做一处采集设施。眼前食物安全，这轮先做什么？",
+          "scene": "同一田里的互补轮作的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_FARM",
+            "FF9F_FOOD"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把采集、狩猎、熏制和居民消耗连着照看几轮，按食物种类、损耗与库存再调岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "排清当前采集点施工、搬料和派工次序，再推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有食物生产说明，再继续安排",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "比较维持现有采食点，或把当前劳力用于另一处已显露食源的供给安排",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "b是同一田中肥力、草石维护与食用作物效果的实际组合检验；全田三年禁本可种谷物才是额外规则，不以收成或坚持成功为门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F02.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "同一种食物在两处储存的减少情况不同，实际原因还没核对。当前已有捕鼠人，工作区圆心能移动到覆盖其中一处仓储；采食与日常供给安全。这轮先做什么？",
+          "scene": "保鲜现象与存放选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_FOOD",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把采食、加工、储存周转和居民消耗连续照看几轮，依据库存与损耗再调供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可用的保鲜、储存与加工方案，再选这轮投入",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "自己猜鼠害使这处食物减少，只移动现有捕鼠工作区的圆心使它覆盖该仓，其他储存安排不动，再对照变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前食物损耗和库房面板，暂不认定原因",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "同种食物可比较，不捏造逐批ID追踪；p由自己猜鼠害后单移当前工作区检验，不给答案或虚构手动分配一只木桶。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F03.DEFAULT.V1"
+        },
+        {
+          "text": "还没用过捕鼠人或后期保鲜时，初期食物已有入库，当前可建一处基础地窖，材料与人手够。眼下储粮安全，这轮先做什么？",
+          "scene": "保鲜现象与存放选择的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_FOOD",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按已有工人和材料排清这次地窖施工与运料先后",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "跟看目前采集者和搬运者把这批食物送到哪里的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "先看损耗与库房当前显示的信息",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "把这一个当前可建地窖的预览移到另一处合法位置，先看选址与朝向的变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "同种食物可比较，不捏造逐批ID追踪；p由自己猜鼠害后单移当前工作区检验，不给答案或虚构手动分配一只木桶。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F03.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前商人正卖重型工具和另一种货物，城镇现有钱够其中一笔。商栈已安排一轮从城里调货，人员也在岗，但实际金币和待售品尚未核对；商人仍在停留，这轮先做什么？",
+          "scene": "商栈与城镇的两份库存",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_TRADE",
+            "FF9F_FOOD"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先跟看一轮工作人员从城里调货、入商栈的实际过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "先查看商栈当前金币、待售品和已调运状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "连续几个商旅周期照看待售品生产、商栈调货金币和住户消耗，按实到货物与库存再改补货",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "比较把调入商栈的预算用于工具或另一种现售货物这两种交易方案，再决定本轮投入",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "题干不把城镇有钱当商栈必可立即成交；一次买卖不计养成或系统。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F04.DEFAULT.V1"
+        },
+        {
+          "text": "尚未有商栈时，早期食物和建材在仓中，当前可再建仓储或地窖。工人与材料够先做一处，你先怎样安排？",
+          "scene": "商栈与城镇的两份库存的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_TRADE",
+            "FF9F_FOOD"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已经发生过的入库和消耗过程补记下来",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "比较目前两种储存方案能解决的当前需求",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "按材料、搬运与工人排好这次施工先后，再推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "把季节采集、储存周转和住户需求连着照看几轮，按食物损耗与库存再调岗位",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "题干不把城镇有钱当商栈必可立即成交；一次买卖不计养成或系统。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F04.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "果农的工作范围内已有一片你此前种下的果树，它们还在多年成长；另一处当前可建的生产设施也有材料。食物暂稳，这次先把投入给哪里？",
+          "scene": "同一片已种果树",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_FOOD",
+            "FF9F_APPEAL",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续保留自己已经种下并照看过的同一片果树，维持果农岗位和工作区照料，跨季关注它们留下的成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "比较继续给现有果园保留人手，或先投入另一处已可建生产设施这两种当前经营安排",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "围绕自己的“果园围村”主题，安排附近可用道路与装饰",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把自己已经观察或安排过的果农劳作与照料果树过程补记下来",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "成长指已种树木需多年照料的同一对象；新买技术、单次点建或无人照管自然流逝不直接计 g。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F05.DEFAULT.V1"
+        },
+        {
+          "text": "没有果农建筑时，初期猎屋和采集点已在工作，附近仍有可用食源；住宅周围也有合法空地。道路、小花园已开，材料工人够先加一处基础设施，这轮先做什么？",
+          "scene": "同一片已种果树的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_FOOD",
+            "FF9F_APPEAL",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己的林边聚落主题调整道路与可用装饰的位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "比较再建一处猎屋或采集点这两种当前可做的供食建设方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "排清这次运木料和补基础设施的施工次序",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "把已观察过的村民取食和运货过程补记下来",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "成长指已种树木需多年照料的同一对象；新买技术、单次点建或无人照管自然流逝不直接计 g。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F05.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已有学院、学者和一段积累下来的知识，纸与运行费用也能安排。当前一个满足前提的技术可立即花知识开启，另有持续供纸可做。这轮先做什么？",
+          "scene": "知识积累与即时花点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_TECH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先花已有知识购入这一项已开放且可支付的技术",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可选技术与其前提，不马上点选",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先看学院运行与知识面板，核对当前状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "把现有纸供应、学者岗位、学院金币开销和其他住户供给连着运行几轮，按纸钱余缺与知识进展再调安排",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "即时点技术是 0 分购买，不冒充持续研究或养成；持续供纸与财务才是系统循环。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F06.DEFAULT.V1"
+        },
+        {
+          "text": "还没有学院时，镇中心已经积累了一些知识，科技树有当前可支付的早期节点。眼前基础供给无危机，你更愿先怎样投入？",
+          "scene": "知识积累与即时花点的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_TECH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可选升级与需求，再决定点哪个",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先核对游戏已有的知识与科技说明",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先查看镇中心当前知识来源和已有运行状态，再决定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "花已有知识购入一个已满足前提的早期升级",
+              "signal": "purchase_available_upgrade"
+            }
+          ],
+          "design_purpose": "即时点技术是 0 分购买，不冒充持续研究或养成；持续供纸与财务才是系统循环。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F06.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已有几件不同遗物，当前商人正出售一件你从未拥有的，已有列表里确实没有它；商栈金币够，神庙也已到允许更换激活项的时间。这轮更愿做什么？",
+          "scene": "未拥有的真实遗物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_RELIC",
+            "FF9F_TRADE",
+            "FF9F_FOOD",
+            "FF9F_APPEAL",
+            "FF9F_ED_BUILDINGS",
+            "FF9F_HEALTH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把神庙费用、贸易收入和住户日常供给连续照看几轮，按实际金币与物资存量再调岗位和补货",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核对商栈和神庙面板当前显示的信息",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "为了补上这件实际未拥有遗物的缺口，实际安排本次购入",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先比较自己已拥有的遗物及当前可换的激活组合",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "收藏是实际未拥有物；已得但未激活不算缺藏品。没有这名商人或神庙可换早期情境。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F07.DEFAULT.V1"
+        },
+        {
+          "text": "还没有遗物和神庙时，当前住宅附近可建井与一处已开放的小花园，材料只够先认真安排一边。这轮做什么？",
+          "scene": "未拥有的真实遗物的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_RELIC",
+            "FF9F_TRADE",
+            "FF9F_FOOD",
+            "FF9F_APPEAL",
+            "FF9F_ED_BUILDINGS",
+            "FF9F_HEALTH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好这次运料、施工与工人分配的先后再推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先查看已有住宅与设施面板的当前状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "按自己的村心主题选这次井或小花园的位置与朝向，实际放下可做的一处，并给另一处留出想要的空地",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前供水与装饰方案的用途和条件",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "收藏是实际未拥有物；已得但未激活不算缺藏品。没有这名商人或神庙可换早期情境。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F07.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "一片住宅的吸引力不同于预期，原因还没核对。周围有现成服务和一座当前能搬迁的熏制房，另一处合法地点也可用，工人能处理这次搬迁；眼前无危机。这轮先做什么？",
+          "scene": "住宅周围的状态",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_HEALTH",
+            "FF9F_APPEAL",
+            "FF9F_STORE",
+            "FF9F_FOOD",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己想要的住宅街景调整可用装饰和道路轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己猜这座熏制房的距离影响了住宅，只把它移到当前可用的另一处，住宅与其他服务不动，再对照吸引力显示",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先看住宅、设施与吸引力等当前面板，再决定原因是否成立",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "把卫生服务、燃料、食物与岗位连续照看几轮，依住户需求、物资和人员状态再调供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "未知吸引力现象下可单搬一座当前可搬设施检验自提解释；不先宣告污染原因，不把设施动画观看计f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F08.DEFAULT.V1"
+        },
+        {
+          "text": "早期村里只有基础采食、柴薪、住宅和井的选择，补给还能维持，也有材料和工人可建一处。你先把时间给什么？",
+          "scene": "住宅周围的状态的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FF9F_HEALTH",
+            "FF9F_APPEAL",
+            "FF9F_STORE",
+            "FF9F_FOOD",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有井、柴薪与住宅的玩法说明，再继续安排",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "连续几轮照看食物、柴薪、供水和搬运用工，按住户需求与库存余缺再调岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对住宅与工作场所当前显示的状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "按已有材料与工人排清本轮建井或补住宅的施工先后",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "未知吸引力现象下可单搬一座当前可搬设施检验自提解释；不先宣告污染原因，不把设施动画观看计f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F08.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回顾你已经安排过的一段食物生产，下面哪种当时实际做过的投入更有分量？不要求收成好或猜想正确。",
+          "scene": "已做过的供给或轮作",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FF9F_FARM",
+            "FF9F_FOOD",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把同田的三叶草、清草石维护和食用作物搭配后实际跑过轮作，对照过肥力、草石和收成的关系",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "我把农时、加工保鲜、仓储和居民消耗连着调过多个收获周期，按实际库存与损耗再作安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我自己猜过草石影响收成，只在同一田原本空闲的时段加过一次维护、保持作物不变，并实际观察过草石和收成",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "我补记过已发生的采食、收获或储存过程",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "回顾已有尝试；没有成功收成、最优轮作或修好问题的门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F09.DEFAULT.V1"
+        },
+        {
+          "text": "回想只靠早期采食、猎屋与储存的一段，哪件已经做过的事最接近你的投入？",
+          "scene": "已做过的供给或轮作的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FF9F_FARM",
+            "FF9F_FOOD",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我连续几轮一起调过采集、熏制、储存与居民消耗，按食物损耗和库存再改岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我猜过采集往返太远使入库断续，只把同一个采集工作区移到近处仍有可采食物的位置，并实际对照过往返",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我排过本轮搬料施工的先后并实际推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "我记录过已观察到的采食和运货过程",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "回顾已有尝试；没有成功收成、最优轮作或修好问题的门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F09.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回顾你已投入过的果树、学院或住宅建设，哪种实际做过的投入更有分量？",
+          "scene": "持续照看与建设记录",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FF9F_FOOD",
+            "FF9F_TECH",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的聚落街景主题实际调整过道路、装饰或建筑位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我把供纸、学者岗位、学院费用和知识积累连续几轮一起调过，按纸钱余缺和实际进展再改供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我为已经实际搭好的学院、果园设施或住处部分补记过建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我持续照看过同一片已经种下的果树，关注它们多年留下的成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "成长只指持续照看的同一果树；学院循环计运营，不把即时买技术计养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F10.DEFAULT.V1"
+        },
+        {
+          "text": "回看你只建过早期住宅与采食设施时的一段，哪种真实投入更有分量？",
+          "scene": "持续照看与建设记录的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FF9F_FOOD",
+            "FF9F_TECH",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先排过运木石与施工的次序，并照着安排",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "我把采食、柴薪、仓储搬运和住户供给连续几轮一起调过，按食物燃料库存再改岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我把实际搭建过的基础建筑过程补记下来",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我为自己的村落主题调过道路与可用装饰",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "成长只指持续照看的同一果树；学院循环计运营，不把即时买技术计养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F10.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你已经操作过商栈备货、与商人交接过货物的一段，哪件当时真正做过的事更有分量？",
+          "scene": "实际经历的商栈备货与交接",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FF9F_TRADE",
+            "FF9F_FOOD",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先比较过当时已有贸易与生产条件，再决定投入",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "我核对过当时已列出的目标，并实际推进过可做部分",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "我跟看过商栈工作人员从城里取待售货物、送到商栈的实际过程，再决定后续怎样补货",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "我为自己实际经历的商栈金币支出、货物买卖和调运补记过一段收支记录",
+              "signal": "management_process_recording"
+            }
+          ],
+          "design_purpose": "回顾实际交易方案比较、已列目标投入、货物交接观察与真实收支补记；早期替代为施工、已有说明、食源运转观察和建设比较，不把禁某一种进口算i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F11.DEFAULT.V1"
+        },
+        {
+          "text": "回想还没贸易与遗物的早期建设，哪件真实发生的事更有分量？",
+          "scene": "实际经历的商栈备货与交接的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FF9F_TRADE",
+            "FF9F_FOOD",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过运料与施工的步骤，并实际安排",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "我核对过已有采食与储存说明，再继续实际安排过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "我跟看过初期采集者从食源返回、把食物入库的实际过程，再决定后来怎样安排",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "我比较过当时猎屋、采集点和储存的可做条件",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "回顾实际交易方案比较、已列目标投入、货物交接观察与真实收支补记；早期替代为施工、已有说明、食源运转观察和建设比较，不把禁某一种进口算i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F11.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FF09F12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你有精力、仍可开新产业，而且当时没有迫近危险的一段。哪种实际选择最有分量？",
+          "scene": "精力充足时的常住感",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FF9F_STORE",
+            "FF9F_FOOD",
+            "FF9F_APPEAL",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我跟看过居民或运输的实际运行，再决定后面怎么调",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "我主动留在熟悉的住宅与田边，照看日常活动，因为喜欢从容重温这一段",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我把生产、仓储、贸易与居民需求连着调过几轮，按实际金币、库存和住户消耗再改供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我为自己的田园街景主题改过道路与装饰",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "主动熟悉体验有精力和可继续进展前提；普通观察机器/NPC 不计即时反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F12.DEFAULT.V1"
+        },
+        {
+          "text": "回想早期小村仍能扩建、你也有精力且没有急迫威胁的一段，哪种做过的选择更有分量？",
+          "scene": "精力充足时的常住感的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FF9F_STORE",
+            "FF9F_FOOD",
+            "FF9F_APPEAL",
+            "FF9F_ED_BUILDINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际跟看过一次村民采食或运货的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "我主动停在熟悉村口看日常取食和运料，喜欢这份从容而暂缓新建设",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我继续几轮联动过采食、储存、柴薪与住户消耗，按物资余缺再调岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的小村主题摆过已可用道路和装饰",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "主动熟悉体验有精力和可继续进展前提；普通观察机器/NPC 不计即时反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FF09F12.DEFAULT.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+e56caf5f900b"
+}

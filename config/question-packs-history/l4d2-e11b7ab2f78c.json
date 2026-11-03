@@ -1,0 +1,934 @@
+{
+  "id": "l4d2",
+  "title": "求生之路2",
+  "game_ids": [
+    "steam-550"
+  ],
+  "scope": "本体普通战役；可与AI幸存者游玩，真人同游另有单人替代",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "本体战役、原生AI同伴即可形成完整答题路径；不要求对抗、写实、Mod或真人联机。",
+    "第8题真人同游有独立y/p/t/f单人替代；所有AI对白、营救与跟随均不作为真人社交证据。",
+    "Dead Center终章、Tank与投掷物未体验者均有普通早期战役替代；不通过取舍题考最优攻略。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体普通战役；可与AI幸存者游玩，真人同游另有单人替代",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "L4D201",
+      "number": 1,
+      "variants": [
+        {
+          "text": "安全屋里有已经用过的枪械和近战可换，几种都足以继续普通战役；下一章只先试一套，你最想围绕什么选？",
+          "scene": "安全屋里选下一段主副武器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留喜欢的霰弹或连发武器，让开火、推开和移动继续有顺手反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "选熟悉枪械，只练一次自己常仓促的点射或换弹时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "让主武器弹药与副武器承担不同路段，接到下一处补给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "带一件平时少用的近战或枪械，完整试出这段路的另一种走法",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "主副武器与近战使用的动机分开，不要求枪械排行榜或对抗经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D201.V1"
+        },
+        {
+          "text": "只用过最初找到的手枪、主武器和推开动作，下一次离开安全屋你先留一个什么重点？",
+          "scene": "安全屋里选下一段主副武器的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把推开、转身和开火接成自己喜欢的连续手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "集中练一次开火后退开或换弹的具体时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把主武器弹药和手枪使用安排到后面几段路上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "改变自己平时固定的开场顺序，试一段新的接敌方式",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "主副武器与近战使用的动机分开，不要求枪械排行榜或对抗经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D201.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D202",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前这一段暂时平静，自己与AI或真人幸存者的状态足以继续；主路通向下一安全屋，旁边还有可搜的房间。只先做一件事，你选什么？",
+          "scene": "通往安全屋的路边房间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_OFFICIAL",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先进没看过的房间，亲眼看看这片街区还剩什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿熟悉路段去找下一场可处理的交火，专练一次推开后出手的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "在已清静的位置听完幸存者对白、看看文字，了解他们一路的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "搜已知的补给点，核对药品、弹药与后面路段怎样接起来",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "平静段中的补给、空间、动作练习与叙事有实际时间取舍。",
+          "interpretation_boundary": "AI或NPC对白只支持故事兴趣；不把在AI旁边停留算真人社交。",
+          "id": "L4D202.V1"
+        },
+        {
+          "text": "只在最早一段战役里走过几个房间，眼前有顺路补给、陌生小门与明确前进方向；你先去哪？",
+          "scene": "通往安全屋的路边房间的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_OFFICIAL",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "推开没进过的小门，看看建筑另一边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "给下场普通遭遇留一个练习点，专练推开后转身出枪的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "留意这一段人物说的话，接上他们为何继续同行",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把手头物品与房里补给核对一遍，准备后面一段",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "平静段中的补给、空间、动作练习与叙事有实际时间取舍。",
+          "interpretation_boundary": "AI或NPC对白只支持故事兴趣；不把在AI旁边停留算真人社交。",
+          "id": "L4D202.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D203",
+      "number": 3,
+      "variants": [
+        {
+          "text": "补给处有不同投掷物可换，但自己只能带其中一件，下一段可能经过狭口和开阔路面。你先给这件投掷物定什么用途？",
+          "scene": "投掷物只有一个携带位置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一种自己少用的效果，完整试一段不同于惯常的处理方式",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "选想再次听见和看见的那种爆破或连续反应，体会交火反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "把它接到后面的机关尸潮或退路安排，给需要腾出路面的一段留准备",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "对照道路宽窄与可走位置，推吸引、燃烧或转移敌人怎样改变这段空间",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "单个投掷位的用途取舍，不考哪种投掷物总是更好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D203.V1"
+        },
+        {
+          "text": "还没用过所有投掷物，只捡过土制炸弹或燃烧瓶中的一种；下一次带它出门前，你先想什么？",
+          "scene": "投掷物只有一个携带位置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在熟悉路段试一次平时没用过的投掷时点",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "让投出、声响和敌群反应连续发生，体验那一段冲击",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "把它留给一段已知道会挤满感染者的路，与补给衔接",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先看它会吸引敌人或留下火的区域，给移动留出哪边",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "单个投掷位的用途取舍，不考哪种投掷物总是更好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D203.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D204",
+      "number": 4,
+      "variants": [
+        {
+          "text": "前方转角传来已经听过的特殊感染者声音，暂时还没正面交火，身边同伴可以是AI。只先留一份注意力，你会先看什么再往前？",
+          "scene": "转角先传来特殊感染者的声音",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从平时不走的另一侧接近，试一段新的观察与接敌次序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "练自己听到提示到转向检查之间的时机，下次更主动地认出这一种声音",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "看屋顶、转角与可退的位置，判断威胁可能从哪里进入视线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "核对手里弹药和退到哪处能重新补位，把这段推进排清楚",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "听觉练习、空间推理、资源安排与接敌实验分开，不要求背声音考试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D204.V1"
+        },
+        {
+          "text": "只熟悉普通感染者的声音，还不能辨认特感；下一段门后有动静但尚未交火，你先做什么？",
+          "scene": "转角先传来特殊感染者的声音的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一侧走近门口，试一种自己以前没用过的开场次序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "练一次听见动静就转向看清的固定反应过程",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先看门口两侧和来路，推自己能移动到哪里",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "检查这一段弹药与身后补给，安排开火后怎样接回行程",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "听觉练习、空间推理、资源安排与接敌实验分开，不要求背声音考试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D204.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D205",
+      "number": 5,
+      "variants": [
+        {
+          "text": "面前的机关一启动就会带来尸潮，当前状态允许准备，也没有人催着立刻触发。只先用这一小段准备时间，你想做什么？",
+          "scene": "机关还没有按下去",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把弹药、药品和投掷物的使用接到事件前后，安排清一轮准备流程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "走一眼入口、遮挡和离开方向，弄明白尸潮中可走的空间",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "保留熟悉站位与武器，只练一段推开后开火的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "试一个平时不采用、仍有退路的站位或投掷时点，让这次事件有新打法",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "同样准备后再启动，不以是否照攻略站位判断好队友。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D205.V1"
+        },
+        {
+          "text": "只经历过早期一次开门或按按钮后的感染者聚集，再来之前也有准备空档；你先做哪件事？",
+          "scene": "机关还没有按下去的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前弹药和可用投掷物按事件前后排一遍",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "看看从按钮到下一处门口之间能怎样移动",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "选一个熟悉位置，练推开、开火再退开的节奏",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "换一侧进入事件，认真试一次不同于上次的处理次序",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "同样准备后再启动，不以是否照攻略站位判断好队友。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D205.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D206",
+      "number": 6,
+      "variants": [
+        {
+          "text": "如果玩过Dead Center终章：车还需要汽油，场地里有上下层与分散的油罐；即使只有AI同伴，也按自己实际捡罐、投罐和灌注来想。下一轮先调整什么？",
+          "scene": "Dead Center终章里的汽油罐",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_FINALE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看楼层、栏杆与落点，推哪条移动或投递线路能把两处空间接上",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "保留原路线，专练一次自己总投偏或接得仓促的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "改变先拿哪一侧罐的顺序，试一次不同于熟路的收集办法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "把取罐、暂放与灌注排成连贯路线，减少几次工作彼此打断",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "收集灌注的路线与动作具体可行，不假定能指挥原生AI分头取罐。",
+          "interpretation_boundary": "终章无体验可换普通战役；AI只承担其实际行为，不按真人沟通、分工或信任解释。",
+          "id": "L4D206.V1"
+        },
+        {
+          "text": "没有玩过加油终章，只经历过一段触发机关后穿过尸潮的战役；再经过它时，你先调整什么？",
+          "scene": "Dead Center终章里的汽油罐的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_FINALE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看狭口、遮挡与出口，弄清自己能从哪里转出去",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "保留熟悉路线，专练一次推开后继续移动的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "换一侧经过那段熟路，试一种不同的接敌次序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "把补弹、使用投掷物和开门排成一段不中断的流程",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "收集灌注的路线与动作具体可行，不假定能指挥原生AI分头取罐。",
+          "interpretation_boundary": "终章无体验可换普通战役；AI只承担其实际行为，不按真人沟通、分工或信任解释。",
+          "id": "L4D206.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D207",
+      "number": 7,
+      "variants": [
+        {
+          "text": "已经见过Tank，也知道附近几处可绕行的位置；再经过类似场地时，这一场只先改善一个部分，你先选什么？",
+          "scene": "再次经过遇到过Tank的地方",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把投掷物、弹药与事后恢复排到同一场遭遇的前后",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把移动、持续命中与Tank反应连起来，追一段有冲击的战斗反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "保留熟悉武器，专练看清一次动作后躲开再还击的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "对照障碍、开阔地与来路，推清能来回转移的线路",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不问击杀速度或是否单挑；同伴可为AI，不将救人与牺牲编成道德题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D207.V1"
+        },
+        {
+          "text": "还没和Tank交战，只遇到过普通感染者挤进房间；下次同一处遭遇先改善什么？",
+          "scene": "再次经过遇到过Tank的地方的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "安排弹药、投掷物与交火后的补给次序",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让推开、枪声与敌人倒下连续接上",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "练一次推开后开火再退开的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "看桌椅、门口和来路，找能绕回来的路线",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不问击杀速度或是否单挑；同伴可为AI，不将救人与牺牲编成道德题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D207.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D208",
+      "number": 8,
+      "variants": [
+        {
+          "text": "若你确实和真人打过战役：大家已在安全屋停稳，并同意再打一段熟路。只先花一点共同时间，你最想用来做什么？",
+          "scene": "真人同伴愿意一起再试一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "约定试一次不同的站位或投掷次序，看看熟路能不能有新展开",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "聊刚才的险情和好笑片段，享受真人之间的接话与玩笑",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "先谈有人想搜补给、有人想往前的安排，再商量谁先取物和何时一起推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "找愿意配合的人一起练一个推开后掩护移动的具体衔接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真人共同经历与推进协调分开，不以服从、承担牺牲或聊天多少判关系。",
+          "interpretation_boundary": "只有V1实际真人经历计social_spark或quest_board；ALT1不含真人关系或协调信号，AI响应不是人际关系证据，两变体不声称等值。",
+          "id": "L4D208.V1"
+        },
+        {
+          "text": "如果只与AI幸存者游玩：已到安全屋，准备再走一段熟路；先用一点准备时间做哪件事？",
+          "scene": "真人同伴愿意一起再试一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿回最喜欢的武器，继续一段连续开火与移动的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把主副武器、药品与投掷物接到后面的补给流程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "回想狭口与退路，给自己排清能转移的位置",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "只选一个常做得仓促的推开或换弹衔接，下一场认真练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真人共同经历与推进协调分开，不以服从、承担牺牲或聊天多少判关系。",
+          "interpretation_boundary": "只有V1实际真人经历计social_spark或quest_board；ALT1不含真人关系或协调信号，AI响应不是人际关系证据，两变体不声称等值。",
+          "id": "L4D208.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D209",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想实际走过的一段战役，城市、沼泽或墓园与幸存者对白一起留下了印象。哪种已发生的经历更有分量？",
+          "scene": "安全屋外的南部旅程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_OFFICIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己听过这一路的对白，四位幸存者的经历逐渐接成了具体故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己维持了给幸存者定的脱身做事方式，实际沿可走出口推进，没有为额外杀敌折返",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "当时仍有精力和章节可玩，自己也主动在熟悉安全屋低紧迫地停留过一阵",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "自己曾走进一处陌生房间，亲眼发现了街区或建筑的另一侧",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "角色故事、按身份行动、自主舒缓与探索分开，不要求特定完整战役。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D209.V1"
+        },
+        {
+          "text": "只回想最早实际玩过的一个章节，哪种已经发生的片段在当时更鲜明？",
+          "scene": "安全屋外的南部旅程的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_OFFICIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己听清过一段人物对话，这几个幸存者开始有了具体经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己维持了认定的幸存者身份，实际把行动优先安排给找路脱身",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "当时还能继续玩，自己仍在熟悉安全屋慢待过，按舒服节奏再出门",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "自己曾走进一间陌生侧屋，亲眼看到了主路外的新角落",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "角色故事、按身份行动、自主舒缓与探索分开，不要求特定完整战役。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D209.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D210",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一次机关实际引发的尸潮，你和AI或真人同伴最后走到了下一处落脚点。哪种当时发生的体验更有分量？",
+          "scene": "机关后的尸潮终于过去",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一次之前总仓促的出手或退开，终于能够主动掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "当时看懂了入口与出口的关系，自己找到能移动出去的线路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "准备过的弹药、投掷物和药品在事件前后真正衔接起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "推开、枪声、移动与感染者倒下不断接上的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "事件结果相同，比较体验焦点而非存活贡献；AI路径同样适用。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D210.V1"
+        },
+        {
+          "text": "如果只经历过普通感染者堵门，回想实际打通那扇门的一场，哪部分在当时更鲜明？",
+          "scene": "机关后的尸潮终于过去的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一次瞄准或退开的时机比前面更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "从门边找到可绕开拥挤的位置",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "手头弹药与补给刚好接住这段推进",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "推开后开枪再迈出去的连续手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "事件结果相同，比较体验焦点而非存活贡献；AI路径同样适用。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D210.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D211",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想实际用过的一次土制炸弹、燃烧瓶或胆汁瓶，眼前感染者分布因此变化。哪种当时发生的过程更有分量？",
+          "scene": "一件投掷物改变了路面",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己试过一个少用的投法，熟悉场地真的出现了另一种玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "投出、声音与敌群反应连在一起时那一串直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "它出现在行程的哪个时点，怎样接住了补给与推进之间的空档",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "敌群移动或火区怎样改变了哪些地方可以走",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "回顾实际投掷造成的空间变化，不以击杀数或固定最优投法作答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D211.V1"
+        },
+        {
+          "text": "没有用过投掷物，只回想实际推开感染者后走出门口的一场，哪部分在当时更鲜明？",
+          "scene": "一件投掷物改变了路面的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己主动改变过经过方向，原来的门口真的出现了另一种处理顺序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "推开、转身开火与走出去连续发生时的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "推开、换弹与沿路补给，被自己安排成了能继续推进的一段流程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "门边一处原来没看明白的空位，被自己理解成了能从拥挤里转出的路线",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "回顾实际投掷造成的空间变化，不以击杀数或固定最优投法作答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D211.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "L4D212",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次实际进入安全屋、关门结束章节的时刻。回顾已经走过的那段路，哪种体验更有分量？",
+          "scene": "安全屋门关上的时候",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_OFFICIAL",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一种特感声音或推开后的出手时机经过自己练习，逐渐变得能主动掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "人物对白与沿路遭遇已经接成一段持续的幸存者旅程",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己维持了所控幸存者只求脱身的做事方式，实际优先选择通向安全地点的路",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "自己改变过主副武器或投掷物的次序，把熟悉章节试成了不同打法",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "故事与按身份行动、玩法实验、练习分开；NPC同伴与真人社交分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D212.V1"
+        },
+        {
+          "text": "只到过第一个安全屋也可回想；在实际走过的这一章里，哪种已经发生的体验更鲜明？",
+          "scene": "安全屋门关上的时候的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "L4D2SC_STORE",
+            "L4D2SC_OFFICIAL",
+            "L4D2SC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一次听声转向或推开后出手的动作，经过尝试开始比之前更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己听过沿路对话，这几个幸存者开始有了能记住的具体经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己维持了认定的幸存者身份，实际找到可走出口便优先设法脱身",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "自己用过一件原先少用的武器，在熟悉感染者上试出了新的接敌次序",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "故事与按身份行动、玩法实验、练习分开；NPC同伴与真人社交分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "L4D212.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+e11b7ab2f78c"
+}

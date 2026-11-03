@@ -1,0 +1,1925 @@
+{
+  "id": "cms219h",
+  "title": "汽车修理工模拟器2021",
+  "game_ids": [
+    "steam-1190000"
+  ],
+  "scope": "PC 2021本体职业与原生Sandbox分路；Easy/Normal/Expert辅助区别用当前前提和替代适配",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "职业初期不默认有自车、维修台、仓库、喷漆房或诊断器；基础拆装替代可答，不要求DLC车型。",
+    "2021油液、绿区维修、废件Scrap/质量升级与2018不同；一键洗车/焊机的成效不称手动操作反馈。",
+    "不要求Drag Racing付费竞速或多人Mod；2026公告新多人Demo是CMS2027。来源事实仅限游戏，不推现实汽车能力。"
+  ],
+  "modes": [
+    {
+      "id": "career",
+      "label": "职业：订单、工具开放与已投入角色进程",
+      "initial_variants": {
+        "CMS219H01": "CMS219H01.CAREER.V1",
+        "CMS219H02": "CMS219H02.CAREER.V1",
+        "CMS219H03": "CMS219H03.CAREER.V1",
+        "CMS219H04": "CMS219H04.CAREER.V1",
+        "CMS219H05": "CMS219H05.CAREER.V1",
+        "CMS219H06": "CMS219H06.CAREER.V1",
+        "CMS219H07": "CMS219H07.CAREER.V1",
+        "CMS219H08": "CMS219H08.CAREER.V1",
+        "CMS219H09": "CMS219H09.CAREER.V1",
+        "CMS219H10": "CMS219H10.CAREER.V1",
+        "CMS219H11": "CMS219H11.CAREER.V1",
+        "CMS219H12": "CMS219H12.CAREER.V1"
+      }
+    },
+    {
+      "id": "sandbox",
+      "label": "Sandbox：无订单、资金工具已开放的自有车",
+      "initial_variants": {
+        "CMS219H01": "CMS219H01.SANDBOX.V1",
+        "CMS219H02": "CMS219H02.SANDBOX.V1",
+        "CMS219H03": "CMS219H03.SANDBOX.V1",
+        "CMS219H04": "CMS219H04.SANDBOX.V1",
+        "CMS219H05": "CMS219H05.SANDBOX.V1",
+        "CMS219H06": "CMS219H06.SANDBOX.V1",
+        "CMS219H07": "CMS219H07.SANDBOX.V1",
+        "CMS219H08": "CMS219H08.SANDBOX.V1",
+        "CMS219H09": "CMS219H09.SANDBOX.V1",
+        "CMS219H10": "CMS219H10.SANDBOX.V1",
+        "CMS219H11": "CMS219H11.SANDBOX.V1",
+        "CMS219H12": "CMS219H12.SANDBOX.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "CMS219H01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "2021职业当前有一辆已接客户车，订单列出了几处要换的零件，手边也有匹配替换件；尚不要求高级车间。你先做什么？",
+          "scene": "已接订单与原位置零件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_REPLACE",
+            "CMS219H_FIRSTCAR"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已显示订单、原位置与替换件状态，再决定动手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排好移车、拆到目标件、取替换件和装回的动作，亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手拆几颗可拆螺栓，投入点击与螺丝、部件即时响应的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先处理订单已明确的一项替换，重点是推进本次工作",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "明确原位置，不由会不会认零件推现实维修能力",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H01.CAREER.V1"
+        },
+        {
+          "text": "刚开始2021，只接过简单客户订单时：当前一项替换已明确，基本拆装工具与匹配新件可用。先选什么？",
+          "scene": "已接订单与原位置零件的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_REPLACE",
+            "CMS219H_FIRSTCAR"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对当前已显示要求与部件状态，先看现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排清这一处可拆件、取件与装回的顺序，亲手走一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手拆装可操作的螺栓，享受输入与部件立即响应的联系",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先按订单推进这一项已知替换，重视当前工作",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "明确原位置，不由会不会认零件推现实维修能力",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H01.CAREER.ALT1"
+        },
+        {
+          "text": "2021原生Sandbox里没有客户订单，资金与车间工具已开放；你确实已有一辆本体项目车，当前可拆查与换件。先做什么？",
+          "scene": "无订单的自有项目车",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_MODES",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前已经显示的部件与车况状态，再决定下手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排好移车、拆到目标件、取件和装回的动作，亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手拆几颗可操作螺栓，投入输入与部件即时响应的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "在可重复拆装上反复练选取与固定，主要想练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Sandbox不假造客户交付与资金压力，不等于不用亲手操作",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H01.SANDBOX.V1"
+        },
+        {
+          "text": "刚开Sandbox并已取到一辆本体车，不会发动机重建也能答；基本部件拆装当前可做。先选什么？",
+          "scene": "无订单的自有项目车的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_MODES",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前已显示车况与可拆部件状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排清眼前这一处拆开、取件与装回动作，再亲手试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "拧几颗可拆螺栓，留意输入和部件响应的即时联系",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "在可重复基本拆装上多练几次，重点是练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Sandbox不假造客户交付与资金压力，不等于不用亲手操作",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H01.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前客户车的订单还有未发现项目，只给出行驶异样的描述；你尚未查明全部原因，左前轮部件当前可拆查。先怎样投入？",
+          "scene": "尚未查明的异样",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_DIAG",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已经发现的部件与当前订单状态，不预先猜原因",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先用当前已有说明了解拆装操作，再亲手继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好移车、升车与这一处拆查的动作顺序，照安排做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "自己先猜未发现的磨损可能在左前刹车片，只拆到这个原位置查看实际状态，核对这处是否磨损，不同时更换其他件",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主项只检验玩家自己提出的磨损解释；已列故障ALT仅亲手拆装，不凭是否使用诊断器推能力",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H02.CAREER.V1"
+        },
+        {
+          "text": "即使早期订单已经列明坏滤芯也能答：机盖、覆盖件与该滤芯当前可拆，匹配新件在手，不需要猜故障或买诊断器。先怎样做？",
+          "scene": "尚未查明的异样的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_DIAG",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看已经显示的订单和已知部件状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先读现有基础拆装提示，再亲手继续尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好开盖、移开覆盖件与取出这一件的动作，按安排试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "直接拆到这一处已列滤芯并换入当前匹配件，亲手体验这次基础拆装",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "主项只检验玩家自己提出的磨损解释；已列故障ALT仅亲手拆装，不凭是否使用诊断器推能力",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H02.CAREER.ALT1"
+        },
+        {
+          "text": "Sandbox项目车有一项不预期的表现，具体原因未知；你当前可拆查机盖下的滤芯和覆盖件，也可用诊断工具。先做什么？",
+          "scene": "自己查一处未知原因",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_DIAG",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看已显示车况与已知部件状态，暂不猜原因",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "实际换用当前已开放的一种诊断工具检查，先体验它的作用",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有基础拆装说明，再亲手继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己先猜这只滤芯有尚未查出的磨损，只拆到它查看实际状态，核对这处猜想，不同时更换其他件",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不以车况未知就要求现实知识，检查对象由玩家提出",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H02.SANDBOX.V1"
+        },
+        {
+          "text": "早期Sandbox只会基础拆装：这辆自有车某处原因仍未知，机盖与一个可拆查部件可操作。先怎样做？",
+          "scene": "自己查一处未知原因的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_DIAG",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前已显示车况和部件状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排好开盖、移覆盖件与取件动作，亲手照安排试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先读已有拆装工具提示，再继续自己的检查",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "提出这一件可能磨损的解释，只拆到它查看实际状态，核对猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不以车况未知就要求现实知识，检查对象由玩家提出",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H02.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "职业中维修台和相应Renovator已开放，当前列表确有几件可修部件，资金也够尝试；可以买新件。你先做什么？",
+          "scene": "2021的维修小游戏",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_REPAIR",
+            "CMS219H_PLAYER"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可修件与匹配新件方案，暂不修也不买",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先排取件、维修尝试与装回的一轮动作，再亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "用几件当前可修件反复练绿区按停时机，主要想练熟，不要求每次修成",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "亲手试一次维修，投入确认输入、指针停下和结果即时回应的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "2021真实绿区小游戏，修损坏不是持续成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H03.CAREER.V1"
+        },
+        {
+          "text": "还没有维修台时：早期客户车可用基础工具，目标件与匹配新件已明确，部分拆装可重复。先做什么？",
+          "scene": "2021的维修小游戏的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_REPAIR",
+            "CMS219H_PLAYER"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前匹配替换件的状态与可选条件，再决定使用哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "排好拆开、取新件和装回的动作顺序，亲手执行",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "在可重复的拆装上主动多练几次选取和固定，重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "亲手拧几颗可拆螺栓，留意输入与部件响应的直接感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "2021真实绿区小游戏，修损坏不是持续成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H03.CAREER.ALT1"
+        },
+        {
+          "text": "2021 Sandbox维修台已可用，当前有几件在实际可修列表中的部件；没有客户交单或资金压力。你先做什么？",
+          "scene": "零经济门槛也能练维修",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_REPAIR",
+            "CMS219H_PLAYER",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前这些部件与匹配新件的条件，暂不修也不换",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "排好取件、上维修台与装回的步骤，亲手照这轮顺序试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "在这些可修件上反复练维修小游戏的绿区按停，重点是练熟而不要求修成",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "亲手试一次确认按键，投入指针停下与结果立刻出现的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "修复损坏不g，模拟自动机运转不冒充手感",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H03.SANDBOX.V1"
+        },
+        {
+          "text": "还没用过维修台也可回答：Sandbox车上几件基础部件可以拆下装回。先把时间留给什么？",
+          "scene": "零经济门槛也能练维修的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_REPAIR",
+            "CMS219H_PLAYER",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已有匹配部件的状态和规格，再决定换谁",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "排清拆开、取件、装回的动作，亲手按顺序试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "在可重复基本拆装上反复练控制，目的在练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "亲手拆装可操作螺栓，享受输入与部件即时回应",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "修复损坏不g，模拟自动机运转不冒充手感",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H03.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "这份2021订单明确要求更换一种非机油油液并处理机油，当前Drain Tool、升降机和接油工具都可用；你有足够资源继续。先做什么？",
+          "scene": "明确要求的油液工作",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_FLUID",
+            "CMS219H_EQUIP"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先实际推进其中一个已列油液项目，重视这份订单条件",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先排容器排液、升车接机油、回到上方补充的一轮动作，再亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "在当前需补充的几处容器里留意手动注液与液面即时变化，投入这个操作感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对订单已经列出的更换或补充要求和当前状态",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "仅2021已列油液，DrainTool不代替机油收集",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H04.CAREER.V1"
+        },
+        {
+          "text": "早期只接触机油也能答：当前订单确需换机油，升降机和接油器可用，其他基础任务仍未完。你先做什么？",
+          "scene": "明确要求的油液工作的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_FLUID",
+            "CMS219H_EQUIP"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先推进订单明确的换油目标，重视这次工作",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "排好移车、升起、放接油器与回到上方注油的动作，再亲手按顺序做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手注油，投入输入与瓶口、液面变化紧接着发生的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对这份订单已经显示的油液要求和现状",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "仅2021已列油液，DrainTool不代替机油收集",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H04.CAREER.ALT1"
+        },
+        {
+          "text": "Sandbox自有车当前可处理几种油液，Drain Tool、升降机与接油器都开放；你可做一轮排放与补充，也可继续其他部件。先做什么？",
+          "scene": "自有车的油液操作",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_FLUID",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在可重复的注液操作上主动多练几次停注时机，重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "排清非机油容器排液、升车接机油与回上方补充的动作，亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手向当前需补充容器注液，投入输入和液面变化的直接联系",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前已经显示的各容器与车辆状态，不预定故障原因",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "是2021油液，不虚构Sandbox订单，也不把常规注液当配置",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H04.SANDBOX.V1"
+        },
+        {
+          "text": "只会机油基础操作也能答：Sandbox车间升降机、接油器可用，当前自有车能进行换油。先怎样投入？",
+          "scene": "自有车的油液操作的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_FLUID",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为练熟停注，在当前可重复油液操作中主动多试几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "排好移车、升起、接油和回上方注油的动作，再亲手做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手注油，留意输入与液面、瓶口反应即时相连的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先看当前已显示机油与车况状态，再决定继续哪里",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "是2021油液，不虚构Sandbox订单，也不把常规注液当配置",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H04.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "当前2021订单确有车轮工作，手边匹配轮胎与轮毂已备好，轮胎机和平衡机能用；别的部件也可处理。先做什么？",
+          "scene": "轮胎机与平衡机",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_EQUIP",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好拆轮、轮胎机处理、平衡与装回的动作，亲手照这轮流程做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已有轮胎、轮毂的规格与状态，不急着操作",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "为了练熟，在当前可重复的拆轮与固定操作上反复练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先按订单处理一项已经明确的车轮要求，推进本次工作",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "正常轮胎预装不硬算b，机器运行不是玩家f",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H05.CAREER.V1"
+        },
+        {
+          "text": "还没用过轮胎机时：早期客户车有一项已明确替换，当前基本拆装与匹配零件可用。先选什么？",
+          "scene": "轮胎机与平衡机的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_EQUIP",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好拆开可达覆盖件、取件和装回的动作，再亲手执行",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "先比较已有匹配部件的规格与状态，再决定这轮用谁",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "在可重复的基础拆装上多练几次，目的是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先按已列要求推进这一项替换，重视当前订单",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "正常轮胎预装不硬算b，机器运行不是玩家f",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H05.CAREER.ALT1"
+        },
+        {
+          "text": "Sandbox中匹配轮毂、轮胎、轮胎机和平衡机都可用；你有一台自有车和几件已取出的零件。先做什么？",
+          "scene": "轮胎与现有部件取放",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_EQUIP",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好取轮胎轮毂、轮胎机处理、平衡与装回的一轮动作，再亲手执行",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可用车轮部件的规格与状态，暂不装配",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "在已经可用的库存与仓库中实际存放或取出手头部件，整理这一轮携带物",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "在可重复拆轮和固定操作上练几次，主要想练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通轮胎加轮毂不硬b，仓库需本模式已开放",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H05.SANDBOX.V1"
+        },
+        {
+          "text": "刚接触Sandbox基本部件时：一辆自有车可拆装，当前有可存放的已取出件和匹配替换件。先选什么？",
+          "scene": "轮胎与现有部件取放的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_EQUIP",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好当前拆到目标件、取件与装回动作，亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前匹配部件的状态与规格，再决定这轮用谁",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "在当前已开放仓库与携带库存之间实际存放、取出手头零件，调整这一轮要带的件",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "在可重复基本拆装里反复练控制，目的是练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通轮胎加轮毂不硬b，仓库需本模式已开放",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H05.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "2021职业已开放Salvaging，手上有自己可处置的废件与Scrap；当前可拆解废件，也可对可用自有部件作已开放的质量升级。仓库当前也可存取这些部件。先做什么？",
+          "scene": "本代废件拆解",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_EQUIP",
+            "CMS219H_PLAYER"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "花已有Scrap购入一项当前已开放且可支付的部件质量升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "在几件可拆解废件上反复练当前小游戏的按停，重点在练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把几件自有部件存进已开放仓库，并取回这轮要用的件，实际整理携带物",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可处置废件与可升级部件的条件，再决定下一步",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "本代星级单次升级0分，不挪到2018或称持续养成",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H06.CAREER.V1"
+        },
+        {
+          "text": "还没有Salvaging或仓库时：当前携带旧件和匹配新件，库存可查看，基础拆装可继续。先做什么？",
+          "scene": "本代废件拆解的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_EQUIP",
+            "CMS219H_PLAYER"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对订单要求与已显示部件状态，了解现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "在可重复基础拆装上反复练控制，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮取件与装回的动作，亲手按安排试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前旧件与匹配新件的已知状态，再决定用哪件",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "本代星级单次升级0分，不挪到2018或称持续养成",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H06.CAREER.ALT1"
+        },
+        {
+          "text": "Sandbox喷漆与车间外观当前已开放；你有自己的本体车，可以改已有可选车色、轮毂或工作间呈现。先把空档给什么？",
+          "scene": "外观主题与普通查看",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_EQUIP",
+            "CMS219H_STORE",
+            "CMS219H_APPEARANCE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先浏览当前内置车色与可用外观方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "直接在当前喷漆菜单选一种可用车色并实际应用，亲手体验这次喷漆操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "自己有精力且车上别处可处理，仍挑熟悉基础件按自己步调拆下装回，喜欢这套安稳的车间小过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "按自己选的车辆色调主题实际改车身与轮毂呈现，重视自己的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "自有车表达才a，工单恢复原厂色不自动表达",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H06.SANDBOX.V1"
+        },
+        {
+          "text": "没有用过喷漆房时：Sandbox工作间外观设置当前已开放，能更换当前已可选的墙面或地面材质；自有车还能拆装。先做什么？",
+          "scene": "外观主题与普通查看的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_EQUIP",
+            "CMS219H_STORE",
+            "CMS219H_APPEARANCE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前已开放工作间外观方案，再决定用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "在当前工作间外观菜单实际应用一种已可选墙面或地面材质，亲手体验这次呈现操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "自己有精力且其他部位可做，仍从容取放、装回眼熟部件，享受不用赶新修复目标的熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "按自己想要的工作间主题实际改已有外观，让空间有自己的呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "自有车表达才a，工单恢复原厂色不自动表达",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H06.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "2021职业角色已经由拆装和诊断积累过等级进展，尚未满；当前有可接订单，也有一项已开放、能支付的工具升级。你先做什么？",
+          "scene": "已投入的角色进程",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_EQUIP"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "花已有资源购入一项当前可支付工具升级，重视这次得到功能",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "先核对这份可接订单已经显示的部件要求和交付条件，再决定这次是否接下",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "继续做当前可接的拆装诊断工作，把同一已开始且会保留的角色进程继续投入下去",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已开放工具与升级条件，再决定选哪项",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "持续角色经验与一次买设备独立，不将当前修车叫成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H07.CAREER.V1"
+        },
+        {
+          "text": "刚做过早期基础订单时，角色已有实际经验进展，当前还能继续基础工作；不要求买高阶设备。先选什么？",
+          "scene": "已投入的角色进程的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_EQUIP"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为练熟，反复练当前可重复的基础拆装",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先按已经明确的客户要求推进一项工作，重视当次目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "继续做可接的同类拆装工作，重视这条已经开始且会留下的角色进程",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前订单与已显示部件状态，再动手",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "持续角色经验与一次买设备独立，不将当前修车叫成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H07.CAREER.ALT1"
+        },
+        {
+          "text": "Sandbox这辆自有车当前能用诊断器和手动拆查，不受客户要求约束。你先怎样处理这次未知部件检查？",
+          "scene": "真额外限制与普通换件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_MODES",
+            "CMS219H_DIAG"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看已显示的车况与已知部件状态，核对现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先读当前拆查工具的已有操作说明，再亲手继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "这小段额外禁用本可用诊断器，实际只用手动查看与拆查试一轮，不要求查全",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "普通换用另一种当前可用诊断工具，实际体验它的作用",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "明确禁用已可用诊断机制，普通换工具0分",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H07.SANDBOX.V1"
+        },
+        {
+          "text": "只会基础拆装时：当前自有车可重复拆装，几件匹配部件可用；不要求开诊断器。先怎样投入？",
+          "scene": "真额外限制与普通换件的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_MODES",
+            "CMS219H_DIAG"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已显示车况与部件状态，了解现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先看已有拆装工具提示，再亲手继续尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好这一轮可拆件、取件与装回动作，亲手按顺序做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "把当前可装的匹配部件亲手换入，直接体验这一处拆装操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "明确禁用已可用诊断机制，普通换工具0分",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H07.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你职业里已确实购得自有车，并惦记收藏的一组本体车型中仍缺一款；当前可去的拍卖已经出现那款，钱足够参与；另有一处已开放且你未去过的谷仓或废车场，车间也有可继续工作。先做什么？",
+          "scene": "自有车与真正缺项",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_FIRSTCAR"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力且别的工作能推进，仍留在熟悉车间慢慢拆装基础件，喜欢能自己定步调的安稳日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "去实际尝试买入那款缺车，想补齐真实拥有的车型缺口，没竞得也算这次尝试",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先回车间核对客户订单与车上已显示的部件状态，再决定下手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先进入一个自己还没体验过、当前已开放的废车场或谷仓地点，看看新现场",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "收藏是未拥有实体车而非自记清单；地点需当前真开放",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H08.CAREER.V1"
+        },
+        {
+          "text": "还没有自有车或拍卖经验时：早期客户车基础任务仍可做，已显示清单可看，你有精力继续。先做什么？",
+          "scene": "自有车与真正缺项的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_FIRSTCAR"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力且另有目标可做，仍挑眼熟的一处基础拆装从容做一小段，享受这个自在的熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前已知要求和部件状态，再选择动手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先看已有拆装工具说明，再亲手继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "在可重复的基础拆装上反复练，重点在练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "收藏是未拥有实体车而非自记清单；地点需当前真开放",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H08.CAREER.ALT1"
+        },
+        {
+          "text": "Sandbox你惦记拥有的一组本体车型还缺一款，当前可购买地点已经出现这款；自己的另一辆车也已满足本体计时跑道的进入条件。你在该跑道已有一次实际计时成绩，另有一处已开放且未体验的谷仓或废车场；你有精力继续。先做什么？",
+          "scene": "收藏车型与试跑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_MODES",
+            "CMS219H_EDITOR_RACE_TRACK"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力且能试跑或买车，仍慢慢取放、装回熟悉基础件，喜欢留在车间安稳做事的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "实际尝试购入这款尚未拥有的车，想补实体车型缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "以自己在这条本体跑道已有的正式圈时为纪录目标，再开车试跑一轮，尝试争取更短时间，不要求刷新纪录",
+              "signal": "score_goal_attempt"
+            },
+            {
+              "id": "D",
+              "label": "先去一个当前已开放且自己尚未体验的谷仓或废车场地点，看看新现场",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只本体计时不借付费Drag Racing真人/AI对手，未拥有实体才c",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H08.SANDBOX.V1"
+        },
+        {
+          "text": "刚开始Sandbox并只有一辆基础自有车时，车间仍有能做的拆装，你有精力。先选什么？",
+          "scene": "收藏车型与试跑的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_MODES",
+            "CMS219H_EDITOR_RACE_TRACK"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力且其他部件可处理，仍按自己的节奏拆装眼熟部件，享受这段从容的重复",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先看当前已经显示的车况和部件状态，再选择下手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可用匹配零件的条件，暂不换装",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "为了练熟，反复练几个可重复的基础拆装动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只本体计时不借付费Drag Racing真人/AI对手，未拥有实体才c",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H08.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想实际做过的一段2021职业维修，不要求做完订单或修成部件。哪件真实行动最有分量？",
+          "scene": "2021手上操作的过去",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_REPLACE",
+            "CMS219H_FLUID",
+            "CMS219H_REPAIR"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过拆装、注液或维修小游戏时机，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因输入与螺栓、注液或指针即时回应的联系，实际多操作过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "排过工具、取件与装回动作，并亲手照顺序做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且别的工作可推进，仍慢慢拆装过熟悉基础件，喜欢不赶着换工作的安稳车间过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "不要求成功、能力进步或现实维修知识",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H09.CAREER.V1"
+        },
+        {
+          "text": "只做过早期基本替换也能回顾。哪件确实做过且有分量？",
+          "scene": "2021手上操作的过去的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_REPLACE",
+            "CMS219H_FLUID",
+            "CMS219H_REPAIR"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在可重复基础拆装上多练过控制，目的在练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因点击和螺丝、部件响应紧接着出现，实际多做过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先排过拆到目标件、取新件和装回动作，再亲手执行过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且别项能做，仍按自己步调取件、装回过眼熟一处，享受这份熟悉自在",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "不要求成功、能力进步或现实维修知识",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H09.CAREER.ALT1"
+        },
+        {
+          "text": "回顾2021 Sandbox里你实际亲手做过的一段，不要求车修到完好。哪件真实投入最有分量？",
+          "scene": "Sandbox实际手动回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_MODES",
+            "CMS219H_REPLACE",
+            "CMS219H_REPAIR"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过拆装、维修按停或注液，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因输入与螺栓、指针或液面立即变化的联系，实际多操作过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "排过工具取放和零件装回顺序，再亲手执行过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且别处可修，仍把一会儿留给熟悉基础件的从容拆装，喜欢安稳待在车间的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "无客户订单也能完整回顾，练习无需成功",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H09.SANDBOX.V1"
+        },
+        {
+          "text": "只在Sandbox拆装过基础件也能回顾。哪件确实做过且有分量？",
+          "scene": "Sandbox实际手动回顾的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_MODES",
+            "CMS219H_REPLACE",
+            "CMS219H_REPAIR"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在可重复部件上多练过选取与固定，目的是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因鼠标与螺丝、部件响应直接相连，实际多动手过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先排好拆件、取件和装回动作，再亲手照着试过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且其他地方可推进，仍慢慢拆回装回过眼熟部件，享受能自己定节奏的小过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "无客户订单也能完整回顾，练习无需成功",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H09.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一次2021订单原因未查明时你实际采取的处理。哪件真实行动最有分量？",
+          "scene": "真实诊断而非照答案",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_DIAG",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看过已经发现的部件与当前要求，再决定下一步",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "用过当时已有的另一诊断工具，主要想体验这个工具",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对过当前工具说明，再亲手继续检查或拆装",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己提出某一原位置零件可能磨损的解释，只拆查或检验这一件的实际状态，核对过猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "回顾已发生的自提解释与单件检查；已列故障早期替代只回顾真实拆装操作，不要求隐藏故障经验",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H10.CAREER.V1"
+        },
+        {
+          "text": "即使只做过故障已列明的早期订单，也能回顾实际拆装过的一处，不要求诊断器或未知故障。哪件真实做过？",
+          "scene": "真实诊断而非照答案的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_DIAG",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看过当前已知订单与部件状态，再决定怎么动手",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排过开盖、移开覆盖件与取件动作，并亲手照着做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "读过已有基础拆装说明，再回来试过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "亲手拆下又装回过一件当时可拆的基础部件，实际体验过这次取放装配",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "回顾已发生的自提解释与单件检查；已列故障早期替代只回顾真实拆装操作，不要求隐藏故障经验",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H10.CAREER.ALT1"
+        },
+        {
+          "text": "回想2021 Sandbox中你实际检查过的一轮，下面哪件真实行动最有分量？",
+          "scene": "未知原因与额外条件",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_DIAG",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "明知诊断器可用，仍明确禁过它，并实际只用手动拆查试过一小段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "换用过一个当前可用诊断工具，主要想体验它的作用",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对过已经显示的车况与已知状态，再决定怎样继续",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "自己先提出某一部件可能磨损的解释，只拆查这一件的实测状态，核对过猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真实尝试不要求查对或修好，不把正常诊断流程叫p",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H10.SANDBOX.V1"
+        },
+        {
+          "text": "只有基础拆装经验时，回想你当时真实做过的检查。哪件更有分量？",
+          "scene": "未知原因与额外条件的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_DIAG",
+            "CMS219H_MODES"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读过已有拆装操作提示，再回车边亲手试过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "亲手换入过一件当时可装的匹配部件，体验过这处拆装操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "看过已经显示的车况和已知部件状态，再选择动手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "猜过一个当前可拆件可能磨损，只查看这一件的实测状态，核对过解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真实尝试不要求查对或修好，不把正常诊断流程叫p",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H10.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回顾2021职业里实际投入过的一段时期。哪件真实行动最有分量？",
+          "scene": "持续进程与当前买入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_EQUIP"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为当时尚未拥有的一款惦记本体车型，实际参加过当时可用的购买或竞价尝试",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先比较过当时可用工具与部件方案，再决定怎样安排",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "继续做过已开始积累的角色拆装与诊断工作，重视同一条会保留的等级进程",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "实际购入过一项当时已开放、可支付的工具或部件升级，重视这次功能",
+              "signal": "purchase_available_upgrade"
+            }
+          ],
+          "design_purpose": "真拥有缺项可未买成，普通修复不g，比较不b",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H11.CAREER.V1"
+        },
+        {
+          "text": "只做过早期客户订单也可回顾。哪件真实投入最有分量？",
+          "scene": "持续进程与当前买入的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_EQUIP"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在可重复基础拆装上反复练过，重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "排清过一次当前取件与动手步骤，并亲手执行过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "继续投入过同一条已经开始积累且会保留的角色经验进程",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先查看过已显示的订单和部件状态，再决定下一步",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "真拥有缺项可未买成，普通修复不g，比较不b",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H11.CAREER.ALT1"
+        },
+        {
+          "text": "回顾2021 Sandbox里已经做过的自有车安排，不问下次打算。哪件真实行动最有分量？",
+          "scene": "真实呈现与拥有缺项",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_EQUIP",
+            "CMS219H_MODES",
+            "CMS219H_APPEARANCE",
+            "CMS219H_EDITOR_RACE_TRACK"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "以当时在本体跑道已有的正式圈时为纪录目标，实际再试跑过，尝试争取更短时间，即使没能刷新纪录",
+              "signal": "score_goal_attempt"
+            },
+            {
+              "id": "B",
+              "label": "用已开放库存与仓库实际存取过手头部件，整理携带物",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "按自己的色调主题实际改过车身或轮毂，重视呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "为一款自己确实尚未拥有的惦记本体车型，实际去购入或竞价尝试过",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "收藏是真车缺口，跑道不借Drag付费，存取不是收藏",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H11.SANDBOX.V1"
+        },
+        {
+          "text": "只玩过基础车间也能回顾，不需要喷漆或试跑。哪件确实做过？",
+          "scene": "真实呈现与拥有缺项的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_EQUIP",
+            "CMS219H_MODES",
+            "CMS219H_APPEARANCE",
+            "CMS219H_EDITOR_RACE_TRACK"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对过当前已有车况和部件状态，再决定怎样继续",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "在当时已开放仓库与携带库存之间实际存放、取出过手头零件，整理过这一轮携带物",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "按自己的主题实际改过当前已开放工作间外观，重视个人呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "在当时的工作间外观菜单实际应用过一种已可选墙面或地面材质，体验过这次呈现操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "收藏是真车缺口，跑道不借Drag付费，存取不是收藏",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H11.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CMS219H12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你确实待过的一段2021职业工作，不要求最后交单成功或赚到钱。哪件做过的行动最让你愿意继续？",
+          "scene": "职业一段的实际收尾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力且其他任务能做，仍按熟悉次序慢慢拆装过一小段，喜欢车间这套自主、安稳的日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "按订单已列条件实际推进过一项维修工作，重视当次目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "为了练熟，实际反复练过一类拆装或维修操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "因为输入与螺栓、液面或指针的直接反馈，确实多操作过一段",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "后4槽真实过去，不把修复结果当人格门槛",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H12.CAREER.V1"
+        },
+        {
+          "text": "只实际做过早期一段替换也能回顾。哪件做过且更有分量？",
+          "scene": "职业一段的实际收尾的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_STORE",
+            "CMS219H_REPLACE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力且别处能推进，仍从容取放、装回过熟悉基础件，享受不用赶着换目标的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "对照当前已知要求，实际推进过一项客户任务",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "在可重复的基础拆装上练过，主要目的是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "因鼠标与螺丝、部件回应紧相连，实际多动手过一会儿",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "后4槽真实过去，不把修复结果当人格门槛",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H12.CAREER.ALT1"
+        },
+        {
+          "text": "回想你实际留在2021 Sandbox的一段时光，不要求完成整车。下面哪件真实投入最有分量？",
+          "scene": "这段自有修复的过去",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_MODES",
+            "CMS219H_REPLACE",
+            "CMS219H_EQUIP"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力且可处理其他部位，仍慢慢拆装过眼熟基础件，喜欢由自己定步调的安稳工作",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "反复练过还没掌握的拆装或维修操作，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "因为手上输入与部件、指针或液面立即响应，实际多操作过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "按自己的外观主题实际改过车或工作间，想留下自己的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不将恢复车况叫持续成长，末槽是真过去",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H12.SANDBOX.V1"
+        },
+        {
+          "text": "即使只做过基础拆装，也能回顾一段真实经历。哪件更有分量？",
+          "scene": "这段自有修复的过去的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CMS219H_MODES",
+            "CMS219H_REPLACE",
+            "CMS219H_EQUIP"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力且车上别处可做，仍把一会儿留给熟悉拆装，按自己的节奏享受从容的车间过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "在可重复基本部件上反复练过控制，目的在练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "因点击与螺丝、部件响应紧相连，实际多做过一会儿",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先排过这轮取件与拆装动作，再亲手照顺序试过",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "不将恢复车况叫持续成长，末槽是真过去",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CMS219H12.SANDBOX.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+56fc86dbb4d0"
+}

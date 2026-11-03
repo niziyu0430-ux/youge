@@ -1,0 +1,2820 @@
+{
+  "id": "sub109k",
+  "title": "深海迷航 Subnautica 原作",
+  "game_ids": [
+    "steam-264710"
+  ],
+  "scope": "PC当前原作：资源探索共用三种生存预设；Creative独立建造探索",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "三种资源预设只用当前实际工具、氧气/电量与可达条件，不以饥渴、低氧提示、死亡复活或回档为共通前提。",
+    "当前2.0共有大型房间与玻璃穹顶可用；不引入BelowZero海卡/雪狐、Subnautica2或模组联机。",
+    "Creative题不借用耗材、基地进水、电量耗尽或压溃压力；剧情触发与图鉴自动状态未作为该路径答题要求。",
+    "海蛾/月亮池、扫描室、种植反应堆等主情境均有逃生舱、基础制作或浅水操作替代。",
+    "不强凑成长g、身份r或竞争k；一次升级、控制默认主角、个人生存日数不自动计分。"
+  ],
+  "modes": [
+    {
+      "id": "resource_exploration",
+      "label": "资源探索：Survival／Freedom／Hardcore",
+      "initial_variants": {
+        "SUB109K01": "SUB109K01.RESOURCE_EXPLORATION.V1",
+        "SUB109K02": "SUB109K02.RESOURCE_EXPLORATION.V1",
+        "SUB109K03": "SUB109K03.RESOURCE_EXPLORATION.V1",
+        "SUB109K04": "SUB109K04.RESOURCE_EXPLORATION.V1",
+        "SUB109K05": "SUB109K05.RESOURCE_EXPLORATION.V1",
+        "SUB109K06": "SUB109K06.RESOURCE_EXPLORATION.V1",
+        "SUB109K07": "SUB109K07.RESOURCE_EXPLORATION.V1",
+        "SUB109K08": "SUB109K08.RESOURCE_EXPLORATION.V1",
+        "SUB109K09": "SUB109K09.RESOURCE_EXPLORATION.V1",
+        "SUB109K10": "SUB109K10.RESOURCE_EXPLORATION.V1",
+        "SUB109K11": "SUB109K11.RESOURCE_EXPLORATION.V1",
+        "SUB109K12": "SUB109K12.RESOURCE_EXPLORATION.V1"
+      }
+    },
+    {
+      "id": "creative",
+      "label": "Creative：无材料需求的建造与探索",
+      "initial_variants": {
+        "SUB109K01": "SUB109K01.CREATIVE.V1",
+        "SUB109K02": "SUB109K02.CREATIVE.V1",
+        "SUB109K03": "SUB109K03.CREATIVE.V1",
+        "SUB109K04": "SUB109K04.CREATIVE.V1",
+        "SUB109K05": "SUB109K05.CREATIVE.V1",
+        "SUB109K06": "SUB109K06.CREATIVE.V1",
+        "SUB109K07": "SUB109K07.CREATIVE.V1",
+        "SUB109K08": "SUB109K08.CREATIVE.V1",
+        "SUB109K09": "SUB109K09.CREATIVE.V1",
+        "SUB109K10": "SUB109K10.CREATIVE.V1",
+        "SUB109K11": "SUB109K11.CREATIVE.V1",
+        "SUB109K12": "SUB109K12.CREATIVE.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "SUB109K01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "原作资源探索中，你已有能用的扫描器，PDA确认海滑翔器蓝图还缺残片；一块尚可扫描的对应残片就在安全浅水里，附近另有没去过的海藻边缘，氧气和回程条件都够。先做什么？",
+          "scene": "浅水残片已经在眼前",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_STORE",
+            "SUB109K_PLAYER",
+            "SUB109K_SIGNAL_UI"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先尝试扫描这块对应残片，重视补上自己确认还缺的蓝图进度，不要求这次就集齐",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "游向当前可达但自己没看过的海藻边缘，想先发现那里的环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先看视野里当前已开启显示的逃生舱信号，核对它实际显示的方位与距离",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前氧气、扫描器电量和携带物，再决定这段行动",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "真实未完成蓝图才c；导航信息、身体工具状态和为未知出发各自独立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K01.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没做扫描器也可换：你在最早的逃生舱旁，已能用制造机，身上有现成钛料、硅胶和可存取的物品，生存刀与一只防水储物柜的配方都已开放且当前够料；氧气状态稳定。先做哪件？",
+          "scene": "浅水残片已经在眼前的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_STORE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较制造机里当前能做的刀、储存物件及各自材料，不急着开做",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "亲手用现有材料做这把已可做的刀，体验这轮制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "把一份现有材料存入舱内储物，再取出这次想带的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "去舱旁自己没看过、能随时浮回水面的浅水角看看",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "真实未完成蓝图才c；导航信息、身体工具状态和为未知出发各自独立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K01.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "原作Creative中，你已有能用的建造器，当前可放走廊、舱口与窗，不需要采材料；空位都能从外侧操作。眼前先做哪件？",
+          "scene": "先搭能看见水的第一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_LARGE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的浅水观察站主题，选定朝向和窗位后，实际建下一段走廊与一块窗，让空间呈现自己的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可放的几种走廊、窗和舱口外观，暂不施工",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "亲手放下一段合法预览并持续建完，直接体验这次建造操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "游去一块自己没看过、当前可达的海底，先看看那里是什么环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "Creative不造材料和氧气焦虑；实际个人布局才a，浏览不算已表达。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K01.CREATIVE.V1"
+        },
+        {
+          "text": "还没做过一整间基地也可换：你刚拿着可用建造器在浅水试放第一段走廊，预览可放且四周有余地。先怎样尝试？",
+          "scene": "先搭能看见水的第一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_LARGE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把预览转向、换到另一处合法位置，亲手看这次编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有建造器操作说明，再继续放置",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先排好这一轮选部件、定朝向、确认放置和施工的编辑顺序，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "去旁边自己还没见过的小片浅水地形，想发现现场",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "Creative不造材料和氧气焦虑；实际个人布局才a，浏览不算已表达。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K01.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K01.RESOURCE_EXPLORATION.ALT2",
+          "text": "第三种原作早期场景：你还没有扫描器，眼前浅水有能徒手捕捉的小鱼，氧气和回舱条件宽裕；没有必须吃鱼的要求。先做什么？",
+          "scene": "浅水里徒手接近一条小鱼",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_STORE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手接近并尝试捉眼前这条小鱼，想直接体验这个普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "为自己更熟悉水下转向、靠近移动对象，专门在这片浅水反复练，不要求捉到",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前氧气与携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "游去当前能到但自己没看过的浅水角，想发现现场",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "区别于残片与制造机；Freedom也可捉鱼但不强设饥饿，练习不要求结果。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K01.CREATIVE.ALT2",
+          "text": "另换原作Creative场景：你当前已有海蛾、可用月亮池和控制台，艇能停靠，但还没试过自行设计观察站。先做什么？",
+          "scene": "月亮池里现成海蛾的配色",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_COLOR",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把停靠艇改成自己选的艇身与条纹配色、名字，呈现个人主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前可选艇身配色方案，再决定是否改色",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "先查看月亮池、控制台和当前停靠艇的现场，再决定这轮操作",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "直接打开当前可用控制台、给艇改一次现有可改名称，体验普通操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "第三前提给载具外观玩家，a需要实际个人呈现；普通改名自身也可0，不强迫造基地。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已修好原作无线电，PDA里已经保存一段船员求救语音；当前能回听，也能沿现有标记走一小段，补给与工具够。此刻先做哪件？",
+          "scene": "收到的声音和出发前的停留",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_STORE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前已有工具和补给，排好离舱、途中补气与到标记附近查看的先后，再实际出发",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "不先追线索，去当前另一处自己未到过的浅水地形看看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "有精神、也能去新标记，仍慢慢游一圈熟悉舱边，喜欢按自己的节奏待在这片安定水域",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "回听这段已经收到的船员语音，想把人物处境与前面的事故线索接起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "无线电NPC是叙事，不是现实联机；h有实际新去向仍主动选择熟悉过程。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K02.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没修无线电时：制造机和逃生舱储物当前能用，你有已经做好的基础工具、现成可加工材料，舱边水域平稳。先做什么？",
+          "scene": "收到的声音和出发前的停留的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_STORE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好取出材料、在制造机加工、收起成品这一轮的亲手顺序，并实际照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "直接使用制造机完成一件当前材料足够的基础物品，体验制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "精力和状态都够、还可探新的浅水角，仍在熟悉舱边慢慢游动，享受自主安稳的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先读PDA里已经开放的工具操作说明，再拿现有工具继续试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "无线电NPC是叙事，不是现实联机；h有实际新去向仍主动选择熟悉过程。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K02.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "你在Creative刚建成的可进入房间里，柜子与椅子都当前可建；已有一只空柜可以拆下重建，空墙面与地板有几处合法位置。此刻先选什么？",
+          "scene": "柜子与椅子的舱内位置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_CHAIRS",
+            "SUB109K_BUILDER_OP"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清拆下当前柜子、调整合法预览与重新建下的编辑步骤，再亲手做这一轮",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "用建造器拆下当前空柜，再在另一合法位置建起，亲手看看空间编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先从可达位置查看舱口、室内设备与当前通道，再继续布局",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "为了自己的舱内主题，选定相对位置后实际建下柜子与椅子，让这间房的布局符合心里的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "家具移动按建造器拆下重建，不虚构抓住成品任意拖拽或缩放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K02.CREATIVE.V1"
+        },
+        {
+          "text": "还没进过自己基地的人：你已有可用建造器，一段刚放下的浅水走廊可以拆除重建，另有其他合法空位。先做什么？",
+          "scene": "柜子与椅子的舱内位置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_BUILDER_OP"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前可选部件和外观，决定下一步采用哪个",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "用建造器在合法预览处持续施工，投入光束、进度与结构逐渐成形紧跟输入的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先读已经开放的建造器操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际拆下并在另一个合法空位重建这段走廊，看看位置变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "家具移动按建造器拆下重建，不虚构抓住成品任意拖拽或缩放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K02.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K02.RESOURCE_EXPLORATION.ALT2",
+          "text": "没修无线电、也不在舱内时可换：原作浅水里你已有能用的刀，眼前有当前可切取的海藻样本，氧气、回程与携带空间都够。先选什么？",
+          "scene": "海藻旁现成可切的样本",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_STORE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已有刀与取样操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先核对氧气、携带空间和现有补给，再决定这一轮",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "为自己已取得的样本或已经到过的海藻停留点，补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "直接用现有刀取一次眼前植物样本，体验这个具体操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "第三前提是亲手取样，没有Radio、回听剧情或固定食物配方要求；普通取样不是补全。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K02.CREATIVE.ALT2",
+          "text": "Creative里你只使用过海滑翔器，当前局部三维海床图能显示近处轮廓，开阔水域可移动；不要求任何基地部件。先选什么？",
+          "scene": "还没摆家具的局部海床图",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PHOTOS",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿海滑翔器连续推进和转向，反复享受输入与移动紧接发生的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "为自己更熟悉靠近目标和回转，专门在同一片开阔处反复练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先读已有海滑翔器操作说明，再亲手继续尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "查看局部图当前实际显示的海床与岩壁相对位置，再决定这一小段方向",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "第三前提不是灯柜编辑，局部海床图不扩成全地图或资源雷达。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已搭好一间可修改的原作基地，当前完整度为正且没有进水；刚扩建后你注意到完整度数字与先前不同，原因还没核清。建造器、可拆的一块窗及其他可放部件都已具备条件。先做什么？",
+          "scene": "基地数值变化还没解释",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_LARGE",
+            "SUB109K_CHAIRS"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已开放且材料足够的窗、走廊与强化板方案，暂不动工",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "先从已能到达的位置查看舱口、窗和现有设备的现场，再继续这段搭建",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "自己先提出某块窗可能影响完整度的解释，在其余部件不动时只拆下这一块，再实际核对显示变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "按自己选的观察站风格，为已有空位新建当前已开放可建的储物柜与椅子，实际呈现想要的布局",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "题干不先给完整度原因；p只改一个现有变量并读实测，不让Hardcore玩家故意制造致命破口。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K03.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没造基地时，最早逃生舱制造机可用，你已有金属碎片和石英；炼成钛与玻璃的基础配方当前都已开放且够料，舱内储物可用。先怎样处理？",
+          "scene": "基地数值变化还没解释的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_LARGE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已有制造机加工操作说明，再亲手继续试一轮基础加工",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "直接把当前已有金属碎片加工成钛，想体验这次制造机操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "比较当前能做的炼钛与玻璃配方及现成材料，决定这一轮先做哪件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "把已携带石英存入舱内已有空位，再取出这轮要加工的金属碎片",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "题干不先给完整度原因；p只改一个现有变量并读实测，不让Hardcore玩家故意制造致命破口。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K03.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "原作当前Creative里已有大型房间与玻璃穹顶可选，你有一段可连接的基地和能用的建造器；眼前接口有合法接续空位。先做哪件？",
+          "scene": "大型房间的合法接续",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_LARGE",
+            "SUB109K_BUILD",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮连接位置、建房间再装可放穹顶的编辑次序，并亲手执行",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "直接对合法房间预览持续施工，想亲手体验这件已可做操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "实际接上当前可放的大型房间与穹顶，按自己想呈现的观景空间安排位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先比较大型房间、普通走廊和穹顶的当前可放方案，不急着动工",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "原作2.0已回移这些部件；只问合法接续，不编造自由拉伸房间、资源预算或模块升级成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K03.CREATIVE.V1"
+        },
+        {
+          "text": "没用过大房间也能换：浅水里只有你刚试放的一段基础走廊，能用建造器在合法位置加一个舱口。先做什么？",
+          "scene": "大型房间的合法接续的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_LARGE",
+            "SUB109K_BUILD",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想要的入口朝向选定位置并实际建下，重视小基地呈现自己的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看眼前走廊、舱口预览与可进入位置，再继续这一段",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "亲手建下这个当前可放的舱口，再进出试一次",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先比较舱口几个当前合法位置和已可选基础部件",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "原作2.0已回移这些部件；只问合法接续，不编造自由拉伸房间、资源预算或模块升级成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K03.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K03.RESOURCE_EXPLORATION.ALT2",
+          "text": "你在原作已经拥有两只当前可换用的氧气瓶，都在可用状态；人在可安全补气处，基础装备页和现有操作说明能读。先做什么？",
+          "scene": "已有两只充过气的氧气瓶",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前氧气、装备状态和补给，再决定这一轮",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先读已有装备更换操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "实际换上已有另一只氧气瓶，亲手体验这件现有配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先比较两只现有氧气瓶的已显示状态与携带占用，暂不换用",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "两瓶不是同时叠加，不把换瓶或一次氧气升级算成长；第三前提没有基地或制造机制作。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K03.CREATIVE.ALT2",
+          "text": "Creative里你当前有一只已部署、能改标签并存取物品的防水柜，手里已有工具；没有进过自己的大型房间也可答。先怎样做？",
+          "scene": "水里的防水柜标签",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_LOCKER",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已有防水柜改标签和存取操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "为已经取得的防水柜或已经到过的浅水停留点，补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "亲手给当前柜子改成这轮想用的标签，直接体验已有命名操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "把一件已有物品存入柜内，再取出这次想带的东西",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "不借用原作后来加入的大房间，也不把储物标签当藏品、人物成长或本机创作预设。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前月亮池旁，你已拥有可装的海蛾声呐和储物模块，海蛾及模块槽可用，电量与短途条件都够。近处有已经走过的岩壁和可拿的现成物料。先怎样投入？",
+          "scene": "海蛾的两项功能要真下水",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_SEAMOTH",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前海蛾电量和携带补给，核对这一趟已显示的状态",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "实际装入声呐与储物模块，在同一段熟悉岩壁取料路线触发声呐并存现有物料，比较地形显示辅助行进与载物容量搭在一起是否合这趟需求",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两种现有模块的作用和占槽情况，不把菜单比较当已经试过",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "驾海蛾在已确认宽阔的水域转向、前进，反复享受操纵与艇身回应的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "b是两种不同功能实装实用，不是普通造两台机器；声呐只显示地形，不冒充矿物探测。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K04.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没有海蛾：你已有能工作的海滑翔器和一支手电，两件都可用，近处有宽阔浅水，氧气回程条件足够。先做什么？",
+          "scene": "海蛾的两项功能要真下水的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_SEAMOTH",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看已有逃生舱信号的位置和距离，再决定朝哪边游",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "实际换用现有手电，亲手体验它照亮眼前浅水的样子",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先比较手电与海滑翔器的当前使用条件和携带占用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "拿海滑翔器在宽阔浅水推进和转向，享受自己的输入立即带动水中移动",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "b是两种不同功能实装实用，不是普通造两台机器；声呐只显示地形，不冒充矿物探测。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K04.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "Creative里你当前已有一艘可驾驶海蛾和宽阔无阻的浅水；可用月亮池及控制台也已建好。这次没有电量耗尽或压溃的生存目标。先选什么？",
+          "scene": "下水的是原作海蛾",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_MODES",
+            "SUB109K_COLOR",
+            "SUB109K_SEAMOTH"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前停靠设施与海蛾所在的现场，再决定从哪个操作开始",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "驾艇在宽阔水域连续转向和推进，反复享受输入与艇身回应连在一起的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "为练熟进池前对正和减速靠近，专门在同一段反复练，不要求顺利停靠",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "把海蛾停进可用月亮池，实际改好想呈现的艇身与条纹配色",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "保原作海蛾；Creative不靠假能耗或压溃制造正确答案，练习和手感是不同目的。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K04.CREATIVE.V1"
+        },
+        {
+          "text": "还没有造艇：你只有当前能用的海滑翔器，舱边是开阔水域。没有氧气紧迫，也有自己没到过的浅水角。先做什么？",
+          "scene": "下水的是原作海蛾的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_MODES",
+            "SUB109K_COLOR",
+            "SUB109K_SEAMOTH"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看已有逃生舱信号当前显示的位置和距离，再决定去向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "拿海滑翔器连续推进、转向，投入操纵与移动立即接上的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "为了自己控制得更熟，专门在同一块开阔水域反复练转向与靠近目标",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "游向那块当前可达但自己没去过的浅水，主要想看新的环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "保原作海蛾；Creative不靠假能耗或压溃制造正确答案，练习和手感是不同目的。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K04.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K04.RESOURCE_EXPLORATION.ALT2",
+          "text": "还没有海蛾或海滑翔器，也可换这段：你已有扫描器和一块当前可换入的备用电池，人在安全可停留处，氧气回程够。先选哪件？",
+          "scene": "扫描器手上已有备用电池",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_LARGE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已有工具电池更换说明，再继续亲手试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "亲手给现有扫描器换入这块当前可用电池，直接体验操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先核对扫描器显示的电量、氧气与携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先比较现有电池各自已显示状态，决定是否换入",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "换电池普通操作不是组合实测；没有艇、月亮池或推进工具前提。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K04.CREATIVE.ALT2",
+          "text": "你在原作Creative只是徒手游过舱边，还没用过海蛾或海滑翔器；当前开阔浅水有熟悉路线和没看过的角落。先选哪件？",
+          "scene": "没有推进工具的自主游动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_MODES",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精神、新角落也能去，仍慢慢重游熟悉浅水，喜欢安定自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "为自己更熟悉上浮、转向和靠近入口，专门在舱边反复练基础控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "游到当前可达但自己没看过的浅水角，主要想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先查看已有逃生舱标记实际显示的位置和距离，再决定方向",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "第三前提无载具和推进装备，不假造Creative缺氧、死亡或体力恢复。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你这个原作基地已经实际运转多轮：现有种植物提供有机材料，生物反应堆供电，充电设备补回外出工具电量，返回后又补料与补种。当前各环节仍有可用设备、材料和生长条件。先做什么？",
+          "scene": "有机补料已经接着充电跑了多轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_BUILD"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续接上下一轮取有机物、给反应堆补料、工具回充与补种，让这些已有相互依赖的供给继续运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前种植物、材料和可见产出的状态，再决定这轮如何处理",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "为已有基地和已铺设设备补记自己真实搭建的过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "当前有精神、外面也有新去向，仍在熟悉种植区慢慢整理已经成熟可取的植株，喜欢自己掌握的安定节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "多轮能源、材料、工具与种植循环才y，不把一次充电或第一台反应堆算长期运营；Freedom不要求吃喝。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K05.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "只有逃生舱和基础工具时：你已有充好电的扫描器、现成备用电池与已走过的短浅水路线，当前可安全回舱补气。先选什么？",
+          "scene": "有机补料已经接着充电跑了多轮的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_BUILD"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好离舱扫描、回程补气和必要时更换现有电池的路线与动作，再亲手走这一轮",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先查看目前氧气、工具电量和带着的备用物，核对当前限制",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "实际把手里的一块备用电池装入当前工具，亲手试这次可做操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "给已经取得的基础工具和已经到过的舱边地点补上自己的记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "多轮能源、材料、工具与种植循环才y，不把一次充电或第一台反应堆算长期运营；Freedom不要求吃喝。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K05.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "Creative里你已经放过两个当前可用信标，它们的信号当前已在视野开启显示，能看到对应名称、方位与距离；另外有一条可达但自己没去过的海沟边缘。先做什么？",
+          "scene": "信标能显示的和自己想看的",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_MODES",
+            "SUB109K_PLAYER",
+            "SUB109K_SIGNAL_UI"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看现有信标实际显示的位置与标记，核对这段身处哪里",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "不为清单，先游去没看过的海沟边缘，想发现现场",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为自己已经到过的基地和信标停留点，补上自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "有精力、海沟也能去，仍沿熟悉两个信标之间慢慢游一轮，喜欢安定熟悉的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "导航不是自动全地图，不把未知区域探索当读图，也不把已有信标重看算收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K05.CREATIVE.V1"
+        },
+        {
+          "text": "还没放自己的信标也能换：你刚在Creative逃生舱旁活动，原有舱标记可查看，有已游过的近水和没看过的浅水角。先做什么？",
+          "scene": "信标能显示的和自己想看的的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_MODES",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "看已有逃生舱标记实际显示的方向和距离，再决定往哪边游",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "到没看过但当前可达的浅水角，想知道那边有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为刚才已经到过的浅水地点，写下自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "精力充足、新浅水角也能去，仍慢慢重游熟悉舱边，享受自己掌握的安稳节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "导航不是自动全地图，不把未知区域探索当读图，也不把已有信标重看算收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K05.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K05.RESOURCE_EXPLORATION.ALT2",
+          "text": "你当前有能用的气囊，身处已经确认上方没有遮挡的开放浅水，氧气与状态宽裕、能安全回舱；原作当前版本已改进这件工具。先做什么？",
+          "scene": "气囊在宽裕氧气下的一次试用",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_LARGE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接在这段开放浅水试用现有气囊上浮，亲手体验工具操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有气囊使用说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好这次短下潜、试用气囊上浮与回舱恢复空气的路线和动作，再实际做一轮",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前氧气、工具状态与携带补给，再决定这一段",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "气囊不是必须濒死才用，Hardcore不试死亡；第三前提没有充电器、备用电池或基地循环。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K05.CREATIVE.ALT2",
+          "text": "不必放信标或搭基地：Creative里你当前能用原生拍照与PDA相册，已经拍有一张自己的浅水照片；眼前水域还可重新取景。先选什么？",
+          "scene": "原生PDA相册与浅水取景",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_PHOTOS"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了自己的浅水观察主题，实际选视点与画面构图，再用原生拍照留下个人呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "直接按当前可用原生拍照操作拍一张眼前画面，体验这个普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先看PDA相册里现有照片的画面素材，再决定下一张怎样取景",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "在自己的记录里补记已经到过的拍摄地点，再继续取景",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "第三前提是原生拍照，不重复第一槽基础走廊预览；亲自取景表达才a，按键拍照和看现有相册均0，不要求在线或外图。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你核对过原作PDA已登记的生物资料，自己惦记的一种浅水生物还没有条目；眼前那只可安全接近的生物正是未登记对象；扫描器、氧气与回程条件够，也有未知的邻近地形可去。先做什么？",
+          "scene": "图鉴缺项就在可扫描处",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_STORE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去邻近自己没到过的地形，重视发现另一种现场",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "查当前PDA已经显示的工具与扫描操作说明，再拿扫描器继续实际试用",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "有精神、未知地形也可去，仍慢慢沿熟悉珊瑚边游一段，享受安稳熟悉的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "为补上自己已经核过的这项图鉴空缺，亲手尝试完成扫描，不要求一次就扫完",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "收藏针对真未登记条目，不把随手捡石料、重读已有生物页或成功率记人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K06.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没用扫描器的人可换：舱边有可直接拾取的石英与现成材料，制造机当前可用，邻近浅水又有一角自己没看过。氧气和状态稳定。先做哪件？",
+          "scene": "图鉴缺项就在可扫描处的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_STORE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看制造机当前已开放且够料的配方，比较这一轮可做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "去那处自己没看过的浅水角，想看看环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先把一件携带材料放入舱内储物，再取出这轮想用的物品",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "把眼前一块可取石英拿进手里，直接体验这次拾取",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "收藏针对真未登记条目，不把随手捡石料、重读已有生物页或成功率记人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K06.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "你在Creative基地外已有一盏当前确实能亮的泛光灯Floodlight，一处岩角的照明与预期不同，原因未定；另一个位置同样合法且确能亮。建造器可用，这段短试环境光、水体与其他灯不变。先怎样做？",
+          "scene": "只换一个照明位置试解释",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_FLOODLIGHT",
+            "SUB109K_BUILDER_OP"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的基地外入口照明主题，实际拆下这盏泛光灯并在选定的可亮位置重建，呈现想要的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前已开放的泛光灯与其他室外部件外观方案，暂不改动",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有建造器关于放置和拆除的说明，再亲手继续尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己先提出泛光灯位置可能影响这处岩角的解释，保持灯朝向、其他部件与环境光相同，只把这一盏拆下并在另一可亮位置重建，再从同一观察点比较岩角",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "p来自本人提出原因后单变量实试，不是题干告知效果再照改；不保证任一位置一定照亮或有隐藏数值。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K06.CREATIVE.V1"
+        },
+        {
+          "text": "没用过泛光灯也可换：Creative里你已有一段基础走廊，两个外墙面当前都能合法加窗，建造器可用，尚未装窗。先做哪件？",
+          "scene": "基础走廊上可选的两面窗位",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_BUILDER_OP"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接在当前合法墙面建下一块窗，亲手体验这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先看当前可用窗和玻璃隔间的外观方案，再决定这轮采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "先排清选墙面、放窗预览、施工与进舱查看的编辑步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "为了自己的观景朝向选定一面外墙，实际建窗，让空间呈现自己的主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "p来自本人提出原因后单变量实试，不是题干告知效果再照改；不保证任一位置一定照亮或有隐藏数值。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K06.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K06.RESOURCE_EXPLORATION.ALT2",
+          "text": "你在原作浅水里已有一只可用防水储物柜，当前能改标签、存取手头物品；氧气与回程够，没用过扫描器也可答。先做什么？",
+          "scene": "自己已经放下的防水柜",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_LOCKER",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际存入一件携带物，再取出这次打算带的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "先读已有防水柜部署、改标签和存取操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "去柜旁当前可达但自己没看过的浅水角，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "亲手把当前柜子标签改成这轮想用的名称，直接体验已有命名操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "第三前提是实际柜子管理，不把重命名存柜说成长、收藏或创作预设保存。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K06.CREATIVE.ALT2",
+          "text": "Creative里你当前有一台已部署且空闲的移动载具建造平台，可收起再部署；菜单当前有海蛾及另一项可造载具，旁边水面开放、合法空间足够。先选什么？",
+          "scene": "载具建造平台上的可用项目",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前平台可做项目与已开放载具方案，暂不制作",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "先读已有平台操作说明，再亲手继续尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好取平台、合法部署、登上平台与选择当前项目的亲手次序，再实际走一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "直接在当前平台选择并制造海蛾，亲手体验这次已有制作操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "平台机器人完成动画不直接计玩家即时反馈；普通造艇不记成长或构筑。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已经反复走过逃生舱附近的一段浅水，有能用的海滑翔器、脚蹼和手电；当前不用滑翔器也能在现有氧气内从容往返，没有必须赶的目标。此刻先选哪件？",
+          "scene": "熟悉浅水里的工具与回舱路线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_STORE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前氧气、灯和电池状态，再决定这轮怎么动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "从另一侧已经走通的浅水路线回舱，亲手体验不同的经过方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "直接用当前已有且能工作的海滑翔器沿这段熟悉浅水推进一小轮，亲手体验现有工具操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "为把浮起、转向和靠近舱梯练得更熟，专门反复练这几个基础动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "常规推进工具、已知路线、状态查看与刻意动作练习分开；不用海滑翔器的普通游泳不自动构成新玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K07.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没有滑翔器也可换：你已有两件可换用的基础工具、近旁也有相应可操作对象，舱边两条短浅水路线都已经游通，当前氧气与回程足够。先做什么？",
+          "scene": "熟悉浅水里的工具与回舱路线的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_STORE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对目前的氧气和携带补给，再决定这一段",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "亲手换用已经做好的另一件基础工具，体验它在当前可操作对象上怎样发挥",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "专门反复练习在舱梯旁上浮、转向再靠近，重视自己逐渐掌握的过程",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "从另一条已游通的浅水边绕回舱，体验不同走向",
+              "signal": "route_variant"
+            }
+          ],
+          "design_purpose": "常规推进工具、已知路线、状态查看与刻意动作练习分开；不用海滑翔器的普通游泳不自动构成新玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K07.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "Creative里你已有能用的建造器，基础走廊、窗、舱口和多用途房间当前都可建；这里有合法空位能搭一小段可进入空间。此刻先做什么？",
+          "scene": "走廊接口、舱口和观景窗",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可选走廊、窗与房间外观，暂不搭建",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "直接建下一个当前合法可放的走廊部件，亲手试这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清放走廊、在合法接口接舱口、再加可装窗的一轮编辑步骤，按顺序亲手尝试",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按个人选定的观景主题，实际安排走廊的朝向、窗和入口，让布局有自己的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "可用部件的普通布局、原生建造、素材比较和本轮编辑步骤分别解释；只选走廊、不建房间不计玩法实验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K07.CREATIVE.V1"
+        },
+        {
+          "text": "还没用过多用途房间时：Creative里你已建一间基础X形隔间，两个接口当前都能合法再接I形隔间，建造器可用。先怎样继续？",
+          "scene": "X形隔间上的两处接口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_BUILDER_OP"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前可选I形、T形与X形隔间外观，决定下一件",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "直接在一个当前合法接口建下一段I形隔间，体验普通连接操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "把基础I形隔间预览从一个可接接口换到另一个，亲手看接续位置变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "按自己的双翼观察廊主题，在两个接口依次实际接上I形隔间，重视空间呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "可用部件的普通布局、原生建造、素材比较和本轮编辑步骤分别解释；只选走廊、不建房间不计玩法实验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K07.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K07.RESOURCE_EXPLORATION.ALT2",
+          "text": "你没用过海滑翔器路线或舱梯练习，但已拿到能用的建造器；基础走廊和舱口当前可建，材料够、合法空位可放，状态稳定。先选什么？",
+          "scene": "建造器的一张基础预览",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清选部件、调朝向、确认和施工的编辑步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "直接在合法位置建下一段当前可建走廊，体验这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "实际把基础走廊预览换一个合法位置或朝向，亲手看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已开放且够料的走廊与舱口部件，再决定这轮",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "普通预览编辑是0，不为保留i强加禁令；第三前提给主要玩基础建造的人。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K07.CREATIVE.ALT2",
+          "text": "你在Creative尚未放过任何基地部件，但已用过逃生舱制造机；当前基础工具都在可做菜单，手里有现成物品可存取。先做哪件？",
+          "scene": "只用过制造机的人也可答",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "读已有基础制作操作说明，再亲手继续试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "把现有物品存进舱内储物，再取出这次想带的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可做基础工具的用途与配方项目，再决定做哪件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "直接在制造机做一件当前可做的基础工具，体验普通制作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "第三前提是制造机使用，不要求连廊或额外禁用房间；免料不等于自动长期养成。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你的海蛾已停在可用月亮池里，载具升级控制台可以改名与配色；艇和近旁水域状态都够，也能直接开去已知可达的新浅滩。此刻先做哪件？",
+          "scene": "停靠之后还能留下自己的样子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_COLOR",
+            "SUB109K_SEAMOTH"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精力、也能去新浅滩，仍驾艇慢慢绕熟悉基地一圈，喜欢这段自己掌握的平稳节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "实际选定自己想呈现的艇身与条纹配色、名字，让这艘艇符合自己的观察站主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "为练熟入池前的对正与靠近，专门反复驾驶进出一小段，不要求次次顺利",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先查看月亮池舱口、控制台和停靠艇的现有现场，再决定接下来用哪个操作",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "配色实改才a，普通检查不是r；练习只看意图与实际尝试，不要求解锁晚期载具或驾驶得好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K08.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "只玩过逃生舱旁的浅水也可换：当前有可用制造机、手头材料和基础工具，四周平稳，另有新浅水角能去。先做什么？",
+          "scene": "停靠之后还能留下自己的样子的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_COLOR",
+            "SUB109K_SEAMOTH"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精力、也可去新水域，仍慢慢游过熟悉舱边，喜欢这段安定自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先排好取料、制作一件够料基础物品、收回工具的亲手次序，再做一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "直接用制造机做一件当前可做的基础物品，体验制作过程",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "去当前能到但自己没去过的浅水角，想看新现场",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "配色实改才a，普通检查不是r；练习只看意图与实际尝试，不要求解锁晚期载具或驾驶得好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K08.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "你在Creative已建好一处熟悉浅水基地，当前有可存取物品的储物柜和手边物品，另一只空柜也可拆下另放；自己精神足，也能去尚未见过的地形。现在先做什么？",
+          "scene": "新地点可去时还想怎样待着",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_BUILDER_OP"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已搭建的部件与接续位置补记自己的建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "仍慢慢把已有物品按自己的顺序收进熟悉柜子，喜欢这段安定且自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按自己的基地主题，拆下当前空柜并在另一个合法位置建起，让舱内布局呈现想要的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "游去当前没见过的地形，想发现那边的现场",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h不因疲劳、时间或资源困境；个人陈设表达、未知发现与记录均有实际动作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K08.CREATIVE.V1"
+        },
+        {
+          "text": "还只有最早逃生舱时：Creative里已有舱内储物和手上基础物品，旁边有熟悉浅水，也有新角落能去；你精力充足。先选什么？",
+          "scene": "新地点可去时还想怎样待着的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "游向没去过的浅水角，主要想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "慢慢整理熟悉舱内现有物品，喜欢自己掌握的安稳过程，即使可以继续去新水域",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "直接把一件现有物品存进去、再取出这次想带的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "为已经拿过的工具或已经游过的舱边地点补上自己的记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "h不因疲劳、时间或资源困境；个人陈设表达、未知发现与记录均有实际动作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K08.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K08.RESOURCE_EXPLORATION.ALT2",
+          "text": "另一种原作当前场景：你已有可用海滑翔器，当前局部三维海床图能显示脚边地形，身处宽阔浅水，电量、氧气与回程够；没造过海蛾。先做什么？",
+          "scene": "只看海滑翔器眼前的局部图",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PHOTOS",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手切换当前可用照明操作，直接体验这次工具功能",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先看当前海滑翔器局部图实际显示的海床与岩壁相对位置，再决定这一小段方向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "拿海滑翔器连续推进转向，反复享受输入立即带动移动的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先读已有海滑翔器操作说明，再继续亲手尝试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "局部地形图不是全岛资源图，不要求停靠、配色或制造机制作。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K08.CREATIVE.ALT2",
+          "text": "Creative里你已在PDA相册有自己的原生游戏照片，当前可用相框能展示这些照片；已有室内可放位置。先选什么？",
+          "scene": "已有照片真的放进相框",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SUB109K_PHOTOS",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已有相册与相框操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "按自己的观察站展示主题，实际选好相框位置并放入一张自摄照片，呈现想要的空间",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "为自己已经到过的拍摄地点，补上自己的图文记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前相册里可选的已有图像素材，决定是否用于这次布置",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "实际布置自摄图才a，不把单纯看风景算表达，不强迫外部图片/在线上传，也不把已有照片当新收藏。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你真实玩过的原作资源探索，不要求推进到结局。哪件当时确实做过的事最有分量？",
+          "scene": "曾怎样接住失事者的线索",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_STORE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为弄清船员和事故前后，实际回听过已经收到的无线电语音并读过相关PDA记录",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "为发现未知现场，实际游去过一块当时可达但自己没见过的地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先核对过已有逃生舱或自放信标实际显示的位置，再决定往哪走",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "为已经到过的残骸位置或已经拿到的物件，补过自己的记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "真实已发生叙事和探索回顾，不要求见过结局，也不把NPC求救算现实共同任务。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K09.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "没修无线电也可回想最早舱边的一小段。下面哪件是当时真正做过的？",
+          "scene": "曾怎样接住失事者的线索的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_STORE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去过自己此前没看过的浅水角，主要想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "核对过当时氧气和携带物，再决定这一轮",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "亲手把已有材料存入舱内储物，再取出过需要的那份",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "精力和状态都够、新水域也能去时，仍慢慢游过熟悉舱边，享受安定自主的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "真实已发生叙事和探索回顾，不要求见过结局，也不把NPC求救算现实共同任务。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K09.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "回想你原作Creative已搭过可进入房间并布置过家具的一段，不要求规模或最终成品理想。哪件当时最有分量？",
+          "scene": "曾经造下而非只看过的空间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_CHAIRS"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己选的观景站主题，实际建过走廊、窗和家具，让空间呈现个人风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "真实拆下过一个部件，再在另一合法位置建起，亲手查看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先看过当时可选部件和外观方案，再决定是否建造",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经搭出的部件与连接，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "回顾实际发生，不把看别人作品当自己表达，也不把普通存档当保存本机创作预设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K09.CREATIVE.V1"
+        },
+        {
+          "text": "没建完整基地也可以回想第一次试放基础走廊。哪件当时确实做过？",
+          "scene": "曾经造下而非只看过的空间的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES",
+            "SUB109K_BUILDER_OP"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换过合法预览的位置或朝向，亲手看过这次变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "读过已有建造器操作说明，再继续亲手试放",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排过选部件、定朝向、确认放置和施工的这一轮步骤，并实际尝试",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "在合法位置持续建造，反复投入过光束和结构成形紧跟操作的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "回顾实际发生，不把看别人作品当自己表达，也不把普通存档当保存本机创作预设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K09.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K09.RESOURCE_EXPLORATION.ALT2",
+          "text": "没有回听过剧情或探索回顾，也可回想原作里自己真实用修复工具尝试处理逃生舱设备的一段，不要求修成。哪件当时最有分量？",
+          "scene": "曾亲手尝试修过逃生舱设备",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_STORE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己实际尝试过的设备修复步骤和结果，补上过工作记录",
+              "signal": "work_task_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "先读过已有修复工具操作说明，再亲手尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "直接用当时可用修复工具处理过眼前可修设备，体验操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看过当时设备已显示状态与待修处，再决定怎样动手",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "实际修复记录用精确工作copy，不拿未来准备、NPC施工或成功门槛代替。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K09.CREATIVE.ALT2",
+          "text": "另一种Creative回顾：你实际部署或使用过移动载具平台，不要求搭过基地。哪件当时最有分量？",
+          "scene": "曾真实使用过载具平台",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接在当时可用平台做过一艘当前可造载具，体验普通制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先比较过当时平台已开放可做项目，再决定是否制造",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "读过已有平台操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "排过取平台、合法部署、登上与选择项目的亲手次序，并实际做过",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "回顾实际平台动作，不将机器人动画说成玩家手感，也不以造出更高级艇给成长分。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你在原作基地里真正尝试过的事；不要求最后配置理想。哪件最有分量？",
+          "scene": "已经实测过的基地与扫描配置",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_SCANNER",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在有电的扫描室装过现有范围模块，并把HUD芯片装到玩家装备位，实际扫描过菜单内目标、出门看过标记，比较两部件配合后的作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "为同一份自己确认未完成的蓝图，实际回到已知残片处尝试补过扫描进度",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先比较过已开放、材料足够的基地部件，真实作过这次方案选择",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "先自己提出过完整度变化的解释，保持其他部件不动，只拆装过一块窗并实际核对前后数值",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b须真实模块与玩家HUD实装扫描，不把普通两间相邻基地算构筑；p不要求猜对或修成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K10.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "没有基地或扫描室时，回想最早的制造机和基础工具。哪件当时确实发生？",
+          "scene": "已经实测过的基地与扫描配置的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_SCANNER",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较过当时已开放且够料的几个基础配方，再决定做哪个",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "为当时自己已取得的工具或已到过的浅水地点补过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "为上浮、转向再靠近舱梯的控制，真实反复练过，不要求练得好",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "读过已经开放的工具说明，再拿当时已有工具继续实际尝试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "b须真实模块与玩家HUD实装扫描，不把普通两间相邻基地算构筑；p不要求猜对或修成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K10.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "回想你Creative里实际尝试过的基地外泛光灯布置或海蛾操作，不要求试出预期结果。哪件最有分量？",
+          "scene": "真的去测过一个照明解释",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_COLOR",
+            "SUB109K_MODES",
+            "SUB109K_FLOODLIGHT"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为练熟海蛾接近月亮池的对正与减速，专门反复驾驶尝试过",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "实际把已停靠海蛾改成自己的配色与名字，重视个人主题呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先查看过当时可达月亮池、载具或舱口现场，再继续操作",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "自己先提出过基地外岩角照明与泛光灯位置的解释，保持灯朝向、环境光、水体和其他灯相同，只把一盏可亮泛光灯拆下并在另一可亮位置重建，再从同一观察点比较过岩角",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "没有要求Creative生存压力；p单项实测，t确有反复练习目的。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K10.CREATIVE.V1"
+        },
+        {
+          "text": "没用过基地外泛光灯或海蛾时，回想自己真实用过海滑翔器的浅水一段。哪件当时真实发生？",
+          "scene": "真的去测过一个照明解释的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_COLOR",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿海滑翔器在开阔水域反复推进转向，主要享受输入立刻带动移动的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先读过PDA已有工具操作说明，再拿当时可用工具试过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时逃生舱标记显示的位置和距离，再决定去向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "为了自己控制得更熟，反复练过海滑翔器转向和靠近固定目标",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "没有要求Creative生存压力；p单项实测，t确有反复练习目的。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K10.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K10.RESOURCE_EXPLORATION.ALT2",
+          "text": "第三种原作回顾：你确实装备、换用过当时已有的氧气瓶，不要求到过基地。哪件当时最有分量？",
+          "scene": "真实换用过的氧气瓶",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较过当时现有瓶的已显示状态和携带占用，再决定采用哪只",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "读过已有装备更换说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "为自己已经取得的氧气瓶或已到过的停留点，补上过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "实际换用过自己已有另一只可用氧气瓶，亲手体验现有配置",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "已知装备切换不算机制构筑或持续成长，回顾不要求氧气容量提升成功。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K10.CREATIVE.ALT2",
+          "text": "没有做过照明对照、也没有驾驶练习时，可回想原作Creative真实用过原生相册的一段。哪件当时最有分量？",
+          "scene": "真实拍过并展示过的图像",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_PHOTOS",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经到过的拍摄地点或已取得物件，补上过图文记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "先看过相册里当前可选的已有图像素材，再决定是否布置",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "读过已有相册或相框操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "为了自己的舱内主题，实际放过相框并选入已有自摄照片，重视空间呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "第三回顾给实际摄影/展示经历；不冒称所有照片自动成就或收藏登记。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你原作里真实投入过的一段基地生活。哪件当时做过的事最有分量？",
+          "scene": "基地供给是怎样继续的",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_BUILD",
+            "SUB109K_CHAIRS"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经搭建的基地部件与连接，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力、新地形也可去，仍慢慢整理过熟悉种植区或储物，喜欢自己掌握的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "已经多轮把种植、有机补料、基地供电与工具充电接起来后，又实际继续过这个循环",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "按自己选的主题，实际安排过当前可建房间、柜子与椅子的布局，重视空间呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "循环已有多轮，不把单次升级、第一次种植物或普通保存算长期养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K11.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "没有基地的人也可回想逃生舱里的真实经历。哪件确实做过？",
+          "scene": "基地供给是怎样继续的的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_BUILD"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对过自己当时身体、工具电量和补给状态，再继续行动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "有精力且还能继续探索时，仍慢慢整理过熟悉舱内储物，享受安定自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为一次制作，排过取材料、使用制造机、收起成品的亲手顺序，并照着做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "实际加工过一件当时够料的基础物品，主要想亲手体验",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "循环已有多轮，不把单次升级、第一次种植物或普通保存算长期养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K11.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "回想你Creative实际用走廊、窗和舱口尝试接出小段空间的一轮，不要求建完或美观。哪件当时最有分量？",
+          "scene": "走廊和窗真正搭过的一轮",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排过当时一轮拆除、换朝向和重建的编辑次序，并亲手执行过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "为已搭建的基地和连接位置，补记过建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "当时用建造器沿合法接口接过一段走廊，并尝试在可装位置加舱口或窗，体验原生搭建操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "按自己设定的观景主题，实际安排过走廊朝向和窗的位置",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "过去普通搭建、预排编辑、建设补记与个人呈现各按实际解释；不用房间只搭走廊不成为额外玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K11.CREATIVE.V1"
+        },
+        {
+          "text": "还没做过连接空间也可回想第一次基础试放。哪件确实做过？",
+          "scene": "走廊和窗真正搭过的一轮的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_BUILD",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了自己的入口方向，选定位置并实际建下过第一个部件",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "为已经亲手搭下的基础部件，补记过建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "亲手换过基础走廊合法预览的位置或朝向，查看变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先看过已可选的基础部件外观，再决定采用哪个",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "过去普通搭建、预排编辑、建设补记与个人呈现各按实际解释；不用房间只搭走廊不成为额外玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K11.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K11.RESOURCE_EXPLORATION.ALT2",
+          "text": "没有基地供给或制造流程，也可回想原作最早取用灭火器、喷射尝试或随后收整的一段。哪件当时真正发生？",
+          "scene": "最早灭火器的真实使用",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_STORE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在允许丢取的位置实际放下过现有灭火器，再捡回或改取需要的物品，调整携带物",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "为自己已取得的灭火器或已体验的逃生舱地点，补上过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "直接拿当时能用的灭火器对可处理火点试喷过，主要体验具体操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先读过当时已有灭火器操作说明，再继续亲手尝试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "真实过去使用，没有紧急现场还让人选休闲的正确答案；不把灭火冒充角色成长。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K11.CREATIVE.ALT2",
+          "text": "没试过建筑规则或预览，也可回想原作Creative里自己真实用现有生存刀切过海藻样本的一段。哪件当时确实发生？",
+          "scene": "真正切取过的海藻样本",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_MODES",
+            "SUB109K_STORE",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排过取刀、靠近可切植物、取样与收起的亲手次序，并实际做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "为已取得样本或已到过的海藻停留点，补上过自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "直接用当时已有生存刀取过一份可切海藻样本，体验这个普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "读过已有刀具取样操作说明，再亲手继续试过",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "第三前提是原生生存刀取海藻样本，不重复另一槽已有信标与浅水探索；普通取样不计收藏或养成。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "SUB109K12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你真实玩过的原作，不由存活日数或成就数量来比较。哪件实际做过的事最有分量？",
+          "scene": "工具实用、海蛾操纵和艇身呈现",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_COLOR",
+            "SUB109K_PLAYER",
+            "SUB109K_SEAMOTH"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "开海蛾在宽阔水域反复转向、前进，主要享受操纵与艇身回应连续发生的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "实际用过当时已有且能工作的海滑翔器，沿熟悉短浅水推进一轮，主要体验普通工具操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "为把海蛾对正月亮池入口练得更熟，专门反复练过靠近和退开",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "在可用载具控制台实际改过已停靠海蛾的配色与名字，让它呈现自己的主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "海滑翔器普通操作、海蛾即时手感、刻意靠泊练习与真实配色各自解释；普通脚蹼游泳不因自设禁令算发明。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K12.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "尚未造艇的人可回想最早一段舱边经历。哪件是当时真正做过的？",
+          "scene": "工具实用、海蛾操纵和艇身呈现的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_COLOR",
+            "SUB109K_PLAYER",
+            "SUB109K_SEAMOTH"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力、也能去新浅水角，仍慢慢重游熟悉舱边，喜欢安稳自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "专门在舱梯附近反复练过上浮、转向和靠近，重视自己逐渐掌握的过程",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "从另一条当时已游通的浅水路线回过舱，体验不同走向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "D",
+              "label": "亲手换用过自己已有的一件基础工具，体验它怎样工作",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "海滑翔器普通操作、海蛾即时手感、刻意靠泊练习与真实配色各自解释；普通脚蹼游泳不因自设禁令算发明。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K12.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "回顾你在原作Creative已建好一处基地、部署过自有信标之后的海底活动，不按覆盖地图多少评判。哪件当时确实做过的事最有分量？",
+          "scene": "自由探索里的熟悉一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_MODES",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已经到过的海底停留点或已经取得的物件补过自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力、未知海域也可去，仍慢慢沿熟悉基地外围游过，享受自己掌握的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为发现而去过当时可达但此前未见过的海底地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先查看过自己已有信标当前显示的位置与标记，再决定往哪走",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "Creative没有强迫新解锁、人物成长或剧情触发；只解释真实回答里的行动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K12.CREATIVE.V1"
+        },
+        {
+          "text": "只玩过最早舱边也可回顾，哪件当时真正发生？",
+          "scene": "自由探索里的熟悉一段的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_MODES",
+            "SUB109K_PLAYER"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已经体验的逃生舱和浅水地点，写下过自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "有精神、新浅水角也能去，仍慢慢重游过熟悉舱边，喜欢安定自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为看看环境，游去过一块自己此前没见过的浅水角",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "亲手把现有物品存进舱内储物，再取出过需要的那件",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "Creative没有强迫新解锁、人物成长或剧情触发；只解释真实回答里的行动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SUB109K12.CREATIVE.ALT1"
+        },
+        {
+          "id": "SUB109K12.RESOURCE_EXPLORATION.ALT2",
+          "text": "没造艇、也没做过短路规则时，可回顾原作第一次基础走廊搭建。哪件当时实际做过的事最有分量？",
+          "scene": "曾亲手搭过第一段基础走廊",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_BUILD"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已搭出的基础部件和连接，补记过建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "按自己想呈现的观察站入口方向，选定合法位置并实际建下过一段走廊",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "实际改变过基础预览合法位置或朝向，亲手看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排过选部件、调朝向、确认与施工的一轮编辑步骤，并实际做过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "第三回顾是独立基础建造，不要求艇或个人规则；只看真实布局表达，不推身份与技能。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "SUB109K12.CREATIVE.ALT2",
+          "text": "没有探索回顾或熟悉水域停留，也可想一段Creative真实换用过已有生存刀与手电的经历。哪件当时做过的事最有分量？",
+          "scene": "生存刀与手电的真实换用",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SUB109K_PLAYER",
+            "SUB109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经取得的刀或手电，补上过自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "实际把手中生存刀换成自己已有手电，并用它照亮近处，亲手体验现有配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先比较过当时已有刀和手电的用途与携带占用，再决定采用哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "读过已有刀或手电操作说明，再亲手继续尝试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "Creative无生存需求也可实际试装备；普通已有配置不记养成、收藏或个人纪录。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+964c74c32640"
+}

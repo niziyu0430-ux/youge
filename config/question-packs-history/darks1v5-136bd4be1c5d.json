@@ -1,0 +1,957 @@
+{
+  "id": "darks1v5",
+  "title": "暗黑血统战神版：战争、武器经验与遗迹道具",
+  "game_ids": [
+    "steam-462780"
+  ],
+  "scope": "战神版单人本体",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "War的唤地者、十字飞刃、锁链按已取得条件使用，基础剑战与攀爬替代可答。",
+    "持续成长来自使用经验、购买剑技或完成碎片组，不套二代献祭与三代锻造。",
+    "固定主线不作善恶选择；所有身份题只约束可选起手或路线。",
+    "严格复核仅按实际行为收紧信号：普通换路、换招、已有配置比较/试用、个人准备与当前资源循环均作0分记录；不为保留标签增强原动机。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "战神版单人本体",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DARKS1V501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你已拿到唤地者，来到一扇可以唤醒的远古之门前。周边还有没看过的街角、已发现但漏取的士兵文物，以及一条可听的主线对话。你此刻先处理什么？",
+          "scene": "唤地者前后的废土岔路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_core",
+            "ds1v5_manual",
+            "ds1v5_gear"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先试唤地者与门的反应，弄清声音怎样让这道阻碍变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "绕进没看过的街角，不预设那里有宝箱",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "去拿那件已在自己文物清单上留空的士兵文物",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先接上可听的主线对话，想弄明白战争为何被引来这里",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "初代唤地者与废土路线，区分机关因果、未知、补全和剧情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V501.V1"
+        },
+        {
+          "text": "若刚开始还没拿到唤地者：在能自行移动的一段废墟里，前路与一条未走侧路都可通行，附近也有普通敌人。你现在先做什么？",
+          "scene": "唤地者前后的废土岔路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_core",
+            "ds1v5_manual",
+            "ds1v5_gear"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "观察可攀附的墙面与平台，猜它们怎样接成一条通路再试",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "拐到侧路尽头，看看倒塌建筑后面是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "在眼前普通敌人身上练稳一次闪避后接剑",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "直接挥剑迎向敌人，先享受剑刃命中的声响和停顿",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "初代唤地者与废土路线，区分机关因果、未知、补全和剧情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已取得十字飞刃，在一处能回走的遗迹看见火源、惰性炸弹和可破的障碍。旁边也有普通敌人和一个已知文物缺口，主线暂不催你。你现在更想先做哪件？",
+          "scene": "十字飞刃与惰性炸弹",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_cross",
+            "ds1v5_gear"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对同一组可见目标反复调整瞄准，让自己标记与投出的衔接更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先对旁边普通敌人蓄力投出飞刃，体验回旋与命中的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先走去文物缺口所在的侧台，把一直记着的那件补上",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先按火源到炸弹的顺序标记，验证飞刃是否能把火一路带过去",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "机关关系由题干给线索，不考路线答案；其他选择也是可选活动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V502.V1"
+        },
+        {
+          "text": "还没拿到飞刃的话：你来到能回走的小遗迹，已有一件看见却没取的士兵文物，另一侧有陌生通路与普通敌人。你此刻先做什么？",
+          "scene": "十字飞刃与惰性炸弹的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_cross",
+            "ds1v5_gear"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在普通敌人处练一次闪避后接混沌吞噬者的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "走进陌生通路看看，不要求一定出现升级材料",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "沿着眼前已开放的主线走，想接上战争遭指控后的下一段事情",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先拿文物，补上自己一直记着的那一件",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "机关关系由题干给线索，不考路线答案；其他选择也是可选活动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "Vulgrim的商店已经开放，你带的灵魂够买一项当前可学剑技，手里已有回怒强化Bane，也会基础怒气招式。出发前你更想先做什么？",
+          "scene": "Vulgrim面前的一笔灵魂",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_core",
+            "ds1v5_enhancement_rules"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把Bane装在常用武器上，让自然回怒支持已有怒气招式，再试这段配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先用已经会的剑招去打附近普通敌人，享受剑击连续发生",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "真正买下会继续使用的剑技，让战争永久多一项可用招式",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把灵魂、补给和下一次返店路径排清，按需要留出各份支出",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "Bane自然回怒支持怒气招式是具体互补，实际买剑技是持久成长；个人灵魂与返店预算降为任务准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V503.V1"
+        },
+        {
+          "text": "若尚未取得武器强化：你已经能在Vulgrim处购买基础剑技，也能回到附近普通遭遇；当前灵魂够买一项。你先选什么？",
+          "scene": "Vulgrim面前的一笔灵魂的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_core",
+            "ds1v5_enhancement_rules"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去练稳已有剑招，等自己的衔接顺了再加新动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "直接用混沌吞噬者打一段熟悉招式，先享受砍击的回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "花灵魂买下自己想长期用的那项剑技",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按之后是否还会返店，把这次买技能与保留补给的灵魂分清",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "Bane自然回怒支持怒气招式是具体互补，实际买剑技是持久成长；个人灵魂与返店预算降为任务准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已持有混沌吞噬者、镰刀与地狱火Hellfire强化，眼前普通遭遇允许自由选武器与现有招式。此刻更想先打出哪一种过程？",
+          "scene": "剑与镰刀都在手的遭遇",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_core",
+            "ds1v5_enhancement_rules",
+            "ds1v5_fire_rng_review"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把自己设成持大剑迎敌的骑士，这回即使可换镰刀仍先用剑起手",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "专练自己剑招接闪避时常断的一段，让这一次比上一回连贯",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "用镰刀扫过近处再换剑，享受两种攻击重量与回声",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "把Hellfire装在镰刀，观察范围命中时可能触发的持续火伤，再按效果调整这组搭配",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "Hellfire装镰刀把范围命中与持续火伤结合是实部件效用；自设持剑骑士实际限定持剑起手保留r；ALT每次不同距离不是新规则降为动作变化。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V504.V1"
+        },
+        {
+          "text": "还没有副武器的话：这场普通遭遇中，你能使用基础混沌吞噬者与闪避。你现在先怎么打？",
+          "scene": "剑与镰刀都在手的遭遇的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_core",
+            "ds1v5_enhancement_rules",
+            "ds1v5_fire_rng_review"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "延续自定的正面持剑骑士身份，主动由正面持剑接近再迎击",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "盯住自己的闪避落点，练它怎样接回下一剑",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "连续挥动熟悉剑招，体验重量、停顿与命中声",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先用混沌吞噬者接敌，等剑招收回后闪到侧边再挥一剑，亲手试这个起手次序",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "Hellfire装镰刀把范围命中与持续火伤结合是实部件效用；自设持剑骑士实际限定持剑起手保留r；ALT每次不同距离不是新规则降为动作变化。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已取得深渊锁链，正在可回访遗迹入口。几处现已能相互接到的抓点通向高处，另一条普通攀爬路也可用；旁边有已记收集缺口和平台机关。你先怎么走？",
+          "scene": "取得锁链后的旧遗迹",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_gear",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "抓到没到过的高台，想看看俯视不到的那片空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "循着之前记录的文物或碎片缺口返回，先补上明确少的一项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "把抓点、移动平台和开关的关系看清，试一次自己的连接猜想",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "选一小段已经能连通的抓点，反复练腾空、抓取与落地的衔接，让自己掌控得比开始稳定",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "深渊锁链须已取得，不把后期抓取能力给予开局；收集目标已明确。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V505.V1"
+        },
+        {
+          "text": "还没有锁链的话：已能回走的废墟只需基础跳跃、攀爬与平台；主路、未探门洞、可动平台机关和一件已见未取的士兵文物都可处理。现在先选什么？",
+          "scene": "取得锁链后的旧遗迹的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_gear",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进门洞看看里面的空间，不先查有没有奖品",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "回到自己记着漏取的一件士兵文物旁，把它补上",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先预测平台开关会改变哪一段通路，再亲自触发核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "选一段已经走过的攀爬，练自己落到平台后的转向",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "深渊锁链须已取得，不把后期抓取能力给予开局；收集目标已明确。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已有回怒与增伤两枚武器强化和两把近战武器，其中一把尚未练满经验。附近普通敌人可打，当前怒气也足够使用已有招式。你先做哪项？",
+          "scene": "强化插在哪把武器上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_enhancement_rules"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换用尚未练满的那把近战武器交战，让使用经验继续积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先安排这段要花多少怒气、何时回补，再按流程清理路上的遭遇",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "C",
+              "label": "沿用最喜欢的一把直接打，优先享受挥动与收招的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "分配回怒与增伤强化，让常用武器支持怒气招式的循环，另一把接上直接伤害",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "未满武器实际使用经验保留g；怒气消耗恢复降交手资源循环，ALT生命补给返店降任务准备；两强化分工与怒技支持是明确互补。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V506.V1"
+        },
+        {
+          "text": "只有混沌吞噬者、还没拿到强化的话：剑尚未练满经验，眼前普通遭遇可自由交手。你此刻更在意怎样做？",
+          "scene": "强化插在哪把武器上的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_enhancement_rules"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着挥剑，享受熟悉招式连续命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "按当前生命和已有补给，安排打完这段再回店的顺序",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "主动用这把尚未练满的剑再打一段，看它的使用经验留下增长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "练自己闪避之后接剑的时机，修正总多走的一步",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "未满武器实际使用经验保留g；怒气消耗恢复降交手资源循环，ALT生命补给返店降任务准备；两强化分工与怒技支持是明确互补。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你回到能自由来回的旧区，已知那里有一件自己文物清单缺的士兵文物、一片可完成当前生命石的最后碎片，另有一条未探侧路。你先把这趟给哪件事？",
+          "scene": "碎片与文物的不同吸引力",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_core",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先钻进未探侧路，想知道此前没看见的空间是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先回到已开放的主线入口，接着看战争和各方交易如何推进",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先去拿士兵文物，重点是把已在追的那组补完整",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "沿自己一直在补的生命上限培养，取回最后那片生命石碎片，留下这次提升",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "收藏缺口与实际完成生命成长分开，题干明确最后碎片而非每片都涨上限。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V507.V1"
+        },
+        {
+          "text": "如果还没遇到整组碎片：Vulgrim处已有你能支付的基础剑技，附近也有一件明确漏取的文物与未探门洞。你此刻先做什么？",
+          "scene": "碎片与文物的不同吸引力的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_core",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进未探门洞看一眼，未知本身就让我想改路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "接着往当前主线处走，先弄清战争下一步会被要求做什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "拿那件已记着的文物，先消掉一个明确缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "用已有灵魂买下基础剑技，把角色的可用动作继续养起来",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "收藏缺口与实际完成生命成长分开，题干明确最后碎片而非每片都涨上限。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "在已经清静、能安全停留的萨麦尔所在绞架区域的一段路旁，主线路已可继续。你精力充足，既可返店，也可沿熟路散步或查附近旧通道。此刻更想怎么做？",
+          "scene": "萨麦尔附近的空闲",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_core",
+            "ds1v5_manual",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走到一个没进过的小入口，看看主路旁还藏着什么空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿走熟的小段废墟从容慢走，不加新目标，享受看惯通路带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先对照手中灵魂与想买的剑技，把返店、补给、出发排成一趟",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "检查旧通道那处机关，验证自己之前没试完的联动关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "两种情境均明确精力足、主线可走而自愿熟路安稳，h保留；灵魂补给返店不计系统。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V508.V1"
+        },
+        {
+          "text": "换到更早的废墟：眼前熟路已无敌人，你精力足，出口可直走，Vulgrim商店、未探侧道和一处可试的门闩都可达。现在先做什么？",
+          "scene": "萨麦尔附近的空闲的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds1v5_core",
+            "ds1v5_manual",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "绕进侧道，去看坍塌墙后还接着怎样的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "重走熟悉废墟路段，不催自己推进，喜欢已认识环境和自主步速的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先理好灵魂与补给，按计划返店后再出发",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "回到刚才的门闩，核对自己关于它控制哪扇门的猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "两种情境均明确精力足、主线可走而自愿熟路安稳，h保留；灵魂补给返店不计系统。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想初代里一段你确实处理过的遗迹或废墟，不要求会全部特殊道具。哪种经历最像你愿意多停留的原因？",
+          "scene": "回看自己拆过的地下城",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_gear",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把开关、平台和障碍的关系试清，原先的猜想得到了解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "从一个不起眼的门洞找到了之前没见过的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为了自己列出的文物或碎片缺口，特意回来补上",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "为了自己跳跃或道具瞄准比前一次更稳，重复过一小段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不拿通关速度衡量推理或操作，真实回顾各自投入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V509.V1"
+        },
+        {
+          "text": "若地下城还没什么印象：回想早期一段能攀爬、跳跃与回走的街区，哪种实际停留更像你？",
+          "scene": "回看自己拆过的地下城的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_gear",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "动过一处门闩，确认了它为何能改变前方的门",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "绕过倒墙去看了一段没去过的小路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "回头取了自己记着漏下的那件士兵文物",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "为了落地后接剑或转向比刚才顺，重复试过一次",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不拿通关速度衡量推理或操作，真实回顾各自投入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你真正使用、购买或调整过的初代武器，哪种变化最容易让你继续投入？",
+          "scene": "回看武器身上留下的变化",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_enhancement_rules",
+            "ds1v5_fire_rng_review"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把回怒强化配怒气招式，或把火伤强化配镰刀扫击，实测试过一组相互支持的搭配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把返店、灵魂支出与路上补给排好，整段流程因此更顺",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "某把武器的命中与收招反馈本身很合意，让我一再拿出来用",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "持续使用让武器经验上升，或花灵魂买下剑技，投入留在了后续旅程",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "回顾回怒怒技与火伤镰刀互补成立；使用经验和购买剑技持久成长成立；返店分账只是个人任务准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V510.V1"
+        },
+        {
+          "text": "若还没有强化或副武器：回想混沌吞噬者与Vulgrim基础剑技的真实经历，最像哪一项？",
+          "scene": "回看武器身上留下的变化的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds1v5_manual",
+            "ds1v5_enhancement_rules",
+            "ds1v5_fire_rng_review"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为练稳已有剑招与闪避的衔接，主动重复过自己的薄弱一段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "为灵魂先买什么、何时补给排过明确先后",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "喜欢剑刃落下的重量与声响，所以愿意继续打一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "看着混沌吞噬者的使用经验继续上升，或实际买到了一个想长期用的动作",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "回顾回怒怒技与火伤镰刀互补成立；使用经验和购买剑技持久成长成立；返店分账只是个人任务准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想在初代普通交手中你自己决定过的起手与接近方式，哪种真实经历更贴近你？",
+          "scene": "回看作为战争的可选动作",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds1v5_core",
+            "ds1v5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己试过先闪开再用混沌吞噬者起手，和原先先挥剑再拉开的次序换着体验过",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "先猜一类敌人什么动作后会留空档，再交手核对过这个猜想",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自定了持大剑迎敌的骑士身份，所以即使可换武器，仍选择持剑接近并起手",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "为了自己闪避接招的进步，专门练过一个常不稳的动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通换距离或武器并未构成新的可执行约束，两种i降为动作变化；自设剑士身份实际改变起手与接近保留r。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V511.V1"
+        },
+        {
+          "text": "如果你只用过混沌吞噬者：回想一次确实可以自由移动的普通遭遇，哪种实际选择比较像你？",
+          "scene": "回看作为战争的可选动作的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds1v5_core",
+            "ds1v5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己试过先在剑刃够不到的位置等敌人接近，再向前挥剑，亲手改变过一次出手时点",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "试过敌人的出手与停顿，确认什么时候会出现自己预测的空档",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把自己设成正面迎敌的持剑骑士，主动选了正面接近而不是绕侧面",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "重复过一次闪避落点，只想让自己的下一剑更连贯",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通换距离或武器并未构成新的可执行约束，两种i降为动作变化；自设剑士身份实际改变起手与接近保留r。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS1V511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS1V512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想初代里你真正主动停留过的一处地方，不要求通关或全收集。哪种经历更能说明那次停留？",
+          "scene": "回看废土里值得停下的地方",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds1v5_core",
+            "ds1v5_manual",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "没查奖励，只是想知道某扇侧门后是什么就走了进去",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当时精力足、主线能继续，仍重走熟路，享受熟悉废墟与从容行走的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为了看懂战争被指控后各方为何这样行动，接着听过主线对话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "专门去补了自己文物清单中明确少的一件",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "舒缓不由疲劳推断；故事关注不被改写为现实道德判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V512.V1"
+        },
+        {
+          "text": "若只玩到早期：回想开头可自由行走的一段废墟，哪种已经发生的停步最贴近？",
+          "scene": "回看废土里值得停下的地方的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds1v5_core",
+            "ds1v5_manual",
+            "ds1v5_cross"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拐进了原本没计划去的门洞，单纯想知道那里通向哪",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当时精力足且有目标可走，仍在走熟的废墟路段慢行，喜欢已认识环境带来的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "看过已有剧情与对话，想弄懂战争为何成为各方指向的对象",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "回头取了自己已记下漏拿的士兵文物",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "舒缓不由疲劳推断；故事关注不被改写为现实道德判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS1V512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+136bd4be1c5d"
+}

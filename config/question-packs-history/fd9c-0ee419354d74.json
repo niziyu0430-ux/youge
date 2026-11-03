@@ -1,0 +1,947 @@
+{
+  "id": "fd9c",
+  "title": "FOUNDRY（建造及自动化模拟）",
+  "game_ids": [
+    "steam-983870"
+  ],
+  "scope": "PC Early Access已发布4.0共有本体；单人完整路径",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "不采用未来loader重做、conveyor lift、蓝图或高低压改版。",
+    "按已体验工具换题；loader当前免电免地基，开局替代不要求列车/变压器/后期研究。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC Early Access已发布4.0共有本体；单人完整路径",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "FD9C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "当前4.0的矿机已经能产矿，附近熔炉时有停顿；能看矿机输出、loader方向、带上物料和熔炉状态，原因尚未确定，材料够改一小段。先做什么？",
+          "scene": "矿机有矿、熔炉没接着收",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40",
+            "FD9C_LOADER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出一个关于出入口或目标状态的解释，只改其中一处，再看同一段是否连续进料",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先打开矿机与熔炉的现有运行面板，核对产出、库存和工作状态，再决定从哪处改",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "把采矿、熔炼、成品缓存与后续制造接成几轮安排，随实际堵塞继续调",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮移loader、放带和接建筑的编辑步骤，再亲手调整",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "4.0 loader无须电或地基，不把旧攻略要求当答案。p自提且单改实测，查看0、持续多系统y、单轮直接编辑0。ALT只最早矿机接熔炉。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C01.V1"
+        },
+        {
+          "text": "只有第一段矿机与熔炉：矿机有产出，熔炉尚未稳定收到，当前loader方向和两端库存可看，原因还不清楚。先选什么？",
+          "scene": "矿机有矿、熔炉没接着收的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40",
+            "FD9C_LOADER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开矿机与熔炉的运行面板，核对两端库存和工作状态，再决定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "自己提出一处连接是否造成现象的解释，只改这一处并看下一批矿如何走",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有loader和传送带操作说明，再亲手接这段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排本轮放loader、转带和接熔炉的步骤，再照着改",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "4.0 loader无须电或地基，不把旧攻略要求当答案。p自提且单改实测，查看0、持续多系统y、单轮直接编辑0。ALT只最早矿机接熔炉。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "现有采掘工具能在这片体素地形挖通道，洞口与旁边已可达的陌生侧面都能走；背包与材料足够继续，没迫近任务。先给哪件时间？",
+          "scene": "第一人称开一处体素通道",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走到尚未看过的可达侧面，想知道这里的岩层和空间是什么样",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先按这轮通道宽度、出口与后续建筑摆位排编辑步骤，再动手挖放",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有采掘与放置工具说明，再亲手继续开这段通道",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "亲手连续挖开眼前一段，主要喜欢瞄准、挖掘与地形立即改变的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "f仅直接采掘与即时地形反馈；w为当前可达未知地形。普通挖出占位不硬算推理解谜，核已有工具说明0。ALT不用后期炸药/无人机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C02.V1"
+        },
+        {
+          "text": "刚起步手动采掘也能选：当前工具能挖眼前矿石，旁边一处已可步行到的坡后自己还没看；材料和精力都够。先做什么？",
+          "scene": "第一人称开一处体素通道的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走到可达坡后，单纯想看看那边的地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先按这一轮挖出的空位与基础地板摆放顺序安排，再照着动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对现有采掘和地板放置说明，再继续操作",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先亲手挖一小段，喜欢操作马上让矿石和地形改变的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "f仅直接采掘与即时地形反馈；w为当前可达未知地形。普通挖出占位不硬算推理解谜，核已有工具说明0。ALT不用后期炸药/无人机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已有高压来电、可用变压器与机器所在低压地板，一台机器间歇停下，原因未定；线路、地板连接、原料与用电状态都可查，材料够调整。先做什么？",
+          "scene": "高压网与低压地板",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_POWER",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把发电投入、供电负荷、矿料加工与后续扩建接着看几轮，持续按变化调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前高低压与变压器说明，再亲手接这一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "实际调整一处可移动变压器的位置，先亲手查看它与现有地板的接入情况",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "提出一个机器为何间歇停下的解释，只改一项供电连接后看同一机器状态",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "普通高压—变压器—低压接通不单凭必需设备串接计b，一处摆位试改0；p须自提原因并单改实测，y多轮能源与生产互依。只用Dev110明确现行规则，排除未来改版；ALT初期低压。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C03.V1"
+        },
+        {
+          "text": "只有初期低压发电：当前发电机、已有地板与一台机器可用，机器没有连续运作；发电、地板连通和机器状态都可查，原因未定。先做什么？",
+          "scene": "高压网与低压地板的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_POWER",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对初期发电与带电地板说明，再亲手接眼前小段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮地板、机器位置与连接的编辑顺序，再照着搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先查看发电与机器运行面板，核对它当前停在哪一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "猜一个地板连接或负荷条件是否相关，只改一处后看同一机器状态",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "普通高压—变压器—低压接通不单凭必需设备串接计b，一处摆位试改0；p须自提原因并单改实测，y多轮能源与生产互依。只用Dev110明确现行规则，排除未来改版；ALT初期低压。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "4.0已有一条能往返的货运线，现有一趟久等或少装的现象尚未解释；车站旁装卸站与带口可用，装卸、库存和等待条件可查可调，当前可组合“装满”与计时条件，供料够试。先投入哪项？",
+          "scene": "列车进站以后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_TRAINS",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前车站模式、货量与列车任务状态，再决定下一步改什么",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "把当前可设的“装满”与“计时到点”条件用OR组合后实际运行，试满载与超时两种放行条件怎样共同起作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先提出列车久等或少装的一个解释，只改一项当前等待条件，再看下一趟停站",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把矿端产量、站内储备、列车往返和工厂耗用连看几趟，再持续调供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "列车正式已发布，不假定补燃料；b是两种已可用等待条件的OR逻辑共同放行，非普通装卸串接。p单变检验可失败，y多趟相依物流。ALT不用铁路。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C04.V1"
+        },
+        {
+          "text": "还没做铁路：当前基础矿机与熔炉之间只有loader和短带，库存与接头可查，材料够挪一小段。先做什么？",
+          "scene": "列车进站以后的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_TRAINS",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这条早期采矿、熔炼和后续用锭接成几轮安排，随实际存量调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮移loader、转带和接入口的编辑步骤，再照着调整",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先查看矿机与熔炉的当前运行面板，核对产出、库存与工作状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有矿机出料与熔炉进料说明，再继续接线",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "列车正式已发布，不假定补燃料；b是两种已可用等待条件的OR逻辑共同放行，非普通装卸串接。p单变检验可失败，y多趟相依物流。ALT不用铁路。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "一项已开始的研究还未完成，当前科学包和实验室条件可满足；另有界面已列出的制造建设目标能推进。你有余量继续，先把这轮时间给什么？",
+          "scene": "已经供上的科学包",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续跟进这项已投入研究的供给，想让当前积累留成后面可用的技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把科学包材料、制造用料、供电与研究消耗连着安排几轮，再持续调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前已开放可做的两种生产安排，再决定这一轮先制造什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "按界面已列的当前建设目标实际搭好要求的那一段",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "g有已经投入且持续保留研究进度，非看菜单；目标0，不把新技术开放当c。ALT只早期已有研究。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C05.V1"
+        },
+        {
+          "text": "只到最早研究：实验室已有一项开始的基础项目，当前可制造它需要的科学包；矿锭与电力够这轮使用。先做什么？",
+          "scene": "已经供上的科学包的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续把这项已开始的基础研究供下去，重视积累会留成之后能用的技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前研究进度、科学包库存与实验室状态，再定这一轮投入",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前能做的科学包与建造用料条件，再决定先做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮机器与带口的编辑次序，再亲手完成眼前接入",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "g有已经投入且持续保留研究进度，非看菜单；目标0，不把新技术开放当c。ALT只早期已有研究。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你能直接编辑当前地板和传送带，一条新线可从现有机器旁绕过，也有可开挖的低处空间；两条方案材料都够，现有机器能暂停调整。先做什么？",
+          "scene": "从机器底下绕过去",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换成当前可搭的另一条带路，让物料跑一段看看怎样经过",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "按自己想表达的分层工业景观，实际安排地板边缘与管带轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两条当前能搭路线的空位和接入条件，再决定用哪条",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先排本轮开挖、铺地板、移动带段与接入口的步骤，再照着编辑",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "普通换路线不是i；明确玩家直接编辑，不套NPC搬运施工copy。没有把未来conveyor lift写成已用。ALT只平地。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C06.V1"
+        },
+        {
+          "text": "只有平地短带：当前能移动loader与普通带段，两种平面拐法都接得上，不需要升降机或地下设备。先选什么？",
+          "scene": "从机器底下绕过去的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际采用另一种可接通的短带摆法，看看矿如何走",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先比较两种拐法占位与接口条件，再定这轮怎么接",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有带段与loader操作示范，再回来继续修改",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮转向、放带与接建筑的编辑步骤，再亲手做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "普通换路线不是i；明确玩家直接编辑，不套NPC搬运施工copy。没有把未来conveyor lift写成已用。ALT只平地。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "当前同一批矿锭既要供制造也要供科学包，运行时一段供料时有停顿，原因未定；现有原料总量和材料够这轮调整，能查看各处库存、负荷与运输状态。先做什么？",
+          "scene": "会反复取用的生产段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40",
+            "FD9C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前各机器与储存面板，弄清眼前物料在哪一处",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先排本轮储存点、带段与机器移位的编辑步骤，再照着改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把采矿、熔炼、制造、科学包和电力留量连成接下几轮安排，随真实耗用持续调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "提出一个哪段先拖慢整条线的解释，只改那一项供给后看下一段运行",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "y有连续互依资源而非一轮排步骤；p未预指缺料原因，状态查看0。ALT最初采矿熔炼仍可有几轮持续运行。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C07.V1"
+        },
+        {
+          "text": "只有最初矿机和熔炉：这条线能运行，矿、锭和用电状态可查，后面还有已列基础建设要用锭。先选什么？",
+          "scene": "会反复取用的生产段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40",
+            "FD9C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按已有建设目标实际使用这批锭，推进眼前要求的一段",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮地板、熔炉与带口的编辑顺序，再照着动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把采矿、熔炼、用锭与发电接着安排几轮，持续随库存调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前矿量、熔炉状态与实际用电，再决定下一步",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "y有连续互依资源而非一轮排步骤；p未预指缺料原因，状态查看0。ALT最初采矿熔炼仍可有几轮持续运行。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你有精神，资源、工具和已经投入的未完研究足够继续新建设；现有厂房附近的地板与机器往来已经很熟，当前生产稳定。先做什么？",
+          "scene": "熟悉的金属地板",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去当前已可达但没仔细看过的坡后，单纯想知道地形另一面是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先沿认得的厂房慢慢走，喜欢熟悉空间里的运转日常，暂不开新片区",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按自己选的厂区主题，实际用已有颜色工具调整建筑与地板外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "继续跟进那项已经投入的研究，想让积累留下之后能用的技术",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "h有余力可推进仍主动留熟悉环境；a真实主题改色；w可达未知，不编固定奖励。ALT不用颜色工具或研究。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C08.V1"
+        },
+        {
+          "text": "只到最初地板和采矿点：你有精神，材料和工具够继续基础建设，也已认得这片小工地。先选什么？",
+          "scene": "熟悉的金属地板的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按界面已经列出的基础建造条件，实际继续搭眼前所需设施",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先在认得的地板旁从容走一圈，喜欢熟悉工地，暂缓下一段建设",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先排这轮补地板与移动机器的编辑步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "去当前可达、自己尚未细看的附近坡面，想看看这一侧的空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h有余力可推进仍主动留熟悉环境；a真实主题改色；w可达未知，不编固定奖励。ALT不用颜色工具或研究。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你实际处理过一次FOUNDRY机器或物流停顿，不要求找到原因或修好。哪种已经发生的过程更贴近？",
+          "scene": "那次实际查过的停顿",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FD9C_40",
+            "FD9C_POWER",
+            "FD9C_LOADER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我自己提出过供电、连接或库存条件的解释，只改其中一项后看了同一段运行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先看过当时矿机与熔炉的运行面板，核对库存和工作状态，再定下一个编辑位置",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "我把能源、矿料、制造和研究供给连着调整过几轮，关注它们持续互相影响",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我按这一轮摆位、地板与接入的步骤安排，实际动手重接了一段",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "全为过去过程；p无需修复成功，y多轮相依；4.0不把loader电力当现成原因。ALT最早小线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C09.V1"
+        },
+        {
+          "text": "回想你最早实际接过矿机与熔炉的那段，不要求它后来稳定出锭。哪件事真实做过？",
+          "scene": "那次实际查过的停顿的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FD9C_40",
+            "FD9C_POWER",
+            "FD9C_LOADER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我看过当时矿机与熔炉的运行面板，核对库存和工作状态，再决定改哪里",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我猜过一处连接是否相关，只改那一处并看了下一次出料",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我核对已有连接示范后，亲手重新接过一小段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮放loader、转带和接熔炉的顺序，并照着编辑了",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "全为过去过程；p无需修复成功，y多轮相依；4.0不把loader电力当现成原因。ALT最早小线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一段你实际用基础采掘工具挖过的体素空间，不要求挖到稀有资源或建成厂房。哪种当时真实发生的过程更贴近？",
+          "scene": "那次亲手挖开的空间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我有意在类似位置重复练习过瞄准与控制挖掘边界，想让自己更会操作工具",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我先安排过那一轮开挖和地板放置步骤，再照顺序动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "我转去看过当时已可达但陌生的侧面，主要想知道那边的地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我主要享受瞄准、挖开与地形立刻变化接连发生的操作反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "f直接动作反馈，t主动重复练操作，两者不要求技巧高；不是机器模拟观赏。ALT开局手动挖矿。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C10.V1"
+        },
+        {
+          "text": "只回想最初手动挖矿的一小段，哪件事确实发生过？",
+          "scene": "那次亲手挖开的空间的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主动重复过一小段瞄准和挖掘边界操作，想让自己更熟练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我先核对已有采掘说明，再亲手继续挖过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "我在附近一处已可走到但没看过的位置停留过，单纯想看那侧空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我喜欢工具作用后矿石和地形马上改变的连续反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "f直接动作反馈，t主动重复练操作，两者不要求技巧高；不是机器模拟观赏。ALT开局手动挖矿。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你已经实际调整过的一段列车运输，当时站点已有可组合的装满与计时条件；不要求运量达标。哪段过程确实发生过？",
+          "scene": "那次自己调整的运输",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FD9C_TRAINS",
+            "FD9C_40",
+            "FD9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为自己的分层工厂主题，实际改过地板边缘和带路轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先比较了当时两种已有可搭路线，再采用一种普通布局运行",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "我把当时已可设的“装满”与“计时到点”条件用OR组合并实际试过，关注两种放行条件共同怎样改变停站",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "我把那段运输的输入、缓存与下游耗用连着看过几轮，持续调过供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "V1明示真实列车与已可组合的等待条件，b须实际组合OR规则，不以普通站口衔接凑构筑；无列车ALT为基础运输。比较0，真实过去不要求运量或完工。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C11.V1"
+        },
+        {
+          "text": "回想只有loader与短传送带的早期一段，哪件事真实发生过？",
+          "scene": "那次自己调整的运输的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FD9C_TRAINS",
+            "FD9C_40",
+            "FD9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我看过当时两端机器的运行面板，核对接口配置与库存，再决定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我核对了已有短带连接说明，随后亲手重接过一段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "我先排了那轮移loader、转带与接建筑的编辑步骤，并实际照做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我实际换过另一种当时可搭的平面拐法，看矿怎样经过",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "V1明示真实列车与已可组合的等待条件，b须实际组合OR规则，不以普通站口衔接凑构筑；无列车ALT为基础运输。比较0，真实过去不要求运量或完工。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FD9C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一段你已经玩过的FOUNDRY厂区时光，不要求技术到后期。哪种真实投入更贴近？",
+          "scene": "那次主动留在厂里",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_POWER",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看过当时机器与发电设施的运行面板，核对其工作状态，再决定那轮怎么调整",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我当时有精力、也能继续新建设，仍因为喜欢认得的厂房与日常运转，主动从容走了熟悉一段",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我实际跟进过同一项未完研究的供给，重视投入能留成后续可用技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的厂区外观主题，实际改过已有建筑颜色或空间轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h主动正向熟悉，g持续同项目保留技术，a主题而非普通换色；无NPC社交。ALT最初地板。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C12.V1"
+        },
+        {
+          "text": "回想只建过第一片地板与机器的那段，哪件事已经发生？",
+          "scene": "那次主动留在厂里的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FD9C_STORE",
+            "FD9C_POWER",
+            "FD9C_40"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我核对过最初建造操作说明，再亲手继续了眼前小段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我当时有精神且材料够继续，仍喜欢在认得的小工地从容走一圈",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我先排过地板、机器摆位与接带的这一轮编辑次序，随后亲手做了",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我实际挪过一处机器位置，看它在新摆位下的样子",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "h主动正向熟悉，g持续同项目保留技术，a主题而非普通换色；无NPC社交。ALT最初地板。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FD9C12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+0ee419354d74"
+}

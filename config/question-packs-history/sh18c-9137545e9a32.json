@@ -1,0 +1,960 @@
+{
+  "id": "sh18c",
+  "title": "异形工厂：平面颜料、半片拼合与HUB输入",
+  "game_ids": [
+    "steam-1318690"
+  ],
+  "scope": "Steam原作本体默认单人；12手写初始开采器/基础带替代，不要求Puzzle DLC、线层或后期机器",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "原作颜料走带，普通涂色器会给整形各层着色；Stacker先尝试同层拼合，否则右输入在上。不采用二代顶层涂色、重力、水晶、流体管和三维平台。",
+    "初始开采器不能串联；Tunnel仅用当前可用且有效配对，不用跨距数字或旧漏洞。信号虚拟机不直接产出实物。",
+    "y只来自持续多环节形状/颜料生产与交付；单次铺线、改位、读说明、比较条件均0分。g要延续已有类别投入并实际留用进展。",
+    "i仅当前可用Tunnel的新增禁用且地面绕行确实可行；普通换路不计发明。11主项两个b是两种真实机制组合，不声称信号或替代统计等值。",
+    "不要求联网、Mod或付费Puzzle关卡；所有开局替代无敌情、燃料、限时或资源枯竭等虚构压力。9—12均为真实已发生回顾。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam原作本体默认单人；12手写初始开采器/基础带替代，不要求Puzzle DLC、线层或后期机器",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "SH18C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "原作本体：切割器两股半片中，一侧出口带已堵着，另一侧需要继续送HUB；当前垃圾桶和空地都可用。先把这段建设给什么？",
+          "scene": "切割后另一半停住",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜另一侧堵住是否也拖住所需半片，只把堵侧接到可用垃圾桶，再看切割器两股出料核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把形状开采、切割去路、所需半片交付与其他当前需求维持几轮，再随出料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次保留哪股带、移哪些出口与何时接垃圾桶，再照着施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前切割器两股输出和垃圾桶说明，再回自己的这条线",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "切割双出口提供具体背压对象；p改单侧核对，y须多个生产与交付环节持续运行，不将看目标图当推理。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C01.V1"
+        },
+        {
+          "text": "只会开采器和基础带也可答：一条圆形带快接到HUB，末端一格朝旁边，HUB当前仍要这种圆形。先做什么？",
+          "scene": "切割后另一半停住的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜只转末端这一格能否让圆形进入HUB，只改它再看真实交付计数核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把同一条带换一个当前可接通的弯，亲手看本次路线",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次要拆的末端、要留的开采器和接回HUB的步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前基础带朝向与HUB交付说明，再回来接自己的这段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "切割双出口提供具体背压对象；p改单侧核对，y须多个生产与交付环节持续运行，不将看目标图当推理。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前混色器、普通涂色器都已开放，红蓝颜料与圆形各有可用来源，HUB眼前要紫色圆形；现有一台涂色器刚停过，你能查看各机进料，也可继续扩建。先做什么？",
+          "scene": "颜料也在带上走",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_TEXT",
+            "SH18C_PAINT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释涂色器停下是否是其中一条颜料带没接到，只改这一条再看颜料进入与成品核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把两色开采、混色、形状供应与HUB交付维持几轮，再看堵塞调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可做的颜料与形状输入条件，再决定这次先布哪条",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "实际让红蓝混色器输出接到普通涂色器，与圆形输入一起运行，看这组组合能否持续给出需要的紫色圆形",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "b是混色与涂色的实际互补运行，非仅会背红蓝结果；颜色只用普通RGB本体。原作颜料走带，不用二代管道。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C02.V1"
+        },
+        {
+          "text": "没有颜料工具：眼前两种形状矿都已看到，HUB当前需要其中一种，基础开采器和带能建，通往HUB有空地。先选什么？",
+          "scene": "颜料也在带上走的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这次用哪片矿、从哪侧接入口与拆哪段旧带的步骤排清",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "把一台开采器换到同一片矿上另一格可用位置，亲手看新的出带布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "在备用短带上反复练同一种已经会的拖带与转弯操作，想让自己用熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前目标图案与两种现成矿样的说明，再回去实际开采",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "b是混色与涂色的实际互补运行，非仅会背红蓝结果；颜色只用普通RGB本体。原作颜料走带，不用二代管道。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "当前Tunnel已解锁，一对端点预览能有效连接；这两条线要交叉，旁边也留有能绕开的空走廊，两种接法都可以把各自形状送到去处。先怎么继续？",
+          "scene": "两条线要跨过去",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_TUNNEL",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先换一次当前可接通的端点位置，亲手看这轮交叉布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先把这次拆旧端点、保留相邻带与接回新端点的步骤排清，再施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "给这次新支路新增禁止Tunnel的规则，明确不用本来可用的穿越工具，实际沿空走廊试接地面带",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先猜这一对入口出口是否连到了自己想要的对端，只改一端位置后看预览与真实出料核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境i必须新增禁用已能用的机制，且沿可行空廊确实试接，不以成功为计分门槛；普通换线路0。配对p看实际出料，不考固定跨距。ALT同端点只改L形规划首段，自己预想入口方向后铺出看真实物料流，普通换弯仍0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C03.V1"
+        },
+        {
+          "text": "还没有Tunnel：基础开采器与HUB入口都能用，L形带规划已有预览；相同起终点之间两边都留有空地，可以切换先横后纵或先纵后横再实际铺。先做什么？",
+          "scene": "两条线要跨过去的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT",
+            "SH18C_PLANNER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前L形带规划与切换弯向的已有说明，再回自己的这段操作",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次回收旧弯、保留端点和铺新L形带的编辑步骤，再照顺序做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "保持这两个端点，实际换一次L形带先走的方向并铺出另一条能接通的弯，亲手看这轮编辑",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先猜哪一种首段方向会从入口这一侧接入，保持同样端点、只切换L形弯的首段方向，再铺出并看真实形状流核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境i必须新增禁用已能用的机制，且沿可行空廊确实试接，不以成功为计分门槛；普通换线路0。配对p看实际出料，不考固定跨距。ALT同端点只改L形规划首段，自己预想入口方向后铺出看真实物料流，普通换弯仍0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已能切割、旋转和堆叠；现有两股普通半片可以做出目标的左右互补部分，另一对完整形状也能供给Stacker，当前输入都可调。先把注意放在哪种过程？",
+          "scene": "堆叠还是同层拼合",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_STACK",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对原作Stacker同层可拼合与右输入在上的说明，再回自己的机器",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "实际把切割旋转后的互补半片接入同一台堆叠器，运行并看这些部件如何拼成目标单层",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先猜完整形状的上下顺序来自左右输入，只交换这台的两股输入，再看真实层序核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把两边开采、切割旋转、堆叠与HUB需求维持几轮，再跟库存调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "b是真切割旋转堆叠互补链；p是实际输入交换实验，不借二代重力和水晶规则。题中普通半片已能做，不考指定logo解法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C04.V1"
+        },
+        {
+          "text": "刚接第一条开采带：圆形能正常走到HUB，附近开采器还能继续放，另有一段画面外地图没亲自查看。先选什么？",
+          "scene": "堆叠还是同层拼合的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在旁边重复搭同一种已会的开采器到带连接，专门练熟放置方向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先把这次新增开采器、出口带与接入点的顺序排清，再施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看看那片还没亲自查看的地图，不先查有没有稀有形状",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把现有开采器的出带换一个可行方向，亲手看看布局",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "b是真切割旋转堆叠互补链；p是实际输入交换实验，不借二代重力和水晶规则。题中普通半片已能做，不考指定logo解法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已经给传送与开采类别做过提升，下一档需要的形状正在送HUB，尚差一部分；这条供给还能扩，当前目标的另一条线也能推进。先怎样分配？",
+          "scene": "继续投入已提升过的类别",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_UP",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续给这组已提升的类别补齐升级形状，等可用后完成下一档并实际运行，想看持续投入留下的生产能力",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把升级用形状与当前关卡目标的开采、加工和交付维持几轮，再按各处余量调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前两项开放升级的实际形状条件，再决定这一次买什么",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先按这次现有空地排清新增开采和接回HUB的施工步骤，再实施",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "g包含延续先前培养、继续供料完成并实际使用保留类别进展；单次菜单比较0分。y是两类需求持续供给，不用价格档位和解锁快慢。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C05.V1"
+        },
+        {
+          "text": "尚未买过升级：基础圆形线已能交付，当前目标还没做完，旁边同片矿有可放开采器的格子。先做什么？",
+          "scene": "继续投入已提升过的类别的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜新开采器出口接到这一格后能否并入当前带，只加这处连接，再看物料去向核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次新增开采器与接入短带的施工先后",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把一小段现有带换到当前能通的另一侧，亲手看布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对基础开采器不能像后期链式开采器那样相接的说明，再回自己这段连接",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "g包含延续先前培养、继续供料完成并实际使用保留类别进展；单次菜单比较0分。y是两类需求持续供给，不用价格档位和解锁快慢。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "原作线层、常量形状信号与物料筛选器已经开放；一条带上有同一普通不对称形状的两种朝向，当前筛分去向刚与预想不符，筛选器两股出口都畅通，当前可设置精确匹配的信号。先选什么？",
+          "scene": "形状信号筛出真实物料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_WIRE",
+            "SH18C_TEXT",
+            "SH18C_FILTER_CODE",
+            "SH18C_SHAPE_CODE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜误分是不是常量信号的朝向不同，只改这个形状信号，再看真实带上去向核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把两种形状来源、筛选后用途和HUB交付维持几轮，再随需求调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对形状信号、布尔信号与实物Filter的说明，再回自己的这组线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际把当前要筛的形状信号接给Filter，让它与混合带配合运行，观察匹配与其他形状怎样分到两条线",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "主情境b是信号与实际筛选机器互补工作，非虚拟产物等于实物；p改精确形状信号核对，线层非电力系统。ALT只给开采器有形状未进主线及可查连接，不直接给断口答案；p自己提出单格断口解释并只补这一处再看出料，普通编辑0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C06.V1"
+        },
+        {
+          "text": "还没线层：只有基础开采器和带，开采器已有形状却暂未送入主线，出口到主线的连接能查看，旁边有可试放的短带和空地。现在先做什么？",
+          "scene": "形状信号筛出真实物料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这段短带换一次当前可接通的转弯，亲手看它怎样连接",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次回收断头带、保留矿机和接回主线的步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前开采器出口与带连接说明，再回来实际铺带",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜出口留的这一格是否让形状无路可走，只补这一格再看出料核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境b是信号与实际筛选机器互补工作，非虚拟产物等于实物；p改精确形状信号核对，线层非电力系统。ALT只给开采器有形状未进主线及可查连接，不直接给断口答案；p自己提出单格断口解释并只补这一处再看出料，普通编辑0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "染色、切割、旋转和堆叠已经能用；现有目标线可继续运行，你手上工具能做一个非任务要求的双色徽记，也能改厂区带路。先投入什么？",
+          "scene": "目标之外做自己的徽记",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_STORE",
+            "SH18C_PAINT",
+            "SH18C_STACK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接挪一次已有涂色器位置，亲手看这轮布局变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先按这次要保留的目标线与自选支路排清施工先后，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "实际选自己想表达的配色与几何拼法，把那个自选主题做成能产出的徽记",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先猜只换一股半片朝向会怎样改变成品，改这一处并看实际输出核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "a是目标以外实际自选作品主题；普通挪机0分。b不因有两件机器就自动成立，p必须单改后看成品。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C07.V1"
+        },
+        {
+          "text": "还不会染色堆叠：已有开采器和基础带能送圆形，HUB入口旁空地够改一段转弯，另外一侧地图没亲自看过。先选什么？",
+          "scene": "目标之外做自己的徽记的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次要拆的弯与接回入口的步骤，再施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "把视野移向那片尚未亲自查看的地图，想发现它的形状与颜色矿",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先把眼前短带改成另一条当前能接通的弯，亲手看新的布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先猜只换HUB前这一格朝向是否影响交付，改后看真实计数核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "a是目标以外实际自选作品主题；普通挪机0分。b不因有两件机器就自动成立，p必须单改后看成品。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "当前形状线能持续交付，你有精神，也能用现有工具继续新目标；地图上还有没亲自查看的一片区域。此刻更想怎样投入？",
+          "scene": "熟悉的物料流仍在跑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_STORE",
+            "SH18C_BELT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次新支路拆留哪些机器、从哪处接入的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍把视野留在熟悉的开采、切割和带路上，喜欢认得的物料流与这套从容过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "把视野移到没亲自看的区域，想知道那里会出现什么形状，不先查奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "在备用空地重复搭一种已会的短带转弯，专门练熟拖带与朝向操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "没有敌人和计时不自动等于h；h需精力足且能推进时主动选择熟悉体验。w是实际地图发现，不是带路换侧；当次施工0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C08.V1"
+        },
+        {
+          "text": "只玩最初开采到HUB也可答：你有精神，当前圆形线能继续交付，另有空地可铺新带。先怎样投入？",
+          "scene": "熟悉的物料流仍在跑的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前基础带说明，再回来实际接自己这次新线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "仍看熟悉开采器一件件送圆形，享受这套认识的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野去看看尚未亲自查看的地图边缘，不先找攻略确认那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "在旁边反复搭同一种已会的开采器与短带连接，练熟自己的放置",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "没有敌人和计时不自动等于h；h需精力足且能推进时主动选择熟悉体验。w是实际地图发现，不是带路换侧；当次施工0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想原作里一次你真正做过的颜料、普通涂色与成品交付。哪种已发生过程更有分量？",
+          "scene": "回看真的做过的颜色输入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH18C_PAINT",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把混色器的颜料接到普通涂色器颜色口，同时接上形状输入实际跑过，查看过组合能否给出需要的成品",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先解释过机器停下是否缺其中一种输入，只改那一股后看实际产物核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把颜色开采、调色、形状线与HUB交付维持过几轮，并随堵塞调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先比较过当时已能做的输入条件，再决定那次采用哪组颜料来源",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "真实过去；不把记住颜色表或普通看菜单当b，不把单次画带当y。未用颜色工具有独立开局替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C09.V1"
+        },
+        {
+          "text": "只回想最早开采器和HUB：哪种确实做过的过程更像？",
+          "scene": "回看真的做过的颜色输入的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过末端朝向为什么送不进HUB，只改一格后看交付计数核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把已有短带挪成过另一条可接通的弯，看过这次布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "排过那一次放开采器、接出口和接回HUB的施工顺序，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "为练熟放置，反复搭过同一种已会的开采器到短带连接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真实过去；不把记住颜色表或普通看菜单当b，不把单次画带当y。未用颜色工具有独立开局替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你已提升过传送或开采类别，后来又继续为下一档供料的一段游玩。哪种已发生投入更贴近？",
+          "scene": "回看留下的类别投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH18C_UP",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把升级需求与当前关卡的开采、加工和交付维持过多轮，并按余量调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "比较过当时已经开放的升级所需形状，再决定那一次购买",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先排清过那一次新开采与新带接入的施工先后，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "继续补过那组升级形状、完成过下一档并实际用过，重心是看持续培养的生产能力留下来",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "g不是只点一次购买，而是延续已提升类别的供料与使用进展；四选项全为过去，未有经历可换。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C10.V1"
+        },
+        {
+          "text": "没有升级经历也能回顾：想一次你真做过的第一条圆形带建设，哪项更像？",
+          "scene": "回看留下的类别投入的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "排过那次拆旧末端和接回HUB的步骤，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "移动视野看过一片当时没亲自查看的地图，想发现形状",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "亲手改过同一条带的一次可行转弯，看过当时物料怎样走",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对过基础带与开采器说明，随后回来真实铺过带",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "g不是只点一次购买，而是延续已提升类别的供料与使用进展；四选项全为过去，未有经历可换。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想原作里你既用过互补半片Stacker，也实际用过已解锁形状信号Filter的一段；未体验这些工具可换开局情境。哪种已发生过程更有分量？",
+          "scene": "回看两股输入真的怎样配合",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH18C_STACK",
+            "SH18C_WIRE",
+            "SH18C_TEXT",
+            "SH18C_FILTER_CODE",
+            "SH18C_SHAPE_CODE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把形状信号与Filter接起来分过真实混合物料，重点看这组机制怎样配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先核对过当时已拥有机器的输入和限制说明，随后回来操作过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "把切割旋转后的互补半片接进堆叠器实际跑过，看过组合怎样成目标单层",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先解释过完整形状的上下顺序来自哪股输入，只换两股位置后实际核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "两个b保留两种真实子体验：几何互补链与信号筛选互补，各自都要实际运行；不为四个不同画像而硬凑信号。未用这些机器有开局独立替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C11.V1"
+        },
+        {
+          "text": "只回想开局开采器与短带：哪种确实发生过的过程更贴近？",
+          "scene": "回看两股输入真的怎样配合的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清过那一次移开采器和接新出口的施工步骤，并实施过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "核对过当时普通开采器出口说明，再回来实际连过自己的带",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜过开采器换一格后会不会落到资源外，只动这台并看出料核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "反复练过同一种已会的短带拖拽与转弯，想让自己操作更熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "两个b保留两种真实子体验：几何互补链与信号筛选互补，各自都要实际运行；不为四个不同画像而硬凑信号。未用这些机器有开局独立替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH18C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次你有精神、工厂还能推进新目标的原作游玩。哪种确实发生的停留更有分量？",
+          "scene": "回看自己选择停留的画面",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH18C_STORE",
+            "SH18C_PAINT",
+            "SH18C_STACK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挪过一次当时可用机器或短带，亲手看过那一轮布局变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "仍把视野留在熟悉机器与形状流上，因为认得的生产过程让自己安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看过当时未亲自查看的地图，想发现新的形状与颜色矿",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "实际做过任务要求以外、自选配色与几何拼法的主题徽记，让作品有自己的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真实过去；a须自选主题，不把完成关卡目标当表达。普通改位0分，无图鉴清单就不硬c；无需Puzzle DLC。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C12.V1"
+        },
+        {
+          "text": "只玩最初圆形开采也可回顾：当时你有精神、开采和交付能继续，也有空间接新线。哪项真实发生过？",
+          "scene": "回看自己选择停留的画面的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH18C_BELT",
+            "SH18C_STORE",
+            "SH18C_TEXT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清过那一次要留的开采器与接HUB步骤，并真的照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍看过熟悉开采器一件件送圆形，享受认识的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "看过当时未亲自查看的一片地图，想发现它的资源形状",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "亲手把一段已有短带换过可接通的弯，观察过新的布局",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "真实过去；a须自选主题，不把完成关卡目标当表达。普通改位0分，无图鉴清单就不硬c；无需Puzzle DLC。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH18C12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+9137545e9a32"
+}

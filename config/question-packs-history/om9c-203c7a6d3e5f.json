@@ -1,0 +1,1931 @@
+{
+  "id": "om9c",
+  "title": "巨著",
+  "game_ids": [
+    "steam-558990"
+  ],
+  "scope": "Opus Magnum PC2017本体；炼金与Sigmar’s Garden独立",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "各路径12初始与12独立替代，没玩花园不强制答花园，反之亦然。",
+    "炼金基础替代适用于已能自由编辑的最早关卡；只练取放不等于原样输入就构成产品，不假定受限教程能自由加组件。",
+    "不含付费De Re Metallica或花园II，不把棋盘清空当收藏或机器试跑当正式成绩。"
+  ],
+  "modes": [
+    {
+      "id": "alchemy",
+      "label": "本体炼金：机械臂、指令与glyph关卡",
+      "initial_variants": {
+        "OM9C01": "OM9C01.ALCHEMY.V1",
+        "OM9C02": "OM9C02.ALCHEMY.V1",
+        "OM9C03": "OM9C03.ALCHEMY.V1",
+        "OM9C04": "OM9C04.ALCHEMY.V1",
+        "OM9C05": "OM9C05.ALCHEMY.V1",
+        "OM9C06": "OM9C06.ALCHEMY.V1",
+        "OM9C07": "OM9C07.ALCHEMY.V1",
+        "OM9C08": "OM9C08.ALCHEMY.V1",
+        "OM9C09": "OM9C09.ALCHEMY.V1",
+        "OM9C10": "OM9C10.ALCHEMY.V1",
+        "OM9C11": "OM9C11.ALCHEMY.V1",
+        "OM9C12": "OM9C12.ALCHEMY.V1"
+      }
+    },
+    {
+      "id": "garden",
+      "label": "本体Sigmar’s Garden：原始花园配对规则",
+      "initial_variants": {
+        "OM9C01": "OM9C01.GARDEN.V1",
+        "OM9C02": "OM9C02.GARDEN.V1",
+        "OM9C03": "OM9C03.GARDEN.V1",
+        "OM9C04": "OM9C04.GARDEN.V1",
+        "OM9C05": "OM9C05.GARDEN.V1",
+        "OM9C06": "OM9C06.GARDEN.V1",
+        "OM9C07": "OM9C07.GARDEN.V1",
+        "OM9C08": "OM9C08.GARDEN.V1",
+        "OM9C09": "OM9C09.GARDEN.V1",
+        "OM9C10": "OM9C10.GARDEN.V1",
+        "OM9C11": "OM9C11.GARDEN.V1",
+        "OM9C12": "OM9C12.GARDEN.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "OM9C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "本体炼金关里已有输入、目标与可用机械臂，你写的小段在运行中停住；碰撞位置、所抓物和指令当前行可看，原因未定。先怎么继续？",
+          "scene": "机械臂在转到一半时停住",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GOLF",
+            "OM9C_UI"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己提出哪次抓取或转向可能相关的解释，只改一条指令后重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先查看停住时分子、机械臂与当前指令位置，核对眼前状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮移臂、改指令与分步运行的编辑次序，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按已列目标的原子与连接要求，实际继续搭眼前这台机构",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "p不预给碰撞原因；目标推进0而非f；早期ALT只抓取/旋转/放下，不需glyph或轨道。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C01.ALCHEMY.V1"
+        },
+        {
+          "text": "最早自由关Stabilized Water也能选：这轮只练基础臂取起水元素、旋转放到旁边空格，试跑没落到预留格，原因未定；位置与指令可改。先做什么？",
+          "scene": "机械臂在转到一半时停住的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GOLF",
+            "OM9C_UI",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看这只臂当前抓着什么、转到哪里以及正在执行哪条指令",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先猜一处旋转方向或放下时点是否相关，只改这一条再分步试",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有抓取旋转放下示范，再亲手继续编这段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排本轮臂位置与几条取放指令的编辑先后，再照着改",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "p不预给碰撞原因；目标推进0而非f；早期ALT只抓取/旋转/放下，不需glyph或轨道。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C01.ALCHEMY.ALT1"
+        },
+        {
+          "text": "本体Sigmar’s Garden当前有两对普通同元素珠都已可取，取任一对后会留下不同空位；这轮尚未决定先取哪对。先做什么？",
+          "scene": "花园盘面上不止一对可取",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出哪一对移走后会让某颗邻珠变成可取的预测，实际取这一对后核对邻珠状态",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先看两对周围哪些格为空、哪些仍占着，核对盘面再选",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮先取哪对、再看哪一侧的操作顺序，然后实际照着取",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "按当前清空盘面的既有目标，先实际取走眼前一对合法同元素珠",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "p玩家自提后实际走一步核对，不是只读谱分组；盘面剩余不是收藏。全部当前可走合法对，无撤销/同盘重开假设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C01.GARDEN.V1"
+        },
+        {
+          "text": "刚接触花园：当前外缘有两对同元素珠已可取，你能看周围空位，不必处理金属。先选什么？",
+          "scene": "花园盘面上不止一对可取的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看这两对在外缘的位置和周围空格，再决定取哪对",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "猜一对移走后哪颗邻珠会变得可取，实际取这一对后核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先排本轮先取一对再检查邻边的顺序，然后照着做",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对游戏已有可取与同元素配对说明，再回来实际取一对",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "p玩家自提后实际走一步核对，不是只读谱分组；盘面剩余不是收藏。全部当前可走合法对，无撤销/同盘重开假设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C01.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前有两只机械臂，各自指令都可编辑，一只在后续循环有明显等待；时间轴、空拍和当前所抓物都可看，原因尚未确定。先把时间给哪里？",
+          "scene": "循环以后才出现的等待",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际配合两臂分工、交接位置与等待拍，让搬运和加工的互补作用跑出来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先查看两条当前指令带及停等位置，再决定这一轮改哪处",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对游戏已有时间轴与循环说明，再亲手继续修改",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "提出一个指令周期或开头延迟的解释，只改一处时间安排后看下一轮怎样衔接",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b两臂分工/交接/同步而非仅放两只臂；p不给最长周期答案。ALT仅一只基础臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C02.ALCHEMY.V1"
+        },
+        {
+          "text": "只有一只最初机械臂：取放指令可编辑，运行时有一段空等，时间轴和当前抓取状态可看，原因未定。先选什么？",
+          "scene": "循环以后才出现的等待的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前指令、所抓物和输入输出位置，核对实际状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先按本轮可用取放操作，排清抓取、转向与放下的执行先后，再编进指令带试跑",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先看已有基础取放示范，再继续自己的短程序",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己提出一处空拍或放下时点的解释，只改这一项再分步看",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b两臂分工/交接/同步而非仅放两只臂；p不给最长周期答案。ALT仅一只基础臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C02.ALCHEMY.ALT1"
+        },
+        {
+          "text": "当前一颗盐既能配可取的火元素，也有另一颗可取盐能互配；盘上另有一对可取普通同元素珠，剩余数量显示可看。先投入哪件？",
+          "scene": "盐和同元素的两种合法配法",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出用盐配火后剩余搭配会怎样改变的预测，实际取这对后核对计数与下一步选择",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "额外规定这一轮不把盐当元素通配，明明盐配火可用，仍实际只取同类元素或盐盐对",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮普通对、盐对与邻边检查的先后，再照安排走",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "先查看剩余盐与火元素计数、周边空位和当前可取珠，核对现状再选",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "i禁用当前真实通配机制，普通合法对仍存在；只要求实际尝试，不要求清盘，不能推断最优。计数核对0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C02.GARDEN.V1"
+        },
+        {
+          "text": "不熟悉盐也能答：当前外缘有一对同元素珠可取，盘面下方能看剩余数，旁边还有一对普通珠可选。先做什么？",
+          "scene": "盐和同元素的两种合法配法的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看两对周围空位与剩余数，核对当前状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "猜移走一对会不会让旁边一颗变得可取，实际取后核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先安排这轮取一对、检查邻边再决定下一对的顺序，并实际照做",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对现有普通配对与可取说明，再实际取一对",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "i禁用当前真实通配机制，普通合法对仍存在；只要求实际尝试，不要求清盘，不能推断最优。计数核对0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C02.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "当前关卡可用轨道、活塞臂与普通臂，已有一段轨道机构能试跑，途中没到预想位置，原因未定；输入输出之间有空间，组件与指令能改。先做什么？",
+          "scene": "轨道与伸缩臂的可用距离",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出一个途中过不去与移动路径有关的解释，只改一个轨道位置后试跑",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排本轮组件摆位与指令调整的编辑步骤，再照着搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "实际配合轨道平移与臂的抓取转向，试两种运动怎样共同把分子送到下一处",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前普通臂、活塞臂与轨道的可用运动条件，再决定这轮采用哪种",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "实际平移与旋转互补b，菜单比较0；不用固定最优路程。ALT不用轨道/活塞。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C03.ALCHEMY.V1"
+        },
+        {
+          "text": "还没用轨道：当前只有最初基础臂、输入与输出，可移动臂的底座并编辑取放指令。先做什么？",
+          "scene": "轨道与伸缩臂的可用距离的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排移臂、调整抓取转向和分步运行的编辑步骤，再照次序改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有机械臂放置与取放说明，再亲手继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先查看这只臂当前位置能抓到哪里、输出在哪里，核对当前状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "实际移一处基础臂位置，查看新摆位",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "实际平移与旋转互补b，菜单比较0；不用固定最优路程。ALT不用轨道/活塞。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C03.ALCHEMY.ALT1"
+        },
+        {
+          "text": "当前可取的铅和两颗可取水银能组成合法配对，锡仍被邻珠围着；盘面和下方计数都可看。此刻先做什么？",
+          "scene": "当前金属的几颗水银",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这轮取铅、再查看锡周边的操作顺序，并实际照着走",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "按当前金属序列的已知条件实际取走一对铅和水银，先推进眼前盘面",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "提出选哪颗水银会腾出通向锡的空边的预测，实际与铅配走后核对相关邻珠",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看两颗水银、锡与周围空位，核对眼前可取关系再决定",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "只当前金属铅能配，锡未假定已可取；p不在题干说哪颗水银正确，不要求后续能清盘。ALT普通元素无需金属经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C03.GARDEN.V1"
+        },
+        {
+          "text": "没处理过金属也可以：外缘两对同元素珠都合法，内侧还有一颗尚不可取的普通珠。先做什么？",
+          "scene": "当前金属的几颗水银的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排本轮取一对与看内侧变化的操作先后，再照着做",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "按既有清盘目标先实际消掉眼前一对合法珠",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先看内侧珠旁哪些格仍有珠、外缘两对在哪里，再决定",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "自己猜哪对移走会让内侧珠变得可取，实际取走那对再核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只当前金属铅能配，锡未假定已可取；p不在题干说哪颗水银正确，不要求后续能清盘。ALT普通元素无需金属经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C03.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已有一个正式结算的本体解，界面留下成本、周期和面积记录；另一个解槽可以继续修改，不要求新解通过。先给哪件时间？",
+          "scene": "已经留下的成本周期面积",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GOLF"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排另开解槽、移动组件和调整指令的本轮步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "围绕已有一项个人纪录实际改机构，把能否超过这条旧纪录作为这轮重点",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "提出移动一个臂底座会怎样影响分子扫过范围的预测，只移这个底座后运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先看现有目标、机构与记录，决定这一轮从哪处开始编辑",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "k确有正式已有纪录，不把练习分步运行称成绩；p可失败，单轮流程0。ALT从未结算也可答。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C04.ALCHEMY.V1"
+        },
+        {
+          "text": "从未结算也可以：最早自由关里第一段取放还在编，基础臂、输入、产品要求与当前指令可看，编辑和分步运行可用。先做什么？",
+          "scene": "已经留下的成本周期面积的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GOLF",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前已列产品要求，实际开始编其中的取料搬运段，先推进这次委托",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先看当前输入、输出与臂的指令位置，核对眼前状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先猜一次旋转或放下是否改变到达，只改那条指令后试跑",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮移臂与改取放指令的编辑先后，再亲手做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "k确有正式已有纪录，不把练习分步运行称成绩；p可失败，单轮流程0。ALT从未结算也可答。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C04.ALCHEMY.ALT1"
+        },
+        {
+          "text": "当前一颗可取的生与两颗可取的死都能互配，其中几颗旁边还有尚不可取的珠；另有普通同元素对可走。先给哪件时间？",
+          "scene": "生与死都在盘上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有生死互配与可取条件说明，再回来取一对",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "提出选择某颗死会让哪一侧先打开的预测，实际与生配走后核对相邻位置",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先查看生死珠和普通对周围的空格，核对当前可取关系",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮生死对和普通对的取用次序，再实际走第一步",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "当前合法可行选择，不要求知道结局或全局最优；生死不是道德、NPC或现实性格。ALT只普通珠。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C04.GARDEN.V1"
+        },
+        {
+          "text": "只认得普通元素：当前外缘两对同元素珠可取，内侧还有一颗珠尚不可取。先做什么？",
+          "scene": "生与死都在盘上的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "猜一对移走是否能打开一颗内侧珠，实际走后看它是否变得可取",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有可取和同元素配对示范，再亲手取一对",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先查看外缘两对与内侧珠周围空位，核对现状",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮取一对、检查邻边再选下一对的顺序，并实际照做",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "当前合法可行选择，不要求知道结局或全局最优；生死不是道德、NPC或现实性格。ALT只普通珠。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C04.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "当前Stabilized Water要求输出一对成键的水与盐，盐可由水元素钙化得到；成键、钙化工具和普通臂均可用。试跑没有得到预期水盐对，原因未定；臂与glyph位置可改，空间够。先做什么？",
+          "scene": "先接合还是先转化",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_STORE",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先把两份水接合，再让同组中需要转化的那一个原子经过钙化位置，试成键、整组搬运与单原子转化怎样配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "提出一个当前转化没按预想发生的解释，只改一个glyph位置后分步看同一组原子",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前已给工具与目标的处理条件，再决定采用哪种机构",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮glyph摆位、臂动作与输出接入的编辑步骤，再照着搭",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "限定真实首关的水盐对；b为先成键、整组搬运再仅转化指定水原子的组合，不把两份都变盐或原样输入称产品。先成键后钙化由实作正文支持；未知失败原因单改检验p可失败。ALT只练水原子取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C05.ALCHEMY.V1"
+        },
+        {
+          "text": "只用最早自由关基础工具：当前只试把水元素从输入搬到旁边空格，暂不组装产品；臂位置和取放指令能自己改。先做什么？",
+          "scene": "先接合还是先转化的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_STORE",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对眼前输入、预留空格与当前抓取状态，再决定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "预测改变一条旋转指令后分子会到哪里，只改这一条再分步核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先排本轮移臂、抓取和放下指令的编辑顺序，再照着改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先看已有最初取放示范，再继续自己的尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "限定真实首关的水盐对；b为先成键、整组搬运再仅转化指定水原子的组合，不把两份都变盐或原样输入称产品。先成键后钙化由实作正文支持；未知失败原因单改检验p可失败。ALT只练水原子取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C05.ALCHEMY.ALT1"
+        },
+        {
+          "text": "当前盘面至少有两对普通同元素珠已可取，也有可取盐与元素可互配；下方各类剩余数与高亮功能可用，先前还没决定如何利用它们。先做什么？",
+          "scene": "下方计数和眼前空位",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前剩余数和高亮对应的实际位置，再决定这轮取哪对",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "额外规定这轮不使用当前可用的下方高亮查找，仍自己从盘面找并实际取合法对",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "有意反复在这盘找可取普通对、实际取走并检查邻边，想练熟自己识别可取关系的过程",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先安排先看计数、再选当前合法对的这轮操作次序，然后实际取珠",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "i明确禁当前可用辅助功能，不要求更快或清盘；t实际多次识别取对练习，非自动计数/虚构成绩。ALT不要求用过高亮。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C05.GARDEN.V1"
+        },
+        {
+          "text": "刚开一盘也可以：当前有几对普通同元素珠已可取，下方计数可看，不必用盐。先选什么？",
+          "scene": "下方计数和眼前空位的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看剩余数与当前可取的普通对，核对眼前局面",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "有意重复找可取同元素对、实际取走再检查邻边，想让自己更熟悉这项操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先排本轮看外缘、取一对再检查内侧的顺序，然后照着做",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有可取条件示范，再自己实际取一对",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "i明确禁当前可用辅助功能，不要求更快或清盘；t实际多次识别取对练习，非自动计数/虚构成绩。ALT不要求用过高亮。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C05.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "当前Stabilized Water需转化并成键，已有一份可编辑的试跑构造；普通臂与所需glyph可用，多臂和活塞也能选，单臂路线有空间可搭。先选什么？",
+          "scene": "自己给首个炼金任务加的条件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想表达的对称旋转主题，实际安排组件轮廓和动作呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "预测只改一条转向后分子会从哪侧经过，只改这条后分步核对路径",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可用机械臂类型，再决定这一轮用哪种普通配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "额外规定这一轮只用一只普通臂，明明多臂和活塞可用仍排除它们，实际编这段受限程序",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i明确额外禁用可用工具且单臂路径可行，不要求过关或省钱。a自选呈现主题实际安排，非所有程序都自动风格。ALT不用已解锁多臂/活塞。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C06.ALCHEMY.V1"
+        },
+        {
+          "text": "最早自由关的取放练习：单臂把当前水元素搬到旁边空格放得下，能编辑指令与组件；这轮不要求组装完整产品。先做什么？",
+          "scene": "自己给首个炼金任务加的条件的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这轮抓取、转向与放下的执行次序排清，编进指令后实际跑一段",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际换一个当前能放下的臂底座位置，查看新布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有基础臂和取放说明，再继续自己的程序",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际用当前这一只基础臂编取放并跑一段，先体验这项现有配置的动作与落点",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "i明确额外禁用可用工具且单臂路径可行，不要求过关或省钱。a自选呈现主题实际安排，非所有程序都自动风格。ALT不用已解锁多臂/活塞。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C06.ALCHEMY.ALT1"
+        },
+        {
+          "text": "盘面上有一颗你正在关注但尚不能取的水元素，旁边两对合法普通对可走，具体哪一步会打开它还没确定。现在先做什么？",
+          "scene": "暂留那颗尚不可取的水珠",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看这颗珠连续空邻边和周围占位，核对现状再定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先把本轮可做的两次取对安排先后，再实际走当前合法的一步",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先实际取眼前另一对合法普通珠，按当前清盘目标推进这一步",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "自己提出取哪对能改变这颗水珠可取状态的解释，实际走这一对后核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不把三空边规则考试化，解释来自玩家且实际取对验证；普通清目标0。ALT只最外缘起手。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C06.GARDEN.V1"
+        },
+        {
+          "text": "只看过最外缘：眼前有两对普通珠合法可取，刚取过一对后留下的空位也可看。先做什么？",
+          "scene": "暂留那颗尚不可取的水珠的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出下一对移走会让谁变得可取的预测，实际取后核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮取一对与查看新空位的操作顺序，再照着走",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有配对示范，再回来实际取一对",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前外缘空位和可取的对，核对盘面变化",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "不把三空边规则考试化，解释来自玩家且实际取对验证；普通清目标0。ALT只最外缘起手。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C06.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "本体当前已有一段人物对话可读，炼金关里的输入、目标与基础臂也已可操作；你有时间继续，不要求读完后期故事。先把时间给哪里？",
+          "scene": "机构之外已经出现的对话",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_STORY",
+            "OM9C_GOLF"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前已经列出的产品要求实际继续搭机构，先推进这次委托",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先核对眼前工具已有操作说明，再亲手继续编取放",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先把当前人物的对话读完，想理解他们为何这样看待这项委托和彼此",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "回到当前输入输出，先查看机构和指令停在哪一步，再决定怎么改",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "s真实当前叙事兴趣，NPC不q/o；不用剧情结局知识。ALT最早已出现文字即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C07.ALCHEMY.V1"
+        },
+        {
+          "text": "只到最初自由关也能选：Henley与学生Anataeus的教学对话已经出现，输入、输出与基础臂可用，取放短程序还能编辑。先做什么？",
+          "scene": "机构之外已经出现的对话的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_STORY",
+            "OM9C_GOLF",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前目标、输入和臂的抓取状态，再定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先看已有基础臂操作示范，再继续自己的短程序",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先读完这段已经出现的教学对话，想了解两位师生对这次练习的说法",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮移臂与取放指令的编辑步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "s真实当前叙事兴趣，NPC不q/o；不用剧情结局知识。ALT最早已出现文字即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C07.ALCHEMY.ALT1"
+        },
+        {
+          "text": "本体里当前有一段与花园有关的人物对话已经出现，也能继续当前尚有合法对可取的盘面；不需要再赢若干局才能选。先把时间给哪里？",
+          "scene": "当前已经出现的花园对话",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORY",
+            "OM9C_GARDEN",
+            "OM9C_STORE"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮取对与检查邻边的先后，再实际走一步",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "按当前清盘目标实际继续取走眼前一对合法珠",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先读完这段已出现的对话，想理解人物为何会一起谈起这个小游戏",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前棋盘的剩余珠和合法配对，再决定这一轮怎样走",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "s只当前已出现人物文字，不把NPC共同谈话计o/q；没触发对话ALT不依赖它，不要求胜局次数。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C07.GARDEN.V1"
+        },
+        {
+          "text": "没有花园对话也能选：最初棋盘当前仍有两对普通珠可取，规则说明和剩余数可看。先做什么？",
+          "scene": "当前已经出现的花园对话的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORY",
+            "OM9C_GARDEN",
+            "OM9C_STORE"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这轮先取哪对、再看哪侧邻边的顺序，然后实际走",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "按当前已经给出的清盘目标，先实际取走一对合法普通珠",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有普通配对与可取说明，再实际走一对",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看眼前可取的对和剩余珠位置，核对当前状态",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "s只当前已出现人物文字，不把NPC共同谈话计o/q；没触发对话ALT不依赖它，不要求胜局次数。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C07.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你有精力，仍有新任务或新的改解可继续；当前一段取放和转向已经很熟，能从容暂停与分步运行。先选什么？",
+          "scene": "熟悉的炼金桌",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GOLF",
+            "OM9C_UI"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前目标、机构与时间轴状态，再决定这一轮怎么继续",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "暂不追新任务，留在认得的机构里慢慢编辑试跑，喜欢熟悉可控的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "有意重复编自己还不熟的抓取、转向与放下衔接，想练熟操作与检查",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮组件摆位与指令修改的编辑次序，再照着做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h余力足且能推进仍主动熟悉；t玩家主动重复练编辑，不是机器练级；看模拟动画不f。ALT仅最初臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C08.ALCHEMY.V1"
+        },
+        {
+          "text": "只做过最初取放：你有精神，也有尚未完成的当前目标，已经认得这只臂和输入输出。先做什么？",
+          "scene": "熟悉的炼金桌的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GOLF",
+            "OM9C_UI",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排本轮臂摆位和取放指令编辑顺序，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍从容在熟悉输入输出旁编几条取放，喜欢这段自己认得的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "主动重复一小段放指令和分步检查，想让自己更熟练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有基础示范，再亲手继续短程序",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "h余力足且能推进仍主动熟悉；t玩家主动重复练编辑，不是机器练级；看模拟动画不f。ALT仅最初臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C08.ALCHEMY.ALT1"
+        },
+        {
+          "text": "你有精神，当前棋盘至少还有两对普通珠可取，也能继续别的游戏内容；你已经熟悉花园的基本取对过程。现在先选什么？",
+          "scene": "自己认得的消珠过程",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前盘面和剩余数，再决定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "继续从容待在这盘认得的取对过程里，正是喜欢自主安稳的节奏，暂不转去别的内容",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "有意重复寻找可取对、取走和检查邻边，想让自己更熟悉这项操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先提出一个取对后邻边会怎样变化的预测，实际走一步后核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "h有精力可推进仍主动熟悉，不因疲劳或设备；t重复练习过程不等于成绩，p须实际一步检验。ALT普通起手即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C08.GARDEN.V1"
+        },
+        {
+          "text": "只会基本同元素配对：你有精神，眼前至少有两对普通珠可取，已经认得这项操作。先做什么？",
+          "scene": "自己认得的消珠过程的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有基本配对说明，再回来取眼前一对",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先从容继续熟悉的找对与取对，喜欢这段自己可控的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "主动重复找当前可取的普通对、取走并检查邻边，想让操作更熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮取一对、看空位再选下一对的顺序，然后实际照做",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "h有精力可推进仍主动熟悉，不因疲劳或设备；t重复练习过程不等于成绩，p须实际一步检验。ALT普通起手即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C08.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你实际编辑并运行过一段本体机械臂程序，不要求通过任务。哪种已经发生的过程更贴近？",
+          "scene": "那次自己提出的机构解释",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出过一处抓取、转向或等待为何如此的解释，只改对应一条指令后分步检验",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先查看过当时目标、分子和正在执行的指令位置，再决定改什么",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我实际配合过多臂交接与不同加工动作，想体验它们共同起效",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "我按当轮组件、指令和试跑顺序排过编辑步骤，并亲手照做了",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "过去实测不要求解释正确；b确有实际互补配置，不是看菜单。ALT只有基础臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C09.ALCHEMY.V1"
+        },
+        {
+          "text": "回想最早自由关里一只基础臂真实搬动原子的一段，不要求组装或输出产品。哪件事已经发生？",
+          "scene": "那次自己提出的机构解释的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先看了输入、当时抓着什么和指令位置，再决定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我提出一处转向是否相关的猜想，只改那条指令后分步跑过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我先看已有取放示范，随后亲手继续编过这段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮移臂与改指令的编辑次序，并实际照着做了",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "过去实测不要求解释正确；b确有实际互补配置，不是看菜单。ALT只有基础臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C09.ALCHEMY.ALT1"
+        },
+        {
+          "text": "回想你在本体花园实际取过珠的一段，不要求清盘或获胜。哪种真实发生的过程更贴近？",
+          "scene": "那次真正走过一步来核对",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GARDEN",
+            "OM9C_STORE"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先预测取走某对会怎样改变邻珠可取状态，再实际走这一对核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先看过当时空位、可取的珠与剩余数，再决定取哪对",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我先排过那一轮取对与检查邻边的顺序，也实际照着走了",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "我主要按清空当时那盘的已知目标，实际取过眼前合法对",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "真过去，p无需预测成立；所有普通盘面清珠不计收藏/成长。ALT仅最初普通对。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C09.GARDEN.V1"
+        },
+        {
+          "text": "回想最初只认得普通同元素对时的一次真实操作，不要求赢过花园。哪件事发生过？",
+          "scene": "那次真正走过一步来核对的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GARDEN",
+            "OM9C_STORE"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看了当时外缘可取的对和空位，再决定先取什么",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我猜过取一对会让谁变得可取，实际走后核对了那颗邻珠",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我看过已有普通配对示范，随后自己取过一对",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮取对与看邻边的先后，并实际照着做",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "真过去，p无需预测成立；所有普通盘面清珠不计收藏/成长。ALT仅最初普通对。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C09.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你在本体炼金关中实际尝试过组装产品的一次经历，例如首个水盐成键任务；不要求过关或压低成本。哪种过程更贴近？",
+          "scene": "那次额外排除的工具",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际把轨道平移与臂的转向配合过，想看两种运动如何互相补位",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "我给机构选过自己的对称或轮转呈现主题，也实际调整了组件和动作",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我主要是比较当时可用机械臂类型，然后换了一个已有配置实跑",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "我明确排除过当时本可用的多臂或活塞，在单臂确有可搭空间的任务实际尝试了只用普通单臂",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i有真实额外工具限制和实际可行任务；普通换配置0，不能只加规则字样。ALT只需最初一只基础臂的取放与可改摆位，不要求放过第二只臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C10.ALCHEMY.V1"
+        },
+        {
+          "text": "回想最早取放的一段，不要求轨道、活塞或完整产品。哪件事确实发生？",
+          "scene": "那次额外排除的工具的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GOLF",
+            "OM9C_UI",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过那轮臂位置与取放指令的编辑先后，并照着做了",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我实际挪过一处基础臂，查看了新摆位",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "我核对过已有最初取放示范，然后亲手继续了短程序",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我实际用一只现有基础臂编过取放并跑一段，当时主要是体验这项配置的动作与落点",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "i有真实额外工具限制和实际可行任务；普通换配置0，不能只加规则字样。ALT只需最初一只基础臂的取放与可改摆位，不要求放过第二只臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C10.ALCHEMY.ALT1"
+        },
+        {
+          "text": "回想一次真实花园盘面：当时盐配元素与普通同元素配对都可用。不要求最终清盘，哪种过程更贴近？",
+          "scene": "那次自己额外不用的配法",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我猜过某个盐配法会怎样改变剩余搭配，实际走了那对再核对计数与后续选择",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先查看了当时盐、元素和空位状态，再决定那一轮怎样走",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我先排了那轮普通对与盐对的取用顺序，并实际走了第一步",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "我给那一轮加过不使用盐通配的限制，明明盐可配元素，仍实际只取同类或盐盐对",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "真限制当前可用机制且普通对存在，不以清盘为门槛；不能把暂时先取另一对当i。ALT不需要盐。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C10.GARDEN.V1"
+        },
+        {
+          "text": "没用过盐也能回想：最初盘面上你实际取过普通同元素珠，哪件事确实发生？",
+          "scene": "那次自己额外不用的配法的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GARDEN"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我预测过一对移走后的邻边变化，并实际取后核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我有意重复找对、取走和检查，想让自己更熟悉这项操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我核对过已有配对示范，然后亲手取了一对",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我先查看了当时可取的对和空位，再决定取哪一对",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "真限制当前可用机制且普通对存在，不以清盘为门槛；不能把暂时先取另一对当i。ALT不需要盐。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C10.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你已有一次正式结果后又真实修改机构的一段，不要求新解成功或纪录提高。哪种过程更贴近？",
+          "scene": "那次看过结果后继续改",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GOLF"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主动重复编过同类取放衔接，当时的重点是练熟编辑与检查",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我先核对了当时机构、目标与正在执行的指令状态，再决定下一轮编辑",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我围绕已有成本、周期或面积中的一项旧纪录实际改过，把能否超过那条记录当重点",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "我提出过一处动作或空拍为什么增加的解释，只改一项后运行核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "正式结果存在才k；无结果ALT完整，过去各项无成功门槛。t重复练玩家而非程序无限跑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C11.ALCHEMY.V1"
+        },
+        {
+          "text": "从未得到正式结果也可以：回想最初实际编过并分步运行的取放短段，哪件事已经发生？",
+          "scene": "那次看过结果后继续改的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_GOLF",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我猜过一处旋转或放下时点是否相关，只改那一条并试跑过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我排过那轮臂位置与取放编辑次序，也亲手照做了",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "我先看过当时输入输出和指令状态，再定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "我主动重复过放指令与分步检查，想让自己更熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "正式结果存在才k；无结果ALT完整，过去各项无成功门槛。t重复练玩家而非程序无限跑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C11.ALCHEMY.ALT1"
+        },
+        {
+          "text": "回想你在本体花园实际玩过的一段，不要求赢局、计时或任何纪录。哪种已经发生的过程更贴近？",
+          "scene": "那次反复找合法对",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GARDEN",
+            "OM9C_STORE"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我当时有精神且还有合法步可走，仍正是因为喜欢熟悉安稳的过程，从容继续了这盘",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "我先看过剩余数与当时盘面，再定下一步取法",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我主动重复找可取对、实际取走再检查邻边，当时的重点是练熟识别与操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我自己提出过一处被围珠会怎样打开的解释，实际走一步后核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "t不虚构正式练习成绩；h精力足且能推进仍正向熟悉；过去不要求清盘。ALT只最早外缘。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C11.GARDEN.V1"
+        },
+        {
+          "text": "只回想最初几次普通配对，不要求处理金属，哪件事真实发生过？",
+          "scene": "那次反复找合法对的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GARDEN",
+            "OM9C_STORE"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我有精神且仍有合法对，仍因为喜欢认得的取对过程，从容继续了一会儿",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "我先看了当时外缘和剩余数，再决定取哪对",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我有意重复找当时可取的普通对、取走并检查邻边，想让自己更熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我猜过一对移走会不会让某颗珠变得可取，并实际取后看过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "t不虚构正式练习成绩；h精力足且能推进仍正向熟悉；过去不要求清盘。ALT只最早外缘。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C11.GARDEN.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "OM9C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想已经玩过的一段本体炼金时光，不要求玩到花园或后期故事。哪种当时真实投入更贴近？",
+          "scene": "那次桌边真正留下的体验",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_STORY",
+            "OM9C_UI"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我核对过当时已有工具说明，随后亲手继续了程序编辑",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我有精神、也能继续任务，仍因为喜欢认得的机构与取放过程，主动从容待在熟悉桌边",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我读过当时已经出现的人物对话，主要想理解他们的经历与动机",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我为机构选过自己的呈现主题，并实际安排了组件和动作",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h积极熟悉，s仅已经出现剧情，a实际表达；没有把炼金角色进度虚构为永久养成。ALT最初教学文字和基础臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C12.ALCHEMY.V1"
+        },
+        {
+          "text": "只回想最初教学文字与取放尝试，哪件事真实发生过？",
+          "scene": "那次桌边真正留下的体验的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_STORE",
+            "OM9C_STORY",
+            "OM9C_UI",
+            "OM9C_EARLY",
+            "OM9C_FIRST"
+          ],
+          "modes": [
+            "alchemy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先看已有基础示范，再亲手继续了一段短程序",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我有精力且目标可继续，仍喜欢在认得的输入输出旁从容编几条取放",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我读过最初已出现的教学对话，想了解师生在这次练习里的想法",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮组件与取放指令的编辑先后，并实际照做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h积极熟悉，s仅已经出现剧情，a实际表达；没有把炼金角色进度虚构为永久养成。ALT最初教学文字和基础臂。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。 基础候选限已经可自由编辑的最早关卡；取放空格练习不是完整产品或正式成绩。",
+          "id": "OM9C12.ALCHEMY.ALT1"
+        },
+        {
+          "text": "回想你已经玩过的本体花园时光，不要求清过一盘或触发后期文字。哪种当时真实投入更贴近？",
+          "scene": "那次花园真正留下的体验",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GARDEN",
+            "OM9C_STORY",
+            "OM9C_STORE"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我核对过已有可取与配对说明，随后自己实际取了珠",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我当时有精力、也有可继续步，仍喜欢在熟悉的找对与取对里从容待着",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我读过当时已经出现的花园人物对话，主要想接上这些人的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我先排过当轮取对与检查邻边的顺序，随后实际照着走了",
+              "signal": "puzzle_action_plan"
+            }
+          ],
+          "design_purpose": "s当前已出现才问，普通NPC共同经历不o；ALT完全无剧情/获胜前提。h不等于疲劳退出。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C12.GARDEN.V1"
+        },
+        {
+          "text": "没有任何花园剧情也可以：只回想最初普通珠的一段真实操作，哪件事发生过？",
+          "scene": "那次花园真正留下的体验的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OM9C_GARDEN",
+            "OM9C_STORY",
+            "OM9C_STORE"
+          ],
+          "modes": [
+            "garden"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看过当时盘面与剩余数，再决定下一步取哪对",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我有精神且盘面还能继续，仍喜欢认得的配对过程，主动从容多待了一会儿",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我排过那一轮先取一对再检查邻边的操作次序，并实际照做",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "我核对过已有基本示范，然后自己取过一对",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "s当前已出现才问，普通NPC共同经历不o；ALT完全无剧情/获胜前提。h不等于疲劳退出。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OM9C12.GARDEN.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+203c7a6d3e5f"
+}

@@ -1,0 +1,924 @@
+{
+  "id": "balv5",
+  "title": "小丑牌",
+  "game_ids": [
+    "steam-2379780"
+  ],
+  "scope": "基础盲注、牌组与已解锁卡牌",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "基础盲注、牌组与已解锁卡牌",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "BALV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "已有的小丑牌足以继续眼前一关，商店又出现一张会改变打法的小丑。你先围绕什么决定买不买？",
+          "scene": "商店出现一张新小丑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看它与当前牌型、其他小丑的触发关系能否接起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "给它一次机会，认真试一种平时不玩的牌路",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "推清它改变的是筹码、倍率还是触发条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先按这局金币与后续购买安排决定是否投入",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "游戏币取舍不推断现实消费或赌博倾向。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV501.V1"
+        },
+        {
+          "text": "没有陌生小丑可买，只整理手里已有的几张，你先想什么？",
+          "scene": "商店出现一张新小丑的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "它们怎样和当前常打的牌型彼此配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "能否围绕其中一张换个平时不用的思路",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先弄懂各自在哪个条件下会触发",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把当下购买与之后保留的钱安排清楚",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "游戏币取舍不推断现实消费或赌博倾向。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "这手牌既能马上组成一个可用牌型，也能用剩余弃牌再找别的展开。你先怎样考虑？",
+          "scene": "一手牌与弃牌机会",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看现有小丑更支持现在的牌型还是改换方向",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "练习在出牌前检查一个自己经常漏看的条件",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "换一种自己通常不会尝试的弃牌与出牌安排",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "比较手里牌、剩余机会与可能形成的几种牌型",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不要求计算具体概率，不用最优出牌评价聪明程度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV502.V1"
+        },
+        {
+          "text": "同一手牌有两种都能接受的出法，你最愿意先研究什么？",
+          "scene": "一手牌与弃牌机会的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "哪一种能接上当前的小丑与牌型等级",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己最容易漏掉的计分条件这次有没有看清",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "不用惯常出法，试一种新的组合次序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "各自会留下哪些牌与之后的选择",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不要求计算具体概率，不用最优出牌评价聪明程度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "拿到一张能改变普通扑克牌的塔罗，几种使用对象都可行。你先围绕什么选择？",
+          "scene": "塔罗与牌组方向",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "试一个与平时常用牌路不同的方向",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把改牌与之后商店、资源投入接成一套安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "让牌面变化更符合当前小丑与常用牌型",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "分析改完之后，牌组中哪些手牌会更容易出现",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不要求知道具体塔罗名称或全部解锁。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV503.V1"
+        },
+        {
+          "text": "没有塔罗可用，只面对一次会改变牌组组成的选择，你先想什么？",
+          "scene": "塔罗与牌组方向的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "能否让自己尝试一种平常不玩的牌型",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "它与这局之后的资源安排是否接得上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "这次变化能否和当前小丑配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "它会怎样改变后面可能抓到的牌",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不要求知道具体塔罗名称或全部解锁。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "有机会提升一个牌型等级，目前不止一种牌型打得出来。你先想把投入放在哪里？",
+          "scene": "行星牌的去处",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "试着把自己平时少玩的牌型培养成主路",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "继续养本局一直使用的牌型，看它逐渐长起来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "让牌型等级与当前小丑效果共同发挥作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "比较现有牌组，判断哪个牌型之后更可能用到",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只解释当局成长，不把牌型等级当玩家能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV504.V1"
+        },
+        {
+          "text": "如果暂时只有一种常用牌型可投入，再作一次强化选择，你先看什么？",
+          "scene": "行星牌的去处的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "能否借此改换一种过去少用的打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "让已经开始的这条成长线继续往前",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "看强化能不能和现有小丑产生新的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先判断它会在哪些出牌情况真正起作用",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只解释当局成长，不把牌型等级当玩家能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "看到了接下来Boss盲注对这一关的限制，当前还有调整机会。你先做什么？",
+          "scene": "Boss盲注前",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读清限制会影响什么，推手上哪些办法仍可用",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "重想牌型与小丑的配合，避免整套打法断开",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "检查金币与商店投入，排清调整的先后",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "用一种平时不采用的牌路处理这次限制",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "不考Boss名字与记忆，不假定必须换某张牌。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV505.V1"
+        },
+        {
+          "text": "还在早期盲注，只发现当前出牌方式有个条件不适用。你先想什么？",
+          "scene": "Boss盲注前的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "弄明白限制究竟改了哪一段规则",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "找到手里牌与小丑还能够互相配合的方式",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先列清可以购买、调整与保留的资源",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "把它当机会，试一种平常没走过的牌路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "不考Boss名字与记忆，不假定必须换某张牌。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "眼前有能用的商品，留钱也有下一次选择空间。没有唯一必须买的东西时，你先围绕什么决定？",
+          "scene": "留钱还是当前购买",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "找能补上当前牌型与小丑协同的那一件",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "推它能改变哪些计分场面，再判断是否值得现在拿",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "买一件会把这局带向不同玩法的东西",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "把几次商店与之后的投入接成一个节奏",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不联系现实理财，不把省钱设置成更成熟的答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV506.V1"
+        },
+        {
+          "text": "预算只够优先做一件事，剩下内容可以以后再看。你先把注意力放在哪里？",
+          "scene": "留钱还是当前购买的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "哪一项最能把当前几张小丑串起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "哪个效果真正会在现有手牌中触发",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "哪种购买能让这局出现一种新的玩牌方式",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "这次花钱怎样接到下一段盲注与商店",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不联系现实理财，不把省钱设置成更成熟的答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "再开一局时，已经有几副牌组可选，不追求更高注等级。你先怎样挑这一局？",
+          "scene": "换一副已解锁牌组",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留熟悉牌组，练稳一个常漏看的出牌判断",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "继续补一个自己惦记的牌组或卡牌发现目标",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "围绕牌组特点试一套与之前不同的小丑组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "选一副平时少玩的牌组，看看会出现怎样的新路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "无全解锁、金注或挑战模式门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV507.V1"
+        },
+        {
+          "text": "如果只有最初牌组，再开一局也可以改变目标。你先想做什么？",
+          "scene": "换一副已解锁牌组的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练习出牌前稳定检查某个条件",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "留意自己还没见过的小丑与卡牌效果",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "让本局先出现的小丑决定一种新的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "认真试一个自己原先总略过的牌型方向",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "无全解锁、金注或挑战模式门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "这一局停在一处没达到要求的盲注，已经能回想自己的几次选择。你更想先整理什么？",
+          "scene": "一局结束后的回看",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "下次干脆试一种与这局不同的牌组思路",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "哪一手牌或哪次判断还留着另一种可能",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "核心小丑与牌型的关系在哪一段没有接上",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "购买、改牌和投入的先后怎样影响了后续",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不由分数或输赢评价现实推理能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV508.V1"
+        },
+        {
+          "text": "不复盘整局，只给下次留一句提醒，你最愿意记什么？",
+          "scene": "一局结束后的回看的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "哪条平时不玩的牌路值得认真试一次",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "一个关键回合本来还能怎样出牌",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "构筑里有一段触发关系还需要补上",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "几次资源使用怎样能衔接得更清楚",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不由分数或输赢评价现实推理能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想一手牌让几个效果连续触发，最让你想再体验的是什么？",
+          "scene": "计分连锁的一刻",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "普通扑克牌、小丑与倍率终于组成了一套整体",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己对触发与计分的推演真正得到了验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "数字、声音与动画连续跳起来的即时反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "一套原本只是怪点子的打法真的成立了",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "大分数的审美反馈不等于追求现实风险。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV509.V1"
+        },
+        {
+          "text": "只回想最早打出的一手满意的牌，最有吸引力的是哪点？",
+          "scene": "计分连锁的一刻的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "牌型与自己拿到的小丑确实接在了一起",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "开始明白为什么这手牌能这样结算",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "分数触发与画面声音接得很痛快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "发现不沿原来那种牌路也能玩下去",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "大分数的审美反馈不等于追求现实风险。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一张有成长效果的小丑或一直投入的牌型，哪种变化最让你记住？",
+          "scene": "一张小丑逐步成长",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "成长终于让它与整套牌组形成了关键配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "明白它需要怎样的触发条件，规则关系越来越清楚",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "为了它调整牌路，结果玩出了与以前不同的一局",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "从起初的状态一点点养起来，有了持续投入的痕迹",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "不要求特定成长小丑；牌型等级可替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV510.V1"
+        },
+        {
+          "text": "没有用过成长小丑，只回想提升过等级的普通牌型，最有感的是哪点？",
+          "scene": "一张小丑逐步成长的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "它和已有小丑一起，开始撑起一套玩法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "弄明白强化到底改变了哪一段结算",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "原来少用的牌型，后来真的成为这局的另一种选择",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "自己一直在用的东西在这一局里持续变化",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "不要求特定成长小丑；牌型等级可替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想一局里多次买牌、改牌与拿小丑的过程，什么最让你愿意继续？",
+          "scene": "牌组越来越像自己的",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一套以前不玩的牌路逐渐被自己试成",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "商店、钱与改牌机会慢慢形成了清楚的安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "不同效果不断接起来，形成这局特有的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "每次选择都会改变之后能形成哪些手牌，值得推想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不把选择多寡或解锁数量当偏好强度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV511.V1"
+        },
+        {
+          "text": "只回想最早几次商店选择，哪一点最吸引你？",
+          "scene": "牌组越来越像自己的的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "可以试一个与自己上一局不同的方向",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "一局不只是单次买牌，还能有前后衔接的安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "眼前一张牌可能把几个已有效果连到一起",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "想知道买下或不买会怎样改变之后的手牌",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不把选择多寡或解锁数量当偏好强度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BALV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "不追更高注等级，再开一局最吸引你的念头是什么？",
+          "scene": "还想再开一局小丑牌",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "还想看自己的选择触发一串痛快的计分反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "下一套牌型与小丑又会怎样互相配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "上次一个计分或出牌关系还想弄明白",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "想认真试一条平时不会选的牌路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "不从开局次数推断成瘾或自控力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV512.V1"
+        },
+        {
+          "text": "如果给最近几局留一页笔记，你最愿意整理哪件事？",
+          "scene": "还想再开一局小丑牌的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAL_CORE",
+            "BAL_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "哪几手牌在触发与计分时最有连贯的爽快感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "几张小丑和一个牌型怎样构成完整配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "一个关键回合的选择本来还有哪些后果",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己玩出过哪些不同于惯常思路的局",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "不从开局次数推断成瘾或自控力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BALV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+645646049da7"
+}

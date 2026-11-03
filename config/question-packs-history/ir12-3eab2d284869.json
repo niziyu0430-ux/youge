@@ -1,0 +1,1448 @@
+{
+  "id": "ir12",
+  "title": "以撒的结合：重生",
+  "game_ids": [
+    "steam-250900"
+  ],
+  "scope": "普通单人地牢共同核心；具体物品/故事/完成目标按真实体验换题，不要求DLC、模组或在线同伴。",
+  "status": "private_authoring_pending_independent_review",
+  "author_review": "root_handwritten_pending_full_self_and_peer_review",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12专属题位各3个不同已核情境，另4共享，16主问题与最多2补问。",
+    "普通地牢单人优先，卡和物品中文为常用说明性名称附原名，不伪造官方本地化；不把本体、Flash原作和DLC独有机制混写。",
+    "不强凑16画像；NPC不作真人竞争/协作对象。未体验继续换已核专属，有限3情境不保证全部经历或无限换题，无跳过。",
+    "原作者大指南混合多个DLC，只采用实际已读基础段，排除明确版本差异和新道具；未进行客户端或真人试答/心理效度验证。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "普通单人地牢（按真实体验换专属情境）",
+      "initial_variants": {
+        "IR1201": "IR1201.V1",
+        "IR1202": "IR1202.V1",
+        "IR1203": "IR1203.V1",
+        "IR1204": "IR1204.V1",
+        "IR1205": "IR1205.V1",
+        "IR1206": "IR1206.V1",
+        "IR1207": "IR1207.V1",
+        "IR1208": "IR1208.V1",
+        "IR1209": "IR1209.V1",
+        "IR1210": "IR1210.V1",
+        "IR1211": "IR1211.V1",
+        "IR1212": "IR1212.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "IR1201",
+      "number": 1,
+      "variants": [
+        {
+          "id": "IR1201.V1",
+          "scene": "只剩一把钥匙，宝箱房与商店都锁着",
+          "text": "普通地牢这一层还没下楼。你只剩一把钥匙，宝箱房和商店的门都确实锁着；身上有购物钱，另一条未探的岔路也能走。你会先把这一段时间用在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_ROOM",
+            "IR12_MAP",
+            "IR12_PICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用钥匙进宝箱房，落实自己这局先拿到一个新底座道具的打算",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "沿还没进去的岔路探看，想知道后面还有什么房间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先开已有小地图，核对已走房间、商店位置和剩下的入口",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "把钥匙花在商店入口，进去按现有钱和当场货物作选择",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "同一钥匙的普通分支，不用道具品质或必出钥匙作引导；两种自选消费目标均中性。",
+          "interpretation_boundary": "只当前确实锁门、有钱而不知道库存的场景；不把购物必买到升级或未探路必得奖励写死，排除替代开门效果。"
+        },
+        {
+          "id": "IR1201.ALT1",
+          "scene": "首领门已找到，旁边还有一个没进的普通房间",
+          "text": "你已找到这一层的普通首领门，但旁边还有一条没进过的路。现在仍能自由走动、状态足以选择，也没有必须赶的时限。你想先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CORE",
+            "IR12_ROOM",
+            "IR12_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先进入那条未走过的路，想发现它会把这一层接到哪里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先打自己已定为本轮目标的这层首领，把这轮流程往前推",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看已有地图显示的入口与自己走过的分支，再定顺序",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对角色的心、炸弹、钥匙和手头道具状态，再进下一间",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "普通首领与未知分支的路线取舍；探索不假必有宝物，状态核对不推谜题。",
+          "interpretation_boundary": "排除正在封门交战、已被锁在Mom房或不能回走的情形；不是让玩家以新手第一次见普通门为前提。"
+        },
+        {
+          "id": "IR1201.ALT2",
+          "scene": "洞穴层首领已倒，地板洞口还没跳",
+          "text": "普通洞穴层首领已经打完，你还没跳入下一层；现在确实能走回之前清过的房间，那里有一颗可拿的心，另有一处尚未探过的入口。下一步更想做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_ROOM",
+            "IR12_PICK",
+            "IR12_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "回已走过的房间把那颗心拿到，完成自己选定的补给准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "趁还能留在本层，去亲自看那个未探入口后面的房间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先核对小地图上心的位置和到洞口的已有路线",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "现在就跳入已打开的洞口，开始自己这轮已决定继续推进的下层",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "离层是不可轻易退回的决定；已知补给与未知入口不同，避免默认自动回上一层。",
+          "interpretation_boundary": "只普通洞穴层实际可回走且心可拾；不套Mom锁门、Mom首次结局或新DLC返回道具规则，不保证下一层安全。"
+        }
+      ]
+    },
+    {
+      "id": "IR1202",
+      "number": 2,
+      "variants": [
+        {
+          "id": "IR1202.V1",
+          "scene": "一颗炸弹，X石头还是猜到的暗房墙",
+          "text": "这一层你只剩一颗普通炸弹。眼前有带X标记的普通石头；你也根据已走过的房间，怀疑另一面无遮挡的墙后有秘密房，但还不知道猜得对不对。先把炸弹用在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_BOMB",
+            "IR12_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "炸开X石头，投入自己已选的眼前取物机会，接受掉落未必合用",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "检验暗房位置的猜想：记住布局与候选墙，再在这面墙放炸弹看是否开门",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先走看现有墙面、石头和能退开的空位，再决定",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "先不花掉，把这颗炸弹留给自己这局已经定下的下一段用途",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "可见随机收益与能失败的个人位置猜想争同一炸弹；不把炸暗房自动当解谜。",
+          "interpretation_boundary": "秘密房规则不能保证唯一位置；普通X石头不保证掉蓝心/小石头。没有特殊炸弹、穿墙或爆炸免伤前提，远离爆点仍不承诺绝对安全。"
+        },
+        {
+          "id": "IR1202.ALT1",
+          "scene": "坑那边有物品，旁边石头可以炸过去",
+          "text": "你不会飞，眼前一格坑挡住了可拾物品，坑边有普通可炸石头，自己还没掌握摆炸弹填坑的方向。手头有炸弹，也能不取物直接走下一间。先怎么安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_BOMB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门练还没掌握的摆放、退开和跨过去衔接，在后来真有同类布局时再试",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先查看石头、坑和两边实际能站的位置，再放不放",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "若自己还不明方向规则，提出石头会向爆炸相反侧填坑的解释，按候选站位放一颗，看结果能否支持它",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "放弃这次跨坑取物，先走自己这轮已选的下一间路线",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "炸桥方向给真实可失败的P与未熟动作T；没有先说所有空隙都能填。",
+          "interpretation_boundary": "仅普通可填的一格坑与可炸石头，排除尖刺石/特殊爆炸改造；不重置当前房间或回收已用炸弹，不声称看过示意图。"
+        },
+        {
+          "id": "IR1202.ALT2",
+          "scene": "炸弹可以打怪，但之后的墙也许还要炸",
+          "text": "普通交战房里，敌人正向你逼近，手上只有一颗普通炸弹；你可以继续走位发射眼泪，也能找当场可行的位置放炸弹再退开。你原先还想留它去找本层暗房。先选哪种投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CORE",
+            "IR12_BOMB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把炸弹花在眼前交战，实际执行自己选定的清房方案",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "继续亲手走位、转向发射眼泪，享受输入与命中反馈不断接上的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "练自己尚未掌握的侧移躲避与持续射击，重点是把这段操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "仍把炸弹留给已定的暗房探查，先用普通射击处理这间房",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "炸弹的即时交战和后续探索争消耗品；持续操作兴趣与练会未熟动作分开。",
+          "interpretation_boundary": "放炸弹也可能伤到自己，不保证清房/必炸到敌人；不是把爆炸后自动伤害当持续本人操作，未用固定伤害/引信。"
+        }
+      ]
+    },
+    {
+      "id": "IR1203",
+      "number": 3,
+      "variants": [
+        {
+          "id": "IR1203.V1",
+          "scene": "普通Monstro跳起来，影子正在追落点",
+          "text": "你遇到会跳起的普通Monstro，影子已经出现在脚下附近；你还没掌握边离开落点边保持射击的节奏。当前这局仍能自己走打。先把注意力放在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_BOSS",
+            "IR12_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕刚才没处理好的落点，练离开影子后再恢复射击的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "持续自己走位、调射向和打出眼泪，最在意动作和命中响应接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先把角色移到当前看得见且能到的空位，落实这次已选的脱离落点动作",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己的生命、位置和眼前影子，再定这段移动",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "普通Monstro真正的影子/射击窗口，不拿击杀效率推能力。",
+          "interpretation_boundary": "不套不会跳的灰色冠军版本，站到影子外不保证躲开所有弹；练习在当前仍可执行的移动与后来真实对局，不造无限重放首领。"
+        },
+        {
+          "id": "IR1203.ALT1",
+          "scene": "Mom脚下影子与门边的手，不能只盯一处",
+          "text": "你实际打到普通Mom：踩踏前的影子正在出现，靠门太近又可能被伸出的手碰到；自己还没练会在看影子时保持合适射向。此刻先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_BOSS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "练未熟的移出影子、离开门边再接射击的动作次序",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先核对眼前门边、影子与自己已能到的落脚处",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "持续亲手移动、改射向并出手，喜欢画面与射击反馈一路接上",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "按自己这轮已选的推进目标继续处理眼前首领，实际完成当前能做的攻击",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "母亲战的空间与注意力代价，区别普通跑圈；没有安全角落解法。",
+          "interpretation_boundary": "只普通Mom已见动作，不用Mausoleum另版/固定时限/保证掉相片；所有可站位依当时现场，不推现实专注力或胆量。"
+        },
+        {
+          "id": "IR1203.ALT2",
+          "scene": "普通眼泪会被石头挡住，敌人绕到另一侧",
+          "text": "普通交战房里，你没有穿石眼泪，也不会飞；石头挡住了当前射线，敌人已经向另一侧移动。你能绕过去继续射击，但边走边改方向还没练熟。更想先做哪件事？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_BOMB",
+            "IR12_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手绕石头、改射向并连续出手，喜欢操作与弹着反馈接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "反复处理自己没练会的绕障与转射衔接，重点是亲手掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先核对角色位置和眼前实际可走的缺口",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先走到自己已选的另一侧位置，推进这次清房计划",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "最普通开局也有的走打阻挡，与稀有首领作替代；不默认泪能穿岩。",
+          "interpretation_boundary": "无特殊飞行/穿石道具，不能走进坑或穿石；不把敌人自动绕路当自己操控，不承诺重复同房复位。"
+        }
+      ]
+    },
+    {
+      "id": "IR1204",
+      "number": 4,
+      "variants": [
+        {
+          "id": "IR1204.V1",
+          "scene": "D6亮着，底座上的道具还没拿",
+          "text": "这局你已经拿到D6且充能足够，普通房间有一个尚未拾取的底座道具；你认得它，暂时并不想要，也有别的房间可走。先怎么用这次机会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_ACTIVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "现在掷D6，接受新结果未知，实际执行自己已选的换这件道具计划",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先留着这次充能，按自己选定的顺序去处理另一间房",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有的D6重掷说明和眼前道具用途，再决定",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "如果自己还不清楚它是否只改底座物，先列出房内物品与身上已有物的区别，再实际使用并核对哪些变了",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "D6是已获得而非Isaac默认初始；重掷与保留充能互斥，未知机制才P。",
+          "interpretation_boundary": "不保证重掷更好、返还充能、恢复原道具或不影响房内其他底座；P只本人确实未明且能观察之时，不把已知随机结果当推理。"
+        },
+        {
+          "id": "IR1204.ALT1",
+          "scene": "充好的爱心留着，地上另一本主动书",
+          "text": "你使用能装红心的角色，手持充好的Yum Heart（回复红心的爱心），红心有空位；地上还有Book of Belial（本房增伤书）。当前只能带一个主动道具，下一场交战尚未开始。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_ACTIVE",
+            "IR12_PICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用爱心回复这次可补的红心，再保留它推进自己已选的稳步路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "换成增伤书，按换后实际显示的充能准备下一场战斗",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较现有两件主动的用途、自己生命和换后的实际携带限制",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若自己没弄明爱心是否会补蓝心，先按红心/蓝心提出区别，再在当前可补红心时使用并查看显示是否符合",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "单主动槽让恢复与攻击用途发生真实取舍，中性比较不硬贴B。",
+          "interpretation_boundary": "没有书包/多槽例外；不声称换来主动满充、爱心可补蓝心或免费反复切换；此P只能核对本次红心变化，不保证凭一次使用证明全部蓝心规则。"
+        },
+        {
+          "id": "IR1204.ALT2",
+          "scene": "主动还没充满，地上电池与未清房都在",
+          "text": "你当前带着靠清房充能的普通主动道具，还没充满；地上有能拾取的普通电池，本层也有你还没清掉、现在能去的房间。你已想好下一次把主动用在普通交战里。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_ACTIVE",
+            "IR12_PICK",
+            "IR12_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拾电池，按实际补到的充能推进已定的主动使用计划",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去打尚未清掉的房间，亲手连续走打，喜欢射击与反馈的过程",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前充能格、心和地图上的剩余入口，再决定补能顺序",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先清自己已选的那间房，用当前真实清房结果推进主动充能准备",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "立即拾能与通过清房获取资源的行动差异，拒绝把看充能自动算构筑或成长。",
+          "interpretation_boundary": "只普通靠清房充能且电池确可拾的主动，不套被动定时/耗钱/一次性物品；不保证每房相同充能、拾取溢出保留或无限刷房。"
+        }
+      ]
+    },
+    {
+      "id": "IR1205",
+      "number": 5,
+      "variants": [
+        {
+          "id": "IR1205.V1",
+          "scene": "三眼已经在身上，又拿到了弯勺",
+          "text": "你这局已经实际拿到The Inner Eye（三眼）和Spoon Bender（弯勺）：眼泪会同时发出多颗，也会追踪。前方仍有能打的普通敌房，你还没试清这套组合适合怎样开射线。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_TEARS",
+            "IR12_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把多颗射出与追踪这两个功能放在一起，实际试不同出手角度，再按命中效果调整打法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先核对自己已取得两件物品的说明，不急着替它们下效果结论",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "练自己还没掌握的走位与改射向，重点是亲手把动作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "持续亲手发射、移位并看追踪弹接上敌人，喜欢连续反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "两个已得基础组件分工明确，B需要真实合用/调整而非静看统计。",
+          "interpretation_boundary": "不默认所有追踪/多发改造兼容，不允许卸下被动A/B切换；仅当本人这局已看到此组合，没体验换普通跟班/主动等其他情境。"
+        },
+        {
+          "id": "IR1205.ALT1",
+          "scene": "圣经给本房飞行，普通眼泪能越过坑但不会穿石",
+          "text": "这局你已用The Bible（圣经）获得本房飞行，当前普通眼泪可越过坑但不能穿石；坑隔着仍可射到的普通敌人，自己还能在本房换位置，绕障射击有未练熟之处。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_ACTIVE",
+            "IR12_BOMB",
+            "IR12_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按自己这轮已选的清房目标，在当前可到的位置实际出手",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把飞过坑改变相对位置与眼泪跨坑射击两种功能合用，真的比较两处可达出手点，再按效果调整配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先核对现有圣经飞行说明，区分本房能力与跨房保留",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "专门练自己没掌握的绕障、停位与恢复射击，重心是亲手练会",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "飞行改变可达位置、眼泪跨坑攻击，各有不同功能并真正合用比较；撤掉原增伤书加普通站位的弱B，不制造卸装/切换配置。",
+          "interpretation_boundary": "只已经实际得到的本房飞行与普通可越坑眼泪，不在Satan或Mom首领房用圣经、不承诺隔坑无敌或伤害加成；离房不保证飞行保留，不许未清敌房门强行通过。"
+        },
+        {
+          "id": "IR1205.ALT2",
+          "scene": "跟班射线在身后，自己要不要换站位",
+          "text": "你已实际拿到Brother Bobby（射泪跟班），它跟着你射击；一排石头让角色和跟班的射线有时分别被挡。眼前还能走到两处不同位置继续打。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_TEARS",
+            "IR12_BOMB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走到自己已选、确能让跟班射线绕过这排石头的位置，再亲手射击推进这间清房",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先查看自己、跟班与石头的当前可见位置，再决定",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "持续亲手走动和转射向，喜欢自己输入与两路弹着反馈接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先落实自己已选的绕到石头另一侧的动作，完成这段转移",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "普通跟班的跟随射击与石头阻挡取舍；两路同类射线换站位不独立推出机制构筑，按具体清房目标中性记录。",
+          "interpretation_boundary": "只普通眼泪且跟班当时确受这排石头阻挡的现场，不把所有跟班/泪属性都相同，不造控制跟班独立行走的按键。"
+        }
+      ]
+    },
+    {
+      "id": "IR1206",
+      "number": 6,
+      "variants": [
+        {
+          "id": "IR1206.V1",
+          "scene": "带红心代价的交易，现在真的承受得起",
+          "text": "你玩的是有红心容器的角色，当前恶魔房有一件以红心容器标价的道具，确实付得起且交易后还能存活；也可以什么都不拿离开。自己认得这件道具的基本用途。此刻先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_ROOM",
+            "IR12_PICK",
+            "IR12_ACTIVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "支付这次真实代价，拿走自己已选的道具，继续本局的使用计划",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先比较现有装备、这件道具用途和交易后实际少掉的生命容器",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先离开，保留现有红心容器，投入自己已定的下一层推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有交易说明，尤其区分容器代价和普通红心回复",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "永久容器与已知道具用途的当局取舍，不道德化恶魔/天使选择，不由拿强物自动B。",
+          "interpretation_boundary": "仅能付且仍存活的当前明确价格；不写灵魂心换算/必封天使/必刷交易、当前未见道具效果，特殊角色/赊账/免费交易不套用。"
+        },
+        {
+          "id": "IR1206.ALT1",
+          "scene": "尖刺门后没看过，蓝心已经不多",
+          "text": "你在一扇尚未进过的诅咒房尖刺门外，这局不会飞、没有无敌效果；穿门确会损失生命，回来还可能再付代价，当前生命足以选择。旁边已有别的可走路线。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_ROOM",
+            "IR12_PICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "愿意付这次进门代价，亲自看看没体验过的房间里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先看自己的红心/蓝心和已知回程条件，再决定进不进",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先不进去，沿自己已选的普通路线继续本层",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有诅咒房门的伤害/离开说明，避免把进去与出来当同一回事",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "未知内容与有条件的生命资源门槛，不把好奇等同冒险人格。",
+          "interpretation_boundary": "不保奖/不固定扣多少心，也不把所有飞行进出都免伤；无免伤特例，真能活着选择而非强迫必死题。"
+        },
+        {
+          "id": "IR1206.ALT2",
+          "scene": "红心没满，蓝心也掉过，这颗红心先给谁",
+          "text": "这局你的角色有空红心容器，也带过会消失的蓝心；房间地上有一颗现在能拾的普通红心。你还没弄清拾红心和蓝心显示各怎样变化，自己也能继续往前走。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_PICK",
+            "IR12_ROOM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先提出红心只补红色容器的解释，记下两种心的显示，再拿这颗红心核对变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先把这颗红心拿上，落实自己已选的本次补血计划",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有的红心/蓝心说明，不急于拿当前局作验证",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "暂时留着这颗心，先走自己已选的下一间路径",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "普通红心与蓝心的可观察差异；P必须本人未知，实际拿起才有证据。",
+          "interpretation_boundary": "只支持红心且可拾的角色，不借骨心/魂心人物规则；本次只核对当前显示，不能唯一排除其他同时恢复效果，需留意实际干扰。"
+        }
+      ]
+    },
+    {
+      "id": "IR1207",
+      "number": 7,
+      "variants": [
+        {
+          "id": "IR1207.V1",
+          "scene": "愚者在手，回出生房还是继续走",
+          "text": "你手上是已认出的普通The Fool（愚者），使用会回到本层起始房；你在已清过的远端房间，出生房旁还有自己想回去取的已见物品，前方也有一条未探入口。先怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CARD",
+            "IR12_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用愚者回本层起始房，再去取自己已选的那件已见物品",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先不消耗卡，沿没走过的入口继续探，想知道那边连着什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先核对地图上自己、起始房与物品的已知位置，再排路",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先实际步行回已走过的旧路，把卡留给自己这局另定的用途",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "消耗传送与步行回头、未知分支的真实距离代价；不把回出生说成回上层。",
+          "interpretation_boundary": "只普通卡和当前仍可走的清房路线，没额外卡强化；不保证出生房旁没有其他危险，卡一旦消耗不退。"
+        },
+        {
+          "id": "IR1207.ALT1",
+          "scene": "倒吊人只管本房，坑边那件东西取不取",
+          "text": "你有一张普通The Hanged Man（倒吊人），自己当前不会飞；本房坑后有一件可取物品，也有正常出口可离开。你知道卡只在本房给飞行，没用过它跨这种坑。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CARD",
+            "IR12_BOMB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用卡飞过去，实际完成自己已选的这次跨坑取物",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "专门练还没掌握的飞越、停住和返回出口的操控衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先核对坑、物品和出口的当前可见位置，再决定用不用",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "留着卡，先从正常出口推进自己这轮已定的路线",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "单房飞行的实际可达性与消耗品保留，不套永久飞行。",
+          "interpretation_boundary": "普通卡，无跨房永久效力；只本房实际可取且可返回出口的布局，不让玩家停到下一房突然消失的平台上，也不保证无敌。"
+        },
+        {
+          "id": "IR1207.ALT2",
+          "scene": "教皇生成蓝心，手上卡位只能留一个",
+          "text": "你带着普通The Hierophant（教皇，生成蓝心），地上还有已认出的愚者卡；当前只有默认的一个卡位，也能拾取蓝心，没有必须立刻传走的危险。你会先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CARD",
+            "IR12_PICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "现在用教皇并拾取这次生成且可容纳的蓝心，再处理地上的卡",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先换成愚者，把回本层起始房的机会作为这次已选准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较两张现有卡的具体用途与自己生命，再定保留哪张",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有普通卡说明，区分生成心与恢复空红心容器",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "普通默认单卡位的即时生命与传送用途，纯选择不硬推收藏/构筑。",
+          "interpretation_boundary": "没有多卡位/强化卡例外；地上换下卡的保留依当前实际结果，不能凭空带两张/无限触发/把蓝心当空红心回复。"
+        }
+      ]
+    },
+    {
+      "id": "IR1208",
+      "number": 8,
+      "variants": [
+        {
+          "id": "IR1208.V1",
+          "scene": "清普通房间，给自己加一个真会判输的限制",
+          "text": "你已经玩熟一类普通清房流程，这局仍有能打的敌房，精力也足；既能照常推进，也能自己给接下来一间定个规则。你最想把这一段玩成什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CORE",
+            "IR12_BOMB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自定这间只能用普通眼泪、放炸弹就判这次失败，真按规则打一间；后来有实际新局再改限制试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "不加额外限制，继续亲手走打，享受输入与命中反馈接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "把这间作为自己已选的推进目标，按当前可做的普通方式打完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前角色状态和可见敌人，不急着给自己另添玩法",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "自设可失败限制并真玩I，跟普通清房和反馈动机分开，不依原生计分器。",
+          "interpretation_boundary": "人工判断只眼泪/用炸弹，不改变游戏脚本；不自动重置、不假违反规则会原生判负或必须赢，没有真人竞争。"
+        },
+        {
+          "id": "IR1208.ALT1",
+          "scene": "已经有地图，仍可自己编一条走房规则",
+          "text": "你对普通地牢找路已熟，这层还能继续走房，地图上有已经走过的分叉。你可以按常规走，也可以给本层剩下的探索加一条自己执行的规则。先选什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_MAP",
+            "IR12_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己规定每逢可选岔口先顺时针走、主动回头一次就判这段失败，真的按它探索，再看规则带出了什么",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "直接走自己原先已选的目标入口，推进这次路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对现有地图中的已走房间与仍可进入的门",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "有新路可走而精力充足，仍从容再走熟悉清过的一小段，喜欢这种熟悉过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "人为岔路限制改变走房次序，而非复制清房禁炸弹；H是有选择时自主熟悉过程。",
+          "interpretation_boundary": "只是人工规则，封门/单出口无法选择时不算违例；不能绕过上锁/封门，普通地图并非固定重复种子，H不要求清房刷新敌人。"
+        },
+        {
+          "id": "IR1208.ALT2",
+          "scene": "会用普通炸弹了，想不想自设一个布点挑战",
+          "text": "你已经会用普通炸弹，当前清过的房间有两块确可炸的普通石头，也有能退开的地面。身上有可用炸弹，可以直接走，也可以先试一段自己规定的布点。更想做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_BOMB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自定只准放一颗且要同时炸开自己标出的两块，没做到就判这次失败；真摆放退开，在后来实际新布局改规则再试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先查看两块石头、可放处和退路，按眼前可达现场再决定",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "照自己已选的炸开其中一块目标去放置，不另加成败限制",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "留着炸弹，先走自己本来已定的下一间路线",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "自设一颗覆盖两个标的的人工挑战，结果可能失败且资源真消耗；不同于训练未知操作。",
+          "interpretation_boundary": "两石头距离只当场可尝试不保同时炸开，普通炸弹有自伤风险；不以已熟动作反复刷熟练度贴T，不假无限补弹/重置。"
+        }
+      ]
+    },
+    {
+      "id": "IR1209",
+      "number": 9,
+      "variants": [
+        {
+          "id": "IR1209.V1",
+          "scene": "捐款机已经存过钱，眼前还卖着想买的东西",
+          "text": "回想你真在普通商店作过的一次选择：捐款机已有自己前几局的投入，尚有可继续累计的空间，当时未卡住；自己身上有钱，店里也有你认得、付得起的现货。哪种真实投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_LONG",
+            "IR12_ROOM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续给同一存档已长期投入的捐款总额加钱，喜欢看它向后续解锁继续积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "花钱拿当时自己已选的现货，把本局具体使用计划推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对那件现货已经显示的价格与自己现有持币，确认这次支付条件再决定",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "不再花钱，先按这局自己已定的进路离开商店",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "跨局同一已投资捐款对象是G，不把第一枚投入或即时买强物直接推成长；C只核对当前交易已列价格和支付条件。",
+          "interpretation_boundary": "须真实旧投入/未满/未卡；不写下一枚必升级、不保证金额与增益，不把重开档保留/炸机重出当事实。C不由攒通用钱自动成立。"
+        },
+        {
+          "id": "IR1209.ALT1",
+          "scene": "同一局已有好几件被动，还要不要再往下走",
+          "text": "回想你实际玩过的一局：已经亲手取得并用过多件被动道具，组合伴你走过数层；这局尚未结束，还能继续往下找新道具，也能结束游戏稍后再玩。你当时最想留下哪种投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CORE",
+            "IR12_ACTIVE",
+            "IR12_TEARS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续陪这一局已经培养起来的角色往下走，想看同一局的积累还会变成什么",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "围绕两件已得道具的不同功能，真的合用检验，再根据效果调这局的打法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先记录这一局已经取得的物品和已经走到的地点",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "先按自己当时选定的下一层目标继续推进",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "G是同一已投入且尚可继续的局内对象，B仍需真实组件合用；非空泛喜欢强大。",
+          "interpretation_boundary": "只实际可继续的一局，不承诺新道具掉落/死后保留被动物或随意读回死前；稍后继续须以当时真正可用的保存情况为准，不以退出必存造功能。"
+        },
+        {
+          "id": "IR1209.ALT2",
+          "scene": "血液捐献机换来的钱，与当局还要用的生命",
+          "text": "回想你真在普通地牢碰过血液捐献机的一次：当时角色支持红心，没有免伤或特殊替代代价；机器还可用，你也确实承受得起一次损血。旁边商店的现货与价格已看过，还能不再捐血、去走普通路线。那次你最想保留哪种投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_LONG",
+            "IR12_PICK",
+            "IR12_ROOM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "真的再用一次机器付出生命，拿实际所得去商店，按现货与余额推进自己已选的购物计划",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "不再捐血，保留当时生命，直接投入自己已选的下一段普通路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对自己已经显示的生命与持币，再决定要不要继续操作机器",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有血液捐献机说明，区分损血换钱与商店长期捐款的用途",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "拆除与12V1同壳的解锁缺项回顾，改为当局生命换钱和保留生命推进的真实代价；不把一次交换硬贴长期成长、收藏或多轮流程。",
+          "interpretation_boundary": "只支持红心、当前机器仍可用且一次操作后能存活的真实场面；不写固定伤害、固定出钱数或必出血袋，不保证机器继续工作/所得必够买目标。全部按实际余额和实际生命决定，没有无限刷取。"
+        }
+      ]
+    },
+    {
+      "id": "IR1210",
+      "number": 10,
+      "variants": [
+        {
+          "id": "IR1210.V1",
+          "scene": "白色永恒心留到了下层，红心容器才增加",
+          "text": "回想你用能增加红心容器的普通角色玩过的一段：拾到白色永恒心后，没有再拾第二颗，也没触发其他增容效果；你把它保留到下一层，才看到红心容器增加。自己当时还不知道跨层与这次变化的联系，后来又真遇到过可拾白心与可去的下层。你更想保留哪种真实投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_PICK",
+            "IR12_ROOM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出保留这颗白心跨层才增加容器的解释，在后来真实机会对照下层前后的显示，看它能否成立",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先查已有永恒心说明，弄清跨层和同层再拾一颗分别是什么条件",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "后来那次按自己已选的离层准备去拾白心并走向下层，不把检验解释当重点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "那次先沿尚未体验的入口亲自走看，宁可暂缓离层，也想发现后面是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "从立即回复红心的近壳改为永恒心持有跨层的条件性变化；P须本人当时未明并有后来真实观察，不能把既知机制回忆当推理。",
+          "interpretation_boundary": "只本体白色永恒心、支持并仍能增加红心容器的普通角色；排除同层第二颗白心、特殊人物、同时增容道具和途中失去白心。未保证必保住或下一层安全，不把普通红心回复当新增容器。"
+        },
+        {
+          "id": "IR1210.ALT1",
+          "scene": "一点骰子房，要不要把本局已用熟的道具换掉",
+          "text": "回想你真进过一点骰子房、还没踩中央点数垫的一次：自己已用本局取得的普通道具走过几层，知道这些功能；此时可以触发重掷身上道具，也能保留现有组合离开，继续已经找到的普通首领路线。你当时更想把这一段用在哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_ROOM",
+            "IR12_ACTIVE",
+            "IR12_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留已经用熟的当前组合，直接去完成自己当时已选的普通首领路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "真的踩下中央一点垫，执行自己选择的重掷尝试，接受原有功能可能失去、结果未必合用",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有一点骰子房的说明，分清它与D6改房内底座物的范围",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先把自己这一局已经取得的物品记下来，再决定是否换掉它们",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "拆除与04V1相同的D6作用域试验；回顾一点骰子房真正替换已用组合的代价，保留既有功能与接受未知重掷结果是不同目标，均不硬贴B或P。",
+          "interpretation_boundary": "只本人真实遇到且尚未触发的一点骰子房及普通既有道具，不套D6、四点底座重掷或五点重开楼层。不会免费还原原组合，不保证重掷更强、相同功能保留或可重复触发；不概括特殊任务物品的例外。"
+        },
+        {
+          "id": "IR1210.ALT2",
+          "scene": "小地图没开出整层，未知处确实还得进去",
+          "text": "回想你刚开始理解普通小地图的一段：没有全图揭示道具，已经走过的房间在图上，旁边仍有没进去的入口；自己当时不确定显示出来是否就代表已经探过，后来也真的走进一间。哪种实际投入最贴近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出图上相邻入口不等于亲自探过的解释，对比进门前后显示和实际见到的房间",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "沿当时未体验的入口亲自走看，重点是发现它后面到底是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时已有地图实际显示的位置和连通入口，再选路线",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先按自己当轮已选的进门项目走进去，不把核实地图规则当重点",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "早期普通地图的“看见入口/真正见房”解释检验，P与为发现而去W分开。",
+          "interpretation_boundary": "不使用后期拾取星号/完整揭图/特殊诅咒假设；具体颜色/标志按当时版本实际显示，单次进门不证明所有地图规则。"
+        }
+      ]
+    },
+    {
+      "id": "IR1211",
+      "number": 11,
+      "variants": [
+        {
+          "id": "IR1211.V1",
+          "scene": "开场要求献祭，Isaac选择逃入地下室",
+          "text": "回想你实际看过或读过本作开场的一段：母亲听到要求献祭的声音，Isaac逃进地下室。看完后你也能马上开始普通走打。那次让你最想继续投入的是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续留意母亲、Isaac和他恐惧的后续，想知道逃下去的故事会怎样展开",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "若当时有愿回应的真人同好，把自己对这段开场的感受与对方交流",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "先开始自己已选的第一段地牢推进，实际去走过房间",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先记录自己已经看到的人物信息和开场事件",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "只用开发者已证开场叙事，不编后期剧情/心理定论；S关心后续而非背设定。",
+          "interpretation_boundary": "开场未看未读可换其他普通交战回顾；外部开发者梗概与亲看动画区别承认，不声称看过媒体；O仅当时愿回应真人。"
+        },
+        {
+          "id": "IR1211.ALT1",
+          "scene": "真正打到母亲之后，想看事件后续还是继续操作",
+          "text": "回想你真打到普通Mom并见过本作一段结局的一次：刚经历了母亲与Isaac的冲突，自己对后续还没全了解；当时也能开始新的普通地牢尝试。哪种投入最想留住？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CORE",
+            "IR12_BOSS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续看自己实际能进入的后续人物/结局内容，想弄清事件怎样接下去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "若当时有愿回应的同好，交流自己刚才对母亲战与结局的感受",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "先另开自己已选的新一局，投入其中的走位射击过程",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先记录已经体验过的母亲战地点与人物信息，不预写未见结局",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "情节后续S与分享O/本人持续走打F分开，不能把过关或看一段动画自动当S。",
+          "interpretation_boundary": "仅本人真见过一段结局、真有当前可达后续；不编结局画面内容、不假每次Mom首通都能接同一分支，不强迫读全剧情。"
+        },
+        {
+          "id": "IR1211.ALT2",
+          "scene": "普通房间里连续躲过几次，结束后想怎样续这一段",
+          "text": "回想你真在普通敌房连续移动、改射向，最后走出来的一段；没有要求你看剧情或用稀有道具。当时还有精力继续，熟悉的普通流程与自己没练会的操作都能再尝试。哪种真实投入最值得留住？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CORE",
+            "IR12_BOMB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续亲手走打，喜欢输入、发射声与命中反馈连起来的过程",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把刚才确实没掌握的绕障/转射衔接拿来练，想亲手学会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "有别的挑战可选仍自主从容再玩熟悉流程，喜欢熟悉本身",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "若当时确有愿回应的真人同好，分享这次走出房间的小插曲，享受共同聊游戏",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "给跳剧情玩家的普通单人入口；F/T/H/O动机不同，不假必须联机或同伴在场。",
+          "interpretation_boundary": "不是套原生多人能力，不造重复原房敌人复位；H需要有余力有选择，T必须个人未熟难点；O是当时真愿回应的真人。"
+        }
+      ]
+    },
+    {
+      "id": "IR1212",
+      "number": 12,
+      "variants": [
+        {
+          "id": "IR1212.V1",
+          "scene": "角色便签上缺一个自己惦记的完成标记",
+          "text": "回想你确实看过角色页的一段：这个已解锁角色有自己打出的完成标记，还缺一个你惦记、当时条件允许尝试的本体首领标记。你也可以只开普通局随意走打。哪种实际投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_LONG",
+            "IR12_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用该角色按已核可达条件去尝试那个缺项，最想把便签补齐",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有标记和这个首领的现成路线条件，再决定",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "继续玩自己已熟悉的普通流程，有余力也有新目标可选，仍喜欢熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先开自己当时另选的一局，完成那个具体当局目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "便签明确缺项C，不由角色强度/全成就数量推收藏；与捐款跨局G分开。",
+          "interpretation_boundary": "仅已解锁且路线真实可达的本体目标，不列DLC限定首领/总数；不假普通模式补困难标记、种子/控制台局照常成就。"
+        },
+        {
+          "id": "IR1212.ALT1",
+          "scene": "普通和困难都能开，但这次还想按熟悉节奏来",
+          "text": "回想你已经多次玩过普通单人地牢的一次闲暇：普通和困难入口都实际可选，精力足，自己并非被迫卡在唯一模式，也有一段未掌握操作能练。你实际更想怎样投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CORE",
+            "IR12_LONG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "仍按自己节奏开熟悉的普通流程，不额外加目标，熟悉活动本身就值得玩",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "专门练自己未掌握的走打难点，喜欢把它亲手练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先按自己这次已选的困难尝试目标开局，推进这一轮的具体计划",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若当时有愿回应同好，聊这次普通地牢的见闻，享受共同分享",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "不需稀有完成标记的普通熟悉流程入口；困难选择只是中性自选目标，不推竞技/强弱。",
+          "interpretation_boundary": "以当时真实模式入口为准；不把困难强制固定怪物/数值概括，也不假普通地牢每局相同地形。疲惫/被迫低难不成立H。"
+        },
+        {
+          "id": "IR1212.ALT2",
+          "scene": "已取得的道具与已走房间，补记录还是开下一局",
+          "text": "回想你结束一段真实地牢经历后：已取得过的几件道具和走过的房间还记得，自己能用普通文字或截图作记录，也有时间再开一局；当时已有一个自己选过的下局目标。哪种投入最想留下？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "IR12_CORE",
+            "IR12_MAP",
+            "IR12_ACTIVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已经拿过的物品和已经走过的地点补进自己的记录，方便留住这段经历",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "按当时自己已选的下局目标再开一局，实际投入那段路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若当时有愿回应的同好，分享这一局发生的小插曲，喜欢共同聊过的经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "有新目标可选、精力足，仍自主回到熟悉普通流程，喜欢这个过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "普通手动记录/分享/熟悉过程各按字面，不强贴A外观或Y流程系统；不要求录像系统。",
+          "interpretation_boundary": "记录只已经取得物品/体验地点，不伪造原生Replay或自动战斗日志；普通PC截图/文字为外部手动作法，非专属编辑模式，O须真实愿回应。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+3eab2d284869"
+}

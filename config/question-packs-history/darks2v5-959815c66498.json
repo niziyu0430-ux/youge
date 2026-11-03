@@ -1,0 +1,943 @@
+{
+  "id": "darks2v5",
+  "title": "暗黑血统2终极版：死亡、战利品与魔化兵器",
+  "game_ids": [
+    "steam-388410"
+  ],
+  "scope": "终极版单人本体",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "死握、食尸鬼与瞬移斩、魔化武器都注明开放前提；基础镰刀和早期遗迹可回答。",
+    "魔化喂养只在尚可升级并有闲置物品时使用，排除无限升级漏洞。",
+    "不要求灵魂分割、后期时间传送、DLC和旧在线收件箱或交易。",
+    "严格复核仅按实际行为收紧信号：普通换路、换招、已有配置比较/试用、个人准备与当前资源循环均作0分记录；不为保留标签增强原动机。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "终极版单人本体",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DARKS2V501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你已能在铸造之地自行来回，任务可继续；未走岔路、已记亡者之书书页缺口、可观察的平台机关与已开放的铸造者对话都在附近。现在先去哪？",
+          "scene": "三石镇外的第一段岔行",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进岔路，先看陌生地形怎么展开",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "去找自己已记下的那页书页，让一直追的章节少一个缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "回到可交谈的铸造者旁，弄懂他们为何需要死亡帮忙",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "检查近处机关与平台的连接，试清它会改动哪条路",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "铸造之地、书页与铸造者为二代情境，不把NPC任务当真人协作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS2V501.V1"
+        },
+        {
+          "text": "如果还没开始收书页：在第一段可以自由行动的废墟路口，主路与侧路可选，附近有墙面跑动路线和普通敌人。你此刻先做什么？",
+          "scene": "三石镇外的第一段岔行的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拐到未去过的侧路，看看它的另一头",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "观察墙面、柱子和平台，猜一条可通路线再试",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先沿主线走，想接着看死亡为何追查兄弟的遭遇",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先用镰刀接上眼前遭遇，享受挥转与收回的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "铸造之地、书页与铸造者为二代情境，不把NPC任务当真人协作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS2V501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "刚取得的战利品里，有快慢不同的副武器和几件外形、词条不同的护甲；你也已有一个可花的技能点。附近安全，可以先整理再上路。你更想先做哪项？",
+          "scene": "战利品占了背包",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把重复装备分成保留与出售两份，安排金钱和下一次返商人顺序",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "穿上自己喜欢的肩甲、护甲与靴子组合，让死亡有一身自己的可见造型",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "花技能点提升会继续用的技能，让已有培养线真正再前进一层",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "根据手里力量或奥术相关词条，配好镰刀、副武器与已有招式，再试互补效果",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "真实换穿造型是个人表达，实际花技能点是永久成长；装备出售返商人降准备，未写清部件效用的泛配合降配置或动作。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V502.V1"
+        },
+        {
+          "text": "若装备掉得还不多：你有初始镰刀、一件已取得的副武器、两件能实际换穿的护甲，当前也有一个可花技能点。你先做什么？",
+          "scene": "战利品占了背包的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按这次已得装备与商店距离，排好出售、补给、继续任务的顺序",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际换穿更符合自己轮廓想法的护甲，再看它与镰刀搭在身上的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把技能点投进自己想继续培养的基础技能，留下永久的一次提升",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把副武器的出手快慢与镰刀、已有招式接起来，试出互补的一段",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "真实换穿造型是个人表达，实际花技能点是永久成长；装备出售返商人降准备，未写清部件效用的泛配合降配置或动作。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已得到尚可继续喂养的魔化武器，闲置装备足够再升一次，也有两件外形不同的已持护甲可换。菜单能升级和改名，你此刻先做什么？",
+          "scene": "尚能升级的魔化武器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_possess",
+            "ds2v5_feed"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把装备分成装备、出售、喂养三份，理顺之后几趟的资源去向",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "给魔化武器取一个主题名字，再换穿与这层意象相合的已有护甲轮廓，让兵器和可见造型一起表达自己的想法",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "实际献祭一批闲置装备，让这把武器留下一个新的升级阶段",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "挑与已用技能、现有武器词条相配的献祭材料，试着接成有方向的组合",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "魔化武器未满并实际献祭保留g，命名加可见护甲组合保留a；三份分拣是个人准备，泛词条相配或连招降0。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V503.V1"
+        },
+        {
+          "text": "还没得到魔化武器的话：普通镰刀、副武器和已学基础技能都在，当前怒气够用；另有一技能点和几件闲置护甲，附近普通遭遇也可试。现在先做哪项？",
+          "scene": "尚能升级的魔化武器的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_possess",
+            "ds2v5_feed"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把闲置护甲哪些留下、哪些出售和何时返店排清",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "换穿自己更喜欢的护甲组合，让死亡的可见轮廓更接近自己的想法",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把镰刀与副武器的动作、已有技能作用接起来，再按效果换搭",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "实际花技能点提升常用基础技能，留下一项能继续用的成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "魔化武器未满并实际献祭保留g，命名加可见护甲组合保留a；三份分拣是个人准备，泛词条相配或连招降0。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已学会瞬移斩与食尸鬼召唤，怒气够用，也有一套已持装备可以调整。眼前普通遭遇没有限定打法，你现在更想先试什么？",
+          "scene": "瞬移斩与食尸鬼的两条路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_skills",
+            "ds2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让食尸鬼出场，再用瞬移斩切向旁边普通敌人，亲手换一次这两项已有技能的先后",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "让食尸鬼牵住敌人，再用瞬移斩和镰刀切入，并按力量或奥术相关词条调整组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "专练自己瞬移斩之后接镰刀时常慢的一拍，不追求比别人快",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先召出食尸鬼再贴近挥镰，享受战场上几段反馈同时接起来",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "食尸鬼牵敌后瞬移斩和镰刀切入有明确作用互补，保留b；单纯交替起手/轮换武器不是新玩法；ALT泛互补顺序不构成b。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V504.V1"
+        },
+        {
+          "text": "若只学了一项基础技能：镰刀、副武器与已学技能都能用于眼前敌人，当前怒气足够，也有两件已持护甲可比较。现在先做什么？",
+          "scene": "瞬移斩与食尸鬼的两条路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_skills",
+            "ds2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用镰刀打一小段，再接手中已有副武器的一次攻击，亲手试这次换手顺序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "把已学技能与镰刀、副武器接成互补顺序，再看是否需要换掉一件已持装备",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "反复调整一次闪避后的镰刀起手，让自己比上一回连贯",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿用熟悉镰刀打一轮，只为挥转和命中的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "食尸鬼牵敌后瞬移斩和镰刀切入有明确作用互补，保留b；单纯交替起手/轮换武器不是新玩法；ALT泛互补顺序不构成b。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已取得死握，站在一个旧遗迹分岔处：新够到的抓点通向上层，自己记下的书页缺口在另一侧，附近还有一组可观察的平台机关。你此刻先去哪边？",
+          "scene": "死握够到的另一层",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "抓到没去过的上层，看看高处之后接着什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "循着已记下的书页缺口走，先补齐这一项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先判断抓点、平台和门的连动关系，再触发一次验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "选一段已能通行的抓取与落地，练自己衔接转向的稳定度",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "死握是中途取得的专用能力；每条路都是可做的优先事项。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS2V505.V1"
+        },
+        {
+          "text": "还没有死握的话：这一处只需已有跑墙、跳跃与攀附；主路、陌生侧台、可动平台机关和一页已见未取的书页都可处理。现在先做什么？",
+          "scene": "死握够到的另一层的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿侧台走到没看过的一角，去看另一面的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "回去拿一件自己已经看见却没取的书页",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先猜墙面跑动和移动平台应怎样相接，再动机关核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "重复一段已通的跑墙转柱，让自己的落点比刚才稳一些",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "死握是中途取得的专用能力；每条路都是可做的优先事项。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS2V505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已经取得一些亡者之书书页，现在回到能自由来回的旧区。自己缺的一页、一个未探入口和返商人的路都可处理，主线也已能继续。你先做什么？",
+          "scene": "书页与下一段主线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_manual",
+            "ds2v5_core",
+            "ds2v5_pages"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿已经开放的主线走，想弄清死亡会怎样继续追查兄弟的遭遇",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "钻进未探入口，不先规定那里一定要产出什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "把这趟卖掉闲置装备、补给和继续任务串成少折返的一条线",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "按自己追的书页清单去补那一页，重点是把这一组缺口缩小",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "书页已记缺口是真收集；卖装备补给少折返是个人任务准备；ALT不用尚未收集系统，只问现成机关与普通敌人。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V506.V1"
+        },
+        {
+          "text": "若书页还没开始收：当前旧房间已可回走，近处有机关、主线入口与普通敌人。你现在先把时间用在哪？",
+          "scene": "书页与下一段主线的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_manual",
+            "ds2v5_core",
+            "ds2v5_pages"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿主线路接着走，想看死亡对兄弟遭遇的追查如何推进",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "直接挥镰接近普通敌人，体验回旋与命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "在同一类普通敌人处练自己闪避接镰的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "改动一次开关，确认它如何改变平台之间的连接",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "书页已记缺口是真收集；卖装备补给少折返是个人任务准备；ALT不用尚未收集系统，只问现成机关与普通敌人。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已经能在这段开放地带骑乘绝望，精力充足，当前任务可直接继续。熟悉道路与一个未去过的侧口都能到，你此刻先怎么骑？",
+          "scene": "绝望能跑的熟路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_manual",
+            "ds2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选熟路里一处转向，保持同一段接近与转弯动作反复尝试，练到自己比原先更能控制坐骑",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "在能自由骑行的一段路跑起来，享受坐骑移动与转向的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "沿已走熟的开阔道路从容骑行，不加新目标，享受看惯道路与自主节奏的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "转去没去过的侧口，想知道地形另一头接什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "绝望是坐骑，非真人同伴；舒缓有充足精力和可继续目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS2V507.V1"
+        },
+        {
+          "text": "还没骑过绝望的话：在一段可自由回走的步行遗迹，主线路已通，近处还有侧路、跑墙路线和主线方向。你现在先做什么？",
+          "scene": "绝望能跑的熟路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_manual",
+            "ds2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一段已走过的跑墙，练自己的落点和转向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "接着往主线走，想看死亡会从下一位人物那里得知什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "到侧路的另一端看一眼，不先查收集奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "观察墙面与平台，试出自己猜的通路是否接得起来",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "绝望是坐骑，非真人同伴；舒缓有充足精力和可继续目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS2V507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "一场普通遭遇正要开始，镰刀、副武器和已学技能都可自由使用，当前怒气足够。没有限定武器，你此刻更愿意怎样开场？",
+          "scene": "自己选定的镰刀猎人",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让已有基础技能接上镰刀，再利用副武器的不同快慢填进空档",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "按自己给死亡设定的镰刀猎人身份，先用镰刀靠近并起手，副武器之后再用",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "练自己镰刀接闪避的一段，只想让自己的动作比上次顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "让熟悉的镰刀招式连着命中，先享受挥转与回收的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "基础技能、镰刀和快慢副武器只写出招衔接，未具体组件效果，降动作变化；自设镰刀猎人实际约束正面接近和起手保留r。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V508.V1"
+        },
+        {
+          "text": "若还没有副武器与技能搭配经验：眼前普通敌人可用镰刀和基础闪避应对。你此刻先怎么行动？",
+          "scene": "自己选定的镰刀猎人的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先闪开再用镰刀起手，亲手试试与自己常用开场不同的先后",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "把自己当正面迎敌的镰刀猎人，主动选从正面持镰接近再起手",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "专练一次闪避落点，让下一段镰刀连击接得比刚才稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "用熟悉镰刀连击打一轮，直接享受挥动与命中的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "基础技能、镰刀和快慢副武器只写出招衔接，未具体组件效果，降动作变化；自设镰刀猎人实际约束正面接近和起手保留r。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你真正换过或整理过的二代装备，哪种经历最像你愿意停在装备菜单里的原因？",
+          "scene": "回看穿在死亡身上的战利品",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_feed",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际搭出了自己喜欢的肩甲、护甲与靴子轮廓，想让死亡有自己的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "试出镰刀、副武器、装备词条和已有技能互相支持的一套",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把闲置物品分成留用、出售、献祭，后续金钱和喂养因此更有次序",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际喂养过未到上限的魔化武器，看着它的投入继续留下升级",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "护甲外观表达、真实献祭升级保留；泛武器词条技能相互支持降配置，ALT普通连招降动作；售卖分账降准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V509.V1"
+        },
+        {
+          "text": "若没拿到魔化武器：回想基础装备与技能点已经发生的选择，哪种更贴近？",
+          "scene": "回看穿在死亡身上的战利品的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_feed",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换穿过自己更喜欢的已持护甲组合，主动选了死亡的可见外形",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把镰刀、副武器与一项已会技能接起来，比较过实际配合",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "为闲置装备卖什么、留什么与何时返店排过顺序",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "已经把技能点投入常用基础技能，喜欢它能持续留下培养进展",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "护甲外观表达、真实献祭升级保留；泛武器词条技能相互支持降配置，ALT普通连招降动作；售卖分账降准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你真正探过的二代遗迹，哪种片段更让你觉得这一趟值得停留？",
+          "scene": "回看遗迹里的一次绕行",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds2v5_manual",
+            "ds2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "越过一个原本看不到的转角，发现了陌生房间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把已经听过的铸造者或亡者对话与地点前后接上",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "为了亡者之书或另一类明确收集缺口，回来补上其中一项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "把机关、跑墙或抓点的连接解释清楚，并实测过自己的猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不把后期工具当普遍经验；回顾机关理解或目标之外的投入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS2V510.V1"
+        },
+        {
+          "text": "若只探过早期废墟：回想确实经过的一段跑墙与平台路，哪种经历最像你？",
+          "scene": "回看遗迹里的一次绕行的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds2v5_manual",
+            "ds2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动走进主路旁一个没看过的侧间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为了接上死亡的追查，停下听完了已经出现的主线对话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "回头取了先前已看见却漏拿的一页书页",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "试过开关，理解了它为何能让两段通路接上",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不把后期工具当普遍经验；回顾机关理解或目标之外的投入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DARKS2V510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想二代里一场你确实自由选过起手与招式的普通遭遇，哪种实际过程更像你？",
+          "scene": "回看一场由自己决定的交手",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只是享受镰刀挥转、副武器落下与命中的节奏，就愿意接着打",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己试过先用镰刀接敌、闪开后再挥下一镰，亲手体验过一次不同的出手次序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "为了自己设定的镰刀猎人身份，明明有别的招式仍先持镰接近并起手",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "反复练过一次闪避、瞬移斩或镰刀衔接，目标是比自己的上一回稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "轮换武器/技能/距离均是已有动作换序，i降0；镰刀猎人身份实在选择先镰刀接近起手，r保留。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V511.V1"
+        },
+        {
+          "text": "如果只用过镰刀与基础闪避：回想一次普通交手，哪种过去的选择最贴近？",
+          "scene": "回看一场由自己决定的交手的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds2v5_core",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "喜欢熟悉镰刀连击的声音和回旋，所以多打过一轮",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己在镰刀出手后先闪到侧边，再换位置挥下一镰，亲手体验过这样的次序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "自定正面迎敌的镰刀猎人身份后，真的从正面接近并先挥镰",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "为了让闪避接下一镰更连贯，主动重复过那一段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "轮换武器/技能/距离均是已有动作换序，i降0；镰刀猎人身份实在选择先镰刀接近起手，r保留。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DARKS2V512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想二代里你已经自行安排过的一段任务间歇，哪种经历最像它留给你的价值？",
+          "scene": "回看继续培养还是继续赶路",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds2v5_manual",
+            "ds2v5_feed",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时精力足、任务可走，仍在走熟道路慢行，享受熟悉环境和从容步速的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "实际花技能点或喂养魔化武器，角色与常用兵器又留下了一次成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "为了验证技能与装备词条的配合，调整组合后真的出门试过",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "把售卖、补给、下一段任务与返店串成清楚流程，旅程因此少些来回",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "回顾h明确精力足可推进，实际投入点数/献祭保留g；泛词条验证与连招降0，售卖补给任务串联降准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V512.V1"
+        },
+        {
+          "text": "若还没取得魔化武器或自由坐骑：回想早期已经发生的一段停留，哪种更接近？",
+          "scene": "回看继续培养还是继续赶路的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ds2v5_manual",
+            "ds2v5_feed",
+            "ds2v5_skills"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时精力充足且不缺目标，仍重走熟悉废墟小路，喜欢看惯通路和自主步速的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "把已有技能点花在常用基础技能上，喜欢可用动作的积累留了下来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "将镰刀、副武器和已学基础技能接成一段，按实际配合改过顺序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "先排好了卖闲置装备、补给和继续任务的次序",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "回顾h明确精力足可推进，实际投入点数/献祭保留g；泛词条验证与连招降0，售卖补给任务串联降准备。",
+          "interpretation_boundary": "标为0分行为记录的选项只描述这次行动，不再据普通换路、出招先后、一次资源准备或单局目标推断人格；真实未得藏品、实际持久投入、明确组件效用与身份驱动行动，另按各自具体前提解释。",
+          "id": "DARKS2V512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+959815c66498"
+}

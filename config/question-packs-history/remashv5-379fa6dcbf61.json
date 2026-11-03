@@ -1,0 +1,945 @@
+{
+  "id": "remashv5",
+  "title": "遗迹 灰烬重生",
+  "game_ids": [
+    "steam-617290"
+  ],
+  "scope": "一代本体战役、地球冒险、龙心与套装改装",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "一代初始职业不锁定后续配装，不写独立职业技能冷却。",
+    "世界之石补充与普通敌人刷新、龙心、可强化套装、独立地球冒险只按一代核对。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "一代本体战役、地球冒险、龙心与套装改装",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "REMASHV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "在地球一处已启动的世界之石旁，当前弹药与龙心还够走一段，附近有未探出口和没完全弄清的回路。你先怎么继续？",
+          "scene": "世界之石旁的余地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_stone"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去陌生出口，看看这次生成的废墟会通向哪里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把休整补充、普通敌人刷新与往返路程一起安排，再决定何时坐石",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "对照地图层次、门与楼梯，判断未连上的回路能否接回来",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "回13号实验区听一个已认识人物把之前的事情接着讲",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "01世界之石恢复、普通敌刷新与返路是当次行程，不是经营，两个y降mission_preparation_plan；未知出口、回路解释与既有人物叙事成立，不混二代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV501.V1"
+        },
+        {
+          "text": "只走到最早的地球检查点，资源还能继续，眼前有熟路、楼梯和未探方向。你先做什么？",
+          "scene": "世界之石旁的余地的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_stone"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进尚未亲自看过的街道或地牢入口",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把补弹、龙心补充与下一次经过检查点的顺序排清",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "对照高低层与通道，自己推一条能返回的连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "回到已经能交谈的实验区人物那里，想听清这段灾变的来由",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "01世界之石恢复、普通敌刷新与返路是当次行程，不是经营，两个y降mission_preparation_plan；未知出口、回路解释与既有人物叙事成立，不混二代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "手上已有几把普通武器和可替换改装，准备再走地球熟路。当前不考虑哪种初始职业更强，你先怎么选？",
+          "scene": "初始装备不锁住玩法",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_startkit"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换进一种平时少用的已持武器或改装，认真体验另一套思路",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "保留原来装备，专练一次翻滚结束后接回射击的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "选最合手的枪，想再体会瞄准、开火与命中接续的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "让长枪、手枪与改装效果分别补上距离和应对用途",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "02普通试少用已持武器/改装i降试配置，初始工具换序只动作变体。V1可换装备各补用途b成立；ALT仅固定初始工具不强配b，改先预测改装反馈、再在熟悉遭遇核对的p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV502.V1"
+        },
+        {
+          "text": "只有最初长枪、手枪、近战和一项改装可用，准备再出发。你先给这些工具什么重点？",
+          "scene": "初始装备不锁住玩法的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_startkit"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "同样几件工具改一段接敌和切换顺序，试一种少用办法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "用原配置重复练一次躲开后重新瞄准",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "沿自己最顺手的射击与切换节奏打，享受连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先预测初始改装会改变哪种射击或恢复反馈，再在熟悉遭遇施放后实际核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "02普通试少用已持武器/改装i降试配置，初始工具换序只动作变体。V1可换装备各补用途b成立；ALT仅固定初始工具不强配b，改先预测改装反馈、再在熟悉遭遇核对的p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "回到安全处，你有新的特性点与可用基础特性，现有装备也够继续。先把这次积累怎样处理？",
+          "scene": "刚取得的特性点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_101"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把特性点、材料升级和之后出发的先后安排清楚",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "根据当前特性说明，先预测它会改变哪次生命或耐力反馈，投点后在熟悉动作中核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "沿自己已经开始的特性路线继续投入，让角色保留一段持续成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "用当前生命或耐力基础特性补近身与翻滚风险，让枪械和改装分担输出或恢复，按用途互补投点",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "03分点/铁匠出发次序去y，实际持续投入g保；V1生命耐力补风险与装备用途互补b写实，p改真实投点后反馈核对。ALT初始工具泛配合不强b，改把可替换初始改装移到另一把可装普通枪实试的0分配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV503.V1"
+        },
+        {
+          "text": "只有最早几项基础特性，眼下也已取得可分配的点。你先看什么？",
+          "scene": "刚取得的特性点的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_101"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清分点、整理材料和去铁匠的准备顺序",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先根据说明预测这项特性会改变哪次生命或耐力反馈，投点后在熟悉动作中实际核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "继续培养此前选定的一项基础方向，把成长留给后面的路",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把已有可替换的初始改装换到另一把当前可装的普通枪上，亲自走熟路体验",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "03分点/铁匠出发次序去y，实际持续投入g保；V1生命耐力补风险与装备用途互补b写实，p改真实投点后反馈核对。ALT初始工具泛配合不强b，改把可替换初始改装移到另一把可装普通枪实试的0分配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "已经有几件不同防具可换，也有够用的升级材料。普通地球旅程不催你出发，你先怎么整备？",
+          "scene": "套装的件数与搭配",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_armor"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑一种平时不穿的已有防具安排，体验另一种移动与接敌方式",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "对照一代套装件数的效果，与常用枪械、改装配成具体方案",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "亲自挑选并穿戴轮廓相配的几件，表达自己想要的幸存者形象",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "继续强化已经培养的常用防具，让这条装备路线留下成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "04一代真实套装件数效果及可强化防具使V1 b/g成立；普通换防具i降试配置。ALT近远切换/改装次序只动作变体，泛配合b改移现有改装到另一可装普通枪的0分试用，不借二代机制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV504.V1"
+        },
+        {
+          "text": "只有初期几件装备，暂时没有外观混搭；当前材料能继续强化常用武器或防具。你先做什么？",
+          "scene": "套装的件数与搭配的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_armor"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "不用新装备，只换一段惯常近远切换与改装释放次序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "把可替换的初始改装换到另一把当前可装的普通枪上，实际出发体验这套配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把一次总仓促的翻滚与出手留作这趟练习重点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿已经开始的武器或防具强化继续投入，保留后续能用的成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "04一代真实套装件数效果及可强化防具使V1 b/g成立；普通换防具i降试配置。ALT近远切换/改装次序只动作变体，泛配合b改移现有改装到另一可装普通枪的0分试用，不借二代机制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "一场自己已经见过的地牢首领遭遇里，普通敌人也会进入战场，现有工具够继续尝试。下一次进门前，你先想调整什么？",
+          "scene": "首领和小怪同时在场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留熟悉配置，专门练一招后转向小怪再接回首领的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "观察敌人进场方向、掩体和自己的转移路，推清空间关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "换一组已持枪械、改装与防具效果，让处理不同目标能互相支持",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "试一种少用武器或改装主导的办法，看看同一场会怎样变化",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "05已见且有普通敌加入的首领才V1，少用配置i降试用；V1自由工具分不同目标用途可b。ALT固定初始工具不强配b，改连续切枪/改装反馈f，普通接敌顺序只动作变体。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV505.V1"
+        },
+        {
+          "text": "还没有反复打首领，只再走一段普通敌人会从不同位置出现的地球熟路。你先做什么？",
+          "scene": "首领和小怪同时在场的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把一次看见攻击后躲开、再重新出手的时机练清楚",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看入口、掩体与高低层怎样影响敌人接近",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "沿已经会的远近切枪和初始改装接敌，享受命中与效果连续衔接的回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "有意改变惯常接敌顺序，认真试另一种经过方法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "05已见且有普通敌加入的首领才V1，少用配置i降试用；V1自由工具分不同目标用途可b。ALT固定初始工具不强配b，改连续切枪/改装反馈f，普通接敌顺序只动作变体。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "在13号实验区，一轮地球冒险已经结束，战役进度仍保留；你可以单独再生成地球冒险，也可回战役。眼前先选哪件事？",
+          "scene": "地球冒险已经结束一轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_adv"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已知能在地球冒险出现的装备收藏缺项，再去寻找它可能出现的一轮",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "继续用已经在培养的装备与特性走一段，把材料和点数投回原路线",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "回到战役，接上自己惦记的人物与灾变调查",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "再生成一轮，想亲自看看没遇过的地牢、事件和地图连接",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "06本体已开地球Adventure与Campaign分开、剧情进度不丢，未知生成w和真实装备缺项c成立；ALT不重生成，c明确为取得真实库存缺件准备材料，g是真升级不是休整回血。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV506.V1"
+        },
+        {
+          "text": "还只在初次战役，不准备重新生成世界。当前能出地球熟路，也有可分配特性点或够用强化材料。你先做什么？",
+          "scene": "地球冒险已经结束一轮的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_adv"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为取得当前库存尚未有、已知可制作或购买的一件装备，实际去准备它需要的材料或废料",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "继续给已选基础特性或常用装备投入，保留这次成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先听完一个已经认识人物的新话，再沿战役接下去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "进一条当前地图里还没亲自走过的出口",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "06本体已开地球Adventure与Campaign分开、剧情进度不丢，未知生成w和真实装备缺项c成立；ALT不重生成，c明确为取得真实库存缺件准备材料，g是真升级不是休整回血。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "和熟人回到13号实验区后，有人想接战役，有人想再探已开放的冒险，大家都愿意再玩一段。你先提什么？",
+          "scene": "两位熟人各惦记一条路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_101",
+            "remashv5_adv"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "说明自己想检验的枪械、改装与防具配合，再去一段大家同意的路",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "保留自己的配置，这一段专练一次还仓促的躲开和重新瞄准",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "问清各自想找什么，约定先去哪一边、这段做到哪里再换",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "只要是和这几个人一起，多走哪边都愿意，先聊刚才的共同经历",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "07真人q/o真实协商/同游，V1有可换装备功能搭配b；单人ALT没有真人，材料路线先后只当次计划，固定初始工具原b实义改预测改装反应再施放核对的p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV507.V1"
+        },
+        {
+          "text": "只单人游玩，现在回到13号实验区，已有可分配特性点或强化材料，也有已到过的地球路线可走，附近仍有未探入口。你先做什么？",
+          "scene": "两位熟人各惦记一条路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_101",
+            "remashv5_adv"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续沿已选武器、护甲或特性路线投入，为后面保留成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "去当前世界一个还没亲自看过的入口",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "把废料、材料、补充龙心和下一段路线排成能接续的准备",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先预测当前初始改装会改变哪种攻击或恢复反应，再在熟悉遭遇施放后实际核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "07真人q/o真实协商/同游，V1有可换装备功能搭配b；单人ALT没有真人，材料路线先后只当次计划，固定初始工具原b实义改预测改装反应再施放核对的p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "在自己已经到过的一处地球废墟，刚读到一段可查看的记录，附近也有未探出口；当前没有紧迫战斗。你先接哪一段？",
+          "scene": "废墟里留下的文字",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿旁边没走过的出口继续看，认识这轮世界另一面",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把记录读完，想知道写下它的人当时经历了什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "对照文字、设施与自己先前见过的线索，提出一种解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把这段自己已读过的内容与眼前已看过的设施补记一条，再选出口继续",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "08旧物记录者/调查者称号本身不支持r；主项实义改给已读文字与已见设施补记game_recording，ALT改实际出发步骤mission_preparation_plan。读人物记录s与解释线索p、未知出口w分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV508.V1"
+        },
+        {
+          "text": "还没仔细读废墟记录，只在最早实验区和地球听过人物说话，也能自由继续探索。你先做什么？",
+          "scene": "废墟里留下的文字的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从当前地图尚未走完的一条街道或楼梯继续看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "回到已能交谈的人身边，听清灾变与他们自己的前后经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把说法和自己看过的设施对照，弄懂它们能否互相解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把已见线索的位置、现有工具和下一段目的地排成这次出发步骤，再照此走",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "08旧物记录者/调查者称号本身不支持r；主项实义改给已读文字与已见设施补记game_recording，ALT改实际出发步骤mission_preparation_plan。读人物记录s与解释线索p、未知出口w分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想实际强化、调配并带出过的装备，最有吸引力的是哪种变化？",
+          "scene": "装备投入真的留下来",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_armor"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "常用武器或防具几次强化后，这条路线的积累持续留在角色身上",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "防具套装效果与枪械、改装开始支持同一种打法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "自己挑过几件防具并穿成一组，呈现了原先想要的幸存者风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "废料、材料、制作强化与再次出发，被排成了能持续执行的流程",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "09真实一代装备强化g、可换套装改装b、主题穿戴a成立；个人材料强化出发y降当次计划，ALT固定初始工具泛配合b降实际连续操作反馈f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV509.V1"
+        },
+        {
+          "text": "只回想早期几次整备，还没混搭过外观，哪件实际变化最有感？",
+          "scene": "装备投入真的留下来的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_armor"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "初始武器或防具沿已选路线继续强化，后来仍能带着这些投入",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己把远近切枪、初始改装与命中连续接上，操作反馈本身很鲜明",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "一段原来仓促的翻滚与射击，在练过后能更主动地掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "从材料需求到去铁匠再到返回地球，被自己接得更清楚",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "09真实一代装备强化g、可换套装改装b、主题穿戴a成立；个人材料强化出发y降当次计划，ALT固定初始工具泛配合b降实际连续操作反馈f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己实际从一块世界之石走到下一处检查点的经历，最愿意记下哪类过程？",
+          "scene": "龙心与检查点之间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "remashv5_stone",
+            "remashv5_101",
+            "remashv5_armor"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从普通敌人刷新和通路连接里，弄懂了原先没解释清的关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "远近武器、改装与一代防具效果，在这段路里组成了能用的方案",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "途中获得的材料与特性点，后来沿已选路线投入，给角色保留了成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把龙心、弹药、休整与返回接成自己能重复的资源循环",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "10普通龙心弹药休整返回循环不计y；ALTg明确已实际投点/强化保留提升，不把库存材料当性能成长；固定初始枪改装原b降连续手动反馈f，p仍真实回路解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV510.V1"
+        },
+        {
+          "text": "只回想最早从实验区去地球再返回的一小段，哪件已经发生的事最想记录？",
+          "scene": "龙心与检查点之间的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "remashv5_stone",
+            "remashv5_101",
+            "remashv5_armor"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己弄懂一条楼梯或门怎样和已走通道接回去",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己沿初始枪械和改装连续出手，命中与效果回应一路接上，手感很直接",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "自己把早期点数或材料实际投进基础特性或常用武器、防具强化，后面的旅程仍保留了这份提升",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "准备、经过检查点恢复和再出发开始有了前后顺序",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "10普通龙心弹药休整返回循环不计y；ALTg明确已实际投点/强化保留提升，不把库存材料当性能成长；固定初始枪改装原b降连续手动反馈f，p仍真实回路解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想实际走过的地球地牢、街道或冒险，最让你想记录的是哪类发现？",
+          "scene": "一轮地图带来的不同",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_adv"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从地图层次、门和回路中，自己验证了一段原来没弄清的连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "一段已经读听过的人物信息，让这片废墟的过去有了分量",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "走进陌生入口，遇到此前没有亲自看过的地点或事件",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "一个自己记在装备收藏清单里的缺项，终于被找到并保留",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "不要求冒险重置、每轮必换首领或稀有掉落；只回顾已经发生的发现。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV511.V1"
+        },
+        {
+          "text": "只回想初次战役最早走过的一小片地球，哪件事最难忘？",
+          "scene": "一轮地图带来的不同的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "remashv5_core",
+            "remashv5_101",
+            "remashv5_adv"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一段绕行终于和之前的门或楼梯连在一起",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "几句人物话语与已读文字，让这里不只是一张战斗地图",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "一条未探街道后面还有自己不知道的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己早期装备收藏里惦记的一件明确缺项被补上",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "不要求冒险重置、每轮必换首领或稀有掉落；只回顾已经发生的发现。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "REMASHV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想和熟人实际走过的一场遭遇，最有分量的是哪一部分？",
+          "scene": "真实同游的一场遭遇",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "remashv5_101"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一个一直在练的躲开后再出手时机，在这一场由自己主动掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "几个人事先约好的路线与目标，在过程中商量着接续起来",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "一起遇到的意外和说过的话，后来成了彼此记得的事",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "切枪、命中与改装释放连续发生，自己很享受那段操作反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "12真人q/o只真实共同过程，单人ALT无真人；补弹龙心检查点行程只当次计划，不把当前回血当g；t/f/p均真实过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV512.V1"
+        },
+        {
+          "text": "没有和熟人合作，只回想单人实际走过的一段地球遭遇，哪点最值得记住？",
+          "scene": "真实同游的一场遭遇的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "remashv5_101"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一次原先总仓促的瞄准或闪避，练过后开始有把握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "补弹、使用龙心与到检查点恢复，被自己排进了一段能接续的行程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "观察入口和敌人动作，自己验证了一种原来不清楚的地形关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己喜欢的枪械与命中反馈接连发生",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "12真人q/o只真实共同过程，单人ALT无真人；补弹龙心检查点行程只当次计划，不把当前回血当g；t/f/p均真实过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "REMASHV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+379fa6dcbf61"
+}

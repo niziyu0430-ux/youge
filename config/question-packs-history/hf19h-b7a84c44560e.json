@@ -1,0 +1,999 @@
+{
+  "id": "hf19h",
+  "title": "房产达人 House Flipper",
+  "game_ids": [
+    "steam-613100"
+  ],
+  "scope": "PC初代本体职业：邮件工作与购房翻新同一路，不是Remastered或二代沙盒",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "2026-09辅助更新含手动/收费自动装配、工具切换操作；不按使用辅助推能力。",
+    "未购房、未开放粉刷/拆墙/维修者可用早期清洁和最初办公室替代，不要求Garden、Farm等DLC。",
+    "NPC买家与客户不计真人社交；持续工具技能进程不同于一次买升级。"
+  ],
+  "modes": [
+    {
+      "id": "career",
+      "label": "原作职业：邮件工作、办公室与已购房屋",
+      "initial_variants": {
+        "HF19H01": "HF19H01.CAREER.V1",
+        "HF19H02": "HF19H02.CAREER.V1",
+        "HF19H03": "HF19H03.CAREER.V1",
+        "HF19H04": "HF19H04.CAREER.V1",
+        "HF19H05": "HF19H05.CAREER.V1",
+        "HF19H06": "HF19H06.CAREER.V1",
+        "HF19H07": "HF19H07.CAREER.V1",
+        "HF19H08": "HF19H08.CAREER.V1",
+        "HF19H09": "HF19H09.CAREER.V1",
+        "HF19H10": "HF19H10.CAREER.V1",
+        "HF19H11": "HF19H11.CAREER.V1",
+        "HF19H12": "HF19H12.CAREER.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "HF19H01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "初代里你已买下一间小屋；地上仍有垃圾和污渍，家具能挪动，现有资金也够做一小段布置。你先做什么？",
+          "scene": "一间房里的清洁与布置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手拖一片地面，投入拖把移动与污层马上退去的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把留用家具、移开、清洁再放回的动作排好，亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先挪出一小块家具位置，实际看看新位置的效果再决定",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先亲手处理眼前那处可拾垃圾和可洗污渍，体验这轮具体清理",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "实体操作反馈不同于NPC施工，布局试改不自动表达",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H01.CAREER.V1"
+        },
+        {
+          "text": "还没买房时：早期邮件工作当前已给拖把，房间内有垃圾和地面污渍，任务列表可看。你先做什么？",
+          "scene": "一间房里的清洁与布置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用拖把清一片污渍，享受鼠标动作和地面立刻变干净的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把收垃圾、绕过家具与拖地的顺序排好，再亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先核对房间已经列出的垃圾与污渍项目，了解当前状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先做完一个已经明确的清洁项目，把这份订单推进",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "实体操作反馈不同于NPC施工，布局试改不自动表达",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H01.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "在一份当前邮件清洁工作里，眼前地面看似擦过，清洁状态仍未满；你尚未找出遗漏处，一件可移动柜子还在原处。现在先选哪件？",
+          "scene": "清洁栏未满但原因未明",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_BASICS",
+            "HF19H_STORE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看清洁项目及当前已显示状态，不预先猜原因",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "换一次自己已会的顺序，实际先清墙边再清地面",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "留在几处尚脏角落反复练准星与拖把动作，重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先猜柜子遮住了未清区域，只挪开这一件再查看背后与地面，核对猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不给遗漏位置答案，查看与解释检验分开",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H02.CAREER.V1"
+        },
+        {
+          "text": "早期邮件工作中，清洁项目还有余项，但你还不知道具体位置；当前门可开关，拖把可用。先怎样投入？",
+          "scene": "清洁栏未满但原因未明的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_BASICS",
+            "HF19H_STORE"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前房间任务列表和已显示的清洁状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "把已经会的清理动作换个顺序，实际先地面后墙边",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "在几处仍脏边缘反复练拖把瞄准，目的在练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己提出“可能在门背后”的位置解释，只改变门的开合再查看那片区域来核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不给遗漏位置答案，查看与解释检验分开",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H02.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已开放初代粉刷工具，当前订单要把一面墙刷成指定色；手边有对应油漆，滚筒需补漆，别的清洁任务仍可做。先做什么？",
+          "scene": "补漆与成片粉刷",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "连贯滚过一段墙，投入滚动声音和颜色随手上动作改变的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "按订单指定颜色完成这一面墙，把客户目标推进",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "排清补漆、按墙段粉刷和回头查漏的一轮动作，再亲手执行",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "在尚未刷的墙段反复练装漆与落点，重点是练熟操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "粉刷消耗与真实手动反馈，不以必定刷好作门槛",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H03.CAREER.V1"
+        },
+        {
+          "text": "没开放粉刷时：当前早期清洁工作有一扇可手动清洗的脏窗，工具界面已出现窗刮；地面也没清完。先做什么？",
+          "scene": "补漆与成片粉刷的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿玻璃刮一段，享受动作、声音与透明区域即时出现的联系",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先按列表完成这扇窗的清洁项目，推进这份订单",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "排好从窗边到中间的一轮刮动次序，再亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "在还脏的几段窗边反复练刮动控制，重点是练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "粉刷消耗与真实手动反馈，不以必定刷好作门槛",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H03.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "初代当前工作给出一处暖气安装位，你已有相应暖气；当前选择手动装配，收费自动装配也能开启且付得起。另有未完清洁。已完成邮件中也有这份当前可重做的安装工作。先做哪件？",
+          "scene": "手动安装已经开放",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_ACCESS",
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已显示安装目标和当前部件状态，再决定接下来怎样装",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "亲手跟着装配动作拧紧各处，享受输入和部件就位的直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "回到这份已可重做的安装工作，再亲手练一轮暖气装配，重点是练熟动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "这一件额外禁用本可支付的自动装配，并实际试完手动流程的一段",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "自动装配当前确可选才有额外限制，安装零件本身不b",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H04.CAREER.V1"
+        },
+        {
+          "text": "还没装过暖气时：早期清洁订单里窗刮当前可用，支持鼠标或当前键位设置的方向操作；房间仍有其他活。先做什么？",
+          "scene": "手动安装已经开放的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_ACCESS",
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前房间与窗户任务状态，再决定先清哪里",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "亲手刮一段玻璃，投入移动和污渍立刻退去的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "在尚脏的几段边缘重复练刮动，练熟而非马上清完是重点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先看当前窗刮已有操作提示，再回玻璃实际试清",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "自动装配当前确可选才有额外限制，安装零件本身不b",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H04.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你正在初代自己的办公室，已有可移动家具与本体墙面材料，钱够做一小段调整；也能回去做订单。先把空档留给什么？",
+          "scene": "自己的办公室呈现",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想要的配色与陈设主题，实际调整办公一角，让它呈现自己的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先浏览当前可买的家具和墙面外观方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "实际把一张已有桌子换个位置，先看看空间效果而不预定风格",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "自己有精力且订单能推进，仍回熟悉办公室，一点点收整与清扫，喜欢由自己定步调的安稳日常",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "主动风格与普通浏览、试摆区分，自用空间不是虚构沙盒",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H05.CAREER.V1"
+        },
+        {
+          "text": "仅有最初办公室时也可答：现有桌椅可挪，清洁工具已给，另有邮件工作可做。本体商店当前也可浏览。此刻先选什么？",
+          "scene": "自己的办公室呈现的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用现有桌椅摆出自己想要的办公角落，重视个人主题和最后样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先浏览本体商店当前可选的桌椅外观，暂不购买或移动",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "实际挪一次桌子位置，亲手查看这个改动",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "自己有精力且能接新邮件，仍在最初办公室按熟悉次序慢慢清扫，享受这个能从容待着的小空间",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "主动风格与普通浏览、试摆区分，自用空间不是虚构沙盒",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H05.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "自己购入的房屋中，拆墙和建内墙工具已开放；你可改一段非外墙，也能保留隔间布置。当前材料与钱够这一小段。先做什么？",
+          "scene": "内墙与房间安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只改动一段可改内墙或家具位置，亲手看看布局效果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排移物、拆改、补墙与摆回家具的工具动作，再按顺序做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "额外禁止这一间本可拆的内墙，实际尝试在原隔间内完成自己选的布置",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "按想表达的空间主题实际改隔间与陈设，让房子留下自己的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "内墙不借Farm扩外墙，真实禁用拆墙并实际布置",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H06.CAREER.V1"
+        },
+        {
+          "text": "还没开放拆墙时：最初办公室现有桌子、椅子和其他可移家具能调整，能选择保留或挪开。拖把当前已给，桌下还有可清污渍。先怎样动手？",
+          "scene": "内墙与房间安排的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先挪一张椅子试一次新位置，看看结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "排好取起、移位、清扫再放回的动作，亲手走一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "直接用已给拖把清桌下这一块，亲手体验这次清扫",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "用这些已有家具实际摆出自己想要的主题角落",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "内墙不借Farm扩外墙，真实禁用拆墙并实际布置",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H06.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你在初代清洁技能栏已经积累过进展，还没达到自己想投入的阶段；当前有可重复的已开清洁订单，也有资金足够的工具选项。且已有足够的可用技能点。先做什么？",
+          "scene": "已经投入的技能栏",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接花已有点数或钱购入一项已开放升级，先拿到这次功能",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "反复练几处难清边缘，目的在手上练熟，不以技能条为重点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "继续做清洁行动，把这条已经投入且会保留的技能进展继续养下去",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已开放且可支付的升级选项，再决定用哪项",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "持续技能进展与一次购买、玩家练习独立",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H07.CAREER.V1"
+        },
+        {
+          "text": "刚得到拖把后，清洁这一栏已因实际行动开始积累进展；早期当前订单还有垃圾与污渍可做。先把时间用在哪？",
+          "scene": "已经投入的技能栏的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按已列清洁目标实际做完一项，重点在这次订单",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "在几处尚脏边缘反复练拖把瞄准，主要想练熟动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "继续做这一类清理，把同一条已开始的、会保留的清洁技能往下投入",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先核对房间已有清洁状态，再决定怎么动手",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "持续技能进展与一次购买、玩家练习独立",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H07.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "一份初代邮件工作已允许提前交付，但房间还有明确的可选剩余清洁；你有精力和时间，收益条件已显示。先做什么？",
+          "scene": "交单前的选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给剩余一小片加“不用当前可用小地图污渍显示”的限制，并亲自找污试清",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "继续处理已经明确的剩余任务，重视把这份工作做得更完整",
+              "signal": "optional_objective"
+            },
+            {
+              "id": "C",
+              "label": "先核对已显示完成率与剩余项目，再决定何时交付",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "有精力且可以交单或做别处，仍挑熟悉的一片地面从容清扫，喜欢不用赶着切任务的安稳过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "可提前交付与可选剩余需当前成立，禁用辅助非能力评价",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H08.CAREER.V1"
+        },
+        {
+          "text": "在最早清洁订单里，交付已可用，窗边与地面还留有当前已列的剩余任务；你仍有精力。接着先做什么？",
+          "scene": "交单前的选择的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排好窗边、垃圾与地面的一轮亲手动作，再按安排尝试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "主动把其中已明确的剩余清理做下去，重视这次可选目标",
+              "signal": "optional_objective"
+            },
+            {
+              "id": "C",
+              "label": "先看现有完成率和未完清单，再决定接不接着做",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "有精力且已经能交付，仍把熟悉地面按自己的步子慢慢清一小片，享受自在安定地做这件事",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "可提前交付与可选剩余需当前成立，禁用辅助非能力评价",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H08.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想初代里你实际亲手清洁、粉刷或装配的一段，不要求房子已经卖掉。哪件真实行动最有分量？",
+          "scene": "手动翻新的真实回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_ACCESS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过窗边、滚筒或装配控制，当时重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因为手上动作与污渍、颜色或部件就位立刻相连，实际多做过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "排过取放材料与工具操作的先后，并亲手按顺序做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且别的工作可推进，仍慢慢清扫过一段熟悉区域，喜欢不赶交单、能自己定节奏的安稳过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "回顾真实输入，不要求后来更熟练或交付成功",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H09.CAREER.V1"
+        },
+        {
+          "text": "只做过早期清洁也可回顾：想起真实用过拖把或窗刮的一段。哪件更有分量？",
+          "scene": "手动翻新的真实回顾的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_ACCESS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在几个尚脏边缘重复练过准星移动，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因工具动作和变干净的区域立即对应，确实多清过一片",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先排过收垃圾与清地的动作，并亲手照顺序做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且别处可做，仍按自己的步调清过熟悉地面，享受在眼熟环境里从容做事的感觉",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "回顾真实输入，不要求后来更熟练或交付成功",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H09.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想初代自己房屋里你实际处理过一处不合预期的区域。以下哪件当时做过的事最有分量？",
+          "scene": "真实改动与解释",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际试摆过已有家具的位置，查看过改动后的空间",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "明确禁过本可拆的一段内墙，并真的在原隔间里尝试过布置",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "按自己的主题改过配色与家具，想让最后样子表达自己的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己猜过遗漏在家具后，只挪一件来查看后方，核对过这个解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真实检验不要求猜对，限制有可用机制为前提",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H10.CAREER.V1"
+        },
+        {
+          "text": "还没买房时，回想早期清理或初始办公室里确实做过的行动。哪件更有分量？",
+          "scene": "真实改动与解释的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把办公室已有桌椅挪过一次，先看位置效果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "把已会的清扫动作换过一次先后，并亲手体验过这种做法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "按自己想要的办公角落主题摆过现有家具，重视呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先猜过污渍在门后，只改门的开合再查看，核对过位置解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真实检验不要求猜对，限制有可用机制为前提",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H10.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你实际回到初代工具与技能进程的一段时期，下面哪件真实投入最有分量？",
+          "scene": "已发生的进展与购买",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际购入过一项当时可用升级，重点在拿到这次功能",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "在未掌握的工具动作上反复练过，重点在玩家自己的练熟意图",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "多次继续同一条已经积累的清洁或粉刷技能，重视会留下的这条进展",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "比较过当时已经开放、可支付的工具升级，先作选择",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "不得用一次买工具冒充持续成长，练习不要求进步",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H11.CAREER.V1"
+        },
+        {
+          "text": "只做过早期订单时：回想拖把开放之后真实投入过的一段。哪件更有分量？",
+          "scene": "已发生的进展与购买的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按已列清理项目实际推进过一份订单",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "在几处尚脏角落重复练过拖把控制，当时目的是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "继续做过已经开始积累的清洁类行动，想保留并继续同一技能进程",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "查看过当前已显示房间清洁状态，再决定下一步",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "不得用一次买工具冒充持续成长，练习不要求进步",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H11.CAREER.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HF19H12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你真实决定继续装修或交付的那一回，不要求最后卖得好。哪件做过的行动最有分量？",
+          "scene": "一次实际收尾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看过当前任务与已完成部分，再决定怎样收尾",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "为已经明确的可选剩余工作继续亲手处理过，重视本次目标",
+              "signal": "optional_objective"
+            },
+            {
+              "id": "C",
+              "label": "当时有精力且能做别处，仍留一小段给熟悉清扫，按自己的节奏慢慢做，重温那份安稳自在",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "按照自己想要的呈现主题实际调整过空间，重视最后留下的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真实过去不引导现实负责或勤劳的道德推断",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H12.CAREER.V1"
+        },
+        {
+          "text": "早期只清洁过一份邮件工作也可答。回想当时确实做过的收尾行动，哪件更有分量？",
+          "scene": "一次实际收尾的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "HF19H_STORE",
+            "HF19H_BASICS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对过现有清洁项目与状态，再决定是否交付",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "交付已可用后，仍实际处理过一项明确剩余任务，重视这个可选目标",
+              "signal": "optional_objective"
+            },
+            {
+              "id": "C",
+              "label": "当时有精力且还有别处可推进，仍从容清洗过熟悉地面的一片，喜欢这段能自己定步调的日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "为了练熟，在剩下几处窗边或污渍反复练过控制",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真实过去不引导现实负责或勤劳的道德推断",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HF19H12.CAREER.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+b7a84c44560e"
+}

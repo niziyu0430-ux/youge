@@ -1,0 +1,1377 @@
+{
+  "id": "ds10",
+  "title": "神界 原罪2 终极版",
+  "game_ids": [
+    "steam-435150"
+  ],
+  "scope": "原生PC终极版剧情冒险；默认单人可答，3个替代仅真实合作经历适用，一套配换题，不要求GM/MOD/礼袋/付费扩展。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "12槽各3个手写情境，前8槽24行动、后4槽12真实回顾；保持4共题和最多2补问。",
+    "默认V1均可单人；仅06ALT1/08ALT2/12ALT2明确真人联机；没有联机不以NPC代填，继续其他已核专属。",
+    "每个情境须本人真实体验且当前技能/物件/角色分支条件成立；有限3变体不能宣称全进度保障；不提供跳过。",
+    "不要求最高难度/LoneWolf/荣誉单存档或额外礼袋镜子、GM编辑器；不借第一部、DragonKnightSaga、BG3或新Divinity。",
+    "原护甲、AP、技能学习与记忆、源力充能与容量分开；不套过时攻略成本/阈值/必成功结论。",
+    "NPC不是Q/O真人，不按起源种族/阵营/道德结果判现实人格；无16画像配额，中性保0。",
+    "仅来源核验与作者自审，未原生客户端/真人试答，无心理效度或97%覆盖证明。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "原生冒险，未体验继续换专属",
+      "initial_variants": {
+        "DS1001": "DS1001.V1",
+        "DS1002": "DS1002.V1",
+        "DS1003": "DS1003.V1",
+        "DS1004": "DS1004.V1",
+        "DS1005": "DS1005.V1",
+        "DS1006": "DS1006.V1",
+        "DS1007": "DS1007.V1",
+        "DS1008": "DS1008.V1",
+        "DS1009": "DS1009.V1",
+        "DS1010": "DS1010.V1",
+        "DS1011": "DS1011.V1",
+        "DS1012": "DS1012.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "DS1001",
+      "number": 1,
+      "variants": [
+        {
+          "id": "DS1001.V1",
+          "scene": "欢乐堡：同一份钉子先做防滑鞋还是开锁器",
+          "text": "你在欢乐堡附近已有普通鞋、锤子和钉子；这份钉子当前只够先给鞋加防滑，或先做一批开锁器。队中现有活人角色的盗窃能力足够开眼前那扇可开的锁，另一条可达路有普通冰面。自己这轮原本想先查锁后的房间。先给哪件材料？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_CRAFT",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先做开锁器、实际开锁进去，优先推进自己选定的查房目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把钉子加到鞋上并穿好，实际走冰面体验这次防滑，查房稍后做",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "暂不加工，沿自己还没走过且当前安全可达的另一段堡墙看看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先看已有配方显示的材料要求，核对钉子存量与当前可做条件，再决定做哪边",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "原生同材两用途和实际路线竞争，防滑不伪装系统经营/养成。",
+          "interpretation_boundary": "不写固定钉数/产量；鞋仅防滑非免疫冻结，锤不是每次消耗；不默认亡灵缺开锁器、任意盗窃等级可开任意锁。"
+        },
+        {
+          "id": "DS1001.ALT1",
+          "scene": "漂流之森商人：技能书还是复活备用",
+          "text": "在漂流之森，你的队员都还活着。商人当前有一本自己满足学习条件的技能书，也有复活卷轴；这笔钱只能先买一边。你本来想让已用一阵的队伍多一个新技能，下一项已开放任务也能继续。先怎样投入？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "买书、让合条件的队员学习并实际用到下一任务，推进自己这轮选定的配备目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先排好已定出行的购买、分配与出发顺序，买复活卷轴交给当下合适的队员带着，照安排上路，技能书暂缓",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "暂留钱，去自己当前可达而没见过的林间区域，想看那里有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对书的学习条件、当前余额和卷轴库存，再决定",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "有限钱用于新技能/一次性复活保障与探索时间真竞争；二种购置均中性。",
+          "interpretation_boundary": "不把买一本/补一张自动G/B，卷轴不保证复活任意剧情死者/敌人；不虚构所有难度免费复活或固定价格。"
+        },
+        {
+          "id": "DS1001.ALT2",
+          "scene": "学会了，但记忆槽放不下的两个技能",
+          "text": "你已学会Rain与另一项当前可用技能，两个都符合当前能力要求，但这轮空出的记忆槽只放得下其中之一。自己原本要去的一段战斗有普通火地表；另有一条尚没探索过、当前可走的路。你更愿意先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MAN",
+            "DS10_ENV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先记住Rain并实际去处理普通火地表，推进自己这次已选的路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先记住另一项、找当前可用战斗实际体验它，暂不去原来那段",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "暂缓这两项准备，先走进自己没去过的路，想发现可通行区域的情况",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前已学技能、记忆占用与显示要求，再作取舍",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "知识拥有和可记忆装备不同，同一有限槽的实际用途竞争。",
+          "interpretation_boundary": "不说Rain可扑灭所有Necrofire；不会没学也能装备或凭记忆多就免学派要求；记忆槽安排不自动B/Y。"
+        }
+      ]
+    },
+    {
+      "id": "DS1002",
+      "number": 2,
+      "variants": [
+        {
+          "id": "DS1002.V1",
+          "scene": "同一回合：破物甲击倒，还是转去救队员",
+          "text": "轮到你控制的角色行动：敌人还剩物理护甲，自己已记忆BattleStomp；另一位由你控制的活人种族NPC队员生命危险，包里有当前可给他用的治疗手段。现有AP不足以把两件都完成。你更愿意把这个回合花在哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MAN",
+            "DS10_WAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把AP用于那位危险队员的恢复，优先兑现自己给角色采用的“不丢下同伴”身份，让本来更想压制敌人的打法让位",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "围绕自己还不熟的AP预估、移动和出招顺序实际练习，重点是本人能更稳地执行",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先比较自己当前可用的破甲技能、BattleStomp和恢复手段，包括各自显示的AP与目标要求，再决定",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先按自己本轮选定的压制目标破掉物理护甲，再在真满足条件时尝试击倒，接受救援往后放",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "同一AP在破甲压制/救当前可治疗队员间竞争；R须身份确实改变原偏好。",
+          "interpretation_boundary": "NPC非真人Q/O；控制须物甲条件真实满足，不写固定AP或必倒；救的是活人种族且无Decaying等当前阻碍，不让普通治疗当亡灵恢复。"
+        },
+        {
+          "id": "DS1002.ALT1",
+          "scene": "射手上高台要花掉这回合的位置预算",
+          "text": "这段战斗里你控制的射手有可用弓与箭；当前楼梯确能通往高台，但爬上去会占掉本回合不少AP，留在地面就能立即射一个近处敌人。队伍也还有一枚当前可发射、会形成地表的特殊箭。你更愿意怎样用这一轮？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留在眼前位置按自己已选的集火目标直接攻击，不为这次试射额外走位",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "利用当前可用存档反复练自己选落点与核AP的执行，重点是个人少走冤枉路",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可用普通箭与特殊箭的说明、弓的射程和技能要求，再决定是否上去",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先走上高台、对当前合法目标实际射出这枚特殊箭，亲手体验这次射击与地表效果，暂缓近处集火",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "上台试一枚真实可用特殊箭与本轮地面集火/AP成本竞争；位置加单箭不强贴组件构筑B。",
+          "interpretation_boundary": "当前真有合法高台、箭与重试档；不能隔墙任意射或无限箭，未明白箭种效果看说明不P，单看高处不W。"
+        },
+        {
+          "id": "DS1002.ALT2",
+          "scene": "复仇女神号遇袭：Malady还在施法",
+          "text": "在LadyVengeance遇袭时，Malady正在维持带全船脱险的法术，眼前敌人已经威胁到她。你控制的角色这回合能去保护她，也能攻击另一名已经可打的敌人；AP不足两边都做。此刻更愿意？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_LADY",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "因自己给角色采用的“先反击追兵”的身份攻击那名敌人，让本来更想稳保Malady的打法让位",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "把本次遭遇作为自己练AP安排和敌我行动顺序的机会，重点是本人能做稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前Malady状态、已显示脱险目标和自己可用技能，再落动作",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "D",
+              "label": "先把当前能用的护甲或控制手段投入保护Malady，优先实现自己这次选定的全船脱险目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "原生保护施法与个人反击身份的真实回合竞争，不把普通全灭战套进船战。",
+          "interpretation_boundary": "不要求击败Dallis、不保证固定轮数，技能须当前已学已记忆且能用；NPC保护不是现实队友协作。"
+        }
+      ]
+    },
+    {
+      "id": "DS1003",
+      "number": 3,
+      "variants": [
+        {
+          "id": "DS1003.V1",
+          "scene": "Amyro笼子前，Griff要你供出Stingtail",
+          "text": "你已拿到Griff要的异常大橙，Amyro还被关着。当前交出橙子并说Stingtail的名字可换放人；拒绝供出则会把局面推向冲突。自己本来更想快点拿到Amyro的逃路线索。你更愿意怎样继续？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_ELF"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "认真听Amyro、Griff与Stingtail的各自处境，实际选择自己想经历的剧情后果",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先核对自己已经取得的橙子、已知人物关系和当前委托进度，再答复",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "C",
+              "label": "先按自己已选的放人目标交物说明来源，推进Amyro这条逃路，接受Stingtail可能遭报复的后果",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "因自己采用的“不拿他人性命换出口”角色身份拒绝供出，让本来想快获逃路线索的计划让位并实际面对冲突",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "交物对象、囚犯与刺客后果具体，R有可做的偏好目标代价。",
+          "interpretation_boundary": "不保证供出后Stingtail永远安全/必死，也不说杀NPC永久必卡主线；不由说真话/保护谁推现实道德，NPC不Q/O。"
+        },
+        {
+          "id": "DS1003.ALT1",
+          "scene": "Gawin崖边等手套，你的队伍还没过去",
+          "text": "你已从鳄鱼那里取得并能用传送手套，正在HiddenAlcove帮助Gawin的阶段。Gawin要求先把他送往指定悬崖；自己队里另有角色还没转移，当前可用落点和转交手套操作都确实成立。先把精力给哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_TELE",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂缓两边，把仍能由自己控制的人带去当前可达、本人没查看过的邻近崖区",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先比较由现有不同队员佩戴手套的可用配置和显示要求，再决定让谁带着传送",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先按自己答应的Gawin计划实际传送他，想继续看这个自称能带路的人会怎样做",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先给自己队伍安排合法落点和手套转交，实际把队员送过障碍，再谈Gawin的要求",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "Gawin具体计划与自己队伍过崖争传送顺序；NPC计划不是队友协作人格。",
+          "interpretation_boundary": "传送不能自指佩戴者或无合法落点施放；不能保证答应NPC就全队安全，不把点击一次传送当F。"
+        },
+        {
+          "id": "DS1003.ALT2",
+          "scene": "Kniles要Atusa的腿，Fane想要割脸器",
+          "text": "你带着Fane到了欢乐堡监牢，当前包里确有Atusa的腿，Kniles的对话也确实允许用它换FaceRipper；队里另有你控制的精灵，可以通过尸食体会死者记忆。交出后这份肢体就不再供自己用。此时更愿意？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_FANE",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己给角色采用的“不与这位屠夫做交易”身份拒绝，放下本来更想省事取工具的可用交换",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前肢体库存、已经听到的交易条件和Fane目标，再决定",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "先交换FaceRipper，推进自己这次已选的帮Fane取工具目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "把这份肢体留给精灵实际尸食，想体会死者留下的记忆线索，工具另寻办法",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "同一不可重复肢体交换或尸食的实际消耗，身份拒绝有取工具便利的代价。",
+          "interpretation_boundary": "不编Atusa具体记忆台词、不说一切角色都可尸食或食后仍能交同一腿；不按亡灵/精灵种族推现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "DS1004",
+      "number": 4,
+      "variants": [
+        {
+          "id": "DS1004.V1",
+          "scene": "Rain之后，要不要让电流借水扩散",
+          "text": "自己当前控制的队伍已经能施放Rain与电系法术，战前保存可用。下一段地形允许形成普通水面，敌我位置与魔法护甲都能查到。你既可沿用熟悉打法直接过战，也能投入时间试水电配合。更想先做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MAN",
+            "DS10_ENV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较已记忆Rain、电系法术与其他可用技能的说明和要求，再决定是否尝试",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "分别实测只用Rain、只用电与先铺水再电的结果，想把造地表与电化传播这两个功能配合好",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "专门练自己选施法落点、避开队友与预估AP，重点是本人把操作安排做稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先用现有有效打法推进自己这次选定任务，不另留时间试组合",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "不同元素功能实际联测才B；个人执行熟练与已有说明不同。",
+          "interpretation_boundary": "不保证有魔甲的所有敌人必晕，队友也可受影响；不是万能电水秒杀、不编零AP无限连动。"
+        },
+        {
+          "id": "DS1004.ALT1",
+          "scene": "防滑鞋和冰面能不能成为自己的路线",
+          "text": "你已有一双真正加过钉子的鞋，也已学会能把普通水面冻成冰的原生手段。当前可用战斗前存档有普通水地表与可走路线。你本可直接绕开，也可亲自试冰面与防滑鞋的功能。先投入哪件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_CRAFT",
+            "DS10_ENV",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前鞋的说明、地表状态与已记忆技能，再决定",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "实际比较未冻地表、冰面未穿鞋与穿防滑鞋走冰面的表现，想配合冰面对敌路线的影响和自己的移动保障",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "不试配置，专门练自己预览路线、选落脚点并控制AP的执行",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "直接绕开水面，推进自己这轮已选的战斗目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "地表改变和足部防滑为不同功能，必须真试；不是任意装备名替换。",
+          "interpretation_boundary": "钉鞋仅免滑倒，不免冰法Frozen状态、不许诺敌人全滑倒；技能须当前真能冻结普通水，不能把一切水/诅咒面都当同效果。"
+        },
+        {
+          "id": "DS1004.ALT2",
+          "scene": "亡灵队员受伤：毒药、普通药与火源",
+          "text": "你控制的一位亡灵NPC队员当前受伤，没有另外阻碍恢复的状态；包里有可用毒药与普通治疗药，附近还有当前可安全接近的普通毒地表和火源。自己这轮原本想恢复后继续出发。现在更愿意？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MAN",
+            "DS10_ENV",
+            "DS10_CRAFT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较现有两类药与当前可用恢复技能的说明、适用对象和要求，再行动",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "按已知亡灵规则给他用毒药恢复，再推进自己已选的下一任务",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "本人尚不确定附近毒面遇火会怎样，先提出可能爆燃的解释，在可用保存和安全距离下实际试验，看结果是否支持",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先让他安全接触那片可达毒面，实际试这种接触的恢复表现，暂不消耗瓶中毒药",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "亡灵恢复和毒火风险真实；P只当本人未证且实际试，不凭已给亡灵答案推解谜。",
+          "interpretation_boundary": "接触毒面需当前安全且可走，不保证所有保护/状态下恢复量一样，不让普通治疗喝了必好；已知毒治疗规则不P，未知毒火规则早知道者不据此P。"
+        }
+      ]
+    },
+    {
+      "id": "DS1005",
+      "number": 5,
+      "variants": [
+        {
+          "id": "DS1005.V1",
+          "scene": "只剩当前这一点源力：燃烧的猪还是诅咒扳杆",
+          "text": "你已除项圈并学会Bless，当前只有一份可用源力。自己已经到过燃烧猪群，也知道武库的诅咒扳杆，两处当前都能回去；先用掉后，要再补源力才好做另一边。你这一段时间更愿意先给哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_SP",
+            "DS10_PIGS",
+            "DS10_ARMOURY",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回猪群实际祝福一只，想继续经历这个诅咒与动物遭遇的后续",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先去武库祝福扳杆、开通当前门路，推进自己这轮已选的探索目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先排清已知补充来源的路线与两处施放先后，实际去当前真能使用的来源补充，再照安排处理两边",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前源力充能、Bless要求和两处已有任务记录，再排先后",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "同一当下源力先用于人物事件还是路线，补充需实际旅行不是无限免费一键。",
+          "interpretation_boundary": "不说所有源力池定时再生、初期全队都解除项圈、Bless不消耗；不采武库旧攻略戒指开胸假定，也不保证首猪必强制战斗。"
+        },
+        {
+          "id": "DS1005.ALT1",
+          "scene": "Withermoore要自由，你缺一份源力",
+          "text": "你已找到正确的Withermoore灵魂罐，当前角色项圈已除、源力也有空位。现在罐里能量可被你吸收，也可摧毁罐让他的灵魂得到释放；自己原本更想补能量继续用源力。此刻更愿意怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_SOUL",
+            "DS10_SP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己给角色采用的“不吞掉求我帮忙的灵魂”身份毁罐，让原本更想立刻补源力的目标让位",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "吸收当前能量，优先补自己这次已定的源力用途，接受对Withermoore的后果",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "把Withermoore受困、Mody视他为朋友和自己的承诺一起考虑，实际选想经历的叙事结果",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前源力空位和自己已听到的请求，再决定",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "灵魂永久结果与即时源力收益，R有明示偏好代价。",
+          "interpretation_boundary": "不是容量变大/自动G，不能吞后再放同一魂，未去项圈不能假吸；不根据虚构吸魂行为推现实道德。"
+        },
+        {
+          "id": "DS1005.ALT2",
+          "scene": "Slane等着Radeka的净化法杖",
+          "text": "你已从Radeka处取到她的PurgingWand，也已经听Slane解释束缚。当前可把这把杖交给他解咒，或拒绝并承担冲突；自己本来更偏好把这件工具留在手里。你更愿意？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_DRAGON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己采用的“答应解放就不留束缚工具”身份交杖，实际让偏好的保留工具计划让位",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先按自己已定的保留此杖目标拒绝交付，接受当前分支的冲突",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "把Slane与Radeka的关系、龙的承诺与自己眼前处境放一起，实际走自己想看的故事线",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先检查当前杖还在谁身上、已听到的要求和可选台词，再答复",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "同一法杖交付与保留，后果不是泛泛接任务。",
+          "interpretation_boundary": "不保证拒绝仍解咒、保留又全拿奖励，也不保证龙必在所有将来战斗救场；不把交法杖当物品收藏C。"
+        }
+      ]
+    },
+    {
+      "id": "DS1006",
+      "number": 6,
+      "variants": [
+        {
+          "id": "DS1006.V1",
+          "scene": "熟悉的欢乐堡和还没看过的海岸",
+          "text": "你当前有精神，也有能继续的任务；欢乐堡营地的一段步行路线已走熟，另一段海岸则本人未到过且当前能走。自己已经有需要的补给，不是被卡住等刷新。先把这段自由时间给哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MAN",
+            "DS10_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "偏离原有任务路线，亲自走到未去过的海岸，想发现那里有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "去推进自己这一轮已选定的任务，暂不多留在营地",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先看已显示地图、路点与当前位置，再决定往哪边",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "仍自主沿熟悉营地走走、看看已经认识的地方，喜欢这一段不赶目标的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "H精力足且有别事仍自主熟悉，W真实个人未知地点，不把等CD补给当舒缓。",
+          "interpretation_boundary": "不许诺所有海岸安全/无敌人，当前可达不等无危险；单人NPC聊天不是O。"
+        },
+        {
+          "id": "DS1006.ALT1",
+          "scene": "仅真人联机：朋友第一次去欢乐堡鳄鱼滩",
+          "text": "这题只用于你确实和真人朋友一起玩的原生合作存档。朋友第一次想去鳄鱼滩拿传送手套，你自己已经会这段，也本来想赶另一项已能做的任务；现在两人都能一起去或先分开行动。你更愿意？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_PC",
+            "DS10_MAN",
+            "DS10_TELE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和朋友先商量谁负责施法、谁站哪与何时救援，再各自执行，重点是两个人把当前任务配合完成",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先去做自己原先选定的另一任务，等朋友愿意再会合",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对共享任务记录和两人角色当前装备，尚不作分工决定",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "D",
+              "label": "放慢自己的推进，实际陪朋友去、边玩边聊，把一起经历他第一次处理鳄鱼和手套的过程当这晚主要乐趣",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "O真人相处过程与Q真人协商执行分开，既会内容陪朋友不强贴W/T。",
+          "interpretation_boundary": "没有真实联机经历继续别的已核专属；NPCGawin/同伴不算朋友，不要求公会/语音或强制共享全部进度。"
+        },
+        {
+          "id": "DS1006.ALT2",
+          "scene": "复仇女神号自由停靠：镜子、旧船路与未知房间",
+          "text": "你已能自由使用LadyVengeance下层原生重塑镜。当前有精神、能去做别的任务；自己的船内路线已熟，另有一段可进入但本人还没仔细看过的舱区。你本人的角色也有当前可保存的外观选择。先投入什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MIRROR",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续自主在熟悉船内走一轮，喜欢这种慢慢停留的过程，不急着增加目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "去那段本人尚没看过的可达舱区，想知道船里还有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先出发推进自己已经选定的一项任务",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "在镜子里用当前允许的脸、发型等外观实际改好并确认，做出自己想表达的源力者形象",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "原生后续船镜实际呈现A、熟悉H、个人未知W与任务目标竞争。",
+          "interpretation_boundary": "不用礼袋FortJoy镜、不改种族起源标签；镜子里只看预览不A，H非疲劳/限时只能待船上。"
+        }
+      ]
+    },
+    {
+      "id": "DS1007",
+      "number": 7,
+      "variants": [
+        {
+          "id": "DS1007.V1",
+          "scene": "海滩塔上的Tracks，先补这双惦记的缺靴",
+          "text": "你在欢乐堡岛已开始自己的暴君遗物收藏，TracksOfTheTyrant这双靴子确实还缺，之前就惦记补；现在知道它在海滩塔Lorenzo身上，自己队伍也有当前可用的合法传送/跳跃方式。另一段未知沼泽可走，离岛还没开始。先把时间给哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_TYR",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把已有其他装备实际搭成自己想要的外观，暂不为缺靴改路线",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先为自己已经取得的套装部位、已经到过的位置补上个人记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "实际到塔上取得自己此前惦记的那双缺靴，先补个人这一缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "不沿套装目标走，进入自己还没去过的可达沼泽，想发现那里有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "真缺且先前想补才C，个人未知W和成装A竞争；记录只已得信息。",
+          "interpretation_boundary": "不默认早期人人有任意自传送，不把戒指当五件一部分；零散穿有负面、不是穿一件立即全套免咒。"
+        },
+        {
+          "id": "DS1007.ALT1",
+          "scene": "Windego已倒下，Fane的变形面具还没拿",
+          "text": "你已经打过欢乐堡港边的Windego，当前战场安全、她身上的FaneMaskOfTheShapeshifter还没拾取；这件面具自己确实未有，来之前就想加入个人收藏。Fane也在自己NPC队中，眼前还有他已开放的个人对话。先给什么时间？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_FANE",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按自己这轮已选的离开港区目标走，面具暂缓",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "只为已经打过的对手、已取得物品与已见地点补记记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "实际取回这件自己真缺、此前惦记的面具，补进个人收集",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先听Fane当前开放的关于面具与自己处境的对话，想知道他为何要隐藏身份",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "源于具体Windego面具掉落，C/人物目的S/原定路线82不同。",
+          "interpretation_boundary": "面具若已取/自己无收集目标则换专属；不许诺每个角色面具都能任意改起源/真正变种族，不用GiftBag。"
+        },
+        {
+          "id": "DS1007.ALT2",
+          "scene": "拿到红金字塔后，自己的蓝色缺项",
+          "text": "你在LadyVengeance已有红色传送金字塔，已亲自进入过它指向的秘密舱、也清掉该处敌人；蓝色金字塔当前还没取，自己此前已想把这一对收齐。眼前还有未读完的DustyTome，能继续调查船首像。先愿意？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_PYR",
+            "DS10_LADY",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先推进自己这一轮已定的让船能航行目标，不另外搜索收藏",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先查看自己已经拿到的物品与书里已读提示，再决定先做哪件",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "C",
+              "label": "亲自回秘密舱拿起自己真缺的蓝色金字塔，把原本想补的一对收好",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先读完当前书中歌曲与船的线索，实际去船首像继续听它回应，想理解这艘活木船",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "已清秘密舱后的个人缺项与活木船具体叙事/航行目标竞争。",
+          "interpretation_boundary": "不能把初次红金字塔传入说必安全，不混一代Cyseal/Arhu，也不说全游戏只有两颗；记录当前提示中性，搜新蓝物才C。"
+        }
+      ]
+    },
+    {
+      "id": "DS1008",
+      "number": 8,
+      "variants": [
+        {
+          "id": "DS1008.V1",
+          "scene": "古通道毒口：自己定一场无伤搬罐挑战",
+          "text": "你到了Withermoore地牢毒口，有当前力量能搬的罐，也有可用的到场前存档。正常可用法术或工具过路；自己另想玩一套规则：“全队不施法、不拆陷阱，只许一个角色搬罐，每只罐只许放一次不能再挪；全队走过无人中毒为成功，移第二次或有人中毒就人工判负重载，可调整限制再试。”这段时间也够照常过路。先愿意？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_SOUL",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对自己已有的搬物操作说明或已经见过的示范，再亲手移动罐过路",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "实际按这套自定规则搬罐带队过路，真玩出成功或失败，再人工重开调整规则",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "照常过路，专门练本人分队、选择搬动位置与路线的执行，让操作更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "用已经掌握的有效手段直接过去，推进自己当前已选的找灵魂罐目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "实际自设限制且真玩、成败与重试，原生移动现有物，不冒充编辑器。",
+          "interpretation_boundary": "不任意生成罐/改地图、不保证堵一次全安全；必须可搬且有存档，普通解谜过路不自动I。"
+        },
+        {
+          "id": "DS1008.ALT1",
+          "scene": "油桶前的战斗，自己改成只算地表伤害",
+          "text": "一段你已能重载的原生战斗前，现场确有自己搬得动的油桶、合法点燃手段和可站位置。你想到一个自己从没玩过的限制：“只让引燃地表或爆炸造成伤害，不能直接攻击敌人；击败对手且自己角色存活为成功，直接伤到敌人或团灭就人工判负，重载后可改规则。”先把时间投入哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MAN",
+            "DS10_ENV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较自己当前可用的点燃技能、桶与其他装备的说明和要求，再决定怎样配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "实际搬好现有桶、玩这套自己定的规则，真出现成功失败并重试，想看这种玩法能否成立",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "不设规则，单独练本人落点选择、AP安排和避开友军的施法执行",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "优先用自己已有的有效打法完成这轮已选战斗目标，不为实验延长",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "原生可移动桶/引燃，加实际自定规则和人工判负，不是挑个火法预设就I。",
+          "interpretation_boundary": "只现场已有桶且力量够，点燃法术只瞄桶/地表不能偷伤目标；不保证任意敌人可被火伤、不设无敌自动判分。"
+        },
+        {
+          "id": "DS1008.ALT2",
+          "scene": "仅真人联机：传送金字塔接力怎么玩",
+          "text": "这题只用于你确有真人联机经历的存档。你和朋友各拿一颗可用金字塔，当前所在的非战斗区域允许互传、也有已清的可走路。你们想到接力规则：“轮流先走到自己地图上定的下一个点，另一人再用金字塔跟上；轮到步行的人却先用了金字塔、或有人踩出约定区域就算失败，完成路线算成功，人工重开。”你更愿意？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DS10_MAN",
+            "DS10_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂不玩接力，先推进自己原先选定的另一任务",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "和朋友实际定点、玩这套接力并按约定判成败，失败再改规则重玩，乐趣在新玩法本身",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "把接力搁下，边慢慢走熟悉路边聊天，主要想和这位朋友一起消磨这段游戏时间",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "先和朋友商量谁去取下一项任务物、谁带金字塔接应，再照分工把当前任务做完",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "I实玩自设规则、O真实朋友相处、Q真人协商执行分开。",
+          "interpretation_boundary": "只已有可用金字塔与允许互传区域，不虚构进全地图/船上传送必有效，不改原生地图或自动裁判；单人NPC绝不代真人。"
+        }
+      ]
+    },
+    {
+      "id": "DS1009",
+      "number": 9,
+      "variants": [
+        {
+          "id": "DS1009.V1",
+          "scene": "回顾Sebille交给你的那首伤疤歌",
+          "text": "回想你确实带NPCSebille来到无名岛、且她已主动把伤疤歌教给你的一段：接近ShadowPrince前仍能绕开，你也已知道怎样在他企图重新控制她时回应。哪种自己真实投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_SEB"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把她先前受奴役、愿意信任与你相遇主人的情节连起来，实际接近并回应，继续经历她争回自由的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "因自己给角色采用的“接下信任就不让她再受控”身份选择接近并按她教的回应，放下本来更偏好绕开这场冲突的可做路线",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "按自己当时已选的处理ShadowPrince目标继续，把这一段具体任务完成",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "只为自己真正听过的歌、已知线索和当场发生的回应补记记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "具体前后信任和控制事件，照教的歌不是本人未知规则P。",
+          "interpretation_boundary": "只有真学到歌才用，没学不是玩家能力差；NPC信任不真人O/Q，不许诺所有队伍都能同时做到每条剧情。"
+        },
+        {
+          "id": "DS1009.ALT1",
+          "scene": "回顾Lohse自己面对的灵魂烛海",
+          "text": "回想你以Lohse为自己操纵的角色、确实被Malady带入恶魔私域的那次：你已明白烛火与囚魂和恶魔力量的关系，自己当时真有灭烛或保留离开的选项。哪种已做投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_CANDLE",
+            "DS10_LOHSE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把Lohse夺回自己的身体、Malady的要求与那些被困灵魂放在一起，实际承担自己想经历的故事结果",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自己给Lohse采用的“不用这些灵魂换胜算”身份保留，实际让本来更想削弱恶魔、稳些开战的可做目标让位",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "按自己当时已选的削弱恶魔目标灭烛，接受损失囚魂的后果后继续当前任务",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "只补记自己已看过的烛火、已听解释和当场所作决定",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "永久魂代价与战斗准备，角色身份是玩家采用且有真实代价。",
+          "interpretation_boundary": "限定自己操纵Lohse且真有选择，不保证NPCLohse任何关系都听话；不写魂必复生、固定削弱量或现实道德/心理诊断。"
+        },
+        {
+          "id": "DS1009.ALT2",
+          "scene": "回顾Fane在古庙第一次听Aetera的解释",
+          "text": "回想你带Fane到黑井古庙、打开石棺遇见Aetera的那段真实经历：Aetera讲到永生族的过去，敌对也随之发生。那次自己哪种投入最想留下？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_FANE",
+            "DS10_RYKER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "停下来把Aetera说的永生族过去与Fane此前寻找面具、寻找族人的经历联系起来，实际继续听完这段对话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "面对随后的战斗，专门练自己分队站位、AP安排和出招执行，想下次更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "优先完成自己当时已选的取石板目标，不额外延长人物调查",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "只为自己已听到的族人信息、到过的古庙和实际战斗结果补记记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "实际Aetera人物事件和同地战斗/石板目标竞争，非泛泛喜欢剧情。",
+          "interpretation_boundary": "不把Aetera所有说法当最终确证，也不编没读到的逐句台词；Fane是NPC不是组队真人，未知历史不自动P。"
+        }
+      ]
+    },
+    {
+      "id": "DS1010",
+      "number": 10,
+      "variants": [
+        {
+          "id": "DS1010.V1",
+          "scene": "回顾Mordus地牢看不见的符号与压力板",
+          "text": "回想你在Mordus屋地下、已能进到压力板房的一次：本人当时还不知道开门答案，自己会SpiritVision并已能看到符号，眼前板可以用现有角色或可搬物实际压住。另有自己先前已选、当时也能继续的任务。哪种已做投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_LICH",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先离开这道未解的门，实际去推进自己先前已选、当时能做的另一任务",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "当时先查完整做法再照着开门，把之后的时间留给自己原定任务",
+              "signal": "guide_full_solution"
+            },
+            {
+              "id": "C",
+              "label": "为这个自己已到过的房间补记实际压板组合与开门反应，不另作推理",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己根据符号提出该压哪些板的解释，实际摆角色/物件看门是否开；没开就按证据改猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "个人未知符号解释加实际可失败门反馈P；照全解0和记录0不混推理。",
+          "interpretation_boundary": "不把谜底阵列给进题后再测P，不虚构本人的SpiritVision没学也能见；未知的被囚者剧情先不写全知结论。"
+        },
+        {
+          "id": "DS1010.ALT1",
+          "scene": "回顾古庙诗与神祇日记怎么对上",
+          "text": "回想你在黑井古庙力场前，确实拿到现场诗与说明神祇对应关系的日记，但本人尚未知道七座像的启动顺序。当前雕像可操作，未按对不会完成解锁。哪种自己已做投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_RYKER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先仔细读两份材料中有关世界与诸神的叙述，想体会这处遗迹的历史，不急着以开门为目的",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "当时先查完整启动顺序再照着操作，把后面的时间留给想体验的内容",
+              "signal": "guide_full_solution"
+            },
+            {
+              "id": "C",
+              "label": "为自己实际到过的遗迹补记已经操作的顺序和出现的反应",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己把诗里的线索与日记对应起来，提出顺序并实际操作雕像，未成功就回来检查解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "两份实际文本交叉成可测试顺序，不是浏览攻略自称解谜。",
+          "interpretation_boundary": "不在题泄露完整答案，不假定所有人首次探索时都有日记；S为具体历史而非只照说明完成，未开门可失败。"
+        },
+        {
+          "id": "DS1010.ALT2",
+          "scene": "回顾Gareth家的SilentMonks与真正的下令者",
+          "text": "回想你遇到正在为父母挖墓的Gareth那次：他要你处理屋里的SilentMonks，你当时已能进屋、会SpiritVision且父母灵魂仍在；劝他别追杀这些僧侣的对话也确实向你开放。哪种已做投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_GARETH",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己采用的“不把无言者当替罪者”身份尝试劝止，放下本来更想照Gareth要求直接清屋、快些收尾的路线；劝不成也承担结果",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "按自己当时已选的帮Gareth处理屋内僧侣目标行动，接受这一任务分支",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "只梳理自己当时已经听到的请求、已显示的僧侣处置目标与任务当前状态，再决定接哪一支",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "D",
+              "label": "先去与父母灵魂对话，得知Jonathan下令后再告诉Gareth，想亲自经历他的悲痛、误认与复仇对象的变化",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "与行动题破甲/救援完全不同：父母死后请求、可询魂取证、对SilentMonks的当前处置；源力视野显现事实不是未知物理机制P。",
+          "interpretation_boundary": "只父母已死、灵魂未被吞且对话真开放的存档；不保证任何说服成功，也不将提前救Jonathan/父母存活的另一分支拼入；NPC不Q/O，不按结果判现实善恶。"
+        }
+      ]
+    },
+    {
+      "id": "DS1011",
+      "number": 11,
+      "variants": [
+        {
+          "id": "DS1011.V1",
+          "scene": "回顾从欢乐堡一路带大的同一个源力者",
+          "text": "回想你同一位自建源力者已经由自己分配过属性和战斗能力、也完成过任务；后来又升级，当前有未分配点数，原先投入的能力还没到可用上限。哪种真实投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂时不处理成长，去本人还没到过、当时可达的一段新地图看看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先核对当时已有属性、可花点数和当前技能要求，再决定分配",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "继续培养这位先前已投心思的角色，再带他上路实际使用提升，喜欢同一个源力者逐步长起来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "暂缓分点，先练本人移动预览、AP安排和技能执行，想自己处理战斗更稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "G同一已有亲自培养且未封顶角色后续成长，不拿捡新装备代替长期对象。",
+          "interpretation_boundary": "不默认预设职业不可改、所有属性都能无限加；未真分配使用的计划不是已做成长，普通回床回血不G。"
+        },
+        {
+          "id": "DS1011.ALT1",
+          "scene": "回顾Anathema两块碎片，先交Tarquin还是保留",
+          "text": "回想你已从Surrey墓与BloodmoonIsland找到Anathema两块碎片、回到LadyVengeance的一次：Tarquin在船上，交出或保留都真可选，尚未离开漂流之森；当时还有一段本人没去过而可达的海岸。哪种已做投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_ANATHEMA",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把交付暂缓，先踏上本人尚未走过的可达海岸，想亲自发现那里的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先核对已经取得的两块、已经听到的Anathema说明与当前委托状态，再决定是否交付",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "C",
+              "label": "实际交出两块，推进自己先前已定的把Tarquin委托办完的目标，接受碎片不再留在自己包里",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "按自己给角色采用的“不把危险遗物交给目的未明的人”身份保留，让本来更想完成委托、等他打造武器的偏好让位",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "彻底替换Memory成长回顾：已得两块的交付/保留和离区前探索真竞争，碎片不是先前未有缺项，不硬配C/G。",
+          "interpretation_boundary": "R须本人确实采用该身份且更偏好交付；不编Tarquin此刻必送成品/耐久效果，不许诺交付和永久保留同两块兼得；海岸未去且当时可达才答探索。"
+        },
+        {
+          "id": "DS1011.ALT2",
+          "scene": "回顾Ryker仪式：已有成长还要继续付什么代价",
+          "text": "回想你这位已经亲自培养过、也已有过源力容量成长的角色，在Ryker地下室面对下一步教学的一次：容量当时仍可提高，Ryker已说明将以Stonegarden灵魂作祭；你本人也确实有接受或拒绝的选项。哪种已做投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_RYKER",
+            "DS10_RYKERLOG",
+            "DS10_SP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把Ryker的交易、被召来的灵魂与自己的后果放在一起，实际经历自己选择的故事结果",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "只记录自己当时已有容量、已听到的代价与实际接受或拒绝结果",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "接受仪式并把提高后的容量实际用到后续能力，喜欢这位自己一路培养的源力者继续成长，接受这次剧情代价",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按自己采用的“不靠吞噬这些灵魂继续变强”身份拒绝，放下本来更想立刻扩大容量的可用路线",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "角色已有投入后未封顶容量成长G，R身份能使成长目标让位；不是随手吞罐临时补充。",
+          "interpretation_boundary": "不把填满现有源力圆当容量增长、不让满容量再无限增加；仪式后魂损失不许诺可还原，虚构祭魂选择不推现实道德。"
+        }
+      ]
+    },
+    {
+      "id": "DS1012",
+      "number": 12,
+      "variants": [
+        {
+          "id": "DS1012.ALT1",
+          "scene": "回顾自己复原的断誓之镰，要不要交Almira",
+          "text": "回想你已取回古石板、找到柄和刃并亲自复原Swornbreaker的一次：Almira正等这件物品解除GodKing誓约，你当时真能交给她，也能保留；自己控制的角色当时有Sworn标签、界面确允许装备，原本想带它上场试用。哪种已做投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_BREAKER",
+            "DS10_BREAKEREQ",
+            "DS10_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只补记自己实际取得的部件、已经听过的誓约信息与当时交或留的决定",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "按自己采用的“答应替她脱身就兑现”身份实际交给Almira，让本来更想留下这把武器上场的可做目标让位",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先保留并实际装备到自己可做的战斗里，亲手体验这件当前能用的武器，交付稍后再说",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "把Almira对誓约的请求与自己一路找材料的经历连起来，实际交付并听她对获自由的回应，想经历这一人物结果",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "彻底替换救援/集火回顾：同一实物在交付解誓与个人原定试武器之间竞争，亲自做配方不硬算B/G/I。",
+          "interpretation_boundary": "只亲自复原且交付/装备真实可选的经历，未满足装备条件继续其他专属；不保证唯一一把/给NPC后原物仍无损保留/必定后续结局。NPC获自由不O/Q；不默认人人已Sworn。"
+        },
+        {
+          "id": "DS1012.V1",
+          "scene": "回顾放出的巫妖，再见已经在吃人",
+          "text": "回想你确实从Mordus地牢放出巫妖、后来在Cloisterwood发现他吃人的那次：自己当时真能与他交涉、给一份现有源力令他离去，或转入战斗；后续还有自己原定想推进的任务。哪种已做投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_LICH",
+            "DS10_SP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只为自己已见的尸体、已听对话和实际源力去向补记记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "把自己先前放人、现在发现受害者和巫妖的话联系起来，实际选择继续放行或追责的故事结果",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "按自己给角色采用的“不再让这件事继续害人”身份转入战斗，让本来更想快给源力走人的省时路线让位",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "给当前能用的一份源力让他离开，优先返回自己原先已定任务",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "先前释放带来野外再会的实际后果，非只把地牢操作换过去时。",
+          "interpretation_boundary": "仅当前此阶段且有源力/选项；不把最后献血阶段挪到此处，不许诺放人绝无代价或杀掉可复活所有受害者。"
+        },
+        {
+          "id": "DS1012.ALT2",
+          "scene": "仅真人联机回顾：黑井前复活卷轴给谁带",
+          "text": "这题只用于你确实和真人朋友一起经历黑井救Gwydian的存档。战前你们剩的复活卷轴有限，当前可以转给另一玩家控制的角色；每个人当时也有别的准备或任务想做。哪种真实投入最想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DS10_PC",
+            "DS10_MAN",
+            "DS10_ROPES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先对比当时各人已有技能、装备和卷轴分配的几种可用方案，再决定自己怎样配备",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先和真人队友商量谁携卷轴、谁补护甲、谁把人拉离危险，实际转交卷轴并照彼此同意的分工打那场救援",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "不急着推救援，和这几位朋友聊刚才的翻车、一起整理装备，主要享受共同相处的一晚",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "不另协商，先去推进自己原先选定且当时可做的另一任务",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "实际真人间资源转交与协商执行Q，朋友相处O，个人项目/准备中性。",
+          "interpretation_boundary": "未联机继续单人专属；不把NPC队伍分装备算Q/O，不把复活卷轴保证能救任务NPC或所有剧情死亡；没有语音/平台强制条件。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+bd872ba5111b"
+}

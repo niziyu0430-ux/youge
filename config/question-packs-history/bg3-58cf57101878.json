@@ -1,0 +1,969 @@
+{
+  "id": "bg3",
+  "title": "博德之门3",
+  "game_ids": [
+    "steam-1086940"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按自己熟悉的体验回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "BG301",
+      "number": 1,
+      "variants": [
+        {
+          "id": "BG301.V1",
+          "text": "当前正在创建可自定背景与外观的角色，种族、职业、背景和造型菜单都还可选，几种方案都能接受。先实际细化哪部分？",
+          "scene": "创建菜单中的实际取舍",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CHOICES",
+            "BG3_BUILD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先自定一名古物探访者的身份，再在当前菜单选符合来历的背景与熟练项，让创建选择服从这项身份",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "对照当前可选职业、能力与装备使用关系，选一组能相互补足的起步配置",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "亲手调整面容、发型与颜色，做出自己选定的个人造型主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自定一条平时不用的玩法规则，再选能实行它的起步能力，例如以投掷作为主要出手",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG301.CORE",
+          "text": "已经创建好角色，不要求重新捏脸。当前在第一章可自由行动的一处安全地段，人物仍可交谈，普通镜头与现有能力都可用。先做什么？",
+          "scene": "当前已有角色的行动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自定的古物探访者立场，从眼前已有询问选一项，并实际沿求证原则查看附近物品",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "把已有能力与装备连成一组互相创造机会的用法，去实际试它",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "移动自己可控制的角色与普通镜头，按选定主题截图，做出个人构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自定一条当前就能实行的新规则，例如只用投掷处理眼前可互动目标，并实际尝试",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG302",
+      "number": 2,
+      "variants": [
+        {
+          "id": "BG302.V1",
+          "text": "当前一段在意的对话检定没通过，故事仍可继续，附近也有其他已可走的入口；当前模式明确允许读取先前存档。先做什么？",
+          "scene": "允许读档时的当前检定结果",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CHECK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接受刚才结果，继续听人物此刻已有的回应，让它进入当前故事",
+              "signal": "accept_story_outcome"
+            },
+            {
+              "id": "B",
+              "label": "读取已有存档，再实际尝试原本想走的对话分支",
+              "signal": "reload_preferred_branch"
+            },
+            {
+              "id": "C",
+              "label": "打开技能与加值说明，对照刚才掷骰弄清检定如何结算",
+              "signal": "inspect_check_rules"
+            },
+            {
+              "id": "D",
+              "label": "离开这段交涉，实际走向旁边已可到达的另一条推进路线",
+              "signal": "seek_other_route"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG302.CORE",
+          "text": "不需要重新读档。当前一次说服没通过，但还有已有回应可选，旁边也有能探索的入口。先做什么？",
+          "scene": "当前检定之后的行动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着听眼前人物的回应，把已经发生的结果放进当前故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的古物探访者身份，在现有回应中选符合一贯求证原则的一句并说出",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "查看熟练与加值说明，对照刚才掷骰弄清检定怎样结算",
+              "signal": "inspect_check_rules"
+            },
+            {
+              "id": "D",
+              "label": "离开当前交涉，走进旁边尚未去过的可达入口，亲眼看看另一处未知空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG303",
+      "number": 3,
+      "variants": [
+        {
+          "id": "BG303.V1",
+          "text": "当前一名角色已有可确认的新等级，升级菜单上列出几项真实可选的法术或职业能力。先怎样选并确认？",
+          "scene": "真实升级菜单的当前选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_BUILD",
+            "BG3_CHOICES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照队伍现有能力和装备，选能组成具体配合的一项并确认",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "对照升级说明、现有职业资源与当前装备，先弄懂一项能力的触发条件，再确认当前合法选项",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按自定的受雇斥候身份，从眼前合法选项中挑符合侦察行动原则的一项并确认",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "沿持续投入这名角色的培养方向选定并确认，让已经取得的等级与新能力保留在存档",
+              "signal": "growth_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG303.CORE",
+          "text": "不要求刚好升级。当前在一处已见过的第一章战斗前，现有装备和已会可用能力能查看，眼前位置也可走动。先做什么？",
+          "scene": "当前已有能力的准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把现有能力与装备接成一组相互创造机会的用法，并实际按它开战",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "选一处自己仍不熟的移动到遮挡后再出手，在眼前这场逐回合亲手练到更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "按自定的受雇斥候身份，选择现有隐蔽或观察行动并实际按侦察原则接近",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "清点本次能用的资源与补给，把出手、后续路线与休息先后排顺",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG304",
+      "number": 4,
+      "variants": [
+        {
+          "id": "BG304.V1",
+          "text": "当前已在营地，一位同伴有眼前可继续的话题与回应，自己的精力、队伍资源都还充足，也没有限时危险。先做什么？",
+          "scene": "资源充足时的营地当前行动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_REST",
+            "BG3_WORLD",
+            "BG3_APPROVAL_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "听完当前已有话题，把今天事件放回他的过往经历里理解",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的古物探访者立场，选择眼前已有的询问或回应，以自己一贯的求证原则实际交谈",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "以持续记录的同伴好感为投入目标，选眼前符合他已表达偏好的一项回应，实际推进这段关系",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主动重走熟悉帐篷与营火之间的路线，完成惯常问候，享受营地带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG304.CORE",
+          "text": "不要求营地特别事件。当前在第一章一位已交谈过的人旁，仍有可选回应，附近也有可查看的线索和未去过的可达小路。先做什么？",
+          "scene": "当前早期人物来往",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "听完当前还可继续的话题，把已经出现的人物经历接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的旅途记录者身份，选现有询问并实际走访他提到的可达位置",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "对照当前说法与已看到的物品说明，验证一处线索的关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "进入自己没去过的小路，发现附近新的空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG305",
+      "number": 5,
+      "variants": [
+        {
+          "id": "BG305.V1",
+          "text": "当前停在一场已大致了解的战斗外，已有装备、已会且本次可用的职业能力都能查看，仍可自由走位与整理。先做什么？",
+          "scene": "已知战斗外的当前准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_BUILD",
+            "BG3_REST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把现有能力与装备排成能互相创造机会的一组用法，再实际按它开战",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "清点队伍目前可用资源与补给，把这场交战、后续路线和休息先后排顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "规定这场自己每次攻击后都必须换到另一处可达落点、下回合不能在原处继续出手，实际试限制后的战斗",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "挑上次未做顺的一次出手顺序或站位，在这场逐回合亲手练它",
+              "signal": "practice_seeker"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG305.CORE",
+          "text": "不要求施法职业或更换法术。当前在第一章一场已大致见过的战斗外，已有装备与本次可用能力能查看，仍可自由准备。先做什么？",
+          "scene": "当前早期战斗准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有能力与装备连成能互相创造机会的一组用法，并实际按它开战",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "清点队伍当前资源和补给，把交战、之后路线与休息接成步骤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "给这场加每次攻击后必须换到另一处可达落点、下回合不能留原处出手的规则，亲自试这种限制",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "挑一处仍不熟的出手或站位，在这场逐回合亲手练习",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG306",
+      "number": 6,
+      "variants": [
+        {
+          "id": "BG306.V1",
+          "text": "当前已经亲历影心揭露莎尔信仰、记忆与秘密的相关内容，当前在可继续已有对话、也能调整出战成员的营地；她还有可确认的新等级。眼前先做什么？",
+          "scene": "已知影心经历后的当前选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续听当前已有话题，联系她已讲出的经历与改变",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "对照她前后说法和自己已见线索，验证一处矛盾怎样相接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按自定的古物探访者立场，选择眼前已有的追问或回应，并据此实际决定此刻是否邀请她同行",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "打开她当前升级菜单，沿一直投入的培养方向选定并确认新能力，留下会保留的等级成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG306.CORE",
+          "text": "没有遇到影心也可答。当前在第一章一位已经交谈过的人附近，他仍有现成话题与可选回应，自己也能移动普通镜头。先做什么？",
+          "scene": "当前早期人物与取景",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "听完当前已有话题，把他讲过的过去与现状联系起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "对照前后说法和已见线索，验证一处疑问怎样相接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按自定的古物探访者身份，从现有回应选择一句符合求证立场的话，并实际查看附近相关物品",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "移动自己可控制的角色与普通镜头，按选定主题拍下这处相遇的个人构图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG307",
+      "number": 7,
+      "variants": [
+        {
+          "id": "BG307.V1",
+          "text": "当前已能向守墓人请求重新配置，菜单与费用条件都满足，角色仍有几种可接受的合法配置。先怎样选择并确认？",
+          "scene": "已开放重新配置的当前菜单",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CLASS",
+            "BG3_BUILD",
+            "BG3_RESPEC_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按职业能力、属性与现有装备的相互作用，选出并确认一组具体配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "对照当前可选能力的消耗、恢复与触发条件，弄懂一项规则后再确认合法配置",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按自定的受雇斥候身份，在当前合法选项中挑符合侦察行事原则的能力并确认",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "先核对队伍资源与补给职责，再按接下来路线和休息顺序配置并确认自己承担的一环",
+              "signal": "systems_builder"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG307.CORE",
+          "text": "不重新配置职业。当前第一章一场已遇过的战斗轮到自己行动，现有装备与已会能力可用，几种合法行动都能选。先做什么？",
+          "scene": "当前回合的已有能力",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前装备与已会能力接成一组互相创造机会的配合，亲手实行",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "对照当前目标高度、视线和能力范围，选当前合法动作验证一次遮挡或落点关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按自定的受雇斥候身份，选眼前合法的隐蔽、观察或撤到遮挡后的动作，实行一贯的侦察原则",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "选择自己仍不熟的一处移动或出手时机，在当前回合亲手练它",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG308",
+      "number": 8,
+      "variants": [
+        {
+          "id": "BG308.V1",
+          "text": "当前同伴已对刚才行动给出不同反应，眼前仍有可选回应，也能离开去旁边已确认能继续当前去向的入口，没有限时危险。先做什么？",
+          "scene": "同伴反应后的当前选项",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CHOICES",
+            "BG3_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "听完当前各自还可继续的回应，把这些话与此前经历联系起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的古物探访者立场，选择眼前符合一贯求证原则的已有回应，再实际照这项原则行动",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "离开这段交谈，走向旁边已确认能够继续当前去向的入口，实际换条推进路径",
+              "signal": "seek_other_route"
+            },
+            {
+              "id": "D",
+              "label": "对照当前前后说法与已有线索，验证一处没有明说的信息关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG308.CORE",
+          "text": "不要求同伴分歧。当前刚听完第一章一段人物对话，仍有已有回应可选，也有旁边已确认能继续当前去向的可达入口。先做什么？",
+          "scene": "当前早期对话之后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续听当前可进行的话题，把人物已经说过的经历接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的旅途记录者身份，选现有询问并实际走访眼前可达位置",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先结束眼前交谈，走向旁边已确认可继续当前去向的入口，实际换条推进路径",
+              "signal": "seek_other_route"
+            },
+            {
+              "id": "D",
+              "label": "对照刚听到的前后信息与已有物品说明，验证几条线索怎样相接",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG309",
+      "number": 9,
+      "variants": [
+        {
+          "id": "BG309.V1",
+          "text": "回想一次自己确实在没有限时危险时回营地停留的经历；当时精力与队伍资源仍充足。哪件已经做过的事最有分量？",
+          "scene": "真实营地停留的过去经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_REST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "清点实际资源与补给，把后续路线、战斗和休息接成安排并实行",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按自定的旅途记录者身份，先完成当天可做的询问与记录，再依自己的落脚原则回营",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "听完当时确实能进行的一段营地人物内容，把已经发生的经历接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主动沿熟悉营火与帐篷重走日常、完成惯常问候，享受这处营地带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只回顾已做过的回应、探索、构筑或个人记录，不拿未来重开愿望替代经历。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG309.CORE",
+          "text": "不需要复杂营地事件。回想一次自己确实在第一章安全地段停留、当时精力与资源仍充足的经历。哪件已经做过的事最有分量？",
+          "scene": "真实早期安全停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "清点当时资源与补给，把下一段去向和休息接成步骤并实行",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按自定的旅途记录者身份，完成当时已有询问与物品查看，再依一贯落脚原则回营",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "整理当时已听的人物内容，把几段已经发生的经历联系起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主动回到熟悉营火与可走路线，重复自己的归营日常，享受这处熟悉环境的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG310",
+      "number": 10,
+      "variants": [
+        {
+          "id": "BG310.V1",
+          "text": "回想一次确实与真人熟人联机，交涉与旁边入口当时都可推进且没有限时危险的经历。哪件真正做过的事最有分量？",
+          "scene": "真人联机共同推进的回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_WORLD",
+            "BG3_CHOICES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先问清每位真人想体验什么，共同约定先后与分工，再把目标接着推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "边游玩边聊彼此兴趣与趣事，意外后来也变成共同话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "轮到自己决定时，按一贯角色身份选择当时已有回应或路线，并让这项行动原则实际进入故事",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "在双方都同意的可行一段里，约好禁用直接武器攻击、只用当时合法投掷或环境互动，并真正试过这项限制",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只回顾已做过的回应、探索、构筑或个人记录，不拿未来重开愿望替代经历。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG310.CORE",
+          "text": "只回想自己确实单人玩过的一段第一章，当时交涉与旁边入口都能继续且没有限时危险。哪件已经做过的事最有分量？",
+          "scene": "真实单人第一章探索",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把两条去向的目标与已有信息排成步骤，并按这个先后实际推进",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "进入当时未看过的可达入口，发现附近新地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "按一贯角色身份，在当时已有回应与路线中实际作选择，让行动服从立场",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "自己投掷、跳跃或推移物件时，环境与画面立刻回应操作，当时享受的就是这段直接反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG311",
+      "number": 11,
+      "variants": [
+        {
+          "id": "BG311.V1",
+          "text": "回想一次自己确实整理过当前旅程记录的经历，不要求通关。哪件已经做过的事最有分量？",
+          "scene": "已整理的个人旅程记录",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CHOICES",
+            "BG3_BUILD",
+            "BG3_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把人物的几次真实选择与事件按先后整理，理解它们怎样走到已有结果",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把自己按一贯角色身份选过的实际回应与路线记下来，让这条人生与行动对应",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "记录自己真正试过的职业能力与装备组合，解释它们怎样互相创造机会",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己调整普通镜头和可控制角色的位置，按选定主题截图，留下个人构图",
+              "signal": "style_director"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只回顾已做过的回应、探索、构筑或个人记录，不拿未来重开愿望替代经历。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG311.CORE",
+          "text": "不要求写过记录或截图。回想自己确实玩过的一小段第一章旅程，哪件当时已经做过的事最有分量？",
+          "scene": "真实第一章旅程经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自接着听过人物对话，把已经发生的几段经历联系起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按一贯角色身份选过当时已有的实际回应或路线，让行动服从自己的立场",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "用当时已有的能力与装备接成具体配合，亲手验证它们的相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己移动可控制角色与普通镜头，按选定主题截图，留下个人构图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG312",
+      "number": 12,
+      "variants": [
+        {
+          "id": "BG312.V1",
+          "text": "回看自己确实玩过的一段博德之门3旅程，不要求通关或重开。哪项已经完成的投入最接近当时重点？",
+          "scene": "已经玩过的旅程投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_CHOICES",
+            "BG3_BUILD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按一贯角色身份，在当时已有的回应与路线中实际作选择，让行动服从自己的立场",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "真正推进过一段当时可进行的人物内容，并把已发生的经历接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "用当时已会的职业能力与现有装备组成配合，亲手验证它们的相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "给一段当时可行的交手定不准直接武器攻击、只用已有可投掷物与环境互动的限制，并真正试过",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只回顾已做过的回应、探索、构筑或个人记录，不拿未来重开愿望替代经历。",
+          "interpretation_boundary": "角色身份须影响已有合法选择与实际行动；同伴是NPC，q/o仅用于真人联机。持续成长须真实等级/能力或记录在案的好感投入，重配本身不当升级。"
+        },
+        {
+          "id": "BG312.CORE",
+          "text": "不要求通关或重开。只回看自己实际玩过的一小段第一章，哪项已经完成的投入最接近当时重点？",
+          "scene": "已经玩过的第一章投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按一贯角色身份，从当时已有的回应和路线中实际选择，让行动服从自己的立场",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "真正推进一段当时可进行的人物对话，把已发生经历与去向接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "用当时已有能力与装备接成具体配合，亲手验证相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "给一段当时可行的交手定只用已有可投掷物、不做直接武器攻击的限制，并真正按规则尝试过",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写第一章独立替代；不要求影心、特别营地事件、重新配置、当前升级、读档、重开或真人同游，r使用当前已有的合法回应和动作，a为普通镜头下的亲手构图。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+58cf57101878"
+}

@@ -1,0 +1,4072 @@
+{
+  "id": "au9c",
+  "title": "奥拓星球 / Autonauts",
+  "game_ids": [
+    "steam-979120"
+  ],
+  "scope": "PC本体四原生模式独立；不混Piratebots或mod",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "四模式各12初始与12手写基础替代；选择自己实际玩过的规则。",
+    "Free/Creative不造研究成长；充能按当前地图设置；Folk、机器人与OTTO都不是现实社交对象。"
+  ],
+  "modes": [
+    {
+      "id": "enlightenment",
+      "label": "Enlightenment启蒙：原Colonisation开放进程",
+      "initial_variants": {
+        "AU9C01": "AU9C01.ENLIGHTENMENT.V1",
+        "AU9C02": "AU9C02.ENLIGHTENMENT.V1",
+        "AU9C03": "AU9C03.ENLIGHTENMENT.V1",
+        "AU9C04": "AU9C04.ENLIGHTENMENT.V1",
+        "AU9C05": "AU9C05.ENLIGHTENMENT.V1",
+        "AU9C06": "AU9C06.ENLIGHTENMENT.V1",
+        "AU9C07": "AU9C07.ENLIGHTENMENT.V1",
+        "AU9C08": "AU9C08.ENLIGHTENMENT.V1",
+        "AU9C09": "AU9C09.ENLIGHTENMENT.V1",
+        "AU9C10": "AU9C10.ENLIGHTENMENT.V1",
+        "AU9C11": "AU9C11.ENLIGHTENMENT.V1",
+        "AU9C12": "AU9C12.ENLIGHTENMENT.V1"
+      }
+    },
+    {
+      "id": "settlement",
+      "label": "Settlement定居：阶段计划与当前已开放内容",
+      "initial_variants": {
+        "AU9C01": "AU9C01.SETTLEMENT.V1",
+        "AU9C02": "AU9C02.SETTLEMENT.V1",
+        "AU9C03": "AU9C03.SETTLEMENT.V1",
+        "AU9C04": "AU9C04.SETTLEMENT.V1",
+        "AU9C05": "AU9C05.SETTLEMENT.V1",
+        "AU9C06": "AU9C06.SETTLEMENT.V1",
+        "AU9C07": "AU9C07.SETTLEMENT.V1",
+        "AU9C08": "AU9C08.SETTLEMENT.V1",
+        "AU9C09": "AU9C09.SETTLEMENT.V1",
+        "AU9C10": "AU9C10.SETTLEMENT.V1",
+        "AU9C11": "AU9C11.SETTLEMENT.V1",
+        "AU9C12": "AU9C12.SETTLEMENT.V1"
+      }
+    },
+    {
+      "id": "free",
+      "label": "Free：研究结构全开，仍须真实制作和建造",
+      "initial_variants": {
+        "AU9C01": "AU9C01.FREE.V1",
+        "AU9C02": "AU9C02.FREE.V1",
+        "AU9C03": "AU9C03.FREE.V1",
+        "AU9C04": "AU9C04.FREE.V1",
+        "AU9C05": "AU9C05.FREE.V1",
+        "AU9C06": "AU9C06.FREE.V1",
+        "AU9C07": "AU9C07.FREE.V1",
+        "AU9C08": "AU9C08.FREE.V1",
+        "AU9C09": "AU9C09.FREE.V1",
+        "AU9C10": "AU9C10.FREE.V1",
+        "AU9C11": "AU9C11.FREE.V1",
+        "AU9C12": "AU9C12.FREE.V1"
+      }
+    },
+    {
+      "id": "creative",
+      "label": "Creative：现成结构与物品生成的自由试验",
+      "initial_variants": {
+        "AU9C01": "AU9C01.CREATIVE.V1",
+        "AU9C02": "AU9C02.CREATIVE.V1",
+        "AU9C03": "AU9C03.CREATIVE.V1",
+        "AU9C04": "AU9C04.CREATIVE.V1",
+        "AU9C05": "AU9C05.CREATIVE.V1",
+        "AU9C06": "AU9C06.CREATIVE.V1",
+        "AU9C07": "AU9C07.CREATIVE.V1",
+        "AU9C08": "AU9C08.CREATIVE.V1",
+        "AU9C09": "AU9C09.CREATIVE.V1",
+        "AU9C10": "AU9C10.CREATIVE.V1",
+        "AU9C11": "AU9C11.CREATIVE.V1",
+        "AU9C12": "AU9C12.CREATIVE.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "AU9C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "Enlightenment中已有伐木、栽种、清树桩与运木机器人，工具能制造；本地图当前开启机器人充能，基本物料够继续几轮。先做什么？",
+          "scene": "启蒙模式的森林得有人补上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把种植、伐木、工具补给、运木和充能接着安排几轮，持续跟库存与停工调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "实际配合工具补给脚本与伐木手空后的换工具动作，试两者怎样共同让作业接续",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前各机器人执行行、工具和木料库存，核对眼前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先按现有机器人和材料排清这轮建仓、搬料与施工先后，再照着做",
+              "signal": "unit_construction_plan"
+            }
+          ],
+          "design_purpose": "开启充能才问；y真实多环依赖，b工具耗尽/补具与作业脚本互补。查看执行行用单位程序状态0，不套解谜或访客反馈语境。ALT只最初单机器人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C01.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "只有第一名机器人也能选：你已示范把地上石料搬箱，程序能改，执行行、手中物与目标可看；当前已有基础建造目标，材料够再建箱。先做什么？",
+          "scene": "启蒙模式的森林得有人补上的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看这名机器人停在哪条、手里有什么和目标箱状态，再定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先按当前材料和机器人排这一轮建箱、搬料与交付次序，再照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有示范录制和搬运说明，再亲手教这次取放",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按眼前已经出现的基础建造目标，实际完成所需的那一步",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "开启充能才问；y真实多环依赖，b工具耗尽/补具与作业脚本互补。查看执行行用单位程序状态0，不套解谜或访客反馈语境。ALT只最初单机器人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C01.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "Settlement当前Academy已列所需建造或产出，材料与机器人够；食物和Folk供给已开，阶段后的内容仍未全开放。先投入什么？",
+          "scene": "OTTO已经列出的阶段计划",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按目前已经列出的这项计划实际建造或产出，先推进这个阶段目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前计划条件、已做进度与机器人的执行行，再决定这轮从哪处动手",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先按现有机器人和材料排清这轮取料、搬运与施工先后，再照安排做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "把当前阶段工具、材料和Folk供给接起来看几轮，持续调节它们的消耗",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "阶段推进本身0，不把引导任务自动g；后续未开不冒充可用。ALT第一阶段基础计划即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C01.SETTLEMENT.V1"
+        },
+        {
+          "text": "只到Settlement第一段提示：当前已列一个基础设施目标，木石、现有箱子和第一名机器人够用。先做什么？",
+          "scene": "OTTO已经列出的阶段计划的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前提示的条件实际搭所需设施，先把这个目标往前推",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先核对眼前计划要求、材料与机器人的当前执行行",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "按现有材料和机器人排清搬料与施工先后，再照这轮安排做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "先看已有最初录制和建造示范，再亲手继续",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "阶段推进本身0，不把引导任务自动g；后续未开不冒充可用。ALT第一阶段基础计划即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C01.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "Free模式研究与结构已经开放，但这轮仍要实际制作和搬料，不能生成物品；眼前木石、基础工位与机器人可用，几种开放设施材料条件可看。先做什么？",
+          "scene": "全解锁不等于现成物料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已开放设施各要的实际材料和加工条件，再决定这轮先做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "把取料、工具制作、机器人作业与仓储花用接起来看几轮，持续调整供应",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先按现有材料与机器人排清这轮搬料、加工和施工先后，再照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对Free现有制作与建造操作说明，再亲手搭眼前一段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "Free全研究但仍制造，不能用Creative生成物品；不把浏览全目录当收集或成长。ALT仅初始工具和单机器人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C01.FREE.V1"
+        },
+        {
+          "text": "只做过Free最初箱子和基础机器人：当前地上木石可采，手动工具与一名机器人可用，材料够加箱。先做什么？",
+          "scene": "全解锁不等于现成物料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按现有材料和机器人排清这轮取料、建箱与搬运先后，再实际执行",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "先看当前工具、箱内材料和机器人执行行，核对眼前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有最初录制和制作示范，再亲手继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先比较眼前可制作的基础工具与建箱材料条件，再定先做哪件",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "Free全研究但仍制造，不能用Creative生成物品；不把浏览全目录当收集或成长。ALT仅初始工具和单机器人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C01.FREE.ALT1"
+        },
+        {
+          "text": "Creative当前可直接放现成结构和生成物品，你已摆一名机器人、箱子与少量测试石料，取放程序可改。没有研究和财政任务，先做什么？",
+          "scene": "能生成物品的程序试验台",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "预测只改测试石料的落点会怎样影响当前搜索结果，只改落点后让同一程序运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前执行行、手中物和箱内状态，再决定改哪处",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮摆测试物、改程序和运行检查的操作先后，再实际照做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按自己想表达的演示工场主题，实际安排工作点与结构外形",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "Creative生成输入是可用机制；p只改一种输入条件不同时改程序，不预给原因。无研究/钱/成长假设。ALT最基础取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C01.CREATIVE.V1"
+        },
+        {
+          "text": "只试过最简单Creative：现成箱子、基础机器人和一件地上石料已放好，你能示范取放。先做什么？",
+          "scene": "能生成物品的程序试验台的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前石料、目标箱和机器人程序状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮示范拾取、移动、放箱与运行检查的操作次序，再实际教一次",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有示范录制说明，再亲手继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际换到另一只当前可放的目标箱，让机器人跑一趟看这项配置",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "Creative生成输入是可用机制；p只改一种输入条件不同时改程序，不预给原因。无研究/钱/成长假设。ALT最基础取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C01.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "一名启蒙模式机器人本该找石头，却没有接着搬；你能看搜索区、当前执行行、手中物与目标箱，原因尚未确定，程序可改。先怎么做？",
+          "scene": "搜索区里明明看见石头",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前区边界、执行行和手中物，核对它实际正在做什么",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮改搜索区、检查取放和重跑的操作步骤，再实际照着试",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有搜索与循环说明，再亲手修改这名机器人",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己提出搜索区或循环条件中的一个解释，只改对应一项后让它再跑一轮核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "题干不说石头在区外或箱已满；p必须自提单改实测。普通看执行行0，单轮操作先后0非y。ALT基础搜索即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C02.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "最早机器人也可以：它应把地上小物搬进箱子，当前停在一条命令上，搜索区和箱状态都可看，原因未定。先做什么？",
+          "scene": "搜索区里明明看见石头的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "猜一处目标或搜索条件是否相关，只改这一项后实际重跑",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先看已有录制与区域选择示范，再亲手教一次取放",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先排这轮停下程序、改一处命令与运行检查的操作顺序，然后照着做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前执行行、搜索范围和箱内状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "题干不说石头在区外或箱已满；p必须自提单改实测。普通看执行行0，单轮操作先后0非y。ALT基础搜索即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C02.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "当前Settlement能造机器人，这轮使用现有这组；采集、制工具与送仓已可做，有两种已开且做得起的部件升级可比，程序与材料可查。先做什么？",
+          "scene": "现有机器人先怎样分工",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际配合工具到位与采集手空后补工具的程序，让这两个角色互相接续",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前各机器人部件与可做升级，决定这轮谁负责哪段",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先按现有机器人和材料排清这一轮建箱与搬料施工，再照安排做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "把现有这组的采料、制工具、补工具和运成品接起来跑几轮，持续调整分工",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不考上限数字，不把这轮限定现有机器人伪装i；y多轮互依，b两角色脚本互补。ALT只一名机器人无需名额经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C02.SETTLEMENT.V1"
+        },
+        {
+          "text": "只有第一名机器人：当前能从地上捡石头送到箱子，你可改录制、目标与程序，材料够加一只箱。先选什么？",
+          "scene": "现有机器人先怎样分工的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮建箱与搬料施工，按现有材料和机器人照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际把取放目标换到另一只当前可用箱，让它跑一趟看看",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有录制示范，再亲手教这段基础取放",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先看当前执行行、手中物与箱内状态，再决定怎么继续",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "不考上限数字，不把这轮限定现有机器人伪装i；y多轮互依，b两角色脚本互补。ALT只一名机器人无需名额经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C02.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "Free当前已有挖树桩、栽种、伐木、制工具与运木机器人，土地和种源足够；当前充能设置及各程序可查，基本物料没有迫近危机。先投入哪项？",
+          "scene": "木头能一直再长出来",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LOG",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际配合采集手空后的补工具程序与工具存储，试作业和补给怎样接续",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前各执行行、工具与种源库存，核对眼前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先按现有机器人与材料排这轮扩林场和建仓的施工先后，再照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "把清桩、栽种、伐木、工具与运木接成几轮循环，按本地图实际启用的能量条件持续调节",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "无研究门槛但材料真实消耗；充能按实际地图选项，不默认强开。y多轮再生/工具链，b工具补给与作业互补。ALT只一段取木。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C02.FREE.V1"
+        },
+        {
+          "text": "还没有自动林场：一名机器人已学会把地上原木搬进现有储存，搜索区、执行行与箱状态可看。先做什么？",
+          "scene": "木头能一直再长出来的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LOG",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮录制取木、改目标与重跑的操作顺序，再实际照做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际换到另一只当前可用储存点，让这段已有取放配置跑一趟",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有最初搜索与取放说明，再亲手继续教",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看它当前执行到哪条、手里有什么和目标库存，再决定下一步",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "无研究门槛但材料真实消耗；充能按实际地图选项，不默认强开。y多轮再生/工具链，b工具补给与作业互补。ALT只一段取木。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C02.FREE.ALT1"
+        },
+        {
+          "text": "Creative当前可生成不同已可用部件和升级，一名机器人已有背包、备用工具与取用指令，另一名只有基础取放；你有空间反复试。先做什么？",
+          "scene": "生成机器人以后仍要配程序",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可用内存、背包和身体部件的配置条件，再决定这次采用什么",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "实际换用一种当前可用机器人配置，让同一段程序运行体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先查看现有部件、手中物与当前执行行，核对眼前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "实际配合背包备用工具、手空检查与换工具程序，试携带与作业怎样共同接续",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "实际互补b；菜单比较0、已有配置实玩0，不把生成高级部件当养成g。ALT基础机器人无背包经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C02.CREATIVE.V1"
+        },
+        {
+          "text": "只生成过基础机器人：同一段地上取料送箱程序可改目标，当前另一只现成箱子也能放。先选什么？",
+          "scene": "生成机器人以后仍要配程序的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换成另一只当前可用目标箱，让已有程序跑一趟体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先排这轮摆箱、改目标与运行检查的操作顺序，再实际照做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先看已有最初取放示范，再亲手继续教这段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看执行行、手中物与原目标箱，核对当前状态",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "实际互补b；菜单比较0、已有配置实玩0，不把生成高级部件当养成g。ALT基础机器人无背包经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C02.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "现有搬石机器人能携多件，手满、手空与失败退出可用，内存够；搜索区有时仅少量石头，箱有空，也有两种已开可做部件方案能比较。先投入哪件？",
+          "scene": "手满再送与等不到手满",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前手中件数、执行行与搜索区现货，核对实际状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前机器人部件和可用升级，再决定是否改配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "实际组合几段条件：收集到手满、没现货便失败退出，再把手里已有石料交到手空，试它们怎样互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "预测改一个循环条件会怎样改变交付时机，只改这一项后跑同一趟核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b条件互补明确，不是三条命令就算构筑。p不先宣布缺料原因。ALT单次取放，无多件/复杂循环前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C03.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "只会单次取放：第一名机器人当前能从地上拿一件石料送箱，录制、移动目标和程序都能改。先选什么？",
+          "scene": "手满再送与等不到手满的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换一个当前可用的目标箱配置，让它跑一次取放看看",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有基础录制与取放示范，再继续亲手教这段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先核对现在一件物从地上到箱子的执行步骤，查看当前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮录制拾取、移动和放入的操作次序，再实际教一遍",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "b条件互补明确，不是三条命令就算构筑。p不先宣布缺料原因。ALT单次取放，无多件/复杂循环前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C03.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "Settlement里一名机器人原本应给工位送料，现在在一条指令处停住；搜索区、手里物、目标工位与循环设置可看，原因还没确定。先做什么？",
+          "scene": "当前执行到哪里才停住",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_LOOPS",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排本轮停下程序、修改与重跑检查的操作先后，再照着试",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有机器人循环说明，再亲手继续改这名机器人",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "自己提出一处搜索或循环条件的解释，只改对应一项后运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前执行行、手中物与工位可接收状态，再决定改哪处",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "不在题干宣布目标满/工具坏；p单变实际检验。ALT最初送箱不需工位链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C03.SETTLEMENT.V1"
+        },
+        {
+          "text": "最初送箱程序就能答：机器人没有接着把地上石料送箱，当前执行行、搜索区和箱状态可查，原因未定。先怎么做？",
+          "scene": "当前执行到哪里才停住的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_LOOPS",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看已有录制与搜索示范，再亲手教这次取放",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮改命令、运行与检查的顺序，然后实际照做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先看当前执行行和手里物，核对实际停在哪一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "猜一个搜索区或目标条件是否相关，只改这一项后重跑看",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不在题干宣布目标满/工具坏；p单变实际检验。ALT最初送箱不需工位链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C03.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "Free当前已放一个可制作的工位，原料、配方、房间和机器人执行状态都可查，但这轮没有按预想作业；原因未定，材料够改一小处。先做什么？",
+          "scene": "工位放下却没接着做",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_STORE",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按现有材料与机器人排清这轮补料和施工先后，再照安排做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有工位和房间条件说明，再亲手继续操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "提出一项原料、房间或作业条件的解释，只改对应一处后让同一工位再运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前配方、原料、工位状态与机器人执行行，核对实际停在哪一步",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "不先宣布缺墙/缺地板或材料；Free虽全解锁仍须真实工位条件。ALT基础工位不用房间前置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C03.FREE.V1"
+        },
+        {
+          "text": "只有基础制作与送箱：当前机器人没有继续把地上石料送进箱，执行行、搜索范围与目标状态可查，原因未定。先选什么？",
+          "scene": "工位放下却没接着做的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_STORE",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮停下、改命令与运行检查的操作先后，再照着做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先看已有最初录制示范，再亲手继续教这段取放",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前执行行、搜索区和目标箱，核对眼前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "猜一处搜索或目标条件是否相关，只改这一项后实际重跑",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不先宣布缺墙/缺地板或材料；Free虽全解锁仍须真实工位条件。ALT基础工位不用房间前置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C03.FREE.ALT1"
+        },
+        {
+          "text": "Creative已有搬石机器人，手满与手空循环可用，输入可自由放，箱有空；现有一次停等尚未解释，程序与测试物都可调，内存够。先做什么？",
+          "scene": "把一段程序真的跑起来",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前输入件数、手里物和执行行，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先排这轮录制、调整条件和运行检查的操作顺序，再照着试",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "实际换用当前已有的收集到手满、交付到手空的程序配置，让这名机器人跑一轮体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "提出某次停等是否与一个循环条件相关的解释，只改这一项后实际重跑",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "普通既有收送程序实玩0，不把任何顺序脚本自动计b/i；p自提单变实测，生成输入不等于经营成长。ALT只单件取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C03.CREATIVE.V1"
+        },
+        {
+          "text": "只有单件取放：一件石料和现成箱子已摆好，基础机器人能示范拾取与放入，不必学循环。先做什么？",
+          "scene": "把一段程序真的跑起来的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看已有基础录制示范，再亲手继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "实际换当前可用的另一处目标箱，让同一段取放跑一趟",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮示范拾取、移动和放入的操作先后，再实际教一遍",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前程序、手中物与目标位置，核对眼前状态",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "普通既有收送程序实玩0，不把任何顺序脚本自动计b/i；p自提单变实测，生成输入不等于经营成长。ALT只单件取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C03.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "启蒙模式已有Folk，当前食物和住所条件可满足，Wuv能收集；研究站的一项项目已交过启动材料与部分Wuv、尚未完成，当前仍能继续供入Wuv，生产基本稳定。先把时间给哪里？",
+          "scene": "Folk、Wuv与已有研究",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_SETTLE",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_RESEARCH_PROGRESS",
+            "AU9C_WUV_RESEARCH"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前能制作的食物和材料条件，再定这一轮先做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "继续跟进同一项已投入研究的供给，想让当前积累留成以后可用技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把食物制作、Folk需求、Wuv收集与研究耗用接起来跑几轮，随实际节奏继续调",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先查看Folk当前需求周期、食物与Wuv库存，核对现状再决定",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "g持续同研究保留开放，y多轮供给转换；需求周期未结束不能强塞物品。Folk不是现实社交。ALT无Folk和研究。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C04.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "还没放Folk：第一批木料与石料能采，已有箱子和机器人，当前基础目标可查看，材料够建最初设施。先做什么？",
+          "scene": "Folk、Wuv与已有研究的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_SETTLE",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对最初设施和录制操作说明，再亲手继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先按当前已经列出的基础目标实际建所需设施",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先看当前材料、箱内存量与可用机器人，再决定这轮供什么",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先按现有机器人和材料排清取料、搬运与施工先后，再照安排做",
+              "signal": "unit_construction_plan"
+            }
+          ],
+          "design_purpose": "g持续同研究保留开放，y多轮供给转换；需求周期未结束不能强塞物品。Folk不是现实社交。ALT无Folk和研究。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C04.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "当前Settlement阶段已经打开下一组真实可研究内容，其中一项已交启动材料与部分Wuv、尚未完成；当前所需供给能满足，基本生活稳定。先给哪件时间？",
+          "scene": "阶段解锁后还能继续的研究",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_RESEARCH_PROGRESS",
+            "AU9C_WUV_RESEARCH"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前阶段计划、研究进度与库存，再决定这轮投入",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "继续跟进这同一项研究，重视投入会留下以后能用的技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把当前阶段食物、Folk需求、Wuv收集与研究耗用连起来看几轮，持续调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已开且能制作的食物与工具各要的材料，再定这一轮先做哪项",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "仅当前阶段已开且已投入研究g，不让未开研究可选；阶段目标本身不g。ALT无研究/Folk。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C04.SETTLEMENT.V1"
+        },
+        {
+          "text": "还没有研究：当前第一段计划已列基础建造，木石够，第一名机器人与箱子可用，录制和建造都能继续。先做什么？",
+          "scene": "阶段解锁后还能继续的研究的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有录制与基础建造说明，再亲手继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "照当前已经列出的基础计划实际建一段，先推进这个目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先看当前材料、箱内存量与机器人的执行行，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先按现有机器人和材料排这轮搬料、建造与补箱先后，再实际执行",
+              "signal": "unit_construction_plan"
+            }
+          ],
+          "design_purpose": "仅当前阶段已开且已投入研究g，不让未开研究可选；阶段目标本身不g。ALT无研究/Folk。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C04.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "当前Free一名机器人有背包、备用工具和取用指令，一次没换上工具，原因未定；手空后的取用程序能改，材料与时间够试。先投入哪件？",
+          "scene": "背包里的备用工具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看现有背包内容、手中物和当前执行行，再定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "实际配合背包备工具、手空判定和取出换用程序，试携带与作业如何互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "提出一次没换上工具与哪项指令有关的解释，只改一项后重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前背包、内存或其他可做部件条件，再决定这轮用什么配置",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "b真实备用携带与条件取用互补；比较不b，单次更换不g。ALT最初无背包也可答。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C04.FREE.V1"
+        },
+        {
+          "text": "没用背包：第一名机器人只能先做眼前取料送箱，当前目标可改，程序与手中物可看。先做什么？",
+          "scene": "背包里的备用工具的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有录制与运行说明，再亲手继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先查看它当前执行行、手里物和目标箱状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮示范取放与运行检查的顺序，再实际教一次",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际改用另一只当前可用目标箱，让已有取放程序跑一趟",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "b真实备用携带与条件取用互补；比较不b，单次更换不g。ALT最初无背包也可答。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C04.FREE.ALT1"
+        },
+        {
+          "text": "Creative当前可直接放工作台、箱子和已有墙地结构，无须先采料制作；眼前一片空地足够挪放，不必运行任何生产。先选什么？",
+          "scene": "现成结构也能慢慢摆",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_SCRIPT",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际移动或旋转一处现成结构，查看新摆位的样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "按自己想表达的林间实验工场主题，实际安排墙地、工作台与箱子的轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先看当前已有墙地和结构外观方案，再决定这次采用什么",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "先排本轮放地面、摆结构和留通路的编辑步骤，再照着搭",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "纯Creative建造无需资源/研究/机器人；主题a、浏览0、编辑顺序0、普通试摆0。ALT只有箱子工作台，不强墙地经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C04.CREATIVE.V1"
+        },
+        {
+          "text": "只摆过箱子和工作台：两种现成结构都能直接放与移动，空地足够，不用生产。先做什么？",
+          "scene": "现成结构也能慢慢摆的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_SCRIPT",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前现成结构和外观选项，再决定这轮用什么",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "按自己选的林边角落主题，实际安排箱子和工作台的位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "实际挪一只箱子，查看它在新位置的样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮放工作台、移箱子和留通道的编辑顺序，再照着做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "纯Creative建造无需资源/研究/机器人；主题a、浏览0、编辑顺序0、普通试摆0。ALT只有箱子工作台，不强墙地经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C04.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你持续投入的同一名机器人可换已开更好部件，已有背包升级、备用工具与相应取用指令；材料、内存和工具够用，程序可改，任务不急。先投入哪项？",
+          "scene": "一直跟着用的那名机器人",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续培养这同一名机器人，投入现成材料改善部件与程序，让先前积累留成它后续能用的能力",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "实际配合背包储备用工具与相应取放程序，试备件携带和作业衔接怎样互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前已开放且能制作的头部、身体或升级条件，再决定这一轮采用什么",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先看这名机器人的执行行、手持工具与现有部件，核对当前状态",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "g不是一次菜单更换，是持续同机器人投入；b确有背包携具/取用脚本互补且当前均可用。ALT最初机器人无升级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C05.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "只有最初机器人部件：现在能改它的取放程序和目标箱，当前执行行与手中物可看，不需要升级。先做什么？",
+          "scene": "一直跟着用的那名机器人的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看这名机器人当前执行行、手中物与目标箱，核对眼前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮示范取放与运行检查的操作先后，再实际教一遍",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有机器人录制说明，再亲手继续编这段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际换当前可用的另一只目标箱，让它跑一趟看看这项配置",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "g不是一次菜单更换，是持续同机器人投入；b确有背包携具/取用脚本互补且当前均可用。ALT最初机器人无升级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C05.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "当前Settlement一名机器人可携多件小石料，手满、手空与失败退出均可用，内存够这段程序，搜索区时有空档，目标箱尚有位置。先选什么？",
+          "scene": "不同条件怎样接着做",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际组合几段条件：收集到手满、没现货便失败退出，再把手里已有石料交到手空，试它们怎样接续",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "预测改一个循环条件会怎样影响这一趟交付，只改这一项后运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前执行行、手持物与地面现货，核对眼前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮改条件、试跑和检查的操作次序，再实际照着做",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "b条件互补明确，非任意脚本就b；p不给库存原因。ALT只有单件取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C05.SETTLEMENT.V1"
+        },
+        {
+          "text": "只学会单件取放：第一名机器人能拾取一件石料再送箱，当前可重新录制和改目标，先做什么？",
+          "scene": "不同条件怎样接着做的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对它当前拾取、移动和放入执行到哪一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮录制和运行检查的顺序，再亲手教一次",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "实际换另一只当前可用目标箱，让机器人跑一趟体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先看已有最初录制示范，再继续自己的取放程序",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "b条件互补明确，非任意脚本就b；p不给库存原因。ALT只有单件取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C05.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "当前Free已有Sign与区域引用程序，一次搜索没跟到预想新区域，原因未定；两片资源都可达，普通手定区也能用，建仓材料够。先给哪件时间？",
+          "scene": "Free里自己划的移动工作区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_MODES",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际试用当前已有的Sign引用配置：把Sign移到另一片可采资源旁，再让现有程序跑一轮看效果",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先猜一次搜索没有跟过去与哪项绑定有关，只改一项设置后重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前手定搜索区与Sign引用的可用条件，再决定这轮用哪种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先按现有材料和机器人排清这轮建储存与搬料施工，再实际执行",
+              "signal": "unit_construction_plan"
+            }
+          ],
+          "design_purpose": "Free制作Sign仍需材料，当前确有后才问；移动其引用区域是单项现成配置实玩0，不计b或i。ALT不用Sign。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C05.FREE.V1"
+        },
+        {
+          "text": "只用过普通搜索区：当前机器人能改地上石料的搜索范围，箱子有空，另一片现成石料也可达。先做什么？",
+          "scene": "Free里自己划的移动工作区的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_MODES",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前范围、执行行与石料位置，核对现状",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "实际把范围换到另一片当前可采区，让程序跑一轮体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有区域选择说明，再亲手调这名机器人",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮改区、运行与检查的操作次序，然后实际照着试",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "Free制作Sign仍需材料，当前确有后才问；移动其引用区域是单项现成配置实玩0，不计b或i。ALT不用Sign。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C05.FREE.ALT1"
+        },
+        {
+          "text": "Creative当前已有Sign与区域引用程序，一次搜索没跟到预想新位置，原因未定；两片空地都能放同类测试物，固定区也能用。先做什么？",
+          "scene": "Sign带着这轮测试区走",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际试用当前已有的Sign引用配置：把Sign移到另一处放好测试物的空地，再让现有程序跑一轮看效果",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "提出搜索没跟到新位置与哪项设置有关的解释，只改一个绑定或位置后重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前固定搜索区与Sign引用的条件，再决定这轮配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮放测试物、移Sign与运行检查的操作先后，再实际照做",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "Sign移动引用是一项已有功能，正常换区试用0，不计b；p不预给未绑定答案。ALT不用Sign而用普通搜索区。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C05.CREATIVE.V1"
+        },
+        {
+          "text": "没有用过Sign：现有机器人按固定范围找石料，一次没找到预期目标，原因未定；测试物与箱子可放，搜索区可改。先做什么？",
+          "scene": "Sign带着这轮测试区走的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前范围、测试物与执行行，核对眼前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "自己猜一处搜索边界是否相关，只改这一项后重跑看",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮放测试物、改区和运行检查的操作先后，再照着试",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有区域选择示范，再亲手继续教程序",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "Sign移动引用是一项已有功能，正常换区试用0，不计b；p不预给未绑定答案。ALT不用Sign而用普通搜索区。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C05.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "当前Sign与区域引用已可用，一次采集没有到预想区域，原因未定；两片资源都可采，普通手定区也可用，现有机器人和建箱材料够。先做什么？",
+          "scene": "Signs可以带着搜索区移动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_STORE",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出机器人这次没找对位置的解释，只改Sign的一项位置或绑定设置后重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前手定区域与引用Sign的可用条件，再决定用哪种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先按现有材料与机器人排清这轮扩箱和搬料施工，再照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际试用当前已有的Sign引用配置：把Sign移到另一片可采位置，再让采集程序跑一轮看效果",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "Sign移动引用是当前已有的一项区域配置，单用其正常功能不计b；实际换区试跑0，原因未定的单项假说实测p，单位建设步骤0。ALT不用Sign。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C06.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "没用过Sign：现有一名采集机器人能改搜索区，附近两片可达石料都能采，箱子还有空。先做什么？",
+          "scene": "Signs可以带着搜索区移动的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_STORE",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把搜索区换到另一片当前可采位置，让机器人跑一轮体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有搜索区域操作说明，再亲手调这名机器人",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先排这轮改区域、检查取放和运行的操作次序，再实际照做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先看当前搜索范围、石料位置与执行行，再决定下一步",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "Sign移动引用是当前已有的一项区域配置，单用其正常功能不计b；实际换区试跑0，原因未定的单项假说实测p，单位建设步骤0。ALT不用Sign。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C06.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "当前Settlement已有Sign与区域引用，一次没有向预想的新图纸供料，原因未定；图纸可达，材料与施工机器人够，普通手定区也能用。先做什么？",
+          "scene": "阶段里已经开放的Sign",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前手定施工区与引用Sign的可用配置，再决定用哪种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "提出一次找不到图纸与某个区域条件有关的解释，只改一项后让机器人重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先按当前材料和机器人排清这一轮供料与施工先后，再照安排做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际试用当前已有的Sign引用配置：把Sign移到另一处可达图纸旁，再让供料程序跑一轮看效果",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "Sign须当前阶段真已开放；按其原有功能移动引用区是配置试用0，不自动计b。p需未知原因的单项解释与实测；ALT第一段不用Sign。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C06.SETTLEMENT.V1"
+        },
+        {
+          "text": "尚未用Sign：当前已有基础建筑图纸，木石与一名机器人可用，能看图纸还缺什么，也能手动示范搬料。先做什么？",
+          "scene": "阶段里已经开放的Sign的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按现有材料与机器人排清取料、搬到图纸和施工先后，再实际照做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "先看已有图纸供料与录制示范，再亲手教一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "按当前阶段已列目标实际继续给这张图纸送所需材料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对图纸当前需求、地上材料和机器人执行行，再定下一步",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "Sign须当前阶段真已开放；按其原有功能移动引用区是配置试用0，不自动计b。p需未知原因的单项解释与实测；ALT第一段不用Sign。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C06.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "Free研究已全开，当前你仍放了Folk，已有食物制作与配送机器人；Folk需求、库存与运输可看，供给能继续几轮。先做什么？",
+          "scene": "不拿Wuv当科技门槛的供给",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_STORE",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前Folk需求周期、食物与配送状态，再决定这一轮改哪处",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可做食物的材料与加工条件，再定这轮供哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先按现有材料和机器人排清这轮扩食物储存与供料施工，再照安排做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "把原料、食物加工、配送与Folk实际需求接起来看几轮，持续调节供给节奏",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "明确Free无研究解锁需求，不能为Wuv虚造g；Folk仍是NPC，配送是供给系统不是q/o。ALT无Folk。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C06.FREE.V1"
+        },
+        {
+          "text": "没有放Folk也可以：地上木石、现有箱子与基础机器人可用，材料够再搭一个基础工位。先做什么？",
+          "scene": "不拿Wuv当科技门槛的供给的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_STORE",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前材料、箱内存量与机器人执行行，再决定这一轮安排",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先按现有材料和机器人排清取料、加工与施工先后，再实际执行",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前基础制作说明，再亲手继续搭这段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可做基础工具和工位的材料条件，再决定先做哪项",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "明确Free无研究解锁需求，不能为Wuv虚造g；Folk仍是NPC，配送是供给系统不是q/o。ALT无Folk。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C06.FREE.ALT1"
+        },
+        {
+          "text": "Creative当前可以随时生成物品，但眼前已有一批够用木料和能加工的工位、机器人；这批加工不需要再补生成物，程序已会运行。先投入哪件？",
+          "scene": "无限生成也可以暂时不用",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把既有输入、加工、工具补给与成品储存接起来跑几轮，持续按真实消耗调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前木料、工位与各机器人执行行，核对现状再决定",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮工位与箱子的摆放、移动和通道编辑顺序，再亲手调整",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "额外规定这批加工开始后不得使用当前可用物品生成，只用既有这批木料实际运行",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i真禁Creative核心可用生成机制，有够用实际输入不要求耗尽/通关；y实际有限物料生产，不虚构财务或研究。ALT纯基础结构无需加工。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C06.CREATIVE.V1"
+        },
+        {
+          "text": "只摆现成结构也可以：Creative里箱子和工作台能直接放与移动，眼前空地够调整；这轮不运行加工或机器人。先做什么？",
+          "scene": "无限生成也可以暂时不用的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前现成工作台和箱子的外观选项，再决定用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "实际挪动一只现成箱子，查看它换位后的样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的林边作坊主题，实际安排工作台和箱子的轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先排清这轮移箱、放工作台和留空位的编辑次序，再实际照做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "i真禁Creative核心可用生成机制，有够用实际输入不要求耗尽/通关；y实际有限物料生产，不虚构财务或研究。ALT纯基础结构无需加工。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C06.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "机器人已学会取料送箱，曾短暂停顿，原因未定，但这批石料仍能由它独立运输；手动搬货可用，箱有空、充能条件满足，程序可调。现在先做什么？",
+          "scene": "示范以后谁搬这批料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮停下程序、示范补一条与再运行的操作步骤，再照着试",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前程序、手中物和箱内状态，再决定下一步怎么做",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "额外规定这批开跑后自己既不手搬帮忙，也不再修改本可编辑的程序，实际让机器人按原脚本尝试运输",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "提出它某次停顿的一项程序解释，只改一个条件后观察同一趟",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "i为额外禁用手搬及开跑后再编辑脚本，当前两者本可用；不是把普通自动化本身计i。机器人已学取放且可独立试运，结果可失败。ALT只一件石料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C07.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "第一名机器人已学会把一件石料送箱，手动拾取与程序修改都可用，箱有空。先做什么？",
+          "scene": "示范以后谁搬这批料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有录制与运行示范，再亲手继续改程序",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先排本轮停下、改目标和再运行的操作顺序，然后实际照着试",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "额外规定这一趟开跑后自己既不帮搬、也不再修改当前可改的脚本，实际让机器人按原程序试运",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先查看它当前执行行、手里物与目标箱，核对状态",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "i为额外禁用手搬及开跑后再编辑脚本，当前两者本可用；不是把普通自动化本身计i。机器人已学取放且可独立试运，结果可失败。ALT只一件石料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C07.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "Settlement当前已有可用地面、建筑和部分机器人现有外观选项；材料够调整，基础供给稳定，下一项阶段计划仍能继续。先给哪里时间？",
+          "scene": "当前阶段的小工场外观",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SETTLE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按当前机器人和材料排这轮挪工位、搬料与铺地施工次序，再照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "按当前阶段已列的下一项计划实际继续建造或生产",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的林间工场主题，实际搭配地面、工作点轮廓与当前机器人外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先浏览已经可选的地面与外观方案，再决定这轮用哪项",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "只用当前已开素材，外观浏览非c，普通编辑非g；a必须自我主题表达。ALT只基础工作点无外观解锁。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C07.SETTLEMENT.V1"
+        },
+        {
+          "text": "只有最初箱子和工作点：现有箱子可移动，材料够加基础设施，当前阶段提示仍可继续。先做什么？",
+          "scene": "当前阶段的小工场外观的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SETTLE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按现有材料和机器人排清这轮搬料与施工先后，再照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "按当前提示已经列出的条件，实际推进这一项基础建造",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的林边角落主题，实际安排箱子与工作点位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "实际移动一只现有箱子，查看新摆位的样子",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "只用当前已开素材，外观浏览非c，普通编辑非g；a必须自我主题表达。ALT只基础工作点无外观解锁。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C07.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "Free当前更高部件做得起，现有基础机器人也能运这批石料；示范已完成但曾有一次短暂停顿，原因未定，箱有空，程序可改。先做什么？",
+          "scene": "全技术开放时仍只用基础机器人",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出这次停顿与一处搜索或循环条件有关的解释，只改一项后实际重跑",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先查看基础机器人的执行行、手中物和目标箱，核对当前状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "额外定下这一批不得换用已可制作的高阶机器人部件，仍实际只用现有基础机器人运",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前基础与更高部件的材料和可用能力，再决定这轮配置",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "i真禁当前可做可支付的高阶部件且基础任务可行，不以更快、效率或清空为门槛；ALT不强制任何升级经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C07.FREE.V1"
+        },
+        {
+          "text": "不曾比较部件也能选：最初机器人已学会从地上捡一件石料送箱，程序与目标仍可改。先做什么？",
+          "scene": "全技术开放时仍只用基础机器人的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有录制和取放示范，再亲手继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "实际换到另一只当前可用箱，让已有取放配置跑一趟",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先查看执行行、手中物与箱内状态，核对眼前这趟",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先排这轮改目标与运行检查的操作先后，再实际照着做",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "i真禁当前可做可支付的高阶部件且基础任务可行，不以更快、效率或清空为门槛；ALT不强制任何升级经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C07.FREE.ALT1"
+        },
+        {
+          "text": "Creative当前已有Database，一份未联动程序副本装到兼容机器人后表现与原机不同，原因未定；可再复制，目标箱和测试物也能调。先给哪件时间？",
+          "scene": "Bot Database里已有的程序",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_LOG",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出一处新机器人运行差异与目标设置有关的解释，只改一项目标后重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有Database复制和链接操作说明，再亲手继续这次配置",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前程序内容、各机器人执行行和目标位置，弄清眼前复制了什么",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "把已有程序装到另一名当前兼容机器人并实际跑一趟，体验这项现成配置",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "已有程序复制不是收藏或新内容i；只是装现成配置实跑0，p自提单变。ALT最初手动示范不要求Database。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C07.CREATIVE.V1"
+        },
+        {
+          "text": "没用过Database也可以：只有一名基础机器人和已有取放示范，目标箱可改，当前程序可看。先做什么？",
+          "scene": "Bot Database里已有的程序的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_LOG",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排本轮改目标、运行与检查的操作次序，再实际照做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际换成另一只当前可用目标箱，让已有程序跑一趟",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先看当前程序执行行、手中物与目标箱，核对实际状态",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有录制与修改示范，再亲手继续这段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "已有程序复制不是收藏或新内容i；只是装现成配置实跑0，p自提单变。ALT最初手动示范不要求Database。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C07.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你有精神，材料、机器人与已投入的未完研究能继续发展；林场、Folk与Wuv供给已开，本地图充能开启，当前运行稳定，营地已熟悉。先选什么？",
+          "scene": "认得的启蒙营地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_RESEARCH_PROGRESS",
+            "AU9C_WUV_RESEARCH",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把后续几轮工具、木料、食物、Wuv和充能接起来，持续按消耗调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先留在认得的营地从容看机器人往返，喜欢熟悉可控的日常，暂缓新阶段",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "继续培养一直跟进的机器人或同一项未完研究，想让积累留在后续营地",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按自己选的营地主题，实际搭配当前可用地面、建筑布局与机器人外观",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h正向熟悉且能推进；g持续同对象保留进度，a实际主题；充能只本地图已开。ALT无研究/林场。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C08.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "只建了箱子和第一名机器人：你有精神，材料与基础目标还能继续，也已认得这一小片营地。先做什么？",
+          "scene": "认得的启蒙营地的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前已经列出的基础目标实际继续建所需设施",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先在熟悉的小营地从容看机器人搬运，正是喜欢认得的过程，暂缓下一座设施",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先按现有机器人与材料排清这轮搬料与建箱建设，再照安排做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际把现有箱子与工作点摆成自己选的林边角落主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h正向熟悉且能推进；g持续同对象保留进度，a实际主题；充能只本地图已开。ALT无研究/林场。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C08.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "你有精神，机器人、材料与阶段内容足够继续；Folk供给已开，一项已投入研究仍能跟进，当前小工场稳定，你已熟悉这几条往返。先选什么？",
+          "scene": "熟悉阶段中的从容一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_RESEARCH_PROGRESS",
+            "AU9C_WUV_RESEARCH"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的工场主题实际安排当前地面、建筑和外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先留在认得的工场从容看熟悉搬运，喜欢这个可控的过程，暂缓下一项阶段计划",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "继续跟进同一项已经开始的研究，想把积累留成后续可用技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把接下几轮工具、原料、成品与Folk供给连起来，持续按消耗调节",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "h精力足且可推进仍主动熟悉；研究只有已投入才g；未开充能选项不强加。ALT不需研究Folk。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C08.SETTLEMENT.V1"
+        },
+        {
+          "text": "第一段小工场也能选：你有精神，材料和当前基础目标仍可继续，已经认得箱子和第一名机器人的路线。先做什么？",
+          "scene": "熟悉阶段中的从容一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把箱子和工作点实际摆成自己选的林边小工场轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先从容留在认得的小工地看往返，正是喜欢熟悉过程，暂不添新设施",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先按现有材料和机器人排这轮搬料与建箱施工次序，再实际做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "按当前已列基础目标实际推进还缺的一步",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "h精力足且可推进仍主动熟悉；研究只有已投入才g；未开充能选项不强加。ALT不需研究Folk。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C08.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "你有精神，材料和当前全开放工具足以继续新建设；眼前自己已经熟悉的工场供给稳定，几条搬运路线都认得。先选什么？",
+          "scene": "全目录开放后的熟悉工场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前能做的两种工位或材料条件，再决定下一轮建设",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "先在认得的工场从容看熟悉往返，喜欢自主安稳的过程，暂缓下一片设施",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的营地主题，实际搭配当前可做地面、工作点与已有外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把接下几轮取料、制工具、生产与储存花用连起来，持续随实际消耗调节",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "Free不虚构研究成长；h有余力且可发展，a实际主题，y持续资源系统。ALT只基础营地。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C08.FREE.V1"
+        },
+        {
+          "text": "只建了箱子和基础机器人：你有精神，原料和可制作内容都够继续，已熟悉这一片小工地。先做什么？",
+          "scene": "全目录开放后的熟悉工场的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前材料、工具和机器人执行行，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先从容看认得的取放往返，正是喜欢熟悉过程，暂缓下一座设施",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先按现有材料和机器人排清这轮搬料与建箱施工，再实际执行",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际把箱子和工作点摆成自己选的林边角落轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "Free不虚构研究成长；h有余力且可发展，a实际主题，y持续资源系统。ALT只基础营地。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C08.FREE.ALT1"
+        },
+        {
+          "text": "你有精神，当前生成与直接建造工具足够继续新内容；眼前一个自己摆过的小工场和取放示范已经很熟。先选什么？",
+          "scene": "自己熟悉的Creative角落",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前执行行、手中物和目标箱，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先从容留在熟悉角落看认得的取放，正是喜欢这个自主可控的过程，暂不开新片区",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按自己的演示工场主题实际调整现有地面、结构和外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮放结构、移工作点和留通路的编辑步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h有精力且可推进仍主动熟悉；不以无限资源推个人风格或能力，a仍须自选主题实际改。ALT不依赖运行程序。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C08.CREATIVE.V1"
+        },
+        {
+          "text": "只摆过箱子与工作台：你有精神，现成结构还能继续放，已经认得眼前小角落。先做什么？",
+          "scene": "自己熟悉的Creative角落的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际移动一处现成结构，查看新摆位的样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先在认得的角落从容移动镜头，喜欢熟悉摆放，暂不添新东西",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的林边工作角主题，实际调整箱子与工作台关系",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮移箱、转工作台与留通道的编辑顺序，再照着做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h有精力且可推进仍主动熟悉；不以无限资源推个人风格或能力，a仍须自选主题实际改。ALT不依赖运行程序。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C08.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想启蒙模式里你实际修改过一名机器人的程序，不要求它最后正常完成。哪段真实过程更贴近？",
+          "scene": "那次真的读过执行行",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出过一处搜索、循环或目标条件的解释，只改对应一项后让它重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先查看当时执行行、手中物与目标状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我实际配过收集到手满、没现货便失败退出、再交付到手空的循环，想体验它们怎样互相补位",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮停下程序、修改和运行检查的步骤，并实际照着做",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "真过去、实测无正确门槛；b组合条件真实，ALT最早录制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C09.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "只回想最初教取料送箱的一段，不要求有复杂循环。哪件事确实发生？",
+          "scene": "那次真的读过执行行的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我看过当时机器人执行行、手中物和箱内状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我猜一处目标或搜索条件是否相关，只改这一项后跑过一次",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我看过已有录制示范，再亲手教过这段取放",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我排过这一轮示范和运行检查的操作先后，也实际照做了",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "真过去、实测无正确门槛；b组合条件真实，ALT最早录制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C09.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "回想Settlement里你真实做过一轮阶段计划，不要求跨阶段或目标完成。哪段已经发生的过程更贴近？",
+          "scene": "那次按阶段计划继续",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时已经列出的计划条件实际建造或生产，主要是推进那一个目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我先看清当时计划进度、材料和机器人的执行行，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我把工具、材料、生产与Folk供给连着看过几轮，持续调节互相影响",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我按当时现有机器人和材料排过搬料与施工先后，并实际照做",
+              "signal": "unit_construction_plan"
+            }
+          ],
+          "design_purpose": "阶段目标不自动g/f，反思真过去、无完成门槛。ALT第一段计划就可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C09.SETTLEMENT.V1"
+        },
+        {
+          "text": "只回想第一段提示下的一轮实际建造，不要求后来进到下一阶段。哪件事确实发生？",
+          "scene": "那次按阶段计划继续的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我照当时已列的基础目标实际给图纸供过料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我先看了图纸需求、现有材料和机器人的执行行，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我排过那轮取料、搬运与施工先后，并实际照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "我看过已有基础建造和录制示范，随后自己继续操作了",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "阶段目标不自动g/f，反思真过去、无完成门槛。ALT第一段计划就可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C09.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "回想Free里一次你实际修改并运行过的机器人程序，不要求它顺利完成。哪段已发生的过程更贴近？",
+          "scene": "那次Free里真的检验过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出过搜索、条件或目标的一项解释，只改对应一项后让它重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先查看过当时执行行、手里物和目标状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我实际配合过背包备工具、手空检查与换用程序，想体验它们共同接续",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮停下程序、修改和运行检查的操作顺序，并实际照做",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "真过去、p可失败，b有备用携具与条件取用；ALT最初单件取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C09.FREE.V1"
+        },
+        {
+          "text": "只回想最初取一件物送箱的一段，哪件事真实发生？",
+          "scene": "那次Free里真的检验过的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我看过当时执行行、手中物和箱内状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我猜一处目标或区域是否相关，只改这一项并实际重跑了",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我看过已有最初录制示范，随后亲手教了一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮示范取放和运行检查的先后，并实际照做",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "真过去、p可失败，b有备用携具与条件取用；ALT最初单件取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C09.FREE.ALT1"
+        },
+        {
+          "text": "回想Creative里你实际录制或修改过机器人程序的一段，不要求程序顺利完成。哪段已发生的过程更贴近？",
+          "scene": "那次Creative的程序核对",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_MODES",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出过搜索、输入或目标的一项解释，只改对应一项后让程序重跑核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先查看当时程序、手中物和目标状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我试用过当时已有的Sign引用配置，实际把Sign移到放有测试物的新区域，让原程序跑过一轮",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮摆测试物、修改和运行检查的操作次序，并实际照做",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "真过去，p可失败，普通Sign移区实跑0；无成功、研究或材料进程门槛。ALT一件取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C09.CREATIVE.V1"
+        },
+        {
+          "text": "只示范过一件石料送箱也能回想，哪件事真实发生？",
+          "scene": "那次Creative的程序核对的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_MODES",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先看了当时程序、手中物和箱内状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我猜一处搜索或目标是否相关，只改这一项后实际重跑过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我看过已有最初录制示范，随后亲手教了这一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮示范取放和运行检查的操作先后，并照着做",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "真过去，p可失败，普通Sign移区实跑0；无成功、研究或材料进程门槛。ALT一件取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C09.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想启蒙模式里你已经开始照料、后来又实际继续调整过的同一名机器人；当时地图开启充能，不要求部件升级完成。哪种真实过程更贴近？",
+          "scene": "那次持续投入的对象",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把工具制造、材料搬运、作业和充能连着调过几轮，关注持续运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我主要是先比较当时可做的部件或升级条件，再决定那一轮采用什么",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "我先查看过当时这名机器人的执行行、手持工具与目标状态，再决定下一轮怎么调整",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "我持续投入过同一名机器人的部件与程序，重视以前的改动能留成它之后仍可用的能力",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "g限定持续投入的同一名机器人及保留的部件/程序，不把一次换装备叫成长；状态0仅已显示的单位程序，不混研究进度。充能有当时设置前提；ALT最早取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C10.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "没有研究或升级经历：回想最早一名机器人搬料的一轮，不要求后来成了大营地。哪件事发生过？",
+          "scene": "那次持续投入的对象的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时机器人和材料排过那轮建箱与搬料先后，并实际执行了",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "我核对过已有取放录制说明，随后亲手教过一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "我照着当时已经列出的基础建造条件，实际推进了其中一步",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "我看过它当时的执行行、手中物和目标箱，再决定下一步",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "g限定持续投入的同一名机器人及保留的部件/程序，不把一次换装备叫成长；状态0仅已显示的单位程序，不混研究进度。充能有当时设置前提；ALT最早取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C10.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "回想Settlement里你真实修改并运行过机器人的一段，不要求它最后顺利工作。哪段过程更贴近？",
+          "scene": "那次程序里真正改的一项",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看当时执行行、手里物和目标工位，再决定改哪里",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我实际配合过工具补给与作业手空后的换工具程序，关注它们共同怎样接续",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "我排过那轮停下程序、修改和运行检查的操作顺序，并照着试了",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我提出过搜索、条件或目标的一项解释，只改对应一项后让它重跑核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "p自提单变可失败，b有补具与作业互补；最早程序ALT无工具链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C10.SETTLEMENT.V1"
+        },
+        {
+          "text": "只教过捡一件物送箱也能回想，哪件事确实发生？",
+          "scene": "那次程序里真正改的一项的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我猜一处搜索区或目标是否相关，只改这一项并实际重跑了",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先看已有录制示范，随后亲手教了一次取放",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "我排清那轮示范与运行检查的先后，并实际照着做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我看过当时执行行、手中物和箱内状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "p自提单变可失败，b有补具与作业互补；最早程序ALT无工具链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C10.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "回想Free里真实做过的一批基础运输：当时材料够制作高阶部件，基础机器人也确实能做这批任务。不要求效率提高，哪段更贴近？",
+          "scene": "那次全解锁下的自定限制",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先比较了当时可做的部件与升级条件，再决定那轮配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "我给营地选过自己的主题，并实际安排工作点与地面外形",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我主要换过一项当时可用的取放目标配置，让机器人实际跑过一趟",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "我额外禁止那一批换用本可制作的高阶部件，实际只用现有基础机器人做了运输",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i真实可用机制禁用，有可行小任务，普通比较或换配置0。ALT只初始配置，不需高阶部件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C10.FREE.V1"
+        },
+        {
+          "text": "回想最早箱子和基础机器人，不要求做过任何额外限制。哪件事真实发生？",
+          "scene": "那次全解锁下的自定限制的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时材料和机器人排过建箱与搬料先后，并照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "我给这片小工地选过自己的主题，也实际摆过箱子和工作点",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我看过已有取放录制说明，随后亲手继续教了",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我实际换过另一只当时可用目标箱，让同一段取放跑了一趟",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "i真实可用机制禁用，有可行小任务，普通比较或换配置0。ALT只初始配置，不需高阶部件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C10.FREE.ALT1"
+        },
+        {
+          "text": "回想Creative实际运行过的一批简单加工：当时可以生成物品，已有输入也确实够这一批。不要求效率或成品达标，哪段真实贴近？",
+          "scene": "那次自己不用无限生成",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把输入、加工、工具与储存连看过几轮，持续按实际消耗调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我主要先比较了当时现成可用的程序或机器人配置，再决定采用什么",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "我为演示工场选过自己的主题，并实际调整结构轮廓和外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我额外禁止了加工开跑后使用本可用的物品生成，实际只让这批既有输入运行",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i排除真实可用核心机制，现有料够；y多轮真实投入不假币流；ALT无需加工或限制经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C10.CREATIVE.V1"
+        },
+        {
+          "text": "只回想Creative里实际摆过箱子和工作台的一段，不要求做过加工或程序。哪件事真实发生？",
+          "scene": "那次自己不用无限生成的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我挪过一只现成箱子，亲眼查看它换到新位置后的样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "我为自己的林边工作角主题实际摆过箱子和工作台",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我核对过已有结构放置与移动说明，随后亲手继续摆放",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮摆台、移箱和留空位的编辑顺序，并实际照做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "i排除真实可用核心机制，现有料够；y多轮真实投入不假币流；ALT无需加工或限制经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C10.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想启蒙模式实际运行过的一段营地供给，当时林场、工具与搬运已可工作，地图开启充能；不要求效率或阶段达标。哪段过程更贴近？",
+          "scene": "那次营地里的多轮供给",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为营地想过自己的林间作坊主题，也实际改过布局与当时已有外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先看清当时物料与机器人工作状态，再决定那一轮怎么安排",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我把种植伐木、工具、搬运和充能连着看过几轮，持续调过相互牵动的供应",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我给一批已学会运输的机器人额外定过开跑后不手搬、也不再修改可编辑脚本的限制，并按原脚本实际试运过",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "y多轮真实资源链；i明确额外锁定本可修改的程序并禁手搬，不把普通交给机器人运货计发明；a主题实际表达，单位状态核对0。ALT不需供给链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C11.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "只回想最初箱子和取料机器人，也能选真实经历。哪件事发生过？",
+          "scene": "那次营地里的多轮供给的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_LOOPS",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我给这片小工地选过外形主题，也实际摆过箱子和工作点",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我看过当时执行行与手中物，再决定怎么继续教",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我按当时材料和机器人排过建箱与搬料施工先后，并实际照做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "我额外规定已学会取放的机器人开跑后自己不帮搬、也不再改本可编辑的程序，并实际按原脚本试运了一趟",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "y多轮真实资源链；i明确额外锁定本可修改的程序并禁手搬，不把普通交给机器人运货计发明；a主题实际表达，单位状态核对0。ALT不需供给链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C11.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "回想Settlement里你实际摆过工作点或调整过机器人外观的一段，不要求高级素材。哪段已发生的过程更贴近？",
+          "scene": "那次营地表达出来的样子",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时材料和机器人排了搬料、移工位与施工顺序，并实际照做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "我主要是实际挪动一处现有结构，亲眼查看了新摆位",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "我为自己的林间工场主题实际安排了地面、工作点与当时已可用外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我先浏览过当时可选的地面和外观方案，再决定采用什么",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "a主题实际表达，浏览0、机器人材料建设0、普通位置试改0；不是c/g。ALT无外观素材前置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C11.SETTLEMENT.V1"
+        },
+        {
+          "text": "回想最初箱子与工作点的一段真实摆放，哪件事已经发生？",
+          "scene": "那次营地表达出来的样子的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时材料和机器人排过这一轮搬料与建箱先后，并照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "我核对过已有建造和移动说明，随后自己继续操作了",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "我选过自己的林边角落主题，也实际摆过箱子和工作点来表达",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我实际移过一只现有箱子，查看了新位置的样子",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "a主题实际表达，浏览0、机器人材料建设0、普通位置试改0；不是c/g。ALT无外观素材前置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C11.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "回想Free实际运行过的一段生产供给，不要求高级设施或更高效率。哪段已发生的过程更贴近？",
+          "scene": "那次没有研究门槛的资源安排",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_MODES",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看当时材料与机器人运行面板，再决定那轮怎么改",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我按当时材料和机器人排过这一轮搬料与施工顺序，并照着做",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "C",
+              "label": "我把原料、工具、生产与储存花用连看过几轮，持续调过相互影响",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我试用过当时已有的Sign引用配置，实际把Sign移到另一片资源旁，让原程序跑过一轮",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "Free全研究开放，不虚构研究成长；y为多轮资源依赖，普通Sign移区试用0。ALT没有Sign，状态0只看实际执行行等。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C11.FREE.V1"
+        },
+        {
+          "text": "只有最初搬木也能回想：箱子和机器人已经可用，哪件事确实发生过？",
+          "scene": "那次没有研究门槛的资源安排的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SCRIPT",
+            "AU9C_MODES",
+            "AU9C_LOG",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出过一项搜索或目标条件的解释，只改这一项后重跑核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我排过那轮改区、运行和检查的操作次序，并实际照做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "我看过当时材料库存和机器人执行行，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "D",
+              "label": "我按当时材料与机器人排过建仓和搬料先后，并实际执行",
+              "signal": "unit_construction_plan"
+            }
+          ],
+          "design_purpose": "Free全研究开放，不虚构研究成长；y为多轮资源依赖，普通Sign移区试用0。ALT没有Sign，状态0只看实际执行行等。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C11.FREE.ALT1"
+        },
+        {
+          "text": "回想Creative里实际摆过结构的一段，不要求机器人、生产或后期素材。哪段已发生的过程更贴近？",
+          "scene": "那次直接摆出的工场",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_SCRIPT",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过那一轮放置、移动与留通道的编辑步骤，并实际照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我实际移动或旋转过一处现成结构，亲眼查看了新摆位",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "我选过自己的工场主题，并实际安排墙地、工作点与结构轮廓来表达",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我先看过当时已可用的地面和结构外观方案，再决定采用什么",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "纯基础建造完整可答；普通编辑不a/g/i，浏览不是c。所有过去项真实操作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C11.CREATIVE.V1"
+        },
+        {
+          "text": "只回想现成箱子和工作台的摆放，哪件事确实发生？",
+          "scene": "那次直接摆出的工场的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_LAUNCH",
+            "AU9C_SCRIPT",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过那轮移箱、转台和留空位的编辑次序，并亲手照做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我实际挪过一只箱子，查看了它在新位置的样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "我按自己想要的林边角落主题实际安排过这两种结构",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我先看过当时可用的结构外观选项，再决定用哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "纯基础建造完整可答；普通编辑不a/g/i，浏览不是c。所有过去项真实操作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C11.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AU9C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想启蒙模式一段你已经玩过的时光，不要求Folk、研究或高级机器人。哪种真实投入更贴近？",
+          "scene": "那次愿意待在认得的营地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_RESEARCH_PROGRESS",
+            "AU9C_WUV_RESEARCH",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先核对已有机器人操作说明，随后亲手继续了程序",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我当时有精神、也有材料和可继续内容，仍喜欢在认得的营地看熟悉往返，主动从容停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我持续跟进过同一名机器人或研究，重视之前积累会留到后面",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我为营地主题实际安排过已有地面、工作点与外观",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真实过去h有余力正向熟悉；g仅持续保留投入，ALT无升级研究。NPC不是真人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C12.ENLIGHTENMENT.V1"
+        },
+        {
+          "text": "只回想最早小箱子和一名机器人的那段，哪件事已经发生？",
+          "scene": "那次愿意待在认得的营地的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_SETTLE"
+          ],
+          "modes": [
+            "enlightenment"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我看过已有最初录制示范，随后亲手教过一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我有精神且还能继续建，仍喜欢在熟悉小工地从容看取放日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我排过那轮示范、改目标与运行检查的操作次序，并实际照做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我按自己选的林边角落主题，实际摆过箱子和工作点",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真实过去h有余力正向熟悉；g仅持续保留投入，ALT无升级研究。NPC不是真人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C12.ENLIGHTENMENT.ALT1"
+        },
+        {
+          "text": "回想Settlement中你已经玩过的一段，不要求完成某阶段。哪种真实投入更贴近？",
+          "scene": "那次在熟悉阶段里停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE",
+            "AU9C_RESEARCH_PROGRESS",
+            "AU9C_WUV_RESEARCH"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看了当时计划与机器人的执行行，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我有精神、材料和可继续计划，仍因为喜欢认得的工场往返，主动从容停留了一会儿",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我继续跟进过同一项已投入研究，重视它会留下后续可用技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我把当时阶段的工具、物料、成品与需求连着调整过几轮，关注持续运转",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "真实过去h有余力，g实际保留研究；仅推进提示不g。ALT第一阶段无研究。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C12.SETTLEMENT.V1"
+        },
+        {
+          "text": "只回想第一名机器人和箱子那段，哪件事真实发生？",
+          "scene": "那次在熟悉阶段里停留的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_SETTLE",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_MODES",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "settlement"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时已经列出的基础目标实际建过所需一小段",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我有精神且基础目标仍可继续，仍喜欢在认得的小工地从容看搬运",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我排过那轮改目标与运行检查的操作顺序，并实际照做",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我先看过执行行和箱内状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            }
+          ],
+          "design_purpose": "真实过去h有余力，g实际保留研究；仅推进提示不g。ALT第一阶段无研究。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C12.SETTLEMENT.ALT1"
+        },
+        {
+          "text": "回想Free里你已经玩过的一段，不要求研究、阶段或解锁经历。哪种真实投入更贴近？",
+          "scene": "那次自由工场的熟悉感",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先核对已有机器人操作说明，随后亲手继续编了一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我有精神且材料工具够继续，仍喜欢认得的工场往返，主动从容停留了一段",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的营地主题实际调过工作点、地面或已有外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我把工具、取料、生产和储存接着看过几轮，持续调整运行",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "真实过去、h正向熟悉且有余力；不拿全开目录当c/g。ALT最初单机器人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C12.FREE.V1"
+        },
+        {
+          "text": "只回想最初箱子与基础机器人那段，哪件事发生过？",
+          "scene": "那次自由工场的熟悉感的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "free"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先看已有最初录制说明，随后亲手教过一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我有精神、材料也够继续，仍喜欢在熟悉小工地从容看取放",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的林边角落主题实际摆过箱子和工作点",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮示范取放与运行检查的操作顺序，也实际照做",
+              "signal": "unit_program_workflow_plan"
+            }
+          ],
+          "design_purpose": "真实过去、h正向熟悉且有余力；不拿全开目录当c/g。ALT最初单机器人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C12.FREE.ALT1"
+        },
+        {
+          "text": "回想Creative里你已经玩过的一段，不要求完成工厂、程序或任何解锁。哪种真实投入更贴近？",
+          "scene": "那次自由试验里愿意停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看了当时执行行、手中物与目标状态，再决定下一步",
+              "signal": "unit_program_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我当时有精神、工具也足够继续，仍因为喜欢认得的角落和取放过程，主动从容停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我为自己的演示工场主题实际安排过结构、地面或外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我先核对过已有工具说明，随后亲手继续了摆放或程序配置",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "h有余力正向熟悉；不虚构Creative研究、收藏或成长。ALT不要求程序经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C12.CREATIVE.V1"
+        },
+        {
+          "text": "只回想现成箱子和工作台的小角落，哪件事真实发生？",
+          "scene": "那次自由试验里愿意停留的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AU9C_MODES",
+            "AU9C_STORE",
+            "AU9C_SCRIPT",
+            "AU9C_LAUNCH",
+            "AU9C_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我看过已有结构移动说明，随后自己继续了摆放",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我有精神且还能继续放新东西，仍喜欢认得的小角落，主动从容待了一会儿",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我为林边工作角选过自己的主题，也实际摆过箱子和工作台",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮放置、移动与留通道的编辑先后，并实际照做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h有余力正向熟悉；不虚构Creative研究、收藏或成长。ALT不要求程序经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AU9C12.CREATIVE.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+77358cdb3e29"
+}

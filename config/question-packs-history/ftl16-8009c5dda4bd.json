@@ -1,0 +1,1442 @@
+{
+  "id": "ftl16",
+  "title": "超越光速",
+  "game_ids": [
+    "steam-212680"
+  ],
+  "scope": "原生PC FTL普通航程，以本人实际已解锁飞船、现有系统、武器、船员与本局事件为条件；核心采用基础玩法，不借IntoTheBreach、社区MOD或预设种子。免费AdvancedEdition不等于全部内容已启用。",
+  "status": "private_authoring_pending_independent_review",
+  "author_review": "complete_final_whole_question_read_pending_independent_acceptance",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12专属槽×3，前8行动后4真实回顾；引擎保留4共题和最多2补问。",
+    "一套题，通过换其他已核专属情境适配；无跳过，有限3不保证全部历史与特殊玩法。",
+    "飞船船员是本人控制的虚拟单位，不是真人；同好分享只限实际愿意回应的真人选项。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本人真实原生航程与回顾",
+      "initial_variants": {
+        "FT1601": "FT1601.V1",
+        "FT1602": "FT1602.V1",
+        "FT1603": "FT1603.V1",
+        "FT1604": "FT1604.V1",
+        "FT1605": "FT1605.V1",
+        "FT1606": "FT1606.V1",
+        "FT1607": "FT1607.V1",
+        "FT1608": "FT1608.V1",
+        "FT1609": "FT1609.V1",
+        "FT1610": "FT1610.V1",
+        "FT1611": "FT1611.V1",
+        "FT1612": "FT1612.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "FT1601",
+      "number": 1,
+      "variants": [
+        {
+          "id": "FT1601.V1",
+          "scene": "敌舰火力还在，自己的这一轮射击该给哪里",
+          "text": "普通交战里，敌舰有当前仍能威胁本舰的武器；自己的已充能武器也能尝试打它的武器舱或护盾舱。你更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_CORE",
+            "FT_WEAPONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先向武器舱开火，推进自己此刻压下对方火力的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先打护盾舱，为本舰后续当前能发动的攻击争取穿入机会",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较现有武器的作用、耗弹与对方可见防御，再选目标",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握这一类目标选择和齐射时机，就围绕眼前具体交战亲手练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "本局可见武器威胁与拆盾真实目标竞争，不把打武器或拆盾写成万能必胜。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1601.ALT1",
+          "scene": "普通激光还要等，导弹已经能发",
+          "text": "你当前真有可用普通导弹和激光，弹药有限；敌方不是仍受超级护盾保护的目标，也没有当前可拦截这枚导弹的防御无人机。激光尚未充完，导弹已好。更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_WEAPONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己此刻压制指定敌方系统的目标先发这枚导弹，实际付出一发弹药",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "暂留导弹，用现有不耗导弹的火力继续争取这场已定目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较当下两种武器的充能、耗弹与真实作用，再决定这发要不要出",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "亲手一轮轮点选武器和目标，喜欢发射、击中声与舱体反馈接连发生",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "本体导弹耗弹/普通盾与特殊拦截范围，不保证必中；F本人持续点选而非只看自动射击。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1601.ALT2",
+          "scene": "敌舰开始逃，继续拆武器还是拦住驾驶",
+          "text": "眼前敌舰真实出现逃离提示，自己的武器当前还能发射；它的驾驶舱与武器舱都在可选目标里，本舰也仍受威胁。更想？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_WEAPONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前射击投给驾驶舱，先尝试阻止这艘敌舰离开",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先继续处理仍在威胁本舰的武器，接受它可能逃掉的代价",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握这种逃离提示下的攻击优先级，就用眼前真实局面练执行",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对敌舰现有逃离提示与可见系统状态，再决定目标",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "敌方逃离不是自己引擎充能模型；不教打掉一点引擎就固定多等几秒，不保驾驶舱必中。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1602",
+      "number": 2,
+      "variants": [
+        {
+          "id": "FT1602.V1",
+          "scene": "氧气还有，但手里的电只够顾这一头",
+          "text": "当前普通战斗中，舱内仍有实际氧气，生命维持能正常供气；你也能把它的一格现有电临时挪给尚有容量的引擎。没有多余反应堆电可同时供满。你更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_POWER",
+            "FT_OXYGEN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂把这格电给引擎，实际执行此刻优先闪避的目标，并继续留意真实氧气变化",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "保留供气，按自己维持当前舱内条件的目标用现有其他手段继续战斗",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人尚不明白断供后舱内氧气会怎样变化，就先提出它不会立刻全空的解释，实际短时断供看数值；火灾破口等混杂另看",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前舱内氧气、系统供电与人员状态，再决定",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "实际临时挪电与保氧竞争，P未知仅选项且真能看变化，不鼓励盲等缺氧，不保闪避成功。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1602.ALT1",
+          "scene": "想跃迁撤离，还差充能和驾驶员",
+          "text": "当前交战中，本舰确有燃料与可达的跃迁去向，驾驶舱和引擎尚能使用；一位可移动船员正在别处处理另一件事，你想恢复驾驶岗位并把现有电多给引擎。更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_POWER",
+            "FT_CREW",
+            "FT_ROUTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前能去的船员调回驾驶并供上引擎，实际准备跃迁撤离",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "暂让这位船员继续当前真在做的维修或治疗，先处理这个已定目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对驾驶岗位、引擎状态、现有燃料与可达去向，再决定这一轮",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握战中恢复岗位和调电的先后，就围绕这次具体逃离准备练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不是任意状态按键都能逃；当前燃料/驾驶/引擎/可达去向真实具备才准备，不保充能前不再受损。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1602.ALT2",
+          "scene": "离子风暴里，同一批电不够全船分",
+          "text": "你真在带离子风暴的星云信标交战，反应堆可用电减少；当前仍可手动把有限电给已经装好的武器、护盾或引擎。你更想？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_POWER",
+            "FT_ROUTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己先压制眼前敌舰的目标，把当前能分的电实际投给已有进攻手段",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按自己先保本舰的目标，把可用电留给当前确能维持的防御或引擎",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较本舰两套当前真能供起的武器/防御配置，再分这批电",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对风暴提示、当前反应堆与各系统真实供电，再下令",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "风暴真实减供电，不造正常星云都必风暴；只装好可供起系统，不默认电池或佐尔坦。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1603",
+      "number": 3,
+      "variants": [
+        {
+          "id": "FT1603.V1",
+          "scene": "起火舱能排气，但旁边还有自己人",
+          "text": "本舰当前一间舱室起火，舱门系统可操作，并真有能通过现有门路向外排气的路线；自己有需要氧气的船员在相关舱内或通路附近。你更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_DOORS",
+            "FT_OXYGEN",
+            "FT_CREW"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前能安全移出的自己人调离，再打开这条现有通路排气灭火，按目标处理火舱",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "保留舱内空气，派当前可进舱的健康船员亲手处理火灾，接受他离开原岗位的代价",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对舱门连接、火势、船员位置与氧气，再决定处理路径",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握这类关门、撤人和排气的顺序，就围绕当前具体布局练操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "排气与人工灭火真实不同目标，撤人只真能移出时；不把窒息、火免或所有船型外门当共有。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1603.ALT1",
+          "scene": "修护盾还是保住还没修好的生命维持",
+          "text": "当前本舰护盾与生命维持都真实受损，仍活着且能移动的维修船员不足以同时修好两处，舱内氧气也还没耗尽。更想？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_OXYGEN",
+            "FT_CREW",
+            "FT_POWER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前维修力量给护盾，按自己减轻后续来火的目标恢复防御",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先修生命维持，按此刻维持船员呼吸的目标把供氧接回来",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对两处损伤、当前空气、船员生命与敌方可见武器，再安排",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握这种两处损伤的应急优先级，就围绕眼前实际局面练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "同一批维修者真争用岗位，非查看状态四微方法；不保修护盾来得及或氧气够固定秒数。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1603.ALT2",
+          "scene": "入侵者已经上船，交战人员却会离开岗位",
+          "text": "当前真有敌方需要氧气的登舰者进了本舰，自己也有可用于交战的船员；舱门还可控制。你更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_DOORS",
+            "FT_CREW"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "调当前能打的己方船员去迎战，把这次拦住入侵者作为目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若当前门路确能做到，先撤开自己人再排空对方所处舱段，接受该段暂时难以使用",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较现有船员的战斗、维修能力和当下可用岗位安排，再决定谁离岗",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对双方位置、己方生命与现有门路，再下令",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "真实入侵防守与排气不同代价；不把无人机/拉尼厄斯当需要氧气者，船员非真人Q。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1604",
+      "number": 4,
+      "variants": [
+        {
+          "id": "FT1604.V1",
+          "scene": "废料够升级，也可能被下一家店用掉",
+          "text": "本局当前在能升级的状态，已有废料能支付一项真实护盾升级；地图上也有当前可达商店，而你的现有火力还有想补的地方。更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_SHIELD",
+            "FT_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际买下已开放、可支付的这项护盾升级，接受可留给商店的废料变少",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "先保留这批废料，照自己补当前火力的目标去那家确可达商店看看实际货物",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前护盾升级、现有武器与可支付反应堆方案，再决定是否现在花",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对这项升级当前费用与所需供电，确认自己这次能做到哪一步",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "升级与商店机会真争废料，不保店有指定武器，护盾单格升级不冒称立刻多一个泡。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1604.ALT1",
+          "scene": "店里有想买的武器，但得卖掉备用货",
+          "text": "你当前真到商店，货架上一件本体武器确实可买；现有废料不够，但卖掉仓里一件自己当前可以出售的备用装备后就付得起，也能合法装下。更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_STORE",
+            "FT_WEAPONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际卖掉这件可售备用货，再买下目标武器，亲手试当前能供起的这套新配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "保留这件备用货和已有配置，先把当前航程目标继续下去",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较目标武器、手头装备与当前武器槽和供电条件，再决定",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若目标是本人明确一直想补、却还没取得过的那件武器，就为补这个缺项实际完成眼前交易",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "只已在货架/真可售/能容纳且实际供得起才试，不造每局必刷或永久保留武器仓；C补本人具体武器缺项。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1604.ALT2",
+          "scene": "买新设备的预算，也够修一截船体",
+          "text": "当前商店可提供船体修理，也真有自己想买且可安装的设备；已有废料不足以同时完成想要的修理和购买，当前船体仍能继续航行。你更想？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_STORE",
+            "FT_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先花当前可负担的废料修理船体，把继续这一趟的承受空间作为目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "买下当前真实开放、可支付的目标设备升级，接受这次少修船体",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "先比较眼前设备与现有系统的真实功能和供电需求，再决定是否换投资",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前修理费用、设备价格与已有废料和补给，判断这次能执行哪些交易",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "修理非长期G、非购买升级，设备升级实购才中性升级；钱/船体真实竞争不教固定满修或最佳比率。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1605",
+      "number": 5,
+      "variants": [
+        {
+          "id": "FT1605.V1",
+          "scene": "出口还没进叛军圈，旁边另有一个没去的点",
+          "text": "当前星区地图上，出口尚未进入叛军控制范围；它与你还没访问过的另一处信标都真实可达，燃料也能支付这次选择，叛军正在推进。你更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_ROUTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按本次离开星区的目标去出口，不为另一个点多花这一跳",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若那个可达信标本人还没去过，就多走这一跳，亲自看看它会有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前连接、舰队范围和燃料，再定实际跳跃路线",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先排清当前已知去向、燃料和出口的先后，再照能做到的路线继续",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "当前实际连接与叛军压力下离开/未知偏航；不保证这一跳之后出口不会被追上或未知必有奖励。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1605.ALT1",
+          "scene": "已经有任务信标，但去商店会多绕一段",
+          "text": "本局实际事件已经给出一个当前仍可前往的任务信标；地图另有可达商店，你也有想买的补给。燃料和叛军推进让两边都绕完并不宽裕。更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_ROUTE",
+            "FT_EVENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿这段自己已经读到的请求去实际任务地点，想亲眼看这件事后面怎样",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自己先补给的目标把路线投给当前可达商店，接受可能错过这项任务",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前任务文字、标记和实际到达条件，再决定是否改路",
+              "signal": "mission_briefing_review"
+            },
+            {
+              "id": "D",
+              "label": "先看地图连接、当前燃料与叛军范围，再排先后",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "任务是当次真实给出非自动生成保证；S已见请求的后续，不把未知装备试用当探索。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1605.ALT2",
+          "scene": "星区分叉，下一片不只是颜色不同",
+          "text": "你当前真在星区出口做下一星区选择，地图上至少有两个实际可选方向，现有船况和燃料也能继续。你更想先照顾哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_ROUTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己这趟找补给和商店的目标，选当前准备前往的那条真实路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若其中一种实际可选星区本人还没去过，就选它亲自认识那里的遭遇",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先核对这次整个星区分支的已显示连接与后续可选方向，再定下一步",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先比较自己当前武器、护盾与另一套现有可换配置，再决定哪边更想去",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "选择现有路径而非传送任意星区；不把红/绿/星云硬写收益或安全保证，不默认特殊种族。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1606",
+      "number": 6,
+      "variants": [
+        {
+          "id": "FT1606.V1",
+          "scene": "普通激光拆盾，光束等那个真正窗口",
+          "text": "本舰真装有能发射的普通激光和光束，敌方有普通护盾，两武器和系统供电当前都可用。你更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_WEAPONS",
+            "FT_BEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较激光去盾与光束扫舱怎样衔接，亲手按实际到弹和护盾窗口发射，检验这套搭配是否合意",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "按自己先压某个敌方系统的目标，把当前能发动的攻击实际打向它",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握到弹与扫舱时序，就围绕这次具体组合练执行",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前两武器已有说明与敌方可见护盾，再继续尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不同功能去盾/扫舱实际结合B；不保所有激光必中、任意光束能破任意盾或未知目标总可打。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1606.ALT1",
+          "scene": "离子武器亮了，先让哪一个系统停一停",
+          "text": "当前本舰真有可用离子武器与另一件能伤船体的武器，敌方为普通护盾而非超级护盾目标。你更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_WEAPONS",
+            "FT_SHIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把离子与后续伤船武器按各自真实功能组合，亲手试压盾后再打当前系统，检验实际衔接",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先按当前压制对方武器的目标，把现有能造成作用的射击投给武器舱",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不知道离子命中普通盾时会让哪个系统暂时受限，就先提出会影响护盾供能的解释，真实发射后观察；未命中或其他离子混入不当证明",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先读当前离子效果已有说明，再继续试这件武器",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "离子功能与船体伤害不同实际合用，P仅本人未知、真实命中结果可失败，不教固定锁盾时长。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1606.ALT2",
+          "scene": "红隼起手两门都好了，这枚导弹给盾还是武器",
+          "text": "你这局正在使用本人已选的红隼A，当前已有的 Artemis 导弹和 Burst Laser II 都能发射，弹药也够；眼前敌舰有普通护盾、没有超级护盾或能拦下此枚导弹的防御无人机。你更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_WEAPONS",
+            "FT_SHIPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较导弹绕普通盾打护盾系统、再让激光利用削弱窗口的功能衔接，亲手发射检验搭配是否合意",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把这枚导弹投给眼前仍在威胁本舰的武器舱，先执行自己压火力的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握两门到弹与后续补射的具体时机，就围绕当前这套起手武器练执行",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前两门武器的耗弹、充能与可用系统配置，再决定这一轮怎么打",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "红隼A普通起手入口，避免本槽全部锁光束/离子；导弹穿普通盾伤系统与激光利用窗口是真不同功能相接，不保必中、削盾成功或留空固定秒数。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1607",
+      "number": 7,
+      "variants": [
+        {
+          "id": "FT1607.V1",
+          "scene": "敌人已经开价投降，继续打也真能做",
+          "text": "普通战斗里，眼前敌舰真提出了已显示内容的投降条件；你当前也仍能继续交战，而船体、弹药与船员状况并不宽裕。更想？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_EVENT",
+            "FT_WEAPONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接受当前实际给出的条件，把拿到这份已知资源并结束交战作为本次目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "拒绝条件，用现有火力继续自己这次击败它的目标，接受继续受损和耗弹",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前报价、船况和任务提示，再决定接不接",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前还能用的武器与对方防御，再决定是否为继续战斗投入",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "只当前真出现投降与确能继续打，不预告拒绝必得更好奖励或推玩家现实道德。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1607.ALT1",
+          "scene": "事件里真的出现了船员专属蓝色选项",
+          "text": "眼前原生文字事件已给出一条当前可选的蓝色选项，条件来自你实际带着的本体船员或现有设备；当前也确有一条可直接离开的普通选项。更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_EVENT",
+            "FT_CREW"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己这次处理当前求助或交易的目标，实际选择眼前满足条件的蓝色选项",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先读眼前事件与已有条件说明，核对这条选项究竟让自己投入什么",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "亲手选下眼前当前真能执行的这条蓝色选项，直接体验这次具体事件操作怎样发生",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "按自己当时另定的绕开事件、保留现有资源目标，实际选当前仍可用的普通离开项",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "只当次真有可选蓝项和普通离开项，不保蓝选永远安全、种族全有或事件可读档重试；单纯未知结果试选准确记可用操作0，不硬贴推理。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1607.ALT2",
+          "scene": "奴隶船真的愿意交出一名船员",
+          "text": "当前你与奴隶船的真实事件已给出一名可接收船员的条件，自己的名单也有空位；你仍能拒绝并继续战斗。更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_EVENT",
+            "FT_CREW"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接下当前实际提供的人选，把补足本舰现有岗位作为这次目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "拒绝这次条件，用现有攻击继续自己已选的交战目标，不把可能奖励当保证",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较本舰现有船员的已知技能与实际空缺岗位，决定自己当前更需要哪一种人手",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前事件条件与自己已有船员名额，再做这个选择",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "真实奴隶船给船员报价不同于普通资源投降，名额/当事人当前真有；不保证杀光全员总给指定种族。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。 事件尚未公布这位人选的种族或技能时，不假定本人已经知道；比较仅限当前已知己方船员与岗位。"
+        }
+      ]
+    },
+    {
+      "id": "FT1608",
+      "number": 8,
+      "variants": [
+        {
+          "id": "FT1608.V1",
+          "scene": "受伤的炮手要不要离岗去医疗舱",
+          "text": "本舰真有能供电治疗的医疗舱；当前武器岗船员受伤，也真能移动去治疗，另一位现有船员可以接替岗位但熟练程度不同。你更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_CREW",
+            "FT_MED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让伤员去当前可用医疗舱，安排现有人手接替，推进自己保住这位船员的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "让当前炮手继续已选战斗安排，暂不为治疗调整这轮岗位",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较两位已有船员的当前技能与可用武器配置，再决定怎么换岗",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对伤员生命、医疗供电、舱室通路与敌方可见威胁，再下令",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "医疗舱当前真有而非克隆舱全船强套；岗位收益与治疗真争用同一人，不保证接替者无损同速。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1608.ALT1",
+          "scene": "登舰队能带回来，但会放开眼前近战",
+          "text": "你当次真有可用传送系统，自己登舰的船员正在敌舰上且当前能被召回；本舰医疗舱也可用。敌舰尚未被摧毁或跃迁。更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_BOARD",
+            "FT_MED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前可召回的人带回来治疗，把保住这支登舰队作为此刻重点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "让他们继续当前能进行的近战，按自己这次先解决敌方船员的目标投入",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前双方位置、生命、传送状态和敌舰船体，再决定是否召回",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握召回、治疗和再登舰的具体时序，就用眼前真实条件练执行",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "传送冷却真实允许才召回，治疗再登舰不是每船起手共有；不把传走敌舰上的人全员安全自动带回。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1608.ALT2",
+          "scene": "想给这一战加一条不发导弹的自定规则",
+          "text": "眼前普通战斗里，你确有能尝试作用于敌舰的不耗导弹手段，也有可用导弹；游戏并没要求省这一发。更愿意？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_CORE",
+            "FT_WEAPONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己定这场只用不耗导弹手段，发一枚就记个人失败；真打一场看能否做到，后续可行战斗再调规则重试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "不加个人限制，用当前可用导弹推进自己此刻处理威胁的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握现有无导弹攻击的时序，就不设自定输赢，专项练这项操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前武器的耗弹和已有作用说明，再开始眼前尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "原生可手动不发导弹，自造限制真玩/人工失败/后续重试I；不编自动禁用、读档回滚或保可打赢。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1609",
+      "number": 9,
+      "variants": [
+        {
+          "id": "FT1609.V1",
+          "scene": "武器舱挨打，真的见过一门炮停下来",
+          "text": "回想本局你确实见过武器系统受损，一门原本在充能的武器断电，并实际处理、恢复过这次情况。那以后主要把投入给哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_POWER",
+            "FT_WEAPONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人当时还不清楚槽位顺序怎样影响受损停炮，就提出右侧先断的解释，按当前允许方式调整槽位，再在后续真实受损显示中核对；其他断电另看",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "按当时真正可用的废料条件，买一项已开放的武器系统升级，为本局当前配置留出余量",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "先比较现有武器与当前可选升级方案，决定下一轮要保哪几门的供电",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握受损后调电、修理与重新开火的顺序，就围绕那次具体难点再练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真实停炮经历引出槽位、缓冲升级与恢复策略，不只是1攻击选目标过去式；P未被题干给顺序。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1609.ALT1",
+          "scene": "撤人关门以后，真的看着氧气重新升起来",
+          "text": "回想你实际处理过本舰排气或破口后缺氧，后来关闭了可关外门、恢复供气，并看到舱内氧气重新变化的一次。之后更愿意怎样继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_DOORS",
+            "FT_OXYGEN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人当时尚不清楚相邻舱门开闭会怎样影响回氧，就先提出连通舱室会互相影响的解释，按实际门路试开关并看变化；破口和不同供气另看",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "按当时自己让船员返回岗位的目标，实际把当前可进舱的人调回去",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时真实舱内氧气、破口、舱门与生命维持状态，再继续",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己已有的供氧与门路说明，再继续处理当下船况",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "已观察回氧后真实门路试验与岗位恢复，P本人未知局部；不把一格供氧保证压过任意破口。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1609.ALT2",
+          "scene": "还是这位船员，岗位技能真的提高过",
+          "text": "回想同一局你持续让同一位船员参与当前可用的驾驶、引擎、武器或护盾岗位工作，亲眼见过他的相应技能显示提高；这位船员仍在船上，也有真实可分配岗位。之后更愿意？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_CREW",
+            "FT_SHIPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若这位自己已投入、看过提高的同一船员仍有可成长技能，就继续给他当前可做的岗位机会，想看他沿这条培养再进步",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先比较当时他和其他现有船员的真实技能、岗位与本舰配置，再安排下一段谁去哪里",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "按当时自己应急维修或战斗的目标，暂让这位船员离开原岗位，实际处理那件眼前真可做的事",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "为这位本人已实际带过的船员补记自己确实见到的人物和当前技能信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "已发生同一存活船员技能提高后的继续培养/调岗竞争，非8炮手治疗改成过去式；成长仍有合法空间只限制G，不造站岗必自动刷任何技能或新船员继承。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1610",
+      "number": 10,
+      "variants": [
+        {
+          "id": "FT1610.V1",
+          "scene": "绕路后才发现，出口要从另一边接过去",
+          "text": "回想一趟本局真实航程：你已访问若干信标，实际发现原先选的路不能直接接到想去的出口或商店，只能按现有连接重新绕路。那以后怎样投入最有吸引力？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_ROUTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前已经显示的信标连接、出口与叛军范围重新核对清楚，再决定下一跳",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "按自己当时重新定好的到达出口或商店目标，实际投入剩余燃料去走可达路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握查看跳跃连接、避免死路的具体做法，就在真实下一段航程专项练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若另有本人仍没访问且当前真可达的分支，就实际过去认识它，不只修原先最短路",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "已经历连接误判后的再安排，不保所有图都绕得开；W仅当前真可达未知分支，路线图不是可瞬移全图。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1610.ALT1",
+          "scene": "一个文字请求，真的走到了它标出的地方",
+          "text": "回想你真读到过一段原生请求，后来沿已给任务信标到达、看过当地实际后续的一次。之后什么更让你愿意投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_EVENT",
+            "FT_ROUTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若那次实际还有可继续追的后续请求，就沿现有文字和可达标记继续，想知道这些人接下来怎样",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把本人已去过地点和实际遇见人物的信息补进自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "按当时自己已选的船体、补给或下一区目标继续，不再为那段请求改路",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若当时有真实愿意聊的同好，就把自己已经走到的这段遭遇讲给对方，一起聊当时选择",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "真实到达后续才回顾，S只仍有真实后续可追的选项；不发明固定NPC支线或重复收集剧情页。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1610.ALT2",
+          "scene": "陌生星区真正走过，下一段还要继续",
+          "text": "回想你真实选入一种此前自己没去过的本体星区，在里面访问过信标并处理过至少一次实际遭遇。之后更愿意？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_ROUTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若还有本人未访问且当前可达的信标，就继续亲自探索，不以奖励已知为前提",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先比较当时已有武器、护盾和当前真能换用的配置，再决定怎样适应下一段",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "为本人已访问的星区地点和已遇人物补记实际信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "按自己当时改定的尽快离开该星区目标，实际走向当前可达出口",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "实际体验新星区后探索/适应配置/离开而非5选区域过去式；不把随机类型固定成高收益或保安全。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1611",
+      "number": 11,
+      "variants": [
+        {
+          "id": "FT1611.V1",
+          "scene": "同一艘船已经走了几区，还能继续成长",
+          "text": "回想这一趟仍在继续的航程：你持续投入同一艘尚存飞船，走过多个星区并亲眼看过系统或装备提升；当时还有现有废料能买的合法升级。你更愿意？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_CORE",
+            "FT_STORE",
+            "FT_ROUTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续把当前可用资源投给这艘自己已经持续培养、见过改善的船，安排实际升级与后续航程，看它在本局走得更远",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先比较它当时已有武器和当前可选系统升级，决定接下来采用什么配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "按自己当时追下一星区目标的安排，保留这批废料先继续当前可达航程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "精力仍足且有别的玩法目标，仍愿按自己熟悉的检查岗位、补给、跳跃节奏慢慢继续，享受这套过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "G同一仍存、已多区投入并见成长且仍可升级的本局船；非死后新同型、非单纯修船或跨局永久保留。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1611.ALT1",
+          "scene": "几轮遭遇、修理和补给，已经接成了航线",
+          "text": "回想同一局你真实经历过多轮跳跃遭遇，取得过废料，又把它用于修理、补给或可用升级，再继续后续星区。之后更愿意怎样投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_ROUTE",
+            "FT_STORE",
+            "FT_POWER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已知连接、燃料、预留修理钱与本局火力缺口接成循环：实际跑一段，按真实收支和船况改下一段，再继续执行",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当时手头真实武器与当前能买的升级方案，处理眼前这一项配置选择",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "按自己当时已选的到达出口目标直接投入当前燃料，不继续扩展整局安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时当前船体、弹药、燃料和供电，再决定眼前下一步",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "Y真实多轮航行/收支/补给/配置依赖再调再跑，不是一份一次性清单或凭空生产。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1611.ALT2",
+          "scene": "新武器已经试过，想和旧炮一起用还差供电上限",
+          "text": "回想本局你真实取得、装上并发射过一件新武器，旧武器也仍在船上；战后确能升级，已有废料能提高武器系统与所需供电条件，但当时的上限不足以一起供起你想用的新旧组合。你后来更愿意？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_WEAPONS",
+            "FT_POWER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际支付当时能负担的系统与供电升级，把想用的新旧组合真正供起来再继续",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "不为这套组合花掉废料，换回当时当前仍能工作的旧配置，亲手继续用它",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握新武器某个具体瞄准或时序难点，就用当前已可供起的配置专项再练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先比较新旧武器、真实上限和当前可选升级，再决定要不要一起上船",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "真试射后的上限与升级支出竞争，不是4商店买枪过去式；泛新旧武器不强B，升级只战后真实允许可支付。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    },
+    {
+      "id": "FT1612",
+      "number": 12,
+      "variants": [
+        {
+          "id": "FT1612.V1",
+          "scene": "这一趟结束，下一趟还想从哪种投入开始",
+          "text": "回想自己确实结束过一局原生航程，无论中途失败还是成功；之后你仍能用当前已经解锁的船开始新局。哪件事更让你想回来？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_CORE",
+            "FT_ROUTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人仍有那局没掌握的具体调电、维修或攻击时序，就为练会它再开真实一局",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "精力仍足也有其他可选目标，仍想用熟悉的已解锁船按自己的节奏再走一趟，享受熟悉的开局过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按自己当时新定的到达某个当前确可争取星区的目标，实际开新局投入航程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若当时有真实愿意聊的同好，就分享自己那局实际遭遇，一起聊为什么还想再来",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "普通结束一局入口，不要求通关；H非疲劳而是余力自主熟悉，T非能力评判，新局不继承旧船资源。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1612.ALT1",
+          "scene": "换了另一艘已解锁船，开局条件真变了",
+          "text": "回想你真用另一艘本人已解锁的原生船开过一局，体验过它实际提供的开局武器、船员或系统差异。那之后主要更想怎样继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_CORE",
+            "FT_SHIPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较这艘船已有组件与当前真实可选升级，决定这一趟想发展的配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "直接用当前真有的初始手段打一场，亲手继续体验这艘船已有配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "按自己当时另选的航程目标继续，不因为起手不同就额外追一套解锁清单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握这艘船已具备手段的某个具体难点，就围绕那点真实练习",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只有本人已解锁且真实开过才适用；不默认所有船都有盾、医疗或导弹，不把换船当同船G。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        },
+        {
+          "id": "FT1612.ALT2",
+          "scene": "一小段不暂停，真的按自己的规则玩过",
+          "text": "回想你曾自己定在一段当前可行的普通交战中不按暂停，真玩过并按“按了就失败、结束交战且没按就完成”判过结果；游戏本身并不这样要求。之后更愿意？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "FT_CORE",
+            "FT_CHALLENGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续调整自己这条不暂停规则的范围，后续真实可行交战再玩、按自己的完成或失败标准判一次",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "不再保这条人工限制，按当前实际威胁正常暂停下令，推进自己另选的航程目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握当时那项具体调电或下令操作，就解除人工输赢，只为练会它再试",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若当时有真实愿意聊的同好，就分享自己这次规则实验实际发生的事，一起聊怎么玩",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "真正自造约束玩过后的规则迭代，区别8禁导弹的当下选择；不声称原生无暂停模式、自动判罚或官方成绩。",
+          "interpretation_boundary": "按本人真实经历与当时实际可做条件选择。未体验继续换其他已核专属情境，不跳过；未知规则、未掌握操作、个人缺项仅限制相应选项。不保命中、闪避、事件奖励、商店货物、舰队推进或逃脱必如愿；暂停不能改随机结果或回滚。船员不是真人，不据虚拟损失或事件选择推现实善恶、智力与心理疾病。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+8009c5dda4bd"
+}

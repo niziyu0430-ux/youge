@@ -1,0 +1,1461 @@
+{
+  "id": "d48na570",
+  "title": "刀塔2",
+  "game_ids": [
+    "steam-570"
+  ],
+  "scope": "原生PC；实际玩过的正常对局、合作练习或英雄试用，一套题与换题",
+  "status": "private_authoring_pending_independent_review",
+  "author_review": "author_sources_and_full_bound_copy_self_review_complete_pending_independent_review",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12专属题位各3个有限已核情境，另保留4共享；16题加最多2道补问。",
+    "未体验继续其他已核专属情境，不提供跳过；有限题池不代表所有玩家/进度均覆盖。",
+    "不强凑画像；真人Q/O/K与NPC练习分清，不以表现好坏推能力或现实人格。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "原生PC；实际玩过的正常对局、合作练习或英雄试用，一套题与换题",
+      "initial_variants": {
+        "D48NA57001": "D48NA57001.V1",
+        "D48NA57002": "D48NA57002.V1",
+        "D48NA57003": "D48NA57003.V1",
+        "D48NA57004": "D48NA57004.V1",
+        "D48NA57005": "D48NA57005.V1",
+        "D48NA57006": "D48NA57006.V1",
+        "D48NA57007": "D48NA57007.V1",
+        "D48NA57008": "D48NA57008.V1",
+        "D48NA57009": "D48NA57009.V1",
+        "D48NA57010": "D48NA57010.V1",
+        "D48NA57011": "D48NA57011.V1",
+        "D48NA57012": "D48NA57012.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "D48NA57001",
+      "number": 1,
+      "variants": [
+        {
+          "id": "D48NA57001.V1",
+          "scene": "对线这一波，补刀、反补与英雄成长",
+          "text": "你玩过的真人普通或排位对局里，自己英雄已经在线上打过几波；眼前敌我小兵都有当前能补刀或反补的残血目标，自己的攻击操作尚未熟。暂不需要立刻赶往团战，先把这一波留给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_LEARN",
+            "DN570_TRAIN",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练自己还不熟的攻击前摇与停手时点，重点是亲手把补刀操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把反补与压制对面真人对线者作为重点，想在这场较量中占上风",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "继续为这局已投入的同一英雄积累经验与装备，并把新成长用到后续对局",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己英雄现在的生命、魔法和技能状态，再决定这一波",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "补刀T、与真人竞争K和本局同一英雄延续G分开，不以补刀数高低判断能力。",
+          "interpretation_boundary": "小兵必须当时确能补/反补；G仅本局已有多波成长使用，不声称经验装备跨局保留；机器人不K。"
+        },
+        {
+          "id": "D48NA57001.ALT1",
+          "scene": "队友在另一条线呼叫，TP和本线都有去处",
+          "text": "真人队友呼叫守另一座仍存在的友方塔，你当前有可用回城卷轴和施法条件；自己这条线也有能处理的兵线，本局同一英雄已持续升级使用过。你和队友可以商量。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_I46",
+            "DN570_LEARN",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先继续这局同一英雄的经验和装备成长，再在后续交战使用这些投入",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先完成自己这轮已选的本线推进目标，把当前兵线实际送过去",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先看小地图上友方建筑、兵线与已显示位置，再决定去向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "说清谁先TP、谁留下接本线，以及支援后何时换回，让两边节奏接起来",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "TP支援与本线成长/自选兵线实际竞争，Q须真人互相约定，已有小地图不P。",
+          "interpretation_boundary": "不保证TP不被打断、能传任意单位或守塔必成功；同一英雄成长不跨局保留。"
+        },
+        {
+          "id": "D48NA57001.ALT2",
+          "scene": "补刀训练器里，这一轮练到什么算值得",
+          "text": "你当前能用原生补刀训练器，选了自己熟悉的英雄；有尚未掌握的出手时点，也能换别的英雄或开始其他玩法，精力足。下一轮最想投入哪件事？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_TRAIN",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己已定的本轮补刀数量目标实际尝试，先争取这个个人成绩",
+              "signal": "score_goal_attempt"
+            },
+            {
+              "id": "B",
+              "label": "有其他可选玩法且有余力，仍从容用熟悉英雄重练一小段，喜欢熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "反复练未掌握的出手与停手衔接，重心是把个人操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "亲手连续走位、选兵和出手，喜欢输入与命中、金币反馈接续的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "补刀训练的精进、持续本人输入、个人成绩0和余力熟悉不同；训练器不是真人竞技。",
+          "interpretation_boundary": "以本人当前训练入口和可记录的补刀为前提，不规定时长/数量，不把达标当T或个人目标当K。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57002",
+      "number": 2,
+      "variants": [
+        {
+          "id": "D48NA57002.V1",
+          "scene": "撼地者跳进去，队友怎样接",
+          "text": "真人对局中你控制撼地者，闪烁匕首此刻可用，沟壑与回音击也已学会且条件满足；队友愿接下一次交战。你也实际用过从侧面先沟壑、或跳入再接技能的不同打法。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H7",
+            "DN570_I1",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前两种能实际执行的跳入/沟壑与队友接控组合，用真实交战结果调整搭配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把击败这支真人队伍、争取本局胜利作为重点，准备抓住这次开团机会",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "先比较已有匕首、技能和可用配置的说明，再决定怎样接",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先和队友说清谁先手、谁接控制及沟壑留下哪边出口，再按约开这段交战",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "撼地者原生封路/回音与Blink形成真组合，Q/B/K不是一次按跳刀都自动获得。",
+          "interpretation_boundary": "B须真执行比较，不只看数字；跳刀当前确可用，不承诺受伤后仍能跳、全队自动跟上或回音固定伤害。"
+        },
+        {
+          "id": "D48NA57002.ALT1",
+          "scene": "冰女让队友撤回，眼前残血兵也能收",
+          "text": "真人对局里你用冰女，冰封禁制与冰霜新星当前可用；你这一轮已选先护队友撤回，眼前有追击者，附近也有一小波本体能处理的残血敌兵。本局同一英雄此前已升级使用过几波。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H5",
+            "DN570_LEARN",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手持续走位、选目标、施法并接普攻，喜欢本人输入与冰霜、攻击反馈接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先核对自己当前生命魔法、技能与附近单位状态，再决定",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先用当前能做的控制与走位护队友撤回，把自己这一轮已选的保护目标实际推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先收这波本体可处理的敌兵，继续同一英雄已有的经验装备成长，并用于后续交战",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "横比撤与肉钩/海妖之歌同Q/K/F/状态结构，改具体护撤项目与当前收兵成长的真实去向竞争，不用辅助英雄标签推Q。",
+          "interpretation_boundary": "只眼前真实可处理敌兵与当前可用控制，不把Frostbite当全技能禁用/眩晕；G不跨局，F非自动冰川极寒。"
+        },
+        {
+          "id": "D48NA57002.ALT2",
+          "scene": "商店里当前够买，线上的下一波也到了",
+          "text": "在你玩过的一局正常或机器人对局里，自己已处理过几轮兵线、买过装备；商店里自己这轮已选的一件升级，当前金币与购买条件满足。另一波能处理的兵线也到了。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_LEARN",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对自己英雄的位置、状态与周围可见情况，再决定这一段怎样行动",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先实际买好自己这一轮已选的那件升级，再在接下来使用，把当前项目推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先处理当前兵线，把后续几轮收金、补给购买与返线衔接，按真实收入调整之后节奏",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先比较自己已有装备与当前可选升级的信息，再决定这次购买",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "为未用指定辅助英雄的人补真实商店/兵线经历：即时自选购买与多轮收金返线体系竞争，配置/单位状态0准确，不限定固定出装。",
+          "interpretation_boundary": "Y需真实跨轮处理而非买一次物品，升级当前真可买才适用；不造固定价格、最优出装或所有物品任意地方可购。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57003",
+      "number": 3,
+      "variants": [
+        {
+          "id": "D48NA57003.V1",
+          "scene": "要开雾绕过去，兵线和同伴尚未齐",
+          "text": "真人对局中你手里有当前可用的诡计之雾，同伴愿意一起行动；己方另一条兵线还可处理，地图上只看得到本队已取得的信息。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_I188",
+            "DN570_LEARN",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把几轮清线、回补、集合与出击衔接，按实际结果继续调整下一轮资源和出击节奏",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先看小地图已有视野、友方位置和当前路线信息，再定这次去向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "约好谁先清线、谁带雾、在哪集合和遇到目标谁先出手，再一起走",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "以抓住对方真人、争取这局胜利为重点，准备当前能执行的开雾进攻",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "开雾是原生伪装但不全图安全；真人协同、竞争目标与多轮兵线资源体系分开。",
+          "interpretation_boundary": "不承诺真眼能破雾，也不承诺靠近敌英雄/塔不破雾；Y是跨轮调度，不把用一次烟或按顺序走路算Y。"
+        },
+        {
+          "id": "D48NA57003.ALT1",
+          "scene": "真眼旁仍看不到目标，先弄清哪一层视野",
+          "text": "你和一名真人朋友在双方同意的私人练习中测试视野：朋友已在固定位置放好一个敌方侦察守卫，你的岗哨守卫已覆盖那处，但自己当前仍看不到它，原因尚未想明白。你用冰女，冰霜新星当前可放；之后你们也可开始约好的正常对局。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_I42",
+            "DN570_I43",
+            "DN570_H5",
+            "DN570_TRAIN",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对自己已有的侦察/岗哨守卫说明，再继续亲手尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "保留两只守卫和站位，只朝目标处放一次冰霜新星，检验“缺地面视野而非真眼覆盖”的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "和朋友安排下一局谁先处理哪条线、何时换位，让共同开局计划接起来",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "去原生补刀训练器专门练自己尚未掌握的停手与出手时点",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "P有固定已知目标和单项Nova视野改变可实测，另给真实开局协同/补刀精进，不是一个排眼目标加三查看方法。",
+          "interpretation_boundary": "本人须确实未明原因且朋友同意测试；真眼不自带地面视野，Nova只临时提供该区域视野，不造所有地形都必显/自动毁眼。"
+        },
+        {
+          "id": "D48NA57003.ALT2",
+          "scene": "小地图黑雾里，那条没走过的树林通路",
+          "text": "你在原生机器人局或英雄试用里，英雄能正常移动，小地图可看；一条树林通路自己还没走过、当前可达，另一段已经熟悉。此刻状态和时间允许继续，也有别的玩法能选。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_LEARN",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自走进没体验过的通路，想知道树林后怎样相连、英雄实际能看到什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "亲手持续调整短距离走位、移动镜头和选取单位，喜欢输入与英雄、视点响应接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "有新路和其他玩法可试且有余力，仍自主从容重走已熟的一段，熟悉过程本身值得",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先看小地图已有标记、自己位置与当前已取得视野，再决定这段去向",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "为没有封野实验经历者改为Dota小地图/战争迷雾与真实可走通路，不要求特定英雄；F为持续短点走位与相机输入，非一次自动寻路。",
+          "interpretation_boundary": "不保证黑雾里无敌人/通路永远沿用旧地图，也不把地图已标位置当P；机器人不是K，H须当时熟悉且有其他可做。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57004",
+      "number": 4,
+      "variants": [
+        {
+          "id": "D48NA57004.V1",
+          "scene": "河道肉钩，救队友、钩敌人与那枚符",
+          "text": "真人对局里你用帕吉，肉钩当前可用；一名能沟通的真人队友正在撤退，另一侧也有可出钩的敌方英雄。河道上还有一枚你这轮已选先取、当前确可用钩拖来的符。先把机会投向哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H14",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对肉钩可用状态、自身魔法和眼前单位，再决定",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先和撤退队友说清钩的位置与他接下来往哪走，再尝试把他拉回",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "以击败对面真人、拿下这段交战为重点，找当前能出钩的敌方目标",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "先把那枚自己已选的符实际拖来并取用，把这轮已定的补给项目推进",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "肉钩真实有友军/敌军/符三种目标，改具体目标取舍，撤泛持续操控选项；不把钩符一次当收藏C。",
+          "interpretation_boundary": "不保证钩子穿过前方可钩单位到后方，不承诺命中或救援成功；符须当前真实可钩且可取，NPC不Q/O/K。"
+        },
+        {
+          "id": "D48NA57004.ALT1",
+          "scene": "一个技能点，继续升级还是先练已有招",
+          "text": "你在一局正常或机器人Dota里，已经用同一英雄打过几波、升过技能并实际使用；当前有一个未分配技能点，界面有两项真实可升级的选择，也有能继续处理的兵线。你已用过本英雄的不同技能与装备搭配。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_LEARN",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续升级本局此前已投入的同一英雄，再把这段成长用到后续对线或交战",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "比较两种当前可选升级与已有技能/装备在实际使用中的配合，再调整自己这轮的组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先在接下来真实可操作的兵线里练已学但未掌握的一招，专门把个人操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已显示的技能与可用升级说明，再决定这次点哪项",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "为没有肉钩经历者保留原生技能点/本局成长与已学操作，G不是账户永久养成；B要有真实组合装用结果，非只读面板。",
+          "interpretation_boundary": "只有当前确有两项可升且本人用过组合才B，不保证所有等级/英雄总有同样选择；T不要求练成，不承诺跨局保留技能点。"
+        },
+        {
+          "id": "D48NA57004.ALT2",
+          "scene": "拉比克刚偷到的，并非自己预想技能",
+          "text": "你在可重复尝试的原生私人练习里用拉比克，朋友控制敌方撼地者配合。他刚先放沟壑再放强化图腾，你偷到的技能却不是自己原本想要的，原因尚未核清；双方能调整施放先后。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H86",
+            "DN570_H7",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把实际偷到的技能与自己的隔空取物组合起来，亲手比较不同衔接的控制效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "专门练自己未熟的观察施法后选中目标并窃取的操作衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先看当前技能窃取与已偷技能的说明，再继续尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "只交换朋友这两个技能的施放先后，再在同一条件下窃取，检验“取最后施放技能”的解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "窃取最后技能的规则由本人未知后实试P，真实不同技能配合B与个人操作T各成立。",
+          "interpretation_boundary": "不偷物品主动技能、不承诺永远保留所偷技能，不要求魔晶神杖；B须真装用衔接比较，不只读说明。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57005",
+      "number": 5,
+      "variants": [
+        {
+          "id": "D48NA57005.V1",
+          "scene": "小Y蛇棒能推塔，人也在另一边接战",
+          "text": "真人对局里你用暗影萨满，群蛇守卫当前可用；一座当前可攻击的敌方建筑前已有己方兵线，真人队友则想在附近接下一次交战。你可以先商量。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H27",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和队友约好蛇棒留推建筑还是接团、谁掩护哪边以及用完后往哪走",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "把击破这支真人队伍的防线、争取本局胜利作为重点，选择这次建筑或团战的投入",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "先完成自己这一轮已选的那座建筑推进目标，实际带兵并使用当前可用手段",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对群蛇守卫及枷锁当前状态、自身魔法与附近友方单位，再决定",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "蛇棒确可攻击建筑，建筑推进与附近真人团战实际竞争，不能以放蛇棒自动推Q/B。",
+          "interpretation_boundary": "只当前可攻击建筑，不声称无兵线也无视防偷塔；不把守卫自动射击F，不保证拆塔/守卫不被打掉。"
+        },
+        {
+          "id": "D48NA57005.ALT1",
+          "scene": "小娜迦幻象分开去，还是和本体一起",
+          "text": "你用过娜迦海妖镜像，当前生成的幻象可由本人指挥；本体与幻象有可走的不同兵线/野区，本局已按这套英雄进行过几轮处理。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H89",
+            "DN570_LEARN",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门反复练自己尚未掌握的编组、切换与分别下令，把个人分控练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手持续切换本体和幻象、移动并选攻击目标，喜欢多处响应随输入接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前本体与幻象实际状态和位置，再决定怎样分配",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "把本体与幻象的几轮收线、补给和下一轮目标衔接，按真实资源结果调整后续分配",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "镜像是本人可控单位，跨轮资源调度Y、未熟分控T与持续主动输入F不同，不把自动普攻算F。",
+          "interpretation_boundary": "只当前可控幻象，不保证无限持续、任意单位都可编入或离线自动运营；英雄装备/等级只本局。"
+        },
+        {
+          "id": "D48NA57005.ALT2",
+          "scene": "物品刚从背包切回来，队友已经准备接战",
+          "text": "真人对局里，你在远离商店的一处可停留位置；一件早已放在背包中的普通主动道具刚切回主物品栏，却仍暂不能用。本人尚没弄清原因，其他已有技能或物品当前可用；真实队友愿商量下一次接战，自己也已选过先走到附近集合处。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_BACKPACK_RULE",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先实际走到自己这轮已选的可达集合处，把当前会合项目推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先核对英雄当前生命、魔法、可用技能与周围已看见的单位，再决定",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "提出背包切回后暂未启用的解释，保持这件道具在主栏，观察其状态变化并核对魔法与自身冷却，检验原因",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "和真实队友说清当前这件道具还不能用、先由谁接哪一步，约好何时再一起行动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "用普通英雄共有的主栏/背包启用时点补上入口，不需特定英雄、召唤物或稀有道具；未知规则实测P、真人接战约定Q、已选集合项目X与可控英雄现状0不同，也不重写补刀/购买/信使/TP。",
+          "interpretation_boundary": "只本人实际遇到的普通背包未启用状态；不把所有物品/英雄特殊背包规则一概而论，不造背包本身可任意用主动。新入背包的首次宽限、近商店等可能免等待，不写死秒数；P本人真未知且用实际可见反例核对，不承诺等完一定能满足其他施放条件。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57006",
+      "number": 6,
+      "variants": [
+        {
+          "id": "D48NA57006.V1",
+          "scene": "卡尔飓风落地，陨石应该怎样接",
+          "text": "你在原生英雄试用或私人练习中用祈求者，当前能通过元素祈唤调出强袭飓风与混沌陨石，已经有能测试的目标。你还未掌握落地与陨石衔接，也确实可尝试不同组合。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H74",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较这两个技能的施放先后与实际落地效果，亲手调出更合用的组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "亲手连续切元素、祈唤、移位和施放，喜欢按键与技能响应接续的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先读当前祈唤帮助和两个技能说明，再实际尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "反复练自己未掌握的切技能、选落点和施放衔接，把个人操作练会",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Invoke真实组合与飓风中无敌/落地的原生边界可检验搭配，不把NPC伤害数字K。",
+          "interpretation_boundary": "目标与技能须当前可用；不能在飓风无敌阶段就宣称陨石必伤，不采用配方按键、固定冷却/伤害或神杖新分支为前提。"
+        },
+        {
+          "id": "D48NA57006.ALT1",
+          "scene": "自己的信使，刚买的东西与下一轮回线",
+          "text": "你在一局正常或机器人Dota中，已实际经历过几轮收金、购买和用自己的私人信使运物品；现在自己新买的一件物品可交付，信使当前能由本人下令移动、交付和返回。英雄身上也有当前允许在物品栏与背包之间移放的已有物品。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_COURIER",
+            "DN570_LEARN",
+            "DN570_I188"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把后续几轮收金、购买、信使交付与返回衔接，按真实资源和运输结果继续调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先在自己当前物品栏与背包之间移放当时允许移动的已有物品，再继续",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "先把自己这轮已选的那件物品实际送到并取用，把当前交付项目推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "亲手连续调整自己信使的短段移动与去向，喜欢本人下令和单位响应接续的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "撤没有英雄传记/饰品经历的稀有替代，用不同英雄都可有的原生私人信使：当前交付X、连续本人控制F、多轮收金购买运输体系Y和已有物品移放0；不强凑叙事S。",
+          "interpretation_boundary": "只正常/机器人局当前确能控制的本人信使，不套Turbo自动运输；不共享成全队一只信使，也不沿用旧等级能力。F排除下一次交付命令后被动看自动飞；背包移放不保证装备立刻可用。"
+        },
+        {
+          "id": "D48NA57006.ALT2",
+          "scene": "敌法的闪烁与反制，留在哪个时点",
+          "text": "真人对局中你用敌法师，闪烁与法术反制当前可用，已看到一名对手会用当前能被反制的指向技能；你还有可撤去的已知落点。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H1",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前两技能状态和自身生命魔法，再决定",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "比较先用反制接对方指向技能再闪烁、或先闪烁避开的实际结果，调整这两种能力的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "把击败这名真人并争取本局胜利作为投入重点，选择当前能执行的交战时机",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "专门练自己尚未掌握的反制开启与闪烁时机，重心是亲手练会",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Blink和Counterspell是不同原生能力，实际组合、真人胜负与个人精进分别成立。",
+          "interpretation_boundary": "仅已确认当前能反制的技能，不把所有范围/持续技能都说成可反弹，不保证反弹或闪烁必脱险。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57007",
+      "number": 7,
+      "variants": [
+        {
+          "id": "D48NA57007.V1",
+          "scene": "双人一条线，巫毒回复要接几轮",
+          "text": "你在真人对局用巫医，巫毒回复当前可开关并持续耗魔，附近真人队友有需要恢复的阶段；你们已经历几轮消耗、补给与返线，也可商量下一次接战。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H30",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先完成自己这一轮已选的支援目标，把现有魔法与时间投入它",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先核对自己与身边友军的当前状态，再决定回复开多久",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "把这几轮治疗开关、回魔补给与返线接战衔接，按真实消耗调整后续循环",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "和队友说清何时先恢复、谁留线及何时一起再接战，让双方节奏接起来",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "原生持续耗魔治疗提供多轮资源体系Y，Q须真人共同安排，不把开一次治疗Y或NPC恢复O。",
+          "interpretation_boundary": "不保证无限魔法、瞬间满血或同一设置适合所有局；Y必须真实跨轮衔接，不是一次开关步骤。"
+        },
+        {
+          "id": "D48NA57007.ALT1",
+          "scene": "麻痹药剂落到哪两名敌人之间",
+          "text": "真人对局中你用巫医，麻痹药剂当前可用；眼前有不同相对位置的敌方单位，真人队友也有准备接上的技能。你实际试过把弹跳控制与后续伤害相配合。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H30",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前已有目标位置与自身技能状态，再决定",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "比较不同首个投掷目标与队友后续技能的实际控制效果，按结果调整组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "和队友说清先投谁、何时接技能以及哪边撤退，再按约打这一段",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "亲手连续走位、选目标和施法接攻击，喜欢输入与弹跳、命中反馈接续",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "药剂真实弹跳须不同单位交替，组合效果B/真人节奏Q/持续本人走位施法F不等于只看自动弹跳。",
+          "interpretation_boundary": "不保证固定弹跳次数、永久控住或同一目标可无中间单位连续吃弹；B要实际用过效果，不靠看图推保证。"
+        },
+        {
+          "id": "D48NA57007.ALT2",
+          "scene": "这一波魔法已花掉，回泉水还是再接兵",
+          "text": "你在一局正常或机器人Dota里处理过兵线，英雄这一段已花过魔法；回城卷轴当前能用，友方泉水仍可回。眼前还有能处理的一小波兵，你这轮已选过先回补再返线，也有个人尚未掌握的出手时点。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_I46",
+            "DN570_TRAIN",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己这轮已选的回补与返线项目实际推进，再接下一段兵线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把接下来能实际操作的一波用来反复练未熟的出手与停手衔接，想把个人操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先排清这一段攻击、魔法消耗与当前可用恢复的先后，再按这个资源循环继续尝试",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前英雄位置、状态与周围可见情况，再决定这一段",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "为未用枷锁/巫医者补通用但原生的TP回补与兵线经历：具体返线项目、补刀精进、准确交手资源顺序和单位状态分清。",
+          "interpretation_boundary": "不保证TP不中断、泉水瞬间恢复或必安全返线；0资源顺序不自动Y，T不需达标，也不要求玩家曾玩真人排位。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57008",
+      "number": 8,
+      "variants": [
+        {
+          "id": "D48NA57008.V1",
+          "scene": "开局分路前，还有一位真人没说好去处",
+          "text": "你和几位真人同伴准备一局大家当前都能进入的正常Dota对局；对所选英雄已读过技能，尚有两人想走同一位置，也能改选熟悉英雄。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_STORE",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可选英雄和技能说明，再决定这一局",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先谈清谁去哪条线、谁先要资源和什么时候换位，想把共同安排接起来",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "围绕对面真人阵容与本局胜负准备，选择自己认为能帮助赢下这场的英雄和打法",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "有别的英雄和玩法可选且有精力，仍自主选熟悉英雄重温已熟流程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "分路Q、真人对抗K与余力熟悉H为真实选择，不用位置名称自动推出人格。",
+          "interpretation_boundary": "全部英雄免费不C；无真人同行不Q/O，熟悉不是因无解锁权限被迫只选一个，不推选择优劣。"
+        },
+        {
+          "id": "D48NA57008.ALT1",
+          "scene": "守卫能交给队友，先把哪段视野接起来",
+          "text": "真人对局中你有当前可用的侦察与岗哨守卫，能交给身旁愿交流的真人队友；你这轮已选先完成一段己方视野布置。现有守卫足以试两种合法位置方案，能亲自走看已知路线比较实际视野。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_I42",
+            "DN570_I43",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "说清谁带侦察、谁带岗哨、谁陪走哪边，以及下一次何时一起补视野",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先把自己这轮已选的那段视野实际布好，把当前资源投入这个项目",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "比较两种侦察视野与岗哨反隐位置的实际配合，亲自走看后按效果调整",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先亲手试一次当前可用的把一只守卫交给这名友军的操作，体验交付怎样发生",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "横比撤与01ALT1同TP支援/本线成长只换查看0的近壳；改原生守卫可交付、地面视野与反隐的真实位置组合。",
+          "interpretation_boundary": "Q限真人愿沟通；B须实际两组合法布置和走看，不把真眼自身当普通视野或保证任意点都可放。转交是当前可用操作0，不自动共享全库存。"
+        },
+        {
+          "id": "D48NA57008.ALT2",
+          "scene": "原生英雄试用里，树圈能拦住哪条路",
+          "text": "你在先知英雄试用或私人练习中，发芽当前可对目标位置施放；已经有一处可行走的路口和能比较的两种放置位置，自己还没弄清哪一处会挡住当前通路。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H53",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较发芽与当前可用树人指令形成的两种实际围堵/通行组合，按走测结果调整搭配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "给自己定只能步行到终点、不得传送的规则，亲手走不同树圈路线，堵住就重开下一轮试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前发芽和自然的呼唤说明，再亲手尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "提出只有覆盖入口的那圈树会阻路的解释，保持英雄和路线不变，只换施放落点后亲自走测",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "发芽树圈与可控树人是原生内容；P单项走测、B真实组合、I起终点/失败重试不同，不凭空发明解谜关。",
+          "interpretation_boundary": "只真实当前能走测/重试的练习，自己判断规则，不造自动障碍赛或可随意删除敌方单位；无真人对手不K。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57009",
+      "number": 9,
+      "variants": [
+        {
+          "id": "D48NA57009.V1",
+          "scene": "先知本体与树人，真接过几轮兵线",
+          "text": "回想你真实用先知本体和已召树人分头处理过兵线的一段：有可用传送，自己已连续安排过几轮去处，实际能控制各单位；也有过集中与分路的两种方案。哪种已发生的投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H53",
+            "DN570_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把树人处理当前兵线、本体传去另一线取资源、回补再接下一轮衔接，按几轮真实资源结果继续调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "比较本体先传另一线而树人留原线、与本体暂不传而树人同压一线的实际效果，再调整这两种组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "亲手持续切换本体与树人、移动和指定攻击，喜欢多处响应随着本人输入接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时本体和已召单位的真实状态与位置，再继续",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "先知跨线传送与可控树人真实接成资源体系Y，B比较本体传送/树人两组实际布置，持续手动分控F和当前单位状态0不同于娜迦只换名字或05树人Q/X过去式。",
+          "interpretation_boundary": "树人数量/持续与传送条件以当时真实情况为准，不保证无限、自动运营或先知绝对安全传全图。"
+        },
+        {
+          "id": "D48NA57009.ALT1",
+          "scene": "祈唤同样元素，却换了输入先后",
+          "text": "回想你在祈求者原生试用里换过冰雷火输入先后、却祈唤出相同技能的一段：当时自己还未弄清元素组成与排列的作用，可以保留同一组元素组成只换先后；也真实试过不同技能配合与持续手动操作。哪种实际投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H74",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较自己确实施放过的两组技能组合效果，再按实际结果改下一轮搭配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "亲手连续切元素、祈唤、走位与施放，喜欢本人按键和技能响应接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "为自己已经试过的元素输入操作与已经看到的祈唤结果补上记录",
+              "signal": "puzzle_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "只交换同一组元素的输入先后，再次祈唤并看结果，检验先后是否影响技能的解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "撤与06ALT2同敌法反制/B/K/T仅改一个中性项的过去式；用祈求者本人未知元素规则的实际试验，真实组合与持续输入，以及规则探索已试过程记录0。",
+          "interpretation_boundary": "P须本人原来确未弄清而真实检验，官方排列不影响结果不是要求玩家预先知道；记录限当前规则解谜已试操作，不把自动陨石/看录像F，也不需要神杖分支。"
+        },
+        {
+          "id": "D48NA57009.ALT2",
+          "scene": "最后选人时，阵容搭配与自己的熟英雄",
+          "text": "回想你在真人对局最后一段选人时，已看见双方已选英雄，自己当时有能选的几个英雄，也熟悉其中一个；你曾在实际对局比较过不同队友控制与自己伤害技能的配合。哪种实际投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_STORE",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有新英雄和其他打法可选且有余力，仍自主重温熟悉英雄的已熟流程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先读过当时已显示的英雄与技能概览，再决定选择",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "围绕击败对方真人阵容准备，把这场胜负当主要投入目标",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "比较自己可选英雄与队友现有控制的实际组合效果，并在后续对局用过不同搭配",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "选人回顾用真实阵容效用与对抗目标，不从喜欢某类英雄自动推现实性格。",
+          "interpretation_boundary": "B含实际用过组合而非仅纸面看阵容；H要真实熟悉/有别的可做，不把免费英雄目录C。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57010",
+      "number": 10,
+      "variants": [
+        {
+          "id": "D48NA57010.V1",
+          "scene": "倒地后可以买活，下一件装备也近了",
+          "text": "回想真人对局后段你已经阵亡、当前买活确实可用且金币条件满足的一段：队友仍在守，本局同一英雄此前已有多次升级和作战投入，留金币也有可继续的成长目标。哪种真实投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_TRAIN",
+            "DN570_STORE",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "以击败对面真人、争取本局胜利为重点，准备把当前资源投入这次回场",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "保留当前金币，继续自己这局同一英雄已有的装备成长并在后续作战使用",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时买活按钮已列条件与当前资源，再决定是否执行",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先和队友约好谁买活、谁先守、自己复活后从哪边接，想把共同防守安排接起来",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "买活与保留装备金有实际机会取舍，真人协同/竞争与同一对象成长不同。",
+          "interpretation_boundary": "不写固定买活费用/冷却、不保证买活后任意立即TP或翻盘；G只本局同一对象，阵亡不推害怕失败。"
+        },
+        {
+          "id": "D48NA57010.ALT1",
+          "scene": "不朽盾第一条命之后，怎样接下一段",
+          "text": "回想真人对局中你确实持有过仍有效的不朽之守护的一段：它可在死亡地点使你恢复生命魔法重生，队友愿意商量推进；当时你也亲手控制英雄移动和攻击过。哪种实际投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_I117",
+            "DN570_STORE",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这一段攻击、魔法消耗与盾重生后恢复的先后，再按这个资源循环实际尝试",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "B",
+              "label": "先核对当时英雄状态、己方位置与周围可见情况，再决定",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "和队友说清第一条命交出后谁先保护重生位置、谁接下一轮技能，再实际推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "亲手持续走位、选目标攻击与施法，喜欢本人操作和交战响应接续",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "横比撤与买活Q/K/G/条件完全同构回顾，用盾原生满生命魔法重生下的真人保护、持续手动输入和准确交手资源顺序0，区别两个回场机制。",
+          "interpretation_boundary": "被动重生本身不F；不保证重生位置安全/无敌，不写固定时长、无限续盾或Roshan旧坑位；资源循环0不自动Y。"
+        },
+        {
+          "id": "D48NA57010.ALT2",
+          "scene": "这局从初始装备走到后来的同一英雄",
+          "text": "回想一局你正常打过的Dota普通或机器人对局：自己同一英雄从初始阶段升过技能、取得可用装备，并在后来的兵线或交战实际用过。当时有可查看的升级方案，也能做普通PC截图。哪种真实投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_STORE",
+            "DN570_LEARN",
+            "DN570_TRAIN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当时已有装备与可选升级的信息，再决定接下来怎么安排",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "继续投入这局同一英雄的技能与装备，把此前开始的成长接下去并实际使用",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "为自己当时已经取得的装备、已体验的地点补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "按自己的本局英雄主题实际选画面与站位，用普通PC截图留下个人表达",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "横比再撤与04ALT1技能点G/B/T/配置仅换T为A的近壳；普通/机器人局内持续同一英雄G、实际主题构图A、已有配置核对与已得物品/地点记录0不同，不以两组面板重复凑B。",
+          "interpretation_boundary": "不把首次取得物品G，技能装备不跨局保留；A仅普通PC截图不造PhotoMode或任意镜头，不保证截图被他人赞许；记录只已取得物品或已体验地点。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57011",
+      "number": 11,
+      "variants": [
+        {
+          "id": "D48NA57011.V1",
+          "scene": "自己已有饰品，和还惦记的那个缺件",
+          "text": "回想你确实为一个喜欢的Dota英雄收集、装配过饰品的一段：当时已有可组合的外观部件，也有自己在意但未取得的一件，且那时确实存在你能使用的取得途径；一名愿交流的真人朋友也在。哪种真实投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_STORE",
+            "DN570_TRAIN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和朋友分享各自搭配、回应彼此看到的细节，重在同好的共同经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先看当时已经拥有、当前可选的外观部件，再决定这次采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "用自己已有部件实际安排这个英雄的整体呈现，让最后形象表达个人风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "为补自己收藏中明确惦记的那件缺项，实际继续通过当时已开放方式争取取得",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "当前发行说明明确可收集饰品，A已有件装配/C主动未得缺项/O真人共享与目录查看0分开，免费英雄本身不是藏品。",
+          "interpretation_boundary": "不造特定当前宝箱/任务掉落或所有饰品可交易，不要求现金消费；C必须本人真有缺项与当时可用途径，朋友不能由NPC/异步点赞替代。"
+        },
+        {
+          "id": "D48NA57011.ALT1",
+          "scene": "歌停了再出手，小娜迦与队友真的接过一次",
+          "text": "回想真人对局中你用娜迦海妖开过海妖之歌，队友愿意接控制的一段：当时歌里敌人不可被攻击，你能主动结束歌；也有自己仍可控制的镜像单位。哪种实际投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H89",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当时自己与幻象的位置、技能状态，再决定下一段",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "和队友约好什么时候停歌、谁接控制及谁先撤，再按共同节奏行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "以赢下与对方真人的这次较量为重点，选择当时能执行的停歌与接战时机",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "亲手持续切换镜像、移动并指定目标，喜欢不同单位响应随输入接续",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "Song使敌人无敌且可提前结束，不能让队友在歌中照常输出；社交/竞争与主动分控不同。",
+          "interpretation_boundary": "不承诺停歌必完美接控，幻象F仅本人持续操作而非自动普攻，NPC假人不K/O/Q。"
+        },
+        {
+          "id": "D48NA57011.ALT2",
+          "scene": "只有机器人时，自己真的怎么玩过",
+          "text": "回想你单人玩过一场原生机器人对局的一段：当时能用已有英雄和物品，有自己未掌握的操作，也有熟悉英雄能继续玩；精力足，有别的模式可选。哪种已实际发生的投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_STORE",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时给自己定一局不购主动物品、违反就判这轮失败的限制，真的按规则玩过，并在下一场机器人局改限制再试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "专门练过自己未掌握的英雄走位和施法衔接，重心是把个人操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "有真人匹配或其他英雄可选且有余力，仍自主从容玩熟悉英雄的机器人对局，喜欢熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先完成自己当轮选过的一件当前可购装备项目，再实际使用",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "取消整题都要求曾自定规则的稀有前提；只有I选项要求本人真设并玩过，其他个人精进/余力熟悉/当前装备项目可据同一真实机器人经历作答，机器人不K。",
+          "interpretation_boundary": "不把机器人输赢K，不造内置禁买挑战或额外奖励；不建议在真人局以弃局重试规则，下一场必须实际可开始。"
+        }
+      ]
+    },
+    {
+      "id": "D48NA57012",
+      "number": 12,
+      "variants": [
+        {
+          "id": "D48NA57012.V1",
+          "scene": "守卫早消失，另一场的沟壑站位也能比较",
+          "text": "回想你用巫医死亡守卫却比预想早消失的一段：本局回放当前可播，自己曾下移动指令，但尚未确认这能否解释；试用可比较站定施法与移动。你也真实试过让己方撼地者沟壑配合自己两种站位，并看过两次交战表现。当时精力足，有新对局可打。哪种实际投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H30",
+            "DN570_H7",
+            "DN570_LEARN",
+            "DN570_WATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己那局已经走到过的交战地点补一条自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "在试用中保留其他条件，只比较是否发移动指令，看守卫是否结束，核验自己中断持续施法的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "比较两次真实沟壑与巫医站位的配合结果，再调整下次组合，想弄出更合用的协作方式",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "有新对局可打且有余力，仍从容重看已经熟悉的那一小段回放，喜欢熟悉过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "横比撤与冰女TP同P/T/Q/记录的中断原因复盘壳；保本人未知原因实试，另用已试两组沟壑站位效用/余力熟悉回看与经历记录。 最终绑定核对把泛施法动作经历记录收窄为已体验地点，严格符合game_recording完整文案，不用该copy代替任意操作过程记录。",
+          "interpretation_boundary": "测试只核移动能否中断，不保证唯一证明过去那局原因；B须真比较过两组，不保证沟壑挡住一切攻击；旧回放须当前确能播，重生/自动播片不F。"
+        },
+        {
+          "id": "D48NA57012.ALT1",
+          "scene": "团后还没回补，拉比克举起的人往哪放",
+          "text": "回想你在真人对局用拉比克隔空取物举起过敌人的一段：能用次级技能选择落地方向，旁边另一名敌人处在一个合法落点附近，真人队友愿意接自己的范围技能；也有把目标扔向另一侧的合法位置。哪种实际投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_H86",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和队友约好往哪边落、谁接范围控制、谁先换位，再按共同安排落下",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "比较把目标落在另一敌人旁触发周围眩晕、与扔向另一侧切开站位，再接队友范围技能的真实组合效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "以赢下与这支真人队伍的较量为重点，选择当时能执行的落点把关键对手与己方后排拉开",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时已可见的单位位置与自己技能状态，再决定",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "把泛两个落点配技能具体为Telekinesis落地晕周围敌人而非被举者自身的原生边界，两个合法投掷去向与队友范围技能组成实际组合；真人协同/对抗不同。",
+          "interpretation_boundary": "B须真实用过不同合法落点组合，不从单次看范围线推结论；不保证落地敌人自己再吃范围眩晕，真人才K/Q。"
+        },
+        {
+          "id": "D48NA57012.ALT2",
+          "scene": "原生英雄试用里，已有一套熟悉的操作",
+          "text": "回想你确实在Dota原生英雄试用里用过一个熟悉英雄的一段：当时有能合法使用的技能和物品组合，也有当前单位状态可看；精力足，能试别的英雄或新的搭配。哪种真实投入最想保留？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DN570_STORE",
+            "DN570_LEARN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手持续走位、选目标攻击与施法，喜欢本人输入与英雄、技能响应接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "有新英雄或组合可试且有余力，仍自主从容重温已熟的那一套，喜欢熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时自己英雄的位置、状态与周围已显示情况，再决定怎样操作",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "比较自己确实装用并施放过的两组技能/物品配合，按实际表现调整搭配",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "撤与07ALT2空魔兵线T/自选项目/资源顺序只改一个选项的回顾；改原生全英雄可试用中实际组合、持续主动输入、余力熟悉和单位现状。",
+          "interpretation_boundary": "只本人真用过试用、当前合法技能物品，不保证全部付费外观/奖励或无限冷却；B要真施放装用比较，F不是一次开自动攻击后观看。有限替代不宣称所有人都已用过试用。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+139b941593bd"
+}

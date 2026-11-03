@@ -1,0 +1,941 @@
+{
+  "id": "vanv5",
+  "title": "绝对征服",
+  "game_ids": [
+    "steam-460810"
+  ],
+  "scope": "本体单人任务与ARS；挑战模式、榜单和高级接法均非必需",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "推进器、AR、过热和BLADE各自构成真实动作条件，不套用其他射击游戏资源回路。",
+    "榜单只在明确成绩情境记录；基础单人体验可答，AI队伍不提供真人社交信号。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体单人任务与ARS；挑战模式、榜单和高级接法均非必需",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "VANV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "山姆刚推进到下一片掩体附近，ARS热量已有消耗，前面还有机器人；当前站位允许选择下一步，你先怎样用这段余量？",
+          "scene": "推进器还剩一段余量",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把推进、停下恢复与之后再次移动安排成清楚的一段",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "B",
+              "label": "观察掩体与两侧通路，推哪条线能重新绕回有余地的位置",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "接上推进、转向与开火，体验高速移动不断给出反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "固定这段熟路，只练一次停止推进到举枪之间的衔接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "用实际热量与位移形成取舍，不把高速进攻当唯一正确答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV501.V1"
+        },
+        {
+          "text": "只会最早的推进与射击，眼前是已能通过的一段平地和两处掩体；这次先给自己什么重点？",
+          "scene": "推进器还剩一段余量的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给推进消耗与下一次恢复留清楚顺序",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "B",
+              "label": "看两处掩体和转向空间，验证一条自己能往返的路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "让滑行、举枪与命中连成痛快的一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "把一次停推进后出手的操作练得更可控",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "用实际热量与位移形成取舍，不把高速进攻当唯一正确答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "已经体验过持主武器近战会让ARS过热，当前也有熟悉掩体可退。再进同类遭遇，你先围绕什么调整？",
+          "scene": "近战以后会过热",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定熟悉武器，只练近战后退出与重新移动的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "选一件现有却少用的主武器，试它带来的另一种近战开场",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把命中、击退与后续开火连上，重现那一下直接的冲击",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "看当前主武器的近战动作怎样接到其他武器用途，试一套互补配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "不同主武器有不同近战动作；过热不是可忽略的代价，不以成功率推能力。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV502.V1"
+        },
+        {
+          "text": "没有认真用过近战，只能在最早已有武器与推进动作中安排下一场，你先改什么？",
+          "scene": "近战以后会过热的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定熟悉配置，练一次推进后转向出手",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "改变一段自己总重复的进场与开枪次序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "把推进的速度感与枪声、命中连续接在一起",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "让两种已有武器接住不同距离，互相补上空档",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "不同主武器有不同近战动作；过热不是可忽略的代价，不以成功率推能力。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "当前已拿到几种可用武器，BLADE同时保留的配置有限；准备下一段任务时，几套都能继续，你先按什么挑？",
+          "scene": "BLADE的三格配置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给一件平时总忽略的已有武器留一格，让它认真改变这一段打法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "优先留手感最合意的几件，把连射、换枪与移动接得痛快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "让三种已选武器各有距离与用途，切换后能补上彼此空档",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "把沿路可见弹药与下一段交火需要接起来，安排整段消耗",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "只选已拿到的武器，不要求特殊DLC武器或照着强度榜配。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV503.V1"
+        },
+        {
+          "text": "手上还只有最初几件武器，没有更多配置可选；出发前先给它们怎样的使用重点？",
+          "scene": "BLADE的三格配置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让其中自己少用的那件承担一次不同开场",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "选最想再次亲手体验的枪械节奏，连同推进一起用起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "分好各自处理的距离，再检验切换能不能补位",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "按眼前弹药和下一处可见补给安排使用先后",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "只选已拿到的武器，不要求特殊DLC武器或照着强度榜配。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "已经会在闪避、翻越或推进中开启AR，熟悉机器人在一段窗口里露出可观察部位。下一次先怎样使用这个窗口？",
+          "scene": "AR窗口中的一个目标",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一次原先不常用的触发动作，试它能接出什么新开场",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "练清开启、转向与瞄准的时机，让动作少一次仓促",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先看目标动作与遮挡，推这段慢下来的空间还留有哪些角度",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把AR瞄准与退出后的高速移动接上，体会快慢切换的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "AR是本作战斗功能，不冒充停住一切的无限子弹时间。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV504.V1"
+        },
+        {
+          "text": "只学过最初AR操作，还没接复杂动作；在一段已能通过的交火里，你先试什么？",
+          "scene": "AR窗口中的一个目标的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "改变一次开启AR的先后顺序，认真试个不同于惯常的用法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "只把开启后瞄准再退出的一次操作做稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "对照机器人与掩体的位置，弄清AR期间能看到哪一面",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "让放慢瞄准与恢复移动连成顺手一段",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "AR是本作战斗功能，不冒充停住一切的无限子弹时间。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "任务选择里有一段已经通过的关卡，成绩与用时记录也在；当前只再玩一次，你给这一遍什么目标？",
+          "scene": "已通过任务可以重玩",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_MANUAL",
+            "VAN_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对着已记录的分数或用时定一个明确目标，尝试推进个人纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "不追整关成绩，只练一处推进到AR之间总接不好的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "带一组平时少搭配的已有武器，试同一关的新处理",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "再看任务里的通讯与人物来往，接清山姆和伯恩斯为何发生分歧",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "成绩目标与练习目的分开，重玩不要求God Hard或完成全部挑战。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV505.V1"
+        },
+        {
+          "text": "还没关注完整任务的记录，只能回最早熟悉的检查点再试；这次先选什么？",
+          "scene": "已通过任务可以重玩的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_MANUAL",
+            "VAN_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照该任务已有成绩，给这一遍留一个想推进的结果目标",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "把一次停止推进后瞄准的衔接练清楚",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "改一段现有武器的使用次序，让旧遭遇出现新打法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "听清已经出现的任务通讯，把人物的目的接起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "成绩目标与练习目的分开，重玩不要求God Hard或完成全部挑战。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "暂停里的武器库能看已经取得的枪械技术资料，眼前任务暂时也能继续。离开菜单前只留一段时间，你先做什么？",
+          "scene": "武器库里的一段技术资料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_MANUAL",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看这件武器与其他已带装备能否形成新的配合",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "选择一个想练的功能，回熟悉交火只把那一下操作练清楚",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "拿说明里平时略过的一种功能，试一次自己没用过的接法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "把说明与自己见过的表现对照，验证一个没弄懂的作用",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "技术资料服务于机制、组合、练习或实验，不考记住武器名称。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV506.V1"
+        },
+        {
+          "text": "还没看过武器库，只在最早教学里重新打开已学操作说明；先用哪种目的再试一次？",
+          "scene": "武器库里的一段技术资料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_MANUAL",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对ARS余量，把推进、AR消耗与停下恢复的先后排好，再亲手走一段教学",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "B",
+              "label": "固定一次开启、瞄准与退出，把操作练稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "改变一个原来总照着来的动作顺序，观察旧场面会怎样变化",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "看清推进与AR为什么会在某个状态不可用",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "技术资料服务于机制、组合、练习或实验，不考记住武器名称。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "ARS正在恢复，身边有能停留的掩体，前面那段已大致知道怎样通过。恢复后你先把精力投向什么？",
+          "scene": "热量恢复时的重新安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续原来的配置，把一个反复做乱的转向出手练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让平常少用的武器接这次开场，完整试出与熟路不同的过程",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把下一次推进、AR和恢复排成一段不互相打断的流程",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "D",
+              "label": "观察两边机器人与掩体的相对位置，验证另一条可回转通路",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "先承认恢复约束，选择的是之后如何投入，不把等待本身当舒缓偏好。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV507.V1"
+        },
+        {
+          "text": "只经历过最初推进消耗后的恢复，眼前几处掩体已经认识；准备继续时先改什么？",
+          "scene": "热量恢复时的重新安排的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练一次转身、举枪与停止推进的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把一种已会但少用的功能放到开场，换一次处理次序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "让消耗与恢复有清楚的前后安排",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "D",
+              "label": "看哪两处掩体之间还有自己没验证的连接",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "先承认恢复约束，选择的是之后如何投入，不把等待本身当舒缓偏好。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "一段机器人交火已结束，任务允许山姆在当前区域再走一小段，通讯在继续。你先把这点余裕给哪里？",
+          "scene": "队伍向前而侧面仍有空档",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑选殖民地金属结构、装甲与光线的站位视角，留一张自己想表达的科幻动作画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "听完眼前通讯，接上山姆的研究员身份与救人任务怎样和军事目标冲突",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "去看看当前仍可到达、但没绕进去的侧面设施",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先打开已可查看的装备资料，核对当前武器，再沿已知通路接回目标",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只问玩家可选的听、走、检查或取景；普通装备查看不加身份分，不虚构分支结局，同行AI不是现实队友。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV508.V1"
+        },
+        {
+          "text": "只玩过开头一段殖民地任务，当前短暂没有交火；先停一会儿你会做什么？",
+          "scene": "队伍向前而侧面仍有空档的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选站位与当前镜头，把山姆、设施和光线摆进自己想留的构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "听清已经发生的任务通讯，了解人物为什么同来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "看看同一片场地里自己还没亲自走到的可达位置",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先检查当前装备与已可达掩体，回到主路再继续这段",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只问玩家可选的听、走、检查或取景；普通装备查看不加身份分，不虚构分支结局，同行AI不是现实队友。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想一次推进、AR瞄准与退出移动接得很顺的战斗，哪种已经发生的体验最让你满足？",
+          "scene": "快慢切换真正连在一起",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "高速滑行与放慢瞄准交替，命中反馈连续接上",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "一个原先总按早或按晚的衔接，经练习终于能够主动做出来",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "热量消耗、恢复与后续推进有了自己的安排",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "D",
+              "label": "看懂了掩体与目标关系，找到一条原先没有意识到的可走线路",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只解释实际操作体验，不由速度、损血或连段长度判断能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV509.V1"
+        },
+        {
+          "text": "只回想最早一次推进后开枪的遭遇，哪件事最值得记住？",
+          "scene": "快慢切换真正连在一起的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动速度、枪声和命中接在一起的直接感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己曾把停止推进后举枪的衔接反复练过，后来比起初更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "知道何时消耗、何时留余量，让下一段接得上",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "D",
+              "label": "掩体和来路在自己判断下连成了能移动的空间",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只解释实际操作体验，不由速度、损血或连段长度判断能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一段已经走过的殖民地任务，哪件自己实际做过的事最让场景留下分量？",
+          "scene": "殖民地不只是一串交火",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把人物目的与任务里见到的信息对照，对冲突有了自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "主动挑过装甲、金属结构与灯光的构图，留下一组自己想表达的科幻画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "亲自绕进一处可达却原先没走过的设施边角，认识了这片场地的另一面",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "听完通讯后，山姆、伯恩斯与救人任务之间的关系逐渐清晰",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "个人取景可用正常PC截图，不声称有本作专用自由拍照模式。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV510.V1"
+        },
+        {
+          "text": "只回想最早的一段任务，哪种实际体验最有吸引力？",
+          "scene": "殖民地不只是一串交火的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已听到的目标和眼前事件对上，解释了人物为何行动",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "曾选站位与当前视角，把山姆和殖民地结构组织成自己喜欢的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "从主路边多走一步，亲眼看见了原先不知道的可达区域",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "人物几次通讯把最初行动接成了记得住的事情",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "个人取景可用正常PC截图，不声称有本作专用自由拍照模式。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想一次BLADE武器切换已经用得合意的战斗，最有吸引力的是哪种变化？",
+          "scene": "三种配置有了自己的分工",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "开火、切换与推进连成一串顺手反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "一次瞄准或近战后退出的操作，经练习比以前更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "几件已有武器分别覆盖不同场面，切换真正补上了空档",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "一件平时少用的武器进入流程，自己试出了另一种开场",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "不把BLADE写成常规天赋树；同一枪的手感、配合与练习分开。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV511.V1"
+        },
+        {
+          "text": "只回想最早几件武器用过的一场，哪部分让你满足？",
+          "scene": "三种配置有了自己的分工的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "VAN_CORE",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "枪声、命中与移动连续回应自己操作",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己曾专练一个总仓促的切换或举枪时机，后来更能主动做出来",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "远近两种用途不再各干各的，而能接住彼此空档",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己改过原来固定的使用顺序，熟悉场面有了新办法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "不把BLADE写成常规天赋树；同一枪的手感、配合与练习分开。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "VANV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回看一段已经通过并再试过的任务，哪种实际变化最让你觉得重玩值得？",
+          "scene": "回看一次任务重玩",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "VAN_MANUAL",
+            "VAN_CORE",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "听清几次通讯以后，山姆的任务与人物冲突接出了后续",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "围绕明确分数或用时目标调整后，记录出现了自己在追的变化",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "一个局部动作终于练清楚，即使整关记录没有提高也很满足",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "给那一遍新增禁止主动开启AR的限制，只用当前枪械、掩体与推进，亲自照规则打过",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "成绩兴趣不等于现实竞争人格；没有重玩可换首次经过的体验。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV512.V1"
+        },
+        {
+          "text": "还没重玩任务，只回顾最初一次已经通过的遭遇，哪一种实际体验最留住你？",
+          "scene": "回看一次任务重玩的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "VAN_MANUAL",
+            "VAN_CORE",
+            "VAN_CRASH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "听懂已出现的任务通讯，开始记住这些人为什么行动",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "推进、瞄准与命中连续接上的直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为一个总做乱的动作衔接留出反复练习，后来比开始更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己换过一次使用武器的先后，让交火有了没试过的展开",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "成绩兴趣不等于现实竞争人格；没有重玩可换首次经过的体验。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "VANV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+70cea84c6fca"
+}

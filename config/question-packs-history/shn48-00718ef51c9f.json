@@ -1,0 +1,1446 @@
+{
+  "id": "shn48",
+  "title": "洞穴探险",
+  "game_ids": [
+    "steam-239350"
+  ],
+  "scope": "2013 PC Spelunky HD；普通单人随机探险为基础，Daily/本地真人合作/后期区域仅对应替代经历",
+  "status": "private_authoring_pending_independent_review",
+  "author_review": "source_checked_full_final_read_complete_pending_independent_review",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12专属题位各3个有限已核情境，另保留4共享；16题加最多2道补问。",
+    "未体验继续其他已核专属情境，不提供跳过；有限题池不代表所有玩家/进度均覆盖。",
+    "不强凑画像；真人Q/O/K与NPC练习分清，不以表现好坏推能力或现实人格。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "2013 PC Spelunky HD；普通单人随机探险为基础，Daily/本地真人合作/后期区域仅对应替代经历",
+      "initial_variants": {
+        "SHN4801": "SHN4801.V1",
+        "SHN4802": "SHN4802.V1",
+        "SHN4803": "SHN4803.V1",
+        "SHN4804": "SHN4804.V1",
+        "SHN4805": "SHN4805.V1",
+        "SHN4806": "SHN4806.V1",
+        "SHN4807": "SHN4807.V1",
+        "SHN4808": "SHN4808.V1",
+        "SHN4809": "SHN4809.V1",
+        "SHN4810": "SHN4810.V1",
+        "SHN4811": "SHN4811.V1",
+        "SHN4812": "SHN4812.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "SHN4801",
+      "number": 1,
+      "variants": [
+        {
+          "id": "SHN4801.V1",
+          "scene": "看不清底部的落差",
+          "text": "矿洞里，你来到一处下方尚未看清的落差边，身上还有绳索，也能沿上层继续走。你更想先怎么处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_NICK",
+            "SHN_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按下看清镜头下方的地面、尖刺和可落脚处，再决定落点",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "若当前确有能接到下方台面的放绳位置，蹲在边缘部署绳索，实际沿绳下降",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "如果从边缘悬挂再落下的距离自己还不熟，借这个确有安全落点的地方亲自练一次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若上层延伸本人还没探过且当前可达，先走过去看看是否另有连接",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "普通矿洞入口，镜头查看是真功能；绳下降与局部练习不同；未知/未熟local，练习安全台面需确有。",
+          "interpretation_boundary": "不先让玩家跳下未知深坑，不凭空保证任何一根绳都够到地面；查看镜头不是自动地图。"
+        },
+        {
+          "id": "SHN4801.ALT1",
+          "scene": "箭口与手里的石头",
+          "text": "你已看见矿洞通路侧面的箭陷阱，手上恰有一块石头，旁边也存在能绕行的已知路线。这时你更愿意做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_TRAPS",
+            "SHN_NICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已知绕路去出口，保留手里的石头给后面的遭遇",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "如果本人还不知道抛出的物体能否触发它，先猜“只有人经过才射箭”，从射线外实抛并看结果，物体没过射线便不当证据",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先核对箭口方向、自己位置与石头能经过的位置，再行动",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "从不站在射线上处扔石头，真正处理这只陷阱再走原路",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "实际手持物触发与已知绕行的取舍；头部不先教触发机制，P可被实射反例否定而非问已告答案。",
+          "interpretation_boundary": "石头和落点确可用；反弹/落下箭仍危险，不把触发后所有飞箭都说成无害。"
+        },
+        {
+          "id": "SHN4801.ALT2",
+          "scene": "小敌人挡住矿洞通道",
+          "text": "矿洞的落蛛和蝙蝠正在接近，你本来只是想从这段通道去出口。你更想怎样处理这段路？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_BASE",
+            "SHN_TRAPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "绕开当前能避开的敌人，优先继续通往出口的路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先看清头顶敌人和脚下通道，确认哪一侧还有可走的空间",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "连续走位、起跳和挥鞭，跟住敌人落下与追来的节奏，亲自打出一段顺畅通过",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "如果挥鞭延迟与敌人接近时机自己还不熟，借眼前遭遇专练让鞭尖恰好碰到敌人",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通早期敌人，无清全图强制；持续输入F和本人未熟T分开，不因击杀敌人判真人竞技。",
+          "interpretation_boundary": "有真实可绕路线才选绕行；不会因为有鞭就默认安全，未熟只限T选项。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4802",
+      "number": 2,
+      "variants": [
+        {
+          "id": "SHN4802.V1",
+          "scene": "最后一枚炸弹的去向",
+          "text": "你在矿洞还有一枚炸弹：一边墙后是能看见的木箱，另一处困着可救出的对象；出口的现有路线则已经能走通。你更愿意怎么花这枚炸弹？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_BASE",
+            "SHN_LOOT",
+            "SHN_TRAPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "炸开救援通路，把对象真正带到出口，争取离场时恢复生命",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "保留下这枚炸弹，直接沿已通路线离开，把它带往下一关",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先确认爆炸附近是否有商店、爆箱或会下落的石块，再决定是否动手",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "炸开木箱所在的墙，实际取出箱内随机补给，接受它未必补回炸弹",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "三项真实资源互斥目标均行为0；救援NPC不O/Q、随机箱不承诺回本，非四个同一目标的方法壳。",
+          "interpretation_boundary": "可救对象还活着且可携带；一枚炸弹能开路由当前地形确认，不能炸墙后才说必有绳炸弹。"
+        },
+        {
+          "id": "SHN4802.ALT1",
+          "scene": "绳索是拿财宝还是留后路",
+          "text": "你看见高台有一份财宝，目前靠普通跳跃够不到；手中绳索不多，向出口的路眼下已经能走。你会优先考虑什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_BASE",
+            "SHN_NICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "如果跳到高处再部署绳索的动作自己还不熟，且这里确能安全试，实际练一次部署位置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先看清天花板与高台的高度，确认部署后绳索实际够不够到",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "把绳索用在这里，亲自爬上高台拿走已看见的财宝",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先去出口，把有限绳索留给下一关可能更难绕开的落差",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "原生绳索部署高度与可见财宝/保留资源竞争；不把加一条库存当长期G。",
+          "interpretation_boundary": "只在确有安全落点及可达绳端时练；不承诺绳可收回，不让全题被未熟前提锁住。"
+        },
+        {
+          "id": "SHN4802.ALT2",
+          "scene": "矿洞的金偶像",
+          "text": "你找到了矿洞金偶像，已经认出这处装置；想带走它换钱，也知道原本去出口的路可以不碰它。你会怎样选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_LOOT",
+            "SHN_TRAPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看滚石可能经过的下方结构和附近商店，再决定要不要引发这场变化",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "先布置能避开后续滚石的真实高处或绳位，再取偶像、带去出口，把这项取宝目标做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "不碰偶像，沿原路线离场，保住这局已有装备和后续目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "如果本人还没弄清触发条件，先猜“只有把偶像带离底座附近才触发”，做好真实退路后观察刚拿起时的变化，用结果检验",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "取宝/已有局面/触发假设/当前地形，非主张所有人抢偶像；P不提前明说拿起即触发。",
+          "interpretation_boundary": "必须是矿洞滚石偶像，不套丛林塌桥；退路已实际确认，不能靠无限重置试验，爆坏商店可能连带后果。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4803",
+      "number": 3,
+      "variants": [
+        {
+          "id": "SHN4803.V1",
+          "scene": "钱不够把店买空",
+          "text": "一家还没被惹怒的商店里有炸弹补给和你可用的移动装备，你的钱不足以全买。你更可能先做哪件事？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_SHOP",
+            "SHN_CORE",
+            "SHN_JOURNAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "如果有自己期刊里仍缺、这次店里确实在售的物品，先买到并实际取得它",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先比较眼前炸弹与移动装备的价格、功能，再对照自己已有装备，决定这笔钱怎么花",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "买炸弹，把这笔钱用于后面炸开墙壁或处理危险的机会",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "买当前确有用的移动装备，实际用它改变接下来跨台与下降的方式",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "普通商店入口；真实买物投入0、可用配置试用0、本人明确缺项实取C，价格查看不C。",
+          "interpretation_boundary": "只购买眼前确实在售、钱够买的物品；未补期刊前提localC，无夸张最优购买建议。"
+        },
+        {
+          "id": "SHN4803.ALT1",
+          "scene": "拿货出门还是正常交易",
+          "text": "你在一家仍友善的商店里，看到很想带走却暂时买不起的喷气背包；现在可以继续搜钱、放弃购买，也可以冒险拿走。你会怎样推进？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_CORE",
+            "SHN_SHOP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先观察店门、货品和附近危险，确认自己正在面对怎样的现场再决定",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "离开商店继续搜集当前可达的钱，够钱后再回来买这件装备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "暂时放弃它，把时间投入通往出口的路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "拿起背包出店，真的利用飞行逃离被惹怒的店主，把带着背包走到出口作为本关目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "筹钱正常买/保进度/直接盗走并逃离三项真实目标；盗窃是原生选择0而非自设I，不映射现实善恶。",
+          "interpretation_boundary": "商店确有喷气背包且玩家能触及；拿走会惹怒店主，不保证飞离成功、没有无敌逃脱或无限燃料，后续商店也可能追杀。"
+        },
+        {
+          "id": "SHN4803.ALT2",
+          "scene": "已经有喷气背包的采购",
+          "text": "你已经在这局拿到了喷气背包，又遇到可以买得起攀爬手套的商店；原有装备也能继续用。你更希望把这笔钱投入哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_SHOP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "买手套，实际在墙面停靠与背包飞行之间切换，比较组合后能否更方便地恢复燃料、安排长段移动",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先不买，把钱留给这局之后遇见的炸弹或其他明确目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "如果本人还没用过手套，买到后在当前可安全停靠的墙面亲手试一下吸墙和离墙",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "比较手套能增加的停靠方式与当前仅靠背包的移动方案，再决定这局是否值得买",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "真实手套墙停+背包补燃料的功能组合，实际使用比较才B；首次操作0不外观A。",
+          "interpretation_boundary": "仅当前确已背包且有可买手套，不强迫所有玩家拥有；燃料非无限，不说单买被动道具是永久G。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4804",
+      "number": 4,
+      "variants": [
+        {
+          "id": "SHN4804.V1",
+          "scene": "炸开一段当前可见的墙",
+          "text": "你想炸开矿洞一段当前可见的墙，绕到后面那处可达空间；身上还有普通炸弹，也能放弃炸墙走原路。你更想怎么动手？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_BASE",
+            "SHN_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留下炸弹，实际继续走已经能通向出口的原路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "蹲下把炸弹放到自己选定的位置，及时撤离，实际炸开这条通路",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "如果抛出炸弹的落点自己还不熟，且当前确有能退开的地面，专门练一次让炸弹落在目标墙边",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若至少还有两枚炸弹，且本人还不知道蹲放与站着投掷怎样影响落点，先猜“二者都先飞出同样轨迹”，在能撤离的实际场面比较炸弹离手后的运动，用可见差别修正解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "普通初始炸弹入口；炸墙与原路是实目标，P头部不教蹲放答案，实际轨迹比较可否证。",
+          "interpretation_boundary": "有足够撤离距离且无不可避商店/爆箱连带才选试；对照需本人真有足够炸弹，没有无限练习弹，不鼓励倒计时结束前徒手无限接炸弹。"
+        },
+        {
+          "id": "SHN4804.ALT1",
+          "scene": "黏胶与投掷手套已到手",
+          "text": "这局你同时拥有黏胶和投掷手套，想处理上方一处用普通炸弹较难到达的目标墙面。你更想怎么利用它们？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_SHOP",
+            "SHN_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把直线投掷与碰面黏附两项功能接起来，实际投弹并比较这套组合的落点控制",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "如果这套新轨迹自己还不熟，选当前确能撤开的场面练一次出手位置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先不为上方目标耗弹，沿现成通路继续自己的过关目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对目标墙面、途中障碍和爆炸附近情况，再选真正能投过去的位置",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "B来自Mitt直线轨迹+Paste黏附的真实两项功能，不是单纯升级炸弹；T未熟local。",
+          "interpretation_boundary": "两件当局已拥有，黏附会改变原先滚落逻辑；不许任意拆卸黏胶或保证穿过障碍，炸弹仍会爆炸伤本人。"
+        },
+        {
+          "id": "SHN4804.ALT2",
+          "scene": "眼镜照出了墙里的宝石",
+          "text": "你这一局已有眼镜和鹤嘴锄，墙中一块宝石能清楚看见；往出口的路线也已经通着。你更想怎样花剩下的时间？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_SHOP",
+            "SHN_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先不挖，把仍可用的工具带走，继续当前既定的离场目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "如果本人从没去过这段墙后的可达空间，挖通后走进去看看里面怎样连接",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先看清目标、脚下支撑和工具当前可用情况，再决定从哪边开挖",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "根据眼镜显示的埋藏位置，用鹤嘴锄实际开出针对性通道，比较看准后挖与盲挖的消耗和所得",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "眼镜定位+实际锄挖的功能配合，与投掷组合不同；未知localW，普通采宝不G。",
+          "interpretation_boundary": "眼镜与锄均已有；锄有寿命、不保证挖尽全墙，爆坏或挖掉支撑可能落石；不发明全地图透视编辑器。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4805",
+      "number": 5,
+      "variants": [
+        {
+          "id": "SHN4805.V1",
+          "scene": "幽灵已来但财宝还在",
+          "text": "普通关里幽灵已经出现，你也已知道出口的大致路线；附近还有没拿的财宝。你更可能怎样处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_GHOST",
+            "SHN_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "停止追加搜刮，沿当前能走的路线尽快到出口",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若自己有足够机动空间，绕着幽灵持续移动、跳跃和抓绳，亲手维持这段追逐的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "如果某段避开幽灵再接落点的动作自己还不熟，只在当前确有回旋空间时实际练它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先看清幽灵与自己的相对位置、出口入口和现有退路，再开始移动",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "普通超时入口，持续输入与未熟练习分开；不以冒险=大胆人格，不把幽灵当真人对抗K。",
+          "interpretation_boundary": "幽灵接触致命，不承诺相机永远定住或绳位绝对安全；紧急状态仍是这局真实选择。"
+        },
+        {
+          "id": "SHN4805.ALT1",
+          "scene": "幽灵与露在外面的宝石",
+          "text": "你这局已经见过幽灵把露在墙外的宝石变成钻石，现在有机动装备，也能直接走到出口。你更愿意安排哪件事？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_GHOST",
+            "SHN_SHOP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "放弃这批宝石，直接把当前已走到的进度带往下一关",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "如果自己还没掌握引走幽灵再折回取物的转向时机，在确有退路的当前布局里亲自尝试这段动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先观察宝石是否仍埋在墙内、幽灵位置和可返回路径，确认自己的计划能否执行",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "规划真实能绕开的飞行或平台路径，引幽灵经过已露出的宝石，再实际取钻石追求本局财富目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "以已知鬼刷机制作财富与离场真实冲突，不把已教转钻事实再塞P；只个人财富目标0不伪真人K。",
+          "interpretation_boundary": "不是所有埋墙宝石都能直接变，须真机动条件和回旋路；普通局死亡只能新局，不能回滚同关练。"
+        },
+        {
+          "id": "SHN4805.ALT2",
+          "scene": "暗关只能拿一件手持物",
+          "text": "你进入暗关，入口有火把可用；你本来还拿着一件手持武器。接下来你更想怎样安排这段路？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_LOOT",
+            "SHN_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人还没走过某个已照亮的可达侧口，先带火把过去看看那边的连接",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先查看眼前已照亮的落脚点与自己现在拿着什么，再决定先带哪件",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先拿火把照亮前路，把沿途能点亮的固定火把点燃，逐段推进",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先把当前可达的照明和武器放置位置安排好，分段搬运两件物品，让它们各在需要时派上用场",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "暗关手持冲突是真原生前提；搬运分步0不Q，不说NPC替自己搬；未知只已可达已照亮分支。",
+          "interpretation_boundary": "一次只手持一件，不能边持火把边挥鞭/持枪；不保证未照亮深坑安全，不把所有暗关强制限同路线。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4806",
+      "number": 6,
+      "variants": [
+        {
+          "id": "SHN4806.V1",
+          "scene": "带人离场还是先送祭坛",
+          "text": "你本关已经找到还活着的救援对象，出口与一座完整祭坛都能走到；单次只能抱着这一位走一条路。你更倾向做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_LOOT",
+            "SHN_ALTAR"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把对象送到祭坛，实际为本局祭坛奖励投入这次献祭",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把对象暂放在当前能困住其来回走动的安全小坑，再处理挡路危险，之后按自己选定的目标搬运",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先查看从对象到出口或祭坛之间的落差、尖刺和敌人，再决定要走哪一条",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "把对象带到出口，实际完成这次救援并争取离场时恢复生命",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "救援与祭坛的真实互斥收益均0；宠物/获救对象不是O/Q，也不映射现实善恶；分步准备0。",
+          "interpretation_boundary": "对象还活着且小坑确能暂存、不在危险边；献祭不保证一位就给Kapala，本局积累前置按亲历。"
+        },
+        {
+          "id": "SHN4806.ALT1",
+          "scene": "已经拿到骷髅杯",
+          "text": "你这局已经获得Kapala骷髅杯，同时正拿着霰弹枪，前面有敌人；离场路线也能不追着它们打。你更想怎样利用当下配置？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_ALTAR",
+            "SHN_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "如果自己对开枪后坐力还不熟，在当前确有安全余地处练好射击后的站位",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前生命、可走路线与敌人位置，再决定要不要靠近血滴",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "把远程造成伤害和靠近可拾血滴的路线接起来，实际比较这套输出与杯子回血能否安全配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "继续直接走向出口，不为额外血滴把这局拖进更多交战",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "枪伤出血+杯收血的实际功能构筑，非免费回血/G；不因敌人可伤害就强制杀尽。",
+          "interpretation_boundary": "杯和枪均本局已持有；血滴需要实际接触、不会自动全图吸取；枪口方向和离屏连带风险必须真实考虑。"
+        },
+        {
+          "id": "SHN4806.ALT2",
+          "scene": "霰弹枪和救援对象占同一双手",
+          "text": "你正拿着霰弹枪，又找到一个可以带去出口的救援对象；两者都能带到下一段路，但需要你自己来回搬。你更想怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_TOOLS",
+            "SHN_LOOT",
+            "SHN_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若在本地合作且有愿回应的真人，商量谁拿枪、谁抱对象，确认后按分工一同前进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "放下枪，优先把对象实际带去出口，完成这一关的救援目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先把枪带到下一处已经确认的安全放置点，再回来搬对象，按自己排好的次序走完",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "留下对象，拿枪继续去出口，把武器留给后续危险",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "普通单人手持搬运入口，真人分工只Q选项local；实际本人分段搬运不Q，不假AI自动协助。",
+          "interpretation_boundary": "不是一次双持枪与人；对象会自己走，暂放必须当前真安全；HD本地合作，不能假造内置网络匹配。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4807",
+      "number": 7,
+      "variants": [
+        {
+          "id": "SHN4807.V1",
+          "scene": "出口旁的另一侧口",
+          "text": "你在普通矿洞看到了出口，同时附近还有一处当前能去的侧口。你更希望接下来把时间放在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_CORE",
+            "SHN_BASE",
+            "SHN_TRAPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "如果当前鞭击落蛛的时机自己还不熟，先在能撤开的遭遇中集中练一次，再继续前进",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先看这次出口与侧口的实际位置，确认要不要折返",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先走到出口，把这关的通过目标完成",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "如果侧口后面本人没走过，先进去看看这次随机布局还有什么连接",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "普通单人核心入口，不要求所有期刊/捷径尚未解锁；未知和未熟各自local。",
+          "interpretation_boundary": "侧口须当前可达不穿墙，不保证有奖励；打怪练习不是过关强制或真人排名。"
+        },
+        {
+          "id": "SHN4807.ALT1",
+          "scene": "Tunnel Man这次要的东西",
+          "text": "你已经走到区域间的Tunnel Man面前，他这次明确要一项你当前携有的资源或物品；交出会影响继续这局时能用的东西。你更想怎样处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_NICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按当前已决定的过关目标离开，不为这条捷径改变本局携带安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "交付当前要求，实际推进这条能在之后开局使用的区域捷径",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "暂不交付，把当前这件资源或装备留给继续深入的这一局",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "如果捷径已经有过部分交付，我先核对眼前这次请求和自己的库存，确认不是把上次要求记混",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "原生三次交付捷径，持久入口不硬G；TunnelMan NPC交易不是Q，按实际当前请求不编Classic总金钱建设。",
+          "interpretation_boundary": "必须真实已到NPC且该项本局确能交，不默认每次都要同一种；交付项目不等于整条捷径立刻完成。"
+        },
+        {
+          "id": "SHN4807.ALT2",
+          "scene": "期刊里惦记的缺项",
+          "text": "你已经查看过自己的期刊，记得一个本人还没取得、确实可以在当前解锁区域追求的条目；这一局还有通关路线可以继续。你更想怎样安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_JOURNAL",
+            "SHN_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为这个明确缺项实际重访相关区域、拾取物品或进入所需地点，把补全作为本次投入重点",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先按通关目标继续走，不为了一个期刊条目改变当前路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "如果途中出现本人未探过的可达入口，即使不能保证补上条目，也先进去看看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己已经取得和实际见过的记录，补一笔自己的探索手记，再决定下一次要找什么",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "C明确本人缺项且实际行动；W无保证奖励仍探索，记录仅已取得/已经历，不把免费目录算C。",
+          "interpretation_boundary": "缺项取得条件须当前游戏真实满足可能性；不会随便一个洞都对应新期刊，外部手记可用不虚构内置编辑器。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4808",
+      "number": 8,
+      "variants": [
+        {
+          "id": "SHN4808.V1",
+          "scene": "普通局的一关禁炸弹",
+          "text": "普通局开局前，你可以照常玩，也可以自己定“第一关不使用炸弹，真正走出本关才算成功”。你更想怎么投入这次？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_BASE",
+            "SHN_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对初始炸弹、绳索和生命，决定自己这次准备怎样使用资源",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "按这条自设限制实际走完，误用炸弹或中途死亡就手动记失败；之后重新开普通局再试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "照常使用炸弹，把本局已经选定的通过目标做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "如果普通鞭击和落脚自己还不熟，集中练具体动作，先不额外设禁炸弹成败",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "I真实个人限制、实际成败与普通局可重开；默认照常玩入口，不造客户端判分/回滚同种子。",
+          "interpretation_boundary": "不用炸弹不等于不能捡炸弹或不能用绳；普通局限定，不说Daily当日可重试同一成绩。"
+        },
+        {
+          "id": "SHN4808.ALT1",
+          "scene": "当天唯一一次Daily",
+          "text": "你准备进行当天尚未用掉的Daily Challenge机会；关卡和成绩会进入这项每日挑战。你更希望这次尝试服务于什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "真的打这一次，并把结果拿去和同日榜上的真人玩家比较，争取比他们更好的成绩",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "按自己已经定下的个人财富或用时目标打完这一轮，只跟自己的记录相比",
+              "signal": "score_goal_attempt"
+            },
+            {
+              "id": "C",
+              "label": "在实际关卡里持续把移动、跳跃、投掷和挥鞭衔接起来，投入这一轮操作节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先读清当天Daily的进入与成绩说明，确认自己不是在普通局里重开刷同一轮",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "原生PC每天一次线上同关竞争，K只明确真人榜比较；个人成绩0，F持续本人操作。",
+          "interpretation_boundary": "当日机会尚未用且实际可入；不能失败后再开同日Daily，无承诺本地双人共排Daily，也不把机器人当榜上真人。"
+        },
+        {
+          "id": "SHN4808.ALT2",
+          "scene": "真人本地合作的一道落差",
+          "text": "你和能回应的真人正在本地合作，同屏前方有一道大家都能看清的落差，但两人的位置和手持物不同。你更想怎样通过？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_CORE",
+            "SHN_BASE",
+            "SHN_NICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "边走边聊刚才实际一起经历的探险场面，让这段共同探险本身有趣",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先把自己手里的对象搬到已经确认的安全处，再回到落差边继续本次通过目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先看清屏幕内双方位置、绳端和下方地面，确认当前动作不会把自己带进未知位置",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "商量谁先放绳、谁先下去、另一位何时跟，得到回应后按次序通过",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "专门真实本地人类故事，Q明确时点分工区别O共同经历；不拿AI雇工充同伴。",
+          "interpretation_boundary": "整题需实际本地真人合作且对方愿回应；单人可用同槽普通禁弹经历。未核联机镜头死亡机制不编。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4809",
+      "number": 9,
+      "variants": [
+        {
+          "id": "SHN4809.V1",
+          "scene": "石头反弹回来的一次",
+          "text": "回想一次普通矿洞，你扔出的石头撞墙后又朝自己这边飞回来。那之后你实际怎么处理这件事？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_LOOT",
+            "SHN_TRAPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我当时还没弄清碰墙后的伤害条件，先猜“撞墙后会立即失去伤害”，在自己能站到反弹路线外的后续遭遇里继续观察它碰到生物的结果，见到反例便改判断",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我发现自己没掌握安全投掷距离，后来在能躲开的通道里实际练出手位置和回避时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我继续把石头留作触发箭陷阱的工具，后续真的先站离弹回路线再投，服务于这一局通行目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我把自己确实到过的这段通道位置和已取得的石头信息补进探索记录，之后再按实际环境安排退路",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "普通石头回弹后果的真实反思，不是01触发箭原四项过去式；P明确本人原未知与能推翻假设的生物碰撞。",
+          "interpretation_boundary": "不是再故意让自己挨打；后续观察需要真实发生，不把撞墙后静止的石头当飞行反弹证据，记录可外部。"
+        },
+        {
+          "id": "SHN4809.ALT1",
+          "scene": "弹簧鞋改变了落脚",
+          "text": "你曾在本局取得弹簧鞋，之后一次起跳落点与自己原先预期不同。回想实际后续，你更认同哪种处理？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_SHOP",
+            "SHN_NICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我继续用它去拿原先够不到的已见财宝，实际投入这项新可做的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我当时不清楚长短按跳是否仍能控制落点，先猜“穿鞋后长按短按都只能跳到同一高度”，再在同一安全地面比较输入与起跳结果，排除换地形造成的误判",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我先查看当前已取得的鞋子和装备说明，确认这局到底增加了什么能力",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我专门在后来确有安全落点的地方练新的起跳与落台，先把自己未掌握的距离练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "实际装备改变跳跃的后续，不是买新物=G；P只未知输入解释可检验，不预写必然是哪种控制结果。",
+          "interpretation_boundary": "鞋确已拿到且安全比较地面真实存在；不能凭空卸掉被动鞋，也不把危险深坑当无限练场。"
+        },
+        {
+          "id": "SHN4809.ALT2",
+          "scene": "罗盘没有替你走路",
+          "text": "回想你拿到罗盘后的一关：它给出了出口方向，但你还得亲自选择平台与落差之间的通路。你后来最愿意继续做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_SHOP",
+            "SHN_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我持续控制跑跳、抓边与下降，享受把一段路真正走通时连贯的操作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "我先核对罗盘已经显示的方向与眼前可见通路，再决定下一步往哪里走",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "我以那个方向为依据，实际完成这一关的离场路线，不再为了额外物品折返",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "如果附近仍有本人未走过的可达入口，我暂时偏离指向，想亲自看看那里怎样连接",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "导航指向不等于自动地图/路线；不同于03采购与04构筑。未知localW，F必须本人持续走跳。",
+          "interpretation_boundary": "罗盘当局已取得；不保证出口方向那一侧所有墙都能走穿，不把看箭头本身算探索W。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4810",
+      "number": 10,
+      "variants": [
+        {
+          "id": "SHN4810.V1",
+          "scene": "开罐后多了一只敌人",
+          "text": "你曾在普通矿洞打碎罐子，紧接着身边多出一只敌人，打乱了原定的前进。回想那之后实际采取的做法，哪项最像你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_LOOT",
+            "SHN_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我当时还不知道是罐子出怪还是后方敌人追来，先猜“这只来自罐子”，在后续能看清来源的开罐场面观察新物体出现的位置，用结果排除误判",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我减少开罐，把有限时间投入这局已经定下的出口目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "如果打碎后接住突发敌人的鞭击自己还不熟，我后来确实在可撤开的遭遇中练过那一段反应",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我把之后沿路的罐子从能退开的距离投出去，实际看看每次里面会出现什么，而不再贴脸敲开",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "普通随机罐子的意外来源/时间取舍回顾，不是石头反弹同核；不写每罐必出蝎子。",
+          "interpretation_boundary": "只回忆真实发生与后续动作；未知仅当时P、未熟仅T；不把随机结果好坏推能力。"
+        },
+        {
+          "id": "SHN4810.ALT1",
+          "scene": "冰洞UFO之后的爆炸",
+          "text": "你曾在冰洞攻击UFO，随后附近发生爆炸，让平台或地雷的局面发生了变化。回想后续你实际更在意哪件事？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_BIOME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "如果当局有自己尚未走过而还能到达的侧平台，我借变化后的通路过去，亲自确认那边的连接",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我先看平台、地雷和自身站位已经变成什么样，再继续这段移动",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我当时不清楚爆炸来自自己攻击还是坠毁，先猜“击中空中就直接炸”，在后续安全可观测场面留意击中、下落、撞地的先后，检验自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "我改成优先绕开不挡路的UFO，把这一局往出口继续推进",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "特定冰洞连带后果；P可被完整时序推翻，未知可达连接local，不把UFO当真人竞技。",
+          "interpretation_boundary": "只限真实到过冰洞且观察过的场面；不承诺每次爆炸必有地雷链反应，母舰/2代规则不混入。"
+        },
+        {
+          "id": "SHN4810.ALT2",
+          "scene": "丛林尖刺柱的节奏",
+          "text": "你曾真正通过丛林的Tiki尖刺柱，一次明明看见尖刺还在，却又有机会贴近通过。那段经历之后，你实际做了什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_BIOME",
+            "SHN_NICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看柱子周围落脚点和当前能绕开的地形，再决定下次要不要贴近",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "我原先不清楚伤害时段，先猜“尖刺只要可见就危险”，在确有退路的后续遭遇里观察触发与通过时点，用实际结果修正解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我专门练诱发后跨过去的时机，在后来再次遇见时继续练自己未熟的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我改用现有炸弹开另一条真实通路，把资源花在避开这处障碍上",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "真实Tiki伤害时段与资源绕行，头部不先教确切答案；不同于矿洞箭的一次触发机制。",
+          "interpretation_boundary": "必须真实丛林尖刺柱，不是普通地刺；不保证任何可见尖刺都无伤，不用这题教玩家盲冲验证。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4811",
+      "number": 11,
+      "variants": [
+        {
+          "id": "SHN4811.V1",
+          "scene": "暗关里不再亮的火把",
+          "text": "回想一次暗关，你走过一段带水的地形，后来发现手中火把不再亮；附近有先前点燃的固定火把，也有已经确认能离开的照明通路。你之后实际做了什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_LOOT",
+            "SHN_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我当时还不知道火把熄灭条件，先猜“只是用了够久会灭”，在后来确能重新点火的场面留意干地使用与碰水的差别，用实际观察检验时间与接水两种解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "如果附近有本人没探过但已经照亮、当前能走过去的侧口，我沿那段去确认连接，而不走进未照明的深坑",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我返回已点亮的固定火把，真正重新点燃手中火把，继续原先想完成的取宝或探路目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若先前确有武器放在当前可达处，我放下这根火把、改拿武器，沿已经有照明的路线继续过关",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "整题替换与04ALT1近壳的Paste回顾；实际熄火/重燃、换手持物、可否证燃料假设、已照亮未知连接，非动作题改时态。",
+          "interpretation_boundary": "本人亲历暗关熄火；只有换武器选项需当前真有可取武器，P只本人当时未知且真实后续对照，不能假无限火把燃料试验或光照地图。"
+        },
+        {
+          "id": "SHN4811.ALT1",
+          "scene": "角色菜单后的下一次出发",
+          "text": "你已经用过角色选择菜单，回想下一次从菜单出发时，你实际最愿意怎样安排？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_CORE",
+            "SHN_JOURNAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对自己确已解锁、亲自用过的角色，把这段经历补进自己的角色记录，再决定这局用谁",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "选那个外观最合自己这次探险形象的已解锁角色，让本次呈现是自己喜欢的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "如果自己仍有明确没解锁的角色缺项，选已开放入口进入相关区域，实际去找尚缺棺材或完成真实取得条件",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "精力充足时也想选熟悉角色，按自己的节奏从矿洞再走一趟，不额外加挑战",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "A只已解锁且真用过角色的信息补记；B已选外观呈现，C实际仍缺且追求，H有余力自主熟悉重访；换角色不是同一对象成长。",
+          "interpretation_boundary": "不声称角色有不同职业技能，不保证每次随机棺材必有新角色；外观与角色缺项前提各在选项。"
+        },
+        {
+          "id": "SHN4811.ALT2",
+          "scene": "幽灵来后宝石样子变了",
+          "text": "你曾在幽灵已经出现的关卡里，发现原本散落的宝石样子与先前不同。回想当时的后续，哪一项最贴近你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_GHOST",
+            "SHN_NICK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我原先没弄懂变化原因，先猜“是幽灵经过时改变了它”，观察另一颗尚未接触的墙外宝石与幽灵路线作对照，检验而不是只凭第一次巧合认定",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我决定把这次可拿的财宝实际收走，为本局既定财富目标继续投入",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我先离开这一关，不为搞清或再多取一颗宝石拖延已经选定的通关目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若有愿交流的真人，我把这次亲眼看到的变化讲给对方，听对方反应，一起聊这趟探险发生的怪事",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "观察意外后的解释/财富/离场/真实分享，非05已知鬼刷四项过去式；P当时未知与另一宝石对照。",
+          "interpretation_boundary": "只限真实观察过变化，墙内宝石不算有效对照；O需愿回应真人且真分享，不把幽灵本身当社交对象。"
+        }
+      ]
+    },
+    {
+      "id": "SHN4812",
+      "number": 12,
+      "variants": [
+        {
+          "id": "SHN4812.V1",
+          "scene": "一趟已经熟悉的矿洞",
+          "text": "回想一次你精力并不差，却还是选择从矿洞重新开始的普通探险。让你愿意把这一段再走一遍的实际活动，更接近哪项？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_BASE",
+            "SHN_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我有这次想完成的更后面关卡目标，重新通过矿洞是我继续投入这条路线的一部分",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我愿意按自己的节奏走熟悉的矿洞，适度取宝、观察再下去，舒缓地重温本身就是目的",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我投入连续跑跳、挥鞭和投掷，在真实遭遇里反复体验动作与反馈接上的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "我记着一个自己没掌握的抓边或鞭击时机，后来碰到它时真的又练了一次",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通入口的一条熟悉重温/手感/练习/路线动机核对；其余回顾用具体物理、装备、区域及真人事件而非全套泛回顾。",
+          "interpretation_boundary": "不是只有疲劳或怕难才选H；都要求真实活动，不用矿洞通过速度或失败次数推水平。"
+        },
+        {
+          "id": "SHN4812.ALT1",
+          "scene": "合作中误伤了真人同伴",
+          "text": "回想一次你与愿回应的真人本地合作，因为投掷或开枪误伤了对方；你们之后还继续玩了。哪件事最像你实际做的后续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_CORE",
+            "SHN_NICK",
+            "SHN_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和对方重新说清谁在前、谁负责投掷或射击、什么时候让开，得到回应后照此继续",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "把刚才离谱的事故当共同话题，听对方怎么讲这次遭遇，继续享受一起玩的过程",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "若自己尚未掌握开枪后坐力与站位，之后在确有安全余地且不对着同伴的位置亲自练过这段动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先确认屏幕内对方位置与自己的枪口方向，再作下一次出手",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "真人误伤后的实协议与共同经历，区别08预先落差分工；无批评玩家道德/合作能力，练习条件local。",
+          "interpretation_boundary": "整题确为本地真人且对方愿回应；不能将雇工AI等同真人，也不编造自动无友伤开关。"
+        },
+        {
+          "id": "SHN4812.ALT2",
+          "scene": "已有区域捷径以后",
+          "text": "回想你已经开通区域捷径的一次开局，入口能直接去后面区域，也能从矿洞正常开始。你实际更愿意怎样用它？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SHN_NICK",
+            "SHN_JOURNAL",
+            "SHN_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从矿洞开始，把前面的装备与资源一起筹备好，再实际推进这次完整路线目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "如果自己仍缺某个已能在该区域取得的角色或期刊条目，走捷径重访并真正为这个缺项探索或拾取",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前已经开放的入口，再决定这局究竟从哪里出发",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "若后面区域某段跳跃或陷阱时机自己仍不熟，直接进入该区域，在真实关卡里集中练那个具体部分",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "实际已解锁快捷入口用途，而07ALT1是交出本局资源推进建设，两组不是同四项过去式；未熟/缺项local。",
+          "interpretation_boundary": "捷径进局不继承上次死亡后的装备；后区具体目标本人确实可追求，不声称快捷入口是可回滚存档。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+00718ef51c9f"
+}

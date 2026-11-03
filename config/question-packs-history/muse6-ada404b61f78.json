@@ -1,0 +1,937 @@
+{
+  "id": "muse6",
+  "title": "喵斯快跑",
+  "game_ids": [
+    "steam-774171"
+  ],
+  "scope": "PC当前可玩曲目、手动操作与已持角色精灵；不要求付费曲包或自动演奏角色",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "全部题可用PC基础手动角色回答；多角色、精灵和隐藏谱面都有独立早期替代。",
+    "手动Fever已在题干明确；从整首重来练片段，不捏造任意曲中拖动功能。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC当前可玩曲目、手动操作与已持角色精灵；不要求付费曲包或自动演奏角色",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "MUSE601",
+      "number": 1,
+      "variants": [
+        {
+          "text": "一首已经玩过的曲目里，空中与地面敌人交错到来，自己当前使用可手动操作的初始角色。眼前这一句先怎样打？",
+          "scene": "空中和地面交错的一小句",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GAMEPLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只抓住一次上下路交接，专门练稳自己的按下时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把两路命中与音乐连起来，享受连续敲击的直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "观察两路来敌与音乐重音，解释为什么这里要换路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先暂停核对空中与地面攻击各自对应的输入说明，再回这句实际继续",
+              "signal": "rhythm_reference_first"
+            }
+          ],
+          "design_purpose": "上下路是谱面机制，不由失误、曲目难度或连击长度判断能力。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE601.V1"
+        },
+        {
+          "text": "只认识最早曲目的空中与地面普通敌人，当前又开始同一首，眼前一小句已经见过。先做什么？",
+          "scene": "空中和地面交错的一小句的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GAMEPLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一次从地面接空中的时机，认真练到更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让连续命中和音乐回应接上，享受敲击的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "比较两路出现次序与音乐重音，验证一处对应关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看两路普通敌人的基础攻击示意，再回熟悉开头继续",
+              "signal": "rhythm_reference_first"
+            }
+          ],
+          "design_purpose": "上下路是谱面机制，不由失误、曲目难度或连击长度判断能力。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE601.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE602",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已经遇过长按音符，当前熟悉谱面里一侧需要保持，另一侧仍有普通敌人要打；使用的是手动角色。眼前先把注意放在哪？",
+          "scene": "长按以后还要接另一边",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_GAMEPLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看长按起止与另一边来敌，解释这句怎样分成可接上的两路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "让保持、敲击与音乐一路回应，享受动作连续发生",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先核对长按音符的保持与结束说明，再回来尝试同句另一侧的普通攻击",
+              "signal": "rhythm_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "专练保持一侧同时接另一侧的具体手部交接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不借自动角色完成动作，不要求整首Full Combo；未遇长按可换早期普通敌人。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE602.V1"
+        },
+        {
+          "text": "还没打过长按音符，只会初始角色的两路普通攻击，当前熟悉曲目又到交错一小句。先做什么？",
+          "scene": "长按以后还要接另一边的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_GAMEPLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较两侧来敌先后，解释何时该换路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把音乐和连续命中接成自己顺手的一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先查看上下路攻击的基础说明，再回这首继续尝试换路",
+              "signal": "rhythm_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "练一次上下路转换后再接同一路的时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不借自动角色完成动作，不要求整首Full Combo；未遇长按可换早期普通敌人。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE602.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE603",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已拥有几种可手动操作的角色和精灵，看过它们在Fever、命中或恢复方面的实际说明；熟悉曲目的个人旧分数也能查看。准备再打一首，先怎样选？",
+          "scene": "角色与精灵都有已有被动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留熟悉角色与精灵，只练一处仍不稳的双路交接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "围绕这首个人旧分数定明确更高目标，保留已持的一组角色与精灵实际争一次纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "比较已持角色与精灵的被动条件，让两种效果形成具体互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "对照触发说明与这首谱面，先验证自己对条件的解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只用已经持有且能手动操作的组合；外观不同不自动等于构筑，NPC精灵不是真人。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE603.V1"
+        },
+        {
+          "text": "只有最初手动角色，还没有可比较的精灵；熟悉基础曲有自己记过的旧分数。准备再打，眼前先给什么重点？",
+          "scene": "角色与精灵都有已有被动的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续把两侧攻击接起来，体会命中和声音不断回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "不换角色，为超过这首个人旧分数定明确目标，再从头打一轮",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "看上下路提示与音乐重音，验证一处对应关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "专练一次自己常仓促的换路与出手",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只用已经持有且能手动操作的组合；外观不同不自动等于构筑，NPC精灵不是真人。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE603.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE604",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已设置手动Fever，正在一首熟悉曲目里，槽已蓄满，眼前还有可打段落；不必追全球名次。当前先做什么？",
+          "scene": "手动Fever槽已经蓄满",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_GAMEPLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕自己记过的这首个人分数目标，选择当前时点并实际争一次纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "对照接下来谱面密度与效果持续，验证自己对发动时点的一种解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "专练从两路攻击接上Fever发动、再回普通输入的交接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按已经合手的发动与敲击接下去，享受音乐和效果连续回应",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "槽满且手动模式均已给出；选k须有个人结果目标，不宣称某时点是最优答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE604.V1"
+        },
+        {
+          "text": "还没用过手动Fever，仍是初始自动设置，当前熟悉曲目可以重来。眼前先怎样打一轮？",
+          "scene": "手动Fever槽已经蓄满的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_GAMEPLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "记下自己旧分数，明确以超过它为目标开始正式一轮",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "对照实际命中、槽的蓄积和自动发动时点，验证自己对触发条件的一种解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "只练一个上下路转换时机，不另外追分数",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿熟悉输入接上自动Fever的视听反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "槽满且手动模式均已给出；选k须有个人结果目标，不宣称某时点是最优答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE604.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE605",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已拥有可玩的这首歌，知道它确实有可用隐藏谱面入口；普通谱面还列着一项未点亮、条件已看懂且当前角色能做的关内挑战奖杯。当前先给哪项时间？",
+          "scene": "一首已经知道入口的隐藏谱面",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自进入尚未玩过的隐藏谱面，看看熟悉音乐还有怎样的编排",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为补齐这首菜单里列出的关内挑战奖杯，选对应普通谱面按那项已知条件打一轮",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "回普通熟悉谱面，专练一个上下路衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "为熟悉谱面设高于自己旧分数的目标，再实际争一次纪录",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "入口和所有权均为已知前提，不考寻找密码或强制付费隐藏曲。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE605.V1"
+        },
+        {
+          "text": "没有隐藏谱面经历。基础可用曲目里有一首没亲自打过，也有熟悉一首和旧分数；熟悉普通谱面还列着一项未点亮且当前能做的关内挑战。先做什么？",
+          "scene": "一首已经知道入口的隐藏谱面的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去打尚未亲自玩过的那首，看新的敌人与音乐组合",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "专为收齐熟悉普通谱面的关内挑战奖杯，按那项已读懂但尚未完成的条件打一轮",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "回熟悉一首只练同一次换路交接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "带着超过个人旧分数的明确目标，再打熟悉一首",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "入口和所有权均为已知前提，不考寻找密码或强制付费隐藏曲。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE605.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE606",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已有不止一个可手动操作的角色形象和精灵，熟悉曲目也有自己的旧分数；已有内容都能玩，不需要新购买。开始前先做什么？",
+          "scene": "当前拥有的角色也能呈现主题",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较已持被动怎样接上这首的Fever或命中条件，调整一套实际配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "为一首已有旧分数的熟悉曲目定明确更高个人目标，再用已持组合争一次纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "保留原组合，只为一处上下路换手交接留针对性练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按自己想呈现的色调与造型主题，主动选角色和精灵搭成一组",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "主动主题搭配才支持表达；不用纯欣赏插画或喜欢角色外貌代替自己的安排。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE606.V1"
+        },
+        {
+          "text": "只有初始角色与少量基础内容，没有可组合外观。当前能开始熟悉一首，你先做什么？",
+          "scene": "当前拥有的角色也能呈现主题的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照上下路提示，验证自己对重音位置的一处解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先查看空中与地面基础攻击的操作说明，再回初始角色的熟悉曲目尝试",
+              "signal": "rhythm_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "只练同一次从地面到空中的交接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "让空中与地面的敲击接上音乐，享受即时反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "主动主题搭配才支持表达；不用纯欣赏插画或喜欢角色外貌代替自己的安排。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE606.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE607",
+      "number": 7,
+      "variants": [
+        {
+          "text": "当前已有新曲目可玩，你精神很好，熟悉一首的旧分数也能查看。现在先选什么？",
+          "scene": "有精力时选哪首再开",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕熟悉一首的个人旧分数，明确争取一次新纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "用原角色与配置，只专练一个长按或换路时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "主动重温熟悉一首，不追分数和解锁，想待在已经舒服的敲击节奏里",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "进入当前可用却尚未亲自打过的一首，看看谱面怎样展开",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "舒缓是能推进且有精力时仍主动选择熟悉过程，不是疲劳恢复或用低难度分类。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE607.V1"
+        },
+        {
+          "text": "只开放最早几首基础曲，仍有未玩内容，自己精神充足。眼前先做什么？",
+          "scene": "有精力时选哪首再开的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "记下个人旧分数，明确带着超过它的目标再来",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "固定初始角色，练一次总仓促的两路转换",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "回熟悉一首，不设额外目标，重温自己合意的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "进入已可选但自己没亲自玩过的一首",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "舒缓是能推进且有精力时仍主动选择熟悉过程，不是疲劳恢复或用低难度分类。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE607.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE608",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已从选曲菜单准备重来一首熟悉曲，知道其中一处长按和交错敌人常接不上；当前不要求整首纪录。先怎样安排这轮？",
+          "scene": "整首重来的一次小安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留合手走法从头接上长按与两路攻击，享受敲击和音乐持续回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "只抓那一处具体交接作为本轮练习目标，实际从头开始",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把每轮从头演奏、记下断开的句子、选下轮目标和复核结果排成可反复调整的练习流程",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "对照谱面位置与音乐，先提出一处条件解释再在这轮验证",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "从整首重来聚焦一处，不虚构基础版可任意拖动到曲中间或局部无限循环。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE608.V1"
+        },
+        {
+          "text": "还没打过长按，当前从菜单再次开始熟悉的早期曲目，眼前交错敌人已见过。先做什么？",
+          "scene": "整首重来的一次小安排的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已经顺手的两路输入打下去，享受命中与音乐持续接上的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "只练一次明确的上下路转换",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把从头打一轮、记下换路问题、选下轮一处目标与复核结果排成可调整的练习循环",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "对照来敌与重音，验证一句谱面的对应关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "从整首重来聚焦一处，不虚构基础版可任意拖动到曲中间或局部无限循环。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE608.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE609",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想一首自己实际手动打过的曲目，哪件已经发生的体验更有分量？",
+          "scene": "两路命中真正连起来",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续敲击、命中与音乐接在一起，手感很直接",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "一处换路或长按交接经针对练习，后来更能掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己看清两路提示与音乐位置，验证了一种解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己先设过超过个人旧分数的明确目标，并在实打结算后对照过纪录",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "回顾手动操作，不把自动角色的演奏当自己的动作练习。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE609.V1"
+        },
+        {
+          "text": "只回想初始手动角色最早一首，哪部分当时更鲜明？",
+          "scene": "两路命中真正连起来的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "两路命中、声音与动作连续回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己练过的一次换路后来比起初稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己解释清了同一句里何时要从空中转地面",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾带着高于已记分数的个人目标打一轮，并实际比较过结果",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "回顾手动操作，不把自动角色的演奏当自己的动作练习。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE609.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE610",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己实际使用过已持角色与精灵组合、也用过手动Fever的一首熟悉曲目，哪件已经发生的事更有分量？",
+          "scene": "Fever与被动已经接上",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_GAMEPLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己对Fever与谱面条件的解释在实打后得到了验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "练过的一次敲击接发动、再回输入，比开始更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己手动把两路命中与实际出现的Fever效果接起来，声画和敲击反馈很鲜明",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "已持角色与精灵的被动在这首里形成了具体互补",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "基础题明确角色、精灵组合与手动Fever均已实际用过；替代只需初始手动角色的两路攻击，不依赖自动或手动Fever。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE610.V1"
+        },
+        {
+          "text": "没有角色与精灵组合经历，只回想自己用初始手动角色实际打过的一首，哪件已经发生的事更鲜明？",
+          "scene": "Fever与被动已经接上的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MUSE6_GUIDE",
+            "MUSE6_GAMEPLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己对两路提示和音乐重音的解释得到了验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "针对练过的一次换路后来更能掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己先查看过两路基础攻击的操作说明，再回初始角色的曲目实际尝试过",
+              "signal": "rhythm_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "空中地面命中、动画与音乐连起来，直接反馈很强",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "基础题明确角色、精灵组合与手动Fever均已实际用过；替代只需初始手动角色的两路攻击，不依赖自动或手动Fever。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE610.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE611",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想一次实际选曲并打过的过程，哪件已经发生的事更有分量？",
+          "scene": "选曲以后留下了哪种记录",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己亲自进入陌生曲目，看到新的敌人与音乐编排",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "自己为已持角色和精灵主动安排过造型主题，并实际带着这套形象打过",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "自己事先设过个人分数或评价目标，实际比较了这次与旧纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "自己为补齐一首普通谱面的关内挑战奖杯去打过，后来菜单中原本未点亮的一枚实际点亮",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "结果竞争、补全、未知体验与个人呈现分开，不由购买曲包或角色数量推断。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE611.V1"
+        },
+        {
+          "text": "只回想最早几首与初始角色，没有形象组合经历，哪件事当时更鲜明？",
+          "scene": "选曲以后留下了哪种记录的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入此前没亲自打过的一首，发现了新的编排",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "自己专练的一次上下路交接，在实打时更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己带着超过旧分数的目标打过，并实际对照了纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "早期普通谱面里一枚已列出却未得的关内挑战奖杯，后来被自己按条件实际点亮",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "结果竞争、补全、未知体验与个人呈现分开，不由购买曲包或角色数量推断。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE611.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MUSE612",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾实际玩过的喵斯快跑，哪件已经发生的选择更有分量？",
+          "scene": "熟悉音乐还愿意怎样重温",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "命中、Fever与音乐一直接上，过程本身留下了强烈手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "有精力也有新内容时，自己仍无分数目标地重温熟悉一首，享受安稳自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己亲自打过一首未知曲目或可用谱面，见到新的音乐与来敌关系",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己针对熟悉谱面的一次换路或长按交接练过，之后比开始更能控制",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "没有强加可自由改写的剧情、真人联机或角色性能升级树；只解释实际选择。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE612.V1"
+        },
+        {
+          "text": "只回顾早期几首手动打过的曲目，哪件自己真做过的事更有分量？",
+          "scene": "熟悉音乐还愿意怎样重温的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MUSE6_STORE",
+            "MUSE6_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "音乐和连续命中一直回应，敲击本身就很吸引人",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "当时还有精神也有新曲可打，仍主动回熟悉一首，不另追纪录和解锁",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己进入过没亲自玩过的可用曲目，第一次看见那套编排",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己对早期同一次上下路转换做过针对练习，后来比开始更能掌握",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "没有强加可自由改写的剧情、真人联机或角色性能升级树；只解释实际选择。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MUSE612.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+ada404b61f78"
+}

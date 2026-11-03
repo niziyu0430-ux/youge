@@ -1,0 +1,938 @@
+{
+  "id": "mircatv5",
+  "title": "镜之边缘Catalyst：Glass、升级点与自由屋顶",
+  "game_ids": [
+    "steam-1233570"
+  ],
+  "scope": "Catalyst本体单人自由区与已开放任务",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "与原版故事、慢放和枪械机制分开；Focus为临时预算不记成长。",
+    "Skill Roll等必须已经可买，g实际解锁；MAG Rope已得且只用有效挂点，基础ALT不要求这些能力。",
+    "在线功能已停用，不用UGC计时、Echo、Tag或在线成就；Dash只个人计时；h无追踪无运送计时。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Catalyst本体单人自由区与已开放任务",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "MIRCATV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "Catalyst的地图上当前目标已经设好，红色引导会随位置调整；旁边屋顶还有未走通道，以及你已看见却没取的一枚gridLeak。现在先去哪？",
+          "scene": "Glass里设好的路标",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_core",
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "离开引导去未走通道，看这片自由屋顶还接着哪里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先取那枚记着漏下的gridLeak，补这一区已有的收集缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "猜另一侧的管道与屋顶怎样接回目标，再爬过去核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在自己落台后常断速的地方练一次，只看自身改善",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "地图引导是可能路线，不是最快唯一解；c明确gridLeak缺项而非仅攒经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV501.V1"
+        },
+        {
+          "text": "若还没开始收集gridLeak：已开放区域内的当前目标可达，旁边有未探屋顶与可重复的基础矮台。你现在先做什么？",
+          "scene": "Glass里设好的路标的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_core",
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看看未探屋顶后方，不预先要求有XP或物品",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "猜从哪个起点翻越会落到想去的平台，再亲自核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "重复自己翻台后转向的一小段，只与刚才比较",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿熟悉矮障碍连着跑跳，享受动作与脚步回馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "地图引导是可能路线，不是最快唯一解；c明确gridLeak缺项而非仅攒经验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你在Catalyst熟悉的屋顶转角前，Shift已可用；这一小段也确认不用Shift就能基础跑跳通过，能从宽敞安全地面重新起跑。此刻先怎样试一段？",
+          "scene": "转角处的Shift",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_move",
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己侧向Shift后接起跳的一拍，目标是比前一回顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "接一串已经会的转向与跑起，享受短促加速的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "这趟自定禁用原本可用的Shift，只靠已确认可过的基础跑跳路线继续",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "猜在转角前后Shift会怎样改变去向，再各跑一次核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "Shift属于Catalyst；明确自禁已可用的Shift才是新增规则，基础动作换序只记当次行为。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV502.V1"
+        },
+        {
+          "text": "若尚未熟悉Shift：当前普通屋顶能用基础跑跳与抓边通过，你已走熟这段，能从宽台再起步。现在先做什么？",
+          "scene": "转角处的Shift的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_move",
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "专练自己抓边翻上后接跑的一下",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿走熟平台连续跑跳，感受腾空与脚步落下",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "换一次抓边翻上后接起跳的时点，亲手体验不同的已有动作衔接",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "先猜早起跳和晚起跳会抓到哪条边，再实际试过核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "Shift属于Catalyst；明确自禁已可用的Shift才是新增规则，基础动作换序只记当次行为。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "Catalyst的成长页已有升级点，Skill Roll当前已满足购买条件但还没解锁；附近也有已知秘密包缺项与一条未走屋顶。你现在先做什么？",
+          "scene": "手里的一点升级点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_progress",
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回已知包的位置，补上这一区秘密包清单的一格",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先去未走屋顶另一面看看，发现本身就值得绕路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "真正投入点数解锁Skill Roll，让自己持续培养的跑者多一项之后仍可用的动作",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把现有点数、下一项可得XP的目标与返成长页顺序排清，再按自己的投入计划走",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "实际点数解锁保留能力支持成长；点数、目标与返回菜单的个人次序只记mission_preparation_plan。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV503.V1"
+        },
+        {
+          "text": "若还没有可花的升级点：当前基础跑跳与攀爬已足够到达目标，主路边有未探转角和一组矮障碍。此刻先做什么？",
+          "scene": "手里的一点升级点的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_progress",
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己越过矮障碍后接下一步的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "直接跑过熟悉平台，享受第一人称运动反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先到转角后看看，不要求恰好有升级奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "猜不同助跑位置会怎样改变翻越落点，再试一次核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "实际点数解锁保留能力支持成长；点数、目标与返回菜单的个人次序只记mission_preparation_plan。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前Catalyst交战区域能靠移动建立Focus Shield，你已经会轻攻击与重攻击，也有可跑的障碍和空地。此刻更想先怎么处理一轮？",
+          "scene": "移动中的Focus Shield",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_combat",
+            "mircatv5_manual",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已经会的跑跳与攻击走一段，享受运动和撞击连续发生的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把移动补Focus、重击消耗与接着脱离的时机排好，让当场资源接得起来",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "C",
+              "label": "先猜相同位置的轻重攻击会怎样改变对手位置与Focus，再分别试一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "专练自己穿越攻击后接Shift的一下，只看自身衔接改善",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Focus是当场交手资源循环，只记combat_resource_cycle，不当长期成长或持续经营；不混原版慢动作与拾枪。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV504.V1"
+        },
+        {
+          "text": "若还没进入这样的交战：安全屋顶有基础跳攀与可绕的矮障碍，现在能继续目标。你先选什么？",
+          "scene": "移动中的Focus Shield的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_combat",
+            "mircatv5_manual",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一趟翻过矮台后接起跑与转向的先后，亲手感受不同动作接法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "先猜矮障碍不同接近方向怎样影响落脚，再实测",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "专练自己越过矮台后变向起跑的一拍，修正总停顿的那一步",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "连着跑过熟悉障碍，享受动作不断接上的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "Focus是当场交手资源循环，只记combat_resource_cycle，不当长期成长或持续经营；不混原版慢动作与拾枪。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你在Catalyst里已取得当前可用的MAG Rope，眼前有明确挂点和可落平台，也能回到安全起点。现在更想先做什么？",
+          "scene": "已经能用的MAG Rope",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_progress"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜从不同位置挂上后会落在哪里，再实际荡一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "练自己摆荡松开后的落台方向，只跟自己的上一回比较",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "沿已会的挂点摆过去，享受牵引、松开与脚步接上的回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先到挂点带去的未探高处看看，想知道那片平台连着什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "绳索要已获得且只能用现成有效挂点，不说可任意抓墙，也不套给2008原作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV505.V1"
+        },
+        {
+          "text": "还没有MAG Rope的话：当前基础屋顶能通过已有管道和跳跃到达出口，旁边有没查过的小平台。你现在先做什么？",
+          "scene": "已经能用的MAG Rope的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_progress"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "猜跳离管道的方向怎样影响落点，再实际核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "只练自己抓边后翻上平台的一拍",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "连着走过熟悉跳攀段，优先享受动作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "到未查小平台另一面看看，不先承诺要有奖励",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "绳索要已获得且只能用现成有效挂点，不说可任意抓墙，也不套给2008原作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已接到Catalyst一趟Fragile Delivery，剩余时间和物品耐久当前都有余量，眼前有不同落差的已知路线。此刻先怎样继续？",
+          "scene": "手中易碎物品的这一趟",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜一个可承受落差会怎样影响物品状态，选择它实测后核对判断",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "练自己在安全可承受的低台处减小落地停顿，目标是这一动作比刚才顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "沿熟悉的平稳线路连着跑跳，优先享受不间断移动的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "按剩余时间与耐久安排先绕哪段、从哪处落地，把两种消耗留到后段",
+              "signal": "platform_route_plan"
+            }
+          ],
+          "design_purpose": "Fragile Delivery的剩余时间、耐久和落脚次序只记platform_route_plan，不因此推持续系统经营；限时过程不记舒缓。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV506.V1"
+        },
+        {
+          "text": "若没接过易碎运送：当前自由屋顶未启动计时，附近有一处已知秘密包漏项、未去通道与可重复矮台。你先做什么？",
+          "scene": "手中易碎物品的这一趟的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进未去通道，想知道主路旁还有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先猜从矮台哪个位置起跳能接到平台，再试一次",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "沿走熟矮台跳过一段，享受脚步与腾空接起来的回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先去取记着漏掉的那只秘密包，让收藏少一个空格",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "Fragile Delivery的剩余时间、耐久和落脚次序只记platform_route_plan，不因此推持续系统经营；限时过程不记舒缓。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "Catalyst当前这条Dash已开放，也有自己的先前结果可比；眼前选的路线已确认不用Shift也能到终点，红箭头和另一条可行近路都能走。现在先跑哪一轮？",
+          "scene": "Dash的起跑圆圈",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜某条近路为何能接回后段，再实地跑一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "给这趟Dash新增禁止Shift的限制，只跑已经确认不用它也能到终点的路线",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "围绕自己的更好用时或下一档本地计时目标正式跑一次",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "只练自己一个转角接跳的动作，不把全程成绩作为这轮重点",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "仅单人Dash计时目标，不要求现已停用的全服榜、Echo或用户计时赛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV507.V1"
+        },
+        {
+          "text": "如果还没跑过Dash：自由屋顶的一段普通路线已走熟，能用现有基础动作通过。你现在先做什么？",
+          "scene": "Dash的起跑圆圈的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜换个助跑点会怎样改变下一落台，再亲自试",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "这趟换一次抓边后接起跑的时点，亲手体验已经会用的动作怎样换着接起来",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "练自己过转角后接起跳的一下，只看自身改善",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "顺着熟悉路线连着跑动，享受第一人称加速和落地",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅单人Dash计时目标，不要求现已停用的全服榜、Echo或用户计时赛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你回到Catalyst熟悉安全屋，当前没有追踪或运送计时，精力充足且下一目标可进；Intel里已有文件录音可看。此刻先做什么？",
+          "scene": "安全屋与已经取得的Intel",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先步行查看安全屋附近已经可达的屋顶连接，再去原本可直达的目标",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "打开已取得的录音或文件，想接上Glass人物与当前事件的背景",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先沿熟悉安全屋和近处小段慢走，享受回到认得路线时的安定感",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "回到已知漏文档的位置，把这项明确缺件补进收藏",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "已得文件录音可为叙事重读；普通安全屋外查看只记scene_inspection，舒缓要有精力且正向享受熟悉过程。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV508.V1"
+        },
+        {
+          "text": "若还没有想回看的Intel：你在熟悉安全屋，当前无追踪无计时，已有本体目标可继续，精力足。现在先做什么？",
+          "scene": "安全屋与已经取得的Intel的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看安全屋外已经可通行的屋顶连接，再去已知目标",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "接着去当前已开放主线，想看Faith与Noah之后如何应对眼前事件",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先沿熟悉安全的小段慢走一会，喜欢这些已认得的屋顶和脚步带来的安定感",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "去近处未探屋顶的另一面看看",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "已得文件录音可为叙事重读；普通安全屋外查看只记scene_inspection，舒缓要有精力且正向享受熟悉过程。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想Catalyst里你确实偏离目标路标的一次，哪种经历更像当时的理由？",
+          "scene": "回看在城市中偏离路标",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已知漏下的秘密包、文档或gridLeak，专门回去补过那一项",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "为了看看没走过的屋顶或通道，未查奖励就改过路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "取得文件或录音后真正打开Intel阅读，想把人物背景接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先猜一条管道或平台如何接回目标，亲自走过核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只回顾真实偏航，收集缺项与未知、叙事与验证分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV509.V1"
+        },
+        {
+          "text": "如果只玩过最早自由区：回想已经发生的一次转向，哪种更贴近？",
+          "scene": "回看在城市中偏离路标的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "mircatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为先前看见却漏取的一枚gridLeak专门折回过",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "绕到没看过的转角，只想知道后面有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "接着进入当时已开的主线，想理解Faith与Noah当前的处境",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "换起跑位置试过，确认了某处平台为何能接上",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只回顾真实偏航，收集缺项与未知、叙事与验证分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想Catalyst成长与跑动中你确实做过的一次投入，哪种经历更像？",
+          "scene": "回看留下来的能力",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "mircatv5_progress",
+            "mircatv5_move"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把升级点缺口、可得XP的本体目标与返成长页的顺序排成流程，并实际照着做过",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "沿用当时已会的动作，只为自己某次落地转向更顺而重复练过",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "熟悉的跑跳与Shift反馈本身合意，让我主动又走了一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "实际花点解锁了Skill Roll等当时可买的动作，让自己培养的跑者留下了持续可用的能力",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "实际花点解锁为保留成长；个人XP目标和返菜单次序只记准备，临时Focus与手动熟练不记成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV510.V1"
+        },
+        {
+          "text": "若尚未买过动作升级：回想基础自由跑动里真实发生的一次重复，哪种更贴近？",
+          "scene": "回看留下来的能力的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "mircatv5_progress",
+            "mircatv5_move"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己的抓边翻上比前一回顺，重复过一小段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "纯因连续跑跳的声音和视角回馈，愿意又走过熟路",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "自己换过翻上矮台后接跑跳的时点，亲手体验过不同的已有动作衔接",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "先猜助跑位置为何影响落点，再亲自换位置核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "实际花点解锁为保留成长；个人XP目标和返菜单次序只记准备，临时Focus与手动熟练不记成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想Catalyst里你真正重跑过的一段Dash或普通屋顶，哪种投入更像你当时在意的东西？",
+          "scene": "回看自己追逐的那一轮",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_move",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给当时确认不用Shift也能通过的熟段加过禁用Shift的限制，并实际遵守过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "为解释一条近路如何接回后段，作出猜想后实地跑过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "正式为自己Dash用时纪录或本地目标计时跑过，重心在纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "挑一处落地接跳单独练过，收获是自己的改善",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "仅单人本地计时目标；明确新增禁用Shift才支持规则，普通动作变化只记当次试用，不以实际用时判能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV511.V1"
+        },
+        {
+          "text": "没有Dash经历也可回顾：想一段只用基础跑跳的真实重复，哪种更贴近？",
+          "scene": "回看自己追逐的那一轮的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_move",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己换过基础抓边、翻上与起跑的先后，亲手体验过另一种动作接法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "为核对助跑和落点的关系，换过起点试跑",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "为了自己翻越后接起跑更顺，练过同一个小段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "单是跑动、抓边与落地回馈合意，就又走过熟路",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅单人本地计时目标；明确新增禁用Shift才支持规则，普通动作变化只记当次试用，不以实际用时判能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIRCATV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想Catalyst里一段确实由你决定的停留，哪种经历最像？",
+          "scene": "回看自己在Glass的停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "即使不知道有何奖励，也进入过未走屋顶或通道",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "精力足、无追踪无计时且目标可继续，仍在熟悉安全屋附近慢走过一会，享受回到熟路的安定感",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先步行查看过安全屋外的屋顶连接，然后才走向原本已知的目标",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "为接上人物与Glass的事情，读过已得文件、录音或继续当时已开主线",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "查看已可通行屋顶连接只记scene_inspection；舒缓排除被追、限时和疲劳，并要求正向享受熟路。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV512.V1"
+        },
+        {
+          "text": "只到最早自由区也能回顾：想一次确实自由决定的停步，哪种更像？",
+          "scene": "回看自己在Glass的停留的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "mircatv5_manual",
+            "mircatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动去过没有看清的屋顶转角，单是未知就想看看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "精力充足、没被追踪且前路可走，仍主动慢行过熟悉安全小段，因为这段已认得的路线让人安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先查看过附近可通行的屋顶连接，再向已知目标走",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "继续了当时已开放主线，想弄懂Faith与Noah眼前的事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "查看已可通行屋顶连接只记scene_inspection；舒缓排除被追、限时和疲劳，并要求正向享受熟路。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIRCATV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+14a6ffbdcbee"
+}

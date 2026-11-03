@@ -1,0 +1,1000 @@
+{
+  "id": "gm09f",
+  "title": "前往中世纪 Going Medieval",
+  "game_ids": [
+    "steam-1029780"
+  ],
+  "scope": "PC正式本体Main1.2.17；同一聚落规则适配和平/标准/生存",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "2026正式1.0后的温控/实体书规则，不沿用旧裸土万能地窖。只问已启用且当时出现的进水事件。",
+    "没有原生无限资源建造路径的核实证据，未虚构Creative。NPC技能成长、协议和工作不计玩家练习或真人协调。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "单人聚落；未开事件或后期内容可换早期题",
+      "initial_variants": {
+        "GM09F01": "GM09F01.DEFAULT.V1",
+        "GM09F02": "GM09F02.DEFAULT.V1",
+        "GM09F03": "GM09F03.DEFAULT.V1",
+        "GM09F04": "GM09F04.DEFAULT.V1",
+        "GM09F05": "GM09F05.DEFAULT.V1",
+        "GM09F06": "GM09F06.DEFAULT.V1",
+        "GM09F07": "GM09F07.DEFAULT.V1",
+        "GM09F08": "GM09F08.DEFAULT.V1",
+        "GM09F09": "GM09F09.DEFAULT.V1",
+        "GM09F10": "GM09F10.DEFAULT.V1",
+        "GM09F11": "GM09F11.DEFAULT.V1",
+        "GM09F12": "GM09F12.DEFAULT.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "GM09F01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你已有可用支撑构件、工人和材料，地下储藏与楼上房间都能继续。挖掘还要顾及上方结构，眼前食物安全；这一轮只能先推进一处，你怎么投入？",
+          "scene": "地下空间与楼上工程",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_CELLAR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排支撑、挖掘、搬出土料与铺设通路的次序，再实际下令",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "把建材采集、施工搬运、食物回补与居民休息连续照看几轮，按材料和成餐库存再调工作优先级与日程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "按自己想要的“地窖托起高塔”主题安排层间轮廓与入口",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前两处工程的材料、人员与空间条件",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "多层与稳定性是真约束；单轮建造步骤不冒充持续系统，NPC 完工不计即时操作反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F01.DEFAULT.V1"
+        },
+        {
+          "text": "刚建聚落时，你只有地面临时储存、床位和基础遮蔽可安排，材料和人手够先做一处。食物尚安全，这轮怎样投入？",
+          "scene": "地下空间与楼上工程的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_CELLAR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清取料、搭基础遮蔽与搬入物品的施工先后，再实际安排",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "把采食、烹饪、搬运和睡眠连续照看几轮，依食材与成餐的实际回补再改工作优先级",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "为自己的林间营地样子安排床位、储存和入口的空间关系",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "比较当前可做的遮蔽与储存方案，再选本轮投入",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "多层与稳定性是真约束；单轮建造步骤不冒充持续系统，NPC 完工不计即时操作反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F01.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "研究桌已写出一批书，书籍有安全存处，当前也有一项书量与技术前提都满足、可以开启的研究；原有书不会被解锁立刻消耗掉。材料还够补一处书籍遮蔽，人手有限，这轮先投入什么？",
+          "scene": "研究书是实体积累",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_RESEARCH",
+            "GM9F_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把写书、食物制作、搬书入库和居民日程连续照看几天，按书籍安置、食物库存与需求再调工作",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可开启的研究与现有书籍条件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把已写出与已安置的书及研究建设过程补记下来",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "按已有人员与材料，先排新增书籍遮蔽、运书与安置的施工搬运顺序，再实际安排",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "实体研究书的搬运与存处施工是中性，持续用工循环才计 y；不把书籍库存或即时解锁硬计长期养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F02.DEFAULT.V1"
+        },
+        {
+          "text": "你尚未积累研究书，基础研究桌已可建，初期食物、睡处与搬运也都要人。材料够先做一处，这轮怎么投入？",
+          "scene": "研究书是实体积累的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_RESEARCH",
+            "GM9F_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前基础研究与生活设施的可做条件",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "把现有采食、烹饪、搬运与睡眠连着照看几轮，按食材成餐和建材存量再为基础写书留工作时间",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先读游戏已有研究书与解锁的说明，再继续尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按现有材料和人员排清研究桌、遮蔽与搬运的本轮先后，再实际推进",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "实体研究书的搬运与存处施工是中性，持续用工循环才计 y；不把书籍库存或即时解锁硬计长期养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F02.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "两间已可用地窖的温度不同，实际原因还没核对。其中一处有栅门，当前也能用现有材料改建为实门；两边物品和工作安排都可保持。眼前食物安全，这轮先做什么？",
+          "scene": "储藏室温度的未知原因",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_CELLAR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前可用门墙与地板的材料和隔热方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "按自己想要的地下拱廊主题，先调整入口与房间轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "自己猜这扇栅门让热量通过，只把它改成当前可建的实门、其他安排不动，再对照房间温度变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先看这两间房当前温度、房间与存放状态，暂不判断原因",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "p是自提门体热量交换解释后单改一扇当前可建门并对照；不预告原因，也不把裸土地窖或恒定低温当万能答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F03.DEFAULT.V1"
+        },
+        {
+          "text": "尚无地窖时，有居民正在把新采食物搬进地面存处，当前也有材料和人手给一小段加基础屋顶。物资暂时安全，这轮你先做什么？",
+          "scene": "储藏室温度的未知原因的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_CELLAR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好材料搬运与搭基础遮蔽的施工次序，再推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "跟看居民把食物搬到实际存放处的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "先看物品与储存点当前状态，不预定原因",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "直接把当前屋顶预览移到这处存放点上方的一处合法位置，查看这次遮蔽范围",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "p是自提门体热量交换解释后单改一扇当前可建门并对照；不预告原因，也不把裸土地窖或恒定低温当万能答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F03.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "同一批居民正在采食、烹饪、建造和写书，工作优先级与日程均可调整。眼前需求稳定，另一个房间也可开工；你愿先怎样安排？",
+          "scene": "工作优先级与日程",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_RESEARCH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练选择居民、改工作优先级并核对结果，重点是练熟操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "连续几天照看食材、成餐、建材搬运和写书工作，按居民需求与实际库存再调优先级和睡眠日程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先看每个人的工作与需求状态，核对当前信息",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先跟看一个居民在不同工作和休息之间实际怎样切换",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "玩家重复操作练习可计 t；NPC 重复劳动和技能增加本身不算玩家练习。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F04.DEFAULT.V1"
+        },
+        {
+          "text": "聚落初期只有少数居民，采食、搬运、做饭和床位施工都已可安排，没有眼前急难。这轮先做什么？",
+          "scene": "工作优先级与日程的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_RESEARCH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练当前已可用的人员选择与工作分配操作，想熟悉界面",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把采食、做饭、搬运和休息连续照看几轮，按食材与成餐余缺再改工作优先级和日程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "查看每个人当前岗位、需求与正在做的事",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "跟看一个居民从采集到搬运、再休息的实际活动",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "玩家重复操作练习可计 t；NPC 重复劳动和技能增加本身不算玩家练习。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F04.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "这个存档开启了地窖进水事件，而且当前一间地下储藏室确实已有水。人员、材料与通路可用，相邻也有可挖地形；你还没核对水位和相邻空间。你先做什么？",
+          "scene": "当前已经发生的地下进水",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_CELLAR",
+            "GM9F_CURRENT",
+            "GM9F_ED_WATER",
+            "GM9F_ED_FLOOD"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己猜现有水能流向相邻较低空处，只开挖这一处当前可挖土格，再观察水的实际去向",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先按现有人员排好搬离食物、运材料与施工的次序，再实际安排",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先查看地下房间和物品当前状态，不急着断定原因",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有的地窖与水流说明，再继续当前尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "只在已启用且实际发生地窖进水时，预测当前水流并单挖相邻一处检验；未询问题干已给出的事件原因，不保证排净或安全解法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F05.DEFAULT.V1"
+        },
+        {
+          "text": "没有地窖或未开进水事件时，地面储存还有物品可搬，基础遮蔽也能建，眼前物资安全。这轮怎么用工？",
+          "scene": "当前已经发生的地下进水的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_CELLAR",
+            "GM9F_CURRENT",
+            "GM9F_ED_WATER",
+            "GM9F_ED_FLOOD"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清先搬哪批物品、再运什么料和搭哪一处遮蔽，并实际安排",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "比较当前可做的储存与遮蔽方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "跟看居民这次实际怎样取物、搬运和入库",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "补记你已经观察或安排过的食物储存和运输过程",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "只在已启用且实际发生地窖进水时，预测当前水流并单挖相邻一处检验；未询问题干已给出的事件原因，不保证排净或安全解法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F05.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "同一存档里，一名居民此前已被你为某项技能安排过工作与休息，当前仍有合适任务可让他继续。技能与工作面板都可查，换别人来做也行，日常供给安全。这次更愿怎样安排？",
+          "scene": "同一居民的工作技能",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把不同居民的生产、做饭、搬运与休息连续照看几天，按食物材料库存和实际需求再改分工",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先看当前居民与工作面板，比较眼前谁可做什么",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "把这个居民已经做过的工作和日常经历补记下来",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "继续给同一名已培养过的居民安排该技能对应工作，也留出休息，跨日关注这项技能留下的成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "持续养成是同一已有技能的 NPC 对象，绝不由其技能高低推玩家能力；NPC 劳动不计 t。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F06.DEFAULT.V1"
+        },
+        {
+          "text": "刚开局时，你尚未长期培养居民，但已能看他们的工作技能并分配采食、烹饪或建造。没有紧急需求，这轮先做什么？",
+          "scene": "同一居民的工作技能的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续几轮照看食物回补、搬运施工和居民休息，按库存与需求再改工作分配",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按已有材料和人员排好这一处基础建筑的施工次序",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "记录你已实际看到的居民采食、搬运或休息过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前技能、需求和工作状态再分配",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "持续养成是同一已有技能的 NPC 对象，绝不由其技能高低推玩家能力；NPC 劳动不计 t。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F06.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你的商队已到达一个当前可交涉的 NPC 聚落，外交面板正列着一笔货物交付要求及回报。本次交付点是区域图上另一个已显示、当前可达的地点；商队已带所需货物，人员也可行动，尚无有效协议。这轮先做什么？",
+          "scene": "NPC 协议的具体要求",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_DIPLOMACY",
+            "GM9F_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前这笔交付换回报，与把这批货留作聚落供给这两种可做方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "接下当前这项协议后，按已显示的交付目标实际推进可做的一段",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对这次已显示的交付地点、回报与期限，再决定是否接下",
+              "signal": "mission_briefing_review"
+            },
+            {
+              "id": "D",
+              "label": "按商队现有货物和人员，排清接下协议后去已显示地点交付的行程步骤，再实际出发",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "只给当前实际可交涉和明确出现的选项；NPC 协议不是 q/o，单个交付也不是持续系统。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F07.DEFAULT.V1"
+        },
+        {
+          "text": "没有外交经历时，当前早期建设目标已出现，原料、人员和施工点都可检查。你尚未安排这一处遮蔽或储存，这轮先做什么？",
+          "scene": "NPC 协议的具体要求的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_DIPLOMACY",
+            "GM9F_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前可做的遮蔽和储存方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "先查看人员、物品与当前工作面板",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前已出现的建设目标与条件，再实际推进可做部分",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "排好手头材料搬运和本轮施工的次序，再下令",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "只给当前实际可交涉和明确出现的选项；NPC 协议不是 q/o，单个交付也不是持续系统。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F07.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "当前你已有两种可支付的墙体材料和多层建造工具，一处小房间能继续扩，结构尚安全。没有必须赶完的目标，这轮愿怎样用时间？",
+          "scene": "楼层工具与一段墙材试改",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_CELLAR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排本轮支撑、运料与建墙的顺序，再实际安排",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际把这段墙的预览换成当前另一种可支付材料，先看一次外观和位置结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "按自己的“上层明亮、下层收敛”主题调整楼层轮廓与入口",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "反复练楼层切换、选择和放置预览，重点是熟悉操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "多层个人主题、玩家反复练预览、当轮施工与一次材料试改分开；普通少用一种墙材不是额外玩法规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F08.DEFAULT.V1"
+        },
+        {
+          "text": "刚建地面营地时，你可放基础墙与屋顶，还能用当前地形留一处敞开作业区。材料够一段，没有眼前危机，这轮做什么？",
+          "scene": "楼层工具与一段墙材试改的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_CELLAR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前墙、屋顶和可用空间的方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "为自己的临时营地主题安排墙线、遮蔽与开口位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "反复练选择、旋转当前可用建筑预览，想练熟工具",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按现有人员排清运料和本轮施工的先后，再推进",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "多层个人主题、玩家反复练预览、当轮施工与一次材料试改分开；普通少用一种墙材不是额外玩法规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F08.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回看你已经处理过的一段储存或温度变化，哪种当时确实做过的投入更有分量？不要求解释成立或食物最终保存好。",
+          "scene": "已检验过的储存解释",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GM9F_CELLAR",
+            "GM9F_STORE",
+            "GM9F_RESEARCH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我自己猜过栅门影响室内热量，只把一扇门改成当时可建的实门、其他安排不动，并对照过温度变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先看过房间、温度或物品状态，再决定怎么继续",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "我把采食、烹饪、运输与储存连着调过几轮，按食物库存与损耗再改工作安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我补记过实际发生的储存、搬运或食物损耗过程",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去的推测与实测，不以修好或成功保鲜为入选条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F09.DEFAULT.V1"
+        },
+        {
+          "text": "回想只有地面储存与基础遮蔽时的一段，哪种实际行动更有分量？",
+          "scene": "已检验过的储存解释的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GM9F_CELLAR",
+            "GM9F_STORE",
+            "GM9F_RESEARCH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我自己猜过露天条件影响物品损耗，只给同一存处补过屋顶、保持其他存放安排，并对照过同类物品状态",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先查看过当时物品、人员和存放状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "我排过搬物、运料与搭遮蔽的次序，并实际安排",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "我把已经发生的食物入库和搬运过程补记下来",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去的推测与实测，不以修好或成功保鲜为入选条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F09.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回顾你已经投入过研究书或居民技能的一段，哪种确实做过的投入更能代表你？",
+          "scene": "留下来的对象与积累",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_RESEARCH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过实体研究书搬运与存处施工的当轮步骤，并实际推进过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "我把写书、食物、搬运与休息连续几轮一起调过，按书籍安置、库存和居民需求再改分工",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我补记过已经实际投入的研究桌、书籍安置或房屋建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我给同一名已经培养过的居民持续安排过对应技能工作，也为他留出休息并跨日关注成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "同一已投入居民的技能成长可计 g；实体书存处施工与记录为中性，不把库存增加或即时买技术硬计养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F10.DEFAULT.V1"
+        },
+        {
+          "text": "尚未长期培养居民或积累研究书时，回看你已建过的营地，哪种实际经历更有分量？",
+          "scene": "留下来的对象与积累的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_RESEARCH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过材料搬运、施工和家具安置的本轮次序，并实际推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "我连续几轮一起调整过采食、做饭、搬运和睡眠，按当时库存与需求再改工作",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我补记过已经搭建的基础遮蔽或家具过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的营地主题安排过床位、储存与入口",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "同一已投入居民的技能成长可计 g；实体书存处施工与记录为中性，不把库存增加或即时买技术硬计养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F10.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你已用过多层工具，并实际搭好过支撑或楼板部分的一段，哪种当时做过的事更有分量？不要求最后盖成整座塔。",
+          "scene": "已建楼层与多层工具经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_CELLAR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我反复练过楼层选择、预览放置和调整操作，重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我先比较过当时可用结构和材料方案，再选择投入",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "我给自己已经实际搭好的支撑或楼板部分补记过建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我为自己的高塔或地下空间主题实际安排过楼层与轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "回顾实际已建部分、当前结构材料比较、主题布局和主动反复练工具；普通不用一种墙材不硬计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F11.DEFAULT.V1"
+        },
+        {
+          "text": "回想只建过地面临时营地时的一段，哪种已经做过的事更有分量？",
+          "scene": "已建楼层与多层工具经历的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_CELLAR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主动重复练过基础建筑预览的选择、旋转与放置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我排过本轮运料与施工次序，并照着安排过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "我先比较过已有储存与新建遮蔽的材料、人员条件，再选择投入",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "我为自己的营地样子改过墙线和入口位置",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "回顾实际已建部分、当前结构材料比较、主题布局和主动反复练工具；普通不用一种墙材不硬计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F11.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GM09F12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你有精力、还有可开工程，而且没有眼前袭击或生活危机的一段。哪种当时做过的选择更有分量？",
+          "scene": "熟悉聚落里的自主停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_RESEARCH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我跟看过居民实际工作与生活的过程，再决定后续怎么调",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "我主动留在熟悉的院落或室内，照看日常作息，因为喜欢这份从容重复",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我把食物、研究书、搬运与休息连续几轮一起调过，按实际库存和居民需求再改工作优先级",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的聚落外观主题改过房间、入口或层间轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "主动熟悉体验有余力与可继续前提；不由居民发呆或工作动画推即时手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F12.DEFAULT.V1"
+        },
+        {
+          "text": "回想早期营地还能扩建、你也有精力且没有紧急危险的一段，哪种真实选择更有分量？",
+          "scene": "熟悉聚落里的自主停留的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GM9F_STORE",
+            "GM9F_RESEARCH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我跟看过居民实际取食、工作或休息的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "我主动回到熟悉的床位与作业区照看日常，喜欢从容重复而暂缓新工程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我连续几轮协调过采食、做饭、搬运与睡眠，按当时食材成餐的存量再改工作",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我为自己喜欢的营地样子改过储存与入口空间",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "主动熟悉体验有余力与可继续前提；不由居民发呆或工作动画推即时手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GM09F12.DEFAULT.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+37033eddb617"
+}

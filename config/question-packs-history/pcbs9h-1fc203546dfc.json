@@ -1,0 +1,2819 @@
+{
+  "id": "pcbs9h",
+  "title": "装机模拟器 PC Building Simulator",
+  "game_ids": [
+    "steam-621060"
+  ],
+  "scope": "PC初代原职业、Free Build与正式免费IT扩展；不混PCBS2或付费Esports",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "How to Build是固定分步教学，不假造教程自由订单或采购；基础拆装替代只取实际已可用操作。",
+    "Tablet/Calendar只在IT路径当前已启用时使用。原作可测试冷却配置，不写2代热像仪、风扇曲线、可选机箱风扇朝向或真实逐位置风道。",
+    "客户部件不当自有财产出售；NPC同事和客户不冒充真人同伴。普通换件、比较与保存不给组合/成长分。"
+  ],
+  "modes": [
+    {
+      "id": "career",
+      "label": "原职业：客户订单、预算、采购与装配",
+      "initial_variants": {
+        "PCBS9H01": "PCBS9H01.CAREER.V1",
+        "PCBS9H02": "PCBS9H02.CAREER.V1",
+        "PCBS9H03": "PCBS9H03.CAREER.V1",
+        "PCBS9H04": "PCBS9H04.CAREER.V1",
+        "PCBS9H05": "PCBS9H05.CAREER.V1",
+        "PCBS9H06": "PCBS9H06.CAREER.V1",
+        "PCBS9H07": "PCBS9H07.CAREER.V1",
+        "PCBS9H08": "PCBS9H08.CAREER.V1",
+        "PCBS9H09": "PCBS9H09.CAREER.V1",
+        "PCBS9H10": "PCBS9H10.CAREER.V1",
+        "PCBS9H11": "PCBS9H11.CAREER.V1",
+        "PCBS9H12": "PCBS9H12.CAREER.V1"
+      }
+    },
+    {
+      "id": "free_build",
+      "label": "自由构建：本体部件与个人电脑试验",
+      "initial_variants": {
+        "PCBS9H01": "PCBS9H01.FREE_BUILD.V1",
+        "PCBS9H02": "PCBS9H02.FREE_BUILD.V1",
+        "PCBS9H03": "PCBS9H03.FREE_BUILD.V1",
+        "PCBS9H04": "PCBS9H04.FREE_BUILD.V1",
+        "PCBS9H05": "PCBS9H05.FREE_BUILD.V1",
+        "PCBS9H06": "PCBS9H06.FREE_BUILD.V1",
+        "PCBS9H07": "PCBS9H07.FREE_BUILD.V1",
+        "PCBS9H08": "PCBS9H08.FREE_BUILD.V1",
+        "PCBS9H09": "PCBS9H09.FREE_BUILD.V1",
+        "PCBS9H10": "PCBS9H10.FREE_BUILD.V1",
+        "PCBS9H11": "PCBS9H11.FREE_BUILD.V1",
+        "PCBS9H12": "PCBS9H12.FREE_BUILD.V1"
+      }
+    },
+    {
+      "id": "it_expansion",
+      "label": "免费IT：Irratech票据与已开放现场工作",
+      "initial_variants": {
+        "PCBS9H01": "PCBS9H01.IT_EXPANSION.V1",
+        "PCBS9H02": "PCBS9H02.IT_EXPANSION.V1",
+        "PCBS9H03": "PCBS9H03.IT_EXPANSION.V1",
+        "PCBS9H04": "PCBS9H04.IT_EXPANSION.V1",
+        "PCBS9H05": "PCBS9H05.IT_EXPANSION.V1",
+        "PCBS9H06": "PCBS9H06.IT_EXPANSION.V1",
+        "PCBS9H07": "PCBS9H07.IT_EXPANSION.V1",
+        "PCBS9H08": "PCBS9H08.IT_EXPANSION.V1",
+        "PCBS9H09": "PCBS9H09.IT_EXPANSION.V1",
+        "PCBS9H10": "PCBS9H10.IT_EXPANSION.V1",
+        "PCBS9H11": "PCBS9H11.IT_EXPANSION.V1",
+        "PCBS9H12": "PCBS9H12.IT_EXPANSION.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "PCBS9H01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "初代原职业有一台客户机已到工作台，邮件已列清灰要求和预算可读；当前能做基础清灰与检查，尚未确定要不要采购。你先做什么？",
+          "scene": "先看邮件还是动手",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对这份工作已经显示的要求、预算和现有部件状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排好开侧板、查看、清灰与重新接线的一轮动作，再亲手做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手拆装侧板与螺丝，投入点击与部件就位即时相连的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先按已明确的清灰要求推进，让这份客户任务向前走",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "原职业不借IT平板，预算与亲手动作各自可答",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H01.CAREER.V1"
+        },
+        {
+          "text": "只有最早清灰或病毒订单经验也能答：客户机已在台上，邮件和基础工具当前可用。先做什么？",
+          "scene": "先看邮件还是动手的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "看邮件已有要求与这台机已显示的任务状态，再动手",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排好开盖、处理已知任务再接线开机的动作，亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手开盖拧螺丝，留意鼠标操作与部件立即响应的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先完成邮件已明确的一项清灰或软件工作，推进订单",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "原职业不借IT平板，预算与亲手动作各自可答",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H01.CAREER.ALT1"
+        },
+        {
+          "text": "你在初代Free Build，当前可从本体部件中自由选用，不需要接客户订单；机箱与零件都可取用。现在先做什么？",
+          "scene": "无预算的初代自由构建",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想表达的配色和线缆主题实际搭一台，让外观有自己的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可用机箱、主板与冷却器条件，再决定这轮方案",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "排好取机箱、选件、装入与接线的动作顺序，亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "在可重复基础拆装上反复练鼠标控制，重点是练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "FreeBuild不虚构资金或订单限制，步骤计划不是y",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H01.FREE_BUILD.V1"
+        },
+        {
+          "text": "刚打开Free Build还不会水冷或超频时：普通机箱和基础部件已能取用。你先做什么？",
+          "scene": "无预算的初代自由构建的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用内置可选颜色的部件与线缆实际配一个自己选的主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前几种基础机箱与可装部件条件，暂不装测",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "排清开箱、装件和接线的当前步骤，再亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "在可拆下装回的基础部件上反复练选取与固定，目的是练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "FreeBuild不虚构资金或订单限制，步骤计划不是y",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H01.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "你在初代免费IT扩展的Irratech工作间，当前票据已列一项清灰或软件要求，平板设置已启用且台边可读；电脑和基础工具也已在手。先做什么？",
+          "scene": "台边查看IT票据",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在台边核对票据已显示要求和这台机当前状态，再决定动手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排好开盖、查看、清理与重接线的动作，再亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手拆装侧板，投入点击与螺丝和部件响应紧接着发生的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先处理票据中一项已明确的软件或清灰任务，推进本次服务",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "平板只在免费IT且当前启用，不借原职业界面",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H01.IT_EXPANSION.V1"
+        },
+        {
+          "text": "刚开始免费IT流程，当前票据和一台工作间电脑已可处理；即使平板提示关闭，桌面票据界面可读。先做什么？",
+          "scene": "台边查看IT票据的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在当前可用界面核对票据要求和机上状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排好开盖、处理已知事项与接线的顺序，亲手试一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "亲手固定或拆下侧板，享受输入和螺丝响应的直接联系",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先完成票据里一个已明确的基础任务，把本次服务推进",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "平板只在免费IT且当前启用，不借原职业界面",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H01.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "一台你已动过的客户机现在风扇转但屏幕没内容；具体原因未查明，外接线和内部接线都可检查。你先做什么？",
+          "scene": "启动异常原因未明",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前已有任务和连接提示，核对已显示状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "按现有工具说明逐项了解怎样拆装，再回来实际试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先排断电、查看外接、开盖查内部的一轮动作，再亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "自己先猜显示连接有问题，只核对并调整显示线这一处再开机，检验解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "给观察现象而非直接给坏显卡答案，单项实测允许否定",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H02.CAREER.V1"
+        },
+        {
+          "text": "早期客户机在你处理后没有预期显示，具体原因未知；当前允许接线和开机，不要求特殊诊断程序。先怎样做？",
+          "scene": "启动异常原因未明的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看界面已有连接与工作状态，不预先猜原因",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先读已有接线操作提示，再亲手继续尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好断电、接线与重新开机的当前步骤，实际按顺序试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "提出可能是外接显示线的解释，只改这一连接再开机，核对变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "给观察现象而非直接给坏显卡答案，单项实测允许否定",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H02.CAREER.ALT1"
+        },
+        {
+          "text": "你自由构建的电脑现在没出现预期画面，原因未知；基础接线与开机操作可做，机箱也能打开。先做什么？",
+          "scene": "自己的机未能启动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_DIAG",
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前已有连接与部件状态，核对现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先读已有基础接线说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好断电、核对外接和内部接线的一轮动作，按顺序试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "自己猜是外接显示线，其他部件不变只调整这一条连接再开机，核对解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不因自由模式就把未知诊断直接给定",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H02.FREE_BUILD.V1"
+        },
+        {
+          "text": "第一次在Free Build装基础机，开机后没有预期显示；具体原因还不知道。你先怎样用手头工具？",
+          "scene": "自己的机未能启动的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_DIAG",
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对界面当前已显示的接线与装配状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先看基础接线提示，再继续自己的实际尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好关机、检查外接再进机箱的动作次序，亲手照做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先提出显示连接影响的解释，只改这一连接再开机比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不因自由模式就把未知诊断直接给定",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H02.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "免费IT中你已接到并能前往一份现场服务，目标机在该地点可操作；到场后机器没有预期显示，原因未知，外接线可检查。先做什么？",
+          "scene": "已开放现场服务",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_IT_OFFSITE",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看票据已显示要求和当前连接状态，不预设原因",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先观察已可达的设备和工作位，核对现场再动手",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先排关机、查外接与回到机内的工具动作，再亲手执行",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "自己猜显示连接有问题，只调整这条线再开机，核对这个解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "现场服务须已开放并已到场，不凭现实IT经验出答案",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H02.IT_EXPANSION.V1"
+        },
+        {
+          "text": "还没开放现场服务时：免费IT工作间一台机处理后没出现预期画面，具体原因未知，基础接线可做。先怎样投入？",
+          "scene": "已开放现场服务的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_IT_OFFSITE",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对当前已显示连接与票据状态，先看现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先读当前接线工具已有操作提示，再亲手继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好断电、查外接和机内连接的步骤，亲手按顺序试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先猜显示线连接影响画面，只改这一处再开机，检验解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "现场服务须已开放并已到场，不凭现实IT经验出答案",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H02.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "当前两份已接受订单都需要已确定的替换件；商店现在可买、钱足够，界面显示的交付日和运送选项可比较。其中一台另有已明确的清灰要求。先把空档用在哪？",
+          "scene": "采购和到货日",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对两份已显示的预算、要求与到货条件",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先把手头已能做的明确清灰任务推进，处理当前订单",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "把这次已有件、采购、到货与两台机动手的先后排清，再照安排做",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可买的兼容替换方案，暂不下单装机",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "当天排单不自动持续系统y，也不制造实时倒计时",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H03.CAREER.V1"
+        },
+        {
+          "text": "只有一份早期订单时：替换件已经查明，店里有当前可买型号且钱够；其他基础清理还可做。先做什么？",
+          "scene": "采购和到货日的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看邮件预算与当前任务状态，核对再采购",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先把已明确的清灰或软件任务完成一项，推进这次工作",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "排清这次核对、订件、等待到货与回台装配的步骤，并按安排推进",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可买兼容件，再决定选哪件",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "当天排单不自动持续系统y，也不制造实时倒计时",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H03.CAREER.ALT1"
+        },
+        {
+          "text": "Free Build中你已有能运行OCCT的自用机，机箱支持你当前可选的散热器和额外风扇。当前线缆与已装灯光也可调。你先怎样投入这轮配置？",
+          "scene": "散热部件互补",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换上一套已可用冷却配置，体验它的运行表现",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先给线缆与已装灯光做自己选的色调主题，重视呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "实际试两套兼容CPU冷却器与机箱风扇组合，在相同负载下比较整体冷却表现，想看组件怎样配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "只先比较这些当前可选部件的条件，暂不装测",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "实际兼容互补且测试才b，不将所有装机都算组合",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H03.FREE_BUILD.V1"
+        },
+        {
+          "text": "没用过OCCT时：基础机箱、可装部件和线缆都可选，尚不需要性能测试。你先做什么？",
+          "scene": "散热部件互补的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好取件、装入与接线的步骤，按顺序动手",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "按自己选的部件和线缆色调实际搭一小段，重视个人呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "比较当前基础部件的兼容条件，再决定这轮用谁",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读已有装配说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "实际兼容互补且测试才b，不将所有装机都算组合",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H03.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "IT扩展里，手头已有一件到货的备件，Calendar也显示了几笔已下单的待到货安排；各票据的交付条件当前可读。眼前有一项基础任务能先做，另一些要等件。你先做什么？",
+          "scene": "Calendar与备件安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前可用的兼容部件方案，暂不下单装测",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先处理眼前已能完成的一项票据目标，推进当前服务",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "把这次已到件、待到件、取件与各台机动手的先后排清，再照安排做",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对Calendar、票据与已显示库存状态，不急着动手",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "本次排单0分，不将查看日历叫持续系统",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H03.IT_EXPANSION.V1"
+        },
+        {
+          "text": "只开始一份免费IT基础票据时：现有部件与可做步骤已显示，基础工具可用，不要求Calendar已启用。先选什么？",
+          "scene": "Calendar与备件安排的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前可用基础工具说明，再亲手继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先做完一项票据里已明确的清灰或软件要求",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "排好本次查看要求、备件和亲手处理的次序，再按安排推进",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前票据和已有状态，再决定下一步",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "本次排单0分，不将查看日历叫持续系统",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H03.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前客户允许更换冷却，预算够；现有库存与预算足以试两种兼容CPU散热器和机箱风扇组合，OCCT也可用。你先选什么？",
+          "scene": "冷却与机箱的真实配合",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按客户已列要求完成一项已确定改装，重点是推进订单",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际试两种CPU冷却器与机箱风扇的组合，以相同负载比较整体冷却表现，想看组件怎样配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先比较这些当前可用部件的安装条件，暂不装上检验",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "实际换上一个已可用冷却配置，先体验它的表现",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "组件互补加真实测试才b，不是任意装几件",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H04.CAREER.V1"
+        },
+        {
+          "text": "还没有OCCT或冷却改装时：早期客户机能用基础工具拆装，已确定一项清灰或软件任务。现在先做什么？",
+          "scene": "冷却与机箱的真实配合的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先完成当前明确的一项清灰或软件要求，推进工作",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前已显示任务和已有部件状态，再决定动手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "读已有基础拆装或软件操作提示，再亲手继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "排好开盖、清灰与重接线的动作顺序，亲手走一轮",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "组件互补加真实测试才b，不是任意装几件",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H04.CAREER.ALT1"
+        },
+        {
+          "text": "你的Free Build电脑已装GPU Tuner并能运行OCCT，显卡的Core Clock当前可调；刚才一次负载测试出现不预期表现，具体原因尚未查明。先怎样用这一轮测试？",
+          "scene": "原作超频单项实测",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_OC",
+            "PCBS9H_CURRENT"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换用一个当前可选配置运行，先体验它的表现",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先猜显卡核心频率影响这次负载表现；保持电压、显存频率和硬件不变，只改GPU Tuner的Core Clock并应用，再跑同一OCCT测试核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先查看测试已显示的温度、功耗与当前测试状态，暂不定原因",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前GPU Tuner与OCCT已有操作说明，再继续自己的修改",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "GPU Tuner的Core Clock单项假设与同一OCCT实测；不套现实安全电压、温度阈值或2代热像仪，不保证修好或测试通过。早期ALT仍是基础接线检查，不要求超频经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H04.FREE_BUILD.V1"
+        },
+        {
+          "text": "还没用过超频软件时：基础自由机能开盖接线，但启动没有预期显示，原因未知。先怎样做？",
+          "scene": "原作超频单项实测的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_OC",
+            "PCBS9H_CURRENT"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换上另一种当前可用且兼容的普通部件型号试机，先体验这套配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "自己猜外接显示线影响，只改这一连接再开机检验",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先看已显示连接和装配状态，了解现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先读已有接线操作提示，再亲手试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "GPU Tuner的Core Clock单项假设与同一OCCT实测；不套现实安全电压、温度阈值或2代热像仪，不保证修好或测试通过。早期ALT仍是基础接线检查，不要求超频经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H04.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "IT流程已经出现出售闲置整机的说明，你手上确有自己可处置的备用电脑和可用零件；这台备用机线缆与已装灯光也可调，当前客户机也有可做任务。先把时间给哪件？",
+          "scene": "闲置整机的另一条流程",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排核对备用机、处理客户机与取放部件的本次步骤，照安排动手",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "按当前已开放的出售流程实际提交这台可处置备用机，亲手试一次整机出售",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先比较备用机当前可用部件和配置条件，暂不改装",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "给备用机的线缆与已有灯光实际做自己的配色主题，重视呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不把客户财产当自有出售，普通卖机不叫收藏或成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H04.IT_EXPANSION.V1"
+        },
+        {
+          "text": "还没开放卖整机时：免费IT当前只有客户机和一项已明确基础工作，基础工具可用。你先做什么？",
+          "scene": "闲置整机的另一条流程的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好本次取放工具与处理步骤，亲手照着试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "按票据要求实际推进一项软件或清灰任务",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前已显示要求与机上状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先读已有拆装或软件工具提示，再亲手继续",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "不把客户财产当自有出售，普通卖机不叫收藏或成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H04.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已能用OCCT，当前客户机的兼容硬件允许在BIOS里调整CPU的Ratio；刚才负载测试出现不预期表现，具体原因尚未查明。先怎样投入这一轮？",
+          "scene": "压力测试给现象而非答案",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_OC",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜CPU倍频影响这次负载表现；保持基准时钟、电压、硬件和其他设置不变，只改BIOS的Ratio并保存，再跑同一OCCT测试核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先查看测试当前已显示的温度、功耗与状态，暂不定原因",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先读当前测试程序已有操作说明，再回来实际尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "反复练进入BIOS、调Ratio、保存并回OCCT的操作，目的是练熟这一轮软件操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "负载主项由本人先提出CPU倍频影响的解释，只改Ratio再跑同一测试；不采用旧攻略的安全电压或保证通过。病毒订单早期ALT仅记录当前可用扫描操作，不把已给病毒要求再包装成推理。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H05.CAREER.V1"
+        },
+        {
+          "text": "只有早期病毒订单时：电脑能启动，但客户任务仍没完成；你还没查明遗漏，USB与扫描程序当前可用。先做什么？",
+          "scene": "压力测试给现象而非答案的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_OC",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接上当前可用USB，安装并运行病毒扫描，亲手体验这一次软件检查",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有任务状态与邮件要求，不猜原因",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先看USB与程序安装的已有说明，再亲自继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "为了练熟，实际重复练几次已可做的安装、重启与进入程序操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "负载主项由本人先提出CPU倍频影响的解释，只改Ratio再跑同一测试；不采用旧攻略的安全电压或保证通过。病毒订单早期ALT仅记录当前可用扫描操作，不把已给病毒要求再包装成推理。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H05.CAREER.ALT1"
+        },
+        {
+          "text": "Free Build里当前气冷与水冷都可用，你的自用机没有客户强制要求，两种都能进行。你先给这一轮什么行动？",
+          "scene": "自己的额外构建条件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "明确额外禁用本可用水冷，并实际尝试一段全气冷构建，不要求跑分达标",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "普通换上一套已有可选冷却配置，先实际体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "按自己选的灯光与线缆主题实际做外观，重视个人风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前气冷与水冷可用部件，再决定这轮方案",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "真实机制禁用，不把普通换风冷叫自创新规则",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H05.FREE_BUILD.V1"
+        },
+        {
+          "text": "只会基础装机时：当前机箱有可用机箱风扇位置，基本硬件能构成一台自用机，不要求超频。你先做什么？",
+          "scene": "自己的额外构建条件的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给这一轮额外禁用本可安装的机箱风扇，实际尝试仅用CPU冷却器构建一段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "换一个当前可用兼容的基础部件，亲手体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "用当前可选线缆颜色实际做一个自己选的配色主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先比较已有基础部件与安装条件，暂不装测",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "真实机制禁用，不把普通换风冷叫自创新规则",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H05.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "免费IT当前已开放DEKOR，你已有能用于工作间的陈设和当前可改外观；手头票据仍有能推进的任务。先做什么？",
+          "scene": "DEKOR工作间呈现",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_IT_DEKOR",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的主题实际改工作间已有陈设与外观，让它表达自己的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先浏览当前已开放的DEKOR呈现方案，再决定用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "在当前已开放的DEKOR方案中选一项实际应用，亲手体验这次工作间呈现操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先把当前票据的已有资源和动手步骤排清，再实际继续",
+              "signal": "work_task_preparation_plan"
+            }
+          ],
+          "design_purpose": "当前已得DEKOR方案可实际应用或用于主题呈现，不假设任意位置/物件调色；早期自用机线缆是独立替代",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H05.IT_EXPANSION.V1"
+        },
+        {
+          "text": "没有DEKOR经验时：IT工作间有自己的可操作电脑，当前可选线缆颜色，客户票据也能继续。先选什么？",
+          "scene": "DEKOR工作间呈现的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_IT_DEKOR",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用已有可选线缆颜色给自用机实际做自己的配色主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前已有线缆外观方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对客户票据与机上已显示状态，再决定动手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "排好本次取件、接线与处理票据的动作，再亲手试",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "当前已得DEKOR方案可实际应用或用于主题呈现，不假设任意位置/物件调色；早期自用机线缆是独立替代",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H05.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你自己的办公电脑当前可改线缆颜色与已装的RGB设置，资金也够购买一项已开放工具升级；客户工作仍可做。先选什么？",
+          "scene": "办公电脑的呈现",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前已有外观选项，再决定怎么呈现",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "花已有资金买下已经开放且可支付的一项工具升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "有精力且客户单可推进，仍按熟悉次序慢慢拆下、装回基础件，喜欢自己掌握步调的安稳台边工作",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "按自己选的色调主题实际改线缆和灯光，让这台机呈现自己的风格",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不借2代喷漆贴纸，购买一次工具不叫持续成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H06.CAREER.V1"
+        },
+        {
+          "text": "还没有RGB时：当前自己的办公机可选普通线缆颜色，基础清理和一份客户工作可做；不要求水冷。先做什么？",
+          "scene": "办公电脑的呈现的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先浏览当前可选线缆外观，再决定用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "先核对客户机当前任务和要求，了解现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "自己有精力且客户任务能做，仍挑熟悉基础件从容拆下装回，享受这套不用赶着换目标的小过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "用已有线缆颜色实际配出自己选的色调，重视个人呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不借2代喷漆贴纸，购买一次工具不叫持续成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H06.CAREER.ALT1"
+        },
+        {
+          "text": "自由构建里你已完成一份可保存的电脑作品，原作多份Free Build保存可用；还可继续改灯光或冷却。先把空档给什么？",
+          "scene": "真正的本机作品保存",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想要的色调主题继续实际改灯光和线缆，重视呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可选的冷却与部件方案，再决定改谁",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "自己有精力且可另开构建，仍按熟悉次序慢慢取放基础件，喜欢安稳地待在这张工作台前",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "把这份作品存入本机可用的Free Build保存列表，先保留这次创作",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "原作v1.13确有多份自由作品保存，不把保存叫成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H06.FREE_BUILD.V1"
+        },
+        {
+          "text": "还没搭完整机时：你已放机箱并装了几件基础部件，这份Free Build项目当前具备保存条件；也能继续装配。先做什么？",
+          "scene": "真正的本机作品保存的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用当前可选线缆颜色继续实际做自己选的色调",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前已显示装配与接线状态，再决定下一步",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "自己有精力且别处可装，仍从容拆装已会处理的基础件，享受由自己定步调的熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "用现有本机保存操作把这份小作品留在Free Build列表",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "原作v1.13确有多份自由作品保存，不把保存叫成长",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H06.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "一份当前已开放的IT服务明确含可选打印机敲修，目标打印机已能操作；电脑必做部分也还可推进。先做什么？",
+          "scene": "可选打印机处理",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按这份票据明确的打印机可选目标实际处理，重视多完成这项服务",
+              "signal": "optional_objective"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前票据的必做、可选与已完成状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先去推进电脑部分的一项已列任务，重视当前主目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "亲手试打印机的敲击操作，投入输入与敲声、机器反应立即连起来的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "打印机是IT实有可选事项，不把NPC维修动画当反馈",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H06.IT_EXPANSION.V1"
+        },
+        {
+          "text": "尚没遇到打印机任务时：IT工作间电脑当前能开盖清灰，票据已给一项基础要求。先做什么？",
+          "scene": "可选打印机处理的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了练熟，在可重复基础拆装上主动多练几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前票据和装配状态，了解现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先按已经明确要求推进一项清灰或软件任务",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "亲手拧动侧板螺丝，投入输入与部件回应的即时感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "打印机是IT实有可选事项，不把NPC维修动画当反馈",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H06.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "原职业里你已连做多天订单，库存、可用工作台与收支都已出现。手头两台已接客户机均有明确工作，其中一台需订的替换件已查明且当前可买；另有可接订单，钱够继续运转。你先把注意力放在哪？",
+          "scene": "多天经营还是当前一单",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看已显示预算和订单状态，再决定下一步",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先完成一项当前已经明确的客户要求，推进这份工作",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "把接单、备件周转、工作台占用与后续收入接成能跨多天继续运转的安排，并实际继续一轮",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "只把今天这次订件与两台机操作顺序排好，再按计划做",
+              "signal": "work_task_preparation_plan"
+            }
+          ],
+          "design_purpose": "只有跨多天互相依赖的经营资源流才y，今日顺序0分",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H07.CAREER.V1"
+        },
+        {
+          "text": "刚接第一两份早期工作时：当前只有基础工具、一台可处理客户机和已有订单要求。你先做什么？",
+          "scene": "多天经营还是当前一单的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在可重复的基础拆装中反复练控制，重点在练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "按已明确要求完成一项清灰或软件任务，推进当前订单",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "排清这次核对所需工具、确定当前可做步骤与回台处理的先后，再亲手按安排推进",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前邮件和机上状态，了解现状",
+              "signal": "work_task_state_review"
+            }
+          ],
+          "design_purpose": "只有跨多天互相依赖的经营资源流才y，今日顺序0分",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H07.CAREER.ALT1"
+        },
+        {
+          "text": "你在Free Build已实际跑过一次3DMark，界面可查看那次分数；当前有两套CPU与显卡搭配，均兼容手头主板、机箱和电源，能改配置再跑。你先把时间用在哪？",
+          "scene": "跑分不是修理速度",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_OC",
+            "PCBS9H_BENCHMARK"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只先比较当前可选部件方案，还不装测",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先排取件、换装、接线与测试的动作步骤，再亲手执行",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "以自己刚才留下的正式3DMark分数为纪录目标，实际调整当前可用配置再跑一轮，尝试争取更高分，不要求超过",
+              "signal": "score_goal_attempt"
+            },
+            {
+              "id": "D",
+              "label": "实际试这两种兼容CPU与显卡搭配，用同一3DMark比较CPU项与显卡项共同构成的整机表现",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "正式跑分比较不虚构排行榜，配置联动必须真测试",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H07.FREE_BUILD.V1"
+        },
+        {
+          "text": "还没装过跑分程序时：当前基础机可以继续拆装，几件兼容部件可取用。先做什么？",
+          "scene": "跑分不是修理速度的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_OC",
+            "PCBS9H_BENCHMARK"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已显示的装配和接线状态，了解现状",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排清这一轮取件、装入和接线动作，亲手按顺序试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "在可重复基础拆装上练选取与固定，重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前几件可用部件的条件，再决定用谁",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "正式跑分比较不虚构排行榜，配置联动必须真测试",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H07.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "IT当前票据允许冷却调整，库存和可支付预算足以试两种兼容CPU冷却器与机箱风扇组合，OCCT也已可用；这台兼容硬件的BIOS里Ratio当前可调。刚才负载表现不合预期，具体原因未知。先选什么？",
+          "scene": "测试不同整体配置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜CPU倍频影响当前负载表现，保持基准时钟、电压与硬件不变，只改BIOS的Ratio并保存，再跑同一OCCT测试核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先按已列票据推进一个已确定工作项目，重视当前服务条件",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "实际试两种冷却器与机箱风扇组合，在相同负载下比较整体冷却表现，想看组件怎样配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前两套部件的兼容与冷却条件，暂不装测",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "实际两套兼容冷却组合才b；p由本人先提CPU倍频解释，只改Ratio并在同一负载核对，不模拟风道朝向或给现实电压阈值。早期未知感染ALT不把客户已明确病毒要求重新当未知。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H07.IT_EXPANSION.V1"
+        },
+        {
+          "text": "还没开放冷却测试时：IT基础机能启动，当前USB和软件工具可用，但票据还有未完处，原因未知。先怎样做？",
+          "scene": "测试不同整体配置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看已有USB和程序操作提示，再回来实际尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "按已明确的一项软件或清灰要求推进，重视当次服务",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对票据已有要求与机上当前状态，不预先诊断",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "自己猜还有病毒，只运行当前可用扫描检查感染，再看是否支持解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "实际两套兼容冷却组合才b；p由本人先提CPU倍频解释，只改Ratio并在同一负载核对，不模拟风道朝向或给现实电压阈值。早期未知感染ALT不把客户已明确病毒要求重新当未知。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H07.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "当前已出现一封回头客户的新邮件，带有此前事情的后续；自己的可测试电脑也可选择气冷或水冷，两套当前都可用且钱够。你先做什么？",
+          "scene": "客户消息与额外限制",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按客户邮件已经明确的要求推进一项工作",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "读下去，想知道这个客户这次事情怎样接上前次经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "给自己的这一轮构建额外禁用本可用水冷，实际用气冷尝试一段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可用冷却部件，再决定怎样构建",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "真实已出现后续才叙事，自己电脑限制不偷改客户必要条件",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H08.CAREER.V1"
+        },
+        {
+          "text": "没有回头客户或水冷时：早期客户机当前能清灰和处理基础任务，已有操作说明可看。先选什么？",
+          "scene": "客户消息与额外限制的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按当前已列要求推进一项工作，不追其他目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先看已有基础工具说明，再回来亲手试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "改变一次已经会的清理或接线次序，实际体验不同做法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "在可重复基础拆装上练控制，主要想练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真实已出现后续才叙事，自己电脑限制不偷改客户必要条件",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H08.CAREER.ALT1"
+        },
+        {
+          "text": "你的自由机当前能继续装配，已有部件可取放，也可开另一份作品；自己有精力与时间。先做什么？",
+          "scene": "手上的动作与熟悉体验",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力且其他构建可做，仍慢慢取放、装回眼熟基础件，喜欢不赶新配置的安稳台边过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "亲手拧螺丝、插入部件，投入输入与就位反馈紧接着发生的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "在可拆装部件上反复练固定和接线，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "把已会装配动作换一次先后，亲手体验不同做法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "普通改动作顺序0分，不把无经济自由构建硬y",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H08.FREE_BUILD.V1"
+        },
+        {
+          "text": "刚会开盖装一两件基础部件时也可答：当前仍能拆下再装回，你有精力继续。先做什么？",
+          "scene": "手上的动作与熟悉体验的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力且别处还能搭，仍按自己的步调拆回、装回熟悉部件，享受这段自在的重复",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "亲手开盖与固定部件，留意鼠标动作和螺丝、插槽响应的即时感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "反复练几次可做拆装，重点是练熟，不要求更快",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "换一次已会步骤的先后，亲手体验不同装配动作",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "普通改动作顺序0分，不把无经济自由构建硬y",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H08.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "IT当前已出现一个公司项目的后续邮件，前情你已体验；工作间自用机也可选气冷或水冷，两套已可用。你先把空档给什么？",
+          "scene": "公司故事与自己加的条件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力且票据能推进，仍把一会儿留给眼熟的开盖与接线，按自己节奏慢慢做，喜欢这份安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "读完这段后续，想知道Irratech里这些人的事情接下来怎样发展",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "给自用机这轮构建明确加“禁用本可用水冷”的条件，实际试一段气冷构建",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已有冷却部件方案，再决定这次用谁",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "只真实已出现公司故事，不把Natalia等NPC当真人合作",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H08.IT_EXPANSION.V1"
+        },
+        {
+          "text": "刚开始IT尚无项目后续或水冷经验：基础电脑、票据和工具当前可用，仍有工作能做。先选什么？",
+          "scene": "公司故事与自己加的条件的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力且可处理票据，仍从容清理、装回熟悉部件，享受不赶着切换服务的安定过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先读当前已有基础工具提示，再亲自继续",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "普通改变一次已会清理和接线的先后，实际体验",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "在可重复基础拆装里多练几次，主要想练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只真实已出现公司故事，不把Natalia等NPC当真人合作",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H08.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你实际玩过的初代原职业工作，不要求高级装机或满星。哪件真实投入最有分量？",
+          "scene": "亲手拆装的过去",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过拆装、接线或程序操作，目的在练熟，不要求后来更快",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因点击、螺丝转动与部件就位即时相连的感觉，实际多做过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "排过取件、断接线与装回的顺序，并亲手按安排试过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且其他订单可做，仍按熟悉次序慢慢开盖、清理过一小段，喜欢那种自主安稳的台边过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "真实输入反馈，不推现实装机能力",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H09.CAREER.V1"
+        },
+        {
+          "text": "只处理过早期清灰或病毒订单，也能回顾。哪件确实做过且最有分量？",
+          "scene": "亲手拆装的过去的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_DIAG"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在基础开盖、接线或程序步骤里重复练过，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因鼠标动作和侧板或螺丝立即响应，实际多做过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先排过开盖、处理和接线动作，再亲手做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且另有工作能做，仍从容开盖、清理过熟悉的一小段，享受自己定步调的感觉",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "真实输入反馈，不推现实装机能力",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H09.CAREER.ALT1"
+        },
+        {
+          "text": "回想初代Free Build里你已经亲手做过的一段，不要求成机或高分。哪件实际投入最有分量？",
+          "scene": "自由装机真实回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过部件选取、固定与接线，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因输入和部件就位的即时反馈，实际多做过一段拆装",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "排过工具取放、装配与测试顺序，并亲手照安排做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且可搭其他作品，仍慢慢拆装过眼熟基础件，喜欢自在地重复这一小套工作",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "真实过去，不以装好电脑或练得更快为门槛",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H09.FREE_BUILD.V1"
+        },
+        {
+          "text": "只在Free Build摸过基本机箱和部件也能回顾。哪件真实做过且有分量？",
+          "scene": "自由装机真实回顾的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在可重复基础拆装上练过选取和固定，当时目的是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因侧板、螺丝紧随鼠标动作响应，实际多操作过一会儿",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先排过开盖、装件、接线顺序，再亲手试过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且别处可搭，仍按自己的节奏取下装回过熟悉部件，享受安定而从容的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "真实过去，不以装好电脑或练得更快为门槛",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H09.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "回想你真实做过的免费IT服务，不要求现场任务、打印机或高级配置。哪件实际投入最有分量？",
+          "scene": "免费IT手动操作回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过拆装或程序控制，主要想练熟，不要求后来更快",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因输入、螺丝或机器即时响应的联系，实际多动手过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "排过工具取放与台边操作顺序，并亲手照安排试过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且其他票据可推进，仍慢慢清理过熟悉电脑的一段，喜欢回到这套不赶着换任务的流程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "不推现实职业能力或默认岗位身份",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H09.IT_EXPANSION.V1"
+        },
+        {
+          "text": "只做过第一两份IT基础票据也能回顾。哪件确实做过且有分量？",
+          "scene": "免费IT手动操作回顾的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_STORE"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在能重复的开盖或接线操作里练过控制，当时目的是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "因鼠标输入与侧板螺丝立即回应，实际多操作过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先排过取工具、处理与接线动作，再亲手做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且票据还能做，仍从容拆回装回过眼熟基础件，享受自己定步调的安稳过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "不推现实职业能力或默认岗位身份",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H09.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一次你确实处理过的原职业启动或负载异常，原因当时还没查明。哪件真实行动最有分量？",
+          "scene": "检验与配置的过去",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_DIAG",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看过已有状态和客户要求，再决定下一步",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "实际试过两套兼容CPU冷却器与机箱风扇组合，在相同负载下比较过整体冷却表现",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "换过当时可用的一套配置实际试机，主要想体验它",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先提出过显示连接或可调CPU设置影响的解释，只改其中一项再用相同方式测试，核对结果",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "配置互补与单换配置分开，未用测试设备有基础替代",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H10.CAREER.V1"
+        },
+        {
+          "text": "只有早期基本工作时：回想自己实际动过的一台机，不需要OCCT。哪件做过且有分量？",
+          "scene": "检验与配置的过去的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_DIAG",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看过当时已显示要求与任务状态，再决定动手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先读过已有接线或软件操作说明，再实际继续试过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "按当前已知要求实际推进过一项清灰或软件工作",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "自己猜过外接显示线影响画面，只改这条连接再开机，核对过解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "配置互补与单换配置分开，未用测试设备有基础替代",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H10.CAREER.ALT1"
+        },
+        {
+          "text": "回顾你实际调过的一台Free Build电脑，下面哪件真实行动最有分量？",
+          "scene": "解释与组合真实回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_OC",
+            "PCBS9H_DIAG",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际试过两套兼容CPU冷却器与机箱风扇组合，用相同负载比较过整体配合效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "只比较过当时可选部件条件，尚未装测也只是这次比较",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "换过一套当时可用配置实际运行，主要想体验它",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "自己提出过一项连接或设置影响的解释，只改这一项并用相同测试核对过结果",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "单项假设与组合检验不同，未超频有基础替代",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H10.FREE_BUILD.V1"
+        },
+        {
+          "text": "只有基础自由机经验也可答：回想当时实际做过的事，不需要OCCT。哪件更有分量？",
+          "scene": "解释与组合真实回顾的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_OC",
+            "PCBS9H_DIAG",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较过几件当前兼容部件，决定用哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "看过已有接线说明，再亲手回来试过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "换过一件当前可用兼容部件实际装机，主要想体验配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先猜过显示连接影响画面，只改这条线再开机，核对过解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "单项假设与组合检验不同，未超频有基础替代",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H10.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "回顾一次实际处理过的IT电脑异常或配置调整，下面哪件真实行动最有分量？",
+          "scene": "真实的检验与组合",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_OC",
+            "PCBS9H_DIAG",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际试过两套兼容冷却器与机箱风扇组合，在相同负载看过整体配合效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先查看过已有票据与电脑状态，再决定怎样继续",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先看过当前可用部件条件，比较后再决定如何安排",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先提出过连接或设置影响的解释，只改其中一项，再以相同方式测试核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真比较组合与先看菜单不同，结果不要求改好",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H10.IT_EXPANSION.V1"
+        },
+        {
+          "text": "只有IT工作间基础机经验也可答，不需要OCCT或现场任务。哪件确实做过？",
+          "scene": "真实的检验与组合的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_OC",
+            "PCBS9H_DIAG",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对过票据已有要求和当前机上状态",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先读过基础接线或软件说明，再实际回来试过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "按当前已知要求推进过一项清灰或软件任务",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "自己猜过外接显示线影响，只改该连接再开机核对过解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真比较组合与先看菜单不同，结果不要求改好",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H10.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回顾原职业里你已经做过的自用电脑安排，不要求买过付费工作室。哪件真实行动最有分量？",
+          "scene": "真实呈现与限制",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较过当时已开放的部件条件，当时只作比较而未实际装测",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "实际购入过一项已开放且能支付的工具升级，重点是得到这次功能",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "按自己的色调主题实际改过线缆或已装灯光，重视个人呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "明确禁止过当时本可用的水冷，并实际试过一段气冷构建",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "不把普通采购、换件包装成发明或养成",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H11.CAREER.V1"
+        },
+        {
+          "text": "只玩过早期基础工具也可回顾，不需要灯光或水冷。哪件确实做过且有分量？",
+          "scene": "真实呈现与限制的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已会清理或接线步骤换过一次先后，亲手体验过",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "在能重复的基础拆装上反复练过，重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "实际比较过当时可选部件与升级条件，再决定怎么安排",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读过已有拆装说明，再实际继续动手",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "不把普通采购、换件包装成发明或养成",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H11.CAREER.ALT1"
+        },
+        {
+          "text": "回想Free Build里你已做过的构建安排，不要求水冷环路或比赛。哪件真实投入最有分量？",
+          "scene": "规则与呈现真实回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_IT"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把可保存的作品存进过本机Free Build列表，保留编辑结果",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "B",
+              "label": "以当时已有的正式3DMark分数为纪录目标，实际调过配置再跑，尝试争取更高分，即使未超过",
+              "signal": "score_goal_attempt"
+            },
+            {
+              "id": "C",
+              "label": "明确额外禁过本可用水冷，并实际试过一段气冷构建",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "按自己选的灯光、线缆和部件色调实际做过主题，重视呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "额外规则不要求成功，保存0分，成绩需已有基线",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H11.FREE_BUILD.V1"
+        },
+        {
+          "text": "只有早期基础装机时，回想确实做过的行动，不要求跑分或水冷。哪件有分量？",
+          "scene": "规则与呈现真实回顾的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_IT"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用本机操作保存过具备保存条件的Free Build小作品",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "B",
+              "label": "先核对过已显示装配和接线状态，再决定下一步",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "C",
+              "label": "机箱本可装机箱风扇，但额外禁过它并实际尝试仅CPU冷却的一段构建",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "用当时已有可选线缆颜色，实际做过自己想要的主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "额外规则不要求成功，保存0分，成绩需已有基线",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H11.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "回想实际投入过的免费IT流程，下面哪件真实行动最有分量？",
+          "scene": "IT空间与服务的真实分量",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "读过当时已出现的公司项目后续，想知道人物事情怎样接着发展",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "排过Calendar已显示到货与各台机处理的本次次序，并实际按安排推进过",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "按自己的主题实际改过已可用的工作间陈设或自用机配色，重视呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "实际处理过票据已明确的打印机可选事项，重视这个额外目标",
+              "signal": "optional_objective"
+            }
+          ],
+          "design_purpose": "全是真实过去，没遇该支线可换基础工作",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H11.IT_EXPANSION.V1"
+        },
+        {
+          "text": "只做过早期IT基础票据也能回顾，不要求DEKOR、打印机或Calendar。哪件实际做过？",
+          "scene": "IT空间与服务的真实分量的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过可重复基础拆装，目的在练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "排好本次工具取放和动手顺序，再亲手执行过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先看过当前已有工作要求与机上状态，再决定动手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先读过基础工具操作说明，再亲自继续试过",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "全是真实过去，没遇该支线可换基础工作",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H11.IT_EXPANSION.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PCBS9H12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想实际回到原职业的一段时期，不要求后来公司成功。哪件真实投入最有分量？",
+          "scene": "一段职业为何继续",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力且别单能推进，仍按自己的步调多清理过熟悉电脑，喜欢台边这套从容安定的日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "实际把多天接单、库存、台位与回款接成可持续的资源安排，并照着继续运转过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "为了看回头客户的故事后续，读过当时已出现的新邮件",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按已列客户条件实际推进过一份工作，重视当次目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "过去持续资源流才y，默认修理员不是r",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H12.CAREER.V1"
+        },
+        {
+          "text": "经历只有最早几份订单时，回想其中真实做过的投入。哪件更有分量？",
+          "scene": "一段职业为何继续的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "career"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力且别项目可做，仍慢慢取放、装回过眼熟基础件，享受自在重复这小段工作",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先排过本次所需资源与动手步骤，再实际按安排推进",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对过已显示要求和状态，再决定下手处",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "按当前已列客户要求实做过一项基础任务",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "过去持续资源流才y，默认修理员不是r",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H12.CAREER.ALT1"
+        },
+        {
+          "text": "回顾实际投入过的Free Build时段，下面哪件真实行动最让你愿意继续？",
+          "scene": "这一段构建为何留下",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过尚未掌握的拆装控制，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "按自己的色调与灯光主题实际调整过作品，重视个人呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "实际试过两套兼容冷却组件组合，用相同测试比较过整体表现，重视组件怎样互相配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且别处可搭，仍在熟悉基础装配上慢慢做过一会儿，喜欢这种不赶新配置的安稳过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "不要求最终装好、温控达标或能力提升",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H12.FREE_BUILD.V1"
+        },
+        {
+          "text": "即使只摸过一小段基础自由装配，也能回顾；哪件确实做过且有分量？",
+          "scene": "这一段构建为何留下的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_STORE",
+            "PCBS9H_OC",
+            "PCBS9H_FANS"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在可重复部件拆装上练过控制，当时目的在练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用当时可选的部件或线缆颜色实际配过自己的主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "排好本轮取件与装配动作，再亲手执行过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力且可续别处，仍按自己步调装回过熟悉部件，享受从容待在这套活动中的感觉",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "不要求最终装好、温控达标或能力提升",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H12.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "回顾真实玩过的免费IT一段时期，不要求项目最后成功。哪件实际投入最让你愿意继续？",
+          "scene": "那段IT工作为何留下",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力且其他票据可做，仍从容清理拆装过熟悉的一段，喜欢回到能自己定步调的台边日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "为了公司项目的故事后续，确实留意并读过当时已出现的邮件",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "明确禁过自用机本可用的水冷，并实际试过一段气冷构建",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "按票据已列条件实做过一项工作，重视当前服务目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "默认IT员工不r，NPC邮件不q/o",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H12.IT_EXPANSION.V1"
+        },
+        {
+          "text": "只实际玩过IT开头也可回顾，下面哪件做过且更有分量？",
+          "scene": "那段IT工作为何留下的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PCBS9H_IT",
+            "PCBS9H_ACH"
+          ],
+          "modes": [
+            "it_expansion"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力且其他任务可推进，仍慢慢清理过眼熟电脑的一小段，享受熟悉而安定的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先排过本次可做资源和步骤，再按安排推进过",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "在可重复的基础拆装里反复练过，主要想练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按已有明确要求实际做过一项清灰或软件任务",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "默认IT员工不r，NPC邮件不q/o",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PCBS9H12.IT_EXPANSION.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+1fc203546dfc"
+}

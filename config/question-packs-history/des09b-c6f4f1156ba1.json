@@ -1,0 +1,1014 @@
+{
+  "id": "des09b",
+  "title": "智械工厂 Desynced",
+  "game_ids": [
+    "steam-1450900"
+  ],
+  "scope": "PC本体1.0默认机器人开局；基础自动物流与可选行为编程，单人可答；不覆盖异种族NG+及特设挑战",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "所有基础路径均可单人回答；默认物流不需要编程，不会把机器人或ELAIN当真人。",
+    "行为程序题有无编程早期ALT；只用当前集成行为，不要求旧版独立控制器；未达科技可换题。",
+    "每条模式路径均为12专属槽的8项当前行动与4项真实过去回顾；未到进度或未有经历可换题，跨游戏题由主流程另加。"
+  ],
+  "modes": [
+    {
+      "id": "robot_default",
+      "label": "1.0默认机器人流程；单人可答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DES09B01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "默认机器人流程里，你已造出能装下手边组件的机器人机体，矿点、加工处和储物建筑都已在自己的供电网络内。你眼下想先怎样用这台机器人？",
+          "scene": "矿点边的可换组件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-codex",
+            "des09b-logistics",
+            "des09b-ed-components"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在同一兼容机体保留采矿组件，实际加上或卸下手头储物扩展，各跑这处采集与回送，比较可带矿量和返送安排怎样配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把矿石、金属加工、储位和搬运任务连跑几轮，再按各处库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较手头机体的空插槽与已有组件大小，再决定装哪组",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先查看这台机器人当前背包、组件和订单状态，再决定下一步",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "组件必须能装且实际使用；查看插槽和库存本身不算配装或技术能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B01.V1"
+        },
+        {
+          "text": "只有起步机体和一个已有采矿组件也可选：附近最初矿点在当前有效供电网络内，机体有兼容空槽，眼前新手目标列着资源要求。你先做什么？",
+          "scene": "默认开局的一个采矿组件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-codex",
+            "des09b-logistics",
+            "des09b-ed-components"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按机体空槽装上这一个已有采矿组件，亲手让它采一趟",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先核对采矿组件说明，再给机器人下自己的采集指令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先看机器人背包和矿点当前状态，再决定派往哪里",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "按眼前新手目标所列要求，实际采回这批指定资源",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "组件必须能装且实际使用；查看插槽和库存本身不算配装或技术能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已用默认物流连接矿工、加工建筑和仓库，但某种零件并未送到请求处。原因还没查明，你能动一个储位或一项设置。你先想做什么？",
+          "scene": "请求没有按预想送到",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-logistics",
+            "des09b-update"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开请求处的储位锁定、库存和已有订单，核对现在显示什么",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "把采集、加工、送入与取出连看数轮，按各处积压改整条供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对自己已有的物流请求说明，再继续亲手设置",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "猜测目标没有合适空储位，其余设置不动，只清出一个可接收槽，再比较同一请求",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "题干未告诉原因；一处控制检验与只是读状态分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B02.V1"
+        },
+        {
+          "text": "还没做自动生产线时，你已有两台在同一有效网络、可完成这次运输的单位，能手动拖动物品请求；刚试的一批还没到，原因未知。眼下先做什么？",
+          "scene": "未自动化时手动转移请求",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-logistics",
+            "des09b-update"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对两台单位的背包和订单面板",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "按采回、拖送、接收的次序排好这轮操作并做完",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先看已有物品转移提示，再亲手重试一次",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜测接收背包没有位置，只清一格再重发同一批请求比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "题干未告诉原因；一处控制检验与只是读状态分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已有供电范围部件、可用储电组件和兼容采矿机体，机体已充电。眼前一片已见矿区在现网外，当前短程可走可返，材料够小组调整。你先做什么？",
+          "scene": "让网络伸到新矿区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-power",
+            "des09b-codex",
+            "des09b-ed-components"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比当前已有的范围部件与储电组件，再决定采用哪组",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先查看网络边界和机器人当前能量，再决定这轮如何派出",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "接起供电延伸、采集、返送和加工的供需，让它跑过几轮再按缺电与库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "在兼容机体上保留采矿组件，实际比较带与不带已有储电组件时这段短程采返的电量和采矿持续情况，电量不足就返网内",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "网络外移动有能量前提；不使用wiki疑似供电bug或精确效率。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B03.V1"
+        },
+        {
+          "text": "还没去远矿，你的第一台采矿机器人在起步基地有效网内；面板与供电说明可读，当前也确有两项已开放的供电或储电配置可比较。眼下先做什么？",
+          "scene": "起步基地旁的供电查看",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-power",
+            "des09b-codex",
+            "des09b-ed-components"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按基地旁采集、回送、收料的先后安排这一趟并实际做",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "B",
+              "label": "按已有新手目标采回所需物料，先推进眼前交付",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "核对当前供电范围和机器人能量状态，再决定这次去向",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先比较这两项当前可用供电或储电部件的插槽与现有机体要求，再决定这轮取用哪项",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "网络外移动有能量前提；不使用wiki疑似供电bug或精确效率。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已能在单位菜单添加集成行为，正在给一台空闲机器人写“去指定仓库取物再送到指定建筑”的短程序。试跑出现没预期的反复往返，原因未明，相关指令和示范都已可用。现在更想先做什么？",
+          "scene": "第一段集成行为",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-release",
+            "des09b-update"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动反复重写并运行这几个基础节点，练熟自己在编辑器里连线与检查的步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "提出“重复往返是分支回到了错误节点”的解释，只改那一条连接，运行同一请求比较",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先排好这一轮选取物节点、接移动与交付连线、再试跑检查指令流的操作先后，然后照序编辑并运行",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对现成行为教程的这段示范，再继续写自己的短程序",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "可选编程不是全体玩家必经；不强制另造旧版Behavior Controller。t是玩家主动练编辑操作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B04.V1"
+        },
+        {
+          "text": "没写过行为也可选：当前默认物流已可工作，起步机器人和附近仓库都在有效网络内，能采眼前矿点并完成这趟交料。你先做什么？",
+          "scene": "默认物流的第一趟采运",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-release",
+            "des09b-update"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动重复几次相同的下单、查看与转移动作，把自己操作界面的步骤练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有采集与转移说明，再给自己的订单",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "看机器人现有背包和正在执行的订单，再决定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "按这趟采集、回基地、交物品的顺序实际完成",
+              "signal": "unit_command_sequence"
+            }
+          ],
+          "design_purpose": "可选编程不是全体玩家必经；不强制另造旧版Behavior Controller。t是玩家主动练编辑操作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "默认开局中，你已经找到一个可达探索点，界面列出可以交付的物料；附近另有未看过的可通行区域。机器人和物料都已在手边，你先想做什么？",
+          "scene": "已经可达的遗迹交互点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把物料送到这个已列要求的交互点，实际推进这次目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先让机器人往旁边未知区域走一段，看看会遇到什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先查看交互点现有说明、需求和可见装置，再决定这轮是否交付",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "停下来把已出现的ELAIN指引与眼前地点文字联系起来，理解它为何这样引导、这处地点怎样接上前面的事件",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "不捏造所有探索点同一种机关，也不把NPC/AI交谈计社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B05.V1"
+        },
+        {
+          "text": "还没有找到可交付探索点时，起步区域外已有一块可走但你尚未查看的地形，基地目标也正显示所需资源。你先做什么？",
+          "scene": "初始基地外的陌生地形",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把机器人派往那块未知地形探一段",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按基地已列目标采回当前所需资源",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看基地眼前已有装置与单位，再决定怎么派",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "留意开头已经出现的AI修船指引，把它与眼前基地联系起来，想清这次引导在故事中的来由",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "不捏造所有探索点同一种机关，也不把NPC/AI交谈计社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已在安全处备好兼容采矿与便携防护组件的机体，当前供电网覆盖眼前已知矿点，防护也能正常充好；那里偶有虫群干扰，能短采后返回。先做什么？无需打赢敌人。",
+          "scene": "一台兼顾防护的工作机",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-codex",
+            "des09b-power",
+            "des09b-ed-components",
+            "des09b-ed-shield"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前机体插槽及已有防护/采矿组件，再决定用哪组",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "按现有资源排好补能、派出、回收的这趟顺序并执行",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先核对边缘矿点和机器人当前面板，看看眼前状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "实际比较同机体只装采矿组件、以及加装已有防护组件的两次短采，留意采矿持续与护盾受击的不同作用，遇险就返回",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "矿防组件必须兼容、当前带电且已有实际干扰可观察，比较真实采集与防护效用才b；不靠未保证储电槽或假定电池能给盾充电。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B06.V1"
+        },
+        {
+          "text": "还没有防护组件时，起步机体有兼容空槽，手边有一个尚未装上的采矿组件，附近安全矿点在有效供电网内。你现在想先做什么？",
+          "scene": "还没有防护组件的机体",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-codex",
+            "des09b-power",
+            "des09b-ed-components",
+            "des09b-ed-shield"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给当前兼容空槽装上手边这一个采矿组件，实际派机体到已知安全矿点试一趟",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先装上这一个已有采矿组件，再按当前任务所列材料下单采一批，推进该目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先读已有组件说明，再让单位执行一次自己的指令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看眼前机体、背包与矿点当前状态，再决定这一趟怎么派",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "矿防组件必须兼容、当前带电且已有实际干扰可观察，比较真实采集与防护效用才b；不靠未保证储电槽或假定电池能给盾充电。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你在同一默认存档里已经实际解锁过若干科技，Uplink与所需基础物料可用。既能延续研究，也能调整眼前工厂，你会先做什么？",
+          "scene": "同一基地的研究延续",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release",
+            "des09b-ed-uplink"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已可研究或可装的配置升级，再决定这次采用哪项",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "按眼前已显示的进度目标制作并提交下一批物料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "沿自己已在培养的研究方向继续供料，希望这份基地存档保留的解锁继续增加",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把采集、加工、研究物料与基地用电连跑数轮，按供需反馈调节",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "g须已有实际持续研究与保留解锁，第一次点菜单留给ALT零分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B07.V1"
+        },
+        {
+          "text": "还没研究时，当前基地刚显示下一项起步目标；手中资源可推进它，菜单也有两项已开放且当前材料够做的配方。眼下先做什么？",
+          "scene": "未研发时的起步目标",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release",
+            "des09b-ed-uplink"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看单位背包、建筑状态和当前订单，核对现状",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "按手中资源排好这轮采集、制造、交付的顺序并执行",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "C",
+              "label": "照已列目标采集并制作这批物料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "比较现在已能做的两种材料配方，再选先做哪种",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "g须已有实际持续研究与保留解锁，第一次点菜单留给ALT零分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "同一默认存档已有两排生产建筑；基础地板、建筑重定位与所需搬运机器人当前可用，材料足够改一小角。你先想做什么？",
+          "scene": "基地相貌与工作分区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release",
+            "des09b-ed-foundation"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清本轮重定位、放地板蓝图与摆建筑位置的编辑先后，再照顺序下这些编辑安排并落实这一角",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "按自己选的“机器人庭院”主题摆出留白与通道，再从自己选择的视角截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "调整采集、存储、加工与配送分区，让它多跑几轮后按拥堵和库存反馈再改",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可建的两种仓储/生产安排，再决定改哪处",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "表达要实际布局/取景，不因欣赏机器人运动计a或f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B08.V1"
+        },
+        {
+          "text": "基地只有起步建筑和几台机器人也可选：眼前空地能放已开的基础地板与一座基础建筑，材料和搬运单位够，建筑重定位可用。你先做什么？",
+          "scene": "初始机坪的一块空地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release",
+            "des09b-ed-foundation"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按手头材料和可用机器人，排好给这一角取料、交付与建设的先后，再照这轮顺序安排",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "选一个自己的机坪主题，实际放地板并构图留一张普通截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先查看手头能用的地板和建筑外观，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "实际给一处现有建筑发出可用的重定位安排，待单位搬到新位置后查看这次布局结果",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "表达要实际布局/取景，不因欣赏机器人运动计a或f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想默认机器人流程中自己确实搭并运行过的一段物流，哪件已经发生的事更有分量？没有这类经历可换题。",
+          "scene": "回想一次供给调整",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "des09b-store",
+            "des09b-logistics",
+            "des09b-codex",
+            "des09b-ed-components"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾把采集、加工、仓储与配送连续看过多轮，并按缺料或积压实际调整供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾在同一兼容机体保留采矿组件，实际加卸储物扩展，比较两次采集的载货与回送作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经观察过的搬运和物料流补记运行过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按个人基地主题实际安排分区与视角，留下一处个人构图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真实过去的物流与配装，补记不自动变系统偏好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B09.V1"
+        },
+        {
+          "text": "只下过首次采集并送回基地的指令也可回想：哪件自己已经做过的事更有分量？",
+          "scene": "回想首次下令采回物料",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "des09b-store",
+            "des09b-logistics",
+            "des09b-codex",
+            "des09b-ed-components"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾排清这趟采集、返程与交料先后，再按顺序下指令并实际尝试",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先看机器人的已有背包与订单显示，再决定派到哪里",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经跟看过的这趟物料运输补记过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先核对已有教程说明，再亲手下这次采集或交料指令",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实过去的物流与配装，补记不自动变系统偏好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己给默认机体真正写过并运行过的一段短行为，哪件已经做过的事更有分量？没编程可换题，不需程序已经成功。",
+          "scene": "回想自己写过的行为",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "des09b-release",
+            "des09b-update"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾主动反复重写基础节点并运行，为改善自己连线与检查的步骤专门练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先排好这轮选基础节点、修改连线与试跑检查的操作先后，再照次序编辑并运行单位程序",
+              "signal": "unit_program_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经实际修改、运行过的单位指令和机器人执行过程补记",
+              "signal": "unit_program_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾对程序反复往返提出一个原因，其他设置不动，只改一根连线再实跑前后对照",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "普通排步骤和记录是0；不因写程序推断能力或自动计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B10.V1"
+        },
+        {
+          "text": "没写过行为，也可回想自己第一次亲手设订单或转移物料的经历，哪件已经做过的事更有分量？",
+          "scene": "回想未编程时设置订单",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "des09b-release",
+            "des09b-update"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾核对已有教程后，亲手做过这次物料转移",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先查看单位当时状态，再决定这趟往哪里送",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经跟看过的采集与返送补记过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾主动重复下单、查看背包与转移，专门练习自己的界面操作步骤",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通排步骤和记录是0；不因写程序推断能力或自动计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想自己在默认流程真正读过AI信息、又派机体到过新区域的一段，哪件已经做过的事更有分量？",
+          "scene": "回想开头信息与新地形",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经到过的地点补上个人位置记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己曾按当时进度栏已列要求，实际采料和制造以推进那项目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "自己曾把已出现AI指引与地点事件联系起来，理解为何这样引导以及故事前后怎样相接",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为了认识新区域，派机器人越过自己还不熟悉的地图边界",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "AI信息为叙事而非真人社交；不改变固定叙事。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B11.V1"
+        },
+        {
+          "text": "只玩过默认开头，也可回想最初AI信息与基地周围第一次派出，哪件自己已经做过的事更有分量？",
+          "scene": "回想默认开头与第一次派出",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为实际到过的起步地点补记位置",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己曾照新手目标已经列出的要求，实际采制并投入一批所需物料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "自己曾留意开头已有AI修船指引，把它与当时基地联系起来理解这次引导的来由",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为了认识未知地方，朝一块陌生但可走的地形派过机器人",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "AI信息为叙事而非真人社交；不改变固定叙事。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DES09B12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想同一默认存档里自己实际保留并投入过的基地与研究，哪件已经发生的事更有分量？",
+          "scene": "回想一份留下来的基地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release",
+            "des09b-ed-uplink",
+            "des09b-ed-foundation"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经建成的建筑、连接与真正投入的研究补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己曾在已有保留解锁的同一方向继续投入研究，让这份基地积累持续增加",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "当时精力充足，新研究或新区域也能推进，自己仍回到熟悉机坪慢慢布地板、看机器人经过，因为喜欢这个认得的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为个人基地形状实际安排建筑重定位，并选择前景与视角留下一幅构图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "g不由自动生产量或第一次研发菜单推出；h主动舒缓而非疲劳。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B12.V1"
+        },
+        {
+          "text": "只有第一处基地，也可回想自己确实在那里做过的一段活动，哪件已经发生的事更有分量？",
+          "scene": "回想第一处基地活动",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "des09b-store",
+            "des09b-release",
+            "des09b-ed-uplink",
+            "des09b-ed-foundation"
+          ],
+          "modes": [
+            "robot_default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经建好的建筑和连接补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足，也能派机体去新的可走地形，自己仍在熟悉起步区慢慢摆已用熟的地板，因为喜欢这段安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己曾按个人机坪主题挑前景与视角，实际给初始基地留下一张构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按当时材料和可用机器人，排清第一批建筑取料、交付与建设的先后，再照顺序安排",
+              "signal": "unit_construction_plan"
+            }
+          ],
+          "design_purpose": "g不由自动生产量或第一次研发菜单推出；h主动舒缓而非疲劳。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DES09B12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+c6f4f1156ba1"
+}

@@ -1,0 +1,2835 @@
+{
+  "id": "bz09k",
+  "title": "深海迷航 冰点之下 Subnautica Below Zero",
+  "game_ids": [
+    "steam-848450"
+  ],
+  "scope": "PC独立本体：资源探索合并三种生存预设；Creative另路；Custom按当前规则匹配",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "非Creative组不假定饥渴、统一死亡复活或低氧提示；Custom只按自己当前规则选路，条件不符的具体题可换。",
+    "海卡模块、矿物探测器、控制室、点唱机、雪狐均只在当前实际可用时入题；每槽有投放舱、基础工具或浅水独立替代。",
+    "不把原作海蛾/独眼巨人、旧EA空投唯一建造器或2026 Subnautica2机制混入；Creative不要求剧情触发。",
+    "陆上温度对照限当前确已启用且安全的规则，身体读数无顶满、天气与其他热源稳定。",
+    "已拥有音乐播放不计c，普通造物/开关不记g/y；固定人物与动物不算真人q/o。"
+  ],
+  "modes": [
+    {
+      "id": "resource_exploration",
+      "label": "资源探索：Survival／Freedom／Hardcore及匹配自定义",
+      "initial_variants": {
+        "BZ09K01": "BZ09K01.RESOURCE_EXPLORATION.V1",
+        "BZ09K02": "BZ09K02.RESOURCE_EXPLORATION.V1",
+        "BZ09K03": "BZ09K03.RESOURCE_EXPLORATION.V1",
+        "BZ09K04": "BZ09K04.RESOURCE_EXPLORATION.V1",
+        "BZ09K05": "BZ09K05.RESOURCE_EXPLORATION.V1",
+        "BZ09K06": "BZ09K06.RESOURCE_EXPLORATION.V1",
+        "BZ09K07": "BZ09K07.RESOURCE_EXPLORATION.V1",
+        "BZ09K08": "BZ09K08.RESOURCE_EXPLORATION.V1",
+        "BZ09K09": "BZ09K09.RESOURCE_EXPLORATION.V1",
+        "BZ09K10": "BZ09K10.RESOURCE_EXPLORATION.V1",
+        "BZ09K11": "BZ09K11.RESOURCE_EXPLORATION.V1",
+        "BZ09K12": "BZ09K12.RESOURCE_EXPLORATION.V1"
+      }
+    },
+    {
+      "id": "creative",
+      "label": "Creative：无材料需求的冰区建造探索",
+      "initial_variants": {
+        "BZ09K01": "BZ09K01.CREATIVE.V1",
+        "BZ09K02": "BZ09K02.CREATIVE.V1",
+        "BZ09K03": "BZ09K03.CREATIVE.V1",
+        "BZ09K04": "BZ09K04.CREATIVE.V1",
+        "BZ09K05": "BZ09K05.CREATIVE.V1",
+        "BZ09K06": "BZ09K06.CREATIVE.V1",
+        "BZ09K07": "BZ09K07.CREATIVE.V1",
+        "BZ09K08": "BZ09K08.CREATIVE.V1",
+        "BZ09K09": "BZ09K09.CREATIVE.V1",
+        "BZ09K10": "BZ09K10.CREATIVE.V1",
+        "BZ09K11": "BZ09K11.CREATIVE.V1",
+        "BZ09K12": "BZ09K12.CREATIVE.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "BZ09K01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "Below Zero资源探索中，你在可用投放舱制造机前，刀与标准氧气瓶的基础配方当前都已开放、各自所需材料也都已在手；PDA可以固定配方，舱内还有可存取物品。先做什么？",
+          "scene": "投放舱里先做哪件够料的东西",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_PLAYER",
+            "BZ09K_PIN"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较这几个当前够料的基础配方及材料占用，再决定这一轮做哪个",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "把本轮已开放配方固定到PDA显示栏，先核对栏里实际显示的所需材料与自己的现有材料状态，再决定这轮怎样处理",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "直接做一件当前够料的基础工具，体验这次制造操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "把手里暂不用的材料存入舱内，再取出本轮打算用的那份",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "普通固定配方和制作不自动是构筑、成长或流程画像；只用当前实际有的材料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K01.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "更早、还没固定过配方也可换：你刚在投放舱附近取到现成材料，舱内制造机、储物和当前已显示的基础操作说明可用，至少两项基础配方已开放且现料够做。先做哪件？",
+          "scene": "投放舱里先做哪件够料的东西的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读当前基础制作操作说明，再亲手试制造机",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "比较这两项当前够料的基础配方与材料占用，再决定本轮采用哪项",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先存入一件现有物品，再取出准备带走的材料",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "去投放舱旁自己没看过、能随时浮回水面的浅水角，想发现环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "普通固定配方和制作不自动是构筑、成长或流程画像；只用当前实际有的材料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K01.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "Below Zero的Creative里，你已有能用的建造器和控制室，当前命名、基地配色与基础房间都可操作，不需要采材料。此刻先选什么？",
+          "scene": "冰区小站先呈现什么样子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_CONTROL",
+            "BZ09K_LIVING",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在控制室实际选好基地配色与名称，让小站呈现自己的冰区主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前可选基地配色和房间外观，决定是否采用",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "直接在合法预览位置建下一间当前可建房间，体验这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看已有控制室、舱口和连接处的当前现场，再继续这段编辑",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "基地整体改色是BZ控制室真实功能；不把大型房间仍说成BZ独占，也不借Creative材料压力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K01.CREATIVE.V1"
+        },
+        {
+          "text": "还没用控制室也可换：你刚拿可用建造器在投放舱附近试放第一个基础走廊，预览有几个合法朝向。先做什么？",
+          "scene": "冰区小站先呈现什么样子的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_CONTROL",
+            "BZ09K_LIVING",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手改变合法预览的位置或朝向，看这次编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先读已经开放的建造器操作说明，再继续试放",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "为了自己想呈现的入口方向，选定空位并实际建下这段走廊",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先排清选部件、调朝向、确认和施工的一轮编辑步骤，再亲手做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "基地整体改色是BZ控制室真实功能；不把大型房间仍说成BZ独占，也不借Creative材料压力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K01.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K01.RESOURCE_EXPLORATION.ALT2",
+          "text": "另一段Below Zero早期浅水：眼前有当前可直接采的缎带草，手头已有电池所需的铜，投放舱可返回且储物里有当前可取物品，状态稳定。先选什么？",
+          "scene": "电池材料里的现成缎带草",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_DB_SELECTED"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手取眼前一株可采缎带草，直接体验这个普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前可见植物、材料与制作状态，再决定这一轮",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先回投放舱把已有铜存入可用储物，再取出这段想带的现有物品",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "去近旁自己没看过但当前可达的小片浅水，想发现环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "第三前提是BZ缎带草材料采集，不把原作酸性蘑菇配方换名套入，也不记普通采集为收藏。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K01.CREATIVE.ALT2",
+          "text": "Creative里你当前已拥有能用的间谍企鹅和遥控器，陆地合法部署后能遥控近处地形；还没设计基地或试建造器也能答。先选什么？",
+          "scene": "只用过间谍企鹅也有一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_SPY",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接遥控企鹅在当前可达地面走一小段，亲手体验工具操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "为自己熟悉遥控转向与靠近目标，专门在同一小段反复练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先读已有遥控器和企鹅操作说明，再继续实际试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "遥控它去当前能到、自己没看过的小入口，想发现现场",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "独立工具前提不要求控制室或基础走廊；Creative不借身体寒冷紧迫，机器人不算真人同伴。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你当前规则启用了陆上体温，在一株已可接近的热百合附近，体温安全且未到顶；刚才读数变化与你预想不同，原因未核清。天气这小段稳定，有同一条可回退短路且没有其他热源。先选什么？",
+          "scene": "陆上的读数变化尚未解释",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_LAUNCH_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前身体、体温和带着的可用补给，查看已经显示的状态",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "按已有补给与已走通的回水路线，排好查看近处、回水和再继续的步骤，再照这轮准备实际走",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "不先研究读数，去当前能到、自己没看过的陆地岔口看看现场",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己先提出距离这株植物可能影响变化的解释，从同样安全读数开始，分别在近处与稍远处站同样短的一段，实际核对温度变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "p不先给热源结论，单改与该株距离、其他热源和天气不变；没开体温或没到陆地可用独立早期ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K02.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没上陆地：你在投放舱附近，已有能用的刀与扫描器、近旁也有当前可切取或可扫描的对象，至少两项基础配方都已开放且现料够做；氧气、工具状态与回程稳定。此刻先做什么？",
+          "scene": "陆上的读数变化尚未解释的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_LAUNCH_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手换用已有的另一件基础工具，在当前相应对象上试用",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "比较当前已开放且够料的制作配方，再决定做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先排取料、制造、收起成品的亲手次序，然后做一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前氧气、工具电量和携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "p不先给热源结论，单改与该株距离、其他热源和天气不变；没开体温或没到陆地可用独立早期ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K02.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "Creative里你已有海卡、制造舱与储物舱，模块能连接，有现成物品可存放，也有已开放的物品能在制造舱制作；附近是宽阔水域。先怎样投入？",
+          "scene": "可移动的两种车厢要真用",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前各舱用途、空间和连接方案，不把菜单选择当已经实试",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "开现有海卡在宽阔处连续转向推进，享受输入、视野移动与车身回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "实际换成自己另一种已有模块连接方案，亲手体验它怎样使用",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "分别实试只接制造舱与加接储物舱两种现有组合，在同一熟悉短线上取存现有物品并车内制作，比较额外载物空间、车身控制与移动制造的配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "Creative没有能源匮乏，仍可真实测试模块功能；b不等于只造两节或列出菜单。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K02.CREATIVE.V1"
+        },
+        {
+          "text": "还没造海卡：你刚在Creative使用基础手电与海滑翔器，两者都可用，身边有宽阔浅水。先选什么？",
+          "scene": "可移动的两种车厢要真用的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较两件现有工具的用途和携带占用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "拿海滑翔器连续推进转向，反复投入操纵与移动紧接发生的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "去当前可达但自己没看过的浅水地形，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "换用现有手电，亲手看它照亮眼前水域的效果",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "Creative没有能源匮乏，仍可真实测试模块功能；b不等于只造两节或列出菜单。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K02.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K02.RESOURCE_EXPLORATION.ALT2",
+          "text": "没有上过陆地也可换：当前资源规则启用了氧气，你在已走通、可安全返程的浅水段，眼前一株氧气植物球囊已展开且当前提示可用，氧气本身宽裕。先做哪件？",
+          "scene": "眼前可用氧气植物的一次交互",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_OXYGEN",
+            "BZ09K_DOCK"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前氧气、工具电量和携带补给，再决定这一段",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "排好短下潜、在这株可用球囊取氧、再回开放水面补气的路线和操作，实际走一轮",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "去近旁自己没看过、仍在当前可安全往返范围的浅水角，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "直接和当前可用球囊交互一次，亲手体验这次取氧操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "不是濒死补气的唯一正确操作，不保证植物恒开或在禁用植物氧气的Custom可用；独立于热百合与工具制作。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K02.CREATIVE.ALT2",
+          "text": "不需要海卡或海滑翔器：Creative里你当前已建可用相框，PDA相册已有至少两张自己在游戏里拍的照片，能选入这个相框。先做什么？",
+          "scene": "已有照片在原生相框里怎样呈现",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_MODES",
+            "BZ09K_PICTURE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前相册已有照片的构图与色彩素材，再决定这次放哪张",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "直接把当前一张可选照片放进相框，体验这次设备操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先读已有相框选图操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按自己的冰区观察主题，实际把相册里选定的一张照片放入相框，让房间呈现自己的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "第三前提是原生PDA照片与已建相框，不重复第一槽走廊预览；实际选图呈现才a，查看素材、普通上传与读操作说明均0，不导入外部图或联网。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已到可自由查看的Delta站，核对现有PDA资料后，确认自己惦记的这份设施地图尚未登记，眼前地图仍可扫描，旁边也有已经拿到的工作人员语音可回听；扫描器可用、状态稳定。先做什么？",
+          "scene": "Delta站留下的地图和声音",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_STORE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前可达站门、终端和停留点的现场，再决定这段行动",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "离开已能返回的站边，去自己没看过而当前可达的另一侧，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为补上PDA里这一项确实未登记的地图资料，先尝试扫描眼前地图，不要求一次完成",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "回听已经取得的工作人员语音，想理解这座站与人物前后的联系",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "设施地图是扫描后的静态PDA资料，不是实时全球GPS；NPC语音不作真人协作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K03.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没去过Delta站也可换：PDA已保存最早收到的Sam相关语音和人物资料，投放舱及近旁浅水可自由行动。先选什么？",
+          "scene": "Delta站留下的地图和声音的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_STORE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去当前能到、自己没看过的浅水角，想发现新环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为已经拿到的工具或已经游过的投放舱附近，补上自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "回听已经收到的Sam相关语音，想把姐妹处境和已有事件联系起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前投放舱信号实际显示的方向与距离，再决定去向",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "设施地图是扫描后的静态PDA资料，不是实时全球GPS；NPC语音不作真人协作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K03.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "Creative里你已有能用的矿物探测器、扫描器和手电；探测器当前已设为它支持的一种目标，近旁确有对应可探测物；这里不为支付造价而赶着采料。你先做什么？",
+          "scene": "找矿器也能只是试一项工具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_MODES",
+            "BZ09K_DB_SELECTED"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较手里已有探测器、扫描器与手电的用途，决定先带哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "不用找料目标带路，游去眼前可达、自己没看过的海底角落",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "举起当前已设好目标的探测器走一小段，亲手体验实际提示",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对PDA已有探测器操作说明，再继续实用",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "已知工具提示的普通使用不是因果假说或收集补全；不制造Creative的资金材料目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K03.CREATIVE.V1"
+        },
+        {
+          "text": "没用过探测器也可换：你在Creative最早投放舱，有制造机、手上已有工具与现成物品。先做哪件？",
+          "scene": "找矿器也能只是试一项工具的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把一件现有物品存入舱内，再取出打算带的那件",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "为已取得工具或已到过舱边地点，补上自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "亲手用制造机做出一件当前已可制作的基础物品，体验操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前基础制作说明，再继续亲手试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "已知工具提示的普通使用不是因果假说或收集补全；不制造Creative的资金材料目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K03.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K03.RESOURCE_EXPLORATION.ALT2",
+          "text": "你当前实际遇到海猴拿走了一件自己的工具，它就在能安全接近并取回的浅水位置；氧气和回程宽裕，另有已知短路可走。这一段先做什么？",
+          "scene": "海猴手里那件自己已有的工具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_LAUNCH_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从另一侧已经游通的短路经过，体验不同接近方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前已有投放舱标记实际显示的位置和距离，再决定方向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "亲手接近并尝试拿回当前可取的自有工具，直接体验这个交互",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前氧气与身上其他工具、携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "只在当前确发生拿工具阶段问，不把Al-An后送矿阶段混入；海猴不是现实社交，也不设攻击道德选项。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K03.CREATIVE.ALT2",
+          "text": "Creative里你当前在投放舱附近浅水，眼前有可直接采的缎带草，舱内储物有当前可存取物品，近旁还有没去过而可达的小片水域；没有探测器或制造经历也能换。先做什么？",
+          "scene": "Creative近舱的一株现有缎带草",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_MODES",
+            "BZ09K_DB_SELECTED"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "回投放舱把一件现有物品存下，再取出这趟想带的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "游去当前可达而自己没看过的近旁浅水角，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "亲手取一株眼前可采缎带草，直接体验这次普通采集",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前可见缎带草与手里已有材料状态，再决定这一轮",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "第三前提为本作缎带草实际采集，不跨槽照搬冰岸散步，也不把已有材料拾取记收藏或给Creative制造资源压力。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已有可开的海卡、制造舱和储物舱，模块都能接上；当前电量够，有够作两次短试的现成材料可存入并在制造舱做已开放物品，附近是走通过的宽阔水域。先做什么？",
+          "scene": "海卡制造舱与储物舱真接上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_PLAYER",
+            "BZ09K_LAUNCH_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看海卡电量和当前携带补给，核对这趟已显示的状态",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "分别实试只接制造舱、以及加接储物舱的两种现有组合，在同一熟悉短线上取存现料并车内制作，比较载物空间、车身控制与移动制造怎样配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前两舱的功能、已有空间和连接方案，暂不实际接车试",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "用现有海卡在宽阔水域连续推进和转向，享受操纵、视野移动与车身回应的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "真实模块连用和功能比较才b；不是把原作海蛾改名，也不以多接一定更好作为答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K04.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没有海卡：投放舱附近已有一只实际部署、当前正在吸住小鱼的重力陷阱；这些小鱼现在可接近拾取，陷阱也可回收，氧气与回程宽裕，近旁有没看过而可达的浅水角。先做哪件？",
+          "scene": "投放舱旁已部署的重力陷阱",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_PLAYER",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_GRAV"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "游去当前可达而自己没看过的近旁浅水角，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "亲手尝试取一条当前被陷阱吸住的小鱼，直接体验这次拾取",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "把当前可回收的自有陷阱取回手中，调整这趟携带物",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先读已有重力陷阱部署和回收说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "当前重力陷阱拾鱼与回收是普通操作或已拥有物取放；不把吸鱼动画自动记即时手感，不把部署设备当组合与成长，未知浅水发现独立可选。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K04.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "你在Creative已有能部署和骑乘的雪狐，旁边有走通过的宽阔平地和可用停放处；这里不设体温或耐久紧迫。先做什么？",
+          "scene": "雪狐部署和操控的这一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_CURRENT",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看雪狐、停放处与地面路口的实际现场，再继续这一段",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "为自己更熟悉起步、转向和靠近停放处，专门在同一小段反复练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "骑雪狐连续滑行与转向，享受操纵和地面移动接上的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "亲手把当前可收起的雪狐收回，再在合法地面部署并骑上，直接试这次操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "不要求危险陆地或旧碰撞规则；Creative也不声称已有无限空间、没有任何地形阻挡。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K04.CREATIVE.V1"
+        },
+        {
+          "text": "还没使用雪狐时：你只有当前可用的海滑翔器与开阔浅水，新水域也可达。先选什么？",
+          "scene": "雪狐部署和操控的这一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_CURRENT",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看投放舱已有标记实际显示的位置与距离，再决定去向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "为掌握转向与靠近目标，专门在同一块浅水反复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "连续推进与转向，反复享受输入立即带来水中移动的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "游向当前能到而自己没看过的浅水角，想发现新环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "不要求危险陆地或旧碰撞规则；Creative也不声称已有无限空间、没有任何地形阻挡。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K04.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K04.RESOURCE_EXPLORATION.ALT2",
+          "text": "第三种早期体验：你还没用海卡或海滑翔器，只徒手游过投放舱旁这段开阔浅水；氧气和回程够，舱入口和近旁两侧短路都已走通。先选什么？",
+          "scene": "只徒手游过的投放舱入口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看舱口与当前可进入位置的现场，再继续这段移动",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "为自己更熟悉上浮、转向和靠近舱入口，专门在这里反复练基础控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "从另一侧已游通短路回舱，亲手体验不同走向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前氧气与携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "第三前提没有载具、推进装备、模块和配方，练习只看自己实际重复的意图。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K04.CREATIVE.ALT2",
+          "text": "没有交通工具也可换：Creative里你已有基础隔间，两个外墙面当前都能合法加窗，建造器可用、窗蓝图已开放，尚未装窗。先选什么？",
+          "scene": "基础隔间两面都可装窗",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_MODES",
+            "BZ09K_WINDOW"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有建造器加窗与拆除说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "按自己的观景朝向选定一面外墙，实际建窗，让小站呈现自己的观察主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先排清选墙面、试窗预览、施工与进舱查看的本轮步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "亲手把窗预览从这面换到另一合法外墙，查看编辑结果",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "第三前提是已有隔间外墙加窗，不重复第一次走廊与舱口；只用当前合法预览，不拉伸或拖动成品，普通编辑不记技术成长。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已有能用的基地控制室，当前配色和命名面板可操作，供电也足；现有扫描室分区可开关。不是要赶紧补救停电，这时先选什么？",
+          "scene": "控制室的命名和分区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_CONTROL",
+            "BZ09K_LIVING"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际调整基地的可用配色与名称，让它呈现自己想要的冰区研究站主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先在当前面板查看基地已有分区和完整度信息，再决定这一轮怎样动手",
+              "signal": "device_status_review"
+            },
+            {
+              "id": "C",
+              "label": "亲手用控制室把当前扫描室分区关掉再开启，直接体验这次已可用操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前可选基地配色方案，决定这轮是否改色",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "实际个人基地配色才a；普通分区开关不假计系统运营，控制室不是独立任意灯光编辑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K05.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没建控制室：你在最早投放舱，有能用的制造机、当前够料的几个基础配方和手里现成物品。先做什么？",
+          "scene": "控制室的命名和分区的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_CONTROL",
+            "BZ09K_LIVING"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看制造机与舱内储物的当前现场，再继续这段操作",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "直接制造一件当前够料的基础物品，亲手体验它怎样做出来",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先比较这几个当前可做配方与材料条件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "先把一件携带材料存入舱内，再取出这轮准备带的物品",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "实际个人基地配色才a；普通分区开关不假计系统运营，控制室不是独立任意灯光编辑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K05.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "Creative里你的点唱机当前能播放至少一首已拥有曲目，房间内建造器可用，一只当前空柜可拆下重建，椅子也已开放可建，有几处合法空位；自己精神足，外面还有没去过的可达地形。先选什么？",
+          "scene": "点唱机已有的曲目和熟悉小舱",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_MODES",
+            "BZ09K_CHAIRS"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "播放已有熟悉曲目，慢慢在小舱收整现有物品，喜欢这段安稳自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "按自己的舱内主题拆下当前空柜，在选定空位重建并搭上椅子，让相对位置呈现自己的布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "亲手点选一首当前已有曲目播放，直接体验这次设备操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "离开熟悉舱室，去当前可达、自己还没看过的地形看看",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只用已经可播曲目，不宣称Creative音乐盘有未收清单；不要求导入外部音乐文件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K05.CREATIVE.V1"
+        },
+        {
+          "text": "没放过点唱机也可换：你只玩过Creative投放舱，已有可存取物品与基础工具，身边熟悉浅水和新角落都能去；精神充足。先做什么？",
+          "scene": "点唱机已有的曲目和熟悉小舱的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "慢慢整理熟悉舱内物品，喜欢这个安定过程，即使也能继续去新地方",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "直接存入一件已有东西，再取出这次准备带走的物品",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "为已拿到的工具与已游过的浅水停留点，补上自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "去当前可达但没看过的浅水角，想发现环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只用已经可播曲目，不宣称Creative音乐盘有未收清单；不要求导入外部音乐文件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K05.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K05.RESOURCE_EXPLORATION.ALT2",
+          "text": "你已经做出能用的建造器，基础房间和舱口当前已开放且够料，眼前有合法空位；还没建控制室也不想回舱制造工具。先做哪件？",
+          "scene": "还没有控制室的第一处房间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_LIVING"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的冰区小站主题，选好房间朝向与入口并实际搭一段，重视空间呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "实际把房间预览换一个合法位置，亲手查看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清选部件、定朝向、确认位置与施工的编辑顺序，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已开放且够料的基础房间与入口部件，决定这一轮",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "第三前提照顾只玩基础建造者，不把控制室未放齐当收藏，也不把个人编辑计运营。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K05.CREATIVE.ALT2",
+          "text": "没有点唱机或投放舱整理经历时可换：Creative里你已有可用控制室和当前能切换的基地分区，面板已显示结构信息。先选什么？",
+          "scene": "控制室当前分区操作",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_CONTROL",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手把当前一处分区关闭再开启，直接体验这次已有设备操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前控制室、面板与连接装置的实际现场，再决定这一轮",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先读已有控制室操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "为自己已搭下的控制室与房间连接，补记真实建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "分区试开关不自动是节能运营或因果求解；Creative不借停电危机问唯一最佳方案。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已在陆地有能骑的雪狐和可用停放区，附近这段宽阔地面走通过，身体、体温与载具状态都够。没有冰虫正在逼近，也有可达的新岔口。先做什么？",
+          "scene": "已能骑的雪狐不是必过的考题",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_CURRENT",
+            "BZ09K_LAUNCH_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "驾驶雪狐在当前宽阔地面推进转向，反复享受操控与滑行回应连在一起的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先从可达处查看雪狐、停放区和路口当前现场，再继续这段经历",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "去当前能到而自己没看过的陆地岔口，想发现新环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "为了自己更熟悉雪狐起步、转向和靠近停放处，专门在这段反复练，不要求练成",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不要求撞击、受伤或旧版必落车；NPC不是真人，练习不等于比成绩。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K06.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没骑过雪狐：你在投放舱旁已有可用刀与当前可切取的植物样本，身边是宽阔浅水，能安全回舱，自己没看过的水域也可去。先做哪件？",
+          "scene": "已能骑的雪狐不是必过的考题的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_CURRENT",
+            "BZ09K_LAUNCH_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "游去当前可达但此前没看过的浅水角，主要想发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前氧气、工具电量和携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "直接使用现有刀处理一处当前可切取的植物样本，体验这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "为上浮、转向再靠近舱入口的控制，专门在同一小段反复练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不要求撞击、受伤或旧版必落车；NPC不是真人，练习不等于比成绩。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K06.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "你在Creative有能用的建造器，当前大型房间、玻璃顶和舱口都可建，眼前有已确认合法的连接空位。此刻先做哪件？",
+          "scene": "玻璃顶与入口先怎样编辑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮接房间、装顶与放舱口的编辑顺序，再亲手做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可选房间、玻璃顶和入口外观方案，不急着建",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "实际把一个合法房间预览换到另一处可放位置，亲手查看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "按自己的冰下观景站主题选好房间朝向、玻璃顶与入口位置，再实际搭建，呈现自己的小站",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "按合法部件搭建，不虚构拉伸已有房间、任意镜像或资源消耗；空间表达有实际动作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K06.CREATIVE.V1"
+        },
+        {
+          "text": "没建过大型房间也可换：你刚用建造器试放基础走廊，当前能在几个合法位置装舱口。先做什么？",
+          "scene": "玻璃顶与入口先怎样编辑的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己的入口方向选定位置并亲手建下，重视呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前走廊和可进入口的现场，再继续试放",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "直接建下一个当前合法可放的舱口，并亲手进出一次",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "实际把舱口预览换一个合法位置，看这次编辑结果",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "按合法部件搭建，不虚构拉伸已有房间、任意镜像或资源消耗；空间表达有实际动作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K06.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K06.RESOURCE_EXPLORATION.ALT2",
+          "text": "你当前已有能用的间谍企鹅和遥控器，已在陆地合法部署，自己体温与状态稳定；信号范围内有可看的一小段地形。还没骑过雪狐也能答。先做什么？",
+          "scene": "已拥有的遥控企鹅先怎样试",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_SPY",
+            "BZ09K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接用当前遥控器操纵企鹅移动一小段，亲手体验这件工具",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先读已有间谍企鹅与遥控器操作说明，再继续实际试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "遥控它去当前可达而自己没看过的小入口里，主要想发现现场",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "为自己练熟遥控转向与靠近小入口，专门在同一小段反复练，不要求到达",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "是本体当前已拥有工具，不强迫冷服、剧情解药或固定距离；不是把机器人当真人朋友。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K06.CREATIVE.ALT2",
+          "text": "Creative里你当前有一只已部署且可存取的防水储物柜，手里有现成工具和物品；没搭玻璃顶、也没放基地舱口。先做哪件？",
+          "scene": "水下已有防水储物的一次取放",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_MODES",
+            "BZ09K_WATERPROOF"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接给当前可改标签的防水柜写一个名称，体验普通命名操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先查看眼前已部署防水柜、其交互处和停留点现场，再继续这一轮",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "为自己已经取得的柜子或已到过的浅水地点，补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "实际存入一件已有东西，再取出这次想带的物品",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "第三前提是实际部署柜，不把它当本机预设、人物成长或未得藏品。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已有能用的矿物探测器、扫描器和手电；探测器当前已设为它支持的一种目标，浅水近处确有对应可探测物；电量、氧气和回程条件够，PDA工具说明已可读。先怎样投入？",
+          "scene": "找矿器当前真能用",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_LIVING",
+            "BZ09K_DB_SELECTED"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较现有探测器、扫描器和手电的当前用途与携带占用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先核对探测器电量、氧气和现有补给，再决定这轮怎样动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "举起当前已设好目标的探测器走一小段，亲手体验实际显示与提示",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先读PDA已有的探测器操作说明，再拿它继续亲手试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "普通寻矿操作不是自提假说；找矿器只用当前实际显示，不保证所有矿物或全世界位置可见。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K07.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "没有矿物探测器也可换：你在可返回投放舱的近旁浅水，已有可用基础工具及相应操作对象，眼前有一块可拾石英；舱内储物可用，手上现料够做至少两项已开放的基础配方。状态稳定。先选什么？",
+          "scene": "找矿器当前真能用的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_LIVING"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读PDA已有基础工具使用说明，再继续亲手尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "把一件携带材料存入已有储物，再取出本轮想用的那份",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "亲手拾起眼前这块可取石英，体验这次具体操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先回投放舱，比较制造机当前已开放且现料够做的两项基础物品",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "普通寻矿操作不是自提假说；找矿器只用当前实际显示，不保证所有矿物或全世界位置可见。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K07.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "Creative中，你当前已有连在可开海卡后方的制造舱与储物舱，眼前是短而宽的已知水域；当前能分离、重接并操作两舱。先选哪件？",
+          "scene": "海卡模块怎样接用和试开",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "开当前海卡在宽阔处连续转向推进，主要享受自己的输入和车身回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先比较两舱现有功能与连接方案，不把比较当亲手测试",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先从现有海卡连接中分开储物舱，换用驾驶舱加制造舱的现有方案，在这段宽水域亲手开一轮体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "为练熟手动推接和倒车对正，专门在此处反复练模块连接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "拆接已有模块后实际试开是普通配置试用，菜单比较、刻意推接练习和连续操纵手感分开；不把少接储物舱记新玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K07.CREATIVE.V1"
+        },
+        {
+          "text": "没有海卡也可换：Creative里你已有可用扫描器，核对现有PDA条目后，确认自己想补的北极窥视鱼资料尚未登记；眼前有当前可扫描、可接近的一只，近旁新浅水角也可去。先做什么？",
+          "scene": "眼前尚未登记的北极窥视鱼",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_MODES",
+            "BZ09K_DB_SELECTED"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已有扫描器操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "游去当前能到而自己没见过的近旁浅水角，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为补上自己惦记而尚未登记的这项生物资料，亲手尝试扫描眼前北极窥视鱼",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "为自己控制扫描朝向更熟，专门在这片宽阔水域反复练靠近与跟随目标，不要求扫完",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Creative里真实尚未登记的生物资料可作收藏缺项，扫描尝试不要求成功；扫描朝向跟随的反复练习另作t，不借海卡额外限制要求。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K07.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K07.RESOURCE_EXPLORATION.ALT2",
+          "text": "没有矿物探测器也没做过石英取料时，可换这段：你在可用投放舱储物旁，已有手电、一块当前能换入的备用电池及可存取物品；安全停留处与回舱条件足够。先选哪件？",
+          "scene": "手电与备用电池的实际一轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LAUNCH_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已有工具更换电池的操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "把暂不带的已有物品存入当前可用储物，再取出这次需要的那件",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "亲手给现有手电换入可用电池，直接体验这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前手电电量、氧气和携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "普通换电不称组合或因果实验，电池当前真实已有，不许诺未来到货或自动充满。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K07.CREATIVE.ALT2",
+          "text": "你在Creative有当前可用室内花盆，至少两种现成植物或种子当前都确能种进去；眼前有合法放盆位置，没用过海卡，也没试过手电工具。先选什么？",
+          "scene": "一株现有绿植不必是成长工程",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对现有花盆、适配植物与可见种植状态，再决定这一轮",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可种的现成植物方案与材料条件，决定选哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "按自己的舱内绿植主题，实际选定花盆位置并种下适配植物，重视空间呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "直接把这份当前可种的植物放进已有花盆，体验普通操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "单次植物布置不记持续成长或系统运营，当前适配条件要真成立，不任意植株都入盆。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你的基地当前有可用点唱机，已取得至少一张音乐盘、能播放对应曲目；建造器可用，柜子与椅子当前已开放且够料，有几处合法空位可建，自己精力足，也能去新的可达地点。此刻先做什么？",
+          "scene": "已经得到的音乐盘和小舱",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_PLAYER",
+            "BZ09K_CHAIRS"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "离开熟悉基地，去当前能到但自己没见过的地点看看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "播放自己已拥有的熟悉曲目，慢慢在熟悉舱里收整现有物品，喜欢这段可自主掌握的安定过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按自己的小舱主题选定柜子与椅子的相对位置，实际建下，让空间呈现想要的布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "亲手操作点唱机，实际播放一首当前已有曲目，直接体验这次可用操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "播放已有曲目不算收藏；h不是因为疲劳或剧情卡住，a须真改布局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K08.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没建点唱机也可换：你只在最早投放舱附近活动，有现成储物、手头工具和走通过的浅水；精神足，也能去新角落。先选哪件？",
+          "scene": "已经得到的音乐盘和小舱的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LIVING",
+            "BZ09K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去没看过而当前可达的浅水角，想发现那里的环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "慢慢收整熟悉舱内已有物品，喜欢这段安定自主的过程，即使还能去新水域",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "亲手存入一件现有物品，再取出准备带走的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "为已经取得的工具或已经去过的舱边地点补上自己的记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "播放已有曲目不算收藏；h不是因为疲劳或剧情卡住，a须真改布局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K08.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "Creative里你当前能步行经过一段已经走通的冰岸，回水入口也可达；另有自己没看过的冰岸岔口，已有舱标记能查看。精神充足时先做哪件？",
+          "scene": "冰面与水下都可以去",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已到过的冰岸停留点或已取得工具，补上自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "去当前可达但自己还没见过的冰岸岔口，想发现现场",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先查看现有投放舱或信标实际显示的位置与距离，再决定去向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "仍慢慢沿熟悉冰岸走一圈再回水，喜欢安稳、自主的过程，即使新岔口也可去",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "Creative不要求取暖、死亡重试或推进剧情；平常查看路线不贴身份标签。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K08.CREATIVE.V1"
+        },
+        {
+          "text": "还没上过冰岸也可换：Creative投放舱旁有你已游过的浅水和一块没看过的新角落，当前舱标记可读、精神足。先选什么？",
+          "scene": "冰面与水下都可以去的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已经游过的舱边地点或已拿到的工具，写下自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "去那块当前可达但自己没看过的浅水，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "核对已有投放舱信号当前实际显示的位置，再决定往哪游",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "慢慢重游熟悉舱边，喜欢这段安定过程，即使新角落也能去",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "Creative不要求取暖、死亡重试或推进剧情；平常查看路线不贴身份标签。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K08.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K08.RESOURCE_EXPLORATION.ALT2",
+          "text": "你在Below Zero浅水已经放过一个可用信标，当前可查看标记、也能接近它改名或收回；氧气与回程够。没有点唱机或舱内整理经历也可换。先做什么？",
+          "scene": "自己已放的一个信标",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去近旁自己没看过但当前可达的浅水角，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先查看现有信标实际显示的位置与距离，再决定这段去向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "亲手给眼前这个当前可改名信标换一个名称，直接体验已有操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "把当前允许回收的信标取回手中，调整这次携带物",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "读信标和改名是不同动作，不把一个已拥有信标算收藏或全地图；也不记为长期成长。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K08.CREATIVE.ALT2",
+          "text": "另换Creative工具场景：你当前已部署可遥控的间谍企鹅，能在近处移动并切换到记录拍摄视图；这片地面你已经去过，精神足，没有必须推进目标。先做什么？",
+          "scene": "企鹅拍过的只是已有地点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BZ09K_SPY",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精神、附近新入口也可遥控到，仍慢慢操纵它绕熟悉停留处一圈，喜欢自主安稳的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "用当前记录视图，为自己已到过的停留点实际拍下并补记这段经历",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "先读已有企鹅移动与记录视图操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "为熟悉遥控转向和靠近目标，专门在同一小段反复练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "拍已体验地点是记录0，不因摄影自动记审美表达；企鹅本体不是NPC真人关系。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回顾你真实玩过的Below Zero资源探索，不要求见过后期人物或结局。哪件当时做过的事最有分量？",
+          "scene": "实际读到的姐妹和站里的人",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_STORE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为理解Sam和其他工作人员的处境，读过已拿到的PDA资料、回听过相关语音并联系前后事件",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "为PDA里自己确认尚未登记的Delta设施地图，实际尝试过扫描",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "为发现现场，去过当时可达但此前没到过的一处冰区地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经到过的研究站或已经取得物件，补上过记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "过去已发生的叙事、真资料空缺与未知探索，不把固定剧情改写成自由分支或真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K09.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "只玩过最早投放舱也可回想，哪件当时真实发生？",
+          "scene": "实际读到的姐妹和站里的人的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_STORE"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "读过已经收到的Sam人物资料，主要想理解她与Robin前后的处境",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "核对过现有投放舱信号实际显示的方向与距离，再决定往哪游",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "实际存取过舱内已有材料，调整手上带的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力、新浅水角也能去，仍慢慢重游过熟悉舱边，喜欢安稳自主的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "过去已发生的叙事、真资料空缺与未知探索，不把固定剧情改写成自由分支或真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K09.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "回想Below Zero Creative真正做过的建造，规模与结果都不要求理想。哪件当时最有分量？",
+          "scene": "曾实际呈现过的小站",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_CONTROL",
+            "BZ09K_LIVING",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在可用控制室真实改过基地配色与名字，让小站呈现自己的主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "亲手调整过合法部件预览的位置或朝向，实际看过编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先看过当时可选的基地配色、房间或外观方案，再决定是否动手",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经搭建的部件和连接，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "配色与布局是自己真实改过，不把只看极地风景算表达，也不把已开放部件未摆齐算收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K09.CREATIVE.V1"
+        },
+        {
+          "text": "没造控制室也可回顾第一次基础走廊试放，哪件确实做过？",
+          "scene": "曾实际呈现过的小站的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_CONTROL",
+            "BZ09K_LIVING",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换过合法预览的位置或朝向，查看变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "为自己的入口方向选定空位，并亲手建下过一个基础部件",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "读过建造器已有操作说明，再亲手继续尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "排过选择、调朝向、确认和施工的本轮编辑步骤，并实际做过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "配色与布局是自己真实改过，不把只看极地风景算表达，也不把已开放部件未摆齐算收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K09.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K09.RESOURCE_EXPLORATION.ALT2",
+          "text": "没有读人物线索时，可回顾Below Zero里你实际接近过一株当时可用氧气植物的一段，不要求去深处。哪件确实发生？",
+          "scene": "曾游过的氧气植物近处",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_OXYGEN",
+            "BZ09K_DOCK"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手和当时已展开、可用的球囊交互过，直接体验取氧",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "核对过当时氧气、工具状态和携带补给，再决定这一段",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "排过短下潜、在当时可用球囊取氧、再回开放水面补气的路线和操作，并实际试过",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "为发现而游去过当时可达、自己此前没见过的邻近浅水角",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只问实际已可用植物，不承诺所有自定义存档同样开花；过去经历不是未来更愿意。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K09.CREATIVE.ALT2",
+          "text": "没有基地配色或基础搭建经历，也可回顾Below Zero Creative里确实用过的间谍企鹅。哪件当时最有分量？",
+          "scene": "曾真的遥控过的企鹅",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_SPY",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己练熟遥控转向与靠近入口，专门反复练过",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "直接用当时可用遥控器操纵企鹅移动过，体验这次工具操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "遥控它去过当时可达、自己此前没见过的小入口，想发现现场",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经到过或已经实际遥控查看过的停留点，补上过记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "第三回顾无建造与配色前提，不把默认控制机器人算身份或现实社交。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你实际拥有并操作海卡的一段，不要求连接顺利或配置最优。哪件当时最有分量？",
+          "scene": "真接用过的海卡配置",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己练熟顶部把手推接与倒车对正，专门在同一块宽阔水域反复练过",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先比较过当时已有各舱用途和连接方案，再决定是否接用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "为自己已经取得的海卡模块和已经到过的停留点，补上过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "实试过只接制造舱与加接储物舱两种现有组合，在同一熟悉短线上取存现料、车内制作，比较过载物空间、车身控制与移动制造的配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "模块组合须实际连用，不把只读方案计b；练习意图不由成功或速度判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K10.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "没有海卡也可回想基础工具的一段，哪件当时真正做过？",
+          "scene": "真接用过的海卡配置的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较过当时已有手电、扫描器等工具的用途与携带占用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "为自己掌握得更熟，专门在舱边反复练过转向、上浮和靠近入口",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "亲手做过一件当时够料的基础物品，主要想体验制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "读过PDA已有工具操作说明，再拿当时可用工具亲手尝试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "模块组合须实际连用，不把只读方案计b；练习意图不由成功或速度判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K10.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "回想你Creative海卡操作里真实做过的事，不要求接车成功或配置最好。哪件最有分量？",
+          "scene": "实际连接过而非只列方案",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为练熟模块顶部推接与倒车对正，专门在同一块宽阔水域反复尝试过",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "开现有海卡反复推进转向，主要享受操纵与车身回应的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先比较过当时已有各舱功能和连接方案，决定是否采用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "实际试过只接制造舱与加接储物舱，在同一熟悉短线上存取物品、车内制作并移动，比较过额外载物空间、车身控制与移动制造的实际配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "真实模块功能实用比较才b，菜单比较精确0；不借Creative能耗、剧情和伤害判偏好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K10.CREATIVE.V1"
+        },
+        {
+          "text": "没造海卡也可回顾早期工具，哪件当时确实发生？",
+          "scene": "实际连接过而非只列方案的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿海滑翔器在宽阔水域反复推进转向，主要享受输入与移动接上的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "亲手换用过自己已有的另一件基础工具，体验它怎样工作",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先比较过当时已有工具的用途与携带占用，再决定采用哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "为掌握海滑翔器转向与靠近固定目标，专门反复练过",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真实模块功能实用比较才b，菜单比较精确0；不借Creative能耗、剧情和伤害判偏好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K10.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K10.RESOURCE_EXPLORATION.ALT2",
+          "text": "没用过海卡、也没有工具练习经历时，可回想Below Zero第一次基础房间搭建。哪件当时最有分量？",
+          "scene": "真正搭过的基础房间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_LIVING"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手调整过合法部件预览的位置或朝向，查看结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排过本轮选部件、定位置和施工的编辑步骤，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "为自己已搭下的房间与连接位置，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "按自己选的小站主题，实际定过房间朝向与入口位置并搭过，重视空间呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "第三回顾是具体基础建造，不把普通多部件相邻自动计b/y或一次房间升级计g。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K10.CREATIVE.ALT2",
+          "text": "没有海卡或海滑翔器经历时，可回顾Creative里你已有可用花盆、至少两种当时都能种入的现成植物，并实际试过种植的一段。哪件当时确实发生？",
+          "scene": "真实种过而非只计划的盆栽",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接把当时能种的现成植物放进过已有花盆，亲手体验操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对过花盆、适配种子和可见种植状态，再决定这一轮",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "比较过当时两种都可种的现成植物与材料条件，再决定采用哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "按自己的小舱主题，实际安排过合法花盆位置并种入适配植物，重视空间呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "明确过去实做，未以长成、收获、图鉴或养成成功作门槛。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你在Below Zero资源规则下实际做过的事，不要求猜对或收齐。哪件最有分量？",
+          "scene": "曾核对体温或留下真缺项",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_CURRENT",
+            "BZ09K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际骑雪狐在宽阔地面反复滑行转向，主要享受操纵与滑行回应的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先核对过当时体温、身体状态和已有补给，再决定怎样行动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "自己先提出过体温变化与一株植物距离有关的解释，在天气与其他热源不变、起始读数相同的安全短试里，实际比较过近处与稍远处的变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "为自己确认尚未完整的雪狐蓝图，实际到过已知可达残片处尝试补扫",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "体温规则要当时真实启用；缺项必须未登记，雪狐不要求做出，个人存活数字不计k。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K11.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "没有到过陆地的人也可回想最早浅水，哪件真实发生？",
+          "scene": "曾核对体温或留下真缺项的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_STORE",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_CURRENT",
+            "BZ09K_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对过当时氧气和基础工具电量，再决定这一段行动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "亲手换用过自己已有的另一件基础工具，体验它怎样发挥",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "为一项自己确认还没完成的海滑翔器蓝图，实际尝试扫过眼前对应残片",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "为看看环境，游去过当时可达而自己此前没到过的浅水角",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "体温规则要当时真实启用；缺项必须未登记，雪狐不要求做出，个人存活数字不计k。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K11.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "回想你Creative里实际做过的一段，不要求到过全部冰区。哪件当时最有分量？",
+          "scene": "真的骑过和动手试过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_CURRENT",
+            "BZ09K_STORE",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手在合法地面收起、重新部署并骑上过现有雪狐，直接体验操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "当时自己有精力、新冰岸也可去，仍慢慢沿熟悉冰岸步行过，享受安稳自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为掌握雪狐起步、转向与靠近停放处，专门在宽阔地面反复练过",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "骑雪狐连续滑行转向，主要享受操纵与地面移动连续回应的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "回顾已发生动作，无完成路线、掌握技巧或骑车里程门槛；普通部署不算新规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K11.CREATIVE.V1"
+        },
+        {
+          "text": "没有雪狐也可回想最早投放舱，哪件当时真实发生？",
+          "scene": "真的骑过和动手试过的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_CURRENT",
+            "BZ09K_STORE",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手把一件现有物品存入舱内，再取出过需要的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力、新浅水角也可去，仍慢慢整理过熟悉舱内物品，喜欢安定自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为了自己控制得更熟，专门练过上浮、转向和靠近入口",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "实际用过制造机做一件当时已可做的基础物品，体验操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "回顾已发生动作，无完成路线、掌握技巧或骑车里程门槛；普通部署不算新规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K11.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K11.RESOURCE_EXPLORATION.ALT2",
+          "text": "没有经历体温对照或残片补扫时，可回想你在Below Zero真实遇过的取回工具。哪件当时做过的事最有分量？",
+          "scene": "曾尝试从海猴手里取回工具",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_LAUNCH_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从另一条当时已游通的短路经过，亲手体验不同接近方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "为自己已经到过的海猴洞口或已取得工具，补上过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "在能安全接近时亲手尝试拿回过海猴手里的自有工具，直接体验这个交互",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对过当时氧气与身上现有工具、补给，再决定这一轮",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "真实当前故事阶段发生过才答，不把取回自身物件当新收藏或NPC人际。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K11.CREATIVE.ALT2",
+          "text": "没有雪狐、浅水游动或投放舱整理经历时，可回顾Creative里你确实用过的控制室面板。哪件当时最有分量？",
+          "scene": "真的操作过的控制室分区",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_CONTROL",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "读过已有控制室操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "为自己已搭下的控制室和房间连接，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "亲手把当时可用的一个分区关过再开，体验这个普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看过控制室、面板和已有连接装置现场，再决定这一轮",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "不是看菜单就算机制实测或长期运营，第三前提保留实际设备操作和记录。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "BZ09K12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾你真正玩过的Below Zero，不问效率或最后成果。哪件当时确实做过的事最有分量？",
+          "scene": "真正试用过的海卡与基地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_CONTROL",
+            "BZ09K_LIVING"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经搭好的基地部件或连接，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时实际把已接海卡的储物舱分开，换用驾驶舱加制造舱的已有方案，在已知短水段亲手试开过",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "在可用控制室实际改过基地配色与名字，让它呈现自己的研究站主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "精力与补给够、也能去新地点时，仍播放过已有熟悉曲目、慢慢收整小舱，喜欢安稳自主的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "过去实际换用海卡配置、基地建设补记、控制室实改呈现与熟悉过程舒缓各自解释；少带模块不自动是规则发明。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K12.RESOURCE_EXPLORATION.V1"
+        },
+        {
+          "text": "还没建基地或海卡也可回顾最早投放舱，哪件当时真正做过？",
+          "scene": "真正试用过的海卡与基地的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_CONTROL",
+            "BZ09K_LIVING"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已经取得的基础工具和已经游过的舱边地点，补过自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "排过取料、制造和收起成品的一轮亲手顺序，并照着试过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "实际用制造机做过一件当时够料的基础物品，主要体验这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "有精力、新水域也能去时，仍慢慢整理过熟悉舱内物品，喜欢安定自主的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "过去实际换用海卡配置、基地建设补记、控制室实改呈现与熟悉过程舒缓各自解释；少带模块不自动是规则发明。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K12.RESOURCE_EXPLORATION.ALT1"
+        },
+        {
+          "text": "回顾Below Zero Creative真正玩过的经历，不以覆盖地图多少评价。哪件实际做过的事最有分量？",
+          "scene": "熟悉舱内收整和新水岸",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_LIVING",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已搭出的基地部件和连接，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时在已经接好的储物舱里，实际存入过随身现成材料，再取出这轮要用的已有物品，整理过自己的携带物",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "有精神、新地点也能去时，仍播放过已有熟悉曲目，慢慢在小舱收整，喜欢这个安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "为发现现场，去过当时可达但自己此前没看过的冰岸或水下地形",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "过去海卡储物舱真实存取、本人建设补记、熟悉曲目下自主舒缓与新地点发现各按实际解释；不强要求所有人建海卡。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K12.CREATIVE.V1"
+        },
+        {
+          "text": "只玩过Creative早期投放舱也可回顾，哪件当时真正发生？",
+          "scene": "熟悉舱内收整和新水岸的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_MODULES",
+            "BZ09K_LIVING",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已经游过的舱边地点或已经拿到的工具，补上过自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "有精力、新浅水角也能去，仍慢慢游过熟悉舱边，喜欢安定自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "游去过当时可达而自己此前没见过的小片浅水，主要想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "核对过已有投放舱标记实际显示的位置与距离，再决定去向",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "过去海卡储物舱真实存取、本人建设补记、熟悉曲目下自主舒缓与新地点发现各按实际解释；不强要求所有人建海卡。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BZ09K12.CREATIVE.ALT1"
+        },
+        {
+          "id": "BZ09K12.RESOURCE_EXPLORATION.ALT2",
+          "text": "另一种Below Zero真实回顾：你有过可用室内花盆，至少两种现成植物或种子在当时都确实可种进该盆；只问做过的事。哪件最有分量？",
+          "scene": "曾在花盆里放下的现有植物",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_LAUNCH_PLAYER"
+          ],
+          "modes": [
+            "resource_exploration"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较过当时可种的现成植物与材料条件，再决定选哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "按自己的舱内绿植主题，选好可放花盆的位置并种下现有适配植物，重视呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "直接把当时适配花盆的现成植物种进去，亲手体验普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对过当时花盆、现有植物和可见种植状态，再决定这一轮",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "真实适配种植条件而非任意种子都可入盆；单次种植不硬说持续成长或营地运营。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "BZ09K12.CREATIVE.ALT2",
+          "text": "再换一个Creative真实回顾：你只用过自己已有的基础工具或装备，没有做模块规则和探索停留。哪件当时确实发生？",
+          "scene": "曾换用过的基础设备",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BZ09K_PLAYER",
+            "BZ09K_LAUNCH_PLAYER",
+            "BZ09K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经取得的基础工具或已体验的停留点，补上过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "实际换用过自己已有另一件基础工具，体验它在相应对象上怎样发挥",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先比较过当时已有工具的用途和携带占用，再决定采用哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "读过已有工具操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "第三回顾是普通工具经历，不把一次换用自动记构筑、成长或自定规则。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+51870ec9e494"
+}

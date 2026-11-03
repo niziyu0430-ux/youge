@@ -1,0 +1,1449 @@
+{
+  "id": "dr14",
+  "title": "渔帆暗涌",
+  "game_ids": [
+    "steam-1562430"
+  ],
+  "scope": "PC本体及已发布免费功能；不把冰寒之境、铁岛、黑石之钥付费设备当默认。一般航海捕鱼入口兼容被动玩法，恐慌/主线末段只本人经历的情境。",
+  "status": "private_authoring_pending_independent_review",
+  "author_review": "root_handwritten_pending_final_read_and_independent_review",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12专属槽各3有限已核情境，保留4共享题；16主问题加最多2补问。",
+    "未体验继续换其他已核专属情境，不跳过；有限3情境不保证所有玩家历史或无限换题。",
+    "单人原生NPC不当真人，分享只在愿回应真人条件下；无真人竞技或画像配额。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC本体航海捕鱼与免费功能",
+      "initial_variants": {
+        "DR1401": "DR1401.V1",
+        "DR1402": "DR1402.V1",
+        "DR1403": "DR1403.V1",
+        "DR1404": "DR1404.V1",
+        "DR1405": "DR1405.V1",
+        "DR1406": "DR1406.V1",
+        "DR1407": "DR1407.V1",
+        "DR1408": "DR1408.V1",
+        "DR1409": "DR1409.V1",
+        "DR1410": "DR1410.V1",
+        "DR1411": "DR1411.V1",
+        "DR1412": "DR1412.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "DR1401",
+      "number": 1,
+      "variants": [
+        {
+          "id": "DR1401.V1",
+          "scene": "天色将暗，眼前鱼群还没钓完",
+          "text": "你在近海已经装了一些鱼，眼前鱼点仍有能用现有鱼竿钓的鱼，回港路线也能走；天色将暗。现在先把这段时间给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_CORE",
+            "DR14_FISH",
+            "DR14_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开回自己已选的港口出售这批鱼，把这趟收益落下来",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "再亲手钓几次，重心是按下拉竿与指针反馈连起来的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握当前指针节奏，留在这个鱼点专门练几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前时间和地图上回港位置，再决定是否续钓",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "有限白昼、实有鱼点与回港竞争，F须本人操作，T只未熟选项。",
+          "interpretation_boundary": "不保证夜间必有袭击、鱼点无限鱼或按得准必得稀有鱼；关闭钓鱼小游戏者仍可选普通返港或换题。"
+        },
+        {
+          "id": "DR1401.ALT1",
+          "scene": "新鱼上船，船舱里的空格却不连在一起",
+          "text": "你刚钓起一条鱼，现有船舱的空格零散；界面仍让你旋转、挪动可移动鱼获，也能不带这条新鱼。你先怎么处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_FISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际旋转挪动已有鱼获，腾出能放下新鱼的连通位置",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "若本人没核清旋转后怎样占格，先猜一种摆法，再亲手试能否放下；不符就改猜想",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先保留自己已选的那批鱼，不把新鱼带走",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对船舱哪些格已占用、空格怎样连在一起，再看新鱼形状，之后再动手",
+              "signal": "device_status_review"
+            }
+          ],
+          "design_purpose": "空间装载是实际原生限制；解形状未知且实试才P，普通收整不强判Y。 D实际查看船舱格的结构状态，不泛用可达入口现场说明。",
+          "interpretation_boundary": "只界面当前能移动物品，不编自动扩舱、丢弃可追回或所有设备格均可塞鱼；不能带走的鱼不算已收藏。"
+        },
+        {
+          "id": "DR1401.ALT2",
+          "scene": "熟悉港湾和另一段当前可达岸线",
+          "text": "白天，你的船能正常航行，地图与眼前海面都能看；回熟悉鱼点和绕向一段当前可达岸线都做得到，时间也允许。先把航程给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_CORE",
+            "DR14_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若那段岸线自己还没到过，亲自绕过去看有哪些能靠近的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "有新地方可去且有余力，仍自主在熟悉港湾慢慢捕鱼，喜欢这段熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先去自己已选的现有鱼点，推进这趟捕鱼目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对已显示的地图位置和已有标记",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "未知只W局部，熟悉全部近岸者仍有选择；非换鱼竿即探索。",
+          "interpretation_boundary": "不保证岸线有奖励或任意礁石可穿；没有可达新岸线也可换题，不能把已看地图当已实地走过。"
+        }
+      ]
+    },
+    {
+      "id": "DR1402",
+      "number": 2,
+      "variants": [
+        {
+          "id": "DR1402.V1",
+          "scene": "研究零件够开一项，鱼竿和引擎都有下一步",
+          "text": "你停靠港口，已有研究零件；研究界面里两项当时已开放的鱼竿与引擎研究各自够投，但手头不足以同时完成两项。先怎么用？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_RESEARCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先投自己这次已选的鱼竿研究，为后续购买该渔具做准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先投自己已选的引擎研究，为后续航行安排做准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两项现已显示的用途和后续需求，再投零件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先保留零件，继续一趟自己当前已能完成的捕鱼",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "研究分支实际有限资源，研究解锁购买资格不等于已经安装。",
+          "interpretation_boundary": "两项当前确可研究且各自够料；不写固定价格/零件数，不编研究后免费立即获得设备。"
+        },
+        {
+          "id": "DR1402.ALT1",
+          "scene": "水面有鱼，现有竿却不支持这里",
+          "text": "你到达一个真有鱼的钓点，界面显示现有渔具不支持它的水域类型；附近也有自己现有竿能钓的鱼点。接下来先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_FISH",
+            "DR14_RESEARCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去当前能钓的鱼点，完成自己已选的这趟收获",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把这个地点留待以后，回港为所需渔具研究、购买和安装做准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对钓点已显示的类型和自己渔具支持范围",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若沿途还有自己未去过且真能到的岸边，先亲自看看那个地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "渔具门槛与可做目标真实冲突；读现成类型非P，未知空间须局部。",
+          "interpretation_boundary": "无合适装备不直接钓；不说未知鱼已知名称，不保证研究前置或资金已满足。"
+        },
+        {
+          "id": "DR1402.ALT2",
+          "scene": "研究做完了，商店里的新竿还没买",
+          "text": "你已经研究解锁一种新鱼竿，当前商店确实出售，已有钱也有合适安装格；但装上它要占用界面标出的时间，现有配置也能直接出海。先投入哪一步？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_RESEARCH",
+            "DR14_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "购买并安装它，亲手出海试这项自己当前已能获得的配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先按原有配置出海，把时间给已选的另一趟捕鱼",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较新旧竿当前支持水域与安装条件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先按界面安装耗时、当前时刻与本次目的地，把安装、出港和返程的先后排好，再照这个安排实际出发",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "从已研究到实际购买安装和出海试用，非陌生装备W或长期G。 D实际排资源/安装/目的地先后并执行，非只看一个时间数字。",
+          "interpretation_boundary": "只有实际购买安装后才试用；不把安装时间固定为攻略示例，不保证卸下设备免费或瞬时。"
+        }
+      ]
+    },
+    {
+      "id": "DR1403",
+      "number": 3,
+      "variants": [
+        {
+          "id": "DR1403.V1",
+          "scene": "回到造船处，钱够修一部分也够另一项准备",
+          "text": "你的船已靠到能维修的造船处，界面有受损格；当前钱能先修自己指定的一部分，也能留给当时已选的另一项购买，不能把两边都做完。先怎样安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_REPAIR"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先付钱修当前影响自己下一趟目标的受损格",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先保留钱给那项已选购买，接受暂时带着其余受损格安排下一趟",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对哪些格受损、哪些设备当前停用，以及本次维修费用",
+              "signal": "device_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先用当前仍能工作的配置完成一趟较近的已选捕鱼，再回来处理",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "原生分格维修/钱的用途竞争，不把稳妥或冒险贴道德人格。",
+          "interpretation_boundary": "必须当前尚能出海、目标可行；不是任何码头都能维修，不写固定单格费用或保证损失物品可还原。"
+        },
+        {
+          "id": "DR1403.ALT1",
+          "scene": "钱料已经齐，干船坞的船舱项目能推进",
+          "text": "你在干船坞有一项已开放的船舱升级，显示的钱料都够；同一批材料也在自己另一个已选交付计划中用得上。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_CARGO",
+            "DR14_DREDGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把材料按升级界面要求实际交入并支付费用，完成这次扩舱",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先保留这批料去完成另一个当前确实可交的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对升级已显示的前置、用料和钱数",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先把这批实际取得的材料存量补记清楚，再继续安排",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "钱料与已开放扩舱的实际取舍；单次购买不自动G/Y。",
+          "interpretation_boundary": "当前真够钱料且前置满足，不编任意免费改船格；另一目标只按本人真实已选且可交者。"
+        },
+        {
+          "id": "DR1403.ALT2",
+          "scene": "引擎所在格修好后，下一程怎么开",
+          "text": "你真经历过一处引擎格受损、回造船处修好它的过程；现在船已能正常走，也可以先跑近海。下一段先把精力给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_REPAIR",
+            "DR14_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己已选的目的地开出去，推进原定航程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人还没掌握船的转向与靠岸节奏，先在可行近海亲手练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "亲手连续转向避开眼前礁石，喜欢船身跟着操作响应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对修复后哪些设备已恢复工作",
+              "signal": "device_status_review"
+            }
+          ],
+          "design_purpose": "修复后实际航行输入，不把修船服务当玩家亲手装配。",
+          "interpretation_boundary": "只真修好的当前设备，不承诺修好后不会再损坏；没有此经历可换同槽普通修理/升级情境。"
+        }
+      ]
+    },
+    {
+      "id": "DR1404",
+      "number": 4,
+      "variants": [
+        {
+          "id": "DR1404.V1",
+          "scene": "拖网能沿途收鱼，鱼竿能盯住眼前鱼群",
+          "text": "你已有可用拖网与合适鱼竿，这趟能经过拖网适用水域，也能停在竿能钓的实有鱼点。下一段你更想怎么试？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_RESEARCH",
+            "DR14_FISH",
+            "DR14_ASSISTANT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把同船拖网在移动水域顺带收适配鱼，与鱼竿停点主动取目标鱼配合，真实跑过有/无停点的行程，比较渔获组成和耗时后再调整组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "只按已选鱼点亲手钓，喜欢指针与拉竿反馈接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先沿自己已定的路线开网行驶，推进这次已选收获目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前网与竿的适用水域、状态和船上空间",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "被动沿途收鱼与定点主动捕鱼不同功能实际组合对照才B；网自己出鱼不F。 A须两种装备不同功能真的配合运行并比较；只是分别各捕一次而没组合检验，不作B证据。",
+          "interpretation_boundary": "网须当前可用且真适配水域，不保必出指定鱼/无限耐久；不同路线生态和时间混杂须保留。"
+        },
+        {
+          "id": "DR1404.ALT1",
+          "scene": "为极光水母带上拖网，还是先交现有样本",
+          "text": "你已接星空海盆研究员的样本任务，仍缺极光水母；当前已有能用的近海拖网和可交的另一样本，夜间出航或先回旧堡垒交货都可行。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_ASSISTANT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用合适拖网在当时可行的夜间海域航行，实际寻找缺的水母样本",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先回旧堡垒交自己现有的那份样本",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前样本要求与网的适用范围",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "若水母也是自己惦记的个人收集缺项，就把这次寻找当作补齐那一项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "任务物种/水域/工具真实限制，非所有鱼都能鱼竿钓；C额外个人缺项。",
+          "interpretation_boundary": "只已接任务且工具可用，不保证一次开网必出，不要求三样同时交；不拿NPC研究员作真人Q。"
+        },
+        {
+          "id": "DR1404.ALT2",
+          "scene": "远处互动点，先用望远镜还是去已知鱼点",
+          "text": "普通白天海上，你当前能到一处现有鱼竿支持的已知鱼点，远处还有一处尚未看清内容的海面互动点。已有起始望远镜可用，船也能停下来而不持续转船。先把这段航程怎样安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_TIME",
+            "DR14_FISH",
+            "DR14_CORE",
+            "DR14_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿当前路线去自己已选的已知鱼点，把这趟时间给现有竿确能完成的捕鱼",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先停船用望远镜看远点实际提示，再按现有渔具、已见航线排两处先后，实际开向选定的一处",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "若远点所在岸段本人还没驶近过且当时真可达，就亲自去发现那边岸线与水面环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有的望远镜和渔具适用规则说明，再继续实际观察",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "撤02/04/07重复换竿四方法；起始望远镜识别与实际航行耗时不同，普通单竿也能答。只W项本人未去，不强P猜已知提示。",
+          "interpretation_boundary": "只采用望远镜当前实际显示内容，未知鱼可能信息有限；停看不等于转船/捕鱼/感染全停。被动模式与关小游戏仍适用，不保证远点有奖励。"
+        }
+      ]
+    },
+    {
+      "id": "DR1405",
+      "number": 5,
+      "variants": [
+        {
+          "id": "DR1405.V1",
+          "scene": "图鉴里惦记的一种鱼，和这趟卖鱼目标",
+          "text": "你在港口准备出发，个人想补的鱼种仍有一个没亲手捕到的缺项；按自己当前已知条件和现有渔具，可以安排去找，也能去熟悉鱼点卖鱼。先把航程给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_CORE",
+            "DR14_FISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际去找自己惦记的那个缺项，补上捕获本身就是这趟目标",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先去熟悉鱼点，完成自己已定的这趟收入目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若沿路有自己未到过且真能进的岸湾，先亲自发现那里有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先补记自己实际捕到过的鱼和已去地点",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "个人明确缺项的实找与为了未知空间不同；翻图鉴不自动收藏。",
+          "interpretation_boundary": "不预言稀有鱼刷新、畸变率或所有时段可钓；目标当前确有可行已知条件，未捕得不冒已取得。"
+        },
+        {
+          "id": "DR1405.ALT1",
+          "scene": "新旗帜线索和眼前能打捞的木料",
+          "text": "你已能打捞，也见过画家；眼前是自己已知且当前有木料的打捞点，另有一处现在可到的沉船还没亲自查看。先驶向哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_DREDGE",
+            "DR14_CUSTOM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若自己惦记的旗帜仍有缺项，按当时已有的真实线索去查那处沉船，目的是补旗帜收藏",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "不为指定奖品，亲自看看那处自己未查过的沉船有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先在当前已知木料点实际打捞现有可取材料",
+              "signal": "known_gathering_site_action"
+            },
+            {
+              "id": "D",
+              "label": "先核对已显示地图上两处的位置",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "收藏依本人缺项和实际线索；沉船未知发现不承诺出旗。",
+          "interpretation_boundary": "不保证每艘沉船有旗帜；若没有旗帜线索不选A，不编保存重载刷满材料，地图标记不当已去。"
+        },
+        {
+          "id": "DR1405.ALT2",
+          "scene": "船里已有饰品和鱼，先靠哪一边的商店",
+          "text": "你已打捞到一件可出售饰品，也带着一批普通鱼；当前在大马罗附近，能先靠这里的鱼贩，也能再航行到小马罗商人。两边都是已知可达地点，这趟还要安排这些货的处理。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_DREDGE",
+            "DR14_CORE",
+            "DR14_TIME",
+            "DR14_PEER_TIPS",
+            "DR14_PEER_BOOKS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在大马罗卖掉这批还可卖的鱼，把易变质的鱼获先变成钱，饰品留待后面处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先航行到小马罗商人出售已得饰品，优先自己这次选定的这笔收入，接受鱼继续占舱并经过航行时间",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有地图上的两处港口位置和这次航线，再决定先靠哪边",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先清点自己真正带着的鱼与饰品数量、当前状态，再按手头货物安排",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "撤与01熟港/新岸W/H/目标三同项；已得鱼与饰品有不同已核商店和保留时间代价，诚实中性不把商人交易当真人社交。",
+          "interpretation_boundary": "须已得可售饰品和实际鱼获；不保证鱼可无限保鲜或小马罗商人收一切，不编卖饰品自动补鱼款。未打捞者可换同槽普通捕鱼题。"
+        }
+      ]
+    },
+    {
+      "id": "DR1406",
+      "number": 6,
+      "variants": [
+        {
+          "id": "DR1406.V1",
+          "scene": "打捞指针快碰到缺口，木料还没上船",
+          "text": "你已能打捞，在当前实有材料点开启了原生小游戏；指针需要在轨道间切换避开缺口。船舱还有空间，也能结束这次打捞去做别的。先投入哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_DREDGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手持续抓切换时机，喜欢输入与指针运动响应接起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "若自己还没掌握当前轨道节奏，专门练几轮切换",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先完成自己已选的这份材料打捞，不以练习或反馈本身为重点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有小游戏操作说明，再继续",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "实际交互F与未会T区分；自动打捞不算持续本人操纵。",
+          "interpretation_boundary": "仅小游戏已开启者；失误延长耗时而非必毁船，关闭小游戏者换题，不编自动恢复材料。"
+        },
+        {
+          "id": "DR1406.ALT1",
+          "scene": "鱼和打捞材料都能带，却装不下全部",
+          "text": "你这趟已经取得鱼和木料，当前船舱放不下自己还想保留的全部物品；已有物品能挪动，也能放弃一部分，而回港路线仍可走。先怎么处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_FISH",
+            "DR14_DREDGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己已选的木料交付目标腾出位置，保留这批料",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按自己已选的卖鱼目标保留鱼，接受少带别的",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "实际旋转挪动可移动物品，再决定哪些带走",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前实际物品、数量与空格",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "鱼与材料不同后续用途；一次格子整理不强Y/C。",
+          "interpretation_boundary": "只有已取得物品，放弃有损失，不编丢海后可拾回或海上通用仓库；没解锁打捞者可换纯捕鱼项。"
+        },
+        {
+          "id": "DR1406.ALT2",
+          "scene": "这次钓鱼，小游戏保留还是用原生辅助设置",
+          "text": "你在现有竿支持、当前真有鱼的普通鱼点，自己已选了这趟要带走的普通鱼获。原生辅助设置可关闭钓鱼小游戏，当前保留着小游戏，你也能切换后实际继续钓。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_FISH",
+            "DR14_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "关掉钓鱼小游戏，真实钓这次目标鱼再按原定目标走，接受这次少了亲手接指针的环节",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "保留小游戏，持续亲手接指针、拉竿与进度反馈，重在本人输入连起来的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "若本人没解释这项开关对捕鱼耗时的影响，先提出具体解释，在同类鱼与现有渔具下实际比较开/关前后游戏时刻；鱼点/条件变了便保留未知",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有辅助设置与钓鱼操作说明，再实际选一种继续",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "撤与01返港/钓鱼T/F三同项；原生辅助设置是实际行为取舍，P仅本人未知的捕鱼耗时解释，未预告比较结果。",
+          "interpretation_boundary": "不由开关推现实能力，不默认所有动作耗时不变或自动必更快；关闭后自动钓鱼不F，F只保留实际手动输入者。P多次观察仍可能有鱼种/渔具/时刻刻度混杂。"
+        }
+      ]
+    },
+    {
+      "id": "DR1407",
+      "number": 7,
+      "variants": [
+        {
+          "id": "DR1407.V1",
+          "scene": "为造船工人搬去钢铁岬，还是先留料改自己的船",
+          "text": "你已接到造船工人想离开大马罗的委托，当前拿到她所需的木料废金属；把料送去钢铁岬和留给自己已开放的船只升级都做得到，料不够两边同时用。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_BUILDER",
+            "DR14_CARGO"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把材料送到钢铁岬，推进自己已选的这项委托",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把料给自己的那项船只升级",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "继续这条委托，重心是想知道她离开旧镇、另找生活的这段经历怎样发展",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先核对委托已列材料、自己当前存量和送达地点",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "NPC具体离乡故事牵引S，不将帮NPC自动O/Q或道德选择。",
+          "interpretation_boundary": "委托和升级均确有前置与用料；不改写NPC过去/保证幸福结局，不编任意材料可替代。"
+        },
+        {
+          "id": "DR1407.ALT1",
+          "scene": "研究站的驱逐装置已经启动，窗口里先钓还是打捞",
+          "text": "你已推进星空海盆研究员任务，当时没有启用被动模式，中央海域确有怪物阻挡；你实际启动研究站驱逐装置后，出现可进入的时段。自己已有合适渔具，那里既有当前要交的鱼样本，也有已知可打捞的珠宝遗物。先把窗口用在哪？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_ASSISTANT",
+            "DR14_PHOTO"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先钓自己当前还缺的可交样本，推进研究员任务",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先打捞那件已知遗物，推进自己的收藏家主线目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对自己已列任务的缺项与当前装备",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "D",
+              "label": "若本人未熟这段航行与停点操作，亲手练靠近、停船与起航的衔接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "同一有限可入窗口两真实任务竞争，不泛泛问支线还是主线。",
+          "interpretation_boundary": "只装置确已生效、目标仍存在、装备适配的当次；不承诺无限驱逐、其他海区怪物都消失或适用于未解锁进度。 只当时未启用被动模式、真有中央怪物阻挡与驱逐生效窗口；被动模式没有这项阻挡者继续换同槽其他专属，不给所有玩家造同样怪物时限。"
+        },
+        {
+          "id": "DR1407.ALT2",
+          "scene": "夜里已靠港，等天亮还是现在再出发",
+          "text": "你夜间已停靠一个当前能正常休息的熟悉码头，上一批鱼已经处理，船能继续航行；附近也有自己已确认当时可去、能完成的普通目标。你可以休息，也可以现在再出发。先怎样安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_TIME",
+            "DR14_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在码头休息，让时刻推进到自己选下的白天出发时点，再开始下一趟",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "现在按已知可行的短航程出发，先完成当前已选目标，不等到白天",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先把当前时刻、现有船况与目的地接起来，排休息、出港和返港先后，再照这个安排跑",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有地图上的可达停靠处与目标位置，再选下一趟目的地",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "撤与02ALT2同四项装设备；原生休息推进时刻与夜间继续可行目标竞争，不要求研究新竿/购设备，也不把恐惧或夜行贴人格。",
+          "interpretation_boundary": "本题兼容被动模式和关闭小游戏；不说所有怪物/礁石都消失、不要求夜间必袭击，也不把休息等同免费维修。目标须当时真可做。"
+        }
+      ]
+    },
+    {
+      "id": "DR1408",
+      "number": 8,
+      "variants": [
+        {
+          "id": "DR1408.V1",
+          "scene": "给一趟航行自己定“不用加速”规则",
+          "text": "你已能使用加速能力，当前船也能按普通速度走；有一段自己已选、实际可达的近海往返。你更想怎样玩这趟？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_HASTE",
+            "DR14_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己定这趟完全不按加速并真开完；一旦用了就记个人挑战失败，下趟改规则再试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "照当前路况决定用不用加速，先完成自己选定的返程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "亲手控制转向与加速放松的衔接，喜欢船身响应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对加速当前已有说明和热度显示",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "人工规则有真运行失败和重试，不因普通节省热量即I。",
+          "interpretation_boundary": "须加速已解锁；不造系统禁用/自动挑战奖励，不保普通速度所有风险都可避。"
+        },
+        {
+          "id": "DR1408.ALT1",
+          "scene": "一趟捕鱼自己定“已带上的鱼不丢弃”",
+          "text": "你准备在熟悉近海跑一趟普通捕鱼，当前能正常返港，也能按船舱情况决定带哪些鱼。你想怎样安排这一次？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_FISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自定凡已放进船舱的鱼都不丢弃，真的出海照做；若丢了就记这趟个人挑战失败，下趟再改规则试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "照常按已有船舱和当次收获取舍，完成自己这趟卖鱼目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握鱼形旋转与放置，实际练把当前真捕到的鱼摆进可用空格",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有鱼获、空格和目的地，再决定收多少",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "无需特殊能力即可自定明确可失败的装载规则，非正常整理就I。",
+          "interpretation_boundary": "不强迫钓上鱼必须带走；挑战仅限制已入舱者，不造鱼凭空消失自动重置或丢弃可撤销。"
+        },
+        {
+          "id": "DR1408.ALT2",
+          "scene": "从熟港出发，自己加一条“只在原港结束”",
+          "text": "你有一条熟悉近海路线，沿途有已知可停靠港口；当前出发港能正常返回，也能照常在沿途港结束。你更想怎么跑这次？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_CORE",
+            "DR14_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己定这一趟只在出发港结束，真的驶出去再返航；若改停别港就记个人挑战失败，下趟再调规则",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "照常看当前航程决定在沿途哪处结束，完成自己选定的捕鱼安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有别处可选且有余力，仍自主在熟悉港湾慢慢走，喜欢这段熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先核对已显示的港口位置和已有路线标记",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "可选港真实规则，人工挑战不同于无加速或不丢鱼；H不当害怕或没时间。",
+          "interpretation_boundary": "只确有可行熟路线，不保中途事故不改变条件；不是系统锁港/失败读档挑战，规则可下趟调整。"
+        }
+      ]
+    },
+    {
+      "id": "DR1409",
+      "number": 9,
+      "variants": [
+        {
+          "id": "DR1409.V1",
+          "scene": "几趟下来，卖鱼、买装置和找船料总接不上",
+          "text": "回想你实际跑过几趟的一段：捕鱼卖钱、回港修理或购买、打捞船料与升级互相依赖，曾因钱料或空间没接上影响下一程，后来仍跑了几轮。最想保留哪种投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_CORE",
+            "DR14_REPAIR",
+            "DR14_CARGO",
+            "DR14_DREDGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把几趟的卖鱼、留钱、腾舱取料和升级次序重新接起来，真跑后续航程，再按缺口改",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先完成当时自己选定的一次卖鱼或交料，不以整段供给为重点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时升级已经列出的钱料条件",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "若有愿回应真人，分享自己那几趟因为钱料没接上发生的插曲",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "多轮经济、货舱和材料依赖经过实际运行调整才Y，不是一次待办清单。",
+          "interpretation_boundary": "不编燃油消耗/工厂流水线；须本人确有后续几轮，其他玩法可换同槽普通航程。"
+        },
+        {
+          "id": "DR1409.ALT1",
+          "scene": "同一艘船已经改过几轮，还想继续留什么投入",
+          "text": "回想你给这同一艘船真做过多轮长期升级的一次：当前仍有已开放、自己能继续筹钱料的船体或船舱升级，也有已能去的另一片海域。更想留下什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_CARGO",
+            "DR14_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续给自己已长期投入的这同一艘船筹料升级，想看它能力一步步长起来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "若那片海域自己尚未到过且真能进入，先亲自去发现那里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先完成自己当时另选的一趟普通捕鱼目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "补记自己实际拥有的设备和已经去过的港口",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "持续投入同一船的长期能力G，不是换一件数值高设备即养成。",
+          "interpretation_boundary": "只还未到顶且前置真实可开，不编无限等级/付费DLC船体默认可用；没有升级经历换其他情境。"
+        },
+        {
+          "id": "DR1409.ALT2",
+          "scene": "一段普通往返，最想留下的是哪部分",
+          "text": "回想你真在熟悉近海跑过的一趟：能停在实有鱼点钓鱼，也实际掌舵返港；当时有余力，并不是只因为被迫没别处可去。更想保留什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_CORE",
+            "DR14_FISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手调航向、停点再拉竿，喜欢操作与船和指针反馈接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "有别处可选，仍自主回这片熟悉海面按自己的节奏捕鱼，过程本身值得",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "推进自己当时定好的收获或返港目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "补记这趟实际捕到的鱼和到过的地点",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "给无多轮升级/打捞经历者普通回顾入口；与前捕鱼F/H有有限动机核对。",
+          "interpretation_boundary": "不把自动捕鱼算F，不把疲劳或害怕混同H；记录限实际已得/已到对象，不记录未核实验结论。"
+        }
+      ]
+    },
+    {
+      "id": "DR1410",
+      "number": 10,
+      "variants": [
+        {
+          "id": "DR1410.V1",
+          "scene": "另一种鱼竿研究完成后，熟点是否已经能钓",
+          "text": "回想你研究了一种竿后又回到旧钓点的一次：那里显示不能钓，你之后仍有机会回港核对并再次出海。那时自己实际更投入哪一步？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_RESEARCH",
+            "DR14_FISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若当时本人尚未核清，提出研究与实际装船可能是两步，亲自核对购买安装前后在同一类鱼点的可用提示，不符就修正",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先按自己已选目标处理当前可钓的另一处鱼点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较当时已显示的竿类型和当前所装渔具",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "补记自己那时真正拥有的竿与已到钓点，不把研究目录当已拥有",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "本人未核清研究与装备生效时的实际核验；题干不先教完整答案。",
+          "interpretation_boundary": "有研究而未解锁购买前置/缺钱/格位差别均须核对，不能一次失败就认定唯一原因；已清楚规则者不选P。"
+        },
+        {
+          "id": "DR1410.ALT1",
+          "scene": "出港与钓完以后，时间为什么变了",
+          "text": "回想你曾注意到海上有时停看、捕鱼或航行后，顶部时间变化不一样的一次；那时自己仍能在当前水域做几项实际可行操作。更投入哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若当时本人尚未核清，先猜哪些动作推进时刻，分别停船观察、短程移动与实际钓一次，比较前后时间；不符就改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先按自己当时已选的返港或续钓目标行动",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时已经显示的时刻与位置",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "若有愿回应真人，聊这次时间变动给航程带来的实际插曲",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "原生动作驱动时间的个人未知核验，不先把结果写进题干再判P。",
+          "interpretation_boundary": "停船时不得持续转船误判，钓鱼和装配也可能耗时，当前威胁不保证随时安全；已知者可用普通目标项。"
+        },
+        {
+          "id": "DR1410.ALT2",
+          "scene": "那次鱼放进岸仓，过后再看已经不那么新鲜",
+          "text": "回想你真实把普通鱼放进岸上Storage、后来又跑过一些航程的一次：再查看时，部分鱼的状态已经不如刚放入时，仍有当时可出售的鱼。那次之后实际更多投入什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_PEER_TIPS",
+            "DR14_CORE",
+            "DR14_TIME",
+            "DR14_ASSISTANT",
+            "DR14_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人没解释仓里为何变化，提出岸仓也会随经历的游戏时间变质的解释，对照实际存放时刻与同类鱼在船舱/岸仓的变化；感染等因素混入便保留未知",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先把当时仍可卖的这批鱼卖掉，接受不再按原先想法留着以后集中处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若其中真有自己当时已接任务所需、仍符合交付条件的样本，就取出先去交付，接受少卖这部分鱼",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有的鱼质变化与可售条件说明，再安排这批鱼",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "撤与01/06拉竿F/T/返港目标近壳；真实岸仓鱼质继续变坏，P是本人当时未知而非题干已告知原因，当前出售/符合条件交付争同一批鱼。",
+          "interpretation_boundary": "岸仓不是保鲜箱，不用鱼竿受损解释鱼质；不推停船看界面能永久保鲜，不用固定腐烂时数/售价百分比。任务仅C项真实已接且仍合交付要求。"
+        }
+      ]
+    },
+    {
+      "id": "DR1411",
+      "number": 11,
+      "variants": [
+        {
+          "id": "DR1411.V1",
+          "scene": "旧镇长提起往事以后，要不要追问那本书",
+          "text": "回想你真推进到主线末段的一次：已从旧镇长处听到往事，守灯人也有关于那本银红书的后续对话可问；普通捕鱼仍可继续。最想保留什么投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_ENDING",
+            "DR14_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续追问守灯人与收藏家关于那本书的来历，关心这些人和过去事件怎样连起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先做自己当时已选的一趟捕鱼，暂时把后续对话留着",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "补记自己已经听到的人物信息，不把未见结局补成事实",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "若有愿回应真人，聊自己对已经听到往事的感受",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "已核具体旧镇长/守灯人/银红书主线牵引，不需要玩家猜正确结局。",
+          "interpretation_boundary": "须确有对应末段和当前可问对话；不要求所有玩家选某结局，不编书的最终去向或虚构复活分支。"
+        },
+        {
+          "id": "DR1411.ALT1",
+          "scene": "材料已经送到，造船工人真上了自己的船",
+          "text": "回想你把木料废金属送到钢铁岬、再把造船工人接上船的一次：她在船舱里占着乘客位置，你实际把这趟航程继续开下去。那次更投入什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_BUILDER",
+            "DR14_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续完成航程，关心这位离开旧镇的人怎样来到新的落脚处",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "亲手转向避开真实礁石、接近目的港，喜欢掌舵响应连起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先完成自己当时已选的送达目标，不把人物后续作为重点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时船况、乘客占位和已显示目的地",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "具体乘客运输的故事关心与本人操船区分；NPC不是人际O/Q。",
+          "interpretation_boundary": "只真接到乘客且仍可送达的当次，不编她落海后可复活补任务；与07委托准备有同一人物的有限跨环节关联。"
+        },
+        {
+          "id": "DR1411.ALT2",
+          "scene": "船舱当前读的书，后续航程先留给它吗",
+          "text": "回想普通本体中你已在船舱选过一本当前阅读的书，又实际跑过捕鱼航程的一次：这本当时还没读完，船仍能继续出海。后来实际更投入哪边？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_PEER_BOOKS",
+            "DR14_CORE",
+            "DR14_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把接下来实际航程继续留给当前这本的阅读进度，先完成自己已选的这项阅读目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若当时另有一本真实持有、未读且更合自己下一程用途的书，就换它为当前阅读并继续航程，接受暂缓原书的后续进度",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若当时真实另一已得书进度没动、本人尚未解释，提出只有当前选中的书随时刻推进的解释，真比较切换选择前后实际航程中的两书进度；条件不明就保留未知",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把自己确实取得的书名和已获得的信息补记下来，不把还没读完的效果写成已得到",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "撤与01/05熟港/新岸三同项，改原生单一当前阅读的进度归属竞争；有第二本只在B/C局部，不把自动读书当F或单书读完当长期G。",
+          "interpretation_boundary": "须真实选过一书并继续航程；另一书真实持有且未读只在B，另一书实际进度未动且本人未知仅C。没有多本不编比较，不说换书重置旧进度，不假取得立得全效果或必须现实读完游戏内全文。"
+        }
+      ]
+    },
+    {
+      "id": "DR1412",
+      "number": 12,
+      "variants": [
+        {
+          "id": "DR1412.V1",
+          "scene": "画家已有几种颜色，先把自己的船改成什么样",
+          "text": "回想你已能在小马罗找画家调整船只外观的一次：当前实际可选的船身、船顶颜色和旗帜中有自己能用的方案，另一次出海也可开始。更想留下什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_CUSTOM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想表达的配色与旗帜关系实际调整，让这艘船更像自己的作品",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已开放的颜色和旗帜方案",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "先按自己已经选定的外观结束这次调整，把时间给下一趟出海",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若有愿回应真人，给对方看自己实际改过的船，享受一起聊呈现效果",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "已得原生外观表达A，不拿颜色改变当物理性能构筑。",
+          "interpretation_boundary": "只有当前已开放选项，不造所有颜料旗帜免费已得、客制贴图导入或联机展示功能。"
+        },
+        {
+          "id": "DR1412.ALT1",
+          "scene": "摄影师的相机已拿到，海面这次想怎么拍",
+          "text": "回想你已取得原生相机、真的为当前海面拍照的一次：船、岸线与眼前光影都在画面里，也能结束拍照继续航程。你更想保留哪种投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_PHOTO",
+            "DR14_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想表达的船与岸线关系调整构图，拍出这次海面给自己的感觉",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先完成自己当时已选的一张照片保留目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握当前相机操作，实际练换角度和捕捉画面的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若有愿回应真人，分享自己实际拍到的画面，享受一起聊这段海上体验",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "原生摄影构图A，不把保存照片自动当物品地点信息记录R。",
+          "interpretation_boundary": "须相机真实已取得、设置当前能用，不保证任意镜头穿地/自动上传或任务奖励；只看过宣传片不算经历。"
+        },
+        {
+          "id": "DR1412.ALT2",
+          "scene": "前期那次卖鱼，入账与显示售价没完全对上",
+          "text": "回想游戏前期你还欠市长船款时，一次卖鱼后注意到入账和那批鱼显示的售价不完全一样；当时仍能核对船款提示，也能继续普通捕鱼或港口服务。那次实际更投入哪边？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DR14_PEER_DEBT",
+            "DR14_CORE",
+            "DR14_REPAIR"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人还没解释差额，提出部分卖鱼款进入船债偿还的解释，核对真实出售前后入账与剩余船债提示；不吻合就不把一切差额都归这一原因",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "若当时已有钱覆盖显示的剩余船债，实际找市长主动付清，接受手里可用于当前维修/购买的钱减少",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "按当时已知的还款方式继续卖鱼，让船债随普通出售逐步减少，把手头钱先留给当前确需的维修或已选购买",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时市长显示的剩余船债与交款选项，再决定本次能否付清",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "撤与09熟港掌舵捕鱼H/F/目标三同项；原生前期卖鱼抵船债与主动还款争现钱，P只本人未知差额原因，题干不先讲扣款答案。",
+          "interpretation_boundary": "普通本体前期真实经历；不编贷款利息/每日强制还款或借贷系统，不用固定初始金额，也不把NPC市长当真人社交。已清债者回顾当时经历，不要求重新欠债。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+465aee96e59d"
+}

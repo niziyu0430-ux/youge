@@ -1,0 +1,1935 @@
+{
+  "id": "dom09f",
+  "title": "人类黎明 Dawn of Man",
+  "game_ids": [
+    "steam-858810"
+  ],
+  "scope": "PC正式1.8.4；人类聚落与原生Long March猛犸挑战分开",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "Stone/Metal Age Creative仍有食物、人口、工具与建设，不假定无限资源；初始时代/气候/知识开关可换早期题，不再按难度复制。",
+    "Long March禁人类建造科技管理，只问已核移动、疾跑、攻击和行进标记；不补未经核实的饮水、繁殖、采集或编队命令。",
+    "商店中文来自社区翻译，本包中文自行转述，不要求Mod或统一中文菜单。知识点即时购买技术为0分。"
+  ],
+  "modes": [
+    {
+      "id": "colony",
+      "label": "人类聚落：Freeplay／原生人类城建挑战与Creative",
+      "initial_variants": {
+        "DOM09F01": "DOM09F01.COLONY.V1",
+        "DOM09F02": "DOM09F02.COLONY.V1",
+        "DOM09F03": "DOM09F03.COLONY.V1",
+        "DOM09F04": "DOM09F04.COLONY.V1",
+        "DOM09F05": "DOM09F05.COLONY.V1",
+        "DOM09F06": "DOM09F06.COLONY.V1",
+        "DOM09F07": "DOM09F07.COLONY.V1",
+        "DOM09F08": "DOM09F08.COLONY.V1",
+        "DOM09F09": "DOM09F09.COLONY.V1",
+        "DOM09F10": "DOM09F10.COLONY.V1",
+        "DOM09F11": "DOM09F11.COLONY.V1",
+        "DOM09F12": "DOM09F12.COLONY.V1"
+      }
+    },
+    {
+      "id": "long_march",
+      "label": "The Long March：直接控制猛犸群",
+      "initial_variants": {
+        "DOM09F01": "DOM09F01.LONG_MARCH.V1",
+        "DOM09F02": "DOM09F02.LONG_MARCH.V1",
+        "DOM09F03": "DOM09F03.LONG_MARCH.V1",
+        "DOM09F04": "DOM09F04.LONG_MARCH.V1",
+        "DOM09F05": "DOM09F05.LONG_MARCH.V1",
+        "DOM09F06": "DOM09F06.LONG_MARCH.V1",
+        "DOM09F07": "DOM09F07.LONG_MARCH.V1",
+        "DOM09F08": "DOM09F08.LONG_MARCH.V1",
+        "DOM09F09": "DOM09F09.LONG_MARCH.V1",
+        "DOM09F10": "DOM09F10.LONG_MARCH.V1",
+        "DOM09F11": "DOM09F11.LONG_MARCH.V1",
+        "DOM09F12": "DOM09F12.LONG_MARCH.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "DOM09F01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "当前是温暖季节，附近捕鱼、采果与狩猎都有可用来源和工具，粮食暂够。能干活的人有限，这轮你先怎样安排？",
+          "scene": "季节采食和储备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_STORE",
+            "DOM9F_FAQ",
+            "DOM9F_CURRENT",
+            "DOM9F_13",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把季节采食、干燥保存、工具与入冬衣物连着照看几轮，依实际存量、消耗和工作负载再调限额与任务",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "比较给当前捕鱼、采果或狩猎分配人手的供食方案，再决定本轮先投入哪一路",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "按当前人员与已有工具排好先移到哪处、采什么和送回何处，再实际下令",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先跟看这次采食者取物、返回和存放的真实过程",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "只问当前已有来源与工具；不是用冬季能否活下来衡量现实能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F01.COLONY.V1"
+        },
+        {
+          "text": "聚落刚开始，当前附近有可取的燧石、木料和一种食物来源，手头材料暂够。这轮先把注意力放在哪里？",
+          "scene": "季节采食和储备的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_STORE",
+            "DOM9F_FAQ",
+            "DOM9F_CURRENT",
+            "DOM9F_13",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较先取眼前食物、或先补燧石木料这两种当前可做的物资供给安排",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "按现有人员与工具排好先移到哪处、再采什么和送回何处，并实际下令",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "C",
+              "label": "把采食、石器制作和人口消耗连续照看几轮，按食物工具存量与负载再调采集和制作限额",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先跟看一次居民采集和回收物资的实际过程",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "只问当前已有来源与工具；不是用冬季能否活下来衡量现实能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F01.COLONY.ALT1"
+        },
+        {
+          "text": "在原生 The Long March，你直接控制猛犸群，当前已看到第一处行进标记，附近暂未接敌。没有人类建造或科技可安排；这一轮先把时间用在哪里？",
+          "scene": "第一处标记前的控制",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_NATIVE",
+            "DOM9F_ANIMAL",
+            "DOM9F_CURRENT",
+            "DOM9F_13"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对本场景已有的移动、疾跑和攻击说明，再下令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "反复练选中一头猛犸并让它走一小段，重点是练熟控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "按现有猛犸位置与可达地形排清先移到哪处、再向标记走的顺序，并实际下令",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对各头猛犸的位置与周边可见情况，再决定怎样走",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "只用已证实的选中、移动、双击疾跑、攻击；不虚构采集、编队、饲养或技能成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F01.LONG_MARCH.V1"
+        },
+        {
+          "text": "刚进入这场挑战，还未让猛犸离开起点，当前说明和附近地形均可看。第一段短路没有接敌，你愿先做什么？",
+          "scene": "第一处标记前的控制的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_NATIVE",
+            "DOM9F_ANIMAL",
+            "DOM9F_CURRENT",
+            "DOM9F_13"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对已经出现的场景目标与操作说明，再动手",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "反复练选中、点地移动与重新选中，重点是熟悉操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先按各头当前的位置排好依次移动的次序，再下令让它们到同一处",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对现有猛犸位置与近处可见地形",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "只用已证实的选中、移动、双击疾跑、攻击；不虚构采集、编队、饲养或技能成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F01.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已有持狩猎武器的人，能够手动选中下令；也已有一项狩猎或取肉任务在执行可跟看。附近还有当前可接近的猎物，储粮安全，不必马上再猎。这轮怎样投入？",
+          "scene": "手动狩猎与已有武器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按当前人员与工具排好接近、行动和回收物资的顺序，再实际下令",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有狩猎与武器说明，再决定这次怎样对持武器的人下令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先跟看已有一轮狩猎和取肉的实际过程，不急着加任务",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "反复练选中持武器的人、移动和发出狩猎指令，重点是练熟操作而非必定猎成",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "t 是玩家主动重复操作，不是 NPC 打猎次数；不要求猎杀成功或获得最好战果。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F02.COLONY.V1"
+        },
+        {
+          "text": "尚不准备手动狩猎时，当前可给早期木料、燧石或食物来源安排采集，人员与工具都可查看。你这轮先做什么？",
+          "scene": "手动狩猎与已有武器的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清本轮先移到哪里、采什么和送回哪处的先后，再下令",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "B",
+              "label": "比较本轮先补木料或燧石、还是先加食物采集的当前物资供给方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先看已出现的任务、库存与限额状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "反复练选择可用人员与发出当前采集指令，重点是熟悉操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "t 是玩家主动重复操作，不是 NPC 打猎次数；不要求猎杀成功或获得最好战果。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F02.COLONY.ALT1"
+        },
+        {
+          "text": "你刚下过一段移动指令，几头猛犸之间的间距让你在意；你尚未判断是下令位置、地形还是别的因素。附近暂未接敌，可以试一小段再继续。你先做什么？",
+          "scene": "走完一段后的间距",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对各头当前位置和这一段可见地形，暂不作原因判断",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "反复练逐头选择与短距离移动，重点是熟悉群体移动的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "排清先让哪头到哪一处、再移下一头的顺序，并照着实际下令",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己猜各头的目的地点分散才拉大间距，下一轮只把目的地点集中到同一处可达空地，再观察间距变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "间距原因未知；玩家自提目标点分散解释并实际改变这一项下令条件来对照。可不成立，不要求最后队伍整齐。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F02.LONG_MARCH.V1"
+        },
+        {
+          "text": "你只让猛犸在起点附近短移过一次，有一头落在另一侧；还没查明原因，附近没有追来的捕食者。你会先怎样投入？",
+          "scene": "走完一段后的间距的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对这头与其他猛犸的位置、周边可见地形",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "反复练重新选中与移动，想练熟命令",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "按当前位置排清让哪头先走、下一头再走的次序，并实际尝试",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "D",
+              "label": "直接选中这头落在另一侧的猛犸，给它下一次走到群旁可达空地的移动命令",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "间距原因未知；玩家自提目标点分散解释并实际改变这一项下令条件来对照。可不成立，不要求最后队伍整齐。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F02.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已设资源限额，也有多个采集和制作任务。一些预期任务没有开始，但你还没核对工具、原料、限额和当前负载；村里补给安全。这轮先做什么？",
+          "scene": "任务负载与限额",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续几轮照看采食、制造、施工和居民需求，依食物工具存量与实际负载再改任务和限额",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "补记你已经观察到的任务启动、停下和取料过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己猜某类工具的限额压住了制作，只提高这一类工具限额、保持现有供料与其他任务，再看是否开工",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先看任务、库存、工具与限额当前显示什么",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "任务未启动的原因未知；p由玩家提出工具限额解释、只调该项限额并实际观察，不以猜对或任务成功启动为门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F03.COLONY.V1"
+        },
+        {
+          "text": "只有早期石器、木料与采食任务时，一项制作没有照预期开始，原因未查。现有工具还能用，这轮更愿怎样投入？",
+          "scene": "任务负载与限额的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把采料、石器回补和食物供给连着照看几轮，按库存与工作负载再改任务和限额",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先看已有制作与限额说明，再继续尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先核对任务、库存、工具和生产限额状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "自己猜一种石器制作被当前限额压住，只提高这一种限额、保留其他安排，再看实际任务变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "任务未启动的原因未知；p由玩家提出工具限额解释、只调该项限额并实际观察，不以猜对或任务成功启动为门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F03.COLONY.ALT1"
+        },
+        {
+          "text": "当前已看见一只捕食者在行进方向一侧，双方尚未交手；另一侧有当前可达的经过方向，也能先不下新命令核对位置。下一标记还在前方，这轮先怎么做？",
+          "scene": "捕食者在路旁",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清先移到哪处、哪些猛犸随后移动的次序，并照着尝试",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "B",
+              "label": "自定从这里到下一标记都不用本来可用的疾跑，实际只按普通移动尝试继续",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "从另一条已经可达的方向经过，亲手体验不同的进入路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "D",
+              "label": "先核对捕食者与各头猛犸的当前可见位置，再下令",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "禁疾跑是额外规则，不是游戏锁定；没有把绕路直接计创新，也没有声称捕食者必不追击。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F03.LONG_MARCH.V1"
+        },
+        {
+          "text": "起点附近已经能看见一只动物，尚未接触。你能先核对它和猛犸的位置，也能走另一侧已可达的空地，这一轮更愿做什么？",
+          "scene": "捕食者在路旁的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排让猛犸逐次移动到哪里，再照着下令",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对场景已有的动物攻击与移动说明，再继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先看当前单位与可见周边，确认眼前有什么",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "从另一侧可达空地经过，体验这个方向",
+              "signal": "route_variant"
+            }
+          ],
+          "design_purpose": "禁疾跑是额外规则，不是游戏锁定；没有把绕路直接计创新，也没有声称捕食者必不追击。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F03.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前制革和衣物制作都已可用，库存里有不止一种皮料，也可取得当前配方原料。你还没核对其中一项制作停顿的原因；这轮先怎样投入？",
+          "scene": "皮料不是同一种东西",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_STORE",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前制作、库存和限额显示的状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有的生皮、干皮、皮革与制革说明，再继续自己当前的制作安排",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前衣物、皮革与其他制作的可用配方和材料条件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "把狩猎取皮、干燥、制革、衣物与季节消耗连着照看几轮，按各类皮料库存和负载再改限额",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "各类皮料真实用途据FAQ；查看配方说明不是自提假说，也不虚构任意指定原料替代；多周期皮料衣物供需才计y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F04.COLONY.V1"
+        },
+        {
+          "text": "只有早期干燥皮料与基础衣物可做时，工具也还能制作，现有衣物暂够。这轮你先做什么？",
+          "scene": "皮料不是同一种东西的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_STORE",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对现有衣物、材料和任务状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "比较当前可做衣物和工具各自需要的材料",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "把取皮、干燥和基础衣物制作连着照看几轮，依干皮衣物库存与季节需求再调任务",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "按已有人员先安排一处采料、再让载物人卸回现有存处，之后开启本轮现有制作任务",
+              "signal": "unit_command_sequence"
+            }
+          ],
+          "design_purpose": "各类皮料真实用途据FAQ；查看配方说明不是自提假说，也不虚构任意指定原料替代；多周期皮料衣物供需才计y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F04.COLONY.ALT1"
+        },
+        {
+          "text": "眼前一段已可达空地暂时没有接敌，你已经会用普通移动与双击疾跑。可以继续向标记前进，也能花一小段时间操控，这轮更想体验什么？",
+          "scene": "短移与疾跑的直接控制",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按已经显示的行进目标实际向标记推进，把完成当前目标作为重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "直接做几次短移与疾跑，享受自己下令后迈步、加速和转向连续发生的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "反复练两种命令的输入，重点是练熟如何发出想要的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "只换一次已经会用的普通移动与疾跑次序，亲手体验这次变化",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "f 只计玩家直接动物控制的命令反馈，不是看自动施工或自然走路；不推硬件、体力和操作能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F04.LONG_MARCH.V1"
+        },
+        {
+          "text": "你刚学会选中一头猛犸，当前近处有可达空地且没有接敌。说明中普通移动与疾跑都已可用，这轮怎么用时间？",
+          "scene": "短移与疾跑的直接控制的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前各头位置排好短距离移动先后，再实际下令",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "B",
+              "label": "亲手交替发短移与疾跑，想体验每次下令后迈步和加速的直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "反复练选中与发出这两种命令，重点是熟悉输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有移动说明，再继续亲手试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "f 只计玩家直接动物控制的命令反馈，不是看自动施工或自然走路；不推硬件、体力和操作能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F04.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "这条人类聚落场景开启了知识，你已有足够知识点，科技栏有满足前提的技术可开；当前也有一项已经列出、眼下有条件推进的聚落目标。食物安全，这轮先投入哪里？",
+          "scene": "石器时代到即时开技术",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_STORE",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先花已有知识购入这一项已开放技术",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "比较当前可选技术与已有工具、材料条件，再决定点哪个",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "核对游戏已有科技与知识点说明，再继续尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先推进当前已经列出的一个聚落目标，把完成这次目标作为重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "花知识点是即时解锁，不称持续研究或养成；知识关闭的原生城建挑战使用不含科技的替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F05.COLONY.V1"
+        },
+        {
+          "text": "这条人类聚落场景没开知识，或你尚未积累够当前技术所需点数；基础石器、采集和生产限额仍能安排。当前一项列出的聚落目标有条件推进，眼前供给安全。这轮先做什么？",
+          "scene": "石器时代到即时开技术的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_STORE",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看已有工具、任务和限额的当前状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "比较当前可做的工具配方与材料条件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "把采集、制工具和食物回补连续照看几轮，按库存、人口消耗与工作负载再调限额和任务",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "核对当前已出现的聚落目标，并实际推进其中可做的一项",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "花知识点是即时解锁，不称持续研究或养成；知识关闭的原生城建挑战使用不含科技的替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F05.COLONY.ALT1"
+        },
+        {
+          "text": "前一处标记已走过，当前新的标记已经显示。猛犸群还在，附近没有正在发生的交战；你能先核对目标或地形，也能继续走。这轮先做什么？",
+          "scene": "下一处行进标记",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_NATIVE",
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对新标记和当前已显示的目标，实际向它推进",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先看各头猛犸与新标记方向的当前可见情况",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "把视角移向尚未仔细观察的山谷，只为看看那里是什么样，暂不承诺新奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "按可达地形排清这一段先往哪里走、再在哪里等其他猛犸，并实际下令",
+              "signal": "unit_movement_plan"
+            }
+          ],
+          "design_purpose": "目标推进为中性；探索只看当前能观察的地图，不虚构支线、藏品或资源奖励。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F05.LONG_MARCH.V1"
+        },
+        {
+          "text": "第一处标记当前已经显示，猛犸还在起点附近，尚未遭遇威胁。你只能先投入一段注意力，先做什么？",
+          "scene": "下一处行进标记的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_NATIVE",
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对当前目标并开始向第一处标记移动",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先核对每头猛犸与可见周边的位置",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "移开视角看一处还没仔细观察过的雪地转折，只为看看环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排短移到哪里、再向哪个方向继续的步骤，并实际下令",
+              "signal": "unit_movement_plan"
+            }
+          ],
+          "design_purpose": "目标推进为中性；探索只看当前能观察的地图，不虚构支线、藏品或资源奖励。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F05.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已有成年牛或马和一架已造好、允许动物类型可改的犁，可耕田地也已划好；当前同样能手工播种，食物和工具暂稳。这轮愿把注意力放在哪里？",
+          "scene": "成年家畜与犁的兼容",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FARM",
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT",
+            "DOM9F_ED_PLOW"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把农时、畜力、运输停放、食物和劳动负载连着照看几个农季，依收成、工具存量与人口消耗再调安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可用耕作与运输工具的条件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "按手头人员、材料和工具排好这一轮取用、移动与回收的次序，再下令",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "D",
+              "label": "在当前犁的允许动物选项中换用已可用的成年牛或马设置，观察自动挂接后这次怎样播种",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "成年牛马是犁工作的必要兼容条件，不把这一必需搭配硬计b；实际换用当前允许类型为0分配置试用，其他按持续经营、当轮命令或比较分别解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F06.COLONY.V1"
+        },
+        {
+          "text": "没有家畜与犁时，你已能制作基础石器并派人采集；手上有两种当前可做的工具或材料选择，食物暂够。这轮做什么？",
+          "scene": "成年家畜与犁的兼容的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FARM",
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT",
+            "DOM9F_ED_PLOW"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把采料、制作石器和后续采食连续照看几轮，依工具损耗、食物库存与工作负载再调任务",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按已有人与工具排清本轮移动、采集和回收的先后，再实际下令",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "C",
+              "label": "反复练选择人员与发出已有采集命令，想练熟操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前工具配方、用途和现有材料",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "成年牛马是犁工作的必要兼容条件，不把这一必需搭配硬计b；实际换用当前允许类型为0分配置试用，其他按持续经营、当轮命令或比较分别解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F06.COLONY.ALT1"
+        },
+        {
+          "text": "当前你已看到一只会造成威胁的动物，猛犸还能移动，攻击命令也已会用；另一条可达方向还可尝试，双方尚未交手。这轮你更愿怎样投入？",
+          "scene": "攻击命令或额外不攻击",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练选中与发出移动或攻击命令，重点是练熟输入与切换",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先排各头先移到哪里、何时转向或交战，再实际下令",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前可见的动物与猛犸位置，暂不决定怎样接近",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "D",
+              "label": "自定从当前位置到下一处已显示标记都不用本可用的攻击命令，真试只靠移动或疾跑继续，不要求通过",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "禁攻击为玩家自定且不以全员通过为成功门槛；不据攻击与否推现实道德。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F06.LONG_MARCH.V1"
+        },
+        {
+          "text": "尚未遇到迫近威胁时，当前已可看到一只动物，选中猛犸后移动与攻击命令都可用。附近还有可达空地，这轮先做什么？",
+          "scene": "攻击命令或额外不攻击的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练重新选中与短移，想练熟已有命令",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先核对各头猛犸与这只动物当前的位置",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先看已有场景说明，再决定这次怎样下令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "给起点到第一处标记这一段加禁攻击规则，实际只靠移动与疾跑尝试继续",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "禁攻击为玩家自定且不以全员通过为成功门槛；不据攻击与否推现实道德。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F06.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "同一存档里，一只你此前已留过圈舍和饲料照看的牛或山羊仍未成年，之后才有对应产奶用途。当前牲畜、饲料与圈舍可查，另有工程可做，这轮先投入哪里？",
+          "scene": "已经饲养的幼畜",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_FARM",
+            "DOM9F_ED_HUSBANDRY",
+            "DOM9F_ED_STABLES"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前牲畜、库存和限额的状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "把已经观察到的圈舍饲料补给与幼畜取食过程补记下来",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "继续给同一只已饲养过的幼畜保留圈舍和饲料，按本类数量调整不触发屠宰的限额，隔段关注它的成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把牲畜限额、圈舍饲料、食物储备与人口消耗连续照看几轮，按物资存量和负载再调供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "g 明确同一已投入幼畜继续成长，不把一次买牲畜当养成；没有家畜可换早期题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F07.COLONY.V1"
+        },
+        {
+          "text": "尚无家畜时，聚落已有运行过的基础石器与衣物制作，你已看到取料和取食过程；当前食物材料可查，下一处基础设施也能建。这轮先做什么？",
+          "scene": "已经饲养的幼畜的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_FARM",
+            "DOM9F_ED_HUSBANDRY",
+            "DOM9F_ED_STABLES"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好搬料与这次基础设施施工的先后，再推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "把已观察过的采集、衣物制作和取食过程补记下来",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "查看当前材料、工具与任务限额状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "把取料、基础衣物和食物供给连续照看几轮，按材料衣物存量、人口消耗与负载再调限额",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "g 明确同一已投入幼畜继续成长，不把一次买牲畜当养成；没有家畜可换早期题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F07.COLONY.ALT1"
+        },
+        {
+          "text": "你已经走过一段熟悉路线，当前这段可达且没有正在接近的威胁；下一处目标还能继续，你也有精力。这轮你把时间给什么？",
+          "scene": "已走过的一段与陌生方向",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练在熟悉空地选中、移动与转向，重点是练熟控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "核对当前行进标记，实际继续向它推进",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "主动再走一小段熟悉路线，喜欢从容照看猛犸行进的重复过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "移开视角看看还没仔细观察过的另一处山坡，只为发现环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h 明确有精力、能继续且主动喜欢熟悉过程；不因害怕捕食者或刚受挫就计舒缓。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F07.LONG_MARCH.V1"
+        },
+        {
+          "text": "你刚在起点附近走过一个短段，当前可重复经过且没有威胁；第一处标记还可继续，你也有精力。先做什么？",
+          "scene": "已走过的一段与陌生方向的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练选中和短移，想熟悉操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "核对已经显示的第一处目标并实际向它推进",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "主动再走这段已熟悉的短路，因为喜欢从容重复这一段",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先看一处未仔细观察过的雪地边缘，不是为确定奖励",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h 明确有精力、能继续且主动喜欢熟悉过程；不因害怕捕食者或刚受挫就计舒缓。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F07.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "当前你已有能开采搬运巨石的工具与人员，也有可建的巨石项目，食物安全。搬运会占一段劳力，另一批日常工作仍可安排；这轮先做什么？",
+          "scene": "巨石工程与当季劳力",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_STORE",
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前巨石项目与基础设施的人员、材料条件，再选本轮推进哪处",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "核对现有工具与可用劳力，排清这次开采、搬巨石和选定工地施工的先后，再实际推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "把巨石工程占用劳力、季节采食、衣物和工具回补连着照看几轮，按实际负载与库存再调任务",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "按自己想要的聚落纪念场地主题，调整当前可建巨石项目的位置关系",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "巨石由人搬，不虚构牲畜拉巨石；单轮步骤与多系统持续运营分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F08.COLONY.V1"
+        },
+        {
+          "text": "还没有巨石技术时，营地已有火塘，手头材料可建一处基础住处或工作设施，食物暂够，也有合法空地可用。这轮先做什么？",
+          "scene": "巨石工程与当季劳力的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_STORE",
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可建住处与工作设施的人员、材料条件，再选这次投入",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "排好取料、搬运与这次施工的次序，再实际安排",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "把采食、石器、衣物和人口消耗连续照看几轮，依库存与工作负载再改任务和限额",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "按自己围绕火塘留开口的营地主题，实际调整当前基础建筑的预览位置与空地关系",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "巨石由人搬，不虚构牲畜拉巨石；单轮步骤与多系统持续运营分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F08.COLONY.ALT1"
+        },
+        {
+          "text": "几头猛犸已走到前方空地，一头还落在后面，当前位置与两边空地都能看清。双方暂未接敌，各头都可选中移动，前方目标还在。这轮你先做什么？",
+          "scene": "落后猛犸与前方几头的位置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先切换视角核对落后这头、前方几头与周边可见动物的位置，再决定下令",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先排让落后这头到哪处、再让前方几头往哪里继续的次序，并逐次实际下令",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "C",
+              "label": "直接选中前方一头，让它向后侧当前可达空地走一小段，亲手试这一次移动",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "在这段已可达空地反复练切换选中前后不同猛犸并下短移命令，重点是熟悉输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "具体前后位置差异下，核实可见状态、逐头移动安排、一次直接命令与主动重复练控制分开；不虚构集合或编队按钮。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F08.LONG_MARCH.V1"
+        },
+        {
+          "text": "刚在起点附近发过一次移动命令后，一头靠近你点过的空地，另一头仍在起点。近处没有威胁，普通移动和疾跑都能用。这轮先做什么？",
+          "scene": "落后猛犸与前方几头的位置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对两头各自位置与近处可见地形，再决定怎样移动",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排清先让哪头到哪处、再让另一头移动的次序，并照着实际下令",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "C",
+              "label": "选中仍在起点的那头，直接双击近处可达空地，试一次疾跑命令",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "反复练在两头之间重新选中并发短移命令，重点是熟悉控制",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "具体前后位置差异下，核实可见状态、逐头移动安排、一次直接命令与主动重复练控制分开；不虚构集合或编队按钮。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F08.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你已经安排过的一段季节供给，哪种当时实际做过的投入更有分量？不要求最后储备够或安排成功。",
+          "scene": "已经历过的季节取舍",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_STORE",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把季节采食、保存、衣物、工具和人口消耗连续几轮一起调过，按实际存量与负载再改限额",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我自己猜过工具限额压住制作，只提高过这一种工具的限额、保持其他任务，并实际对照过启动情况",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我按已有人与工具排过移动、采集和回收物资的次序，并实际下令",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "D",
+              "label": "我补记过已发生的采食、运料和消耗过程",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "四项均为真实过去，不把渡过冬季或猜对原因当人格门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F09.COLONY.V1"
+        },
+        {
+          "text": "回想只用初期石器和采食来源的一段，哪种已经做过的事更贴近你？",
+          "scene": "已经历过的季节取舍的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_STORE",
+            "DOM9F_COMBAT"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我连续几轮一起调过采料、制石器和食物供给，依当时库存与工作负载再改任务",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我提出过一种石器受限额压住的解释，只改过这一种制作限额，并实际看过任务变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我排过先移到哪处、采什么和送回哪里的先后，并实际下令",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "D",
+              "label": "我把已观察到的采食或回收物资过程补记下来",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "四项均为真实过去，不把渡过冬季或猜对原因当人格门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F09.COLONY.ALT1"
+        },
+        {
+          "text": "回顾你已经操控猛犸走过的一段，不论后来有没有到终点，哪种当时做过的投入更有分量？",
+          "scene": "已经检验过的行进解释",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我自己猜过目的地点分散让间距拉大，只把下一轮各头目的地集中到同一可达空地，并实际对照过变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我反复练过选中、移动或转向，重点是熟悉操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我排过各头移动的先后，并实际照着下令",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "D",
+              "label": "我先核对过单位当前位置与可见周边，再决定如何移动",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "真实过去，检验可失败、控制可不熟；不以每头存活或通关为问卷门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F09.LONG_MARCH.V1"
+        },
+        {
+          "text": "只走过起点附近时也可以回顾：哪种确实做过的事更有分量？",
+          "scene": "已经检验过的行进解释的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_ANIMAL",
+            "DOM9F_NATIVE"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我自己猜过起点附近各头目标点太分散，只把下一轮移动终点集中到同一处，并实际观察过间距变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我主动反复练过选中与短移",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我先排各头短移的顺序，并实际下令过",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "D",
+              "label": "我核对过当前猛犸位置与近处可见地形，再作决定",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "真实过去，检验可失败、控制可不熟；不以每头存活或通关为问卷门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F09.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回看你已经接触过家畜和较后期工具的一段，哪种实际投入更有分量？",
+          "scene": "已留下的成长或工具尝试",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_FARM",
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT",
+            "DOM9F_ED_PLOW",
+            "DOM9F_ED_HUSBANDRY",
+            "DOM9F_ED_STABLES"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我在已有犁上用过当时可用成年牛马的允许类型设置，并实际看过自动挂接和播种",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "我把几个农季的畜力、运输、耕作与食物供给连续调过，按实际收成、物资存量与人口消耗再作安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我补记过已经观察或安排过的畜牧饲料补给、耕作或运输过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我持续给同一只已饲养幼畜保留过圈舍和饲料、调整过不触发本类屠宰的限额，并关注它的成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "犁的必要兼容设置实际试用为0分，不虚构动物能力差异保b；只有同一已饲养幼畜后续照看才计g，不要求成年或提效成功。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F10.COLONY.V1"
+        },
+        {
+          "text": "回看只用初期石器、衣物和基础建筑的一段，哪种当时做过的事更有分量？",
+          "scene": "已留下的成长或工具尝试的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_FARM",
+            "DOM9F_FAQ",
+            "DOM9F_COMBAT",
+            "DOM9F_ED_PLOW",
+            "DOM9F_ED_HUSBANDRY",
+            "DOM9F_ED_STABLES"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把采料、衣物、工具和食物连续几轮一起安排过，依据库存与负载再改任务和限额",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我按自己的聚落场地主题安排过基础建筑位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我把已经搭建的住处或工作设施过程补记下来",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我主动反复练过选人和下达已有采集命令，想练熟操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "犁的必要兼容设置实际试用为0分，不虚构动物能力差异保b；只有同一已饲养幼畜后续照看才计g，不要求成年或提效成功。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F10.COLONY.ALT1"
+        },
+        {
+          "text": "回想你已经用过移动、疾跑或攻击的一段，哪种实际投入更有分量？不要求尝试后安全通过。",
+          "scene": "实际尝试过的额外限制",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我反复练过选择与命令切换，重点是熟悉操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我直接发过连续短命令，想体验迈步、转向或加速的即时反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "我从另一条当时已可达的方向走过，想体验那一侧的路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "D",
+              "label": "我自定过从一处标记到下一处都禁用当时可用的疾跑或攻击之一，并真的按这项限制尝试行进",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "标记之间的实质命令禁令可计i；起点一次普通操作为0分，反复练控制与畅快直接反馈另按实际偏好解释，不要求通过或无伤。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F10.LONG_MARCH.V1"
+        },
+        {
+          "text": "回顾只在起点附近操控过的片段，哪种实际做过的事更有分量？",
+          "scene": "实际尝试过的额外限制的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主动反复练过选中和短移，想练熟控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我连续发过短移或疾跑，想体验命令后动作接连发生的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "我从另一侧当时可达的空地经过，体验过不同方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "D",
+              "label": "我直接给一头猛犸发过一次疾跑命令，亲手试过它怎样起步",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "标记之间的实质命令禁令可计i；起点一次普通操作为0分，反复练控制与畅快直接反馈另按实际偏好解释，不要求通过或无伤。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F10.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回顾你已经玩过的一段人类聚落，哪件实际做过的事更有分量？额外规则不必坚持成功。",
+          "scene": "真实加过的禁用规则",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_FARM",
+            "DOM9F_COMBAT",
+            "DOM9F_13"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我反复练过选择持武器的人、移动或狩猎的已有命令",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我核对过当时已出现的目标，并实际推进可做部分",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "我给一整个暖季加过不设任何食物采集或狩猎工作区的规则，真试靠手动命令和已有生产继续供食",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "我比较过当时已可制作的几种工具及其材料和用途，再决定采用哪种工具",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "跨暖季自加自动工作区或手动狩猎禁令，限制了本来可用的实际控制方式；不是少造一个工具的普通选择，也不要求整季坚持或供给成功。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F11.COLONY.V1"
+        },
+        {
+          "text": "回想只有初期石器和采食任务的一段，哪种已经做过的事更有分量？",
+          "scene": "真实加过的禁用规则的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_FAQ",
+            "DOM9F_FARM",
+            "DOM9F_COMBAT",
+            "DOM9F_13"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主动反复练过选择人员和下达当前采集命令",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我核对过已出现的聚落目标，并实际推进过其中可做部分",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "我给一整个暖季加过不用当时已可用手动狩猎的限制，真试靠其他可用食物来源继续",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "我比较过当时可制作工具与已有材料",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "跨暖季自加自动工作区或手动狩猎禁令，限制了本来可用的实际控制方式；不是少造一个工具的普通选择，也不要求整季坚持或供给成功。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F11.COLONY.ALT1"
+        },
+        {
+          "text": "回看这场猛犸挑战已经发生的一段，哪件事更能代表你当时愿意投入什么？",
+          "scene": "真实走过的地点与目标",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_NATIVE",
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把已经走过的地点与路线信息补记下来",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我先核对过各头的位置和周边可见动物，再决定后续命令",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我核对过当时已显示的标记，并实际向目标推进过",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "我暂缓过原方向，去观察一处还没仔细看过的地形，而非清奖励清单",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "地点补记是中性而非收藏；目标推进也不因是否最后过关推人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F11.LONG_MARCH.V1"
+        },
+        {
+          "text": "只有起点附近经历也可回顾：哪件当时做过的事更有分量？",
+          "scene": "真实走过的地点与目标的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_NATIVE",
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把已经体验的起点或短路信息补记下来",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我先看过猛犸位置和近处可见情况，再下令",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我核对过第一处标记，并实际朝它走过",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "我移开视角观察过陌生雪地，只为了看看那里",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "地点补记是中性而非收藏；目标推进也不因是否最后过关推人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F11.LONG_MARCH.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DOM09F12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你有精力、仍能解锁或建设新内容，而且没有眼前食物或袭击危机的一段。哪种真实选择更有分量？",
+          "scene": "有余力的熟悉营地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_STORE",
+            "DOM9F_FAQ"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我跟看过居民实际采食、运料或照看牲畜的过程，再决定后面怎么调",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "我主动留在熟悉聚落，照看日常采集与回收，因为喜欢这份从容重复",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我把采食、工具、衣物与人口消耗连续几轮一起调过，按当时存量和负载再改任务",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我为自己的河边或林间营地主题调整过基础建筑位置",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "舒缓须精力与进展仍可用且主动喜欢；不以 Creative 标签、挂机或低负载替代实义。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F12.COLONY.V1"
+        },
+        {
+          "text": "回想你只到早期营地、仍可继续建设而且有精力，眼前也无危险的一段，哪种实际做过的选择更有分量？",
+          "scene": "有余力的熟悉营地的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_STORE",
+            "DOM9F_FAQ"
+          ],
+          "modes": [
+            "colony"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我跟看过一次居民取工具、采集与回收物资的实际过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "我主动回到熟悉营地看日常采集与取食，喜欢从容重复而暂缓新建设",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我连续几轮安排过食物、石器、衣物和人口消耗，按实际库存与工作负载再调限额",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的营地外观主题调整过住处与作业空地",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "舒缓须精力与进展仍可用且主动喜欢；不以 Creative 标签、挂机或低负载替代实义。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F12.COLONY.ALT1"
+        },
+        {
+          "text": "回想你有精力、前方目标仍可推进，当前又没有迫近威胁的一段操控。哪种真实选择更有分量？",
+          "scene": "有余力时重走熟段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_NATIVE",
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为了看看陌生地形而移开过观察方向，不是为奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我主动重走过一小段熟悉路线，喜欢从容照看行进的重复过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我主动反复练过短移或转向，当时重点是练熟控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我把时间留给向已显示标记继续行进，并实际推进过",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "舒缓以当时有余力、能继续和主动喜欢熟悉过程为前提；不以死亡或重试次数计人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F12.LONG_MARCH.V1"
+        },
+        {
+          "text": "回想只在起点附近走过、仍可向第一处标记继续而你有精力的一段；当时没有追来的威胁。哪种实际做过的事更有分量？",
+          "scene": "有余力时重走熟段的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOM9F_NATIVE",
+            "DOM9F_ANIMAL"
+          ],
+          "modes": [
+            "long_march"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我观察过未仔细看过的雪地边缘，只为看看环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我主动再走熟悉短段，喜欢从容重复这一段操控",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我反复练过选择和普通短移，重点是熟悉输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我核对过第一处目标，并实际朝它推进",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "舒缓以当时有余力、能继续和主动喜欢熟悉过程为前提；不以死亡或重试次数计人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DOM09F12.LONG_MARCH.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+f150be6eacfd"
+}

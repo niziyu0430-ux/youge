@@ -1,0 +1,944 @@
+{
+  "id": "tf2campaignv5",
+  "title": "泰坦陨落2",
+  "game_ids": [
+    "steam-1237970"
+  ],
+  "scope": "仅杰克库珀与BT-7274的单人战役，含开场训练；不含多人、前线防御或任何多人解锁",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "唯一default模式为单人战役；不存在以多人情境补齐题数的路径。",
+    "新配置为成套切换；不把多人君主成长、再生、Networks与战术技能引入战役。",
+    "因果、信标、配置和BT驾驶情境均有开场或早期战役替代。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "仅杰克库珀与BT-7274的单人战役，含开场训练；不含多人、前线防御或任何多人解锁",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "TF2CAMPAIGNV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "已经跑过开场的计时铁驭训练，愿意再跑一趟；不用达到任何规定名次，你这次先给自己什么重点？",
+          "scene": "开场铁驭训练",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_walk",
+            "tf2campaignv5_dev"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门练一次跑墙后接跳跃、转向或开枪的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让滑铲、跑墙和落地连续接上，享受整段流动感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "换一段经过平台和目标的顺序，试一条自己想到的路线",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "以训练榜上一个已有纪录为目标，看看自己这趟能接近哪里",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "自选训练纪录对照与动作精进分开，不把榜单名次或高难通关当能力。",
+          "interpretation_boundary": "训练情境完全属于单人战役；不要求进入多人匹配、使用多人身法或达到成就时间。",
+          "id": "TF2CAMPAIGNV501.V1"
+        },
+        {
+          "text": "还没跑完整计时线，只在开场训练区练过跑墙和跳跃。再练这一小段，你先想做什么？",
+          "scene": "开场铁驭训练的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_walk",
+            "tf2campaignv5_dev"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门练一次从墙面跳下后的落脚",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让跑动、跳跃与着地接成不停顿的一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "换一侧墙面和落点，试一种不同衔接",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先看平台、墙面和空隙的位置，弄清这段能怎样连起来",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "自选训练纪录对照与动作精进分开，不把榜单名次或高难通关当能力。",
+          "interpretation_boundary": "训练情境完全属于单人战役；不要求进入多人匹配、使用多人身法或达到成就时间。",
+          "id": "TF2CAMPAIGNV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "最初为BT找电池时，任务路线已知道，旁边还有可到达的岩台和额外角落。这一段没有正在追你的敌人，你先做什么？",
+          "scene": "给BT寻找电池",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_walk",
+            "tf2campaignv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "绕进还没看过的角落，看看坠机现场周围是什么样子",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把去电池、回BT与沿途补给点接成一条清楚的往返路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "以刚接任铁驭的库珀身份，把修复BT当作自己的职责，带着这个作风先接回任务",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "看岩壁、平台与落点怎样连接，自己判断一条能上去的路",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "早期任务路线安排属于单人流程，不虚构能放弃BT或改变固定接任剧情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV502.V1"
+        },
+        {
+          "text": "还没开始找电池，只在开场模拟训练中可以自行走动。继续训练前你先想做什么？",
+          "scene": "给BT寻找电池的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_walk",
+            "tf2campaignv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走到可到达的边缘，看看训练区别的角度",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把检查武器、通过平台与射击目标的训练步骤排顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "按自己认定的认真受训的新兵库珀行事，照教官现有交代把训练接下去",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "看墙面与落点，自己判断下一段能怎样接起来",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "早期任务路线安排属于单人流程，不虚构能放弃BT或改变固定接任剧情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "战役里BT留在另一边，库珀要靠跑墙与双重跳穿过一段断路。这一段路线已经能过，你再走时先想怎样做？",
+          "scene": "独自穿过BT去不了的地方",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_dev",
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "改用另一侧墙面或不同落点，试一种新的经过方式",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "让连续跑墙、空中转向和落地一气接上，体会机动反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "练稳一次离墙转向与第二次跳跃的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "对照两侧墙面和可落脚处，弄清还存在什么连接",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只使用战役铁驭已有机动，不要求多人钩爪、兴奋剂或特殊配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV503.V1"
+        },
+        {
+          "text": "只在开场训练练过跑墙和双重跳，已经能过其中一小段。再走这里，你先想做什么？",
+          "scene": "独自穿过BT去不了的地方的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_dev",
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一侧墙面开始，试一种不同的接法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把这一小段连成顺畅的跑动与跳跃",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "把一次离墙后接跳跃的时机练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先看墙面、空隙与落点之间的关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只使用战役铁驭已有机动，不要求多人钩爪、兴奋剂或特殊配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "已经操作过BT的默认远征配置，能用机炮、导弹与涡旋护盾。再打一处熟悉的泰坦交战时，你先想做什么？",
+          "scene": "坐进BT的远征配置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_exp",
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续体会驾驶舱、机炮和沉重移位带来的视听反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "让护盾、机炮与导弹在不同空隙里互相接应",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "专门练一次收住来袭火力后再出手的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "观察对面移位和掩体遮挡，弄清两边火线怎样交会",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "远征配置为BT战役默认配置，不与其他套件随意混装；题干给出功能而非测试记忆。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV504.V1"
+        },
+        {
+          "text": "还没正式驾驶BT，现在正站在开场铁驭训练的一段靶位前，手中已有训练枪械。你先练或试什么？",
+          "scene": "坐进BT的远征配置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_exp",
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把跑动、开枪与命中连成有节奏的一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "让手中武器与跑墙、换位在不同距离互相配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "专门练一次移出掩体后出手的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "看目标位置、墙面和障碍怎样影响射线",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "远征配置为BT战役默认配置，不与其他套件随意混装；题干给出功能而非测试记忆。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "战役中已找到新的蓝色配置，BT现在能在几套已取得的完整配置之间切换。面对一段熟悉战斗，你先怎样选？",
+          "scene": "沿路找到新的泰坦配置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_walk",
+            "tf2campaignv5_exp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看一套配置内部的主武器、防御与攻击能力怎样共同发挥作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "选一套平时少用的，认真试一整段新打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "保留熟悉配置，专门练一个自己还没掌握的使用时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "选自己最喜欢其射击与移位手感的那套，接着打出流畅反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "BT切换整套战役配置，不把不同多人泰坦的能力自由拼装，不考最佳克制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV505.V1"
+        },
+        {
+          "text": "只使用过BT最初的远征配置，尚未取得其他配置。再打一段熟悉交战，你先想怎样用？",
+          "scene": "沿路找到新的泰坦配置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_walk",
+            "tf2campaignv5_exp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让机炮、导弹和涡旋护盾互相补上空隙",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "改变原来的发动能力顺序，试一次不同展开",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "保留原来打法，专门练一个收盾后出手的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "让机炮、驾驶舱动作和重型步伐接成喜欢的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "BT切换整套战役配置，不把不同多人泰坦的能力自由拼装，不考最佳克制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "在因果任务中已经拿到时空切换装置，知道眼前通路在两个时段的状态。再走这一段，你先想怎样用它？",
+          "scene": "同一地点的两个时段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_time",
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练稳一次跳起后切换时段、再落到平台的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "改一改切换的先后，试一种过去没用过的绕行方式",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先把沿路可查看的记录看完，接上安德森留下的事情",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "对照两个时段的墙面、门与落点，把通路关系看清楚",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "装置只存在于指定战役关卡；不暗示能任意改写历史事件或BT结局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV506.V1"
+        },
+        {
+          "text": "还没到因果任务，只在早期训练区知道一段跑墙通路怎么走。再跑这里，你先愿意做什么？",
+          "scene": "同一地点的两个时段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_time",
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练稳一次空中转向再接落点的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "换一侧墙面和经过顺序，试另一种接法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "把拉斯提莫沙已经在讲的训练说明听完整，了解库珀的起点",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "对照墙面和平台的高低，理解它们怎样相连",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "装置只存在于指定战役关卡；不暗示能任意改写历史事件或BT结局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "在信标任务拿到电弧工具，已经见过它让设备启动的反馈。眼前暂时安全，你先想怎样继续这段设施路线？",
+          "scene": "信标任务的电弧工具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿还能到达的平台看看，认识设施另一侧的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把启动设备、穿越平台与返回BT的步骤排清楚",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "观察设备、供电与门的关系，再验证一个连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在熟悉通路练一次启动设备后立刻接跑墙的衔接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "电弧工具用于该战役任务，单人步骤安排不记真人协调，也不当自由建造。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV507.V1"
+        },
+        {
+          "text": "还没到信标任务，只在最初寻找BT电池的路上遇到岩壁与断开的平台。你先想做什么？",
+          "scene": "信标任务的电弧工具的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看看任务路旁还能到达的高处是什么样子",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把去电池、经过补给点与带回BT的路线排顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "看墙面、岩台和目标之间的空间关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "练稳一次跑墙后转向落到平台的动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "电弧工具用于该战役任务，单人步骤安排不记真人协调，也不当自由建造。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "一次和BT重聚后，眼前暂时没有交战，他正在和库珀说话。继续前进时，你先把注意力留给什么？",
+          "scene": "和BT重聚后的几句话",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_store",
+            "tf2campaignv5_dialogue",
+            "tf2campaignv5_dev"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在没有催促的这一段慢走听环境，喜欢按自己节奏与BT同行",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "听完整段交流，接上这个同伴和任务正在发生的变化",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "按自己理解的库珀，选择眼前已有的回应来进入这个搭档关系",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "选择当前第一人称站位，让BT与周围设施组成自己想留下的搭档主题截图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "只有游戏实际提供的回应；不虚构四个台词选项，不暗示可由对话改变固定结局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV508.V1"
+        },
+        {
+          "text": "还没和BT一起行动，现在仍在开场训练区，拉斯提莫沙正在交代并演示，眼前能自由走动。你先做什么？",
+          "scene": "和BT重聚后的几句话的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tf2campaignv5_store",
+            "tf2campaignv5_dialogue",
+            "tf2campaignv5_dev"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在没有时间目标的训练里按自己节奏走动，也愿意重温这段从容过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "把训练者正在讲的内容听完整，认识这段师徒经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "按自己给新兵库珀定下的作风，先听教官已有交代，再维持这个身份完成训练",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "挑选人物演示与模拟场景在当前视野里的位置，用普通截图留下自己的训练主题画面",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "只有游戏实际提供的回应；不虚构四个台词选项，不暗示可由对话改变固定结局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想战役里一次跑墙、双重跳与落地接得满意的过程，什么最让你想再体验？",
+          "scene": "机动真正接上时",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tf2campaignv5_dev",
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "整个动作没有断开，身体移动与声音反馈很流畅",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "一个过去总落不准的转向或起跳终于掌握住",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "墙面与平台关系被看懂，通路像自己拼出来的一样",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己换的路线也走通了，同一地方出现另一种玩法",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "不要求多人身法、超快速度或训练榜单成绩；关注已体验动作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV509.V1"
+        },
+        {
+          "text": "只回想开场训练里一次普通跑墙和跳跃，最留住你的是什么？",
+          "scene": "机动真正接上时的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tf2campaignv5_dev",
+            "tf2campaignv5_walk"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "离墙、跳起与落地接连发生的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "原来总仓促的一次落脚终于能主动掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "当时看清了墙面与落点的关系，自己推明白怎样能过去",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "不用原来那种接法，也试出了一种能通的路线",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "不要求多人身法、超快速度或训练榜单成绩；关注已体验动作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己已经经历的库珀与BT相处，哪一点最让这对搭档留下印象？",
+          "scene": "铁驭与泰坦之间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tf2campaignv5_store",
+            "tf2campaignv5_manual",
+            "tf2campaignv5_dev"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接手BT之后，曾有意维持自己对库珀的理解，用一贯的语气选择过游戏已经提供的回应",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为登舱前后的第一人称画面选取景，并整理过一组搭档同行的主题记录",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "铁驭轻快穿越与泰坦重型交战之间的切换，带来鲜明反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "任务间的几句话让同伴关系一点点有了分量",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "NPC同伴关系不映射真人外向；不要求结局，也不虚构玩家能另救BT的路线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV510.V1"
+        },
+        {
+          "text": "只回想开场铁驭训练，不要求已经见到BT或正式出战，什么最有感？",
+          "scene": "铁驭与泰坦之间的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tf2campaignv5_store",
+            "tf2campaignv5_manual",
+            "tf2campaignv5_dev"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时曾按给新兵库珀认定的认真受训的作风，安排自己接着完成哪段已有训练",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "曾为训练墙面、教官与手持武器选择取景，用截图表达过自己想留住的受训主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "开火、跑墙与落地连续接上，轻快的操作反馈很鲜明",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "教官最初的交代已经让我在意他与库珀的师徒经历",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "NPC同伴关系不映射真人外向；不要求结局，也不虚构玩家能另救BT的路线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想战役中已经体验过的新通路方式，例如双时段切换、电弧工具或连续跑墙，最让你记住的是什么？",
+          "scene": "一个关卡换一种办法",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tf2campaignv5_time",
+            "tf2campaignv5_walk",
+            "tf2campaignv5_dev"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "通路展开后带出了没见过的平台、房间或景色",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当时把转换前后的场景与机件画面按自己的主题选了出来，整理过一组有个人构图的关卡记录",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "原先分开的空间状态或设备关系终于被自己接起来",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "一个新工具让自己尝试了与惯常不同的经过方式",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "每人按已玩过的一种机制回答，不要求完成全部战役或将关卡道具带到其他模式。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV511.V1"
+        },
+        {
+          "text": "只回想开场跑墙训练，哪部分最让这段路有意思？",
+          "scene": "一个关卡换一种办法的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tf2campaignv5_time",
+            "tf2campaignv5_walk",
+            "tf2campaignv5_dev"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "原本看起来到不了的位置已经被自己走到过",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "曾从当时的训练视角挑选墙面、平台与教官的画面，整理过自己想表达的受训主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "墙面、平台与落点之间的关系逐渐能被自己看懂",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "用自己改过的接法也可以走完",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "每人按已玩过的一种机制回答，不要求完成全部战役或将关卡道具带到其他模式。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TF2CAMPAIGNV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾目前玩过的泰坦陨落2单人战役，不看难度和通关进度，你最想写下哪种经历？",
+          "scene": "这趟战役的一页记录",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tf2campaignv5_store",
+            "tf2campaignv5_walk",
+            "tf2campaignv5_exp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "库珀与BT的相遇和几次交流怎样逐渐接成搭档经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "从一次跑墙落脚不顺，到能够主动掌握这个动作的过程",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "BT某套配置的武器与能力怎样被自己用成一套",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "怎样在岩台、设施与高处找到自己惦记的一枚铁驭头盔",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "只玩战役即可完整作答；不引用多人等级、排位、前线防御、君主或多人钩爪。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV512.V1"
+        },
+        {
+          "text": "只记录开场训练与最初寻找电池的部分，你更想留下什么？",
+          "scene": "这趟战役的一页记录的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tf2campaignv5_store",
+            "tf2campaignv5_walk",
+            "tf2campaignv5_exp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "训练、接任与最初交流怎样让我开始在意库珀和BT",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "一个从墙面跳下后的落脚怎样慢慢练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "现有枪械与库珀机动怎样在不同距离接起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己怎样补上一枚已经发现的早期铁驭头盔",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "只玩战役即可完整作答；不引用多人等级、排位、前线防御、君主或多人钩爪。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TF2CAMPAIGNV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+e5be63658dbd"
+}

@@ -1,0 +1,1940 @@
+{
+  "id": "ft9c",
+  "title": "Factory Town（建造及自动化模拟）",
+  "game_ids": [
+    "steam-860890"
+  ],
+  "scope": "原作PC进程与Creative/Sandbox分别适用；不混续作/Idle",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "两条路径各12初始与12手写替代；沙盒不要求市场、研究、币流或房屋成长。",
+    "高阶工具未用过时可换当前路径基础情境；两条路径的信号不声称等值。"
+  ],
+  "modes": [
+    {
+      "id": "progression",
+      "label": "进程：战役或带真实生产、市场与研究进程的地图",
+      "initial_variants": {
+        "FT9C01": "FT9C01.PROGRESSION.V1",
+        "FT9C02": "FT9C02.PROGRESSION.V1",
+        "FT9C03": "FT9C03.PROGRESSION.V1",
+        "FT9C04": "FT9C04.PROGRESSION.V1",
+        "FT9C05": "FT9C05.PROGRESSION.V1",
+        "FT9C06": "FT9C06.PROGRESSION.V1",
+        "FT9C07": "FT9C07.PROGRESSION.V1",
+        "FT9C08": "FT9C08.PROGRESSION.V1",
+        "FT9C09": "FT9C09.PROGRESSION.V1",
+        "FT9C10": "FT9C10.PROGRESSION.V1",
+        "FT9C11": "FT9C11.PROGRESSION.V1",
+        "FT9C12": "FT9C12.PROGRESSION.V1"
+      }
+    },
+    {
+      "id": "sandbox",
+      "label": "Creative/Sandbox：原生自由搭建与运行测试",
+      "initial_variants": {
+        "FT9C01": "FT9C01.SANDBOX.V1",
+        "FT9C02": "FT9C02.SANDBOX.V1",
+        "FT9C03": "FT9C03.SANDBOX.V1",
+        "FT9C04": "FT9C04.SANDBOX.V1",
+        "FT9C05": "FT9C05.SANDBOX.V1",
+        "FT9C06": "FT9C06.SANDBOX.V1",
+        "FT9C07": "FT9C07.SANDBOX.V1",
+        "FT9C08": "FT9C08.SANDBOX.V1",
+        "FT9C09": "FT9C09.SANDBOX.V1",
+        "FT9C10": "FT9C10.SANDBOX.V1",
+        "FT9C11": "FT9C11.SANDBOX.V1",
+        "FT9C12": "FT9C12.SANDBOX.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "FT9C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "原作进程地图中，坡上有原木，镇里木板生产可开工；工人、滑槽和传送带都已可用，已有资源足够这轮改线。先给哪件事时间？",
+          "scene": "山坡原木与镇内木板",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_CHUTE",
+            "FT9C_25"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把伐取、下坡运木、木板加工与建材储备接成几轮供给，随库存继续调",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "实际挪动一处滑槽或传送带的入口位置，亲手看这次改动后原木或木板怎样经过",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先比较现有工人搬运与这段机械运输各需什么条件，再决定用哪条",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮支撑、路径和接入建筑的放置顺序，再照次序搭",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "持续多环节供给y；普通运输工具按物料各自接驳不单凭两种工具计b，实际挪入口为编辑试用0，比较与单轮编辑顺序0。ALT仅工人和最初木板链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C01.PROGRESSION.V1"
+        },
+        {
+          "text": "刚开始也能选：现有工人可取附近原木交给已建木材加工建筑，板材能送入现有镇中心储备，没有机械运输也能继续。先做什么？",
+          "scene": "山坡原木与镇内木板的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_CHUTE",
+            "FT9C_25"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按已有工人与建材排清取木、加工和搬到镇中心的这一轮分工，再照安排做",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先看当前工人的搬运命令和建筑库存，确认眼前物料在哪一段",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对现成工人搬运示范，再重新下这次取放命令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "把接下来几轮原木取得、加工与建材花用接起来，持续按库存分配工人",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "持续多环节供给y；普通运输工具按物料各自接驳不单凭两种工具计b，实际挪入口为编辑试用0，比较与单轮编辑顺序0。ALT仅工人和最初木板链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C01.PROGRESSION.ALT1"
+        },
+        {
+          "text": "原作Creative/Sandbox地图里，当前可编辑高低地形，也能放原木生成器、滑槽与传送带；一处高地到低处有足够落差。暂不需要市场或研究，先做什么？",
+          "scene": "沙盒中的高地与落料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_CREATIVE",
+            "FT9C_CHUTE",
+            "FT9C_TERRAIN"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给这段加上不用当前可用传送带的限制，实际只用滑槽把原木送往低处",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "实际换用当前可搭的生成器与滑槽配置，让原木从入口跑到落点，体验这套已有配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先排这轮地形、支撑与路径摆放步骤，再照次序搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按自己想表达的山谷货运景观，实际塑出坡面和运输线轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "沙盒生成器可用，i禁用可用传送带且下坡可行；普通源口接运输实玩0，不把任意两件串接计b。ALT仅平地基本滑槽，无研究币流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C01.SANDBOX.V1"
+        },
+        {
+          "text": "只搭过最基础沙盒也能选：眼前短坡可放原木生成器和一小段滑槽，原木能送往较低出口，也能改入口与出口位置。先做什么？",
+          "scene": "沙盒中的高地与落料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_CREATIVE",
+            "FT9C_CHUTE",
+            "FT9C_TERRAIN"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排入口、滑槽和出口的这轮放置次序，再亲手搭出来",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际改一处滑槽位置，看看这段运输会变成什么样",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有滑槽与生成器操作说明，再试接入口",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按自己想要的林间小道轮廓，实际弯折这条短线",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "沙盒生成器可用，i禁用可用传送带且下坡可行；普通源口接运输实玩0，不把任意两件串接计b。ALT仅平地基本滑槽，无研究币流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C01.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "现有Barn里看得见木板，旁边工人和物流可取料，另一端却断断续续收到；库存槽权限、取料命令与目标空位均可查，原因还没确定，材料够试改。先做什么？",
+          "scene": "仓库有货却没接着送",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_ACCESS",
+            "FT9C_25"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看各槽存量、权限和取料目标的实际状态，再决定从哪处动手",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "把建造储备与能对外送的生产库存分开安排，接下几轮随补入和花用调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前库存接收与输出说明，再亲手配置眼前槽位",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己选一个解释，例如某槽是否允许外送，只改对应一项设置后看同一段是否继续出板",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不在题干给权限答案；p须自提并单改验证。查看面板0，持续储备和外送平衡y。ALT不开Barn权限系统。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C02.PROGRESSION.V1"
+        },
+        {
+          "text": "只有早期搬木也可以：一名工人取木后没有把原木送进当前加工建筑；现在能看它的命令、手中物和目标库存，原因未定。先怎么做？",
+          "scene": "仓库有货却没接着送的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_ACCESS",
+            "FT9C_25"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先点看这名工人的当前任务、手中物和目标库存，再决定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "按这轮可用工人排清取木与搬板次序，再照安排做",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已经提供的取料和交付操作说明，再亲手重做这段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先提出一个命令或目标条件的解释，只重下这一段命令，再看这名工人是否完成取放",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不在题干给权限答案；p须自提并单改验证。查看面板0，持续储备和外送平衡y。ALT不开Barn权限系统。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C02.PROGRESSION.ALT1"
+        },
+        {
+          "text": "沙盒小线里，生成器能出原木，目标储存点偶尔收不到；入口过滤、接头方向、路径与目标槽都能查看，原因未定。先花时间在哪？",
+          "scene": "生成器已经出料以后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_CREATIVE",
+            "FT9C_25",
+            "FT9C_ACCESS"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开生成器与目标储存点的现有面板，核对所选生成物和目标当前存量，再决定改哪处",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先核对生成器与当前路径已有说明，再亲手重接小段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮拆移和重放路径的步骤，再照次序调整",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "提出一个关于过滤、方向或目标空位的解释，只改其中一项后看原木是否继续送到",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不给停工原因；观察现状0与单变实测p分开。不将生成器视作战役工具。ALT只有生成器与短带。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C02.SANDBOX.V1"
+        },
+        {
+          "text": "眼前只有生成器与短传送带，原木没有走到带尾，当前过滤、方向与摆位可查。先做什么？",
+          "scene": "生成器已经出料以后的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_CREATIVE",
+            "FT9C_25",
+            "FT9C_ACCESS"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己猜一处入口连接是否造成现象，只挪这一处后实际试出料",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮拆掉、转向和重接的编辑顺序，再照着改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先看已有生成器和接带示范，再亲手继续小线",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前生成器与短带的配置面板，核对所选物和方向，再决定改哪处",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "不给停工原因；观察现状0与单变实测p分开。不将生成器视作战役工具。ALT只有生成器与短带。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C02.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "已有市场和道路连着几户房屋，两种当前能生产的货物可供给；吃用暂稳，能查看房屋类别和等级，尚有未达到的人口进程。先投入哪里？",
+          "scene": "市场之后的房屋",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_PROGRESS"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较两种现成货物的生产条件和房屋当前接受情况，再定这轮供哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "按自己想表达的集市街轮廓，实际挪动道路和现有建筑位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把生产、运到市场、房屋消耗与后续工人需求连着看几轮，再持续调整供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "继续培养一直照看的那片房屋，按其实际需求补给，想把投入留成房屋与人口进程",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "当前供应和房屋已存在；y多轮供需，g持续同一片房屋的保留等级/人口进程；普通配方比较0，主题布局a。ALT无市场前置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C03.PROGRESSION.V1"
+        },
+        {
+          "text": "还没建市场：当前早期目标已要求生产木板，原木和工人足够，现有木材加工建筑可用，附近道路可挪。先做什么？",
+          "scene": "市场之后的房屋的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_PROGRESS"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "照自己选的河边作坊主题，实际安排现有加工点和道路",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮搬原木、加工和运走板材的先后，再照可用工人执行",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "按界面已列出的木板生产条件开工，先实际推进这项目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先比较这一轮采原木与加工现成原木各自的材料条件，再决定先做哪项",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "当前供应和房屋已存在；y多轮供需，g持续同一片房屋的保留等级/人口进程；普通配方比较0，主题布局a。ALT无市场前置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C03.PROGRESSION.ALT1"
+        },
+        {
+          "text": "Creative地形编辑可用，眼前一块区域能改高度，也能只画地表材质；已有运输线可留着试。现在先做什么？",
+          "scene": "有颜色的地面与真的坡度",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_TERRAIN",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对地形高度与材质绘制的已有说明，再动手改一小块",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "实际挪一段已有路径的位置，先看新的摆位是什么样",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的河谷工业区主题，实际安排地表材质与高低轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先排本轮抬高地形、留道路与调整支撑的步骤，再照顺序编辑",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "地表绘制不是资源或坡度加成；a需自选主题。ALT只有平地画材质与摆位。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C03.SANDBOX.V1"
+        },
+        {
+          "text": "只用基础沙盒工具：一块平地能画现成地表材质，旁边有可移动的短路和建筑，不必开生产。先选什么？",
+          "scene": "有颜色的地面与真的坡度的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_TERRAIN",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换这一小片地表材质，亲眼看结果后再定",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排画地面、移动建筑和接短路的本轮编辑步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的田间作坊主题，亲手选材质并摆好道路边界",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先看已有地表绘制与移动工具说明，再改这块地",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "地表绘制不是资源或坡度加成；a需自选主题。ALT只有平地画材质与摆位。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C03.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "现有纸书供给已留下足够研究点和硬币，一项当前可购买技术已可支付；科技等级面板另列着未完成的累计生产要求，基本生产稳定。先做什么？",
+          "scene": "可买的技术与下一等级",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_PROGRESS",
+            "FT9C_RESEARCH",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把纸书生产、学校分发、房屋消耗与研究点取得接成几轮安排，随供给继续调",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "实际花现有研究点和硬币购入这一项当前可支付的技术，再用它继续眼前建设",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "按面板现列的累计生产条件实际安排生产，把这一个等级目标往前推",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先查看研究点存量与科技条件进度，区分累计生产量和现有库存",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "现行School分书赚研究点，普通技术足额后立即购买，不写不存在的半途研究进度；购买0，累计生产目标0，持续纸书供给y。房屋保留成长另问，ALT仅初始建材目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C04.PROGRESSION.V1"
+        },
+        {
+          "text": "还没有研究：当前最初目标要求产出一批木板，工人、原木与加工建筑够用；现有木板也能支撑添一段路。先把时间给什么？",
+          "scene": "可买的技术与下一等级的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_PROGRESS",
+            "FT9C_RESEARCH",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按想要的作坊外缘形状，亲手调整这段道路与建筑摆位",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先实际开工推进界面已有的木板目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前目标写的是产出还是交付，以及眼前已经完成多少",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先按现成人员与板材排清这轮取木、铺路和搬料顺序",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "现行School分书赚研究点，普通技术足额后立即购买，不写不存在的半途研究进度；购买0，累计生产目标0，持续纸书供给y。房屋保留成长另问，ALT仅初始建材目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C04.PROGRESSION.ALT1"
+        },
+        {
+          "text": "你当前可以直接放生成器、木材加工建筑与现有运输件，已有工人能让加工开工；两种物流摆法都放得下。先用这轮时间做什么？",
+          "scene": "沙盒里做一段有输入和输出的加工",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_CREATIVE",
+            "FT9C_25"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮建筑摆位与输入输出路径编辑步骤，再照次序放",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际换一套当前可搭的原木输入、加工和成品输出布局，让这项现有配置运行看看",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把输入、加工、输出缓存和工人安排连跑几轮，跟着实际堵塞继续调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前两种布局的接入条件，再决定这次搭哪种",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "沙盒仍能运行工人生产；普通生产串接实玩0，不靠任意三建筑凑b；y须持续多轮输入加工缓存。ALT不需加工建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C04.SANDBOX.V1"
+        },
+        {
+          "text": "刚接触沙盒也可以：你只放了石料生成器、短滑槽与能收石料的储存建筑，工具可随时移动，不涉及生产或研究。先做什么？",
+          "scene": "沙盒里做一段有输入和输出的加工的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_CREATIVE",
+            "FT9C_25"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想表达的山脚料场轮廓，实际摆这几个物件",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看生成器和现有储存建筑的面板，核对所选物、槽位与当前收料情况",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先排这一轮移动收料点与重接短滑槽的步骤，再照着改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际改变一处短滑槽摆位，看看石料怎样经过",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "沙盒仍能运行工人生产；普通生产串接实玩0，不靠任意三建筑凑b；y须持续多轮输入加工缓存。ALT不需加工建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C04.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "已有井、工人和当前可用的流体管道，一处已运行的用水生产点进水时断时续，原因未定；井、管路和该点的当前状态可看，材料够试改。先怎么安排？",
+          "scene": "可走的取水与供水",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_25",
+            "FT9C_WATER",
+            "FT9C_WATER_DEV",
+            "FT9C_WATER_PLAYER"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较人工搬水与当前管路接入的条件，再决定这一轮用哪种",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "把取水、用水配方、成品运出和后续补料接成几轮循环，跟着实际消耗调",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "自己提出关于取水或管路连通的解释，只改一处连接再看同一生产点的进水",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先按本轮管道高度、拐点和接入位置排清编辑顺序，再亲手接",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "给真实进水间断或已取水却未交付的现象，原因未定，不预告连接或命令就是原因；持续供水生产y、自提单变实测p，查看、比较和这一轮单位下令0。ALT只需井和人工搬水。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C05.PROGRESSION.V1"
+        },
+        {
+          "text": "只有第一口井也能选：现有工人已取到井水，却未继续送进当前能接收水的房屋，原因未定；井与房屋库存、工人命令都可查看。先做什么？",
+          "scene": "可走的取水与供水的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_25",
+            "FT9C_WATER",
+            "FT9C_WATER_DEV",
+            "FT9C_WATER_PLAYER"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对现有取水与房屋供水的操作说明，再亲手下这次命令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先查看井中可取物、房屋当前状态和工人正在做哪一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "按现有工人排清这一轮取水、移动和交付的先后，再照顺序下令",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "D",
+              "label": "提出一个工人是否正确指向交付处的解释，只改这条命令后看它实际怎样送水",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "给真实进水间断或已取水却未交付的现象，原因未定，不预告连接或命令就是原因；持续供水生产y、自提单变实测p，查看、比较和这一轮单位下令0。ALT只需井和人工搬水。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C05.PROGRESSION.ALT1"
+        },
+        {
+          "text": "沙盒中现有几名工人、几栋建筑与道路；工人自定义外观和当前地表材质都能用，没有经营目标催着做。先投入什么？",
+          "scene": "普通材质和工人外观",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_CUSTOM",
+            "FT9C_TERRAIN"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给这片工场定一个自己的外观主题，再实际安排工人现有服饰颜色与地表搭配",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先看当前已可选的工人外观与地表方案，再决定这轮采用什么",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "先排本轮改外观、移动建筑和重铺边路的编辑次序，再照安排做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际换一名工人的现成外观设置，亲眼看看效果",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "服装浏览不是c，普通编辑不是a；只有实际自我主题表达计a。不涉及现实工种或身份。ALT无需工人外观经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C05.SANDBOX.V1"
+        },
+        {
+          "text": "只搭过道路也能选：当前可移动两栋已有建筑、换地表材质并重铺短路，不必用工人或运行工厂。先做什么？",
+          "scene": "普通材质和工人外观的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_CUSTOM",
+            "FT9C_TERRAIN"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想表达的河岸街角主题，实际安排建筑朝向、道路和地面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先看眼前现成地表与建筑外观选项，再决定这轮怎么配",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "实际挪一栋建筑，查看它在新位置的样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮铺地、移动和接路步骤，再照顺序编辑",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "服装浏览不是c，普通编辑不是a；只有实际自我主题表达计a。不涉及现实工种或身份。ALT无需工人外观经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C05.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "计算方块、库存传感与能受信号控制的现有物流口都已开放；一小段已经接通运行，当前信号与取料状态可看，也有够用材料另搭小段。此刻更想做什么？",
+          "scene": "信号能控制的物流口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_CUSTOM",
+            "FT9C_ACCESS"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先提出一个信号为何在某时刻切换的解释，只改一项触发条件后看同一口的动作",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "为这轮加上不用现成计算信号控制的限制，明明它们可用，仍改靠工人和普通物流实际运一小批",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前传感与启停已有说明，再回来接这段小线",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际把库存检测与取料口启停配合起来，试它们怎样共同留出需要的储备",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "b为检测与执行互补；i真正禁用可用信号且有普通运货途径，不要求更高效或通关。ALT无计算方块。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C06.PROGRESSION.V1"
+        },
+        {
+          "text": "只到基础运输也可以：现在工人和已解锁滑槽都能把这批石料送往较低的储存点，工人足够走通。先做什么？",
+          "scene": "信号能控制的物流口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_CUSTOM",
+            "FT9C_ACCESS"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较人工搬运和滑槽这一段各要的现成条件",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "先排工人取石、交付与补建材的这一轮次序，再照安排执行",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有石料运输示范，再回来下命令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "给这轮额外定下不使用当前可用滑槽的限制，只靠工人实际搬这批石料",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "b为检测与执行互补；i真正禁用可用信号且有普通运货途径，不要求更高效或通关。ALT无计算方块。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C06.PROGRESSION.ALT1"
+        },
+        {
+          "text": "你当前的Timer、信号连接与受控物流口已接成一段运料小线，启停节奏可看，原木生成器有稳定输入，空地足够另搭一小段。先选什么？",
+          "scene": "沙盒信号小装置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_CUSTOM",
+            "FT9C_CREATIVE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜一个启停节奏的来源，只改一项Timer设置后观察同一口的动作",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "给这轮加上禁用Timer的限制，明明它可用，仍只靠普通通路实际送一小批货",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先核对这些已有信号工具的说明，再亲手接线",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "把计时信号与物流口启停实际组合，试货流怎样按信号一开一停",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "具体信号检测/执行互补b；i真禁当前工具且普通运输可行。无NPC或假永久养成。ALT只用基础短带。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C06.SANDBOX.V1"
+        },
+        {
+          "text": "没用过计算方块：现有沙盒生成器能给短带供原木，普通直带和一条可接通的弯带都放得下。先做什么？",
+          "scene": "沙盒信号小装置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_CUSTOM",
+            "FT9C_CREATIVE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排转向、放带与接入口的本轮编辑步骤，再照次序搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际换成另一条可搭的弯带布局，看看原木怎样走",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对普通传送带与生成器已有操作说明，再回来继续接",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先比较两条当前可搭布局的入口、出口和占位，再决定采用哪种",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "具体信号检测/执行互补b；i真禁当前工具且普通运输可行。无NPC或假永久养成。ALT只用基础短带。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C06.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你复制了一个会运转的加工小段，试跑时新段出料节奏与旧段不同，原因未定；两段都能编辑，输入原料充足，接头方向与库存均可查。先把精力给哪项？",
+          "scene": "复制之后的出口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_25",
+            "FT9C_ACCESS",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把两段共享的原料、成品储备和建筑用料接成接下几轮安排，持续避免互相抢空",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先排这轮复制段的摆位、支撑和出入口调整步骤，再照次序改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先查看复制段的现有运行与库存面板，核对各处配置和成品库存，再决定要改哪一段",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先提出为什么新段出料节奏不同的解释，只改一处连接，再比较两段运行",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "复制不等于创造规则或收藏；不假定2.5自动接头一定成功或一定缺失。ALT只需现有早期生产点。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C07.PROGRESSION.V1"
+        },
+        {
+          "text": "尚未复制过：现有木材加工建筑和一条工人搬板路线已能用，你能移动建筑、改搬运目标，板材够这轮道路调整。先做什么？",
+          "scene": "复制之后的出口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_25",
+            "FT9C_ACCESS",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前建筑移动与搬运说明，再继续操作",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "把现有取木、加工、运板与建造花用连着安排几轮，持续按库存调工人",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前板材库存、工人目标和已有道路连通状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先排清这一轮建筑摆位与道路编辑步骤，再亲手调整",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "复制不等于创造规则或收藏；不假定2.5自动接头一定成功或一定缺失。ALT只需现有早期生产点。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C07.PROGRESSION.ALT1"
+        },
+        {
+          "text": "当前沙盒有一段自己搭过的高架运输桥，能区域复制，邻近也有能放下它的空地；普通支撑与路径工具都可用。先做什么？",
+          "scene": "沙盒复制一座小桥",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_25",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想表达的双桥景观，实际调整两桥的相对位置和外缘",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先核对区域复制与支撑放置的已有说明，再继续这次编辑",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先排复制、旋转、落位与接入新段的这轮编辑步骤，再照次序完成",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际改复制桥的一处高度或摆位，看看新轮廓与现有路径怎样相接",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "复制与普通摆位没有i/c/g；2.5自动补支撑不当成任何故障必然。ALT仅手放地面短路，不要求用过复制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C07.SANDBOX.V1"
+        },
+        {
+          "text": "只放过平地短路：眼前两栋建筑可移动，道路能手动重接，暂不用复制或高架。先做什么？",
+          "scene": "沙盒复制一座小桥的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_25",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想表达的围院轮廓，实际安排两栋建筑和短路",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先核对移动旋转的已有说明，再亲手调整",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先排移建筑、留空地和接短路的这一轮编辑步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际把一栋建筑转个当前可用方向，查看新摆位",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "复制与普通摆位没有i/c/g；2.5自动补支撑不当成任何故障必然。ALT仅手放地面短路，不要求用过复制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C07.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你精力充足，镇里供给稳定，材料、工人和未完成进程仍足以开新建设；现有镇口与几条往返路线已经很熟。现在先做什么？",
+          "scene": "熟悉的镇口仍有事可做",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_PROGRESS"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把随后几轮居民供货、建材与工人安排接起来，继续随运行调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "暂不扩新线，慢慢看熟悉道路上的往返，喜欢这个自己认得的镇子在过日子",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的山坡小镇风格，实际调整这片道路与建筑轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "继续照料一直培养的房屋供给，想让保留下来的等级与人口进程再长一点",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "h有精力、有可推进内容且主动喜欢熟悉过程；不是休息不足。g真实房屋进程，非一次看等级。ALT不需市场或后续房屋。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C08.PROGRESSION.V1"
+        },
+        {
+          "text": "只玩过开头也能选：你有精神，眼前原木、工人和木板足够继续早期目标；已经认得第一处加工点与道路。先选什么？",
+          "scene": "熟悉的镇口仍有事可做的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_PROGRESS"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这轮取木、搬板与道路施工次序，再照现成人员执行",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先留在认得的作坊旁慢慢看工人往返，正是喜欢熟悉的过程，暂缓下一座建筑",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "实际把第一段路和作坊摆成自己选的林边营地轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "按已列早期目标继续生产所需木板",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "h有精力、有可推进内容且主动喜欢熟悉过程；不是休息不足。g真实房屋进程，非一次看等级。ALT不需市场或后续房屋。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C08.PROGRESSION.ALT1"
+        },
+        {
+          "text": "你有精力、当前工具足够继续搭新区域；熟悉短线有一处可改向的路口，几栋建筑也可看，没财务或研究门槛。先投入哪件？",
+          "scene": "认识的沙盒角落",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_TERRAIN",
+            "FT9C_25"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排下一小片布局、支撑和路径的本轮编辑次序，再照着搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先留在熟悉角落，从容看认得的短线运货，正是喜欢这个安稳可控的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "给这片景观实际补上自己想表达的地表与建筑轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "提出改变一个路口朝向会怎样影响货物去向的预测，只改这个路口后试运行核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "h余力充足仍主动正向熟悉停留；模拟观看本身不计f。ALT不要求运行物流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C08.SANDBOX.V1"
+        },
+        {
+          "text": "只摆过建筑和道路：你有精神，也能继续搭新东西，已认得眼前这个自己摆的小街角。现在先做什么？",
+          "scene": "认识的沙盒角落的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_TERRAIN",
+            "FT9C_25"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前已可选的建筑和地表外观方案，再决定这轮用什么",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "先在熟悉的小街角从容移动镜头，喜欢认得的建筑与道路，暂不开新片区",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "实际按自己选的林边街区主题调整建筑朝向和地面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮扩一段路与挪建筑的编辑步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h余力充足仍主动正向熟悉停留；模拟观看本身不计f。ALT不要求运行物流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C08.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想进程地图里一次你实际处理过的运货断流，不要求修好或生产达标。哪段已经发生的过程更贴近？",
+          "scene": "那次实际遇到的断流",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_ACCESS",
+            "FT9C_25"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出过一个关于取料权限、路线或目标库存的解释，只改其中一项后观察同一段是否恢复",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我把补原料、加工、成品储备和建材花用连看了几轮，跟着实际波动持续调过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我先把当时库存和工人命令看清，主要是核对当时状态再下下一条命令",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "我按那一轮可用工人排过取料与送货次序，并照安排搬了物料",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "真实过去四项均为已经实施过程；p不以修复正确为门槛，y有几轮互依运行，核面板与单轮人员施工0。ALT无需机械物流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C09.PROGRESSION.V1"
+        },
+        {
+          "text": "回想你最早实际指挥工人搬木或石料的一段，不要求后来建成大工厂。哪件事确实发生过？",
+          "scene": "那次实际遇到的断流的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_ACCESS",
+            "FT9C_25"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我看过当时工人的命令、所持物与交付建筑库存，再决定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我猜过为什么没交到目标，只改那一条命令并亲眼看了下一次取放",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我按当时工人排了取料、送达和搬建材的先后，并实际执行过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "我核对过游戏已有搬运示范，再重新操作了那一小段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实过去四项均为已经实施过程；p不以修复正确为门槛，y有几轮互依运行，核面板与单轮人员施工0。ALT无需机械物流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C09.PROGRESSION.ALT1"
+        },
+        {
+          "text": "回想你在沙盒里实际放过带工人的加工建筑、生成器与运输件，并让这段货流运行过的一次，不要求完成目标。哪段已发生的过程更贴近？",
+          "scene": "那次沙盒真实试过的货流",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_CREATIVE",
+            "FT9C_25",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我猜过生成、方向或接入条件中的一个原因，只改对应一项后看过同一段出料",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我把原料入口、加工、成品缓冲与工人安排连看几轮，持续调过相互影响",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我先查看过当时生成器与加工建筑的运行或库存面板，核对所选物和存量，再决定下一处编辑",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "我按那一轮支撑、路径与接头的编辑次序，实际把小线搭了出来",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "全部为真实过去，p未给原因且可失败，y多轮依赖运行。ALT只需最基础出料，不要加工经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C09.SANDBOX.V1"
+        },
+        {
+          "text": "回想沙盒最初只有生成器和短带的一段，不要求货物后来走通。哪件事确实发生过？",
+          "scene": "那次沙盒真实试过的货流的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_CREATIVE",
+            "FT9C_25",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看过当时生成器与短带的配置面板，核对所选生成物和方向，再决定改哪里",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我提出一个入口为何没接上的解释，只挪这一处并实际看了下一次出料",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我按顺序安排过入口、短带和出口的摆放，也亲手照着搭了",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我看过已有生成器与接带说明，随后自己重新接过一段",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "全部为真实过去，p未给原因且可失败，y多轮依赖运行。ALT只需最基础出料，不要加工经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C09.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一段你实际尝试过的运输：当时人工、滑槽与传送带都可用，散料与成品均有可接驳的去向。不要求完成挑战或效率提高，哪种过程更贴近？",
+          "scene": "那次给运输加的玩法条件",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_CHUTE",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际挪过一处滑槽或传送带的入口摆位，亲眼看这次改动怎样影响货物经过",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "我按自己想表达的高架工场主题，实际调过支撑与路径的外形",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我先比较过当时可用的搬运方案，再采用其中一条普通路线运了货",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "我自加过不用当时可用机械运输的限制，实际只用工人运过一段，本可用的工具确实被我排除了",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i是真禁止已有机制并实际尝试；按物料各走普通运输件不单凭串接计b，一处入口摆位试改为0，主题表达a。ALT只需早期工人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C10.PROGRESSION.V1"
+        },
+        {
+          "text": "回想最初一片工地的真实经历：只有工人也能答，不要求用过滑槽。哪段更贴近？",
+          "scene": "那次给运输加的玩法条件的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_CHUTE",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为林边作坊想过一个外形主题，也实际摆过道路与建筑来表达它",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先比较过当时取木与加工木板各自的材料条件，再决定先做哪项",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "我核对过已有操作说明，然后重做了最初一次取放命令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我按现成人员排过取木、搬石和建材交付次序，并照安排做了",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "i是真禁止已有机制并实际尝试；按物料各走普通运输件不单凭串接计b，一处入口摆位试改为0，主题表达a。ALT只需早期工人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C10.PROGRESSION.ALT1"
+        },
+        {
+          "text": "回想一段你真实做过的沙盒运输，当时滑槽和传送带都可用，有散料输入和成品输出的加工点能接驳。不要求顺利送达或更有效率，哪种过程更贴近？",
+          "scene": "那次自加的沙盒条件",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_CHUTE",
+            "FT9C_CREATIVE",
+            "FT9C_TERRAIN"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际挪过加工点一处输入路径的位置，亲眼看了散料怎样经过这个新摆位",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "我主要照自己的山谷货运主题实际塑过地形与路径外形",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我先比较了当时两条普通可接布局，再搭了其中一种来运行",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "我明确禁用了当时本可用的传送带，选一段有落差的路，实际只靠滑槽送过散料",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "普通输送串接和摆位试改0，不单凭散料与成品各接一段运输计b；i须禁用本可用传送带并实际尝试重力路径。ALT不要求自定规则或滑槽。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C10.SANDBOX.V1"
+        },
+        {
+          "text": "回想你最初手动摆过的一条沙盒短路，不要求任何挑战或生产。哪件事真实做过？",
+          "scene": "那次自加的沙盒条件的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_CHUTE",
+            "FT9C_CREATIVE",
+            "FT9C_TERRAIN"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己选的庭院主题实际摆过两栋建筑和连接路",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先排清这一轮移动、旋转和放路的步骤，再照顺序编辑过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "我看过当时已有的操作说明，再亲手重接了那一小段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我实际改过短路一处位置，查看了新的外形",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "普通输送串接和摆位试改0，不单凭散料与成品各接一段运输计b；i须禁用本可用传送带并实际尝试重力路径。ALT不要求自定规则或滑槽。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C10.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想一次进程地图里，你实际持续照料房屋或为当前技术积累研究点的经历，不要求买到技术或升到最高级。哪种已经发生的过程最贴近？",
+          "scene": "那次留下来的进程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_PROGRESS",
+            "FT9C_RESEARCH",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把居民供货、建材、纸书生产与研究点取得接着调过几轮，关注持续运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我先看清过当时房屋经验与研究点存量，再决定下一轮投入什么",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "我持续照料同一片房屋的真实需求，重视此前供给能继续留下保留的房屋经验、等级与人口成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我主要是照着当时界面已列的生产条件实际推进那一个目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "g限同一片房屋持续供给留下经验与等级，不把研究点存币或一次购技术当养成；目标推进和查看0，持续供给y。ALT没有研究与房屋等级经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C11.PROGRESSION.V1"
+        },
+        {
+          "text": "回想最初木板目标仍未完成时你真实做过的一轮，不要求目标后来完成。哪段更贴近？",
+          "scene": "那次留下来的进程的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_PROGRESS",
+            "FT9C_RESEARCH",
+            "FT9C_STORE"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先排工人与搬运的先后，再照这轮计划实际搬了建材",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "我为作坊想过自己的道路轮廓，也实际挪过位置来表达",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我照着当时已经列出的条件实际开工，让目标进度往前走了一段",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "我看过原木、板材和工人任务的状态，再定那轮怎么供料",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "g限同一片房屋持续供给留下经验与等级，不把研究点存币或一次购技术当养成；目标推进和查看0，持续供给y。ALT没有研究与房屋等级经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C11.PROGRESSION.ALT1"
+        },
+        {
+          "text": "回想你实际编辑过的一片沙盒区域，不要求市场、研究或高级物流。哪种真实投入更贴近？",
+          "scene": "那次留在沙盒里的布局",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_TERRAIN",
+            "FT9C_CUSTOM",
+            "FT9C_25"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先浏览了当时可用的材质或外观方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "我为了弄清一处运输现象提出过解释，只改一处并实际试了运行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我先定了自己的外观主题，再实际改过地表、建筑或工人现有外观，让它们表达同一片景观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我把那一轮复制、移动和接入的步骤排清，再亲手照着做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "普通编辑/保存非成长，外观浏览非收藏；a必须自我主题实际表达，p实际自提单变。ALT只地表和两栋建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C11.SANDBOX.V1"
+        },
+        {
+          "text": "回想只有地表、两栋建筑和短路的那次编辑，哪件事已经发生？",
+          "scene": "那次留在沙盒里的布局的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_TERRAIN",
+            "FT9C_CUSTOM",
+            "FT9C_25"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先看过当时已有的材质与建筑外观选项，再定用哪一项",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "我实际换过一片地表材质，亲眼看了它在这里的样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "我按自己想要的河岸街角轮廓实际安排过地面和建筑朝向",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我先排过铺地、移建筑与接路的本轮步骤，并照着编辑了",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "普通编辑/保存非成长，外观浏览非收藏；a必须自我主题实际表达，p实际自提单变。ALT只地表和两栋建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C11.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FT9C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一段你已经玩过、基础供给稳定的镇内时光，不要求城镇多大。哪种当时真实的投入更贴近？",
+          "scene": "真实停留在自己建的镇里",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_CUSTOM",
+            "FT9C_25"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我给那一轮布局、摆放与移动排过编辑步骤，然后照顺序改了镇区",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我当时有精力、也能继续建设，仍因为喜欢认得的道路和往返日常，主动在熟悉镇区从容停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我实际调整过街区轮廓或工人已有外观，把这座镇做成自己想表达的主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我为一个物流现象提出过解释，改一处后实际看了它怎样运转",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "全为真实已发生过程；h主动且余力充足，a自我主题实际修改，p自提单改观察，单轮编辑顺序0。ALT只需开局熟悉工地。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C12.PROGRESSION.V1"
+        },
+        {
+          "text": "回想你已玩过的第一个小作坊，不要求市场、研究或机械物流经历。哪段确实发生过？",
+          "scene": "真实停留在自己建的镇里的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_CUSTOM",
+            "FT9C_25"
+          ],
+          "modes": [
+            "progression"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我核对过当时已有搬运说明，随后亲手再下了命令",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我有精神、材料与早期目标还可推进，仍喜欢在认得的作坊和道路旁慢慢看工人往返",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我为第一个作坊选过林边或河边的主题，也实际摆过道路和建筑位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我按当时工人与材料排过这轮取木、加工与交付先后，并实际照着做",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "全为真实已发生过程；h主动且余力充足，a自我主题实际修改，p自提单改观察，单轮编辑顺序0。ALT只需开局熟悉工地。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C12.PROGRESSION.ALT1"
+        },
+        {
+          "text": "回想一段你已经经历过的沙盒时光，不要求作品规模或完整生产线。哪种当时真实发生的过程更贴近？",
+          "scene": "那次熟悉的自由搭建",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_TERRAIN",
+            "FT9C_CREATIVE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先核对已有编辑操作说明，随后亲手继续了这片区域",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我有精力、也能继续搭新东西，仍因为喜欢认得的角落与运货日常，主动在那里从容停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我实际改过一段已搭路径的位置，主要想亲手看看另一种摆位",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "我为自己的景观主题实际调过高低轮廓、地表与建筑关系",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h正向熟悉与有余力，编辑试验0，主题a，操作说明0；不虚构沙盒研究成长或成绩纪录。ALT无需货流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C12.SANDBOX.V1"
+        },
+        {
+          "text": "回想只有建筑和短路的最初小片沙盒，哪件事真实发生过？",
+          "scene": "那次熟悉的自由搭建的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FT9C_STORE",
+            "FT9C_TERRAIN",
+            "FT9C_CREATIVE"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过那一轮放置与移动次序，并亲手照着改完了一小段",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我当时有精神也能再建，仍喜欢在自己认得的小街角慢慢移动镜头",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我实际挪过一栋建筑，查看了它在新位置的样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "我为这片小街角想过自己的主题，并实际摆过建筑和地面来表达",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h正向熟悉与有余力，编辑试验0，主题a，操作说明0；不虚构沙盒研究成长或成绩纪录。ALT无需货流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FT9C12.SANDBOX.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+9e7f24fe4268"
+}

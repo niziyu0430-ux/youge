@@ -1,0 +1,1443 @@
+{
+  "id": "dw18",
+  "title": "阴暗森林",
+  "game_ids": [
+    "steam-274520"
+  ],
+  "scope": "原生PC一代本体；普通白昼搜集与夜间生存，剧情分支、第一章搬家、特殊夜事件及能力只实际经历的条件替代，不含续作或MOD。",
+  "status": "private_authoring_pending_independent_review",
+  "author_review": "handwritten_full_final_read_pending",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12专属槽各3有限情境、前8行动后4回顾，另由引擎保留4共享与最多2补问。",
+    "未体验继续其他已核专属情境，不跳过；有限三情境不保证每位玩家所有历史都有可答题。",
+    "不把NPC当真人、不从暴力/剧情选择推现实善恶，不强凑画像。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本人真实PC一代搜集、生存与剧情经历",
+      "initial_variants": {
+        "DW1801": "DW1801.V1",
+        "DW1802": "DW1802.V1",
+        "DW1803": "DW1803.V1",
+        "DW1804": "DW1804.V1",
+        "DW1805": "DW1805.V1",
+        "DW1806": "DW1806.V1",
+        "DW1807": "DW1807.V1",
+        "DW1808": "DW1808.V1",
+        "DW1809": "DW1809.V1",
+        "DW1810": "DW1810.V1",
+        "DW1811": "DW1811.V1",
+        "DW1812": "DW1812.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "DW1801",
+      "number": 1,
+      "variants": [
+        {
+          "id": "DW1801.V1",
+          "scene": "天色发黄，木料还没有搬完",
+          "text": "你在干燥草甸已经取得一批木料，回避难所的路自己走过；天光开始发黄，附近还有一个真能搜索的容器，身上也仍有空位。现在先把这段时间给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_CORE",
+            "DW18_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把现有木料带回去，先完成自己已经选定的今晚封窗准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先搜眼前这一个容器，接受晚些开始回程的代价，把眼前搜集目标做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若旁边还有本人没进过、此刻真可到达的小屋，就先亲自看看里面是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对天色、自己已知的返程与当前体力；有实际携带手表时也看时间",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "剩余白昼与实有木料/额外搜索争时间；未到空间只W局部，已搜物品不冒自动收藏。",
+          "interpretation_boundary": "不保证这次来得及回家或容器必有物资；无表不凭空显示时间，进入新屋不当必有奖励。"
+        },
+        {
+          "id": "DW1801.ALT1",
+          "scene": "路面上跑得久，林地却有一条近道",
+          "text": "你当前在一段白天能走的道路旁，已知回程可以沿路，也能切过自己走过的林地；这两段都不是当前被堵死的路。手头物资要带回避难所。先怎么走？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_TIME",
+            "DW18_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿道路实际奔跑回去，把这批物资先送到家",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "走自己当前选定的林间近路，接受必须更留意地面陷阱与蘑菇的安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没解释为何相似跑动下体力消耗不同，先猜道路和林地会影响消耗，在可返回的两段用相近跑动实际对照；负面状态或受击混入就留待再核",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前体力、已有负面状态与实际可见路面，再决定这段怎样走",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "本作道路跑动与林地地面风险形成具体路线选择；P需个人未知并实试，不承诺安全试验场。",
+          "interpretation_boundary": "只当时确实能返回的两段；不预告任意路面都无敌人，不能排除地形/状态差异时不作确定因果。"
+        },
+        {
+          "id": "DW1801.ALT2",
+          "scene": "看见地上的捕兽夹，原路以后还要用",
+          "text": "白天，你在一条自己还会经过的路上看见一个未触发的捕兽夹，当前能拆，也能绕过；身上有能装物品的空位。你先怎么处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_TRAPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前可用拆解操作处理它，带走真正得到的东西，投入自己已选的制作",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先保留这处原有陷阱，绕开它继续当前行程，接受以后也要记住它的位置",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人没弄清拆除会留下原夹还是材料，就先提出一种解释，实际拆这一个核对所得；没有拾到或物品混在别处时不急着下结论",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先记下自己确实见过的这处路段和陷阱位置，再决定是否拆",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "原有陷阱拆料与保留现场用途不同；P不由题干教只出废金属再问，R仅亲历地点信息。",
+          "interpretation_boundary": "不把拆除写成完整捕兽夹装包，不保证留夹必抓到敌人；看清并接近不等于拆除过程无风险。"
+        }
+      ]
+    },
+    {
+      "id": "DW1802",
+      "number": 2,
+      "variants": [
+        {
+          "id": "DW1802.V1",
+          "scene": "同一罐汽油，要先给锯木机还是发电机",
+          "text": "天还亮，你的当前避难所炉子已经点燃；锯木机里有可加工的木头但还缺油，发电机也需要补油，手里余量不足以把两边想要的用量都补满。先怎么分？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_FUEL",
+            "DW18_FORTIFY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先给锯木机够本次加工的油，把眼前木头做成今晚要用的木板",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把这次夜间照明所需的那部分油留给发电机，改用自己现有木板安排防守",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对两台机器的实际油量、已有木板和当前能加工的木头，再分这批汽油",
+              "signal": "device_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先把当前能做的加工、加油、封窗次序排好，实际照这次资源能支撑的安排执行",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "锯木与照明争同一资源，但炉子保护和发电机照明不同；预算不足是真题面前提而非固定油耗。",
+          "interpretation_boundary": "不把发电机等同夜间炉子保护，不保证开灯不受袭击或一罐够整夜；只实有木头和当前可用机器。"
+        },
+        {
+          "id": "DW1802.ALT1",
+          "scene": "两只半罐占着位置，今晚还想带东西回来",
+          "text": "你在避难所整理出发物品，当前两只未满汽油容器都还留有油，也能按原生物品操作合并；背包空位有限，另有自己已选要带的治疗物品。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_FUEL",
+            "DW18_STORAGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把能合并的油挪到同一容器，按这次能腾出的空间装治疗物品",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "保留当前带法，先将自己已选的一部分油灌入发电机，再处理出门负重",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人没核清汽油为什么没像普通材料自动叠在一起，就先猜它按容器余量处理，实际拖放一对核对油量与空位，不把溢出损耗当已知",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先逐项查看现有容器油量、背包空位和实际可带物品",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "汽油容器实际转移、存储空间与外出补给，不虚构普通叠堆或无限压缩。",
+          "interpretation_boundary": "以当前界面确能合并者为准；不承诺任意两罐总能并成一罐或空容器可反复无限回收。"
+        },
+        {
+          "id": "DW1802.ALT2",
+          "scene": "同一盏灯能拖到门边，也能留在退路",
+          "text": "当前避难所炉子已开，发电机也有能用于这次夜间的油；你能在屋内拖动一盏现成电灯。一个位置照着自己选的守门处，另一个位置照着已清出的退路。先怎么摆？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_FORTIFY",
+            "DW18_FUEL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把灯拖到守门处，先让自己这一晚选定的交战位置看得清",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把灯留给退路，接受门口较暗，按自己这次先保移动空间的安排守夜",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先在当前可走的屋内实际拖动并走一遍，亲手体验这次可用灯位",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对门窗、家具、灯位和自己能退到的空间，再动手",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "真实可拖灯具与已有守门/退路争一个照明位置，不靠装饰名词硬判审美。",
+          "interpretation_boundary": "只屋内实际能拖到的点，不编拖灯可封怪、灯光必中或不需发电机；炉子已开是单独前提。"
+        }
+      ]
+    },
+    {
+      "id": "DW1803",
+      "number": 3,
+      "variants": [
+        {
+          "id": "DW1803.V1",
+          "scene": "同一批木板和钉子，修武器还是补路障",
+          "text": "你在能用的工作台旁，现有钉板武器确实可修；同一批材料也够给自己选定的一处门窗加路障，但不足以把两件事都做完。今晚准备先投哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_WORKBENCH",
+            "DW18_FORTIFY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按工作台当前要求把武器修好，先完成自己保留这把武器的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把材料先用在那处门窗，按自己今晚先维持这条防线的目标准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前武器耐久、两项实际耗材和已有库存，再决定",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先比较手头这把武器与另一件当前真可用武器的作用，再决定是否值得为它占这批料",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "维修与路障原生竞争材料；维修不是长期培养G，查单一维修条件不是构筑。",
+          "interpretation_boundary": "另一武器只D局部确有者；不编所有武器可修或断后一定可修，不能假定修好就不再损耗。"
+        },
+        {
+          "id": "DW1803.ALT1",
+          "scene": "工具箱就在货架，交易却要动用自己的储备",
+          "text": "你已经和当前仍可交易的NPC说上话，对方真卖一只工具箱；现有声望不够，卖掉一件自己当前能出售的储备品后就够。工作台下一项升级也真需要它。先怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_WORKBENCH",
+            "DW18_TRADE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "完成这次出售并买下工具箱，带回工作台推进当前已开放的升级",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "留下这件储备，暂缓工具箱，先按自己现有工作台能做的东西继续",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前NPC这笔声望、收购物品价值和工作台实际需求，再交易",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先比较升级当前会开放的制作与已有可用装备，再决定是否为它出售",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "工具箱、NPC分别交易声望与工作台进度有真实成本，不将买东西当G。",
+          "interpretation_boundary": "只当次真实货架和合法交易；不保每个NPC都卖工具箱/共用声望，不提前免费开放尚缺前置的制作。"
+        },
+        {
+          "id": "DW1803.ALT2",
+          "scene": "工作台里有空，背包里却挤着备用材料",
+          "text": "你在当前避难所准备白天出门，工作台储物确有空位；身上有木板、钉子、补给和可用武器，自己预计会再捡东西回来。先怎样整理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_STORAGE",
+            "DW18_WORKBENCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把自己这趟暂不用的材料实际存进工作台，空出外出可用位置",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "按自己当下已选的搬运目标，携带木板和钉子去另一处已经发现、当前可达的避难所做路障，接受这一路背包占位",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前背包和工作台里已有的物品、空位，再取放",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "D",
+              "label": "把本人确实取得过的工具与已有物资信息补进自己的记录，再继续整备",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "当前储物空间/真实取放是普通入口；不把所有物资不掉落或无限仓库当默认。",
+          "interpretation_boundary": "只当前可储/可带物品，不把特殊日志物件都塞普通包；记录仅已得到的信息，非优化流程日志。"
+        }
+      ]
+    },
+    {
+      "id": "DW1804",
+      "number": 4,
+      "variants": [
+        {
+          "id": "DW1804.V1",
+          "scene": "路障后有夹子，自己也得留条能走的线",
+          "text": "当前避难所炉子已开，你有能放置的捕兽夹、可摆的碎玻璃和一件能用的近战武器；自己已清出一条可退路线。今晚更想怎样布置并使用？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_TRAPS",
+            "DW18_FORTIFY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本次实有材料足够作比较，就把碎玻璃伤害与捕兽夹短暂限制接在同一处真实入口，夜里实际看单独与接续布置的作用，再按敌我走位调整",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先只用自己当前已选的武器守入口，不把这批陷阱现在耗掉",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对现有夹子、玻璃、门窗和自己真能走的退路，再决定位置",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没练会自己摆夹后绕开的具体走位，就在实际可行空段专门练，不把夹子当不会伤自己",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "伤害与限制是两个功能的真实合用并有对照才B；自保不等于本能人格或最佳策略。",
+          "interpretation_boundary": "不保每种敌人都中夹/玻璃能无限次生效，不把敌方踩中保证不伤自己；练习只当时可行路段。"
+        },
+        {
+          "id": "DW1804.ALT1",
+          "scene": "木柜挡住破口，自己拿药也要绕它",
+          "text": "白天，你能把现有木柜拖到避难所一处墙洞前；柜内也能放自己已有的应急补给。拖过去会改变自己的通路，当前还可以选择另一间已有四壁的房间守夜。先怎么安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_FORTIFY",
+            "DW18_STORAGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际拖柜遮住这处破口，把自己选的应急药放到当前可取位置，再亲自走一遍退路",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "不把柜子挪到这里，改守另一间当前可用的房间，接受原处暂不防守",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对家具占位、洞口与自己拿药/离开的真实通路",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "若本人还不清楚这次柜子挡视线后通行怎样改变，先猜一种可绕路线，拖好后亲自走；走不通就改摆法，不说这能挡住一切怪物",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "家具能移动与存应急物原生，但不发明任意建筑/不可破无敌门；P只未知通路实测。",
+          "interpretation_boundary": "柜子未必挡一切攻击或始终留在原位；只当前能拖/能走者，不保证躲柜后整夜安全。"
+        },
+        {
+          "id": "DW1804.ALT2",
+          "scene": "汽油能铺成火线，木柜也在旁边",
+          "text": "你当时已有汽油和火柴，能在自己清出的入口外侧铺油；附近仍有木制路障或家具，身上也有可以继续使用的武器。先把这次防守给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_FIRE",
+            "DW18_FORTIFY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己已选的阻拦目标铺下当前可用汽油并点燃，接受这次用油和旁边可燃物的风险",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "保留这部分汽油用于机器，先用现有武器守住自己的入口目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对火线、家具与本人退路的相对位置，再决定是否点火",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没理解火是否会影响这处现有木制路障，提出会传播或损坏的解释，在当前真能试的局面实际点燃观察；其他火源混入就留未知",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "本体铺油点火与同类资源照明竞争，火灾反馈是未知实验不是必胜爆炸桶模板。",
+          "interpretation_boundary": "不承诺火只伤敌、不耗油或不烧自己；未发生点火不冒作已验证，不能去的测试位置不可假安全。"
+        }
+      ]
+    },
+    {
+      "id": "DW1805",
+      "number": 5,
+      "variants": [
+        {
+          "id": "DW1805.V1",
+          "scene": "新鲜蘑菇开始变质，炉子就在家里",
+          "text": "你回到已点燃炉子的避难所，身上刚取得的可熬煮蘑菇已有变质显示，当前能提炼精华；也真有可交易的去处，但赶过去会占用时间。先把它给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_ESSENCE",
+            "DW18_TRADE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "现在用当前炉子熬煮它，把这份尚可用材料变成自己已选的精华投入",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按当时自己已选的交易目标带去当前确能交易的NPC，接受路上继续变质的可能",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对物品变质状态、当前炉子效率和实际可执行操作，再决定",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "若本人没弄清变质怎样改变可用结果，就先提出新鲜与变质阶段提炼可能不同，按自己实际取得的材料作对照；炉子不同或材料不同不当唯一证据",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "易腐精华材料与交易真实用途；未知比较不保证一定有两份样本，不把烹饪当长期G。",
+          "interpretation_boundary": "仅实际可熬/可售者，不保证所有蘑菇可食或任意材料可炼，无法作有效对照时不声称已证明。"
+        },
+        {
+          "id": "DW1805.ALT1",
+          "scene": "毒伤更脆弱，还是受击后视野受限",
+          "text": "只按你实际进入第二层技能选择、当前确实需要在 Poison Vulnerability 与 Fearful 中选一项负面能力的情况：前者会让中毒更危险，后者会让受击后一时看得更差。正面能力仍按本次真实候选选。你更愿意怎样承担这份代价？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_ESSENCE",
+            "DW18_SKILLS",
+            "DW18_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选中毒更脆弱这一项，之后实际绕开自己已见毒地、带现有可用应对，保留自己这次不再减受击视野的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "选受击后视野受限这一项，之后按自己当前偏好的保持距离与现有武器出手，接受被打时看得更差",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两项当前候选与已有能力、武器和已选路线的相互影响，再选",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读当前两项说明及已有技能信息，核实这次实际改变什么",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "第二层真实两种负面代价取舍，说明性中文配原名不伪称官方译名；不是每一级必选负面，不发明退出已触发选择界面。",
+          "interpretation_boundary": "仅当前实际列出两项且还未选定者；不保证能撤销/洗点或精确倍率，不把身体代价映射现实人格与心理疾病。"
+        },
+        {
+          "id": "DW1805.ALT2",
+          "scene": "那具尸体在动，自己还没有靠近",
+          "text": "白天，你看到一具膨胀并抽动的尸体，自己尚未近身；当前有能扔的石块，也有可走的绕路。你先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_POISON",
+            "DW18_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接绕开，把时间和现有生命留给自己已选的另一处搜索",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人还没识别抽动现象，猜接触可能触发危险，从当时真能站的位置投石观察；没投中或看不清结果就不强下结论",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先核对尸体外观、附近能退的空间与自己的当前状态，再决定是否接近",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "若附近另有本人还未去过且真能进的小屋，就改去亲自看看那个地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "抽动尸体与石块远处触发是本体事件；题干不先教爆毒答案，非所有尸体必有资源。",
+          "interpretation_boundary": "不保证投石距离安全、尸体会掉物或所有抽动物均同类；未知/未知空间只对应选项。"
+        }
+      ]
+    },
+    {
+      "id": "DW1806",
+      "number": 6,
+      "variants": [
+        {
+          "id": "DW1806.V1",
+          "scene": "钉板已经能挥，敌人还在逼近",
+          "text": "你白天遇到当前可交战的普通敌人，手里钉板还能使用，体力不是满的；此时仍能选择蓄力出手、用当前可用的较快攻击，或向自己已知的开阔处退开。你更想？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_COMBAT",
+            "DW18_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留出距离完成蓄力，再按自己这次处理眼前敌人的目标出手",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "亲手接连控制瞄准、出手与退步，喜欢打中和重新拉开距离的操作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握这把武器蓄力与敌人逼近的间隔，就围绕当前具体动作专练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前体力、耐久、敌我距离和可退处，再决定这一下",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "本体手动近战/体力/耐久/距离；F本人接续输入，T未熟选项局部，不以能否打赢评能力。",
+          "interpretation_boundary": "不写固定按键、快攻耗体力数或命中保证；手柄与自设绑定以本人实际可用操作为准。"
+        },
+        {
+          "id": "DW1806.ALT1",
+          "scene": "手里照明占着手，快捷栏里已有灯笼",
+          "text": "你这次已经有尚可用的灯笼，也有一件真能用的武器；准备进一段当前可到的较暗空间。身上原来的火把能提供照明，而快捷栏位置仍可调整。先怎样进去？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_LIGHT",
+            "DW18_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前能用的灯笼放入快捷栏，实际用它照明并亲手用现有武器走这一段",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先用原有火把照着自己已选的路继续，暂不把这份灯笼耐久用在这里",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较现有火把、灯笼与武器在当下能做的事，再排快捷栏",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没熟悉这套已有照明下的瞄准出手，就只在能退回的小段专项练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "灯笼快捷栏照明与持武器实际功能，普通试已有配置不冒B或空间探索W。",
+          "interpretation_boundary": "灯笼须已获得且有耐久，不保照亮所有角落或光亮免疫所有敌人；快捷栏并非无限位置。"
+        },
+        {
+          "id": "DW1806.ALT2",
+          "scene": "子弹在枪里，近战武器也没坏",
+          "text": "你当时真有可发射且已经装弹的枪，以及一件仍能用的近战武器；眼前敌人可交战，也有当前可退的地方。后面还有自己已选的搜索安排。更愿意先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_COMBAT",
+            "DW18_TRADE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用当前这发装好的弹药处理眼前威胁，接受给后续少留一发",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "保留弹药，实际用现有近战手段打这一段，接受更靠近敌人的代价",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较手头两种武器的实际射程、耐久或弹药和眼前空间",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握自己这把枪的瞄准过程，就在当时有真实出手机会的情况下为练会它投入这发弹药",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "已装弹枪与近战实际消耗取舍，不假所有枪可重装或同用一种弹。",
+          "interpretation_boundary": "不保开枪一定击杀/不伤自己，练习须当前真可做，不凭空补弹；换题可回普通近战入口。"
+        }
+      ]
+    },
+    {
+      "id": "DW1807",
+      "number": 7,
+      "variants": [
+        {
+          "id": "DW1807.V1",
+          "scene": "日记里有找医生的线索，家里也还缺材料",
+          "text": "你已经亲历开场医生拿走钥匙的遭遇，当前日记或已听到的对话里又有可继续找他的线索；这条线现在真能去跟，附近也有自己已知可搜索的物资点。先把白天给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_STORY",
+            "DW18_JOURNAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿自己已经读到的医生线索继续走，想亲自知道他接下来怎样",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先去那个已知物资点，把今晚已经选好的补给目标做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前日记里已收录的请求、人物和实际进展，再定接哪一步",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "D",
+              "label": "若沿途另有本人未进过、此刻真可到达的房屋，就先进去发现那一处",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "医生夺钥匙主线与实际白昼补给冲突；S是已见叙事后续，非地图全知任务箭头。",
+          "interpretation_boundary": "仅当前真有已读线索且路径可行，不把所有区域/人物一开始都开放，不发明未见对话或固定地图方位。"
+        },
+        {
+          "id": "DW1807.ALT1",
+          "scene": "同一把沾着鸡粪的钥匙，两边都开过口",
+          "text": "只按你已实际和狼人、音乐家都谈过，知道他们都想要那把沾着鸡粪的钥匙，而且自己已拿到、仍未交出的情况。两人的当前路线都还可继续。先把这次交付给谁？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_STORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "交给音乐家，自己更想亲历这个孩子与他惦记的人后来会怎样",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "交给狼人，按自己当下已经选定的这条找医生路线继续",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "暂不交，先核对自己已听到的两种请求和日记现有进展",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "D",
+              "label": "若有真实愿意交流的同好，先把自己已见的两份请求讲给对方，一起聊这段故事为什么难选",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "本体具体钥匙分支与真实NPC请求；同一钥匙不同时交两边，不借虚拟决定推现实品德。",
+          "interpretation_boundary": "仅本人已具备前提与两边尚可走时；不预告奖励更好/可无代价撤销。O只愿回应真人，狼人/音乐家不是联机队友。"
+        },
+        {
+          "id": "DW1807.ALT2",
+          "scene": "夜里的敲门之后，邀请已经在手上",
+          "text": "你在第一章避难所的一次真实敲门事件后，已经取得婚礼邀请，也读过它当前提供的线索；白天能去找对应地点，手里还有别的已选准备要做。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_WEDDING",
+            "DW18_JOURNAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "顺着邀请实际去找这场婚礼，想知道那次敲门在邀请自己进入什么故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先留在当前区域完成自己已选的木料或燃料准备，暂不赴约",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若对应入口本人还没有到过，先去亲自认识那处场所，重在发现地点本身",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先整理自己实际拿到的邀请与已去地点信息，再决定这一程",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "实际拿到邀请后的具体叙事/地点/补给安排，收到不等于已赴宴或必得奖励。",
+          "interpretation_boundary": "不是每次敲门都等于邀请；不提供万能固定密码，不保证赴宴安全/可随时回收死亡物资。"
+        }
+      ]
+    },
+    {
+      "id": "DW1808",
+      "number": 8,
+      "variants": [
+        {
+          "id": "DW1808.V1",
+          "scene": "这一趟林间搜集，自己想另加一条不奔跑的规则",
+          "text": "你有一条当前白天真能走的短搜索路线，已知去向和可回的避难所；原生游戏允许奔跑，也没规定这一趟必须多拿多少。你更愿意怎么走？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_CORE",
+            "DW18_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己规定离开晨间范围后直到回家都不奔跑，真的走这趟；一旦自己主动奔跑就记个人失败，下一段可行白天再改范围重试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "不加额外输赢，按现有体力和风险正常走跑，先把这趟已经选定的物资带回",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握当前敌人前收跑、转向和拉开距离，就不设个人成败，只专项练这个动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对天色、体力与自己已知的返程，再决定本次实际路线",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "额外自限须真实执行/判失败/再试；平常节省体力不是I，不冒原生挑战任务。",
+          "interpretation_boundary": "不保证不跑就能躲敌或安全回家，不造自动计分/重置同一段；只当时可走短线。"
+        },
+        {
+          "id": "DW1808.ALT1",
+          "scene": "回到旧屋时，炉子没有亮",
+          "text": "你已在第一章两个避难所之间迁移过，今天回到旧屋，发现旧屋炉子当前没有点燃；天色尚允许你留在这里准备，也能按已知路线回现在使用的另一处。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_OVEN",
+            "DW18_FORTIFY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把旧屋炉子实际点燃，按自己今晚改在这里度过的目标准备门窗和照明",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "不在旧屋过夜，带好这次真要搬的物资回另一处当前能用的避难所",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人没解释旧炉为何熄了，提出新屋启用可能会替换旧屋的解释，在后续真实可行迁移中分别启用再返回核对；不把没回去看当验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对旧屋炉子、发电机、门窗和可用物资现状，再决定在哪里准备",
+              "signal": "device_status_review"
+            }
+          ],
+          "design_purpose": "原生炉子启用互斥与发电机不同；迁移/返回有真实时间和物资成本，不默认瞬移。",
+          "interpretation_boundary": "仅真的迁移过且当前仍能返回的第一章避难所；点炉不等于自动修好门窗或不再有敌人。"
+        },
+        {
+          "id": "DW1808.ALT2",
+          "scene": "毒气已经铺开，要不要再划一根火柴",
+          "text": "你当前真能使用一个已制成的气体瓶，也有火柴；在当时能操作的位置，气云已出现，附近有自己想保留的木制路障。你此刻也能不点火。更想怎样处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_POISON",
+            "DW18_FIRE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己当下已选的爆发伤害目标，从真能操作的位置向气云投火柴，接受火与路障风险",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先不点燃，让这次现有气云按实际作用继续，保住自己这次不引火的安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人没弄清气云与火的反应，先提出会发生点燃或爆炸的解释，实际用这次火柴观察；其他火源或伤害混入不当确定证明",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前气云、自己、木制路障与可退路线的位置，再决定是否投火柴",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "本体真实气云与火柴作用时点/保路障取舍，按普通目标0，不把必需制作配方硬判B。",
+          "interpretation_boundary": "只真实已制成且当前可用者，不发明人人开局能制、不耗材料/只伤敌；不保证投掷位置安全。"
+        }
+      ]
+    },
+    {
+      "id": "DW1809",
+      "number": 9,
+      "variants": [
+        {
+          "id": "DW1809.V1",
+          "scene": "活到清晨，表和屋外却不像平常一样走",
+          "text": "回想你真的在避难所活到清晨，见过晨间状态提示，也在附近整备、随后离开过那一段。那次之后哪种投入最贴近自己？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_MORNING",
+            "DW18_FORTIFY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人当时没解释这段时间变化，且手上真有可看的手表，就猜晨间范围在暂缓计时，实际对照留在范围内与走出去后的表；别的暂停界面不混在一起",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "利用这段当时真有的整备机会，把自己选定的维修、取物和封窗完成，再出门",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时晨间状态提示与当前可用时间说明，再决定何时出门",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "当时精力足、也有能去的新目标，仍自主留在熟悉屋里慢慢整理和走动，享受熟悉的晨间过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "普通首次活过夜入口，未知计时需真表与实际出入对照；题干不直接宣布冻结答案。",
+          "interpretation_boundary": "不把晨间状态扩大到全地图，不声称所有消耗都暂停或永远安全；无表者P项不适用，其他项仍可答。"
+        },
+        {
+          "id": "DW1809.ALT1",
+          "scene": "那次踩过碎玻璃，自己并没有像敌人一样受伤",
+          "text": "回想你真实摆过碎玻璃，看过敌人经过时受作用，也亲自从那里走过的一次；只说自己当时确实观察和做过的事。之后更投入哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_TRAPS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若当时没解释双方反应不同，提出碎玻璃对本人和敌人的作用可能不同，后续只在真实可试的玻璃段再对照；别处捕兽夹或受击不混作同一种东西",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把这处自己实际能走的玻璃线接到已选退路上，继续本次防守目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握摆夹与玻璃后绕行的具体走位，就专门练自己那次失误点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时真正摆了什么、自己走过哪里和当前状态，再改摆法",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "已经历不同对象反应后的具体实验与退路运用；不是4布置夹/玻璃功能合用改过去式。",
+          "interpretation_boundary": "不把碎玻璃与捕兽夹等同，不保证本人面对任何陷阱都免伤；未实际见到对照者换普通晨间情境。"
+        },
+        {
+          "id": "DW1809.ALT2",
+          "scene": "那次影子靠近，寻常攻击没有解决眼前情况",
+          "text": "只回想本人已经选过夜间黑暗有危险的负面能力（Shadows），并确实经历过的一次影子事件：你试过当时可用的普通攻击，仍看见它们迫近；屋里也有那次真能接近的亮处。后来什么更让你愿意投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_CORE",
+            "DW18_LIGHT",
+            "DW18_SKILLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人当时没解释攻击未解决的现象，就提出照明可能与这次影子有关，实际比较留在亮处和离开亮处时的变化；影子已退散或别的伤害混入就保留未知",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "按自己当时度过余下夜间的目标，实际转移到那处仍可用照明附近",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还没掌握在那种视线中找灯、转向和回位，就围绕当时可行路线专练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若当时有愿意交流的真人，就把亲历的那晚讲给对方，一起聊最不安的那一刻",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "真实特殊影子夜事件只条件替代；普通攻击失效观察不等于教所有敌人怕灯。",
+          "interpretation_boundary": "不保每夜出现、不保所有光源都能克制或一定有亮处；P个人未知并实际对照，O真实愿回应者。"
+        }
+      ]
+    },
+    {
+      "id": "DW1810",
+      "number": 10,
+      "variants": [
+        {
+          "id": "DW1810.V1",
+          "scene": "亲手用过的近战武器已经磨损，之后怎样准备",
+          "text": "回想你亲手用过一件近战武器，真实交战后看见它的耐久下降，后来回到了当时可用的工作台前。这次经历之后更愿意怎么投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_COMBAT",
+            "DW18_WORKBENCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对这件当前实物是否还可修、修理要求与已有材料，再决定",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "按自己当时已选的下一晚目标，实际准备一件现有能用的备用武器，接受背包占位",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较那时手头已有武器的耐久、消耗和出手方式，再安排下一段",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "若本人当时还没掌握这把武器的挥击间隔，且后来确实又有能用的同类武器，就专为那个实际难点再练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真实使用后耐久下降即可回顾，不要求打坏；工作台前的修理核对与备份占位不同于6的即时出手取舍。",
+          "interpretation_boundary": "仅本人实际用过、看见损耗且已回可用台前；不保证每种武器都可修，后续专练须仍有真实可用武器。"
+        },
+        {
+          "id": "DW1810.ALT1",
+          "scene": "沿白天乌鸦飞来的方向，真的找到过一具尸体",
+          "text": "回想你白天看见一群乌鸦飞过，沿它们飞来的方向搜寻，后来实际找到过一具能查看的尸体。当时也有自己原先安排的返程或另一处搜集。那次发现以后，什么更贴近你的投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_CROWS",
+            "DW18_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己原先选定的返程或搜集目标继续，不再为下一群鸟另改路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若当时本人未解释鸟群和尸体的关系，就猜来向可能指向尸体；后来真再次遇见白天飞过的乌鸦时，沿实际来向搜索并核对，找不全或受阻就保留未知",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把自己真实找到的尸体地点、以及当次实际取得的物品补记下来",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "若鸟群来向另有自己没到过、当时真能进入的林间空间，就亲自进去认识那一处，接受推迟原来的安排",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "替换商店收支回顾近壳：真实鸟群来向、实际找到的地点与后续时间代价；P须个人未知且后来真实再检验，不把一次巧合当已证。",
+          "interpretation_boundary": "只白天飞过的乌鸦及本人真找到尸体；不是跟飞去方向，不套夜间鸟群。后续没找到不证明必无尸体；不保证每次能到达或有固定战利品。"
+        },
+        {
+          "id": "DW1810.ALT2",
+          "scene": "自行车铃响过，搬来的包里却少了酒",
+          "text": "只回想第一章你实际用自行车铃找过自行车男、请他从另一避难所搬过物资，后来亲自检查过送达包裹的一次。那次之后哪种投入最贴近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_BIKEMAN",
+            "DW18_STORAGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人当时未解释为什么酒和其他物资的到达情况不同，就提出运输者会动用酒的解释，在后续真能再委托的搬家里实际对照出发库存与送达；其他出售或遗落分开看",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "后来搬家时把自己真要保留的酒亲自带走，其余实际可搬物再交他，按当前运输目标执行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时实际出发储物、送达包裹与自己身上的物品，再决定下一程怎么带",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "D",
+              "label": "更愿意把这个运输者与自己实际相遇的信息记下来，记住这趟搬家的具体人物",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "第一章原生铃/运输与酒损失具体回顾，P未知不在题干解释喝酒答案；不是泛背包整理过去式。",
+          "interpretation_boundary": "仅实际送达经历；不保证第二章可召唤、不保证无限搬运或包裹可反复塞回；未实际再委托不能冒称验证P。"
+        }
+      ]
+    },
+    {
+      "id": "DW1811",
+      "number": 11,
+      "variants": [
+        {
+          "id": "DW1811.V1",
+          "scene": "照片和日记里的医生，终于接上了一个具体人",
+          "text": "回想你已真实和林中人物谈过医生，又在照片、对话或日记里接上过他的一条实际线索。只说自己已读到、已做过的那一段，哪种投入最贴近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_JOURNAL",
+            "DW18_STORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "更在意这个拿走钥匙的人为何这样做，沿自己当时已见且仍可追的线索继续找他",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把本人实际取得的照片、已遇人物与已去地点信息整理好，不把未见的结局填进去",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "按自己当时转定的封窗、补给或下一处避难所目标继续，暂不为这条线改路",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若当时有愿意交流的真人，就把自己拼上的这段人物关系讲给对方，一起聊这片林子里的故事",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "已经历人物线索串联后的故事/实际所得记录/补给安排，不对虚拟人物善恶投射现实。",
+          "interpretation_boundary": "照片、对话、日记只按本人真实取得一种或多种；不提供虚构台词/结局，不要求已通关或牺牲NPC。"
+        },
+        {
+          "id": "DW1811.ALT1",
+          "scene": "修过的井喝过一次，后来再受伤却没再次恢复",
+          "text": "回想你亲手修好了避难所的井，白天喝水后确实恢复过生命；同一天后来又受伤，返回同一口井时没有再次得到那次恢复。那次以后，你实际把精力放在哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_WELL",
+            "DW18_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "后来有真实可用井的一天，按自己已选的治疗安排先留着井，准备晚些再喝，接受眼前不立即用井的代价",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "当时先用自己确实持有、仍可使用的药品处理这次伤，接受下一趟少一份药",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对自己当时实际生命、井的交互状态和携带治疗补给，再决定怎样恢复",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "若本人当时不知道井何时恢复可用，就猜跨过一夜可能会重置；后来实际活到下一清晨、仍有可恢复伤势时再回这口井对照，同天又试或满血看不出结果不当验证",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "替换婚礼故事近壳：本人实际修井、先后受伤与单日恢复限制的观察，后续资源安排与真实重置假说分开。",
+          "interpretation_boundary": "只本人真修井并经历前述两次尝试，不要求所有避难所都已解锁。题干不先说明何时恢复可用；P须后续真实跨夜对照，药品须本人现有可用，不承诺返回途中安全。"
+        },
+        {
+          "id": "DW1811.ALT2",
+          "scene": "那串数字终于打开过一把锁",
+          "text": "回想你真从自己取得的便条或物件上读到一串数字，并把它与当时实际能操作的一把密码锁对应、亲手试过的一次。不要求一次成功。之后哪项更贴近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_JOURNAL",
+            "DW18_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人当时没确定这串数字是否对应该锁，就更记得提出对应猜想、实际输入并按开锁结果修正；锁尚不能操作时不算检验",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "更愿意把自己实际取得的便条及已经找到的对应地点整理起来",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "按当时自己已选的搜取目标，把那次真正打开后能拿的东西带走，不继续解别的线索",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若本人当时还没掌握该界面的选择/确认操作，就在真正可操作的那把锁上专门练过",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "物件数字与原生密码锁具体假说/操作/所得记录；不泄露不存在的万能解或把未知题干教完。",
+          "interpretation_boundary": "只本人已得数字和真实锁；不把赞助者奖励箱的外部固定码当游戏内线索，不保任何数字都有效。"
+        }
+      ]
+    },
+    {
+      "id": "DW1812",
+      "number": 12,
+      "variants": [
+        {
+          "id": "DW1812.V1",
+          "scene": "还是同一处避难所，已经改过不止一晚",
+          "text": "回想你连续几晚使用同一处仍可用避难所，亲手添过路障或调整过可移动家具，也看过改善；当时仍有材料能继续处理一处真可改的地方。更愿意？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_FORTIFY",
+            "DW18_STORAGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己已选的这处避难所防守目标，把当前材料投入那一处真可修补的门窗或路障，接受少留给搬迁的材料",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已有武器与可用陷阱，再决定下一晚采用哪种防守搭配",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把这次资源留给自己另选的搬迁或白天路线目标，不继续补这里",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "当时精力仍足，也有能去的新目标，仍愿在熟悉屋里照自己习惯整备、等天亮，享受熟悉过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "同屋持续使用后的防守投入与搬迁资源取舍；普通路障修补不推长期养成G。",
+          "interpretation_boundary": "只原生可封门窗/可移动家具与修补，不编自由造屋、永久无敌或敌人随天数必升级。"
+        },
+        {
+          "id": "DW1812.ALT1",
+          "scene": "几轮白天搜集和夜间消耗，开始影响下一轮",
+          "text": "回想同一存档你实际经历过几轮白天搜索、交易或加工，再把木板、汽油和武器耐久用于夜间，之后又根据真消耗改过下一轮准备。什么最吸引自己？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_FUEL",
+            "DW18_WORKBENCH",
+            "DW18_FORTIFY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已知搜集路线、交易声望、锯木/供电和修理接成循环，真实跑下一轮，再按实际收支与遭遇调整并继续",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先只比较当时手头武器和现有陷阱，决定这一晚采用哪套",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先把当时自己已选的一项缺油或缺板目标做完，不继续扩展整个循环",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时实际库存、机器油量和武器耐久，再处理眼前一步",
+              "signal": "device_status_review"
+            }
+          ],
+          "design_purpose": "真实多轮搜集/加工/供电/消耗相互制约并调整后再跑才Y，非写一份清单或整理流程记录。",
+          "interpretation_boundary": "不创造自动生产/无限刷新商人或不需要风险的稳定收益；只实际已跑过的当前存档。"
+        },
+        {
+          "id": "DW1812.ALT2",
+          "scene": "知道另一条路还能走，仍想回熟悉的草甸",
+          "text": "回想自己已经玩过一段林中旅程，又确实有机会开始或继续一趟原生游戏；当时有自己已能选择的新目标，也有熟悉的干燥草甸日常可体验。什么更让你愿意回来？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "DW18_CORE",
+            "DW18_TIME"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "精力仍足、也有新目标，仍自主选熟悉的找木料、回屋整备和守夜过程，享受这套熟悉节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "若本人仍有上次没练会的具体瞄准、出手或闪避，就为练会那一步真正再试",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "按自己当时已选的另一条当前可走主线或区域目标继续，接受重新安排补给",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若当时有真实愿意交流的同好，就分享自己真遇到的林中一夜，一起聊为何还想再走一次",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "真实玩过后的回归动机，熟悉不是疲劳被迫/默认保守；T实际未会局部，O真实同好。",
+          "interpretation_boundary": "不默认全区域已解锁或任意章节自由传送；新存档不继承原物资，当前玩法/难度以本人实际可选为准。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+ae50605e602a"
+}

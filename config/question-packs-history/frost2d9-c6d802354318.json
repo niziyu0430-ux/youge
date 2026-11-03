@@ -1,0 +1,970 @@
+{
+  "id": "frost2d9",
+  "title": "冰汽时代2：区域温度、议会承诺与霜地网络",
+  "game_ids": [
+    "steam-1601580"
+  ],
+  "scope": "2024PC本体及已有免费局部供热更新；12主情境和12较早城区替代，不要求付费新城市、派系战争或特定结局",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "2025免费1.3已将全城热需求改为区域温度和分配；按当前可用工具出题，不照搬发行版相邻格阈值与建筑槽前置。",
+    "研究理念、建设设施与议会投票分开；只和当前界面明确可协商的对象谈判，不说所有固定立场阵营都可改票。",
+    "霜地资源点、路线与殖民地按当前已开放状态；不虚构殖民地独立议员，不保证探索无风险或据点免费。",
+    "所有社区、发言人与工程师均是虚构NPC，不计真人合作；不由法令立场或是否支持某项改革推现实政治与道德。",
+    "普通目标推进、单轮规划、读规则和看状态只保留行为；前8当前行动、后4真实过去，当前无真人试测或替代统计等值证据。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "2024PC本体及已有免费局部供热更新；12主情境和12较早城区替代，不要求付费新城市、派系战争或特定结局",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "FROST2D901",
+      "number": 1,
+      "variants": [
+        {
+          "text": "《冰汽时代2》当前主城吃住供热稳定，没有迫近危机；有足够人力、热券和预制材料继续建设，破霜工具与资源叠层都可用，眼前两处已知可开采地也能比较。先做什么？",
+          "scene": "破霜之后先把哪片接上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_STORE",
+            "FP29D_HEAT13",
+            "FP29D_START"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把接下来几轮破霜、开采、人口吃用与建设材料接起来，随真实产出和消耗调整区域安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先按当前人力和材料排清这一次清冰、选区域和投入建设的顺序，再照步骤做",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前两处已可选择的开采位置、资源与连接条件，再决定这一轮从哪里展开",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先核对破霜与区域建设当前已有说明，再回这片冰面动手",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "续作破霜/区域/热券/预制材料明确，不写原作单个木箱和工程师研究站。多轮产出/人口/材料闭环y，单次施工步骤0、当前可选建设地点比较0、核玩法说明0。ALT只需第一轮当前可建居住区与清冰，不需研究议会。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D901.V1"
+        },
+        {
+          "text": "只到过第一次扩建也能选：当前可用人力与建设材料够把一片确能清开的相邻冰格变成可建空地；居住区工具能预览，基本食物供热暂稳。先怎样继续？",
+          "scene": "破霜之后先把哪片接上的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_STORE",
+            "FP29D_HEAT13",
+            "FP29D_START"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这轮清冰、选居住区格子与开工的先后，再按现有人力和材料做",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "在当前允许的格子里实际安排居住区轮廓，让新城区呈现自己想要的布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前已经显示的人口、可用人力与住宅需求，再决定这一轮怎样扩",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前破霜和居住区预览的工具说明，再回来处理这片空地",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "续作破霜/区域/热券/预制材料明确，不写原作单个木箱和工程师研究站。多轮产出/人口/材料闭环y，单次施工步骤0、当前可选建设地点比较0、核玩法说明0。ALT只需第一轮当前可建居住区与清冰，不需研究议会。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D901.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D902",
+      "number": 2,
+      "variants": [
+        {
+          "text": "续作议会当前已建好且能提案；一项已开放提案旁，有一个界面明确显示可协商的犹豫社区，当前至少两项可履行的承诺条件和已出现的居民反应都可看。城里暂能维持运转，你先给哪项时间？",
+          "scene": "议会里那组仍可协商的代表",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_COUNCIL",
+            "FP29D_LAWS",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较这个社区当前可选承诺所需的研究或建设、已有资源和现有承诺，再决定这一轮答应哪项条件",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "把这次承诺后续所需研究、建设材料与城市供给接成多轮安排，再随进度复核履行条件",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前提案与协商规则，再判断这组代表现在能用哪种条件谈",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先读这组人已经出现的立场与事件文字，想理解他们为何在这个议题上犹豫",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "只问当前可协商犹豫社区且至少两项条件确可履行，不说所有派系都能改票。s已有社区事件，当前可用承诺方案比较0；y多轮研究建设供给与履约，规则阅读0。原泛称调停身份已去掉r，NPC无q/o。ALT不需议会。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D902.V1"
+        },
+        {
+          "text": "还没建议会：当前界面已出现初期城区建设目标，有足够人力、热券和预制材料，基本食物供热稳定；已开放的区域能预览。先做哪项？",
+          "scene": "议会里那组仍可协商的代表的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_COUNCIL",
+            "FP29D_LAWS",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这一轮清冰与区域施工的先后，再照现有资源动手",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前住宅需求、人力与建设材料状态，再决定先扩哪边",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "自己选择当前可建区域的轮廓，让初期城区形成想表达的布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先按界面已列条件推进这次城区目标，把这一格明确目标的完成作为当前重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "只问当前可协商犹豫社区且至少两项条件确可履行，不说所有派系都能改票。s已有社区事件，当前可用承诺方案比较0；y多轮研究建设供给与履约，规则阅读0。原泛称调停身份已去掉r，NPC无q/o。ALT不需议会。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D902.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D903",
+      "number": 3,
+      "variants": [
+        {
+          "text": "续作区域温度与分热档位可看：一处住区比邻区凉，当前用手动分配、能单调这一处档位并保持其他区不动，能量塔有余量；天气暂稳、燃料够观察一段，也没有冻伤停工危机。先做什么？",
+          "scene": "同一座城里不同的区域温度",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_HEAT13",
+            "FP29D_SERENE",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前区域温度、能量塔能力与热量分配的已有说明，再决定动哪处",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先查看眼前各区实际显示的温度、人口与运行状态，再选这一轮要处理的位置",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先解释这一区温差主要来自分配档还是邻接条件，只调这一处档位，其他现有分配不动，运行后对照同一区温度与邻接提示核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把后续燃料取得、能量塔供热、各区人口与生产接成几轮安排，随天气和消耗继续调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "依据2025免费1.3局部热量分配，不问旧版全城热需求数；p只调同一区一档且有真实运行观察，y跨轮燃料/人口/生产，不把打开叠层自动算推理。两种普通核对0，当前没有救命正误取舍。ALT不用手动供热，只能看到初期居住区和工具。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D903.V1"
+        },
+        {
+          "text": "还没手动分过热量也可以：当前初期居住区能选中，温度与运行面板可看；旁边可建的区域预览已开放，人力与材料够一轮调整，基本吃住稳定。先做什么？",
+          "scene": "同一座城里不同的区域温度的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_HEAT13",
+            "FP29D_SERENE",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这轮选格、预览区域和投入施工的次序，再按当前人力和材料做",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "在当前允许格子中实际安排新区轮廓，让初期城区呈现自己选定的格局",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先查看现有居住区实际温度和人口状态，再决定这一轮怎么安排",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前区域选择与施工预览工具的已有说明，再回来处理这一片",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "依据2025免费1.3局部热量分配，不问旧版全城热需求数；p只调同一区一档且有真实运行观察，y跨轮燃料/人口/生产，不把打开叠层自动算推理。两种普通核对0，当前没有救命正误取舍。ALT不用手动供热，只能看到初期居住区和工具。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D903.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D904",
+      "number": 4,
+      "variants": [
+        {
+          "text": "续作研究所正在推进你已跟进而未完成的一项基础理念，当前人手与城市供给能维持研究所运转；研究界面已有提议说明，基本需求稳定，议会与建设状态可查。先投入哪件？",
+          "scene": "研究出来的想法还要走哪一步",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_STORE",
+            "FP29D_COUNCIL",
+            "FP29D_LAWS",
+            "FP29D_IDEA_ED"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前研究完成后究竟开放建筑还是法令提案、后续还有什么条件，再回到这次投入",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "继续沿同一条已投入理念做研究，喜欢这段积累留成以后可用的建筑或可提议法令",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把研究所配员、后续建设所需人力材料与城市供给接成几轮安排，再跟着实际进度调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先查看研究所当前项目、实际人手占用与城内材料库存，再决定这一轮何时扩建设施",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "已投入同一理念持续研究才g；研究所运转、后续建设与城市供给多轮安排y，当前面板与说明0。开研费用不写成持续烧材料，建筑/法令研究完成与建造/投票通过仍分开。ALT第一所研究所即可，不依赖高级理念。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D904.V1"
+        },
+        {
+          "text": "只用过第一所研究所：一条最早基础理念已经开始且尚未完成，现有人手与城市供给能维持研究所运转，初期城区暂时稳定。先做什么？",
+          "scene": "研究出来的想法还要走哪一步的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_STORE",
+            "FP29D_COUNCIL",
+            "FP29D_LAWS",
+            "FP29D_IDEA_ED"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经研究过的项目和搭过的区域，补下当前城市建设过程的小记",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "先核对这一条已有研究说明与当前后续条件，再决定本轮安排",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "保持研究所运转，让这条已经开始的基础理念继续推进，想把已有进度留成后续可用的内容",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先排清这一轮研究所人员安排与眼前区域施工的先后，再按现有人力材料做",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "已投入同一理念持续研究才g；研究所运转、后续建设与城市供给多轮安排y，当前面板与说明0。开研费用不写成持续烧材料，建筑/法令研究完成与建造/投票通过仍分开。ALT第一所研究所即可，不依赖高级理念。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D904.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D905",
+      "number": 5,
+      "variants": [
+        {
+          "text": "续作当前已经通过回收开采余热的法令，开采区与相邻住区都在运行；温度和疾病来源可查，区域形状当前允许微调，人力材料够，现有供暖与医疗暂能维持。先怎么继续？",
+          "scene": "开采区旁边的那片住区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_LAWS",
+            "FP29D_HEAT13",
+            "FP29D_STORE",
+            "FP29D_START"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前开采区邻接、住区形状与这一带热量分配实际配合起来，运行后看供热与区域状态怎样相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把后续开采产出、燃料供热、医疗人力与人口吃用接成几轮安排，再按温度和生病情况调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前这项法令、邻接与疾病来源说明，再决定这一轮改布局还是补设施",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看眼前两区实际温度、运行和居民状态，弄清当前哪些反馈已经出现",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "法令已真实通过，区域当前确能微调且有钱人料；b真实配置邻接/区形/分配并运行看交互，y跨轮热/医疗/产出，核规则与看状态0。不承诺余热无疾病代价，不用固定相邻格数或DLC居中法。ALT没通过法令只需已有工业区当前可切的两种产物。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D905.V1"
+        },
+        {
+          "text": "还没通过这项法令：第一处工业区已建好，当前确能在商品与预制材料之间选生产配置；现有材料和人力够运行，城里基本吃住稳定，两种产物的当前需求可看。先做什么？",
+          "scene": "开采区旁边的那片住区的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_LAWS",
+            "FP29D_HEAT13",
+            "FP29D_STORE",
+            "FP29D_START",
+            "FP29D_INDUSTRY_ED"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较两种当前可做的供给方案和已有需求说明，再决定这一轮让它产哪种",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "实际切换一次当前可用生产配置，亲眼看看这一轮产出怎样改变",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把后续商品吃用、建设预制材料、投入原料与人力接成几轮安排，再跟着库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先查看这处工业区当前投入、产出与在岗人力，再决定这轮怎样安排",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "法令已真实通过，区域当前确能微调且有钱人料；b真实配置邻接/区形/分配并运行看交互，y跨轮热/医疗/产出，核规则与看状态0。不承诺余热无疾病代价，不用固定相邻格数或DLC居中法。ALT没通过法令只需已有工业区当前可切的两种产物。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D905.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D906",
+      "number": 6,
+      "variants": [
+        {
+          "text": "续作后勤区已提供可派出的霜地队，当前地图有一片自己尚未探索、界面允许前往的区域，也有已经带回的地点遭遇和当前可经营资源点。主城暂稳，队伍与路线资源可查。先给哪项时间？",
+          "scene": "地图外侧还有没探过的一片",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_FROSTLAND",
+            "FP29D_COLONY",
+            "FP29D_STORE",
+            "FP29D_FROST_ED"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已带回的地点遭遇，想接上那里的人和旧世界留下的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先排清这轮探索与已有资源点队伍占用、需要的路线和返回安排，再决定本次怎样出发",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "把主城和已能用资源点的连续供给、队伍占用与城内后续吃用接成多轮安排，再随实际运输复核",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "把可派队伍送去那片尚未探过的区域，最想知道白色地图下面还有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "w当前未探索点可派，未保证奖励或安全；s已带回实际遭遇，单次队伍路线准备0，多轮外点/主城供给y。资源据点、运输与殖民地不混为独立投票城；不编造队伍人数/时间/物流免费。ALT没后勤区也可回到初期已出现居民事件与城区建设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D906.V1"
+        },
+        {
+          "text": "还没派过霜地队也能选：当前初期城区基本需要稳定，有一段已显示的居民事件文字，现有人力材料够继续扩区，旁边还有自己没细看过的可查看空间。先做什么？",
+          "scene": "地图外侧还有没探过的一片的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_FROSTLAND",
+            "FP29D_COLONY",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这轮清冰、选区域与开工的步骤，再按现有人力材料做",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先移到自己还没细看的那片可查看城内空间，纯粹想看看那一侧的地形与城区",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "自己选择当前可建区域的轮廓与位置，实际形成想表达的新城布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先把当前已出现的居民事件读完，想理解这段新城生活怎样发生",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "w当前未探索点可派，未保证奖励或安全；s已带回实际遭遇，单次队伍路线准备0，多轮外点/主城供给y。资源据点、运输与殖民地不混为独立投票城；不编造队伍人数/时间/物流免费。ALT没后勤区也可回到初期已出现居民事件与城区建设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D906.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D907",
+      "number": 7,
+      "variants": [
+        {
+          "text": "续作一项已通过的商品生产法令之后，当前确实出现了青年工程师呈上义肢设计的事件；文字和可选做法已经显示，资源足够承担当前方案后续代价，城市暂能维持，别的扩建也仍可做。先给哪项时间？",
+          "scene": "青年工程师送来了义肢方案",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_LAWS",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把方案后续的人力变化、材料供给与居民吃用接成几轮安排，再根据实际情况调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核对事件选项已经列出的效果和当前城市条件，再决定这次是否支持",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "把这位工程师的已出现事件描写读完，想知道这样的工具会怎样进入城里人的生活",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把这位执政官设定成优先推动机械改造的工业复兴者，按这个身份实际支持当前义肢方案，承担后续材料需求并暂缓另一项同样可做的扩建",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "只在实际已出现的青年工程师义肢事件出题，不保证每局必触发；s具体人物事件，r自选身份真实约束资源优先级，不以同意方案推现实道德；y后续多轮变化，读规则0。一次支持不是长期研究g/玩家技术t。ALT无该事件仍可用早期既有城市目标、面板与建设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D907.V1"
+        },
+        {
+          "text": "没见过这位工程师也能选：初期界面已有明确城区建设目标，人力、热券与材料够当前一轮，吃饭供热稳定；施工预览和当前需求都能看。先做哪项？",
+          "scene": "青年工程师送来了义肢方案的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_LAWS",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先照当前已列目标做这一轮建设，把这一项目标的实际推进作为重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先查看现有人口、住宅需求与区域运行状态，再决定这轮先补哪处",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前目标条件和已有区域建设说明，再回来推进眼前这一项",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先按人力材料排清清冰、选格与区域施工的先后，再照计划动手",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "只在实际已出现的青年工程师义肢事件出题，不保证每局必触发；s具体人物事件，r自选身份真实约束资源优先级，不以同意方案推现实道德；y后续多轮变化，读规则0。一次支持不是长期研究g/玩家技术t。ALT无该事件仍可用早期既有城市目标、面板与建设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D907.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D908",
+      "number": 8,
+      "variants": [
+        {
+          "text": "续作主城当前吃饭、医疗和供热稳定，你本人有精神，人力与材料够新建，也有已投入的理念可继续；熟悉的区域和居民往返可看。先选什么？",
+          "scene": "能继续扩建，也认得这座城",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_STORE",
+            "FP29D_HEAT13",
+            "FP29D_SERENE",
+            "FP29D_IDEA_ED"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把后续燃料、食物、人力与区域扩建接成几轮安排，再按真实运行调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "仍慢慢看熟悉住区与设施间的往返，喜欢认得的新城日常，暂不开新工程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己选取区域轮廓、前景和时机，实际留下一组想表达这座城氛围的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "继续跟进那条已投入的理念研究，想把当前进展留成后续能用的内容",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "h有精神能新建仍正向熟悉，不因Serenity难度/玩家疲倦而计；a自己构图成片，不假定续作具有原作同款照片模式；g真实已投入研究；y多轮供给。ALT初期城区没有科研和复杂供热经历也可用普通记录/查看选择。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D908.V1"
+        },
+        {
+          "text": "只玩过最初城区也可以：你有精神，基本吃住供热稳定，仍有当前可用人力和材料能继续清冰建区，自己已认得第一片住区。此刻先做什么？",
+          "scene": "能继续扩建，也认得这座城的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FP29D_STORE",
+            "FP29D_HEAT13",
+            "FP29D_SERENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在当前允许格子里实际选定下一片区域的轮廓，让新城呈现自己想表达的格局",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "仍慢慢看熟悉住区的居民往返，正是喜欢认得的新城日常，暂不开新的清冰工程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先查看这片住区当前的人口、温度与实际运行状态，再决定这轮安排",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经清开的空地和搭过的区域，补下当前城市建设过程的小记",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "h有精神能新建仍正向熟悉，不因Serenity难度/玩家疲倦而计；a自己构图成片，不假定续作具有原作同款照片模式；g真实已投入研究；y多轮供给。ALT初期城区没有科研和复杂供热经历也可用普通记录/查看选择。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D908.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D909",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想续作免费供热更新之后，你确实调整过区域热量分配的一段经历；不要求温度改善、少用燃料或城里没人受伤。哪种真实过程更贴近？",
+          "scene": "实际动过的区域温度",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FP29D_HEAT13",
+            "FP29D_SERENE",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过一处区域的温差可能来自哪里，只改过这一区一个可用分配档，再观察同一区温度与供热状态核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把燃料取得、能量塔供热、人口吃用和区域运行按几轮接起来，并随真实消耗持续调过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对过当时已有的区域温度与热量分配说明，再回来处理过自己的那一处",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看过当时各区实际显示的温度、人口与运行状态，再决定过那一轮的调整",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "四项全真实过去，不把旧发行版全城热需求经历借作局部分配。p单档实跑核自提解释，y多轮，读规则和看面板0。ALT不用新版热量工具，只需实际有过初期破霜/建区经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D909.V1"
+        },
+        {
+          "text": "只做过早期扩区也能回顾：想一段自己确实清过冰、建过区域的经历，哪种已经发生的过程更像？",
+          "scene": "实际动过的区域温度的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FP29D_HEAT13",
+            "FP29D_SERENE",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按当时已有的人力材料排清过清冰、选格和建区的先后，并照次序做过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己选过当时可建区域的形状与位置，让初期城区实际呈现了想表达的格局",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先核对过当时已有破霜与区域预览工具说明，再回来做过眼前那一段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看过当时人力、住宅需求和建设材料的实际状态，再决定过那轮安排",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "四项全真实过去，不把旧发行版全城热需求经历借作局部分配。p单档实跑核自提解释，y多轮，读规则和看面板0。ALT不用新版热量工具，只需实际有过初期破霜/建区经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D909.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D910",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想续作里一项自己实际处理过的议案或协商承诺；当时议会可用，谈判对象当时也确实允许协商。哪种真实投入更贴近？",
+          "scene": "议案、承诺和那群人",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FP29D_COUNCIL",
+            "FP29D_LAWS",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较过当时这个可协商对象给出的可行承诺、已有研究建设条件与现存承诺，再决定那一次答应哪项",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "把承诺后续研究、实际建设与城市资源供给接成多轮安排，并随进度复核过是否能兑现",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对过当时已有提案、协商和承诺条件说明，再回来处理过那一次议事",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "把当时已经出现的社区立场与事件读完过，想理解那些人为何这样要求执政官",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "全部真实过去；NPC不计q/o，当前可行承诺比较0，实际多轮研究建设供给与履约y，已有规则阅读0。原泛称执政官身份未给具体行为约束，已改真实比较过程，不由投票取向推现实立场。ALT无议会也可回顾早期城区。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D910.V1"
+        },
+        {
+          "text": "还没议会经历也能回顾：想一次自己实际推进过的早期城区建设，哪种当时发生过？",
+          "scene": "议案、承诺和那群人的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FP29D_COUNCIL",
+            "FP29D_LAWS",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按当时人力与材料排清过清冰和区域施工步骤，并照次序做过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己选过区域形状与位置，实际把初期城区做成了想表达的格局",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先核对过当时已有建设工具与目标说明，再回来处理过自己的那一片",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按界面当时已经列出的条件推进过一项城区目标，把这一明确目标的完成作为那轮重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "全部真实过去；NPC不计q/o，当前可行承诺比较0，实际多轮研究建设供给与履约y，已有规则阅读0。原泛称执政官身份未给具体行为约束，已改真实比较过程，不由投票取向推现实立场。ALT无议会也可回顾早期城区。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D910.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D911",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想续作一次实际处理过的议事：当时基本需求稳定，紧急议会确实可用，普通会期也还等得起，还有一项已经投入、能够继续的理念研究。哪种真实经历更像？",
+          "scene": "自己给这轮议事加过的条件",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FP29D_COUNCIL",
+            "FP29D_LAWS",
+            "FP29D_STORE",
+            "FP29D_IDEA_ED"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把后续燃料、食物、材料和人口吃用按几轮接起来，并按真实消耗持续调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先读过当时已有会期与提案说明，再回来处理过自己的那次议事",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "本来可以召紧急议会，仍先给那一轮定过“不准召紧急会期”的新条件，并在这个限制里实际推进过议事",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "持续跟进过同一条已投入理念，喜欢当时的研究进度留成了后续可用内容",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "过去i需当时紧急会期实际可用、普通会期可等且需求稳定；禁用当前能力是额外约束，不要求投票成功。g有已投入可继续理念，y为多轮供给。ALT普通清冰方向比较仅0，不用加规则字样包装路线i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D911.V1"
+        },
+        {
+          "text": "没用过议会也能回顾：当时一片相邻冰格确能向两个方向清开，人力与材料足，两种走向都可实际施工，基本需求稳定。想一次自己真实做过的选择，哪项更像？",
+          "scene": "自己给这轮议事加过的条件的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FP29D_COUNCIL",
+            "FP29D_LAWS",
+            "FP29D_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对过当时已有破霜与连通格预览说明，再回来清过眼前那片",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先查看过当时人口、人力与建设材料的实际状态，再决定过那轮怎样继续",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先比较过两片当时都能清开的冰格、接入现有城区的方向和后续可建空间，再决定那一轮从哪侧清开",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先按当时人力材料排清过清冰、选格与建区的先后，并照步骤做过",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "过去i需当时紧急会期实际可用、普通会期可等且需求稳定；禁用当前能力是额外约束，不要求投票成功。g有已投入可继续理念，y为多轮供给。ALT普通清冰方向比较仅0，不用加规则字样包装路线i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D911.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FROST2D912",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想在自己的续作城市里一次真实的停留或回看，不要求完成主线、拿成就或使用任何扩展。哪种实际经历更贴近？",
+          "scene": "回想自己认得的新城",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FP29D_STORE",
+            "FP29D_HEAT13",
+            "FP29D_FROSTLAND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为当时已经建过的区域、接过的运输路线或投入过的研究，补记过自己的建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "本人有精神、城里当时稳定而且还能新建时，仍慢慢看过熟悉住区的往返，喜欢认得日常的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "把当时已经出现的居民事件或霜地遭遇读完过，想接上这些人在新城与荒野里的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己选过区域轮廓、前景和时机，实际留下一组想表达这座城氛围的画面",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "全部真实过去；h本人有精神能新建且正向熟悉，不以难度和危机后疲惫代替；s实际已出现事件，a主动构图，普通建设过程记录0。未体验霜地或研究不默认为不喜欢。ALT仅需初期城区停留与普通已做建设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D912.V1"
+        },
+        {
+          "text": "只到过第一片城区也能回顾：想一次在自己初期住区真实做过的停留，哪种已经发生？",
+          "scene": "回想自己认得的新城的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FP29D_STORE",
+            "FP29D_HEAT13",
+            "FP29D_FROSTLAND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了看看未知，把镜头移到过城里当时已可查看、自己此前没细看的一侧空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当时本人有精神、基本需要稳定而且还能清冰建区，仍慢慢看过熟悉住区，享受认得的生活过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "把当时已出现的一段居民事件读完过，想知道那些人怎样度过新城里的这一天",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "为已经清开的冰格与搭过的区域补下过自己的建设小记",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "全部真实过去；h本人有精神能新建且正向熟悉，不以难度和危机后疲惫代替；s实际已出现事件，a主动构图，普通建设过程记录0。未体验霜地或研究不默认为不喜欢。ALT仅需初期城区停留与普通已做建设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FROST2D912.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+c6d802354318"
+}

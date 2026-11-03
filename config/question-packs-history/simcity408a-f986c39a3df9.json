@@ -1,0 +1,928 @@
+{
+  "id": "simcity408a",
+  "title": "模拟城市4 豪华版：区域、地块和一位市民",
+  "game_ids": [
+    "steam-24780"
+  ],
+  "scope": "Windows单人豪华版本体，含自带Rush Hour。God地形、My Sim和U-Drive-It均以实际用过或当前可用为前提，各槽都有较早Mayor建设替代；不要求NAM、导入The Sims人物或旧联网交换。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "God只在建市前适用；Mayor分区保留地块前向、自动小街和密度不等于财富；水网并非最低密开城强制条件。",
+    "My Sim确有固定面板、档案、消息和当前财富条件下的迁居/岗位/出行选项；个体培养与身份必须依附实际可追踪人物和实际行动。",
+    "U-Drive-It只在车辆已开和本人确实玩过时适用，计时依当前任务而非所有任务；各槽有不靠该工具的早期Mayor替代。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Windows单人豪华版本体，含自带Rush Hour。God地形、My Sim和U-Drive-It均以实际用过或当前可用为前提，各槽都有较早Mayor建设替代；不要求NAM、导入The Sims人物或旧联网交换。",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "SIMCITY408A01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "这块地尚未建市，当前只有God地形工具；海湾、山坡和森林可以调整，还没有居民和财政压力。先把这段时间给什么？",
+          "scene": "还没建市的海湾地形",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_STORE",
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用平整、侵蚀与种林实际塑出自己的海湾轮廓，让将来的城市有一个个人主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先猜平整刷会把周围地面抬到哪个高度，选一小处试刷，再对照海岸和坡面验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先按住抬地刷让眼前地面随落点升起，松开后换软化刷推过坡边，享受地形紧跟自己刷动当场改变的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "移动并缩放到当前还没细看过的山谷和海岸，先认识这片地形",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "God仅未建市阶段；个人海湾主题a、刷高假说小试p、连续刷地跟手当场变化f和未知地形w不同。MayorALT的分区单项编辑0，不等自动建筑补f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A01.V1"
+        },
+        {
+          "text": "没有用过地形塑造，直接接手最早一片Mayor小区；道路、电力与基础用地都能调整，城里没有紧急危机。先做什么？",
+          "scene": "直接进入Mayor的第一片低密用地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_STORE",
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把道路、电力和住商工业接起来，按几轮开发需求、用电余量与月度开支再调整用地和供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先猜那排未开发地块没有朝向街路，在那里重新划一小片用地、调整预览前向再放下，运行后核对是否开发",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先只拖出一小片低密住宅分区，调整矩形的长宽与前向箭头，亲手查看这次划出的地块",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "用当前可建街路和树木实际整理入口，形成自己的最初社区样貌",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "God仅未建市阶段；个人海湾主题a、刷高假说小试p、连续刷地跟手当场变化f和未知地形w不同。MayorALT的分区单项编辑0，不等自动建筑补f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "小城已在运行，一处旧区空地重分密度后仍未发展；供水、道路、可用公园与预算能继续投入，城里暂稳，也不要求立刻长出摩天楼。先做什么？",
+          "scene": "改高密度以前还想做哪一步",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜不开发来自当前吸引力不足而非只缺高密格，对照相关数据图，补一处已可建公园再观察变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "给下一片新开发选当前可用建筑风格，并实际安排街廓，做出自己的城区主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "给自己已经重划过的地块和铺好的接路补一段建设小记，再决定下一处",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "把新密度的住房、就业、供水与通勤容量一起接入日常预算，持续跟进这片发展",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "主情境密度、财富与实际开发条件不等同，重新分区不保证升级；风格只影响后续新开发。本人已重划地块与已铺接路的建设补记0。ALT低密生长观察0、正向熟悉需精力与可扩建，持续供需y，不把长楼当个人成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A02.V1"
+        },
+        {
+          "text": "还只是最早低密小镇，住宅、商店与工业已开始出现，基础电力和道路能维持；目前可以再分一点用地。先做什么？",
+          "scene": "最早地块前向与自动小街",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜一处空地未开发是前向未接路，在那里重划一小片分区，在预览时改朝向再放下，运行后观察",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先只划一小片低密用地，放下后让时间运行，跟看其中后来出现什么住宅或商店",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "有精力也能继续扩建，仍沿熟悉首片街道逐级缩放慢看，喜欢重温认得的楼房与日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "按几轮住宅和工作需求、道路通勤与月度开支，继续调少量用地和基础供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "主情境密度、财富与实际开发条件不等同，重新分区不保证升级；风格只影响后续新开发。本人已重划地块与已铺接路的建设补记0。ALT低密生长观察0、正向熟悉需精力与可扩建，持续供需y，不把长楼当个人成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "供水供电已经运行，当前没有紧急短缺；你能调公用设施开支，也有已开放设施可比较，预留了续建和替换空间。先做什么？",
+          "scene": "公用设施还有余量，也会老化",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可建供给设施的维护、污染与接线条件，选方向但暂不施工",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "先切到地下视图，在当前已有管端延出一小段水管，调整端点位置并查看这次铺出的管线",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "把用量增长、设施负载、老化与常规预算一起跟进，实际安排扩充和替换让供给持续接上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先猜覆盖缩小是供水余量不足，记录当前水厂出力与用水量，只改一档当前供水部门预算，恢复运行后核对余量与覆盖是否一起变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "官方手册区分供给容量、使用负载与设施寿命；不写固定覆盖距离或最佳电厂，比较未施工仅记0分，不把替换设施自动计成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A03.V1"
+        },
+        {
+          "text": "还没有公共水网，只在最早低密小镇维持道路和电力；城里已能发展，当前也能再铺一小段。先做什么？",
+          "scene": "还没铺公共水网时的电力",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在电厂与最近街区之间铺一小截电线，调整这次线段的端点与走向，亲手查看落下的位置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "给已经建好的电厂、道路和供电范围补一段个人小记",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "把电力、道路、住宅与工作需求接起来，继续跟进这片常规开支和运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先猜供电图里一小片没有接上，补一条连接电线后核对通电变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "官方手册区分供给容量、使用负载与设施寿命；不写固定覆盖距离或最佳电厂，比较未施工仅记0分，不把替换设施自动计成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前已有住宅、工作地和可用公交站，Route Query路线查询可用，预算够调整站点与道路；没有紧急失控。先做什么？",
+          "scene": "路线查询照出了公交两端",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "缩放到已有公交站，先查看站点位置、相邻道路和入口，再决定怎么改",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "实际补好住宅与目的地两端站点，连同道路容量和月度开支持续跟进通勤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先猜家门口有站却没人坐是工作地附近缺一端，查询实际来回路线，再补一处验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在现有站旁用可建树木和小公园实际安排一个自己的邻里广场",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "本作公交以两端站点、道路和模拟通勤为基础，不套手画闭合线；已有停靠处检查0和实际人车过程观察0分开，RouteQuery后实改核对才p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A04.V1"
+        },
+        {
+          "text": "还没铺公交，只在最早住商工业小区已能查道路和建筑路线，基础电力与道路也能维持。先做什么？",
+          "scene": "没有公交时查一条工厂货运",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在现有街区让时间运行，先跟看路口的人车怎样经过住宅和工业区，再决定下一处调整",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "把住房、工作、接路和常规预算一起调整，持续跟进这片往来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先猜工厂货运绕行来自一处断开的道路，查询实际路线后补一段验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "用当前可建道路和树木实际整理工业与住宅交界，呈现自己的街区轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "本作公交以两端站点、道路和模拟通勤为基础，不套手画闭合线；已有停靠处检查0和实际人车过程观察0分开，RouteQuery后实改核对才p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "区域中两座城都由你游玩并保存，当前一个资源方向的协议已有可选项且供方条件满足，另一个方向还没出现；连接和两城供给都能调整。先做什么？",
+          "scene": "自己区域里的两座城开始互相供给",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际安排两城的电、水或垃圾分工，连同接线、容量与各自日常收支持续跟进",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先猜一个未出现的资源方向还缺边界连接，核对两城对应线路和存档状态，再补一处验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "给自己已经安排并生效的两城资源供给、输送方向和实际使用过程补一段记录",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "打开一块当前可进入却还没细看过的未建地，认识区域里新的海湾或山坡",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "明确两城都由本人顺序管理，不把邻城市长界面当真人合作；只有当前窗口可用协议才可签，不用精确费用、存款或等候门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A05.V1"
+        },
+        {
+          "text": "还只经营一座最早小镇，没有邻城协议；已有电力、可用道路和基础用地，城里当前稳定。先做什么？",
+          "scene": "只经营本城的首轮供给",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把本地供电、就业、道路和常规开支接成持续安排，跟进小镇运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先猜一处未开发地块与道路或供电接口有关，对照状态并改一处验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "给已建电厂、本人已划的住商工业用地与已铺接路补一段建设小记",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "缩放到本城当前可查看却没细看过的河岸或山脚，认识新的空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "明确两城都由本人顺序管理，不把邻城市长界面当真人合作；只有当前窗口可用协议才可签，不用精确费用、存款或等候门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "当前已有一位可从My Sim面板辨认、仍在城里的市民，此前持续回访保存的档案里已有教育或职业变化，已出现的生活消息都能看；同财富层级的住处、岗位与出行样式也有当前可选项。先做什么？",
+          "scene": "同一位My Sim仍然住在城里",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "打开他已经出现的居住、工作与通勤消息，联系档案理解这段生活怎样展开",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "延续自己给他设的“旧街骑车通勤者”身份，实际选可用骑行样式与同财富旧街住处，并派他走一段日常路",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "把这片居民需要的学校、工作接路和常规预算一起调整，持续跟进社区供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "沿此前对同一My Sim的关注，继续改善他所在社区的教育与健康条件，隔段核对本人档案，接着培养已经记录下的变化",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "本作确有可持续辨认的My Sim档案、消息与迁居岗位出行工具；g不承诺替个人安排入学或保证升级，r须身份驱动实际可选行动，NPC不计真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A06.V1"
+        },
+        {
+          "text": "没有使用My Sim，只在早期Mayor小区看见住宅和工作区域已经出现；基础道路、电力和当前服务都能调整。先做什么？",
+          "scene": "没有My Sim的早期Mayor社区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜一处未发展空地是接路朝向造成，在重划预览中转前向并接到街路，运行后核对开发",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "用当前可建街路、树木和公园实际整理一处自己的邻里主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "有精力也能继续扩，仍逐级缩放慢看熟悉街区，享受已认得的人车往来带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "把住宅和工作接路安排好，再按几轮开发需求、供电余量与服务开支继续调预算和用地",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "本作确有可持续辨认的My Sim档案、消息与迁居岗位出行工具；g不承诺替个人安排入学或保证升级，r须身份驱动实际可选行动，NPC不计真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "当前已有两种地面车辆可开，一条带计时的U-Drive-It任务也确实做过并记下旧结果；现在能重试任务，也能自由驾驶。先做什么？",
+          "scene": "可以自由驾驶，也能重试那次计时任务",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_STORE",
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换另一种已解锁车辆，亲手接上加速、转向与车辆声音，体验它的操作回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "有精力也能接新任务，仍用熟悉车辆自由慢开一段老路，喜欢认得的转角和不用赶任务的从容",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "对照自己记下的旧计时结果定一个明确纪录目标，再重试这条已会任务",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "先不管整段结果，在自由驾驶里专门练一次转弯接回正的时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只有已解锁车辆真加速转向才f，自由驾驶无任务时限；计时任务k须实际旧结果与明确目标，t为专练执行，h须有精力新任务仍正向喜欢熟路。ALT分区生长观察0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A07.V1"
+        },
+        {
+          "text": "还没用U-Drive-It，只在最早Mayor街区有一段已会的道路与分区操作，主城稳定，也还有可继续建的地方。先做什么？",
+          "scene": "驾驶以前先练地块前向",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_STORE",
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在现有街路边放下一小片当前可用住宅用地，再运行一段，跟看最早住户搬入和街区开发",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "有精力也能继续建，仍沿熟悉街路逐级缩放慢看，喜欢回到自己认得的邻里日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按几轮住商工业开发、用电和月度开支，继续调整地块、接路与供给容量",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "在预留空地专门反复练一次改变地块前向并接回现有街路的操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只有已解锁车辆真加速转向才f，自由驾驶无任务时限；计时任务k须实际旧结果与明确目标，t为专练执行，h须有精力新任务仍正向喜欢熟路。ALT分区生长观察0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "当前可选新开发建筑的风格，另有一座已获但尚未放置的奖励建筑；道路、用地与资金都够。现有旧楼不会因选风格立刻换外观，先做什么？",
+          "scene": "下一片新建筑的风格与一个已得奖励",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "缩放到候选空地旁的现有街路入口和邻近建筑出入口，先查看这些已可达接口，再决定摆放处",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "按自己已经列出的这项奖励建筑建设目标，把当前已获的那座实际放下，先完成集合里这处未建设的目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "选择下一片新开发的风格与街廓位置，实际做出自己想要的城市年代感",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把奖励或新片区的来往道路、周边需求和维护开支一起接入持续运营",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "风格只影响新开发，不自动替换旧楼；奖励已获得只是未放置，未证新增收藏登记，实际推进已列建设目标0。现场只查现有入口，地块单编辑及建设记录0，不把自动小街和施工当手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A08.V1"
+        },
+        {
+          "text": "还没得到想要的奖励，只在最早Mayor小区能选择当前已有建筑风格、分少量用地，并调基础道路和开支。先做什么？",
+          "scene": "奖励以前先选新楼的风格",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给已经落下的地块、街路和当时选用的建筑风格补一段建设小记",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "实际选下一小片新楼风格与地块朝向，做出自己的初始社区主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "少量分区后，按几轮供电余量、住房和工作需求、道路开支继续调地块与预算",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先只调整眼前一小片新用地的前向箭头与分区轮廓，放下后亲手查看地块怎样贴住现有街路",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "风格只影响新开发，不自动替换旧楼；奖励已获得只是未放置，未证新增收藏登记，实际推进已列建设目标0。现场只查现有入口，地块单编辑及建设记录0，不把自动小街和施工当手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "如果实际用过Route Query或公交，回想一次自己调整住宅到工作地通勤的经历，哪件已经发生的事更有分量？",
+          "scene": "路线查询与两端公交真的用过一次",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把住宅和工作地两端的站点、道路容量与月度预算接成安排，还持续跟进过通勤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己猜过家门口有站却少人坐是工作地缺站，查询实际路线，补一处后运行核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己在站旁安排过可用树木、小公园和街路，做出了自己的邻里主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾补过一处公交站并让时间运行，跟看过通勤居民怎样经过住宅、站点和工作地",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "主项只回顾豪华版路线查询及两端上车下车设施的实际通勤，未体验者换低密小镇；不套三千可途中下车或天际线手画公交线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A09.V1"
+        },
+        {
+          "text": "只回想最早一片低密小镇，道路、电力和基本用地已经运行的一段，哪件实际发生过？",
+          "scene": "低密小镇确实接起过一次",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把用地、就业、供电和常规开支调过，并跟进小镇运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾猜过未开发处的前向或连接问题，在重划预览时调整过朝向或补过电线，运行后核对过变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己实际整理过入口街廓、树木或初始楼房风格，留下过个人主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾调整过一小片新分区的矩形范围和前向箭头，放下后亲手查看过地块与现有路的贴合",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "主项只回顾豪华版路线查询及两端上车下车设施的实际通勤，未体验者换低密小镇；不套三千可途中下车或天际线手画公交线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "如果实际玩过My Sim，回想一位自己持续认得、当时仍在城里的市民经历，哪种已经发生的过程更留住你？",
+          "scene": "My Sim档案里确实有一段生活",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己读过他的已出现消息，联系住处、岗位与实际通勤，把几段生活接在一起",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己为给这个My Sim设的身份，实际选择过合适的同财富住处、岗位或出行样式，并继续这样玩过",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "自己给当时已经查看的档案、消息或城市地点补过个人记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己持续关注同一My Sim档案，投入过他所在社区的教育或健康，并回访过他实际留下的变化",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "已存在的可辨认My Sim才可持续回访；不把普通总体教育当个体养成，身份须驱动已做过的可选行动，消息补记0分且不等于完整故事。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A10.V1"
+        },
+        {
+          "text": "没有用过My Sim，只回想最早Mayor小区一次实际停留，哪种已发生的过程更鲜明？",
+          "scene": "Mayor小区实际停留的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC408A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己实际选过地块朝向、楼房风格或树木位置，留下过自己的社区样貌",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己曾让最早街区运行，跟看过低密住宅开发和住户出门去工作的一段",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "当时有精力也能继续扩建，自己仍缩放慢看过熟悉街区，享受已经认得的社区带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "自己按几轮住房工作需求、道路通勤、供电和月度开支，实际继续调整过用地与预算",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "已存在的可辨认My Sim才可持续回访；不把普通总体教育当个体养成，身份须驱动已做过的可选行动，消息补记0分且不等于完整故事。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "如果已实际玩过U-Drive-It，回想一段亲手驾驶过的经历，哪件事更有分量？",
+          "scene": "开过的那段路与任务结果",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾亲手加速、转弯，车辆动作与声音连续接在操作之后，直接的手感让自己愿意再开一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力也有新任务可接，自己仍用熟悉车辆慢开过老路，喜欢重温认得的转角和从容驾驶",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己为一条确有计时的任务定过个人纪录目标，并实际比较过旧结果",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾暂时放下任务结果，在自由驾驶里专门反复练一次转向或回正",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "主情境只回顾实际开过的车辆，计时必须该任务确有；自由慢开为主动舒缓，不按任务结果或现实驾驶能力判断。ALT确实反复练划区前向与对齐才t，重点是当时想练熟，不要求后来必然更能控制；普通单次改地块0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A11.V1"
+        },
+        {
+          "text": "没用过U-Drive-It，只回想最早Mayor小区划地、接路与停留的一段，哪件已经发生过？",
+          "scene": "早期地块和街路的真实操作",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为一小片住宅用地调整过前向和长宽，落下后亲手查看过它与已有街路的关系",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力也能继续建，自己仍缩放慢看过熟悉首片街路，因为认得的社区让自己安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己把道路、供电、住商工业与常规开支继续调过，跟进了这片运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "自己曾专门反复练在划区预览中改变前向、对齐已有街路的操作，当时的重点是把这套操作练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "主情境只回顾实际开过的车辆，计时必须该任务确有；自由慢开为主动舒缓，不按任务结果或现实驾驶能力判断。ALT确实反复练划区前向与对齐才t，重点是当时想练熟，不要求后来必然更能控制；普通单次改地块0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY408A12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾目前自己实际经营过的一段模拟城市4豪华版经历，哪种已经留下的过程更有分量？",
+          "scene": "从一片城到区域里的位置",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力也有新内容能推，自己仍缩放慢看过熟悉街道，喜欢回到认得的日常街景",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "自己把本城或本人相邻城市的供给、就业和开支接成过持续运转的一部分",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "自己细看过一块原先不熟悉的区域地形，认识了新的山谷、河湾或邻近空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己实际塑过地形、安排过街廓或新楼风格，让城市留下个人主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不要求区域填满、奖励全开、导入人物或外部模组；只回顾实际系统、探索与表达，熟悉慢逛不来自疲劳或没有可建内容。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A12.V1"
+        },
+        {
+          "text": "只玩过最早一片低密小镇，回想那段已经发生的经历，哪项更有分量？",
+          "scene": "首片低密小镇已经留住的样貌",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC408A_MANUAL",
+            "SC408A_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "本来有精力也能继续扩，自己仍慢看过熟悉首片街道，享受已认识小镇的安稳节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "自己接好道路、电力、住房和工作用地后，按几轮开发、用电与月度开支又实际调整过地块和预算",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "自己移近过当时可查看却没细看的一处河岸或山脚，认识了新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己实际整理过入口街廓、地块朝向或新楼风格，留下了自己的开城样貌",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不要求区域填满、奖励全开、导入人物或外部模组；只回顾实际系统、探索与表达，熟悉慢逛不来自疲劳或没有可建内容。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY408A12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+f986c39a3df9"
+}

@@ -1,0 +1,1914 @@
+{
+  "id": "coi09b",
+  "title": "工业之都 Captain of Industry",
+  "game_ids": [
+    "steam-1594320"
+  ],
+  "scope": "PC本体正常经营／原生Sandbox独立；不需要付费列车扩展、模组或社区下载",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "不问模组或DLC必要机制。正常经营有实际材料、研究、维修和聚落供给；Sandbox另有完整题路。",
+    "本体早期替代不要求轮作、蒸汽、列车、合同；未体验可换，不把自动生产增长当成长。",
+    "每条模式路径均为12专属槽的8项当前行动与4项真实过去回顾；未到进度或未有经历可换题，跨游戏题由主流程另加。"
+  ],
+  "modes": [
+    {
+      "id": "normal",
+      "label": "正常经营（有材料、研究、维修与聚落供给）",
+      "initial_variants": {}
+    },
+    {
+      "id": "sandbox",
+      "label": "原生Sandbox（Update4后，本体源汇与免费测试建设）",
+      "initial_variants": {
+        "COI09B01": "COI09B01.SANDBOX.V1",
+        "COI09B02": "COI09B02.SANDBOX.V1",
+        "COI09B03": "COI09B03.SANDBOX.V1",
+        "COI09B04": "COI09B04.SANDBOX.V1",
+        "COI09B05": "COI09B05.SANDBOX.V1",
+        "COI09B06": "COI09B06.SANDBOX.V1",
+        "COI09B07": "COI09B07.SANDBOX.V1",
+        "COI09B08": "COI09B08.SANDBOX.V1",
+        "COI09B09": "COI09B09.SANDBOX.V1",
+        "COI09B10": "COI09B10.SANDBOX.V1",
+        "COI09B11": "COI09B11.SANDBOX.V1",
+        "COI09B12": "COI09B12.SANDBOX.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "COI09B01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "普通经营中，你已有矿塔、挖掘机和卡车，一片矿体及弃土去向都在可用范围内。准备扩这片开采区时，你先想做哪件？",
+          "scene": "矿塔下的第一座矿坑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-mining"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把开采面、装运、弃土、矿料储存与冶炼接成持续供给，跑几轮按积压和缺料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先查看矿塔管区、车辆任务和当前材料库存，核对现状",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "按现有挖掘机与卡车排清这次挖坡口、取矿和运走弃土的先后，再照顺序指定并安排车辆",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "先比较两处当前可开的矿面与对应运输安排，再决定开哪边",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "实际矿塔与车辆运转，不由会下开采指令推出玩家能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B01.V1"
+        },
+        {
+          "text": "只到起步阶段也可选：矿塔已有可用管区，第一批挖掘机和卡车能到两处待清小地块，建材足以推进眼前基础建设。你先做什么？",
+          "scene": "第一批车辆清理小地块",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-mining"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按现有车辆和材料排好这次清地、取料、交到工地与建设的先后，再照安排推进",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对自己已有的开采指定说明，再实际划一小区",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先查看眼前车辆当前任务和材料库存",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "比较两处当前可清理地块及到工地的距离，再选一处",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "实际矿塔与车辆运转，不由会下开采指令推出玩家能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B01.ALT1"
+        },
+        {
+          "text": "原生Sandbox当前已启用即时免费建造，已放一种资源Source，准备经几段本体加工送往相容存储或Sink；试跑有一段停料，原因未明。眼下先做什么？",
+          "scene": "资源源头到加工出口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-sandbox"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接齐来源、加工、缓存与出口，跑多轮按积压和饥饿调整整条流",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先猜测停料来自某个出口未接通，只补那一段连接后比较",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先比较眼前两种可建的加工与储运安排，再选一个",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先排清这轮放Source、摆机器、接相容运输与出口的编辑步骤，再照顺序搭一小组",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "Sandbox有真实源汇，不拿无限资源当成长或成就。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B01.SANDBOX.V1"
+        },
+        {
+          "text": "刚进原生Sandbox，当前即时免费建造可用；已有一处选好物料的Source与相容容器，卡车和相容运输件都可用。第一次试送，先做什么？",
+          "scene": "Sandbox第一处Source到容器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-sandbox"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对Source选的物料和存储容器当前状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较用卡车或当前可用运输设施送入的两种安排",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先排清选Source物料、摆容器与接输送件的编辑先后，再照顺序实际接一段",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对原生源汇的已有说明，再亲手试这一段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "Sandbox有真实源汇，不拿无限资源当成长或成就。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B01.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你普通存档的矿坑正在产生可回填材料，给高处平台试做一条通车坡道后，卡车仍有绕远，原因未明；卡车和指定工具均已有。现在你先想做什么？",
+          "scene": "回填区与上坡通道",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-mining",
+            "coi09b-u42"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜测卡车绕远是坡度衔接不通，只改一小段坡面再比较同组车的行进",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "按自己选的矿坑边弧形工业台地轮廓指定回填，实际安排车辆做出这段个人地形外形",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先比较眼前回填坡道与已经可建的本体坡道方案，再决定这次采用哪种",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "把弃土回填、坡道通车、开采和工地用料连看几轮，按车辆通行与库存反馈调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "地形表达有实际轮廓施工；p需要未被题干确定的通行解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B02.V1"
+        },
+        {
+          "text": "还没做高处通道时，现有卡车能运一小批弃土，眼前有两处可达、当前允许回填的低地，也有一处可继续的基础工地。先做什么？",
+          "scene": "起步低地的一次弃土回填",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-mining",
+            "coi09b-u42"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看矿塔当前允许倾倒的材料与车辆任务",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "比较这两处当前可用回填区及其通车条件",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先核对自己已有的回填工具说明，再亲手划一小片",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排清卡车取这批弃土、送去选定低地回填、再为当前工地送料的次序，照这轮安排推进",
+              "signal": "unit_construction_plan"
+            }
+          ],
+          "design_purpose": "地形表达有实际轮廓施工；p需要未被题干确定的通行解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B02.ALT1"
+        },
+        {
+          "text": "当前Sandbox没有开启无限电力，已有实际用电负载；本体相容涡轮、发电机与飞轮可建，蒸汽Source和相容排汽去向也已可用。先试什么？",
+          "scene": "沙盒里的机械动力轴",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-sandbox",
+            "coi09b-shaft"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把供汽、排汽、发电与真实用电负载跑多轮，再按工况与供需反馈调整整套运行",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比当前可用的涡轮与飞轮部件，再决定这轮装哪组",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对现有轴接口说明，再亲手接一次",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按相邻轴口接相容涡轮、发电机和飞轮并供汽，改变现有用电负载，实际观察发电与飞轮缓冲如何配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "明确基础研究已开；只用本体轴组件和可供资源，不要求核电或付费列车。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B02.SANDBOX.V1"
+        },
+        {
+          "text": "还没装蒸汽机组也可选：当前Sandbox可即时免费放本体柴油发电机、相容柴油Source与输入管，未开无限电力，眼前有用电负载。先做什么？",
+          "scene": "沙盒尚未装蒸汽机组",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-sandbox",
+            "coi09b-shaft"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排好放柴油Source、摆发电机与接供料管的编辑次序，再照顺序搭并启动这一组",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "比较当前可用的两种基础发电方案，再选一种",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先核对自己已有的发电设施说明，再实际接好一组",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先核对设施已显示的输入、用电和运行状态",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "明确基础研究已开；只用本体轴组件和可供资源，不要求核电或付费列车。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B02.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "普通经营里，你已有维修站和它正在使用的原料线，几处设备维修水平在下降，具体阻碍尚不清楚。眼下你更想先做哪件？",
+          "scene": "维修供给不稳定",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-maintenance"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开当前维修与设备面板，核对显示的库存、工作与停机状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已经开放的维修供给或扩建方案，再决定改哪里",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "从维修原料生产、送货、维修站消耗连看几轮，再按缺口调整整条供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "猜测维修站的某项原料没有送到，只给这一项接一批现有库存，其他条件不动再比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不预告缺哪种原料；维修资源与NPC技术或玩家练习无关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B03.V1"
+        },
+        {
+          "text": "还没正式维修线，起步阶段刚放好第一处生产建筑的建设安排；当前建材、卡车与两种可建基础方案都够，任务也列着可推进的设施。先做什么？",
+          "scene": "未有维修线的基础工地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-maintenance"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按现有卡车和库存，排好取出建材、交到这处工地再建设的次序，实际安排这一轮",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "按新手目标已经列出的设施条件，实际投入建材和施工安排来推进这项目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前建筑、车辆和材料库存的现有面板",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "比较当前能造的两种基础生产安排，再选一种",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "不预告缺哪种原料；维修资源与NPC技术或玩家练习无关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B03.ALT1"
+        },
+        {
+          "text": "你在Sandbox已放一段本体炼化设备，主产物和副产物都有可用的储存/Sink去向，但产线还没稳定。原因没有确定，先想做哪件？",
+          "scene": "炼化线的副产物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4",
+            "coi09b-sandbox"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看这段机器各自现有配方和出口状态，核对眼前现状",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可做配方各自产物去向，再决定本轮试哪条",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "猜测某条副产物流出不畅，只给那一出口接一个可接收的Sink，再比较同线运行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把原料送入、各阶段加工、主副产物和回收连跑数轮，按库存反馈调节",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不把“副产物未接”预先说成原因；实验可被否定。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B03.SANDBOX.V1"
+        },
+        {
+          "text": "还没造炼化时，当前Sandbox能即时免费放一台基础加工机、覆盖其配方输入的Source与相容输出Sink；当前有两项可做配方，设备能工作。先做什么？",
+          "scene": "未炼化时的基础源汇短线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4",
+            "coi09b-sandbox"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较两种当前可做基础配方的材料条件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "先核对Source/Sink和这台机器的已有说明，再继续试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前配方和机器输入输出栏，核对所需物料",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先排清放Source、选当前配方、摆机器与接相容Sink的编辑步骤，再亲手照序搭好",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "不把“副产物未接”预先说成原因；实验可被否定。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B03.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你普通存档已研究轮作，有可选的两种作物、供水与食物储运设施。刚看见一轮收成比自己预想少，原因未明，准备调整这片农场时，你先想做哪件？",
+          "scene": "轮作与聚落食物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-farming"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开农场与聚落食物面板，核对当前状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "把作物轮替、供水、收获储运与聚落消耗连看几个收成周期，按肥力和食物库存再调",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "提出“这轮减产和重复种植有关”的解释，只改一块农田的作物次序，保持供水条件后比较收成",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先比较目前可种作物的已显示条件与食物去向，再决定这轮安排",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "真实轮作有解锁前提；实验允许不能支持解释，不把种地自动计成长或舒缓。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B04.V1"
+        },
+        {
+          "text": "还没研究轮作时，你已有第一块只种当前起步作物的农场和食物储存，想安排下一段建设。你先做什么？",
+          "scene": "未轮作的第一块农场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-farming"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前建材和可用卡车，排清给农场、储物点和通车处取料、交付与建设的先后，再安排这一轮",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "连续看农田已有水分、收获运输与聚落消耗几个周期，再按食物缺口调当前可做的农场规模和储运安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先查看农场、食物库存与聚落消耗的当前面板",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "比较当前可用的新增农场或储运建设方案",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "真实轮作有解锁前提；实验允许不能支持解释，不把种地自动计成长或舒缓。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B04.ALT1"
+        },
+        {
+          "text": "你的Sandbox里已有几段物料带、相容的分流/合流设施和下游机器，想给两种物料做交汇与缓存。你先想做什么？",
+          "scene": "皮带交汇的小测试区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排好这轮摆运输件、放缓存和接下游的编辑次序，再照顺序搭起来",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "把两种物料、分合流、缓存与下游消耗跑过多轮，按堵料和供给变化再调",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "照当前已会的分合流与储存连接方式，给两路现有物料各接相容出口，实际试这一种已有运输布置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先比当前两种可建的交汇和储运方案，再决定用哪种",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "普通分合流与仓储串接实试只0，不为保构筑虚构额外优先级工具；两物流缓存下游多轮反馈才y，一轮编辑计划0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B04.SANDBOX.V1"
+        },
+        {
+          "text": "还没布交汇区，当前Sandbox可即时免费编辑；已有一处Source、相容下游、容器与适用运输件。准备试第一段存料布局，先做什么？",
+          "scene": "没有交汇区的第一段运输",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际拆回并重放一只容器或一段运输件的位置，亲手查看这次布局距离",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先查看容器与物料当前状态，再决定怎么接",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "照自己排的放容器、接入与接出运输件的编辑次序，实际搭一小段",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "比较贴近Source或贴近下游两种可用摆放方案",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "普通分合流与仓储串接实试只0，不为保构筑虚构额外优先级工具；两物流缓存下游多轮反馈才y，一轮编辑计划0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B04.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "普通存档已开放且备好锅炉、相容涡轮、发电机与飞轮，现有燃料、给水、排汽去向和用电负载都能工作。准备试本体蒸汽机组，先做什么？",
+          "scene": "蒸汽机组的轴连接",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-shaft"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际按相邻轴口接涡轮、发电机和飞轮并供汽，在现有负载开关时看发电与飞轮缓冲怎样共同作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把燃料、给水、蒸汽处置与工厂用电实际跑过多轮，再按库存、供给和负载反馈调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较自己已可用的机组部件与现有供电安排，再决定这轮怎么组",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有机组连接说明，再亲手接一套",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "b为真实相邻轴组件装配；不依赖精确功率或付费机车。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B05.V1"
+        },
+        {
+          "text": "没有蒸汽科技时，你刚有柴油发电设施和一处基础工地，现有燃料与材料可供一次小调整。你先做什么？",
+          "scene": "柴油发电的基础补给",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-shaft"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把燃料生产、送入、发电与工厂消耗跑几轮，按供需反馈调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前燃料储量和发电设施运行面板",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "比较当前可做的燃料补给或基础电力扩建方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "按现有卡车排清取燃料、给发电处补给、再把建材交给当前扩建点的先后，推进这次小调整",
+              "signal": "unit_construction_plan"
+            }
+          ],
+          "design_purpose": "b为真实相邻轴组件装配；不依赖精确功率或付费机车。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B05.ALT1"
+        },
+        {
+          "text": "当前Sandbox已铺可通的本体轨道并备好燃料、机车、散料专用与通用货车及相容站台模块；Source可供选定矿料，卸料容器能接收，不需DLC。先试什么？",
+          "scene": "本体货运列车试跑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4",
+            "coi09b-u42"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用当前已会的连接方式，给本体机车接上已有货车与相容装卸模块，实跑这段矿料运输，试这一种现有运货布置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "把装载、车次、站台缓存和卸料去向跑过几轮，按排队与库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可用的本体机车/货车与模块，再决定这次怎么配",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "按已铺轨道与站台排清这轮装货、出发和卸货的列车指令，再照顺序设置并实跑",
+              "signal": "unit_command_sequence"
+            }
+          ],
+          "design_purpose": "本体列车不是DLC独有；相容机车、货车与站台的现成接法实跑只记0，不要求成功运达或速度纪录。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B05.SANDBOX.V1"
+        },
+        {
+          "text": "还没摆铁路也可在Sandbox用一台本体卡车，把Source旁已有物料送到一只储存容器。你先做什么？",
+          "scene": "沙盒尚未铺铁路的卡车",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4",
+            "coi09b-u42"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看车辆当前任务和容器状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较容器靠近来源或靠近后续工地两种建设安排",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "排清这趟指定车辆、装运与交料的先后，再照顺序下令并实际尝试",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己已有车辆运输说明，再亲手安排这趟",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "本体列车不是DLC独有；相容机车、货车与站台的现成接法实跑只记0，不要求成功运达或速度纪录。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B05.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你普通存档的船已能出航，贸易港有可用的即时交易，也已有一份正在供货的合同；地图上既有未查看的方向，也有已显示需求的去向。你先想做什么？",
+          "scene": "世界地图与贸易港",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-trade"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前即时交易的已列收付条件，再决定这轮换哪种资源",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "按已显示出航目标核对所需物料与船舶状态，备好这趟所需后再派船前往该目的地",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "把已建立的长期供给、出口生产和港口库存跑过几轮，再按交付反馈调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "派船去一个自己还没揭开的可达方向，看看会发现什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "长期供给选项只适用于自己已建立合同者；未知地点探索不要求打赢。没有合同可换ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B06.V1"
+        },
+        {
+          "text": "只有起步贸易港也可选：当前有两项已显示、库存和Unity都足以选择的即时交易，卡车能从港口取料，眼前另有已列的基础建设。尚未远航或立合同，先做什么？",
+          "scene": "只有即时交易的起步贸易港",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-trade"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看贸易港和岛上当前材料库存，核对自己拥有什么",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "排清这轮卡车从港口取现有建材、交到当前工地与后续建设的先后，再照安排推进",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "C",
+              "label": "按眼前新手目标所列条件，实际推进这次基础建设",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "比较当前两项可用即时交易的付出与所得，再选一项",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "长期供给选项只适用于自己已建立合同者；未知地点探索不要求打赢。没有合同可换ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B06.ALT1"
+        },
+        {
+          "text": "你选择的Sandbox地图有可挖土层与一段低地，已经有挖掘机、卡车和矿塔可用，想同时试一个矿坑与回填区。你先做什么？",
+          "scene": "有地形的沙盒矿坑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-mining"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己选的梯田式矿坑外形划开采与回填，实际做一块地形构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "主动反复划几片小指定区、撤回再划，重点练熟自己用高度工具的步骤",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "按当前挖掘机、卡车和土层，排好开坡、取料运出与回填低地的先后，再照这轮安排指定车辆工程",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "让开采、运出、回填和通车连跑多轮，再按车辆和地形反馈调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不假定平坦测试图自带矿体；题干要求当前真有可挖地形。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B06.SANDBOX.V1"
+        },
+        {
+          "text": "在平坦Sandbox也可选：当前确有一小片允许开采的土层，矿塔管区、挖掘机和卡车可用，只是你尚未试过土方。眼下先做什么？",
+          "scene": "平坦沙盒的首次土层指定",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-mining"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动多次撤回并重划小片高度指定，重点练熟自己用工具的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先看车辆任务和指定区当前状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先排清这小片开采、卡车运出与送往可用回填处的先后，再照顺序安排一轮土方尝试",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有开采/回填工具的说明，再亲手指定一小片",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不假定平坦测试图自带矿体；题干要求当前真有可挖地形。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B06.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "同一普通存档已有持续研究和保留解锁；当前已用上确实消耗研究用品的实验室，用品生产、运输与供电可继续。也能调既有工厂，你先投入什么？",
+          "scene": "研究留下来的岛屿",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-maintenance",
+            "coi09b-ed-research"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已开放的机器升级和现有部件，再决定这次采用哪项",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前研究、材料和施工队列面板的现状",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "沿自己已经在培养的研究方向继续投入，让这份岛屿存档保留的解锁接着增加",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把研究用品生产、运输与实验室消耗跑几轮，按库存反馈调整供应",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "g须实际持久研究投入，不由人口或建筑自动升级推出。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B07.V1"
+        },
+        {
+          "text": "只到第一项研究附近也可选：起步目标列着当前设施条件，现有车辆和材料可施工，菜单里有两项已开放的生产或供给方案。你先做什么？",
+          "scene": "第一项研究附近的建设",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-maintenance",
+            "coi09b-ed-research"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看当前研究和材料面板，核对现状",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "按现有车辆和建材排好这轮采集、运到选定工地与建设的先后，再照安排实际尝试",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "C",
+              "label": "按当前目标已列设施条件，实际投入建材与建设安排来推进这一项",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "比较现在已开放的两种生产或供给建设，再决定先做哪项",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "g须实际持久研究投入，不由人口或建筑自动升级推出。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B07.ALT1"
+        },
+        {
+          "text": "你的Sandbox已有轮作、灌溉和储运设施，选的作物都已可用；刚有一轮收成比自己预想少，原因未明，准备让测试农场继续产出。你现在先想做什么？",
+          "scene": "农场的供水与产物实验",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-farming"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较现有作物的已列种植条件与产物用途",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "先查看农场现有日程、肥力与供水状态，再决定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "把轮作、供水、收获运输与产物去向跑过几个周期，再按肥力与库存反馈调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "猜测同种作物连续安排影响收成，只改这块田的作物次序、供水保持不动再比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不假定Sandbox一定取消所有农田模拟；自己关闭该机制可换基础ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B07.SANDBOX.V1"
+        },
+        {
+          "text": "还没跑过农场，也可用当前Sandbox已放的第一块田；两种作物现在真能种，供水源、管道和收获存储可即时免费搭。第一次设置先做什么？",
+          "scene": "测试农场的第一轮设置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-farming"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清在已有田旁放水源、接供水管与摆收获存储的编辑步骤，再照顺序搭这组",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有种植说明，再亲手设置一次",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先核对农场当前种植和供水栏，看看显示什么",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "比较两种当前可选作物的材料与去向，再选一种",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "不假定Sandbox一定取消所有农田模拟；自己关闭该机制可换基础ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B07.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "普通存档已开放本体机车、散料专用与通用货车、相容站台模块，现矿区到工厂能通轨并供料；不需列车扩展。当前做一小段调整，先选什么？",
+          "scene": "把本体列车接进工业区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4",
+            "coi09b-u42"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己选择的港铁工业主题实际布置站区和通道，再从取景角度截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把矿料装车、站台缓存、轨道交会与工厂卸料连续跑几轮，按排队和库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "照当前已会的本体列车连接方式，用机车、已有货车和相容装卸模块组好这一趟，实际试跑这段矿料运输",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先比较眼前已可用的卡车供给与本体列车建设方案",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "本体已有列车，排除扩展电气化等；普通相容机车、货车与站台接法实跑记0，不凭必须的部件匹配推b；未解锁转早期卡车ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B08.V1"
+        },
+        {
+          "text": "还没研究列车时，你现有卡车正把矿区材料运往工厂，准备给其中一处储物点做小改动。你先做什么？",
+          "scene": "没有列车时调整卡车储物点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4",
+            "coi09b-u42"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按现卡车和材料，排清储物点清地、取建材、交到该处与建设的先后，再照这轮顺序推进",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "连看开采、装运、缓存和工厂消耗几轮，按运转反馈调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前车辆订单、储物点与工厂库存",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "比较把储物点靠矿区或靠工厂两种可建方案",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "本体已有列车，排除扩展电气化等；普通相容机车、货车与站台接法实跑记0，不凭必须的部件匹配推b；未解锁转早期卡车ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B08.ALT1"
+        },
+        {
+          "text": "Sandbox里你已经实际搭出一小组能运行的工厂，蓝图功能可用，眼下可以保存或继续编辑。你先想做什么？",
+          "scene": "把试好的布局存成本机蓝图",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-u42",
+            "coi09b-sandbox"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这轮拆回重放机器、补运输与重接的编辑顺序，再实际完成这次布局修改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "把这份已经可保存的工厂布局存入自己本机蓝图库，保留这次结果",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "C",
+              "label": "为了自己的工业园主题实际调整外形、留白与通道，再选取景截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把这组来源、加工、缓存与出口再跑多轮，按反馈继续调流程",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "保存自己蓝图不需要联网发布，不把已有建筑未放置视作收藏缺失。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B08.SANDBOX.V1"
+        },
+        {
+          "text": "刚进Sandbox还没有可保存工厂时，眼前有你刚摆下的第一台机器和存储容器，先想做什么？",
+          "scene": "没有可存蓝图的初始机器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-u42",
+            "coi09b-sandbox"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对自己已有的布局与蓝图说明，再继续实际搭建",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先按自己选的微型工业站主题实际摆出外形，再构图截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先排清放机器、放容器与连接的这轮次序，并动手完成",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际拆回并重放一只现有容器的位置，亲手查看本次编辑的距离与朝向",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "保存自己蓝图不需要联网发布，不把已有建筑未放置视作收藏缺失。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B08.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想普通存档里自己实际安排并经历过的一段开采与回填，哪件已经做过的事更有分量？不需工程已完工。",
+          "scene": "回想一次挖开与填起",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-mining"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾把采运、弃土、坡道通行与下游生产连续看过多轮，并依库存和车流反馈实际调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾对通路问题提出一个解释，其他安排不动，只改一段地形并比较同组车流",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾按个人海岸或山台轮廓指定回填，实际投入车辆做过这处地形外形",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为已经挖过、填过的真实施工过程补记",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去，不以坑挖得深或坡做得对作为偏好门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B09.V1"
+        },
+        {
+          "text": "只做过起步小工程，也可回想第一次清地或搬料，哪件已经做过的事更有分量？",
+          "scene": "回想起步清地和搬料",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-mining"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾按当时车辆和建材排清取料、交付与这轮施工先后，再实际安排",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先查看已有车辆任务和材料面板，再下这次指令",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "自己曾先比较当时两处能清理的地块与车辆通路，再选择一处开工",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为已经实际做过的清地和搭建补记建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去，不以坑挖得深或坡做得对作为偏好门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B09.ALT1"
+        },
+        {
+          "text": "回想自己在原生Sandbox确实接上Source与Sink、运行过的一条工厂线，哪件已经做过的事更有分量？",
+          "scene": "回想源汇测试过的一条线",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-sandbox"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾连续看原料、多段加工、缓存与出口多轮，再按缺料和积压实际调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾对未知停料提出一个解释，只改一个连接并实跑前后对照",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经观察过的资源运输与生产补记运行过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按个人工业区主题实际改变机器布局的外形，再选前景与视角取景",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "回顾实际测试；无限资源本身没有画像分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B09.SANDBOX.V1"
+        },
+        {
+          "text": "只有第一次来源物料送进容器的小测试，也可回想哪件自己已经做过的事更有分量。",
+          "scene": "回想沙盒首次搬入容器",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-sandbox"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾排清选源物料、放容器、接输送与启动的编辑步骤，再实际照序搭过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先核对Source与容器已有状态，再决定这次怎么接",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经跟看过的这段搬运补记过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先读已有源汇说明，再亲手接过这次运输",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "回顾实际测试；无限资源本身没有画像分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B09.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想普通存档里自己确实安排过的聚落食物、用水或其他生活供给，哪件已经做过的事更有分量？",
+          "scene": "回想聚落的一段供给",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-farming"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先核对聚落和生产已有面板，再决定这轮怎样补给",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经看过的居民活动、供料与运输补记运行过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为个人选定的聚落外形，实际布置住房周边与通道来呈现那个样貌",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾连续看生产、储运与居民消耗多个周期，并按供需反馈调节",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "人口和NPC工作不是玩家技术、真人协作或单个居民成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B10.V1"
+        },
+        {
+          "text": "只供过最初食物，也可回想第一块农场到聚落的实际经历，哪件已经做过的事更有分量？",
+          "scene": "回想最初食物送到聚落",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-farming"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先核对农场与聚落已有面板，再决定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经观察过的收获和送食过程补记",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾按当时材料和可用车辆，排清第一块农场与储物点的取料、交付和建设先后，再实际安排",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己曾连看收获、运输与食物消耗数轮，再按库存反馈调整供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "人口和NPC工作不是玩家技术、真人协作或单个居民成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B10.ALT1"
+        },
+        {
+          "text": "回想自己在Sandbox真正搭并试运行过的一组本体机组或货运组件，哪件已经发生的事更有分量？没有装配经历可换题。",
+          "scene": "回想一组轴或运输部件",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-u42",
+            "coi09b-shaft"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾用当时已会的本体机车、已有货车与相容站台模块接法，实际跑过这一种矿料运输布置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "自己曾把组件所在的供料、缓存与需求连续跑过多轮，并按反馈实际调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经搭好的机组或运输连接补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾在未开无限电力且有负载时，实际邻轴连接相容涡轮、发电机与飞轮并供汽，观察负载变化下的发电与缓冲配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "真实涡轮、发电机与可选飞轮缓冲配合保留b；现成相容列车布置实跑0；未有装配经历可换ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B10.SANDBOX.V1"
+        },
+        {
+          "text": "没装过机组或列车，也可回想自己在Sandbox实际摆过的第一只容器和连接，哪件已经做过的事更有分量？",
+          "scene": "回想沙盒第一只容器和连接",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-u42",
+            "coi09b-shaft"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先比较当时两处可用的储物位置，再决定采用哪处",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "自己曾实际拆回并重放容器或一段连接的位置，亲手查看这次布局结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经搭好的这段连接补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先排好这轮放容器与接运输的编辑次序，再实际照着搭过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "真实涡轮、发电机与可选飞轮缓冲配合保留b；现成相容列车布置实跑0；未有装配经历可换ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B10.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想普通存档里自己实际投入过的研究与真正用过的新设备，哪件已经发生的事更有分量？没有机组经历可换题。",
+          "scene": "回想研发与机组装配",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-shaft",
+            "coi09b-ed-research"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾连续调过燃料、给水、蒸汽处置与工厂用电数轮，依供需反馈维护实际运行",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已建机组与已经投入的研究补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾在已有保留解锁后继续沿同一方向研究，让这份岛屿积累持续增加",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己曾把相容涡轮、发电机与飞轮按相邻轴口接好并供汽，在真实用电负载变化时观察发电与缓冲怎样配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "机组经历不足可换起步ALT，成长不靠仅解锁菜单。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B11.V1"
+        },
+        {
+          "text": "还没蒸汽科技，也可回想自己真正用过的第一处生产或柴油发电设施，哪件已经做过的事更有分量？",
+          "scene": "回想第一处生产或发电",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-shaft",
+            "coi09b-ed-research"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾按当时材料和可用车辆，排清取料、交到工地与建设的先后，再实际安排",
+              "signal": "unit_construction_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经建成的设施与连接补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾连续看原料送入、产出与下游消耗数轮，并按库存反馈实际调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先核对建筑和燃料的已有状态面板，再决定下一步",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "机组经历不足可换起步ALT，成长不靠仅解锁菜单。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B11.ALT1"
+        },
+        {
+          "text": "回想自己在Sandbox确实用过开采或回填指定工具的一段，哪件已经做过的事更有分量？不需已经掌握或完工。",
+          "scene": "回想沙盒里反复划地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-mining"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾连看开采、运输、回填与通车多轮，再按车辆和地形反馈实际调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经挖过、填过的工程补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾主动多次撤回并重划小片高度区，专门练自己使用指定工具的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按个人矿坑或岸线轮廓划区，并实际安排车辆做出这段地形外形",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "练习可以没掌握、造型可以未完成；都是过去实际投入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B11.SANDBOX.V1"
+        },
+        {
+          "text": "没动过土层，也可回想自己在平坦Sandbox实际摆放和连过的第一批建筑，哪件已经发生的事更有分量？",
+          "scene": "回想平地首批建筑放置",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-u4",
+            "coi09b-mining"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先排好这轮放建筑与接运输的编辑步骤，再实际照着搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经放好的建筑与连接补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾主动多次撤回并重放一小组，专门练自己使用放置工具的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按个人几何图形主题实际排过建筑，做出那段个人布局外形",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "练习可以没掌握、造型可以未完成；都是过去实际投入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B11.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "COI09B12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想自己在普通岛屿存档确实选过的一段活动，哪件已经发生的选择更有分量？",
+          "scene": "回想留在岛上的一段时间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-mining",
+            "coi09b-u4"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经观察过的运输与供给补记过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足，也有新工地能推进，自己仍回熟悉聚落慢慢整理周边，因为喜欢这段认得的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己曾围绕个人港区主题实际调整地形与建筑，再选择前景和角度留下一张构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾主动多次划小片开采或回填、撤回再试，目的就是改善自己使用指定工具的操作步骤",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "t只要求实际主动练过，不要求后来成功；h不以疲劳为前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B12.V1"
+        },
+        {
+          "text": "只玩过起步工地，也可回想自己在那里确实做过的一段活动，哪件已经发生的选择更有分量？",
+          "scene": "回想起步工地的小活动",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-mining",
+            "coi09b-u4"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经搭起的第一批设施补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足，也能继续新建设，自己仍慢慢整理已熟悉的工地周边，因为喜欢这段安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为个人起步工地图选定前景与角度，让工地和车辆排布进入构图，再实际截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾主动反复试划一小片指定区，专门练自己操作开采或回填工具的步骤",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "t只要求实际主动练过，不要求后来成功；h不以疲劳为前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B12.ALT1"
+        },
+        {
+          "text": "回想自己在Sandbox工地确实选过的一段活动，哪件已经发生的选择更有分量？",
+          "scene": "回想沙盒留图与闲逛",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4",
+            "coi09b-u42"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经观察过的生产与运输补记过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足，新试验线也能搭，自己仍慢慢整理熟悉工地的一角，因为喜欢这个认得的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己曾按个人工业景观主题实际改过布局，再选前景和机位留下一张画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾把当时已具备保存条件的布局实际存入本机蓝图库，保留那次编辑结果",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "不把没资源压力自动等同h，保存不计收藏缺失。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B12.SANDBOX.V1"
+        },
+        {
+          "text": "只在Sandbox起步空地摆过几件东西，也可回想哪件自己已经做过的事更有分量。",
+          "scene": "回想沙盒第一片小工地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "coi09b-store",
+            "coi09b-u4",
+            "coi09b-u42"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先排好这一角的放置编辑步骤，再实际照次序搭过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足，也有新布局能做，自己仍慢慢调整已经熟悉的小工地，因为喜欢这段安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为个人小工业站主题挑前景与视角，让几件建筑进入构图，再实际截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先比较手边可用建筑的外观，再决定采用哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "不把没资源压力自动等同h，保存不计收藏缺失。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "COI09B12.SANDBOX.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+c303f284a038"
+}

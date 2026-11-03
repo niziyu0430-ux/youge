@@ -1,0 +1,3001 @@
+{
+  "id": "sh28c",
+  "title": "异形工厂2：三维支撑与三种实际规则",
+  "game_ids": [
+    "steam-2162800"
+  ],
+  "scope": "PC正式1.0后本体；Classic / Manufacture / Hexagonal分别12主项与12独立本模式早期替代",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "三路线各自手写；Classic以Vortex为主，Manufacture持续供应各级交易，Hex没有TradeStation。制造Hard不固定站形与解锁顺序，均按题中当前实际工具。",
+    "普通建筑可重搭，但平台容量和复制成本依存档设置；需要时题中明确足够。无燃料、电厂、敌情或矿脉枯竭等从其他工厂作借来的压力。",
+    "二代有支撑与重力，普通Painter只涂顶层且颜色走管；Refined、Pins与水晶不能当普通色块随意改色。Hex是六分片而非四分片。",
+    "新站首次收里程碑料与完成后转换分开；产出题明确已进入转换阶段。Donation与Research只用当前显示确能处理的输入，不采玩家猜测灯色火箭百分比。",
+    "y须持续多环节流转；当次施工、看说明、比较配方、预览改位与存本机0分。b须互补机制真实配合运行；i只禁用本来能用的工具且替代可行。",
+    "不强求所有persona；没有真实养成、藏品缺项或真人合作就不硬g/c/q/o。所有9—12为真实已发生回顾；不要求付费装饰、联机或Mod。"
+  ],
+  "modes": [
+    {
+      "id": "classic",
+      "label": "Classic：四分片Vortex目标（按当前难度与已开工具）",
+      "initial_variants": {
+        "SH28C01": "SH28C01.CLASSIC.V1",
+        "SH28C02": "SH28C02.CLASSIC.V1",
+        "SH28C03": "SH28C03.CLASSIC.V1",
+        "SH28C04": "SH28C04.CLASSIC.V1",
+        "SH28C05": "SH28C05.CLASSIC.V1",
+        "SH28C06": "SH28C06.CLASSIC.V1",
+        "SH28C07": "SH28C07.CLASSIC.V1",
+        "SH28C08": "SH28C08.CLASSIC.V1",
+        "SH28C09": "SH28C09.CLASSIC.V1",
+        "SH28C10": "SH28C10.CLASSIC.V1",
+        "SH28C11": "SH28C11.CLASSIC.V1",
+        "SH28C12": "SH28C12.CLASSIC.V1"
+      }
+    },
+    {
+      "id": "manufacture",
+      "label": "Manufacture：持续交易链（普通/Hard均按当前实际配方与工具）",
+      "initial_variants": {
+        "SH28C01": "SH28C01.MANUFACTURE.V1",
+        "SH28C02": "SH28C02.MANUFACTURE.V1",
+        "SH28C03": "SH28C03.MANUFACTURE.V1",
+        "SH28C04": "SH28C04.MANUFACTURE.V1",
+        "SH28C05": "SH28C05.MANUFACTURE.V1",
+        "SH28C06": "SH28C06.MANUFACTURE.V1",
+        "SH28C07": "SH28C07.MANUFACTURE.V1",
+        "SH28C08": "SH28C08.MANUFACTURE.V1",
+        "SH28C09": "SH28C09.MANUFACTURE.V1",
+        "SH28C10": "SH28C10.MANUFACTURE.V1",
+        "SH28C11": "SH28C11.MANUFACTURE.V1",
+        "SH28C12": "SH28C12.MANUFACTURE.V1"
+      }
+    },
+    {
+      "id": "hexagonal",
+      "label": "Hexagonal：六分片独立场景，无TradeStation",
+      "initial_variants": {
+        "SH28C01": "SH28C01.HEXAGONAL.V1",
+        "SH28C02": "SH28C02.HEXAGONAL.V1",
+        "SH28C03": "SH28C03.HEXAGONAL.V1",
+        "SH28C04": "SH28C04.HEXAGONAL.V1",
+        "SH28C05": "SH28C05.HEXAGONAL.V1",
+        "SH28C06": "SH28C06.HEXAGONAL.V1",
+        "SH28C07": "SH28C07.HEXAGONAL.V1",
+        "SH28C08": "SH28C08.HEXAGONAL.V1",
+        "SH28C09": "SH28C09.HEXAGONAL.V1",
+        "SH28C10": "SH28C10.HEXAGONAL.V1",
+        "SH28C11": "SH28C11.HEXAGONAL.V1",
+        "SH28C12": "SH28C12.HEXAGONAL.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "SH28C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "Classic四分片场景：一份普通双层图形经Cutter后有上片落到非预想层位；另有上层完全相同、仅底层一处支撑分片不同的现成对照图形，切割两股都有去路。先把时间给什么？",
+          "scene": "半片穿过切割器以后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_SHAPE",
+            "SH28C_CUT",
+            "SH28C_UI",
+            "SH28C_10",
+            "SH28C_11",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释是不是切开后失去支撑才落下，只把Cutter整份输入换成那份底层支撑不同的对照图形，其他接法不动，再看两股真实层位核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把开采、两股切割去路、后续拼合与Vortex交付维持几轮，再随出料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "在旁边反复接一种已经会的切割到带连接，专门练熟自己的端口操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对二代切割后会应用重力的已有说明，再回来试自己的样品",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "二代支撑重力实物测试，不考指定谜题或外观朝向；p一次只换底部样品，y多环节持续供给。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C01.CLASSIC.V1"
+        },
+        {
+          "text": "Classic只到最早开采也可答：形状小行星已出料，一段基础带要送向Vortex，末端有一格未按你想的方向连接。先做什么？",
+          "scene": "半片穿过切割器以后的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_10",
+            "SH28C_11"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜只改末端一格会把形状送到哪处，只动该格再看实物流与交付核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把短带改成当前能接通的另一种弯，亲手看这一轮布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次保留矿口、回收末端与接回入口的施工步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前基础带与Vortex交付说明，再回来动手",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "二代支撑重力实物测试，不考指定谜题或外观朝向；p一次只换底部样品，y多环节持续供给。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C01.CLASSIC.ALT1"
+        },
+        {
+          "text": "Manufacture：一座已完成收料阶段的前级TradeStation在持续产出，后级还要它的形状；你刚给另一项目分走了一股供料，后级开始间歇停下。现在先选什么？",
+          "scene": "早一级交易不能拆掉",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_MAN",
+            "SH28C_TRADE",
+            "SH28C_MANPLAY",
+            "SH28C_10",
+            "SH28C_11",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜后级停下与刚分走的这股前级输入有关，只接回这一股，再看前后级真实出料核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把最早供料、各级转换、分流用途和最终需求维持几轮，再跟每级余量调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次保留旧级、增设旁路与接回供料的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前这两级站的真实输入输出说明，再回来改自己的工厂",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "本模式前级持续消耗是独有约束，不按Classic一次交付完即可拆。p单接回一股，y跨级稳定流转；无真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C01.MANUFACTURE.V1"
+        },
+        {
+          "text": "只在Manufacture开局也可答：固定供料处已出料，第一处当前可交付入口能接太空带，但还没有形状送达，供料端到入口的短带连接可查看。先做什么？",
+          "scene": "早一级交易不能拆掉的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY",
+            "SH28C_10",
+            "SH28C_11"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜只接上末端这一格能否让形状进入该入口，只补该格后看实际物料与进度核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次保留供料端、回收断头带与接入口的施工顺序",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把末端换成当前可连接的另一种弯，亲手看这轮布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对本模式最早供料与当前交付入口说明，再回来接自己的带",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "本模式前级持续消耗是独有约束，不按Classic一次交付完即可拆。p单接回一股，y跨级稳定流转；无真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C01.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "Hexagonal场景：眼前普通图形有一个不对称缺口，Rotator当前可用，输出要先转到后续Cutter所需的切割朝向；查看器可把六个分片展开，旁边能接测试短带。先选什么？",
+          "scene": "六分片旋转后的缺口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_HEX",
+            "SH28C_SHAPE",
+            "SH28C_UI",
+            "SH28C_10",
+            "SH28C_11",
+            "SH28C_ROT",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先提出这一台会把缺口移到哪个六分位的猜想，只让样品经过一台再核对真实位置",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把这种图形的开采、旋转、后续加工与Vortex交付维持几轮，再随缺料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "在备用段重复接同一种已会的Rotator输入输出，专门练熟自己的放置方向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对本场景每层六分片与旋转一步的说明，再回自己的样品",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "只按Hex实际一个六分位，不把旧90度图标当四分片转角；p先提可证猜想再看实物，不考形状代码。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C01.HEXAGONAL.V1"
+        },
+        {
+          "text": "只到Hex起步也可答：开局Cutter已得到一份只有半边的普通六分片样品，Rotator与基础带也能用，短带还能重接。先做什么？",
+          "scene": "六分片旋转后的缺口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_10",
+            "SH28C_11",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜这份不对称样品过一台旋转器后缺口在哪一边，只接这一台再核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次留住矿口、放旋转器与接回短带的施工步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把这段现有带换一个能接通的弯，亲手看布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对Hex起步图形与旋转说明，再回来实际试自己的材料",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "只按Hex实际一个六分位，不把旧90度图标当四分片转角；p先提可证猜想再看实物，不考形状代码。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C01.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "Classic当前已有普通两层图形、Painter与两种可供的流体；一段换色后成品还没完全变成预想的样子，源头能继续供料。现在先选什么？",
+          "scene": "顶层涂色与管里颜色",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_PAINT",
+            "SH28C_MODES",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把形状供应、颜色开采、管路送液与成品交付维持几轮，再随缺料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前两个已开放涂色方案的真实形状与流体条件，再决定这次用法",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先核对二代普通Painter的顶层涂色与换液说明，再回自己的这条线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜二代Painter只改变最上层，保持同一两层样品、只换一股可用供液，等新色真正进机后展开实物核对哪些层变了",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不把一代各层涂色套入二代；p只换一股实际供液并看层位，颜色显示方案不计画像。流体管无旧EA固定吞吐假设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C02.CLASSIC.V1"
+        },
+        {
+          "text": "还没涂色：最早矿口和基础带能运行，眼前有一处开采出的普通图形，可在查看器里展开，另有一段带可改。先做什么？",
+          "scene": "顶层涂色与管里颜色的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前短带换一个能通的转弯，亲手看这一段连接",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次从矿口到现有交付入口的铺带先后，再施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "重复做一次已会的选矿口、接出带与查看物料操作，专门让自己用熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对这份图形的现有分片查看说明，再回来接自己的矿带",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不把一代各层涂色套入二代；p只换一股实际供液并看层位，颜色显示方案不计画像。流体管无旧EA固定吞吐假设。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C02.CLASSIC.ALT1"
+        },
+        {
+          "text": "Manufacture这座新站尚处在首次里程碑收料阶段，画面显示当前要交的具体形状；对应形状已有一股能供应，后面的成品输出阶段还没开始。先怎样投入？",
+          "scene": "这座站当前仍在收里程碑料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_MANPLAY",
+            "SH28C_MAN",
+            "SH28C_TRADE",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按眼前已知里程碑要求，把已有匹配形状继续交入这座站，先实际推进这个已列出的目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次保留供料、接站入口与为后续出口留位的施工步骤，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先比较眼前已能做的匹配形状方案所需输入，再决定本轮怎样生产",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前收料与后续转换阶段的已有说明，再回来实际接自己的这一股",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "首次里程碑交料先于后续转换；单次推进已列目标0分，不强算成长，持续跨级供给另题才y；本轮编辑排序0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C02.MANUFACTURE.V1"
+        },
+        {
+          "text": "刚开始本模式：你只接触固定供料与第一处入口，当前显示的交付图形能查看，基础带能改。现在先选什么？",
+          "scene": "这座站当前仍在收里程碑料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次从现有出口接到入口的施工步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "直接换一段当前能接通的短带走向，亲手看这次连接",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "在备用带段反复练一种已会的拖带与接端口操作，专门让自己用熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前入口要哪份图形的已有说明，再回自己的供料端",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "首次里程碑交料先于后续转换；单次推进已列目标0分，不强算成长，持续跨级供给另题才y；本轮编辑排序0分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C02.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "Hex一份六分片普通图形经Cutter分成两半，其中一股三分片需要继续加工，另一股已经堵着；垃圾桶当前可用，也能查看切后形状。先做什么？",
+          "scene": "切开的三片与另一股去路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_CUT",
+            "SH28C_HEX",
+            "SH28C_SHAPE",
+            "SH28C_ROT",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把六分片开采、两股切后去路、旋转拼合与Vortex需求维持几轮，再跟停顿调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次保留需要侧、移动另一侧与接出口的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前Cutter两股输出与Hex分片说明，再回自己的这台",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜另一股堵住是否拖住需要的半片，只把这一股接到当前垃圾桶，再看两边真实出料核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "Hex半片是六分片中的一半，不说两片四分之一。切割方向和重力按当前规则，不把机器转向说成改变东/西切分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C02.HEXAGONAL.V1"
+        },
+        {
+          "text": "起步只接过Cutter也能答：已有普通不对称六分片样品、开局切割器与旋转器，两股短带都能留出空间。先选什么？",
+          "scene": "切开的三片与另一股去路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前切割与旋转说明，再回来实际接自己的两股带",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "在旁边反复接同一种已会的切割器到两股短带，专门练熟端口",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次保留矿口、接切割器与给另一半留去路的施工先后",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先猜旋转输入样品一次会怎样改变被切到两侧的三个分片，只在切前加这一台旋转器后核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "Hex半片是六分片中的一半，不说两片四分之一。切割方向和重力按当前规则，不把机器转向说成改变东/西切分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C02.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "Classic当前升层带已能用，新小模块尚未施工，同层空地足以绕开交叉；旁边一条已接的试线有升层端点且来料层位与预想不符，当前容量与所需点数都够。现在更想做什么？",
+          "scene": "本来可以升层的交叉",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先换一段当前可放的带高度，亲手看这次空间布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次拆旧交叉与保留上游的施工顺序，再实际改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "给这个新模块新增禁止升层带的限制，明确不用本来可用的跨层工具，实际沿同层空廊试接",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先猜当前这只升层连接是否对到了错误层，只改这一个端点再看实物抵达哪层核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境i为明确额外禁用已可用升层工具并实际试接，同层空廊保证可试，不要求最终接通。p单改端点看实物；ALT只转HalfDestroyer并保持同样输入，自己预想半片后检验，普通换摆位0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C03.CLASSIC.V1"
+        },
+        {
+          "text": "还没升层工具：当前已能用基础HalfDestroyer，一份普通不对称图形能继续供入；机器可转向，空地和短带足以把同一股输入接回不同朝向的机器。先怎么继续？",
+          "scene": "本来可以升层的交叉的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_CUT"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前机器切哪半片和端口连接的已有说明，再回来实际试自己的输入",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先排清这一轮保留原料端、移机器和接回出口的编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先猜只转机器本身是否会改变最后保留的半片，保持同一份输入，只改变这台朝向并接回同样物料，再看实际半片核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把这台HalfDestroyer移到另一处当前可接通的位置，亲手看这一轮占位与短带",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "主情境i为明确额外禁用已可用升层工具并实际试接，同层空廊保证可试，不要求最终接通。p单改端点看实物；ALT只转HalfDestroyer并保持同样输入，自己预想半片后检验，普通换摆位0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C03.CLASSIC.ALT1"
+        },
+        {
+          "text": "Manufacture一座已能转换的站当前明确需要一种Refined形状和一种普通加工形状；匹配的两股都能生产，Painter也已开放，但不能把另一色Refined直接涂成所需品。现在先投入什么？",
+          "scene": "Refined输入不能靠涂色替代",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_TRADE",
+            "SH28C_SHAPE",
+            "SH28C_PAINT",
+            "SH28C_MAN",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把Refined前级、普通形状加工、本站转换与后级用料维持几轮，再随余量调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核对Refined与普通图形在Painter中的不同规则，再回自己的生产",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "实际把匹配的Refined与普通加工形状一起供给这座站，运行并看两类输入怎样组合成后级所需产物",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已开放交易路线各自需要的输入与产物形状，再决定本轮采用哪座",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "b是题中已明确存在的两类互补输入实际运行，非比较菜单。不能用Painter换Refined色，不用颜色名称猜贸易层级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C03.MANUFACTURE.V1"
+        },
+        {
+          "text": "还没Refined多级链：最早固定供料已在带上，当前交付入口的图形预览可看，你还可改一小段连接。先做什么？",
+          "scene": "Refined输入不能靠涂色替代的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这次保留供料端与接回末端的施工顺序排清",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "把现有短带改成当前可接通的另一种弯，亲手看布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先核对供料样品与当前入口要求的已有说明，再回来动手",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按当前第一入口已列出的交付要求，把现有匹配料真正送进去，先推进眼前这个明确目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "b是题中已明确存在的两类互补输入实际运行，非比较菜单。不能用Painter换Refined色，不用颜色名称猜贸易层级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C03.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "Hex当前顺向与逆向旋转器都已开放；这次小支路要把一份普通不对称形状转到后续切割需要的目标朝向，空地足够用多台顺向旋转做到。先投入什么？",
+          "scene": "本来能逆转的六分位",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_HEX",
+            "SH28C_UI",
+            "SH28C_ROT",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清本次要保留的输入、放旋转器与接回出口的施工步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前两类旋转器在Hex场景的说明，再回自己的这条线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "给这次支路新增禁用逆向旋转器的规则，明确不用本来可用的工具，实际只用顺向链尝试调整到后续切割所需朝向",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先猜一台逆向旋转器会把缺口带到哪个六分位，只让同一样品经过这一台再核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境i为真禁用已能用逆向机制并实际尝试顺向链，空地足以试，不要求最终达到目标；不是普通改顺序，不考顺向链数量。ALT只有顺向工具，不能把被迫使用现有工具算i；p自己预想再单机实测。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C03.HEXAGONAL.V1"
+        },
+        {
+          "text": "只有开局顺向旋转器也可答：现有一份切后留有缺口的普通样品可供给，旁边短带能接一台或直接绕过。先做什么？",
+          "scene": "本来能逆转的六分位的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次留输入、放机器与接输出的施工顺序，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先读本场景现有旋转器说明，再回来真实处理样品",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜一台旋转器会把样品缺口移到哪里，先记预想、接一台后看实物核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把当前短带改一个能通的弯，亲手看新的连接",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "主情境i为真禁用已能用逆向机制并实际尝试顺向链，空地足以试，不要求最终达到目标；不是普通改顺序，不考顺向链数量。ALT只有顺向工具，不能把被迫使用现有工具算i；p自己预想再单机实测。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C03.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "Classic已经有两种可用颜色的列车与普通分岔，装卸站当前能接对应车厢；一列车刚走到非预期支路，现有线路能继续改接。先选什么？",
+          "scene": "同一列车颜色走哪条岔路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_TRAIN",
+            "SH28C_UI",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前列车颜色路由与装卸站连续连接说明，再回来改自己的岔路",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先猜是这处分岔的颜色配置让它走错，只改该颜色的一处分支，再看同色列车下一趟去向核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把两处形状供应、连续相接的装卸站、运输与下游处理维持几轮，再跟缓冲调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先按本次已有站件排清移卸货口与接下游的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "不是Factorio区块信号；只问当前已解锁颜色，p改一处路由观察实际列车。未用列车有无车早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C04.CLASSIC.V1"
+        },
+        {
+          "text": "还没有列车：第一股矿带送向Vortex，一处平台边缘缺口可接现有带发射/接收件，当前工具已能用。先做什么？",
+          "scene": "同一列车颜色走哪条岔路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前平台缺口与带发射接收说明，再回自己这段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先猜这组发射与接收是否对到同一股出口，只改一只接收件再看物料抵达核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次保留矿带、挪接收件与接入口的施工步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "换一次当前能接通的短带转弯，亲手看新的连接",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "不是Factorio区块信号；只问当前已解锁颜色，p改一处路由观察实际列车。未用列车有无车早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C04.CLASSIC.ALT1"
+        },
+        {
+          "text": "Manufacture当前有后级生产和一条已能给DonationStation交匹配形状的支路，两条加工线都要同一种前级产物；分出研究支路后主链开始缺料，现有带与普通加工机器可调整。先做什么？",
+          "scene": "研究支路也在用前级供给",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_MAN",
+            "SH28C_MANPLAY",
+            "SH28C_TRADE",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前Donation接收的形状与本存档可获研究说明，再回来处理自己的两条线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先猜这段缺料来自新增研究支路，只暂断它的一处前级进料，再看主链是否恢复核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把前级、主链需求、研究形状加工与后续扩产维持几轮，再按两边余量调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次为研究单开供给、接新支路与恢复原线的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "不是任意原料都能当有效研究形状；题中两支各自匹配，但共用前级资源。p只断一处输入核反馈，y多系统持续分配。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C04.MANUFACTURE.V1"
+        },
+        {
+          "text": "尚未用Donation：本模式最初的供料到第一入口只有一条线，其中一格反向，旁边有可用空地。先选什么？",
+          "scene": "研究支路也在用前级供给的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对基础带朝向与当前入口说明，再回来操作",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先猜这一格反向是否造成前面积料，只转该格并看真实流动核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先把这次断开旧格、留住两端和接回的施工顺序排清",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "直接把已有带换一个能通的弯，亲手看看新的接法",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "不是任意原料都能当有效研究形状；题中两支各自匹配，但共用前级资源。p只断一处输入核反馈，y多系统持续分配。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C04.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "Hex已开放Painter和所需普通形状加工，能做双色六分片图形，并有普通两层样品与两种可供流体；目标线能运行，也能做一个非任务要求徽记。现在先给什么时间？",
+          "scene": "六个位置上的普通颜色",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_PAINT",
+            "SH28C_HEX",
+            "SH28C_SHAPE",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已能做的几种普通染色输入条件，再决定这一次方案",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "实际选六个位置的颜色与几何拼法，产出一个自己想表达主题的六分片徽记",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先猜二代Painter只涂最上层，保持同一两层样品、只换一股可用供液，等新色进机后展开实物核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把普通图形开采、颜色流体、加工与目标交付维持几轮，再按缺料调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "a需目标以外自选主题作品；Hex仍是普通形状顶层Painter，不能涂Pins/水晶，颜色显示设置不计画像。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C04.HEXAGONAL.V1"
+        },
+        {
+          "text": "还没有Painter：起步形状、旋转器与切割器能用，眼前有一个普通不对称六分片样品，另外一侧地图没亲自看过。先选什么？",
+          "scene": "六个位置上的普通颜色的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接换一次短带转弯，亲手看这个已能接通的布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前样品分片与起步工具说明，再回来接自己的带",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看那片尚未查看的地图，想知道有没有自己没见过的形状",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次保留样品输入、接旋转与切割出口的施工顺序",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "a需目标以外自选主题作品；Hex仍是普通形状顶层Painter，不能涂Pins/水晶，颜色显示设置不计画像。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C04.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "Classic已开放PinPusher和Stacker；一股普通半片现已从下面加Pins，另一股普通底座也能供给，层数都在当前范围内，也有能暂时绕过PinPusher的短路。现在先投入哪种过程？",
+          "scene": "Pins与普通半片的支撑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_PIN",
+            "SH28C_STACK",
+            "SH28C_SHAPE",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把加Pins的半片接到Stacker上输入，与底座一起运行，看支撑和堆叠怎样保住自己需要的上层位置",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先猜这股半片垫高一层来自PinPusher，保持同一底座、只让半片暂时绕过该机，再看Stacker成品层位核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把半片、Pins加工、底座与后续目标交付维持几轮，再随出料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先核对Pins只在直接支撑等条件下起作用的说明，再回自己的这组机器",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "b要求PinPusher与Stacker真实配合形成支撑层位；p只改单股是否经过PinPusher并看实际层位，不凭空要求已有纯Pin样品，也不把Pins当可上色材料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C05.CLASSIC.V1"
+        },
+        {
+          "text": "还没Pins和Stacker：早期平台的矿口出料正常，一小段现有带要换弯，未改部分可以继续工作。先做什么？",
+          "scene": "Pins与普通半片的支撑的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次断开哪格、保留哪段与怎样接回的施工顺序，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先猜这一格朝向是否让物料反送，只转这格再看去向核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "在备用空地反复搭同一种已会的带弯，专门练熟自己的拖带",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前基础带朝向说明，再回来处理这段",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "b要求PinPusher与Stacker真实配合形成支撑层位；p只改单股是否经过PinPusher并看实际层位，不凭空要求已有纯Pin样品，也不把Pins当可上色材料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C05.CLASSIC.ALT1"
+        },
+        {
+          "text": "Manufacture当前已开放两种同级交易站，输入与产出变体不同，两种材料路线都做得到；现有一股接入后级的Refined可能选成了同级另一变体，正确匹配品也能供给，当前容量够改接。先选什么？",
+          "scene": "已开放的另一种交易配方",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_MAN",
+            "SH28C_TRADE",
+            "SH28C_SHAPE"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较这两种当前已开放转换的真实输入、输出变体与后级要求，再决定选哪条",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "先猜后级不收来自这股Refined变体不符，只把这一股替换为输入预览匹配的现成品，其他输入不动，再看接收与产物核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把选定前级、普通配料、本站转换与后级用料维持几轮，再看余量调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次保留旧路线、在已显现站旁搭普通加工平台与接回出口的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "已开两种交易的菜单比较只0分；p实际只替换一股已可供的Refined变体，不把Vortex接受旋转的规则或尚未核定的交易朝向限制当失败前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C05.MANUFACTURE.V1"
+        },
+        {
+          "text": "最早阶段还没替代交易站：供料处出带正常，当前只要把同一股接到已显示的第一入口，末端可调，另有工具说明可查。先做什么？",
+          "scene": "已开放的另一种交易配方的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次移末端与接入口的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先放大到当前可查看的第一入口，亲自看供料出口与入口实际位置，再回这段接线",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前最早供料与入口说明，再回来接自己的线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "反复练一种已会的短带转弯与端口连接，想让自己用熟基础工具",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "已开两种交易的菜单比较只0分；p实际只替换一股已可供的Refined变体，不把Vortex接受旋转的规则或尚未核定的交易朝向限制当失败前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C05.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "Hex已开放Stacker，现有两种普通图形可以切成互补的三分片，Rotator也能把它们送到所需位置；当前两股供料和输出去路都够。先做什么？",
+          "scene": "把互补三分片拼成一层",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STACK",
+            "SH28C_HEX",
+            "SH28C_SHAPE",
+            "SH28C_ROT",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际让两股切割旋转后的互补三分片在Stacker配合，运行并看它们怎样拼成自己需要的六分片单层",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前两股三分片的来源、缺口和切割旋转条件，再决定这次采用哪组可做输入方案",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "把两类开采、切割旋转、上下输入与Vortex需求维持几轮，再按出料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先核对Hex六分片与二代Stacker落下拼合说明，再回自己的这组机器",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "b是真切割旋转与Stacker互补运行；普通材料条件比较只0分，不凭空要求未交代的掉落测试样品。不是一代左右输入，也不把六分片当四分片。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C05.HEXAGONAL.V1"
+        },
+        {
+          "text": "还没Stacker：Hex开局一台Cutter的两股输出都能铺带，已有普通样品，旁边有空地。先怎样继续？",
+          "scene": "把互补三分片拼成一层的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次给两股半片留去路与接回当前入口的施工步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "在备用段重复搭同一种已会的切割双出口连接，专门练熟端口操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先猜切前加一台旋转器会换到哪三个分片，只加这一台并看两股实物核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对起步Cutter和Rotator已有说明，再回来试自己的图形",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "b是真切割旋转与Stacker互补运行；普通材料条件比较只0分，不凭空要求未交代的掉落测试样品。不是一代左右输入，也不把六分片当四分片。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C05.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "Classic一份完整单层水晶在Stacker上输入、完整普通底座在下输入，刚试跑的水晶有碎裂；两股都能继续供给，输入可交换，查看器能展开各层。先给什么时间？",
+          "scene": "水晶经过机器后的缺口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_SHAPE",
+            "SH28C_STACK",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对水晶落下与切断相连部分的已有说明，再回来试自己的样品",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "把这次保留原水晶线、分出测试样品与接回出口的施工步骤排清",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "在备用普通材料上反复做同一种已会的上下输入连接，专门练熟层位操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先猜碎裂与上输入落下有关，只交换这台上下两股现有输入的位置，图形种类与供料不变，再看水晶和普通层的真实结果核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "p实际改变水晶作为上/底输入的条件并核结果，不给指定关卡解，不暗示普通材料落在水晶上也必碎。未用水晶有普通矿带替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C06.CLASSIC.V1"
+        },
+        {
+          "text": "只处理过最早普通图形：当前HalfDestroyer和基础带都可用，同一份完整普通图形能沿直通带走，也能接入这台只有一个输出口的机器；两条去路都有空位。先选什么？",
+          "scene": "水晶经过机器后的缺口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_CUT"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把现有HalfDestroyer换到另一处能接同样输入的位置，亲手看这次摆位",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次保留直通样品、移接机器与接回单口输出的编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前HalfDestroyer的输入输出与销毁半片说明，再回来动自己的这条线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜经这台机器后哪半片会留下，只把同一股料从直通改接到机器，其他不变，再对照真实输入和单口输出核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "p实际改变水晶作为上/底输入的条件并核结果，不给指定关卡解，不暗示普通材料落在水晶上也必碎。未用水晶有普通矿带替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C06.CLASSIC.ALT1"
+        },
+        {
+          "text": "Manufacture一座已开始转换的站有现成输入，出口连接看似接上却没到下一平台；你能查看当前已开放机器层的端口，手头连接件能重放。现在先给什么？",
+          "scene": "站与平台之间接在第几层",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_UI",
+            "SH28C_TRADE",
+            "SH28C_MANPLAY",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接换一段当前能连接的太空带转弯，亲手看这轮站间布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次保留站件、回收接收端与接回下一平台的施工步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前平台缺口、太空带与层位的已有说明，再回自己的站口",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜出口接收件与出料端不在同一可用层，只改这一只接收件层位，再看真实物料抵达核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "当前层位已能用才试；不说外观上沿永远不能接，亦不假定第三机器层开局已开。p只改一件看实物。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C06.MANUFACTURE.V1"
+        },
+        {
+          "text": "还没多站转换：第一股供料与当前第一入口旁的基础连接件都已能用，眼前一只接收端可以重放。先选什么？",
+          "scene": "站与平台之间接在第几层的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜它是否没有对到同一股出料，只改这只再看物料抵达核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次保留供料端、回收接收件与接回入口的施工先后",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把已有短带移成另一种当前能通的弯，亲手看布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对这只接收端当前支持的连接说明，再回来操作",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "当前层位已能用才试；不说外观上沿永远不能接，亦不假定第三机器层开局已开。p只改一件看实物。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C06.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "Hex已能用PinPusher和Stacker，一组含Pins的普通图形在Stacker后有分片掉落；现有同一上输入，以及两份只在该片正下方支撑不同的下输入样品可以互换。先选什么？",
+          "scene": "Pins没有横向撑住旁片",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_PIN",
+            "SH28C_SHAPE",
+            "SH28C_HEX",
+            "SH28C_ROT",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把普通半片、PinPusher、后续拼合与交付维持几轮，再随供料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核对Pins不横向连接的已有说明，再回自己的这一份样品",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次保留原线、分出支撑测试段与接回出口的施工先后",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先解释这片掉落是否因为Pins只在旁边而没在其正下方，保持同一上输入、只换为该片正下方有普通支撑的现成下输入，再看真实层位核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "给出真实可改单项测试样品，不把一个Pin横撑邻片；不要求用层数上限剥Pin或记目标答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C06.HEXAGONAL.V1"
+        },
+        {
+          "text": "从没用过Pins：起步六分片矿口、旋转器和短带能运行，现有一股带缺口的普通样品可以经过旋转器或绕过。先选什么？",
+          "scene": "Pins没有横向撑住旁片的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次保留输入、挪机器与接回输出的施工步骤，再做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "把当前短带换一条能通的弯，亲手看这轮布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "反复练同一种已会的旋转器起终点连接，专门让自己用熟放置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先猜只经过这一台会改变哪处缺口位置，记预想、接通后看实物核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "给出真实可改单项测试样品，不把一个Pin横撑邻片；不要求用层数上限剥Pin或记目标答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C06.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "Classic蓝图与原生资料库已经能用，你自己的一组普通加工模块已选中；当前容量和本存档如需的复制点数都足够，预览能放。先选什么？",
+          "scene": "自己的可复制模块",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_BP",
+            "SH28C_UI"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先换一次模块预览的方向并摆下，亲手看看这次占位",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先按本次已有空间排清放模块与接两侧带的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把自己当前满足条件的模块存入本机蓝图库，保留这次编辑",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "D",
+              "label": "先猜预览旋转后哪个端口能接现有带，实际放一组后核对实物连接",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "本机保存0分；p实际摆放验证预测，不把预览和保存当养成或收藏。复制成本依当前存档，不说所有场景免费。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C07.CLASSIC.V1"
+        },
+        {
+          "text": "还没蓝图：最早一股矿带已工作，空地够手工搭一小段同样连接，当前没有资源枯竭或敌情压力。先做什么？",
+          "scene": "自己的可复制模块的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有短带的一处位置换成当前可接通的另一种弯，亲手看布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对基础工具现有说明，再回来继续实际铺带",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "在旁边重复搭同一种已会的短带连接，专门练熟自己放置与朝向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次从矿口到入口的施工顺序再动手",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "本机保存0分；p实际摆放验证预测，不把预览和保存当养成或收藏。复制成本依当前存档，不说所有场景免费。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C07.CLASSIC.ALT1"
+        },
+        {
+          "text": "Manufacture原生蓝图已经可用；你在当前已有交易站之间搭的一组普通加工机器与带已运行，蓝图只选这些可复制部件，空地与当前点数/容量够再做一组，也能逐件手搭。现在先选什么？",
+          "scene": "小支路原本能整组复制",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_BP",
+            "SH28C_MAN",
+            "SH28C_TRADE"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜整组预览转向后哪一侧能接现有供料，实际放下一组后核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次放普通加工机器、从已有站接料与接回后级的施工顺序，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "给这一次新增支路加禁止复制粘贴的规则，明确不用原本可用的整组工具，实际逐件手搭这些普通机器与带并试运行",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "把自己当前满足条件的这条支路存进本机蓝图库，保留这次编辑",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "主情境蓝图仅普通加工机器和带，不含交易站；已有站不被复制移动。i为真禁用已可用整组复制并实际逐件手搭试运行，不以产出成功为门槛。保存0，p放下核真实接口；ALT基础工具没有复制可禁，普通手搭不算i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C07.MANUFACTURE.V1"
+        },
+        {
+          "text": "还没蓝图：最早供料到第一入口能改基础带，旁边空地可手工接一小段，不需要后期转换站。先怎样继续？",
+          "scene": "小支路原本能整组复制的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有短带换一个能通的弯，亲手看新的走向",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对基础连接件说明，再回来接自己的这一次",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "反复搭一种已会的端口到短带连接，专门练熟自己的放置与朝向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次保留供料与接回入口的施工步骤，再做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "主情境蓝图仅普通加工机器和带，不含交易站；已有站不被复制移动。i为真禁用已可用整组复制并实际逐件手搭试运行，不以产出成功为门槛。保存0，p放下核真实接口；ALT基础工具没有复制可禁，普通手搭不算i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C07.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "Hex线层、形状信号与Filter已经开放，混合带上有同种不对称图形的两个不同六分位朝向，当前分流刚与预想不符；两股筛后去路都空着，信号可改。先投入什么？",
+          "scene": "六分片信号筛真实图形",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_HEX",
+            "SH28C_SHAPE",
+            "SH28C_UI",
+            "SH28C_ROT",
+            "SH28C_FLOW",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对Hex形状信号与Filter已有说明，再回自己这条线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次保留混合来源、接筛选与两侧出口的施工步骤，再实施",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "实际把与所需朝向匹配的六分片形状信号接入Filter，与混合带一起运行，看这组机制怎样区分真实物料",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先猜误分是否仅因常量信号差一个六分位，只改该信号朝向，再看实际去向核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b是精确形状信号和真实筛选器互补运行；虚拟图形不等于实物，不把个人记形状清单算c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C07.HEXAGONAL.V1"
+        },
+        {
+          "text": "还没有线层：起步同一普通图形经过Rotator前后都能查看，当前短带能接通，眼前一个末端方向可改。先做什么？",
+          "scene": "六分片信号筛真实图形的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次保留旋转器与接回输出的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前起步图形与带说明，再回来处理自己的连接",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜这处末端是否把样品送错方向，只转这一格再看实物去向核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把这段短带挪成另一条能通的弯，亲手看布局",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "b是精确形状信号和真实筛选器互补运行；虚拟图形不等于实物，不把个人记形状清单算c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C07.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "Classic当前工厂能交付，你有精神、还有容量和可用工具做新目标，层间连接也已能用；地图另一侧有没亲自查看的形状小行星。此刻先投入什么？",
+          "scene": "Vortex旁的熟悉模块",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在备用空地重复一种已会的层间连接，想让自己的层位操作更熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "仍把视野留在熟悉开采、加工与交付线上，享受认识的物料流与从容过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看看那片尚未亲自查看的小行星，不先查它是什么形状",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次新模块的放置与接入步骤，再照着施工",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h在精力足并能推进时主动留于熟悉过程，不由无敌人或低难直接推断；w未知地图发现，t是操作精进。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C08.CLASSIC.V1"
+        },
+        {
+          "text": "只到第一股开采与Vortex也可答：你有精神，现有带能交付，另有可用空地继续铺。先选什么？",
+          "scene": "Vortex旁的熟悉模块的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前交付和带路说明，再回来实际接这一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "仍看熟悉带路送形状进入Vortex，喜欢这套认得的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "把视野移到尚未亲自看过的地图一侧，想发现资源图形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清本次接哪一侧入口与保留哪些带，再施工",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h在精力足并能推进时主动留于熟悉过程，不由无敌人或低难直接推断；w未知地图发现，t是操作精进。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C08.CLASSIC.ALT1"
+        },
+        {
+          "text": "Manufacture现有各级能继续转换，你本人有精神，容量和工具也够推进新一级，本机蓝图库已能用；地图还有一处未亲自查看的形状小行星。此刻更想给哪件事时间？",
+          "scene": "持续转换声里的停留",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_MAN",
+            "SH28C_UI",
+            "SH28C_BP",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把自己已满足保存条件的站间普通加工与输送模块存入本机蓝图库，保留编辑结果",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "B",
+              "label": "仍看熟悉的前级与后级一轮轮供给，享受这套认识的转换过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看看那片未知小行星，不先查它能提供什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次新增一级要保留哪些旧站与从哪里接入，再施工",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h需本人精力足且可继续；未知地图w非换带路0，蓝图保存非收藏。当前站链不消失也不自动证明g。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C08.MANUFACTURE.V1"
+        },
+        {
+          "text": "只到Manufacture最早供料与第一入口：你有精神，现有连接能工作，也还有工具和空间继续接线。先选什么？",
+          "scene": "持续转换声里的停留的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前入口与基础带说明，再回来实际接这一次",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "仍看熟悉供料一件件进入这处入口，喜欢认得的从容过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看一片尚未亲自查看的地图，不先找攻略确认资源",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次接哪一侧与保留哪段带的施工步骤，再动手",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h需本人精力足且可继续；未知地图w非换带路0，蓝图保存非收藏。当前站链不消失也不自动证明g。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C08.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "Hex当前六分片工厂能继续交付；你有精神，还有容量与工具推进目标，本机蓝图库也已能用，另一片地图没亲自查看。现在更想投入什么？",
+          "scene": "熟悉的Hex图形流",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_HEX",
+            "SH28C_BP",
+            "SH28C_UI",
+            "SH28C_ROT",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清本次新增模块与接入当前交付线的施工步骤，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍把视野留在熟悉六分片旋转与加工线，享受认得的物料流",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看看未亲自查看的小行星，想发现它会是Hexagon、Gear还是Flower等当前图形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把自己当前满足条件的自制模块存进本机蓝图库，保留这次设计",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "h精力足且能推进；w发现不保证有某稀有形状；蓝图库需当前已经开放。没有TradeStation，不让Hex玩家答Manufacture。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C08.HEXAGONAL.V1"
+        },
+        {
+          "text": "只用过Hex起步工具：你有精神，矿口、Cutter与Rotator可继续工作，也有空地再铺一段。先选什么？",
+          "scene": "熟悉的Hex图形流的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清本次保留两股切割去路与接回入口的施工步骤，再做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍看熟悉六分片转过机器的过程，喜欢认得的从容感",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野去看一片尚未亲自查看的形状小行星",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "反复接一种已会的旋转器与短带连接，重心是练熟自己的端口操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "h精力足且能推进；w发现不保证有某稀有形状；蓝图库需当前已经开放。没有TradeStation，不让Hex玩家答Manufacture。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C08.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想Classic里你实际切割、堆叠或涂色过的普通图形，哪种已发生过程更有分量？",
+          "scene": "回看四分片的真实加工",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_SHAPE",
+            "SH28C_PAINT",
+            "SH28C_STACK"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先对层位或颜色异常提出过自己的解释，只改一个输入后看真实产物核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把形状开采、加工、颜色供给与Vortex需求维持过几轮，并随缺料调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "按当时可用空间排清过一次拆旧与接新模块步骤，并实施过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "反复搭过同一种已会的上下层或端口连接，专门练熟自己的工具操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "四项真实过去；不要一代配方经验代答，未用加工工具可换本模式开局替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C09.CLASSIC.V1"
+        },
+        {
+          "text": "只回想Classic最初的矿口与带：哪项真的发生过？",
+          "scene": "回看四分片的真实加工的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过末端错向为何影响交付，只改一格后核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把已有短带挪成过另一条可接通的弯，看过本次布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "排清过那一次保留矿口与接入口的施工步骤，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "核对过已有基础工具说明，随后回来真实铺过自己的带",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "四项真实过去；不要一代配方经验代答，未用加工工具可换本模式开局替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C09.CLASSIC.ALT1"
+        },
+        {
+          "text": "回想Manufacture里你已做过的多级转换，前级在新一级出现后仍要继续供料。哪项已发生过程更有分量？",
+          "scene": "回看仍要供应的旧级",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_MAN",
+            "SH28C_TRADE",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过后级间歇停下与哪股前级输入有关，只接回一股后看实际输出核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把最早供料、前后级、分流用途与最终需求维持过多轮，并逐级随余量调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "排清过那次保留旧站与加新支路的施工步骤，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "核对过当时两座站的输入输出说明，随后回来真实改接过",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实过去，本模式持续站链独有，不能按Classic配额完就拆来解释。未做到多级可换开局回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C09.MANUFACTURE.V1"
+        },
+        {
+          "text": "只回想本模式第一股供料：哪项确实发生过？",
+          "scene": "回看仍要供应的旧级的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先到当时已能查看的第一座站前，亲自看过实际入口位置与当时交付图形，再回来接过自己的供料",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "排过那次保留供料端与接到第一入口的施工步骤，并实施过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "亲手把已有短带换过一次可行弯路，看过那轮布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "核对过当时最早供料与入口说明，回来实际动手过",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实过去，本模式持续站链独有，不能按Classic配额完就拆来解释。未做到多级可换开局回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C09.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "回想Hex中你真正旋转、切割过的一份六分片图形，哪种已发生过程更有分量？",
+          "scene": "回看六个位置怎样变化",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_UI",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过样品过一台Rotator后缺口会到哪一格，只接一台后看真实产物核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把开采、切割两股去路、旋转与Vortex需求维持过几轮，并跟供料调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "为了练熟端口，反复搭过同一种已经会的旋转器连接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "排清过那一次切割与旋转段的拆留步骤，并照着施工过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "全为真实过去，Hex一个分位而非四分之一；不按做对几题或能否心算形状推智力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C09.HEXAGONAL.V1"
+        },
+        {
+          "text": "只回想Hex起步也可答：哪项确实发生过？",
+          "scene": "回看六个位置怎样变化的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过切前加一台旋转器会改变哪三个分片，只加一台并核对过两股实物",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "排过那次留矿口和两股出口的施工步骤，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时六分片与起步工具说明，回来真实接过自己的带",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "亲手改过一段已有短带的可行转弯，看过那次布局",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "全为真实过去，Hex一个分位而非四分之一；不按做对几题或能否心算形状推智力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C09.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想Classic中你真正用过普通列车、颜色路由与装卸站的一段运输。哪项已发生过程更像？",
+          "scene": "回看一段列车运输",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_TRAIN",
+            "SH28C_UI",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把两端生产、连续站件装卸、运输与下游用料维持过几轮，并跟缓冲调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "排过那次挪装卸件与接下游的施工步骤，并真正执行过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时已解锁颜色与站连接说明，回来实际改过自己的线路",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先解释过列车走向与某处分岔颜色配置的关系，只改一处并看下一趟核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真实过去，不考列车最快路线或装载数字；未用车有完整无车回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C10.CLASSIC.V1"
+        },
+        {
+          "text": "没有列车经历：只回顾最早一次平台带路，哪项确实发生过？",
+          "scene": "回看一段列车运输的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过一只接收件是否对到了自己需要的出口，只改该件并看实物核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "排过那次保留矿带和接回入口的施工顺序，并执行过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把已有短带换过一次可行弯路，亲手看过那一轮布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "为练熟放置，重复搭过同一种已会的短带与端口连接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真实过去，不考列车最快路线或装载数字；未用车有完整无车回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C10.CLASSIC.ALT1"
+        },
+        {
+          "text": "回想Manufacture中你真正用过Donation或ResearchStation的一段；只按确实已开放的工具和输入回答。哪种过程发生过？",
+          "scene": "回看科研支路的投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_MAN",
+            "SH28C_MANPLAY",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过新研究支路是否分走主链要的前级，只暂断一处输入后核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较过当时可做研究交付图形或交易配方的实际材料条件，再决定那次采用哪项",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时研究站的输入与输出说明，随后回来真实接过自己的线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "把前级、主链、研究形状加工与站内需求维持过多轮，随两边缺料调整过",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "过去投入不强g；只消耗、输出与当时确有工具为准，不采指示灯/火箭百分比猜测。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C10.MANUFACTURE.V1"
+        },
+        {
+          "text": "没用过研究站：只回顾最早一次交付入口连接，哪种真做过？",
+          "scene": "回看科研支路的投入的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清过那次回收断头带和接回入口的施工步骤，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "为练熟工具，反复做过同一种已会的短带转弯与端口连接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "亲手挪过一次已有短带，看过另一种能通的布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对过最初供料与入口说明，回来实际铺过自己的带",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "过去投入不强g；只消耗、输出与当时确有工具为准，不采指示灯/火箭百分比猜测。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C10.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "回想Hex里你已用过普通形状涂色、Pins与Stacker的一段；未体验这些加工可换起步工具情境。哪种已发生投入更像？",
+          "scene": "回看普通颜色与支撑",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_PAINT",
+            "SH28C_PIN",
+            "SH28C_STACK",
+            "SH28C_HEX",
+            "SH28C_ROT",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把普通图形、颜色流体、支撑加工与目标交付维持过几轮，并随缺料调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "实际把切割旋转后的互补三分片在Stacker跑过，看过组合怎样形成所需单层",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先核对过当时已解锁工具的具体限制，随后回来试过自己的样品",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先对顶层颜色或分片掉落提出过解释，只改一股供液或一种支撑条件后看实物核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "四项真实过去，普通颜色与支撑不强加水晶经验；未用这些后续工具有起步回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C10.HEXAGONAL.V1"
+        },
+        {
+          "text": "只用过起步旋转切割：哪项真实发生过？",
+          "scene": "回看普通颜色与支撑的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为练熟自己的放置，重复接过同一种已会的Cutter双出口",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "排清过那一次保留旋转器与接回入口的施工步骤，并实施过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时起步样品与工具说明，再回来动手过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜过一格带方向让物料停住，只转该格并看真实流动核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "四项真实过去，普通颜色与支撑不强加水晶经验；未用这些后续工具有起步回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C10.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想Classic里你确实让PinPusher与Stacker配合，并处理过普通分片层位的一段；未用过这些工具可换最早矿带。哪种已发生投入更有分量？",
+          "scene": "回看支撑与水晶的实物结果",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_PIN",
+            "SH28C_SHAPE",
+            "SH28C_STACK",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对过当时水晶或Pins说明，随后回来试过自己的真实样品",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "排过那次保留原线与分出测试支路的施工步骤，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "让PinPusher处理过的半片与底座在Stacker实际配合过，查看过支撑怎样保住所需层位",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先对水晶碎裂或普通分片掉落提出过解释，只改一种支撑条件后看产物核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真实过去，b须实际互补运行；未解锁相关工具者不靠猜规则作答。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C11.CLASSIC.V1"
+        },
+        {
+          "text": "从没用过Pins或水晶：回想最早矿带一处停顿，哪项真做过？",
+          "scene": "回看支撑与水晶的实物结果的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清过那一次回收旧带与接回出口的施工先后，并执行过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "核对过当时基础带说明，回来真实处理过那一段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜过一格朝向影响物料去向，只改这一格并核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在旁边反复搭过同一种已会的短带弯，专门练熟自己放置",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真实过去，b须实际互补运行；未解锁相关工具者不靠猜规则作答。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C11.CLASSIC.ALT1"
+        },
+        {
+          "text": "回想Manufacture里一座真正已转换出货的站。哪项已发生过程更有分量？",
+          "scene": "回看Refined与普通输入的配合",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_MAN",
+            "SH28C_TRADE",
+            "SH28C_SHAPE"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较过当时已开放的两种交易输入输出变体，再决定那一次采用哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "排清过那次保留旧级、在已有站之间放普通加工机器与接后级的施工顺序，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "实际把它要求的Refined和普通加工形状一起供给过，看过两类输入配合产生后级产物",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先解释过没接收是否因为某一股Refined变体不符，只替换这一股为匹配品后看真实接收与产物核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真实过去；b需这座站当时确要两类输入且实际运行，p只替换一股真实变体看反馈，不依赖未核定的交易朝向失败条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C11.MANUFACTURE.V1"
+        },
+        {
+          "text": "还没多类Refined输入：只回想最早的带与交付入口，哪项确实发生过？",
+          "scene": "回看Refined与普通输入的配合的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过一种已会的端口短带连接，重心是让自己用熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "核对过当时基础工具说明，再回来真实改接过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜过某格方向造成停住，只转这一格并核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "排清过那次保留供料端与接新末端的施工步骤，并执行过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "真实过去；b需这座站当时确要两类输入且实际运行，p只替换一股真实变体看反馈，不依赖未核定的交易朝向失败条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C11.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "回想Hex里你已能用逆向旋转，也真正用过形状信号Filter的新支路；没有这些经历可换起步连接。哪种已发生过程更有分量？",
+          "scene": "回看自定限制或信号筛选",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_HEX",
+            "SH28C_SHAPE",
+            "SH28C_UI",
+            "SH28C_ROT",
+            "SH28C_FLOW"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过筛错是否因常量形状信号差一个分位，只改其朝向并核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "排过那一次保留混合来源与接两股输出的施工顺序，并真实执行过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "当时逆向旋转本能用，仍给新支路新增过禁用它的规则，实际只用顺向链尝试过调整到后续切割所需朝向",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "把匹配六分片朝向的信号接入过Filter，和真实混合带一起跑过，看过组合筛分效果",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "真实过去；只有实际额外禁用原可用机制并真正尝试才i，不要求最终达到目标，普通换顺序或换带路0。b为信号与筛选实用组合，ALT未解锁不能凭空设逆向禁令，整题可换。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C11.HEXAGONAL.V1"
+        },
+        {
+          "text": "没有逆向工具或线层经历：只回想最早一段六分片连接，哪项真做过？",
+          "scene": "回看自定限制或信号筛选的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排过那次留输入与接回输出的施工步骤，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "核对过当时起步Rotator说明，随后回来用过自己的样品",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "亲手换过一处已有短带位置，观察过当时能通的另一种布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先猜过样品经过一台旋转器后缺口位置，实际接过一台并核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "真实过去；只有实际额外禁用原可用机制并真正尝试才i，不要求最终达到目标，普通换顺序或换带路0。b为信号与筛选实用组合，ALT未解锁不能凭空设逆向禁令，整题可换。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C11.HEXAGONAL.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SH28C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次你有精神、工厂能交付且仍可推进新目标的Classic游玩。哪项已发生过程更贴近？",
+          "scene": "回看在Classic留下的编辑",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_BP",
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手改过一段现有模块的位置或朝向，看过那一轮布局变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "仍把视野留在熟悉模块与物料流，享受认得的从容过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看过当时没亲自查看的形状小行星，想发现它的结构",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把自己当时满足保存条件的模块存入过本机蓝图库，保留那次编辑",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "全为过去；保存不是收藏，普通改位不是审美主题或发明。h须主动正向熟悉体验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C12.CLASSIC.V1"
+        },
+        {
+          "text": "只玩过Classic最早开采也可回顾：当时你有精神、已有空地和工具能继续铺线。哪项真实发生过？",
+          "scene": "回看在Classic留下的编辑的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "classic"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手把已有短带换过一个能通的弯，看过那次布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "仍看过熟悉矿口向Vortex送形状，喜欢认得的物料流",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "把视野移向过当时未亲自查看的地图，想发现资源图形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "排清过那一次接入口和保留矿带的施工顺序，并真实做过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "全为过去；保存不是收藏，普通改位不是审美主题或发明。h须主动正向熟悉体验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C12.CLASSIC.ALT1"
+        },
+        {
+          "text": "回想一次你有精神、现有转换能继续工作且有容量和工具推进新项目的Manufacture游玩。哪项真实发生过？",
+          "scene": "回看Manufacture中的熟悉设计",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_MAN",
+            "SH28C_UI",
+            "SH28C_BP",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手调整过一段已有太空带或接收件的位置，看过那轮布局变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "仍看熟悉前后级一轮轮供给，享受这套认识的转换过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看过当时没亲自查看的形状小行星，想亲眼发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把自己当时满足条件的一组站间普通加工与输送模块存入过本机蓝图库，保留编辑",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "真实过去，保存与改位0分；不把持续工厂这类游戏本身当所有人都是y/g。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C12.MANUFACTURE.V1"
+        },
+        {
+          "text": "只在最早供料处活动也可回顾：当时你有精神、已有工具与空地能继续接到第一入口。哪项确实发生过？",
+          "scene": "回看Manufacture中的熟悉设计的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_MAN",
+            "SH28C_MANPLAY",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "manufacture"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手改过已有短带的一次可行转弯，看过那次布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "仍看过熟悉供料进入最早入口，喜欢认识的从容过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "把视野移到过一片当时没亲自查看的地图，想发现资源图形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "排清过那一次保留供料与接入口的施工顺序，并照着做过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "真实过去，保存与改位0分；不把持续工厂这类游戏本身当所有人都是y/g。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C12.MANUFACTURE.ALT1"
+        },
+        {
+          "text": "回想一次你有精神、Hex工厂能继续交付且还有容量和工具推进目标的游玩。哪项已发生的过程更贴近？",
+          "scene": "回看属于自己的Hex停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_HEX",
+            "SH28C_PAINT",
+            "SH28C_BP",
+            "SH28C_UI",
+            "SH28C_ROT",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把自己当时满足保存条件的模块存入过本机蓝图库，保留那次编辑",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "B",
+              "label": "仍看熟悉的六分片旋转加工，享受认得的物料流与从容过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看过当时尚未亲自查看的形状小行星，想发现它的结构",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "实际做过任务外自选配色和六分片拼法的主题徽记，让产物有自己的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真实过去；主题表达a需目标外自选作品，保存0分。无TradeStation、不要求付费轨道或皮肤。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C12.HEXAGONAL.V1"
+        },
+        {
+          "text": "只玩过Hex起步也可回顾：当时你有精神、已有空间和工具继续接线。哪项确实发生过？",
+          "scene": "回看属于自己的Hex停留的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH28C_STORE",
+            "SH28C_UI",
+            "SH28C_CODEX",
+            "SH28C_HEX",
+            "SH28C_CUT",
+            "SH28C_ROT",
+            "SH28C_MAP"
+          ],
+          "modes": [
+            "hexagonal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清过那一次保留两股出口与接回入口的施工步骤，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍看过熟悉样品经过旋转器和切割器，喜欢这套认得的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "移动视野看过当时未亲自查看的地图，想发现资源形状",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "亲手改过一处现有短带或起步机器位置，看过那次可行布局",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "真实过去；主题表达a需目标外自选作品，保存0分。无TradeStation、不要求付费轨道或皮肤。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH28C12.HEXAGONAL.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+9df30bd7da18"
+}

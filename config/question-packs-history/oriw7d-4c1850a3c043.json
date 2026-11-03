@@ -1,0 +1,953 @@
+{
+  "id": "oriw7d",
+  "title": "奥日与萤火意志",
+  "game_ids": [
+    "steam-1057090"
+  ],
+  "scope": "PC本体：Niwen探索、已开放武器与碎片、非强制试炼",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "本体单人路径；不把异步试炼幽灵、Moki或其他NPC当真人社交。",
+    "能力、碎片、神殿、清水和林地建设分别给出前提；每槽有较早实玩替代。不混用前作灵魂链接存档。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC本体：Niwen探索、已开放武器与碎片、非强制试炼",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "ORIW7D01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "已到泉源林地，Grom当前有能接续做的已开放项目，矿石够先做一项，也知道后续可取矿石处；Opher有未买能力，精灵之光够买一项。先投入什么？",
+          "scene": "泉源林地里的几个去向",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_PATCH",
+            "WISP7D_LAUNCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按矿石余量分配接续建设，先交一项，再去已知可取矿石处补下一项缺口、返回继续交付，让家园项目接上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "听附近已能交谈的Moki说完自己的近况，追上他们在森林里的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "走进林地边缘一条还没看过、当前能进入的小路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把足够的精灵之光交给Opher，永久学会自己选的一项新能力",
+              "signal": "purchase_available_upgrade"
+            }
+          ],
+          "design_purpose": "01普通向Opher购入动作只计purchase_available_upgrade，不因永久可用就推持续培养；Grom矿石分配-补缺-交付接续y与早期独立替代保留。",
+          "interpretation_boundary": "建设选项须同时有资源和前提；不根据是否够矿石或去过林地推断人格。",
+          "id": "ORIW7D01.V1"
+        },
+        {
+          "text": "还没有到泉源林地：奥日已经拿到精灵之刃，眼前有可进入而未走过的小岔道、能交谈的Moki，以及一枚可达而未取的补强。先做什么？",
+          "scene": "泉源林地里的几个去向的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_PATCH",
+            "WISP7D_LAUNCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接起眼前跑跳与挥刃，体验它们连起来的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "和Moki说话，想弄清它在这场森林变故里的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "进入那条小岔道，看河岸另一侧是什么地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "去把那枚尚未拿到的生命或能量补强收入进度",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "01普通向Opher购入动作只计purchase_available_upgrade，不因永久可用就推持续培养；Grom矿石分配-补缺-交付接续y与早期独立替代保留。",
+          "interpretation_boundary": "建设选项须同时有资源和前提；不根据是否够矿石或去过林地推断人格。",
+          "id": "ORIW7D01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前已有精灵之刃与精灵弧，也持有加快弓射速和分裂弓矢的两枚碎片，槽位够同时装；眼前有能自由试的小敌人和一枚现有动作可取的缺失补强。先做什么？",
+          "scene": "武器与碎片的实际组合",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_LAUNCH",
+            "WISP7D_WALK",
+            "WISP7D_SHARDS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选精灵之刃的一段出手与回避时机，亲手重复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "去把那枚仍未收入进度的补强真正拿到",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "接着用眼前可用的武器打下去，享受挥动、命中与声音的连贯反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "同时装上这两枚已持碎片，让更快射击接上分裂弓矢，亲手比较两种作用一起发挥的变化",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "02b不再仅泛称碎片配武器，明确已持快射与分裂弓矢、槽位够且实际同时装备验证。早期i只禁站地挥刃，有真实攻击窗口约束，不加无意义移步。",
+          "interpretation_boundary": "基础精灵之刃替代不要求商店武器、碎片槽扩充或战斗神殿。",
+          "id": "ORIW7D02.V1"
+        },
+        {
+          "text": "没有配过碎片：你已经拿到精灵之刃，当前有可自由尝试的普通小敌人和站稳的地面。先怎样玩？",
+          "scene": "武器与碎片的实际组合的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_LAUNCH",
+            "WISP7D_WALK",
+            "WISP7D_SHARDS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一个出手接回避的时机，亲手重复练到更顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "在这一小段禁用站地挥刃，只许自己离地后攻击，亲自按这条限制打一次",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "接连跑跳和挥动精灵之刃，享受动作与音效的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "换几处距离试挥刃，确认它的范围与敌人被击退的反应",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "02b不再仅泛称碎片配武器，明确已持快射与分裂弓矢、槽位够且实际同时装备验证。早期i只禁站地挥刃，有真实攻击窗口约束，不加无意义移步。",
+          "interpretation_boundary": "基础精灵之刃替代不要求商店武器、碎片槽扩充或战斗神殿。",
+          "id": "ORIW7D02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "这条精灵试炼已经开放，所需弹射与冲刺都已会，赛道也走过，当前能自由再试。下一趟先以什么为重点？",
+          "scene": "已开放精灵试炼的起点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_TRIAL",
+            "WISP7D_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较两个已可行的转接方向，弄清它们为什么会把奥日送到不同落点",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "让跳、弹射与冲刺接成连续动作，享受一口气跑过的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "对准自己明确想超过的一次记录，实际跑一趟看用时结果",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "选其中一个弹射接落点的细节，亲手反复练这一处",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "03精灵试炼为本作真实计时纪录；主补所用能力已会。早期普通沼泽没有正式结算，个人计时目标改平台落脚计划0分。",
+          "interpretation_boundary": "个人自记计时不声称内置赛道或榜单；不按快慢、名次或死亡数推断能力。",
+          "id": "ORIW7D03.V1"
+        },
+        {
+          "text": "还没有玩过精灵试炼：在自己已经熟悉、可以自由往返的沼泽短路，已有普通跳跃与精灵之刃。先怎样再走一趟？",
+          "scene": "已开放精灵试炼的起点的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_TRIAL",
+            "WISP7D_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照墙面与高台，验证现在的跳跃究竟能接到哪里",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把跑跳和挥刃连起来，享受眼前操作的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先排清这段普通起跳、转向与落脚的顺序，再亲手照安排走一遍",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "D",
+              "label": "选一处平台落点，实际重复练自己的起跳位置",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "03精灵试炼为本作真实计时纪录；主补所用能力已会。早期普通沼泽没有正式结算，个人计时目标改平台落脚计划0分。",
+          "interpretation_boundary": "个人自记计时不声称内置赛道或榜单；不按快慢、名次或死亡数推断能力。",
+          "id": "ORIW7D03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "泉源的水已经恢复，奥日此刻不在限时逃生中；已到过的河岸旁有能游入的陌生水路，也有一枚凭现有能力可取而未拿的补强。先去做什么？",
+          "scene": "净水之后的回访",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力也能去新区域，仍先沿熟悉清水河岸游一段，因为回到这里的感觉安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "游进此前没看过的水路，看看水下怎样通向别处",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "去拿那枚明确仍缺的生命或能量补强",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "回到已经能交谈的Moki身边，继续它先前提到的家人与去处",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "04清水恢复后才游泳；未恢复者仅陆地。h有精力与新路，c是真实未拿可取补强，NPC仅故事。",
+          "interpretation_boundary": "早期替代不进入未净化的危险水；NPC体验不计真人社交。",
+          "id": "ORIW7D04.V1"
+        },
+        {
+          "text": "还没有恢复泉源清水：早期沼泽已有能站稳往返的陆地，眼前有可进入的未知岔道、可取而未取的补强和能交谈的Moki。先做什么？",
+          "scene": "净水之后的回访的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "精力和新路都可用，却先在熟悉的岸边陆路走一段，喜欢那种安稳的氛围",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "沿那条没走过的陆路看看藤蔓另一侧的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "把那枚仍缺的补强真正拿到手",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "和Moki说话，继续听它怎样看待这次森林变化",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "04清水恢复后才游泳；未恢复者仅陆地。h有精力与新路，c是真实未拿可取补强，NPC仅故事。",
+          "interpretation_boundary": "早期替代不进入未净化的危险水；NPC体验不计真人社交。",
+          "id": "ORIW7D04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "自己已经在以物易物中拿到背包，接收它的Moki所在地方也已到过且能再到达；另一条未看过的可达支路还在眼前。现在先做什么？",
+          "scene": "以物易物与下一趟路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_TRADE",
+            "WISP7D_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去把背包交给那位Moki，听它的需要怎样和上一个交换者接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先绕进那条尚未去过的支路，看看它会打开怎样的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照已开的精灵之井和交换地点，把交付、补给与下一次往返接成一趟路线后出发",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "暂不继续交换，选路边一处熟悉落点，实际练自己跳跃的衔接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "05以物易物背包是实际当前交付目标；一次往返顺路不持续运营，y降mission_preparation_plan保原行动。早期NPC/平台替代独立。",
+          "interpretation_boundary": "实际运输安排与练习日程不同；不要求玩家知道下一位NPC的固定坐标。",
+          "id": "ORIW7D05.V1"
+        },
+        {
+          "text": "没有做过以物易物：眼前一位能交谈的Moki、未看过的可达侧路和可以自由尝试的平台都在附近。现在先做什么？",
+          "scene": "以物易物与下一趟路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_TRADE",
+            "WISP7D_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先和Moki说话，想知道它在眼前处境里经历了什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "进入没看过的侧路，看看这片森林另一面的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照平台和墙面，亲手试清现在的移动动作能到哪里",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在同一处落点重复跳几次，练自己的起跳与收方向",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "05以物易物背包是实际当前交付目标；一次往返顺路不持续运营，y降mission_preparation_plan保原行动。早期NPC/平台替代独立。",
+          "interpretation_boundary": "实际运输安排与练习日程不同；不要求玩家知道下一位NPC的固定坐标。",
+          "id": "ORIW7D05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "已会抓钩和弹射，眼前目标与落点都曾到达，也确认这些目标能不经落地连续接上；当前没有限时追逐。先怎样再过这一小段？",
+          "scene": "抓钩与弹射已经接得上的短段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_ACHIEVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一处抓钩后接弹射的落点，亲手反复练衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让牵引、弹射与空中移动连续发生，享受操作节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "给这段新增途中不许落地的限制，在已确认能相接的目标之间实际玩一遍",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "分别靠近可抓取点和可弹射目标，验证两种动作各认什么目标",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "06抓钩与弹射的认可目标确有区别，空中不落地约束需先确认可相接；早期高台落下才攻击有实际窗口限制，补平台普通跳跃可往返。",
+          "interpretation_boundary": "主情境明确已学两能力；早期替代不要求抓钩、弹射、冲刺或任何付费内容。",
+          "id": "ORIW7D06.V1"
+        },
+        {
+          "text": "只会精灵之刃和普通跳跃：眼前高低平台仅靠跳跃就能反复上下，近处有能自由尝试的小敌人。先怎样过这段？",
+          "scene": "抓钩与弹射已经接得上的短段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_ACHIEVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一个从平台落下接挥刃的时机，亲手重复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "接着跑、跳、挥刃，享受声音与命中一起连续发生",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "规定这一段只有从高台落下时才许攻击，照自己新增的限制打一次",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "比较高低差下挥刃是否能碰到目标，弄清动作范围",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "06抓钩与弹射的认可目标确有区别，空中不落地约束需先确认可相接；早期高台落下才攻击有实际窗口限制，补平台普通跳跃可往返。",
+          "interpretation_boundary": "主情境明确已学两能力；早期替代不要求抓钩、弹射、冲刺或任何付费内容。",
+          "id": "ORIW7D06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "已回泉源林地，矿石够交Grom一项已开放建设，也知道后续可取矿石处；另有能交Tuley的已获种子和够买Opher一项已开放能力的精灵之光。先投入什么？",
+          "scene": "已有矿石、种子和能力货币",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_PATCH",
+            "WISP7D_GLADES",
+            "WISP7D_PROJECTS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先与能交流的Moki继续它的经历，想知道家园变化对它意味着什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把已经取得的种子交给Tuley，亲眼看林地添上这一次可保留的生长变化",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "按已开项目分配矿石先交一项，再去已知可达矿石处补下一项缺口、返回继续交付，把建设接续起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "把精灵之光投入自己想常用的一项武器能力，让它在后面的冒险里持续可用",
+              "signal": "purchase_available_upgrade"
+            }
+          ],
+          "design_purpose": "07Tuley已得种子造成家园可保留生长变化g有实玩证据；Opher普通购入一项动作只计purchase_available_upgrade，不能只凭永久可用推持续培养；Grom跨次矿石建设y仍需实际补缺交付。",
+          "interpretation_boundary": "两个成长选项保留不同对象，不声称每题四种人格互斥；没有种子或建设经验可换早期场景。",
+          "id": "ORIW7D07.V1"
+        },
+        {
+          "text": "还没遇到林地里的这些角色：早期沼泽已有可取而未取的补强、能交谈的Moki和未走过的陆地支路。你先做什么？",
+          "scene": "已有矿石、种子和能力货币的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_PATCH",
+            "WISP7D_GLADES",
+            "WISP7D_PROJECTS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "听Moki说完自己的处境，追上刚展开的人物经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "进入未去过的陆地支路，看看它通向哪个地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "去取那枚未收入进度的补强，补上眼前明确的缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "在一处可反复经过的平台练同一个起跳时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "07Tuley已得种子造成家园可保留生长变化g有实玩证据；Opher普通购入一项动作只计purchase_available_upgrade，不能只凭永久可用推持续培养；Grom跨次矿石建设y仍需实际补缺交付。",
+          "interpretation_boundary": "两个成长选项保留不同对象，不声称每题四种人格互斥；没有种子或建设经验可换早期场景。",
+          "id": "ORIW7D07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "尚未完成的战斗神殿已开放，状态够尝试；你已有增攻击但增受伤与减受伤两枚碎片，槽位够同时装。旁边有未走可达路，神殿外也有小敌人可练，先做什么？",
+          "scene": "战斗神殿前的自由选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_LAUNCH",
+            "WISP7D_SHARDS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走那条没看过的旁路，探索这片区域另一面的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "进入神殿，把扩充可用碎片槽这项永久变化争取下来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把这两枚已持碎片一起配进当前武器方案，亲手检验攻击增益与减受伤效果怎样互相补上",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "到神殿外可自由交手处，选一拍挥刃或躲避时机亲手练习",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "神殿已开放未完成且状态可试，扩槽为长期g；b为已持攻增/受伤风险与减受伤两碎片、槽位够且实际检验互补。神殿外小敌人与未知路明确存在，早期未拿补强可达。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D08.V1"
+        },
+        {
+          "text": "还没见过战斗神殿：刚能用精灵之刃，前面有可达平台、小敌人和未去洞口，近处也看得见一枚当前可取而未拿的补强。先做什么？",
+          "scene": "战斗神殿前的自由选择的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_LAUNCH",
+            "WISP7D_SHARDS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入从未看过的洞口，看看里面通向何处",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "到近处拿一枚看得见、还未收入进度的生命或能量补强",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "在小敌人处换几次出手距离，验证精灵之刃的范围",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "固定一拍挥刃后离开的时机，亲手重复练习",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "神殿已开放未完成且状态可试，扩槽为长期g；b为已持攻增/受伤风险与减受伤两碎片、槽位够且实际检验互补。神殿外小敌人与未知路明确存在，早期未拿补强可达。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想自己确实在Niwen用过弹射、抓钩、冲刺或已会的其他移动技能的一段经历。哪件实际做过的事最有分量？",
+          "scene": "真正留在身体里的移动",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WISP7D_LAUNCH",
+            "WISP7D_WALK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选其中一处转接落点，亲手重复练过同一个动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用当时已经会的能力进入了此前没见过的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照不同目标的响应，实际弄清一种能力为什么会在那里生效",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把自己的动作连续接出来，当时就享受流动与音效",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "09真实过去按已学能力回顾，不把抓钩、弹射、冲刺同时强制给早期者。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D09.V1"
+        },
+        {
+          "text": "如果只玩过开场：回想已经拿到精灵之刃之后，在沼泽地面与平台间的一段实玩。哪件确实发生过？",
+          "scene": "真正留在身体里的移动的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WISP7D_LAUNCH",
+            "WISP7D_WALK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过同一处普通跳跃或落地后挥刃的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "绕进一条此前没有看过、当时就能进入的小道",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "比较不同距离下的挥刃反应，实际试清了攻击范围",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "让跑跳与挥刃接连发生，当时就享受操作本身",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "09真实过去按已学能力回顾，不把抓钩、弹射、冲刺同时强制给早期者。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一次确实拥有可更换碎片、也已经能购买或升级能力的经历。哪件当时真正做过的事最吸引你？",
+          "scene": "自己留住的配装与成长",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WISP7D_LAUNCH",
+            "WISP7D_PATCH",
+            "WISP7D_TRIAL",
+            "WISP7D_SHARDS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把精灵之光投入已经开放的能力或碎片升级，留下长期增强",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "为了补齐尚缺的一枚碎片，回到它能取得的地方真正拿到了它",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "挑常用武器的一处衔接细节，实际反复练过自己的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己配过已持的增攻击但增受伤碎片与减受伤碎片，带进实际交手检验过增益与风险怎样互补",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "10b具体为实际装备检验的攻防碎片互补，不靠互补字样；早期无碎片/商店有刃、补强、练习与范围验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D10.V1"
+        },
+        {
+          "text": "没有买过能力或换过碎片：回想精灵之刃刚能使用时的一段实玩，哪件自己确实做过？",
+          "scene": "自己留住的配装与成长的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WISP7D_LAUNCH",
+            "WISP7D_PATCH",
+            "WISP7D_TRIAL",
+            "WISP7D_SHARDS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着跑跳挥刃，当时就享受操作和声音连起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "绕入可到达的旁边凹室，取到了原先还缺的生命或能量补强",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "固定一处起跳或出手时机，亲手重复练到更顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "比较挥刃距离与敌人的反应，亲手验证了它的作用范围",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "10b具体为实际装备检验的攻防碎片互补，不靠互补字样；早期无碎片/商店有刃、补强、练习与范围验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想已会抓钩与弹射后，自己确实玩过泉源附近一条已开放精灵试炼，也走过周围可自由重试的短路。哪种真正实行过的投入最有分量？",
+          "scene": "记录、限制与继续玩下去",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WISP7D_TRIAL",
+            "WISP7D_ACHIEVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "针对其中一个转接点重复练过自己的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己有精力也能进新区域，却先沿熟悉河岸走了一段，喜欢那种安稳感",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己在已开放精灵试炼中定过要超过的游戏内用时纪录，完整跑过后确实对照了记录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "自己在已确认能空中连通的抓钩与弹射短段禁用过落地中转，只借这些目标实际接到终点",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "11主k限实际已开放试炼的游戏内纪录，i为能空中相接后实际禁落地；早期普通熟路个人计时降平台安排0分，保持真过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D11.V1"
+        },
+        {
+          "text": "只熟悉早期沼泽：回想自己用精灵之刃对付过普通小敌人、也能靠普通跳跃往返高低平台的一段。哪件实际做过？",
+          "scene": "记录、限制与继续玩下去的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WISP7D_TRIAL",
+            "WISP7D_ACHIEVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑同一块平台的落点，亲手重复练自己的起跳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "当时精力和新路都在，仍先在熟悉陆路走了一段，因为那种氛围让自己安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己先排过普通跳跃、转向与落脚的顺序，随后亲手照安排走过这段",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "D",
+              "label": "规定只有从指定平台落下时才许挥刃，照新限制打过一段",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "11主k限实际已开放试炼的游戏内纪录，i为能空中相接后实际禁落地；早期普通熟路个人计时降平台安排0分，保持真过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ORIW7D12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次确实能回到泉源林地、当时也还有精力去别处的经历。哪件真做过的事最能代表自己的投入？",
+          "scene": "为什么回到泉源林地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_TRADE",
+            "WISP7D_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己当时在熟悉林地里慢走过一段，喜欢那种回到家的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "自己继续听过Moki的近况，把家园变化与它们前后讲过的经历联系起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己按已开项目分配过矿石先后，去已知可达矿石处补过缺口，再返回交付过下一项，让家园建设实际接续",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "自己为补一个当时尚未有、也确实可取得的碎片或补强回去取得过它，记录少了明确缺口",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "四项均已发生；y为按已开项目分矿、去已知可达矿石处补缺再返回交付，不假定每次建设新开矿路。h积极熟悉停留，s实际听过故事，c实际取得缺失物；早期无林地前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D12.V1"
+        },
+        {
+          "text": "还没到过泉源林地：回想早期沼泽里自己实际玩过的一段，哪件确实发生过？",
+          "scene": "为什么回到泉源林地的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WISP7D_WALK",
+            "WISP7D_TRADE",
+            "WISP7D_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力继续新路，却先走熟悉的岸边陆路，因为在那里很安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "听Moki说过自己的处境，继续沿故事想知道这片森林怎么了",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "观察眼前墙面与平台，实际试清当时的跳跃能到哪里",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "回去取到了原先看见却还没有收入进度的一枚补强",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "四项均已发生；y为按已开项目分矿、去已知可达矿石处补缺再返回交付，不假定每次建设新开矿路。h积极熟悉停留，s实际听过故事，c实际取得缺失物；早期无林地前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ORIW7D12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+4c1850a3c043"
+}

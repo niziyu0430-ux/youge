@@ -1,0 +1,969 @@
+{
+  "id": "portia09g",
+  "title": "波西亚时光：工坊、旧物与城门外",
+  "game_ids": [
+    "steam-666140"
+  ],
+  "scope": "已发布PC本体的单人工坊生活；不混Sandrock、不要求DLC。只用当前工作台等级、已学图纸、工具、入场权限和实际材料。12槽各有更早或未体验替代。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "Portia原作单人，不混Sandrock的多人和回收器；商会NPC任务与排名不作为真人协作证据。",
+    "石炉烧木，手工装配需要选成品部件；扫描器PC开着不能挖且自身不耗体力。所有遗迹先有当前有效入场权限。",
+    "磁盘研究须等待寄图纸且下一张不保证指定；g须同工坊已有投入后持续，点虚拟技能或研究本身不是本人技术练习。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "已发布PC本体的单人工坊生活；不混Sandrock、不要求DLC。只用当前工作台等级、已学图纸、工具、入场权限和实际材料。12槽各有更早或未体验替代。",
+      "initial_variants": {
+        "PORTIA09G01": "PORTIA09G01.V1",
+        "PORTIA09G02": "PORTIA09G02.V1",
+        "PORTIA09G03": "PORTIA09G03.V1",
+        "PORTIA09G04": "PORTIA09G04.V1",
+        "PORTIA09G05": "PORTIA09G05.V1",
+        "PORTIA09G06": "PORTIA09G06.V1",
+        "PORTIA09G07": "PORTIA09G07.V1",
+        "PORTIA09G08": "PORTIA09G08.V1",
+        "PORTIA09G09": "PORTIA09G09.V1",
+        "PORTIA09G10": "PORTIA09G10.V1",
+        "PORTIA09G11": "PORTIA09G11.V1",
+        "PORTIA09G12": "PORTIA09G12.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "PORTIA09G01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "今天还没接随机日常委托；商会当前有两张自己已会做、现有材料也够的单子，期限都来得及，工坊石炉仍在跑。你先怎样处理？",
+          "scene": "商会里一张能做的委托",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_COM",
+            "PORT9G_PLAYER",
+            "PORT9G_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核两张单子的交付件数、截止期和去向，再决定今天是否接其中一张",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "挑一张当前可做的单子，实际接下并制作交付，把这次已列目标推进完",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "把之后几轮熔锭、烧木与装配用料一起看，持续调整生产队列和木材留量后再接",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先离开单子，去镇上自己还没走到、当时已开放的街巷看看",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "随机委托只接当前允许一项；完成单人NPC任务0；y是多轮相互依赖生产，普通接单步骤不y；未知街巷才w。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G01.V1"
+        },
+        {
+          "text": "还没形成日常委托习惯，工作台和装配台都在，当前有建石炉的起步目标、材料也够。先怎样做？",
+          "scene": "尚未接日常委托的第一座石炉",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_COM",
+            "PORT9G_PLAYER",
+            "PORT9G_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看手册里这座石炉所要的部件，再回台边尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "把已有材料放进热键栏，按这次先做部件、再逐件装上的顺序亲手完成",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "直接照当前已列石炉目标做出并收起这件成品，推进这次目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先走到自己没进过但已开放的商会或广场，认识镇上的新地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "随机委托只接当前允许一项；完成单人NPC任务0；y是多轮相互依赖生产，普通接单步骤不y；未知街巷才w。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "石炉当前在做铜锭，另有足够木材、铜矿，旁边两只现有箱子也有空格；木材也会用于接下来的家具。最近几轮木料比预想少，眼下仍够用。先做什么？",
+          "scene": "石炉旁的燃料和下一批铜矿",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_PLAYER",
+            "PORT9G_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按后面几轮熔锭、家具用木和采木补货持续调整队列与储备",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可烧的配方、木料余量和已经出现的建造需求，暂不改队列",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "把现有矿石和木料实际放进两只已可用箱子，腾出这次携带空间",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "只给现有石炉补入这批铜锭所需的可用木料，实际排好这一批生产，体验当前能做的加工",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "木料确可作石炉燃料；单批补料生产0，不把库存减少的简单计数包装为因果实验。多轮木料分流与建设消耗持续反馈才y；不含Sandrock回收。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G02.V1"
+        },
+        {
+          "text": "刚做出第一座石炉，面板当前能做铜锭和木炭，两项原料与炉用木料都够；旁边有工作台，营地已有能收存这批小材料且空格够用的储物箱。先做什么？",
+          "scene": "第一炉铜与起步箱子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_PLAYER",
+            "PORT9G_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只排一批当前可做的铜锭并补入合用木料，亲手试这项已开放生产",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先比同炉当前能做的两项配方与原料，暂不选定",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先把手头暂不用的矿料和木材实际存入现有储物箱，留下这炉要用的部分",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先核炉上已显示的配方和燃料说明，再开这炉",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "木料确可作石炉燃料；单批补料生产0，不把库存减少的简单计数包装为因果实验。多轮木料分流与建设消耗持续反馈才y；不含Sandrock回收。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "博物馆已开放；自己有一件明确还没复原过的遗物，只缺一片，当前交换板恰有那片、所求交换碎片自己也有。研究所复原机已可用，所需光盘够。镇上当前还有人物可以继续交谈。先做什么？",
+          "scene": "博物馆交换板上的最后一片",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_MUSEUM",
+            "PORT9G_RECOVER",
+            "PORT9G_PLAYER",
+            "PORT9G_SCAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先只给自己已经取得的这些旧物碎片补一份物品记录，再决定这轮是否交换",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "先去听镇上当前可交谈人物的话，想把他这次的请求与自己先前听到的经历连起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "为了补这件真实缺项，实际去交换缺片，再带齐碎片到复原机尝试复原",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先比较保留手头碎片与这次交换的材料代价，暂不成交",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "缺片追求与普通既有物品记录分开；交换NPC不是真人。当前真实挂牌、复原前置与光盘足才可用，不要求博物馆完成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G03.V1"
+        },
+        {
+          "text": "还没到博物馆，最早已付本期费用、进过第一处废弃遗迹，并挖到少量石料或碎片、走过一小段矿面；基础扫描器和镐可用，体力尚够，墙内另有未辨明亮点。先做什么？",
+          "scene": "没有博物馆时的基础扫描",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_MUSEUM",
+            "PORT9G_RECOVER",
+            "PORT9G_PLAYER",
+            "PORT9G_SCAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只换一次从另一侧挖到已锁亮点的可行进入方向，体验这条挖掘线路",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "先给自己已经挖到的石料或碎片、走过的矿面补一份经历记录，再继续这次挖掘",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "先锁定一处还不知道是什么的亮点，关掉扫描后亲自挖过去，想发现埋着什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先读现有扫描操作提示，再试锁定与切回挖掘",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "缺片追求与普通既有物品记录分开；交换NPC不是真人。当前真实挂牌、复原前置与光盘足才可用，不要求博物馆完成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "鱼竿和毛毛虫已备好，当前钓点能下竿、体力也够；这一轮没有紧迫委托。这里当前有一种本人尚未捕到的鱼可能出现，自己知道怎么钓，先把时间给什么？",
+          "scene": "河边的圆圈与收线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_FISH",
+            "PORT9G_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "精神很好也有新地点能去，仍在这处熟悉河岸钓一会儿，喜欢认得的收放节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "专练跟着鱼移动外圈和短收线的配合，想让自己的输入更稳定，不要求钓到稀有鱼",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "继续亲手跟圈、收线与松开，享受鱼靠近和张力变化紧跟操作的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "为当前钓点确实可能出现、本人却尚未捕到的一种鱼实际下竿，想补自己的鱼类缺项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "本人输入t/f与虚拟角色点技能不同；c缺项必须当前钓点有机会，无成功门槛；h不是耗尽体力后的休息。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G04.V1"
+        },
+        {
+          "text": "还没造鱼竿，工坊外有基础斧能砍的小树，体力充足，回城也有新内容可看。先做什么？",
+          "scene": "鱼竿以前的院外小树",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_FISH",
+            "PORT9G_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "明明能继续进城，仍在熟悉工坊门前采一小圈，喜欢已认得的院外节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "专练靠近树干、连续挥斧再停手的输入接续，关注自己的动作掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "亲手挥斧听每下木屑和撞击回应，想再体验这段跟手敲砍",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先读现有工具说明，核对斧能处理哪些当前树木",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "本人输入t/f与虚拟角色点技能不同；c缺项必须当前钓点有机会，无成功门槛；h不是耗尽体力后的休息。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "手工装配台上已放好一个自己已学的机器模型，所需几种部件都已做成，热键栏还能调整，当前没有自动装配；手头另有暂不用原矿，旁边有可存它的已有箱子。先怎样完成这一轮？",
+          "scene": "装配台的半透明部件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_PLAYER",
+            "PORT9G_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清把哪些现有部件放入热键栏、依次选中和装上的顺序，再照着亲手组装",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "把这台现有模型实际逐件装满并收起，试完当前这张已会的图纸",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先看模型各部位已经显示的材料名，核对手里是原料还是成品，再决定这轮先装哪件",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先把这轮暂不用的原矿收入已有箱子，留下部件与工具，再回装配台",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "手工选部件是真实操作；普通机器装配不自动b/y/f。未引Level3自动装配；四项分别排程、实做、核对、取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G05.V1"
+        },
+        {
+          "text": "只做过最早石炉；工作台可做石凳等当前初始部件，装配台手册已列需求，石木足够，旁边也有可存料的已有箱子。先做什么？",
+          "scene": "起步石炉的手工装配",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_PLAYER",
+            "PORT9G_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先对照手册需求和工作台当前配方，确认这次要先制成什么",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先做部件、选入热键栏，再亲手装到石炉模型上，按这一轮次序完成",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "只把工作台当前会做的另一种基础成品做一份，体验这项已有做法",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先把木石实际收进已有储物箱，空出本轮部件格",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "手工选部件是真实操作；普通机器装配不自动b/y/f。未引Level3自动装配；四项分别排程、实做、核对、取放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "自己已给同一工坊研究并造过几台机器；当前Petra有可继续提交的常规研究档，现有数据光盘够，尚未指定下一张必出什么图纸。另有一套齐片旧物和足够复原光盘，复原机可用；也有一项材料已够的当前工坊目标。先做什么？",
+          "scene": "等Petra下一份研究结果",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_RECOVER",
+            "PORT9G_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看Petra当前已经列出的光盘需求和研究说明，核对手头数量，再决定这次是否提交",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "先拿当前已收齐碎片和所需光盘，到已开放复原机实际复原一件已知可做旧物",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "按当前一项已列、已有材料的工坊目标，先亲手做所需部件，实际推进那次目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "接着投入这座已经营工坊的后续研究，交当前够用的一档光盘，并等图纸到手再继续扩展已有生产能力",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "继续同一已投入工坊的研究与后续实用是保留进展g，单次购入另0；当前研究需求核对用目标要求0，不将普通研究菜单当配装，也不把寄来图纸当本人练习。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G06.V1"
+        },
+        {
+          "text": "还没交过研究光盘，只有起步工作台、装配台和石炉；当前有木石、铜矿以及能储物的箱子。眼前也有已收到、这批材料足够推进的基础部件或铜锭目标。先做什么？",
+          "scene": "第一次研究以前的机台",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_RECOVER",
+            "PORT9G_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按已有起步目标做一批部件或铜锭，实际推进这次目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先排清这轮从现有箱子取料、做成品再放回余料的先后，并亲手完成这一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "把已有工具和原料实际从箱子取出或存入，调整这次携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "比较眼前已开放配方和现有材料，决定下一项做哪件",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "继续同一已投入工坊的研究与后续实用是保留进展g，单次购入另0；当前研究需求核对用目标要求0，不将普通研究菜单当配装，也不把寄来图纸当本人练习。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "当前院地上有能收起再放的储物箱、石炉和一件自己已有的装饰；留下它们都放得下，也有能正常通过的空地。机器这会儿不用赶产出。先动手怎样安排？",
+          "scene": "工坊院里的机台与家具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_PLAYER",
+            "PORT9G_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排好收起装饰、移箱子和重新放回的这一轮编辑步骤，再照序做完",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先对照当前可放物件与合法院地，看看已有外观方案再决定",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "把箱子、石炉和装饰实际排成自己想要的修造小院，留出一条符合主题的进门线",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先收起一只箱子再放到另一合法位置，亲手试这项已有摆放操作",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "玩家直接摆放是创作操作0或有主题实际呈现a，不套NPC施工；普通多机相邻不是b。仅当前确可收起对象，不移动装配台或房屋来冒充免费手搬。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G07.V1"
+        },
+        {
+          "text": "还没有院内装饰，只做出第一只储物箱；屋里或院内有合法空位，当前木料够再做一只箱，工作台也已有材料够用的石凳配方。先做什么？",
+          "scene": "只有第一只储物箱",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_PLAYER",
+            "PORT9G_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次把已有箱子挪开、腾出门口、再放下当前做得出的第二只箱的编辑步骤，并照顺序动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先看工作台当前可做的储物箱和石凳外观，再决定这次采用哪一件",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "先实际移动已有箱子到另一处合法位置，亲手看这次摆放结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "用两只当前能做的箱子排成自己想要的门边角落，实际呈现自己的小工坊样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "玩家直接摆放是创作操作0或有主题实际呈现a，不套NPC施工；普通多机相邻不是b。仅当前确可收起对象，不移动装配台或房屋来冒充免费手搬。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "当前没有紧迫交期；研究所复原机可用，自己手头有一件能复原的齐片旧物和足够光盘，镇上另有可接的制造委托与当前能聊天的人。屋里也留有能放下这件旧物的合法位置。先做什么？",
+          "scene": "修复旧物的人与镇里的故事",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_RECOVER",
+            "PORT9G_PLAYER",
+            "PORT9G_FISH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己精神和体力都好，也能继续新委托，仍在熟悉工坊院门和箱子间走一小圈，喜欢认得的院落让自己安定下来",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "按自己给角色设的“旧物修复师”身份，先复原眼前旧物并放到已有合法家居位置，再考虑新机器单子",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先听当前有新话的人说完，想把他与镇上重建的经历连起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先去当前已可达却没走过的一段城外地方，想认识新的景色与入口",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "自设旧物修复师身份实际改变先复原陈列与接普通制造单的选择才r；不因固定Builder角色、外观或查设备给r。当前齐片、光盘和合法位置明确；h有精神体力及新委托仍愿熟悉，NPC叙事s。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G08.V1"
+        },
+        {
+          "text": "还没有复原旧物，也没造鱼竿；工坊、广场和镇外草坡已经可达，自己精神充足，角色体力也足，当前能继续起步目标。先做什么？",
+          "scene": "旧物复原以前的镇门",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PORT9G_RECOVER",
+            "PORT9G_PLAYER",
+            "PORT9G_FISH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "仍回熟悉工坊门外采一小圈，因为自己喜欢刚认得的院外安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先与当前能交谈的人聊，想知道他怎样看这位新来的工坊主人",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "走进自己没去过、现在已能进入的广场一侧或城外小坡，看看那里有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核现有起步目标要交付什么、去哪儿，再决定本轮是否出门",
+              "signal": "mission_briefing_review"
+            }
+          ],
+          "design_purpose": "自设旧物修复师身份实际改变先复原陈列与接普通制造单的选择才r；不因固定Builder角色、外观或查设备给r。当前齐片、光盘和合法位置明确；h有精神体力及新委托仍愿熟悉，NPC叙事s。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想自己已经接过并处理过的单人工坊委托，不要求准时完成：哪件真做过的事更突出？",
+          "scene": "委托背后真正做过的工序",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PORT9G_COM",
+            "PORT9G_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己跟着几轮矿料、熔锭燃料与装配用料变化，持续改过机器队列和木材留量",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己只先排过那次取料、做部件与装配顺序，再亲手照着做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "自己按当时已经列出的条件制作过所需物品，或实际交付过，重点是推进那次目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "自己给已经实际经历的工坊委托报酬、用料花销和那几次收支补过记录",
+              "signal": "management_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去；多轮互相依赖才y，单次排步与单人交付0。NPC商会不计真人q或与他人竞赛k。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G09.V1"
+        },
+        {
+          "text": "只做过最早工作台和石炉目标，回想那段确实发生的事：哪项更鲜明？",
+          "scene": "第一座石炉的实际经过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PORT9G_COM",
+            "PORT9G_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先核过起步手册的材料名和图，再到台边试过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "自己排过一次从木石到部件再到石炉的亲手操作步骤，并照着做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "自己做出或装过当前要求的那件物品，实际推进过起步目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为已建石炉、箱子或工作台投入补过建设记录",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去；多轮互相依赖才y，单次排步与单人交付0。NPC商会不计真人q或与他人竞赛k。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回顾自己确实用鱼竿钓过的一段，哪件当时的选择更有分量？",
+          "scene": "钓竿或扫描器的真实尝试",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PORT9G_FISH",
+            "PORT9G_PLAYER",
+            "PORT9G_SCAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己喜欢收线、距离缩短与张力反馈直接跟手，主动又玩过几竿",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己猜过断线主要来自外圈跟丢，而非鱼种；保留同一钓点、杆和短收线方式，只改跟圈动作，实际多次比较过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己只换过一次先停收线等鱼靠近、再短收的普通次序，亲手体验过",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "自己确实为练熟跟鱼移动圆圈与收线的输入，专门重复练过；没钓成也算那次练习",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "p必须本人曾提假说且保持钓点/杆/收线方式，改变跟圈动作实测，不保证随机鱼完全相同或必有结论；不以钓到多少判能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G10.V1"
+        },
+        {
+          "text": "还没钓过鱼，只回想最早在已付费废弃遗迹使用基础扫描器的真实经历：哪件发生过？",
+          "scene": "第一处废弃遗迹的输入切换",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PORT9G_FISH",
+            "PORT9G_PLAYER",
+            "PORT9G_SCAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先核扫描说明，再进入已可达矿面试过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "自己只换过从另一侧挖向已锁亮点的可行路线，亲手走过",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "自己因为想发现埋着什么，实际挖向过当时尚未辨明的亮点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己曾专门反复练过锁定亮点、关闭扫描再挥镐的输入切换",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "p必须本人曾提假说且保持钓点/杆/收线方式，改变跟圈动作实测，不保证随机鱼完全相同或必有结论；不以钓到多少判能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想自己确实找过旧物碎片、用过复原机或去过博物馆的一段；当时相关地方已开放，哪件真实做过的事更有分量？",
+          "scene": "旧物复原与自己的馆藏打算",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PORT9G_STORE",
+            "PORT9G_SCAN",
+            "PORT9G_RECOVER",
+            "PORT9G_MUSEUM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只带齐当时已有的碎片和光盘，在复原机实际做过一件已知能复原的旧物",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己先比较过当时完整碎片可复原的两件旧物及所需光盘，再决定那次先做哪一件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "自己为博物馆当时确未捐过的一件本体旧物，特意去找仍缺的碎片，并实际尝试复原和补捐",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "自己曾自认是给波西亚保存旧时代痕迹的修复者；在可直接交普通委托时，仍先带齐碎片和光盘去复原那件可做旧物",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "旧物复原需全套碎片与光盘；c是真实未捐目标而找缺片并尝试，不要求捐成。r须自赋保存者身份导致可选先复原动作，普通复原/菜单比较0；ALT不依赖博物馆或复原机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G11.V1"
+        },
+        {
+          "text": "还没复原旧物或进博物馆，只回想最早实际进过废弃遗迹、拿到一点石料或碎片之后：哪件真发生过？",
+          "scene": "复原和博物馆以前的初次矿面",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PORT9G_STORE",
+            "PORT9G_SCAN",
+            "PORT9G_RECOVER",
+            "PORT9G_MUSEUM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己给已经取得的碎片、石料或走过的矿面补过经历记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己先看过当时已经出现的扫描和开镐提示，再回矿面实际试过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "自己为看没挖到过的矿面深处，选过当时能挖开却没见过的一小片，想知道下面是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先关掉扫描，再实际用镐挖向当时已标出的一个光点，体验过那次基础挖掘",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "旧物复原需全套碎片与光盘；c是真实未捐目标而找缺片并尝试，不要求捐成。r须自赋保存者身份导致可选先复原动作，普通复原/菜单比较0；ALT不依赖博物馆或复原机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PORTIA09G12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾自己真正玩过的波西亚，哪件已经发生的选择更值得留下？",
+          "scene": "旧物缺项与熟悉镇外",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PORT9G_MUSEUM",
+            "PORT9G_SCAN",
+            "PORT9G_FISH",
+            "PORT9G_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己为已经捕到的鱼、得到的旧物或见过的人物信息补过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己为一件确实尚未复原的遗物缺片，去过当时可进入的遗迹或做过有效交换，主动追补那一项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "自己特意听过人物当前对话，把他的请求与此前镇上经历连起来想过",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己精神和角色体力都好、还有新目标能推，却仍在熟悉钓点钓鱼，喜欢那份认得的平稳",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "补缺只真实未得遗物/碎片且当时方法可用，无需得到；h非体力耗尽；人物叙事不q/o，旧物信息记录不c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G12.V1"
+        },
+        {
+          "text": "若还没有复原和钓鱼经历，只回想最早工坊与城门周围的一小段：哪件真实发生过？",
+          "scene": "最早城门周围的真实记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PORT9G_MUSEUM",
+            "PORT9G_SCAN",
+            "PORT9G_FISH",
+            "PORT9G_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只为已走过的广场、已见人物或拿到的木石补过经历记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己为了认识未知，走进过当时可达却从没去过的一条广场边巷",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "自己停下来听过新认识人物的话，关心他与镇子的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己当时精神和体力都足、也能继续起步任务，却仍在熟悉工坊门外采过一小圈，喜欢刚认得的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "补缺只真实未得遗物/碎片且当时方法可用，无需得到；h非体力耗尽；人物叙事不q/o，旧物信息记录不c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PORTIA09G12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+18f2056b05b1"
+}

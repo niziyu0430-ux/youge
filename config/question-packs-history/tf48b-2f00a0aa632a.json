@@ -1,0 +1,2783 @@
+{
+  "id": "tf48b",
+  "title": "军团要塞2",
+  "game_ids": [
+    "steam-440"
+  ],
+  "scope": "原生PC普通真人PvP与原生MvM独立情境模式，每模式12题位各3替代；同样只答12专属+4共享/max2补问。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "原36冻结稿及14来源不改，当前候选按ID提供PvP适用性修正和新MvM36。",
+    "PvP每槽至少有一项不要求指定职业或特殊解锁；MvM每槽V1不锁单职业。仅协调/共同经历选项依各自标签要求愿参与真人；真正两人故事保留现场人物，机器人不作竞争真人/协调/共同经历对象。",
+    "有限3替代不保证所有人生经历都能覆盖，未体验继续其他已核专属无跳过；不要求买MannUp门票/插件。",
+    "无客户端/真人试答或心理效度/97%证明，须root独立验收，不标全库完成。",
+    "独立复核最小适用性修订：没有愿回应同伴不使本来可独立执行的整题失效；有限替代不保证每种经历可答完，未体验继续换已核专属，不提供跳过。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "普通真人PvP（职业情境可继续换通用替代）",
+      "initial_variants": {
+        "TF48B01": "TF48B01.V1",
+        "TF48B02": "TF48B02.V1",
+        "TF48B03": "TF48B03.V1",
+        "TF48B04": "TF48B04.V1",
+        "TF48B05": "TF48B05.V1",
+        "TF48B06": "TF48B06.V1",
+        "TF48B07": "TF48B07.V1",
+        "TF48B08": "TF48B08.V1",
+        "TF48B09": "TF48B09.V1",
+        "TF48B10": "TF48B10.V1",
+        "TF48B11": "TF48B11.V1",
+        "TF48B12": "TF48B12.V1"
+      }
+    },
+    {
+      "id": "mvm",
+      "label": "原生MvM机器人合作（普通免费波次）",
+      "initial_variants": {
+        "TF48B01": "TF48B01.MVMV1",
+        "TF48B02": "TF48B02.MVMV1",
+        "TF48B03": "TF48B03.MVMV1",
+        "TF48B04": "TF48B04.MVMV1",
+        "TF48B05": "TF48B05.MVMV1",
+        "TF48B06": "TF48B06.MVMV1",
+        "TF48B07": "TF48B07.MVMV1",
+        "TF48B08": "TF48B08.MVMV1",
+        "TF48B09": "TF48B09.MVMV1",
+        "TF48B10": "TF48B10.MVMV1",
+        "TF48B11": "TF48B11.MVMV1",
+        "TF48B12": "TF48B12.MVMV1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "TF48B01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "TF48B01.V1",
+          "scene": "蓝方车边缺人，拐角有能追的敌人",
+          "text": "你在常规Payload蓝方，车停在当前可推进的位置；一名敌人刚退到你已走过的拐角。自己弹药生命够这一段，队友还没赶到车边，车与追敌不能同时兼顾。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PC",
+            "TF48B_CART"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际留在推进范围让车前进，优先推进已列推车目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "离车追到已走过的拐角，投入自己这轮想处理那名敌人的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "沿车边亲自持续走位、瞄准和开火，喜欢输入与交手反馈连起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对HUD里车的当前位置、阶段与剩余局面，再决定怎么走",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "实际车推进与离车追击争人在场，连续本人交手F不是车自己移动。",
+          "interpretation_boundary": "只车当前能推动，未被敌占或地图锁定；不保证一个人足够安全推进或一轮必过点。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B01.ALT1",
+          "scene": "己方据点被踏入，还是找对面真人争一轮",
+          "text": "你在普通据点对抗，HUD显示己方点正受争夺；一位刚与你交过手的真人对手在另一条已通小道，自己想这次赢回交手。两处当前都能去。先投入哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际回到争夺点阻止当前失守，先推进本局目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "把赢过那位真人作为明确胜负目标，实际去争这一轮交手",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "暂不追胜负，专门反复练自己没掌握的跟枪与掩体探身",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对已显据点归属和争夺提示，再决定去向",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "占点目标与真人胜负/本人练习分开，不把遇敌射击一律K。",
+          "interpretation_boundary": "对手须实际真人，T有当前可重复交手机会，不保证每次相同状态；不要求竞技排位。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B01.ALT2",
+          "scene": "夺旗途中携敌情报，先送还是交战",
+          "text": "你已在原生夺旗关拿到敌方Intelligence，回己方交付区的路线走过；侧面一名可交战敌人正牵扯你，队友也在向交付方向走。先如何处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "携情报实际沿回程走向交付区，先推进已经给出的夺取目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "把时间留给眼前交战，实际尝试处理这个自己选定的威胁，暂缓送回",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与当前愿协商的真人队友约好谁掩护哪段、何时一起过口，再照约行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己现有生命、各武器弹药与已携补给，再定返程",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "携带具体情报的交付/交战和真实掩护协调，不拿地图上的未知口补四项。",
+          "interpretation_boundary": "不承诺隐形也能携带、自己情报失落时的其他游戏规则或掉落自动还原；Q只真队友且真照约执行。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B01.MVMV1",
+          "scene": "持弹机器人已近洞，另一群还在前线",
+          "text": "你在普通原生MvM用当前职业，已见一名持弹机器人接近炸弹洞口，前线另有能打的一群；自己当前有可用武器。回洞口与继续留前线不能同时做。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_MACH",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际回洞口处理当前持弹者，先推进本任务已经给出的阻止投弹目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际留前线处理自己这轮选定的机器人群，接受洞口要暂由别人管",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与愿回应真人约谁回洞、谁守前线和何时回报，再真实按约分开处理",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对HUD当前炸弹位置、持有与本波剩余目标，再决定去向",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "通用持弹风险与前线争位置；机器人任务不是真人排名K。",
+          "interpretation_boundary": "只当前真见两处目标，不保证一名玩家能稳守/所有波都同一线路，Q只同队真人。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B01.MVMALT1",
+          "scene": "坦克与普通持弹者同时在场",
+          "text": "原生MvM当前波次里，坦克还在沿路走，另一路也真有普通机器人拿着炸弹；自己能射到坦克，也可沿已通路去拦持弹者。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_BOUNTY",
+            "TF48R_MACH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际集中对眼前坦克持续输出，推进自己选定的这次坦克处理目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际改去拦另一条线的持弹机器人，推进当前阻止其进洞的任务目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约哪几个人打坦克、谁看炸弹以及何时换人，再真按约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对坦克当前剩余生命与炸弹实际位置提示，再决定本轮去哪边",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "两套投弹威胁并存而非坦克=会射人的机器人；任务分工不凭单人DPS评能力。",
+          "interpretation_boundary": "只有当时真两线并存，不保证贴坦克无挤压/无别的敌伤或任何普通枪必足够。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B01.MVMALT2",
+          "scene": "绿钱正在消失前，自己回去取还是守住口",
+          "text": "原生MvM中，身旁一笔尚可取的绿钱正在地上，已见前口又能继续打；自己一离位就暂少个人看口。钱会过时消失。先怎样做？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_MERC",
+            "TF48R_BOUNTY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际走过去取当前这笔钱，再回看口，先投自己选定的升级资金准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际留当前位置继续挡这轮机器人，先投自己选定的眼前守口目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真队友约谁取眼前钱、谁续看口及何时回位，再按约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对HUD显示当前自己的钱与场上尚可取钱的提示，再决定哪里缺人",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "钱有真实消失时机与本人离位成本，所有职业可拾，不强制Scout或把捡到算收藏C。",
+          "interpretation_boundary": "只当时当前钱真可取；不采divided equally字面分账/固定消失秒数，真人才是协调对象。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "TF48B02.V1",
+          "scene": "Soldier留火箭跳高台还是把弹用在正面",
+          "text": "你用普通RocketLauncher，当前生命可支持一次尝试的火箭跳，已见高台有可用落脚处，地面路也走过；装填和备弹不多，跳上去会花掉能留给正面的一发。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_SOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际用一发尝试上高台，从那里推进自己选定的接敌路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "留这发给眼前正面交战，沿已通地面路继续自己的推进目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "专门在当前能重试的这一处练起跳、射地与空中对准，重点练熟本人衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己的生命、已装火箭和备弹，再决定是否跳",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "位置收益要付本人生命与火箭，两个实际去向0，重复控制练T。",
+          "interpretation_boundary": "只普通发射器；非RocketJumper零爆炸自伤，不保证跳得上/落地无伤，练习须现场真能补给和重试。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B02.ALT1",
+          "scene": "Scout的第二跳方向，自己还没弄清",
+          "text": "你用默认Scout，已经跳过一个能步行回起点的小间隙；本人还不知道第二跳能否改变刚才的空中去向。另一条已通地面路可去当前据点，现场也能再试这次跳跃。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_SCOUT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "猜第二跳输入方向能改变去向，固定起点和第一跳，只改第二跳方向亲自试，结果不符就改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "反复练自己未熟的第二跳对准落脚，重在练会控制而不是验证原因",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先沿已通地面路实际去当前据点，推进已经列出的目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先查看默认Scout已经给出的操作提示，再继续尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "个人未知二跳因果与熟练动作不同，不把所有二跳都P。",
+          "interpretation_boundary": "只默认双跳，不借Atomizer旧自伤/额外跳武器；P本人未证且实试，返路真实可用，不保证无伤。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B02.ALT2",
+          "scene": "弹药不足的这次守口，回已见补给还是再留一段",
+          "text": "你在普通真人PvP用自己当前职业的常规武器，弹药已不多；已走过的补给处当前能用，但要离开眼前守口。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48R_CASUAL",
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先走到可用补给处补好再回，投入自己选定的持续守口准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先留眼前位置用现有可用武器守住这一段，投入自己选定的当前拦截目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与同伴约谁先回补、谁继续看口和何时替换，再真照约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己生命与各现有武器弹量，再决定这次还能留多久",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "所有职业常规装备可适用的补给/在场时间冲突，不要求Sniper瞄镜或Soldier跳。",
+          "interpretation_boundary": "只普通原生PvP、当前补给真可到，不保证回补不被打；TFC护甲/GMod按E柜不采。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B02.MVMV1",
+          "scene": "波间这笔钱，先升现枪还是买抗性",
+          "text": "原生MvM波间，你在可用UpgradeStation，当前武器有可买升级，自己抗性也有未满项；这笔钱只够先把其中一边买到自己计划的下一步。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_MERC",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先买现枪当前可买项，把钱投给自己选定的下一波火力准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先买当前可执行的抗性，把钱投给自己选定的下一波存活准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较升级站当前已开放、自己买得起的武器与抗性方案，再决定分配",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "有愿回应并共同安排的真人时，与真人约下一波谁看哪路、各自准备什么，再真按约购买和站位",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "波间真实同钱包分配，不把首次买升级算已有长期成长G。",
+          "interpretation_boundary": "按当前界面价格/上限，不用精确伤害比例、固定最优加点或免费无限钱；对抗机器人非K。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B02.MVMALT1",
+          "scene": "一件当前可买升级，先配合这轮机器人种类",
+          "text": "原生MvM波间，当前HUD已显示下一波有哪类机器人；自己当前武器/身体的可买项都在升级站，不能把所有计划一起买完。自己也能直接回已定站位。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_MERC",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前武器输出与一项身体抗性的不同功能选择能负担的组合，实际买好并在下波检验是否合用，不合后续再调整",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "只先买自己已定的一项现枪准备，再实际回原定站位",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前下一波图标和已有任务提示，再决定哪些真要准备",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "D",
+              "label": "有愿回应并共同安排的真人时，与真人约谁处理已显机器人种类、谁补其余路口，再真实按约准备并开波",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "不同功能升级实际组合运行B，HUD已知敌型准备不同于全盲猜P。",
+          "interpretation_boundary": "只当前确可兼容且钱足的两个不同功能项；不保证所有抗性挡所有伤害/下一波必无变化，不采meta唯一阵容。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B02.MVMALT2",
+          "scene": "已持回弹水壶，花一充还是走回已见补给",
+          "text": "原生MvM当前波，你真有已装好的AmmoReload水壶充能，当前武器弹药不够；也有已用过且当时可到的补给处。用充能可省去这趟走路，但该充能已花过战场钱。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_MERC",
+            "TF48R_BOUNTY",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际用现有回弹充能继续眼前守线，投入自己选定的减少离位准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先走到当时可用补给处补弹再回，保留这充给自己后续目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约谁先回补、谁续当前看口，按约轮换",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己的当前武器弹量、生命与现有补给，再决定要不要花这充",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "一次已买充能与实际路程成本，不假水壶同瓶可同时存多种效果。",
+          "interpretation_boundary": "只有本人已有对应充能才答；不要求付费门票、保证无限补弹/当前任何枪都同样效果，特定水壶不是全员V1前提。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "TF48B03.V1",
+          "scene": "工程师金属，先保受伤哨兵还是升级后勤",
+          "text": "你持普通扳手，自己已在场使用过的哨兵受损；传送器仍可升级，金属只够先有效投入一边，附近补给需要离开工地。真人队友正在等后勤，眼前暂能动手。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_ENG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先修哨兵，把这批金属投给自己当前选定的守线目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先投传送器升级，把这批金属用于自己选定的返场后勤目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与同场愿配合的真人工程师约好谁保火力、谁处理传送，再按约分工动手",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对HUD里的建筑生命、升级状态与金属，再决定优先次序",
+              "signal": "device_status_review"
+            }
+          ],
+          "design_purpose": "同一金属不能同时足投两建筑用途；Q要真人协议和执行，修理不G。",
+          "interpretation_boundary": "只普通可修建筑/可执行升级，不套Gunslinger迷你哨兵升级；HUD建筑状态在其实际可见范围内。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B03.ALT1",
+          "scene": "弹药盒会不会也补工程师金属",
+          "text": "你用默认工程师，弹药和金属都没满；本人还不知道已见弹药盒是否也补金属。盒子当前可取，自己又有一处已定要建的Dispenser，材料够先回那里。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_ENG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出弹药盒也可能补金属的解释，不建不修不射，先记金属量再亲自取盒核前后显示",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先回已定位置实际建Dispenser，把时间投入这轮补给点目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对自己当前金属、枪弹与生命，再决定需不需要去拿",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "暂不建，先用现有散弹枪打一小段当前交手，喜欢本人走位和发射反馈连续接上",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "可失败的个人未知补给类型检验，另有真实建筑或本人交手，不用四个查库存方法。",
+          "interpretation_boundary": "P只本人尚未证且期间无别的金属输入/输出，不能捡后别人在旁修建造成归因；F须连续亲自交手。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B03.ALT2",
+          "scene": "据点已在推进占领，自己留圈还是前移接人",
+          "text": "你在普通可占的ControlPoint旁，自己真能参与当前占领，几名队友也在附近；前面已见转角能走到，可提前应对敌方返场。留在有效区和现在走出接人不能同时做。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际留在有效区推进当前占领，先完成本局已给的据点目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "以赢过对面真人队伍、拿下本轮较量为主要投入，实际前移到当前可守转角争这次交手",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约谁留有效区、谁看转角和何时退回，再按约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对据点归属、当前占领进度和本局目标提示，再定位置",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "补全不锁工程师/解锁的PvP替代，点内推进与外线预警争本人位置；K明确真人队伍胜负。",
+          "interpretation_boundary": "只当前能占点的普通状态，排除无敌/隐形/其他当前不能占领状态；不报占点倍率/必胜。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B03.MVMV1",
+          "scene": "死亡后花钱买活，还是等正常复活留升级钱",
+          "text": "原生MvM中你真已死亡，当前界面有可用且买得起的即时复活选项；正常复活仍在等，炸弹情况也能从当时允许的视角看到一部分。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_MERC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际花当前所需战场钱买活并返线，先推进自己选定的这次及时到场目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际等正常复活再返场，把钱留给自己已选的波间升级准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与仍在场愿回应的真人约自己是否急回、谁暂看哪口，再按约返场",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前正常复活提示与本波炸弹/剩余目标显示，再决定是否买活",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "任何职业可经历的死亡时间/升级钱冲突，不能把买活都说焦躁或假免费。",
+          "interpretation_boundary": "以当时界面真实可买为准，不报固定金额/计时、保证返场无伤；可见仅合法当前视角，不造全图信息。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B03.MVMALT1",
+          "scene": "军医眼前真实复生器，先救回人还是维持在场者",
+          "text": "你真用原生MvM Medic，眼前有当前能对其治疗的真人队友Reanimator，另一位仍在场真人也缺生命；普通医疗枪能用于这两者。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_TWO",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把医疗光束投向当前可用复生器，先推进自己选定的带回这一位目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先治疗仍在场的伤者，推进自己选定的保住当前火力目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与愿回应真人约谁保护复生处、谁先退到何处，再真按约救/守",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己当前生命与携带补给，再定能在这里留多久",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "MvM原生复生器与活人共争医疗枪窗口，PvP没有这套人人复生功能。",
+          "interpretation_boundary": "必须Medic且当前真有可用复生器；不能把一枪同时连两目标/复生绝对安全或NPC为真人。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B03.MVMALT2",
+          "scene": "现场有Medic复生进度，自己等还是买活换位置",
+          "text": "原生MvM你已倒下死亡，当前真有一位真人Medic开始对你的复生器治疗，屏幕能看到相应提示；你也有可用买活选项和足够钱，回基地再走已通路线能接另一口。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_TWO",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际等这次真人Medic完成当前可执行复生，先投自己选定的从现处继续守线目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际花钱买活从基地返线，先投自己选定的改接另一处目标，放下这次原地复生机会",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与Medic和仍在场真人约自己等不等、复起后看哪口，再真按约返场",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前界面已显示的复生/正常复活和任务状态，再决定何时返回",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "实际原地真人复生与花钱基地返场位置冲突，非单纯买活/等待计时换词。",
+          "interpretation_boundary": "当前两种选项确都能用，不保证取消复生退钱/原地无敌或越墙任意治疗。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "TF48B04.V1",
+          "scene": "普通医疗枪满充能，眼前推进还是先保住",
+          "text": "你用普通MediGun已有满ÜberCharge，一位当前能被你医疗枪连接的真人队友在拐角；眼前敌火已见，退回掩体再找下个机会也可走，自己生命还支持当前操作。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_MED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有愿回应并共同安排的真人时，和同伴约好从哪个口走、何时开无敌及结束后去哪，再实际按约用掉这轮充能",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "实际现在开普通无敌带眼前队友试过火线，先推进自己选定的这轮突破",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先带着充能退到已通掩体，投入自己已选的保留下一次机会目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己的生命与携带补给，再决定这轮何时开充能",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "充能现在花与带回保留有真实窗口代价；Q不是仅按开无敌。",
+          "interpretation_boundary": "不把普通枪当Kritzkrieg，不说无敌能推车占点或免全部环境伤；Q真队友愿协商并执行。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B04.ALT1",
+          "scene": "一条医疗光束，工匠和前线士兵都在掉血",
+          "text": "你用已能治疗的医疗枪；一边工程师正修受压哨兵，一边Soldier准备返前线，两位当前都能连到，不能同时把这条束留在两人身上。眼前仍可退开。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_MED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先实际持续治疗工匠，让他继续处理眼前建筑，投入自己选定的保后勤目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先实际连上Soldier陪他走这段，投入自己这轮已选的前线同行目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "专门练自己尚未熟的跨掩体保持连线与换治疗目标，接受这轮不顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己的生命与现有携带补给，再决定这一轮先连谁",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "真实单束去向与个人控制训练分开，不把帮助NPC/队友自动计社交。",
+          "interpretation_boundary": "队友生命/目标信息须当前实际显示；换目标不保证不掉线或两人都救到，不要求满充能。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B04.ALT2",
+          "scene": "一份眼前健康包，自己先取还是留给伤友",
+          "text": "普通真人PvP中，你和一位真人队友都缺生命，眼前当前只有一份可取的健康包；你取了便暂时不在原处，这位队友也能自己走到。另有自己已定要守的通路。先怎样做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48R_CASUAL",
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先取这份包再回原通路，投入自己选定的恢复后守口目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际把眼前包留给可自己到的队友，自己用现有状态先守已定通路",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与队友约谁取这份、另一人先守哪侧、稍后去哪补，再照约行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己生命、已携补给和当前身体状态，再决定是否先取",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "所有职业可用的真实共享稀缺补给，不把让包判善良/Medic或O。",
+          "interpretation_boundary": "只当时真可取包、自己非已满到不能取，不能把一包同时给两人或固定重生秒数；不要求Sandvich。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B04.MVMV1",
+          "scene": "蓝箭头换了方向，波前先走线路还是继续原站位",
+          "text": "原生MvM波前当前蓝箭头显示机器人将用的路线；你已经走过旧线，眼前箭头指向另一条当前可行走通路。自己的原定站位仍能去。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_MACH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际沿当前蓝箭头反向走到可到的前段确认通路，再回守位，先投自己选定的本波路线准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先到原定站位准备，用自己选定的现成防线迎这一波",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约谁看当前新线、谁保后方以及何时一起就绪，再按约站位",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前蓝箭头、炸弹洞口方向与下一波图标，再决定站哪里",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "原生波前箭头会随波/重试变化，已知旧线与当前路线不同的实际准备成本。",
+          "interpretation_boundary": "只当时当前可走通路和已显提示，不保证箭头揭示所有侧袭/固定同地图每波同线，不计只看新点为X。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B04.MVMALT1",
+          "scene": "自己已准备，同伴还在升级站",
+          "text": "原生MvM波前，你已完成当前购买并到自己可守的位置；一位真人同伴还在UpgradeStation做确可执行的准备。自己当前能按原生Ready，或暂不按继续等。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有愿回应并共同安排的真人时，与同伴约何时准备好、谁先站哪口，再实际按约一起就绪",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "实际先按当前Ready并守已定位置，把这段投给自己选定的提前迎波准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "暂不催开波，实际继续处理自己原先还有的一项现可做整备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前队伍就绪提示和下一波目标信息，再决定什么时候准备",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "真人Ready节奏与实际整备，不假自己一按就无条件强制所有人立即开波。",
+          "interpretation_boundary": "只当前原生准备阶段，不能保证无限等待/固定倒计时或代别人按按钮；A另需同伴实际愿回应并共同安排。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B04.MVMALT2",
+          "scene": "机器人火箭沿正口来，自己绕墙还是继续接这一线",
+          "text": "原生MvM你已见普通机器人火箭从正口飞来，自己当前能攻击；另一条沿墙侧的地面通路也已走过，能去侧面接近，但会离开现有正口。当前不是非得去补弹才动得了。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48B_SOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际沿已通墙侧去已见侧口，先推进自己选定的离开正面火箭线接近目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际留当前正口用现有武器继续接这一轮，先投自己选定的正线压制目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "亲自持续走位、瞄准、换武器和出手，喜欢输入接上当前交火反馈不断连起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "有愿回应并共同安排的真人时，与愿回应真人约谁沿墙侧、谁续正口及何时一起接敌，再真照约行动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "替换与05ALT2补给/守口近壳为真实火箭射线/侧路进场，F必须本人连续输入。",
+          "interpretation_boundary": "只当时真见普通火箭与通路，不保证墙后绝对免爆炸/侧路一定无人，不要求Soldier或火箭跳。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "TF48B05.V1",
+          "scene": "Spy眼前哨兵和敌Medic，先动哪个",
+          "text": "你已用Spy潜到敌后，目前解除隐形、伪装仍在；可放Sapper的哨兵在近旁，另一侧敌Medic也真能接近。窗口有限，放干扰器与拔刀攻击的暴露后果不同。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_SPY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先给眼前建筑放Sapper，推进自己已选的让此处火力停摆目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际向Medic接近并尝试刀击，先投入自己选定的处理治疗核心目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与当前能沟通的真人进攻队友约好何时我动建筑、何时他们过口，再实际照约行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己当前隐形表余量、生命和已携补给，再决定哪刻行动",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "建筑干扰/真人医疗目标及真实突破配合争同一暴露窗口，不把背刺天然R/K。",
+          "interpretation_boundary": "能否刺中不保证；已经解除隐形才能攻击，普通Sapper本身不破伪装不代表对手不会发现，不读敌隐藏充能。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B05.ALT1",
+          "scene": "普通隐形表不多，绕补给还是早现身",
+          "text": "你持普通InvisWatch已经隐形，表剩量不多；自己走过的弹药盒位置当前有盒可取，但会绕离已选的侧翼路线。另一处遮挡能先解除隐形。先投什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_SPY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际绕去已知弹药盒补当前表，再返回自己选定的侧翼行程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先进已知遮挡解除隐形，保留这段较短路线，投入当前接近目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "走向本人此前没到过、但当前可走的侧巷，想发现它怎么通往后侧",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己的表余量、生命与携带武器，再决定在哪现身",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "普通表补给绕路与早解除隐形是不同成本，不借DeadRinger旧规则。",
+          "interpretation_boundary": "盒必须真实仍在，未看过的巷当前可达；不说隐形能无声穿人或任何表都由弹盒补，解除隐形有可听风险。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B05.ALT2",
+          "scene": "己方传送器尚在等，先步行还是守着这条后勤",
+          "text": "普通PvP中，你已实际用过己方一对Teleporter、见过出口；当前入口尚未能立刻转送，已走过的步行路也能去同一段前线。此时可以等，也能离开。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_ENG",
+            "TF48R_CASUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际沿已通步行路去前线，先推进自己选定的及时到位目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际留入口附近等到当前可用后再乘这套传送，投入自己选定的少走这一段长路的安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与愿回应真人约谁先乘、谁先步行、在哪里会合，再照约返场",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前己方入口/出口启用和连接状态，再决定这次怎么走",
+              "signal": "device_status_review"
+            }
+          ],
+          "design_purpose": "不限职业的己方后勤等待与步行成本；不混Spy借敌传送/拆Sapper。",
+          "interpretation_boundary": "只本人当时仍能等到当前原生可用传送，不报CD、免伤或出口必安全。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B05.MVMV1",
+          "scene": "机器人炸弹掉在地，自己能不能像夺旗一样搬走",
+          "text": "你在原生MvM见到机器人炸弹已掉在地上，本人还没核清人类能否像PvP夺旗那样碰它带走；当前能走近再离开，也能先攻击正在接近它的机器人。别的已定防线准备也能做。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_MACH",
+            "TF48R_FIELD",
+            "TF48R_HUMANBOMB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出人类接触后也可能带走的解释，不攻击不换装备，亲自到炸弹处再离开，看炸弹是否随自己移动，不符就改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "实际先打当前正要接近炸弹的机器人，推进本任务已给的阻止再次持弹目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "实际先去完成另一处已定防线准备，暂放这次接近炸弹的尝试",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前原生机器人投弹任务说明，再自己试这一段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "以本人未知人类能否搬机器炸弹的实际可失败检验，替换与01V1前线/后口两目标三同项；不把MvM当CTF红队拿旗。",
+          "interpretation_boundary": "人类不能搬这枚原生机器人炸弹；P只本人当时未证并真试，不保证靠近安全/能随意重置炸弹，也不假所有地图有自动回原点计时。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。"
+        },
+        {
+          "id": "TF48B05.MVMALT1",
+          "scene": "SentryBuster在起爆，工程师搬走还是留位抢打",
+          "text": "你真用普通原生MvM Engineer，SentryBuster已到自己当前可搬哨兵附近并开始起爆动作；现有哨兵能继续射击，自己也有已走过、当前可退的位置。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_MACH",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际拾起当前可搬的哨兵并离开这次可退距离，再按原生方式部署，先投保住现设施目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先留当前可射位置继续这次已选打机器人目标，接受可能失去哨兵/倒下风险",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与愿回应真人约谁撤哪侧、哪段暂不挤，再实际按约退位和部署",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前哨兵、周围已见结构与可退空间状态，再决定怎么搬",
+              "signal": "device_status_review"
+            }
+          ],
+          "design_purpose": "已起爆的原生自爆兵与能搬哨兵，搬运不是升级成长G。",
+          "interpretation_boundary": "只当前真可搬/可退，不保证任何爆炸都来得及逃/固定起爆秒数；无手动暂停/管理员无敌。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B05.MVMALT2",
+          "scene": "Dispenser能补，离开炸弹旁还是继续现有弹量",
+          "text": "原生MvM本波中，你当前武器子弹不多；一座已实际用过的友方Dispenser当时可到并能供给，炸弹还在你附近这条已见路上。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48B_ENG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先去当前能用的Dispenser补给，再回来，投给自己选定的后续续战准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际留炸弹这段用当前可用武器继续守，先投自己选定的本次拦截目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约谁暂看炸弹、谁先去Dispenser补、何时换回，再按约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前身体、各武器弹药和已携补给，再决定先缺什么",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "现有队友后勤供给与本人炸弹在场时间，不把只有Engineer才能吃Dispenser补给。",
+          "interpretation_boundary": "只当时真存在可用Dispenser，不假任何位置都在范围、造无限金属或补给无敌。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "TF48B06.V1",
+          "scene": "Pyro燃料不多，留气爆还是喷火推进",
+          "text": "你用普通FlameThrower，燃料足够当前选择但不够随意一直喷；前方有敌方火箭路线，近处真人队友正在燃烧，旁边已通掩体可退补给。下一段先把燃料给哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PYRO"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先靠近能到的燃烧队友气爆灭火，把这轮燃料用于自己选定的保人目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际保留气爆所需燃料，迎下一发当前可反射火箭尝试处理这条通路",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先退到已知现有补给处取弹，再回来继续自己选定的推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己的现有燃料、生命和已携补给，再决定动哪边",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "同燃料对灭火、反射与补给绕行争时间；三准确目标0，不硬贴守护画像。",
+          "interpretation_boundary": "只普通喷火器与火箭，非Phlog也气爆；不保证气爆成功或补给无限，队友能到达才可选灭火。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B06.ALT1",
+          "scene": "练反射，还是享受Pyro连续交手",
+          "text": "你用普通FlameThrower，在当前能反复交手的路口已见敌Soldier发射火箭，补给与退路可用。自己反射时点尚未练熟，也能沿已通路继续到当前目标。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PYRO"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门反复练观察火箭到来、气爆触发与瞄准，先把本人没熟的衔接练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲自持续走位、喷火与按时气爆交手，主要重温输入和即时声像反馈接续的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先沿已通路线实际推进当前已列目标，不留在这里反复交手",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先查看本人现有喷火器的操作说明，再继续尝试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "持续本人F与个人精进T分开，反射一次自动飞行不算F。",
+          "interpretation_boundary": "不保证对手重复同样发射、固定延迟或反射全部弹种，T不以最后成功为门槛。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B06.ALT2",
+          "scene": "近旁疑似伪装者，自己试打还是继续推车",
+          "text": "普通PvP中，一名看似队友的人靠近己方Dispenser，身份尚未核清；你当前有实际能对近处目标出手的普通武器，也能沿已通路去帮当前推车。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_SPY",
+            "TF48B_PC",
+            "TF48B_ENG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际用当前近旁可出手的武器试打，核有没有敌方受击/显形反馈，先投入自己选定的工地排查",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先沿已通路帮推当前可推车，先推进本局已经给出的目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人同伴约谁留查工地、谁去车边和何时回报，再按约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对现有武器与近旁排查的可用配置，再决定用哪件",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "把Pyro短喷专属替代改为所有职业可用的实际近旁出手/任务取舍，协调选项另要求真人实际回应。",
+          "interpretation_boundary": "只有自己当前普通武器确可试打，不要求喷火/付费武器，不保证无反馈一定友军；不借友伤私服规则。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B06.MVMV1",
+          "scene": "机器人Medic连着大目标，先断医疗还是压大目标",
+          "text": "原生MvM当前你真见到机器人Medic用光束连着一个大机器人，二者现都能被自己当前武器攻击；自己一段火力不能同时集中两边。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_BOUNTY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先攻击当前能打的机器人Medic，投给自己选定的切断当前医疗准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先集中大机器人，投给自己选定的这一轮大目标处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约谁处理医疗机器人、谁持续压大目标，再真按约交手",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前可见机器人种类、炸弹位置与本波目标提示，再决定谁先处理",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "已见医疗光束连接与当前可攻击两个实际目标，NPC不是Q或K。",
+          "interpretation_boundary": "不保证一枪先杀Medic/所有Medic都有同一种Über或机器人受同人类背刺即死规则；协商只真人。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B06.MVMALT1",
+          "scene": "Spy机器人群可停用，还是先用现枪处理大个",
+          "text": "你真用原生MvM Spy，Sapper当前可用且有当前能停用的一簇普通机器人，大机器人也在另一边可接近攻击；这次Sapper与接近大目标争自己出手窗口。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_BOUNTY",
+            "TF48B_SPY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际对当时可停用机器人用Sapper，先投自己选定的给这条线留处理空档目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际去接近当时可攻击的大机器人，用当前能用的攻击方式投自己选定的大目标处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约自己停哪簇、谁趁空档处理哪处，再真按约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先比较自己现有Sapper及攻击武器可用状态与配置，再定这次怎么出手",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "MvM机器人停用与大目标，不混PvP建筑Sapper永久摧毁或所有背刺即死。",
+          "interpretation_boundary": "Spy且当前Sapper能对这簇起效，按实际已购升级范围，不假全场免费停用/无冷却；同伴真人。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B06.MVMALT2",
+          "scene": "默认Pyro看见来弹，可反射也可用燃料追小群",
+          "text": "你真用能气爆的普通喷火器玩原生MvM，已见可反射的普通机器人火箭来向，另一边也有可接近的小群；当前燃料不能把两个想做的动作都无顾忌持续用。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48B_PYRO",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际留燃料对已见普通火箭尝试气爆反射，投给自己选定的拦这一段来弹目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先用当前燃料喷当前小群，投给自己选定的近段清场目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "专门反复练自己还没掌握的看弹/出气爆时机，想把本人反射练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "有愿回应并共同安排的真人时，与真人约自己在哪看弹、谁看小群及何时换位，再真按约交手",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "MvM真来弹与燃料分配，特定可气爆器只替代；T本人未熟。",
+          "interpretation_boundary": "不让Phlog也气爆、不保证每发反射成功/所有机器人弹都可反；机器人不是真人K。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "TF48B07.V1",
+          "scene": "默认黏弹已经布两口，整批引爆还是继续守",
+          "text": "你用默认StickybombLauncher，已在两个入口布好仍有效的黏弹；一侧有当前可接敌人，另一侧暂未见人，主路已可去支援。手上仍有可用黏弹弹药，这个接敌入口也有当前能补布的位置。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_DEMO",
+            "TF48B_SNI"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留住这批现有陷阱，实际继续守自己已选的入口目标，暂缓主路同行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际引爆这批默认黏弹处理眼前这一轮，再转去自己选定的主路支援",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "实际用现有弹药补布当前接敌入口，再留此接敌，把这轮时间投给自己已选的入口拦截准备，暂缓主路支援",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己的生命、各武器现有弹药与已携补给，再定这一轮怎么用",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "默认整批引爆可能放弃另一口覆盖；保留现陷阱、清掉转主路与耗弹补强当前入口争投入。C明确当前自选入口准备，不再把装填绑定为能量恢复。",
+          "interpretation_boundary": "不要借Scottish按簇逻辑给默认武器；不保证敌人会踩陷阱或爆炸无自伤，不在嘲讽中引爆。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 C仅当前弹药和可补布位置确实可用，按默认黏弹实际数量上限，不承诺新布后所有旧弹仍保留；补布目标不推画像。"
+        },
+        {
+          "id": "TF48B07.ALT1",
+          "scene": "ScottishResistance的两簇为何没一起炸",
+          "text": "你确已拥有ScottishResistance，在可重布弹的原生练习场放了两簇，刚才只见一簇爆；本人还不知道观察方向和引爆范围是否有关。现地也能继续练发射，已有普通黏弹器可换。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_DEMO",
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "猜引爆只选择自己注视的一簇，重布同样两簇、保持武器位置，只换注视方向实按比较，接受解释不成立",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "专门练自己未熟的看簇、触发与重新布置时点，重点练会控制而非证明原因",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "换回已有普通黏弹器，实际去下一局采用自己已选的默认布防方案",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先比较当时已有两种发射器的显示说明，再决定继续哪种",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "具体分组引爆个人未知，不只把按钮名字替进相同机关题。",
+          "interpretation_boundary": "仅实际有该武器和能安全重布环境，不采用固定弹数/引信或必成功；不用训练场强迫每人都有特殊武器。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B07.ALT2",
+          "scene": "对面真人队伍就要接近最终点，先拦这轮还是追个人目标",
+          "text": "普通PvP守方当前最后一段据点已能被争夺；眼前可去点边拦截对面真人队伍，另有自己先前更想处理的一名已见敌人去了侧路。自己能走两边但不能同时在。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把赢过对面真人队伍、守下本轮较量作为主要目标，实际回最后点附近争这一轮",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "实际去侧路处理自己已选的那名敌人，先推进个人这次交手目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与队友约谁回点、谁看侧路、何时一起收回，再照约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前点归属、争夺状态与剩余本局目标，再定去向",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "不锁Demoman盾/剑的常规团队胜负窗口，K不是只给私人拳击或个人复仇。",
+          "interpretation_boundary": "对面须为实际真人；协调选项另须愿沟通的真人同伴；不保证点边必赢/杀侧路就等于抓住胜利，不套所有地图末点规则。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B07.MVMV1",
+          "scene": "坦克在行进，自己想连着操作还是专练瞄准移动",
+          "text": "原生MvM一波里坦克真在眼前沿路走，自己当前可对它出手；其他机器人仍可能出现。此刻更想怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_BOUNTY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自持续跟随、瞄准、切换当前可用武器和射击，喜欢输入接上命中反馈不断连起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "专门反复练自己未熟的随目标移动和换弹衔接，想把本人动作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "实际按自己已定的这次坦克处理目标集中输出，暂不追求额外练习",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "有愿回应并共同安排的真人时，与真人约谁续打坦克、谁看机器人路线，再真照约分开",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "坦克持续本人输入反馈F，T本人未熟，守机器人仍是全队任务而非个人排名K。",
+          "interpretation_boundary": "不保证贴坦克绝对安全/任何职业普通枪都有同样坦克伤害；当前枪真能用即可，不强制特殊解锁。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B07.MVMALT1",
+          "scene": "自己还不确定，持弹者变强是否与持有时间有关",
+          "text": "原生MvM当前你真见过普通机器人持弹后提示出现变化，自己尚未核清是否与持续持有时间而非换成另一机器人有关；当时能保持观察同一个持弹者，并可亲自打断后对照下一次。另有已定回防可做。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_MACH",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出同一普通持弹者持有更久可能累积变化的解释，核同一对象显示，实际打断这次持有后再对照，不符就改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "实际先处理当前持弹者，推进本任务已给的阻止投弹目标，不另等它变化",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "实际先回已走后口，投入自己选定的后方防漏准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前原生持弹/机器人提示说明，再自己尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "本人未知时间/对象解释且实际干预对照P，不把被动看机器人叫解谜。",
+          "interpretation_boundary": "只本人当时真未证且有实际可观察/打断条件，不保证严格排除所有机器人差异/安全放它靠洞；不是叫所有队员故意放弹。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。"
+        },
+        {
+          "id": "TF48B07.MVMALT2",
+          "scene": "普通抗性升级到底对应哪类来弹，自己想实际核",
+          "text": "原生MvM波间，你已有一个可执行抗性方案、也能选另一当前已开放方案；刚才同一类已见机器人攻击让本人怀疑自己买的抗性是否真对应它。波间能合法重配，接下来真能再遇这种攻击。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_MERC",
+            "TF48R_RESPEC",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先提出当前抗性可能不对应这类攻击的解释，保持当前角色和其他准备尽量相同，实际换对应显示方案进下一次交手比较，不符就改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "不追原因，实际按自己已选方案购买并在下一波守原定口",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前能买到的身体抗性与武器配置，再定怎样分配钱",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "有愿回应并共同安排的真人时，与真人约谁看这类机器人、谁补另一侧，再真按约迎下一波",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "可失败个人未知抗性解释，合法波间变化且下波亲试；不是凭数值就说已证明。",
+          "interpretation_boundary": "按当前显示类型，不假所有抗性通防；实际环境可比有限、不保证重复攻击伤害相同，Q必须愿配合真人在场。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "TF48B08.V1",
+          "scene": "Heavy过拐角，预转保火力还是收枪转场",
+          "text": "你用默认Minigun，拐角后有已知交战点，侧面另一段队友通路也能去；预转能减少出手等待，却会让自己慢下来并发声。现在弹药够这段。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_HEAVY",
+            "TF48B_SNI"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先预转守眼前拐角，把时间投入自己选定的拦口目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "停止预转、实际移去已通侧路，把时间投入自己选定的转场目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "亲自连续预转、瞄准跟随和开火交手，主要喜欢本人输入和机枪反馈接续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己的生命、枪弹与已携补给，再决定怎样过口",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "起转准备与转场慢移是真代价，持续本人机枪跟枪F不等于炮管自动旋转。",
+          "interpretation_boundary": "只默认机枪，不套Tomislav无声/BrassBeast数值；不保证预转必赢或当前拐角绝对安全。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B08.ALT1",
+          "scene": "已经拥有的帽子武器，先留下自己的Scout样子",
+          "text": "你已在背包里有当前可穿的两套Scout外观与惯用武器，换装界面确能预览并装备；自己也有一轮想打的目标，精力足且能进原生熟悉练习。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PC",
+            "TF48B_SCOUT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际搭配并装备已有外观，让Scout呈现自己想留下的场景主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "真有愿共同游玩、且当前能同局的真人朋友时，先带现有配置实际进朋友所在队伍，重在共同经历这一局的时间",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "精力足且有新一局可玩，仍自主回熟悉原生练习重温已惯过程，喜欢从容熟悉的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已经拥有的武器与外观方案，再决定这轮带什么",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "真实已得外观A/真人共处O/余力熟悉H，不用免费目录或单次换帽硬C/G。",
+          "interpretation_boundary": "只实际可同时穿的现有物件；未购买不要求买，朋友确同局可加入才O，不造任何人都解锁稀有嘲讽/录像/外观。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B08.ALT2",
+          "scene": "一条正面通路和已走侧路，自己先去哪里",
+          "text": "普通真人PvP中，你已用当前职业普通武器走过正面通路和旁边绕路；正面队友正在接敌，侧路能接近另一处已见出口，但现在绕过去会错开这一轮正面交火。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先到正面接上当前交手，投入自己选定的即时正面支援目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际沿已通侧路去已见出口，投入自己选定的侧线接近目标，接受正面暂少自己",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约谁正面、谁绕侧和何时一同出，再实际照约交手",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "亲自持续走位、瞄准、切换当前武器和出手，主要喜欢输入与交手反馈不断连起来",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "不锁Heavy预转/Scout离线弹匣或装饰的实际PvP两路窗口，F本人连续输入。",
+          "interpretation_boundary": "只当时两路都已走通、不要求火箭跳/双跳；不把地形称微缩，不保证侧路没人或固定快慢。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B08.MVMV1",
+          "scene": "已经打过数波，重排补给和收钱怎样接上",
+          "text": "原生MvM本任务你们已实际打过几波，反复发生一人回补、另一边钱来不及取的断档；自己已用过当前回路和补给。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_MERC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有实际愿参与轮换的真人时，把已发生多轮的补给/取钱/返口步骤整理后实际改轮换，再跑后续波次对照，想让整套运作持续更顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "只先处理眼前当前可取的钱，推进自己这次选定的资金准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约下一波谁取钱、谁何时回补/替岗，再真实按约完成这轮",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前波次/炸弹位置与已显示推进，再决定哪里先缺人",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "Y必须真实多波流程运转后改安排且复跑，不把一次回补规划叫运营。",
+          "interpretation_boundary": "只实际原生当前波次/补给，不造自动取钱/后台队友轨迹；D仅当前任务/炸弹进度显示，改流程不保证永不漏钱。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；B/D不要求队友回应；A另须标签所写实际愿参与轮换的真人。"
+        },
+        {
+          "id": "TF48B08.MVMALT1",
+          "scene": "自定只走两段路取钱回位，自己真玩成败",
+          "text": "原生MvM中你已走过当前位置到一处回位点的通路，也见到当前可取绿钱；正常随意走打可做。你另定这一小轮只走自己标定的两段地面、不进补给柜，取到这笔钱并回位成功，倒下/越界/碰补给算失败；失败后靠原生正常返场再找当前真有钱的机会重开。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_MACH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "真的按这套新成败限制取钱和回位，失败按原生办法返场后再开自己的轮次，还改规则再实际玩",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "不加新限制，专门练自己未掌握的避弹与转身回路，想练会本人操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "实际继续本任务当前阻止投弹的目标，不玩额外小挑战",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对已显示炸弹位置和这段任务进度，再定当前应去哪",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "I本人建立限制并真玩成败/人工重试，不造自定义自动计分/复刷钱或强迫队友重置整波。",
+          "interpretation_boundary": "只不改变队友规则的本人小轮，自己真能用原生返场方法，不要求钱永不消失/无限复活/管理员重开；团队目标仍照常。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。"
+        },
+        {
+          "id": "TF48B08.MVMALT2",
+          "scene": "Medic已买共享水壶升级，连谁用这次CritBoost",
+          "text": "你真用原生MvM Medic，CanteenSpecialist已购买，现有水壶装着当前可用CritBoost；眼前一位真人能用现有武器输出、也能被你当前医疗枪连接，另一位真人则在掉生命。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_TWO",
+            "TF48R_MERC",
+            "TF48R_FIELD",
+            "TF48R_BOUNTY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按医疗枪连友与已购共享升级/现有CritBoost的不同功能实际接上，使用这充并在真实交手核目标效果是否合用，不合后来改安排再试",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先把医疗光束实际投向当前伤者，保留这充给后来，先做自己选定的当前恢复目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "有愿回应并共同安排的真人时，与真人约这次连谁、哪段用水壶、谁照看伤者，再实际按约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先比较自己当时已有医疗枪、已购共享升级和当前水壶可用配置，再定怎样用",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "替换与02ALT1武器＋抗性三同项近壳为实际Medic共享升级/医疗枪/现有单次充能功能配合；不把普通Medic默认都能共享。",
+          "interpretation_boundary": "只有本人真已购买共享升级且有这充、目标真人当前能连并已交手核效果，不能造同瓶混装/永久暴击或把机器人当合作对象；本题位另两条替代不锁Medic。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "TF48B09.V1",
+          "scene": "掉落武器可用，换手还是守住当前这套",
+          "text": "回想普通PvP一次：你当前职业原有普通武器仍可用，眼前又有一件本职业当时确能拾取使用的掉落武器；要去取会离当前守位，自己原定还要挡这轮进路。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48R_RESPEC",
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际先保留原有武器守这轮进路，把时间投入自己原定的守位目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我实际到当时可拾位置换上本职业可用掉落武器，再用它继续自己选定的交手目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我把赢过对面真人队伍、赢下这轮作为主要目标，实际投入当前能参与的较量",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "我先比较原有和当前可拾武器的真实可用配置，再定是否离位换枪",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "原09V1仅MvM升级移入mvm同槽；PvP这里用本职业合法掉落拾取/当前在场成本，不要求拥有特殊解锁。",
+          "interpretation_boundary": "只当时当前职业确可拾可用，未处于隐形/伪装等不能拾状态；不借MvM机器人掉玩家枪或任意跨职业装备。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。"
+        },
+        {
+          "id": "TF48B09.ALT1",
+          "scene": "Widowmaker的金属，留建设还是打枪返还",
+          "text": "回想你亲自用过Widowmaker的一轮：当时金属有限，已定的建筑准备也要这批金属；自己已见这把枪射击会花金属、之后有时回多有时回少，还没核清是否由命中而非其他补给造成，附近有真实可交战目标，普通散弹枪也已拥有。哪种实际投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_ENG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际带这把枪出手，在命中/未命中下承担金属变化，把本轮投入自己已选的近战线目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把金属留给当前可做的建筑，实际完成已定建设，枪暂换已有普通散弹配置",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "当时还不确定命中是否影响返还，固定这把枪与其他输入，实际比较一次命中和一次未命中的金属变化，检验自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己当时的金属、弹药与生命，再定这一轮花在哪",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "金属在射击/建设间真正共池，区别于前面普通金属两建筑；P须个人仍未知返还条件而非题已给答案。",
+          "interpretation_boundary": "本人当时未知金属返还原因；P只能控其他金属来源的实际尝试，不保证净赚/每次返足，不用精确射击消耗或上限。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B09.ALT2",
+          "scene": "Heavy有就绪Sandvich，吃的空档还是回补给",
+          "text": "回想你缺生命但仍能移动的一轮Heavy：当时真有已就绪可吃的Sandvich，拐角有自己已经走过的遮挡；吃时不能像平常持枪交手，另一段已知补给处也能回。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_HEAVY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际到遮挡后吃当前这份，再回去继续自己已定的守口目标，接受这段进食空档",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我先带当前状态沿已通路回补给处，保留这次食物用途，完成自己改选的回补行程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我按自己采用“这一轮补给只靠阵地后勤”的重装步兵身份回撤，让本来更想就地吃完继续、而能做的路线让位",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "我先核对当时自己的生命、当前食物就绪与携带弹药，再决定何时回线",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "不是武器交手过去式，当前就绪食物的暴露时间与绕路机会成本；R明确自采身份改变原偏好。",
+          "interpretation_boundary": "不沿2008旧无限供给/回血量/四秒，不把吃食自动H/多守一会G或主动退补给推能力；遮挡不保证免风险。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B09.MVMV1",
+          "scene": "MvM同一把已升过的枪，再把本任务所得投进去",
+          "text": "回想你亲自玩原生MvM的一次：同一职业这把枪已由你在本任务花钱升级、也用过几波；波间升级站仍有未封顶可执行项，手上钱够继续投，另有自身抗性可买。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48B_MVM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续投同一已亲自升级并用过的武器，再到下一波实际使用，想让这份本任务积累继续成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把这笔钱实际投自己当时选定的抗性准备，先处理下一波自保目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较当时升级站已经开放、自己买得起的武器与抗性方案",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "当时确有愿回应并共同安排的真人时，和同场愿商量的真人约好下一波谁看哪路，再实际按约站位开打",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "全新机器人波间资源场景，G是同一已有投入对象后续未封顶成长，不是把PvP枪伤害说会永久升级。",
+          "interpretation_boundary": "只本任务真可升级的武器/钱，不要求付费MannUp、固定波次/金额/退款次数或跨任务永久保留；NPC机器人不Q。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B09.MVMALT1",
+          "scene": "波间换职业，先退款重配还是继续原有分工",
+          "text": "回想原生MvM本任务中，你已用当前职业买过升级并打过波；下一波前原生站能退已购升级重配，队伍又有一个自己当前可选普通职业能补的缺口。不要求特定解锁武器。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_RESPEC",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际波间按当前可用退款流程处理，再改当前可选职业并用退回可用钱做准备，投入自己当时改选的补缺口目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我保留当前职业和实际已买配置，继续出场做自己原定的这段分工",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "当时确有愿回应并共同安排的真人时，我与真人约谁改哪类、谁保原站位，真实照约完成重配和下一波",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "我先比较当时已购/可退项目和当前可选职业配置，再决定是否改",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "新真实波间职业/投入对象互斥，不复制早期同一钱包两项购买；退款不是新增成长。",
+          "interpretation_boundary": "只波间原生确允许，按当时实际可退款项，不保证买活/消耗充能也退，不在站内绕规则瞬换或复制钱。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B09.MVMALT2",
+          "scene": "AmmoReload已用过一充，下一次要补买还是留钱",
+          "text": "回想原生MvM一波后，你已有水壶且这任务真用掉过一充AmmoReload；波间当时能花战场钱给同类充能补回，也有现武器一个可执行未满升级要这笔钱。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_MERC",
+            "TF48R_FIELD",
+            "TF48R_BOUNTY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际补买当前能装的同类回弹充能，投入自己选定的后续少离线补给准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我把钱实际买到当前现枪可用升级，先投自己改选的武器准备，下一波再靠已有补给点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我先比较当时当前能买的同类充能与现枪升级方案，再决定这笔钱去向",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "当时确有愿回应并共同安排的真人时，我与愿沟通的真人约谁先回补、谁接哪口，再真实按约处理下一轮",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "真实已经消耗后的再采购与永久本任务升级的资金冲突，区别02ALT2波中现成水壶/走路；不是把补充物资算G。",
+          "interpretation_boundary": "只已有水壶、同类可装且当时真能买，按实际上限/代价，不同时塞不同类型或要求付费门票。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "TF48B10.V1",
+          "scene": "有Jarate但暂少SMG，先救火还是留投敌",
+          "text": "回想你已拥有并装备Jarate的一轮Sniper：眼前真人队友燃烧可到，另一侧已知敌玩家准备进路口；自己当前这次Jarate可投，用在一边会放掉另一边机会，狙击枪仍可用。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_JAR"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际先把这次Jarate用来给可到队友灭火，投入自己选定的保人目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我留这次Jarate给眼前敌玩家，再用已有狙击枪交战，投入自己选定的接敌方案",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "当时确有愿回应并共同安排的真人时，我与当前愿协商的真人同伴约好先等我灭火还是一起过路，再实际照约推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "我先比较当时已有Jarate与SMG副武器方案，决定下一次可换装时带哪种",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "只已拥有Jarate的一次真实用途竞争，不套所有狙击枪只有一种玩法。",
+          "interpretation_boundary": "Jarate灭火/对敌增伤来自Valve2009发布原文，精确伤害/冷却不采用；本次持Jarate不能又同时装备SMG，不在交战中无条件换副槽。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B10.ALT1",
+          "scene": "复活处队内缺口，保留本职还是改可选Medic",
+          "text": "回想普通PvP等复活的一次：你刚用自己的惯用职业出场过，当前队内缺医疗，原生界面也真允许选Medic；自己原本更想继续本职的正面目标。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PC",
+            "TF48B_MED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际改选当前可选Medic并出场治疗，先投自己当时改选的补医疗缺口目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我保留当前惯用职业实际再出场，先推进自己原定的正面交手目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "当时确有愿回应并共同安排的真人时，我与真人朋友约谁改医疗、谁继续原角色、从哪里会合，再真按约返场",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "当时确有愿共同游玩或分享的真人朋友时，我和朋友分享刚才这次倒下和意外、继续共同玩，主要喜欢共同经历",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "去掉原Soldier前提，所有惯用职业可回顾当前继续/原生改选机会；选医疗不自动社交/现实善良。",
+          "interpretation_boundary": "只当前可选/可出场职业，不保证每个限职服均可；朋友只限协调/共同经历选项，其他行动不要求真朋友，不要求自定义插件或特殊解锁。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B10.ALT2",
+          "scene": "Spy敌传送出口前，先借道还是先拆",
+          "text": "回想你亲自用Spy到敌传送入口的一次：本人当时已用过这套敌传送，出口去向已见，装置当前能用也能放Sapper；自己原选过先到敌后接近另一目标。哪种实际投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_SPY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先实际借敌传送到已知出口，再做原定敌后接近，暂不破坏这条借道工具",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我实际先给入口放Sapper，投入自己改选的截断敌后勤目标，放弃这次直接借道",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我按自己采用“这一趟潜行不毁后勤”的侦察身份保留装置，让本来更想先破坏、且当时可做的偏好让位",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "我先核对当时自己的隐形表余量、生命与已携补给，再定何时行动",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "把敌设施同时当借道工具与破坏目标的真实冲突，不复刻05V1建筑/Medic窗口。",
+          "interpretation_boundary": "借道必须当时真已用且仍启用，不保证出口安全、固定无等待或隐形穿人；不把选Spy本身判R。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B10.MVMV1",
+          "scene": "连续失败同一波，改方案检验还是先练本人应对",
+          "text": "回想你在原生MvM同一波确已失败并能按原生流程再来：本来怀疑是自己过早离开炸弹线、而不只火力不够；当前已知通路能再按另一种站位执行。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_MACH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出离开炸弹线时机可能是原因，尽量保持角色/升级相同，实际在重试改变回位时机对照结果，不符再改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我不追原因，反复练自己未掌握的看持弹提示与返口执行，主要想把本人应对练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "当时确有愿回应并共同安排的真人时，我与真人约这次谁守炸弹、谁处理前线和何时换，再真实按约重试",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "我先核对这次已显示炸弹/下一波路线与当前目标，再定自己怎么走",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "真实失败反馈引出个人未证站位解释和有改变的重试，非第一题持弹/前线两目标换过去时。",
+          "interpretation_boundary": "P自己当时未证且真重试，不承诺同波每次路线相同/所有资源无损重置；T不要求最终成功才算兴趣。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B10.MVMALT1",
+          "scene": "Medic已买ProjectileShield并攒好，何时开这一段",
+          "text": "回想你真用原生MvM Medic，当前ProjectileShield升级已经购买、能量当时已就绪，眼前能挡的机器人来弹会打到真人队友；另一位真人仍需医疗光束。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_TWO",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际在当前可挡来弹的一段开已就绪盾并随队移动，先投自己选定的这一口掩护目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我先保留这次盾能量，实际把医疗光束投向当前伤者，先投自己当时选定的维持当前生命准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我把已买盾的拦弹功能与当前医疗枪持续治疗功能实际衔接，在这段交手核二者是否合用，不合后来改安排再试",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "当时确有愿回应并共同安排的真人时，我与真人约谁何时过、自己在哪段开盾/续治疗，再真照约走完",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "当前原生需购买且攒能的MvM盾与医疗功能，不移植为PvP军医基础能力；B实际功能衔接。",
+          "interpretation_boundary": "只有真正已购买/已就绪且真可用，当前可挡普通来弹而非所有伤害/机器人穿进来也无敌，不报耗能比例。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B10.MVMALT2",
+          "scene": "Engineer预波已有两套建筑点，先把后勤布到哪里",
+          "text": "回想你真用原生MvM Engineer波前准备，当前能部署的Dispenser/Teleporter已会用；近前线位置便于当前同伴补给，后方已见位置则离洞口更近。你自己当时要在有限准备时间先布好一套可用后勤。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48B_ENG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际先把可部署后勤放在当前可用前段并让自己/真人试用，投入自己选定的前线续战准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我实际先把后勤部署在当时可用后段并试用，投入自己选定的后口返场准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我按传送返场与Dispenser补给的不同功能实际布兼容位置/连线，并真走一遍补给返场，失败换点再试",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "当时确有愿回应并共同安排的真人时，我与真人约谁从哪端返、谁在哪补以及何时就绪，再真实按约部署和开波",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "波前返场传送/后勤不同功能位置冲突，非旧PvP同金属修哨兵/升传送器；搭好并实际运行才B。",
+          "interpretation_boundary": "只有Engineer、当前原生可部署位置，不能任意越界/空造金属或假全波搬楼瞬间无敌；按当前实际部署费用。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "TF48B11.V1",
+          "scene": "军医身份，放下原本想拿的针枪击杀",
+          "text": "回想你用Medic的一轮：针枪能打眼前可接敌人，普通医疗枪也能连上当前需要治疗的真人；你原来更想争这次针枪击杀，但自己采用过“这一轮只维持战友生命”的军医身份。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_MED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我因这个自己采用的身份实际放下可做、也更偏好的追击，转去持续治疗，让身份改变这轮优先级",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "我不让身份限制这次，实际用已有针枪追眼前目标，先投入自己原定交战",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "当时确有愿回应并共同安排的真人时，我与愿配合的真人约定谁吸引前方注意、我在哪续治疗及何时一起退，再照约打完这轮",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "我先核对自己当时的生命与携带补给，再决定继续怎样做",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "不同于早期满充能/两治疗对象的行动，回顾真实采用身份压过个人已可做偏好。",
+          "interpretation_boundary": "没有这种实际身份改变继续别题，不凭医疗职业/让人回血推R；不能同时用针枪射击和医疗光束。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B11.ALT1",
+          "scene": "FrontierJustice有复仇潜力，要主动拆同一哨兵吗",
+          "text": "回想你已亲自用FrontierJustice配合当前哨兵交战的一次：哨兵这条命有已记的击杀/助攻，毁后会把对应复仇暴击给这把枪；但现哨兵仍能守口，拆毁是可做的，不能留同一个实体又同时领毁后回报。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_ENG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际保留并继续维护现哨兵守口，把这轮投入自己原定阵地目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我实际拆毁它，拿当时确有的复仇暴击出场交战，投入自己改选的持枪机会，接受阵地暂失火力",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我先比较现FrontierJustice与自己已有普通散弹方案，再决定接下来配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "我为自己这条命已亲手建过并改过的阵地补记建设过程，尚不主动拆它",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "同一已用建筑在实体火力与毁后武器资源间不可兼得，普通拆毁不硬G/B。",
+          "interpretation_boundary": "只当前确有可发复仇暴击记录，当前可主动拆；不固定数量/上限，不说死亡后还保留或拆后哨兵原实体不丢。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B11.ALT2",
+          "scene": "倒下后的合法观战，报眼前位置还是先记自己的回程",
+          "text": "回想普通PvP倒下等复活的一段：当前原生观战确给你看到一位队友的视角，只能用当时真可见的信息；你也有原定复活后要走的返线。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把赢过对面真人队伍、赢下这轮较量作为主要投入，报当时真正看到的位置，复活后再实际参加这轮交手",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "当时确有愿回应并共同安排的真人时，我与愿回应的真人约谁看当前口、自己复活后走哪侧和何时合，再真实按约返场",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "我为自己已经经历的死亡地点和已走过出口补上记录，再安排自己的返程",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "我实际等正常复活后按已定返线走回，把这次投入自己原先选定的回防目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "不限Spy表/Engineer/Medic，原生死后实际合法视角与可执行返场，不伪全图观察或按死亡推能力。",
+          "interpretation_boundary": "只当前合法观战能见处；不造透墙/敌方后台信息，不保证复活即无敌；Q/O/K均真人当时实际前提。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B11.MVMV1",
+          "scene": "熟悉MvM任务还能再开，精力足也能选未熟任务",
+          "text": "回想你原生MvM打完一段后仍有精神，当时确能进入自己已经打熟的任务，也有未熟的原生任务可选；不需要买MannUp门票才能玩这套普通波次。你不是只剩原任务能进。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48B_MVM",
+            "TF48R_BOUNTY",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我有未熟任务可去，仍自主回已熟任务从容走打，喜欢自己安排的熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "我进下一轮专练自己仍未掌握的持弹者识别和回口执行，主要想把本人应对练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我实际进入当时可进的未熟原生任务，先投自己选定的不同波次体验",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我为自己已经体验过的任务地点和通路补上记录，再决定下一轮去哪里",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "全职业普通MvM熟任务/新任务的自主舒缓，未完成全部任务或不用门票不是人格缺项。",
+          "interpretation_boundary": "H须精力足/有其他能做且自主选择；不保证固定任务永远排到/等候秒数，不把社区限时自定义当基础原生。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。"
+        },
+        {
+          "id": "TF48B11.MVMALT1",
+          "scene": "Spy已有停用升级，保钱准备别件还是在本任务续投",
+          "text": "回想你真用原生MvM Spy，当前Sapper已在本任务由自己买过对应机器人停用升级并用过，波间仍有当时未满且可买下一项；这笔钱也能给身体准备。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_MERC",
+            "TF48R_BOUNTY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际继续投同一已有升级并用过的Sapper，再在后续波真使用，想让这份自己已开始的对象继续成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我把钱实际投自己当时已选的身体准备，先做下一波站得住的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我先比较当时该Sapper与身体当前可买方案，再决定分配",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "当时确有愿回应并共同安排的真人时，我与愿协商真人约下一波自己停哪簇、他们从哪里处理，再真实按约迎波",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "同一已经本人投入的Sapper在本任务未满续长G，专属替代不要求每职业都有。",
+          "interpretation_boundary": "只当前界面真有下一项可买且已用过该Sapper；不假Sap直接摧毁全部机器人/背刺所有巨人秒杀，不跨任务永久保留。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B11.MVMALT2",
+          "scene": "真人新手朋友愿重试，自己原先更想换下一任务",
+          "text": "回想原生MvM你与真人朋友真失败过一波，当前仍能重试；朋友想再来，你原本更想去另一当前可开的任务，双方都能沟通。你自己曾采用“这一段带他熟悉波次”的引导者身份。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48B_MVM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我因这个自己采用的身份实际放下可去且更偏好的新任务，留下再打，让身份改变当前优先级",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "我与朋友约这次谁看炸弹、哪里回补和何时退，再真实按约重试",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "我陪朋友一起经历这次失败和再来、分享意外，主要喜欢共同玩这一段",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "我实际去当时可开的下一任务，先投自己当时更偏好的不同波次体验",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "真人共处/安排/自采身份代价分开，不按配合机器人推人际人格。",
+          "interpretation_boundary": "R须真实采用身份并让位；不是因为断线/只能留下才称R，不能强迫朋友跟去下一任务或保证无退出限制。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "TF48B12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "TF48B12.V1",
+          "scene": "Scout过点前，脚下黏弹先不先清",
+          "text": "回想你用默认Scout返场的一段：队友想从近口去争夺当前据点，墙脚确有敌方普通黏弹；自己Scattergun/Pistol有弹，可尝试射碎这些黏弹，也能从已通旁路先到点。你原先想快到点，眼前两条都真可尝试。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_STICKY",
+            "TF48B_SCOUT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际先用已有子弹射眼前黏弹，把这一段留给自己改选的清理通路目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我先绕已通旁路实际去当前争夺点，推进这轮已经列出的据点目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "当时确有愿回应并共同安排的真人时，我与当前愿沟通的真人队友约好谁先处理墙脚、谁在掩体等和何时一起过，再实际按约行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "我先核对当时自己的生命与两把枪剩弹，再决定这一段怎么走",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "横比撤回原12V1局末离车追分与01V1推车追敌近壳，改原生子弹破敌普通黏弹的清路/旁路抢点和真实队友过口安排。",
+          "interpretation_boundary": "Valve2008已发改动支持子弹可破普通黏弹；不写碰到就拆、不保证敌不先引爆/打中必安全。只当前可射/可旁路，不把所有投掷物同样拆除。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B12.ALT1",
+          "scene": "熟悉地图还想再打一局，精力足也有新图可去",
+          "text": "回想你在普通PvP结算后，自己精力足：当时真能继续进入已玩熟的一张常规地图，也有尚未玩熟的正常地图可进；你可直接换去新内容，并非只能在原处；若当时真有愿同玩的朋友，也可先和他约图。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48R_CASUAL",
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我有新图能去，仍自主回已熟地图从容走打，喜欢自己安排的熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "我在下一局专门反复练自己尚未掌握的一处当前可做走位/瞄准，主要想把本人操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我实际进入当时可进的新图，先推进自己选定的不同地图体验",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我与真愿一起玩下一局的朋友约去哪张、何时同进，再实际按约进入",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "去掉Soldier离线前提，普通任意职业可回顾熟图/新图选择；不把只能继续原服当H。",
+          "interpretation_boundary": "只当时真实可进入两种普通地图、不保证地图投票一票决定/任意挑未上线图。D需真愿同玩的朋友；H须自主且精力足。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。"
+        },
+        {
+          "id": "TF48B12.ALT2",
+          "scene": "和真人朋友自定一命拳击，实际建立并玩过吗",
+          "text": "回想你与愿意同玩的真人朋友在双方当前确能进入的原生私人对战里，各用Heavy一命拳击：你们自己约定只用拳、离开约定平地或掏枪就判本轮输，倒下也输；按现有复活与返场方式重开自己的轮次，不改游戏脚本。哪种实际投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TF48B_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我与朋友真的按这些成败限制打过、犯规或倒下就人工判负并重新开轮，还改规则再玩，想做出常规对战以外的新体验",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "我明确把这轮赢过对面这位真人作为胜负目标，实际再打这一轮",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "我与朋友约好何时一起返场、在哪开新轮并按约执行，重在让共同安排顺利进行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "我主要享受两人分享刚才出拳失误和意外、一起待在这局的经历",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "真实双方同意的私人拳击建规则与玩成败I，真人胜负K/共同安排Q/共处O各有明确动机，不冒普通Bot为真人。",
+          "interpretation_boundary": "只双方真已能进入并复活返场的私人对战，不要求插件/付费嘲讽、自动禁枪/裁判或固定复活数；不能只想过规则就选I。 未经历继续换其他已核专属，不跳过；不以命中、胜利或现实品德计分。"
+        },
+        {
+          "id": "TF48B12.MVMV1",
+          "scene": "本任务结束了，留战场画面还是开始下一轮",
+          "text": "回想你在原生MvM真完成一场任务，当前还可看见这一张实际打过的场景；普通PC截图能用，下一项自己已定的游戏内安排也能开始。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48B_PC",
+            "TF48B_MVM",
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际选机位与构图，留下自己想表达的战后场景画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我实际开始自己当时已选的下一轮任务准备，先投接下来的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "当时确有愿共同游玩或分享的真人朋友时，我与真人朋友分享刚才险些漏弹和救回来的经历，主要喜欢共同走过这一场",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "我为自己已经体验的任务地点和通路补上记录，再定下一轮去哪里",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "全职业完成后对实际MvM场景呈现/共同经历，截图不需要解锁外观；不是胜利自动S。",
+          "interpretation_boundary": "只有真完成过且当前还可取景，不造PhotoMode自由相机/暂停/自动胜利截图；O须真实愿分享朋友。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B12.MVMALT1",
+          "scene": "Scout收钱与当前可用MadMilk，自己先把哪次用出去",
+          "text": "回想你真用原生MvM Scout，已持当前能用的MadMilk，眼前机器人群能泼中，旁边又有一笔当前可取钱；这一段自己得离开一个位置才能做另一个。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际先泼当前可中的机器人群，让真人同伴当前能借此交手，先投自己选定的这一轮支援目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我实际先取这笔当时仍可取的钱，再返线，先投自己原定的资金准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "当时确有愿回应并共同安排的真人时，我与真人约自己何时泼哪簇、谁趁窗口处理、谁看钱，再真实照约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "我先比较自己当时现有投掷物与武器可用状态和配置，再决定怎样接这段",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "Scout已持实际MadMilk的支援窗口与资金位置，非一律Scout必须只收钱/无交手权。",
+          "interpretation_boundary": "只本人真实已持/可用该物、机器人群可中，不假命中必回血/固定慢速升级/免伤或机器人为真人。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        },
+        {
+          "id": "TF48B12.MVMALT2",
+          "scene": "一波失败后少了几个人，怎样重新分这几条线",
+          "text": "回想原生MvM一波失败后，部分真人已离开，当前原生界面仍允许剩下的人准备继续；仍有其他真人队员在场，你们刚才知道这波有前口与后方炸弹线需要照看。自己也能先做已有钱够的整备。哪种真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "mvm"
+          ],
+          "source_ids": [
+            "TF48R_FIELD",
+            "TF48R_MERC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时确有愿回应并共同安排的真人时，我与仍在场愿回应真人重新约谁看前口、谁回炸弹以及何时互相提醒，再实际按约继续这波",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "当时确有愿共同游玩或分享的真人朋友时，我和朋友一起留在这段合作里，分享刚才少人后的意外、共同继续尝试，主要喜欢共同经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "我实际先到升级站买当前已定且能负担的整备，再出场做自己原先选定的任务准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我先核对当前原生波次/准备与升级已有说明，再安排下一次尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实人员减少使前后线分工要重排，不复述10未知离位因果或11新手身份/去新任务；机器人不是合作对象。",
+          "interpretation_boundary": "只当前原生确能继续；协调/分享选项另须标签所写仍在场真人，不保证自动补满人数/固定六人硬门槛/无限等待，不强迫别人留下；未完成任务玩家也可回顾。 未经历继续其他已核专属，不跳过；不以打得好/钱多/胜利本身推现实人格。 适用性收窄：题内协调/共同经历选项各以标签所写真人条件为准；其他选项不要求队友回应。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+2f00a0aa632a"
+}

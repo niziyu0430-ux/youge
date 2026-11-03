@@ -1,0 +1,937 @@
+{
+  "id": "ror2v5",
+  "title": "雨中冒险2",
+  "game_ids": [
+    "steam-632360"
+  ],
+  "scope": "本体普通局的计时、传送器、道具与日志",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "不使用局内道具数值来表示持久养成。",
+    "普通箱子随机；候选商品、打印展示物和已出现日志均在题干给出。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体普通局的计时、传送器、道具与日志",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "ROR2V501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "单人局刚落到一关，传送器还没找到，眼前有已看见的箱子和两片未走过的地形。你先把第一段时间花在哪里？",
+          "scene": "初到一关先找什么",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿最陌生的地形看一段，想知道这次地图有什么展开",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先排搜索方向和沿途花钱顺序，把找传送器与开箱接在一起",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "借高处对照通路与遮挡，推传送器还可能在哪一侧",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "沿熟悉地形活动，专门练一次攻击、移动和技能冷却之间的衔接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "01找传送器与开箱的金币/路线顺序只是当局准备，两个y降mission_preparation_plan；未知地形w、空间推断p、已有技能专练t成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V501.V1"
+        },
+        {
+          "text": "只有最早的一张地图熟悉一些，开局能看到箱子、坡道与未走的一侧。你先做什么？",
+          "scene": "初到一关先找什么的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去自己上次没有亲自看过的那一侧",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把附近箱子和寻找传送器的来回路径接成一段",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "站到能看清地形的位置，判断几段路怎样相连",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "沿已认识的通路边移动边练一个总仓促的技能时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "01找传送器与开箱的金币/路线顺序只是当局准备，两个y降mission_preparation_plan；未知地形w、空间推断p、已有技能专练t成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "传送器就在眼前，尚未启动；附近还有能负担的箱子和没看完的平台。当前装备可以继续，何时开事件由你决定。你先做什么？",
+          "scene": "已找到传送器的时点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去未走过的平台看看，不预先要求那里一定有道具",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "对照周围遮挡、落差与可转移位置，推事件里能怎样绕行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先确定这一轮要练的技能时机，再启动事件专注练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按现有金币与剩余路线决定再开哪只箱子，然后接上事件",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "02传送器前是否再开箱是可行时间金币取舍，不是持续运营；两个y降当次计划，未知平台和真实地形/技能练习保留。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V502.V1"
+        },
+        {
+          "text": "只在第一关见过传送器，旁边还有一只箱子和一条短岔路可去，钱与当前状态允许选择。你先怎么接？",
+          "scene": "已找到传送器的时点的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿短岔路看清上次没走到的一角",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "看清附近高低差与障碍，自己想一条事件中的移动路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "保留现在装备，选一个出手或闪避时机作为这次练习重点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "把买箱、返回和启动排成自己能重复的步骤",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "02传送器前是否再开箱是可行时间金币取舍，不是持续运营；两个y降当次计划，未知平台和真实地形/技能练习保留。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "这关三选一商店候选都可看见，钱够买一件；你已有按命中触发的普通效果，候选里有提高攻击频率的一件。还可继续找别的交互，眼前先怎样决定？",
+          "scene": "三选一商店前",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_chests"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对这笔花费与沿途其他箱子的预算，再买或留钱",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "选一件会把自己带向少用打法的道具，认真试新方向",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "选提高攻击频率的一件，让现有攻击提供更多命中触发机会，实际检验两种效果互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先解释候选效果和叠加条件，推它在这局何时生效",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "03普通选少用商品i降try_available_setup，预算y降当次计划；V1补按命中触发与提高攻击频率候选、b真实增加触发机会互补。ALT不强制随机组合，b实义改买熟悉效果后享受手动反馈f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V503.V1"
+        },
+        {
+          "text": "还不熟商店类型，只看眼前效果能读懂的普通商品，既有熟悉效果也有平时少用的一件，钱够优先买一件。你先做什么？",
+          "scene": "三选一商店前的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_chests"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这次购买和之后开箱所需金币排清",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "买一件自己过去总忽略的效果，试着围绕它换种操作思路",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "优先买自己熟悉的一件效果，再沿合手的攻击和移动继续，享受连续命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "对照描述，弄清它需要什么条件才会发挥作用",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "03普通选少用商品i降try_available_setup，预算y降当次计划；V1补按命中触发与提高攻击频率候选、b真实增加触发机会互补。ALT不强制随机组合，b实义改买熟悉效果后享受手动反馈f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "单人局有拆解器和普通3D打印机：你持有一份某种按命中触发的普通道具，打印机展示同稀有度另一件，说明都懂，当前攻击能连续命中。你先做什么？",
+          "scene": "拆解器和打印机同在一关",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_print",
+            "ror2v5_scrap"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这当作机会，选择一件会改变惯常打法的展示物，认真试一种新局",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "比较保留原触发效果与换展示物怎样改变多次命中技能的作用，再决定哪套能互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先推清失去原效果、得到新效果后，哪些触发条件会改变",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "沿已经想好的资源转换步骤，安排先拆什么、何时打印与何时离开",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "04普通打印物试用i降try_available_setup，转换步骤y降当次计划；V1保单份普通按命中触发道具和连续命中攻击的真实配合比较，不误称可任意指定打印消耗。ALT无打印机，普通动作顺序仅try_action_variant、泛配合改实际f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V504.V1"
+        },
+        {
+          "text": "没有遇过打印机或拆解器，只在早期这一局已经拿到几种普通效果，也有后续开箱机会。现在先把注意力放在哪里？",
+          "scene": "拆解器和打印机同在一关的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_print",
+            "ror2v5_scrap"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕一件平时没认真使用的效果，改一段接敌与技能使用次序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "保持这局已拿到的普通效果，沿合手攻击与技能接敌，享受连续命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "读清已有效果的触发条件，验证自己此前的一种解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "核对当前金币，把后面开箱和找传送器接成顺路安排",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "04普通打印物试用i降try_available_setup，转换步骤y降当次计划；V1保单份普通按命中触发道具和连续命中攻击的真实配合比较，不误称可任意指定打印消耗。ALT无打印机，普通动作顺序仅try_action_variant、泛配合改实际f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "用自己已经熟悉的幸存者再打一局，最初几类敌人都认识，暂时不换难度。遇敌时你先给自己什么重点？",
+          "scene": "同一个幸存者的动作",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重复练一个技能交出后再移动或接回攻击的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用最合手的攻击方式，享受移动、命中与技能效果连着发生",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "看敌人动作、射线和遮挡的关系，解释自己该怎样穿过这片空间",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "故意换一个平时不用的技能先后与接敌距离，试出另一种过程",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "05熟悉幸存者只换技能/攻击移动顺序不是发明，两个i降try_action_variant；具体专练、反馈和地形解释成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V505.V1"
+        },
+        {
+          "text": "目前只用过初始幸存者，准备再次面对最先认识的几种敌人。你先想怎么打这一小段？",
+          "scene": "同一个幸存者的动作的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保持原来技能，专练一个自己总放得仓促的时点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "继续自己最顺手的射击与移动节奏，想反复体会它的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "观察敌人攻击与眼前柱子、斜坡的关系，再验证一条走法",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "不添任何新技能，只更换惯常攻击和移动的顺序",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "05熟悉幸存者只换技能/攻击移动顺序不是发明，两个i降try_action_variant；具体专练、反馈和地形解释成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "普通传送器已启动，首领和普通敌人仍在场，充能范围内有几片可绕空间；你已持按命中触发的效果，也有连续命中的当前攻击。不追最短用时，先关注什么？",
+          "scene": "传送器范围内的一段移动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留配置，练一次绕行后接回攻击的稳定时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "比较当前多次命中攻击与按命中触发道具的相接效果，检验这套触发互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "继续最合手的连贯攻击，体会范围里移动与命中不断接续的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "利用已看清的遮挡和高低差，推敌人攻击与自己路线怎样相互影响",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "06V1补已有按命中触发效果与连续命中攻击，b明确触发互补；ALT只单个普通效果时不强配b，实义改效果变化解释与熟悉动作核对p，和D地形遮挡推理是两个不同证据对象，允许同signal。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V506.V1"
+        },
+        {
+          "text": "只在最早一次传送器事件里，眼前已有能绕的石块或平台，初始技能仍够用；这局也已取得一件说明能看懂的普通道具效果。你先试什么？",
+          "scene": "传送器范围内的一段移动的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重复练一次移动结束再出手，直到自己能主动选时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用自己已知的一件普通效果解释攻击、移动或恢复为何变化，再在熟悉动作中对照核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "专注初始射击、技能与移动连续发生的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "弄清敌人的攻击从哪边被地形遮住，自己验证一个移动关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "06V1补已有按命中触发效果与连续命中攻击，b明确触发互补；ALT只单个普通效果时不强配b，实义改效果变化解释与熟悉动作核对p，和D地形遮挡推理是两个不同证据对象，允许同signal。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "单人局里已找到一台自己尚未取得环境记录的无线电扫描器，当前钱够启用，附近也还有未走地形。你先做什么？",
+          "scene": "已出现的环境日志",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_log",
+            "ror2v5_book"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂去尚未亲自看过的高处，想看看这片地形还有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把扫描器、附近箱子与传送器的花费和来回顺序排好再执行",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "为补上日志中这片环境的明确空格，付费取得记录",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "付费取得这份环境日志，准备局间细读，想知道这里的来历",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "07环境扫描器真实缺日志可付费取得c，怪物掉日志拾取也c，s留待局间读无局内读日志假设；花费/往返顺序只当次计划。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V507.V1"
+        },
+        {
+          "text": "还没有见过环境扫描器：一场早期战斗后，地上已经掉出自己没登记过的怪物日志，附近也有箱子和未走小路。你先做什么？",
+          "scene": "已出现的环境日志的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_log",
+            "ror2v5_book"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先绕进没走过的小路看看，日志留在随后经过的位置",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把拾取、开箱和继续寻找传送器排到同一次经过里",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先拾起它，给怪物日志里这项明确缺口补上记录",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "拾起这份记录留待局间读一读，关心这类生物在星球上的经历",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "07环境扫描器真实缺日志可付费取得c，怪物掉日志拾取也c，s留待局间读无局内读日志假设；花费/往返顺序只当次计划。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "和熟人同局已找到传送器，大家能沟通下一步；你已持按命中触发的道具，当前也有能连续命中的攻击。眼前先说什么？",
+          "scene": "真人小队的启动约定",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留用惯配置，告诉大家自己这次想专练哪个攻击或移动时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "问谁还要拿什么、何时集合，一起约定启动时点与活动范围",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "想和这几个熟人多走一段，边找东西边聊刚才的意外",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "说明想用连续命中攻击接已持道具的命中触发，检验两者互补，请大家留一段实际尝试空间",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "08真人启动/集合q和同游o成立，V1补实际多次命中与道具触发互补。单人ALT无需该随机组合，原b改单效果解释验证p，y改当次计划。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V508.V1"
+        },
+        {
+          "text": "只单人游玩，传送器尚未启动，附近还有箱子和一片没看完的地形；这局已取得一件说明能看懂的普通道具效果。你先安排哪件事？",
+          "scene": "真人小队的启动约定的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留当前工具，给传送器事件定一个自己要练的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把当前金币、开箱路线与启动顺序理顺",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先去那片陌生地形看一段，不先替它设奖励目标",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "用自己已知的一件普通效果解释当前攻击、移动或恢复的一处变化，再在熟悉动作中实际核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "08真人启动/集合q和同游o成立，V1补实际多次命中与道具触发互补。单人ALT无需该随机组合，原b改单效果解释验证p，y改当次计划。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想实际探索过的环境，以及自己取得后看过的日志，哪类经历最有分量？",
+          "scene": "日志与星球的记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_log"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "没有预定收获地走进陌生平台或洞口，看到了另一片星球地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把通路、落差和视野拼在一起，自己解释了原先没看懂的连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "一份预先记为缺项的环境或怪物记录，终于补进日志",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "读到物件或生物的记载，让一次次遭遇连上了这个星球的过去",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "读叙事与补全记录分开；不要求隐藏界域、DLC环境或完整日志。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V509.V1"
+        },
+        {
+          "text": "只回想最早两三次落地，以及已经拿到的一份记录，哪一点最留住你？",
+          "scene": "日志与星球的记忆的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_log"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "同一片环境还真有上次没亲自走过的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "自己从坡道与障碍之间弄清了一条来回通路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把日志里一个已经知道的空缺补上了",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "几句已读记载让眼前生物不只是攻击目标",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "读叙事与补全记录分开；不要求隐藏界域、DLC环境或完整日志。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想最近实际玩过的两局，即使都没有走到结尾，哪类变化最值得留下记录？",
+          "scene": "不同两局之间的变化",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "同样的技能反复用过以后，自己对一个具体时机更有把握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己让提高攻击频率的效果接上按命中触发的道具，再用多次命中技能带起触发，实际体验过互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "金币、开箱、找传送器与启动时点开始有更清楚的前后安排",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己选取过当时能取得、过去少围绕使用的普通道具效果，并亲手打一段体验那套配置",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "10当局道具不算g；普通少用效果试用i降try_available_setup、普通动作换序降try_action_variant、开箱启动先后去y。V1b写实攻速/命中触发/多击互补，ALT泛配合只记真实手动反馈f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V510.V1"
+        },
+        {
+          "text": "只回想自己最早两次开局，同一初始幸存者在手里，哪点变化最想记下？",
+          "scene": "不同两局之间的变化的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门练的移动或技能时机，第二次能更主动地选择",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己拿到普通效果后沿初始攻击与移动打过，命中和技能回应连续接上很直接",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "找路、花金币和回到传送器的步骤，被自己逐渐排得能接续",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己换过一段原先不采用的接敌顺序，真的玩出了另一种过程",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "10当局道具不算g；普通少用效果试用i降try_available_setup、普通动作换序降try_action_variant、开箱启动先后去y。V1b写实攻速/命中触发/多击互补，ALT泛配合只记真实手动反馈f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想实际打过的一段战斗，哪类变化最让你记住这一局？",
+          "scene": "一连串效果触发的时候",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ror2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己读过的触发条件在这一段被验证，终于解释了连锁如何发生",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己选取过当时能拿到、平时少用的普通道具，实际用那套效果打过这段体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "命中、效果、声音和敌人反应连续跳出来的即时反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "自己让提高攻击频率的道具接按命中触发效果，再用多次命中技能带起触发，实际体验了互补",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "11过去单纯少用道具试用和动作换序都非i，分别降try_available_setup/try_action_variant。V1真道具触发互补保b并写明；ALT泛配合实义改初始技能接攻击的专项练习t，不强配b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V511.V1"
+        },
+        {
+          "text": "只回想第一批普通道具在一场早期遭遇中的表现，最想记住什么？",
+          "scene": "一连串效果触发的时候的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ror2v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "开始明白某个效果为何在那一下触发",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己试过不同接敌与出手安排，发现另一种能继续玩的办法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "攻击和技能连着命中，反馈特别直接",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "自己专门练过初始技能接下一次攻击的交接，后来比开始更稳定",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "11过去单纯少用道具试用和动作换序都非i，分别降try_available_setup/try_action_variant。V1真道具触发互补保b并写明；ALT泛配合实义改初始技能接攻击的专项练习t，不强配b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ROR2V512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想和熟人真实打过的一次传送器事件，最有吸引力的是什么？",
+          "scene": "几个人的一次传送器事件",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "攻击、移动和连锁效果一段段接上，操作反馈很痛快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "几个人约好集合和启动，再在过程中商量着调整推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "一起发生的慌乱、笑话与临时相遇，后来还会被彼此提起",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "自己用多次命中技能给已持按命中触发效果提供机会，实际比较并体验了两种机制互补",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "12真人q/o真实且不混AI；V1技能多击接道具按命中触发互补b写明，单人ALT步骤只当次计划、普通技能换序仅try_action_variant，四项均过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V512.V1"
+        },
+        {
+          "text": "没有和熟人同局，只回想独自做过的一次普通传送器事件，最值得记什么？",
+          "scene": "几个人的一次传送器事件的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ror2v5_core",
+            "ror2v5_tp"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照敌人与场地，自己验证了一个原先不清楚的地形关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "从开箱到启动再到离开的资源与步骤被自己接顺",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "自己换过少用的技能先后，实际体验了另一种打法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "一处原本总仓促的移动和出手，经练习后能主动掌握",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "12真人q/o真实且不混AI；V1技能多击接道具按命中触发互补b写明，单人ALT步骤只当次计划、普通技能换序仅try_action_variant，四项均过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ROR2V512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+496cf7c2f0ef"
+}

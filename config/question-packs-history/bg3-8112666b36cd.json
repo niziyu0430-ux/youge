@@ -1,0 +1,967 @@
+{
+  "id": "bg3",
+  "title": "博德之门3",
+  "game_ids": [
+    "steam-1086940"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按自己熟悉的体验回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "BG301",
+      "number": 1,
+      "variants": [
+        {
+          "id": "BG301.V1",
+          "text": "创建这次准备走完整段旅程的角色，已有几种都能接受的方案。你先细化哪部分？",
+          "scene": "角色创建的停留",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CHOICES",
+            "BG3_BUILD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把种族、背景和行事方式写成一段愿意扮演的人生",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "比较职业与技能，先排一组之后想试的队伍配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "调整面容、发型与颜色，把外观做成想要的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "选一种平时不扮演的身份或职业，先给旅程留一个新变化",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "创建角色的停留可能出于代入、构筑、审美或实验。",
+          "interpretation_boundary": "角色种族、外观和善恶阵营不映射现实身份或道德。"
+        },
+        {
+          "id": "BG301.CORE",
+          "text": "只用当前已经创建好的角色，准备继续走一段旅程。先把注意力留给什么？",
+          "scene": "当前角色的准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把角色的来历与行事立场想清，按这个身份继续行动",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "整理已会能力与现有装备，试一组队伍配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "调整现有外观与呈现，让人物符合自己想留下的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "尝试一种平时不采用的行动，让这段旅程出现新变化",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG302",
+      "number": 2,
+      "variants": [
+        {
+          "id": "BG302.V1",
+          "text": "一段在意的对话检定没通过，游戏还能继续，当前模式也允许重新尝试。你先怎么做？",
+          "scene": "对话检定没有通过",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CHECK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着看结果怎样发展，让这一次经历进入当前故事",
+              "signal": "accept_story_outcome"
+            },
+            {
+              "id": "B",
+              "label": "读档再试，把这段体验带向原本想走的分支",
+              "signal": "reload_preferred_branch"
+            },
+            {
+              "id": "C",
+              "label": "查看技能与加值，先弄懂刚才的检定怎样结算",
+              "signal": "inspect_check_rules"
+            },
+            {
+              "id": "D",
+              "label": "换一个仍能推进目标的行动或交涉办法继续",
+              "signal": "seek_other_route"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "专门记录结果处理方式，不将读档与接受失败排出高低。",
+          "interpretation_boundary": "四项不直接转换为人格点；不把游戏检定等同于玩家口才、胆量或控制欲。"
+        },
+        {
+          "id": "BG302.CORE",
+          "text": "一次说服检定没有通过，但当前对话仍能继续，也能探索别的入口。这次先怎么做？",
+          "scene": "结果之后的行动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着看人物怎样回应，让这次结果进入当前故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自己给角色设定的立场，选择下一句愿意说的话",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先看熟练与加值说明，弄清刚才的检定怎样结算",
+              "signal": "inspect_check_rules"
+            },
+            {
+              "id": "D",
+              "label": "改用另一种可做的交涉、探索或能力，试着打开新的推进路径",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG303",
+      "number": 3,
+      "variants": [
+        {
+          "id": "BG303.V1",
+          "text": "角色升级时，面前几种法术或职业能力都能选。这一次先把选择留给哪种用途？",
+          "scene": "升级时的新选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_BUILD",
+            "BG3_CHOICES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接上队伍现有能力，试一条自己想研究的新配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "打开一种平时没试过的行动方式，用它处理之后的问题",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "贴近角色刚经历的身份变化，让能力与这条人生相符",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "沿一直给这名角色安排的长期方向，把培养继续推进",
+              "signal": "growth_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "升级决策不等于战力选择，区分组合、实验、代入和积累。",
+          "interpretation_boundary": "不考强势职业或兼职等级，不让规则熟练程度成为答案优劣。"
+        },
+        {
+          "id": "BG303.CORE",
+          "text": "只整理已经会用的法术与能力，不要求刚好升级。先按什么用途安排？",
+          "scene": "已会的能力",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让现有能力与装备接成一套实际能用的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "留一个平时不用的行动方式，拿去处理接下来的问题",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "按角色当前的经历与身份，挑他愿意采用的做法",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "沿自己给这个角色定的长期方向，把已有培养接下去",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG304",
+      "number": 4,
+      "variants": [
+        {
+          "id": "BG304.V1",
+          "text": "一天冒险之后回到营地，同伴还有想说的话。什么最容易让你暂时放下整理背包去听？",
+          "scene": "营地里尚未说完的话",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_REST",
+            "BG3_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想知道今天的事件怎样改变了他的想法和后续故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想以这名角色的立场回应，让关系符合自己的扮演",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "想把一路积累的关系延续下去，看看它慢慢变成什么样",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "喜欢回到熟悉营地挨个聊聊，让一天的冒险慢慢收尾",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "将营地人物体验区分为叙事、代入、积累与日常。",
+          "interpretation_boundary": "NPC关系不直接记真人社交信号，不默认恋爱或与所有同伴亲近。"
+        },
+        {
+          "id": "BG304.CORE",
+          "text": "还没走到某位同伴的特别事件，只回想已经有过的人物来往，哪部分最愿意继续？",
+          "scene": "人物的日常来往",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "想知道对话之后的经历，人物会怎样改变",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "以自己的角色立场回应，让来往符合这次扮演",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "把一路积累的熟悉延续下去，看看关系慢慢变成什么样",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "在冒险停顿时回到熟悉来往，让这段经历从容收尾",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG305",
+      "number": 5,
+      "variants": [
+        {
+          "id": "BG305.V1",
+          "text": "准备面对已经大致了解的战斗，先留一轮准备时间，不必赶着开打。先做哪件事？",
+          "scene": "战斗前的队伍安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_BUILD",
+            "BG3_REST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把法术、装备与职业能力排成一套准备实际使用的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "清点资源与补给，把这场之后的路和休息一并接好",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "定一条与平时不同、自己接受的作战限制，试另一种解法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "把上次没处理好的出手顺序和位置，单独留成这次练习点",
+              "signal": "practice_seeker"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在同样知道战斗信息时，区分构筑、资源组织、实验与掌握。",
+          "interpretation_boundary": "不把高难度、少休息或少用消耗品看成更高水平。"
+        },
+        {
+          "id": "BG305.CORE",
+          "text": "准备面对一段已经了解的回合战斗，现有法术和装备都能用。先做哪项准备？",
+          "scene": "当前能力的准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把法术、职业能力与装备连起来，排一套实际可用的出手",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "清点法术位、补给与之后的路线，把这场交战和后续休息接好",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "选一条平时不用、自己也接受的办法，试另一种解法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "定一个上次没处理顺的出手或位置，这次亲手再磨一段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG306",
+      "number": 6,
+      "variants": [
+        {
+          "id": "BG306.V1",
+          "text": "知道影心的莎尔信仰、封存的记忆与她携带的秘密后，哪件事最让你想继续跟进？",
+          "scene": "影心留下的疑问",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想听她怎样理解这些经历，看看人物会如何改变",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想把她前后说法与沿途信息连起来，解释那些矛盾",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "想按自己扮演的角色立场，决定与她怎样同行",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "想围绕她的能力和队伍安排，让这位同行者继续成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "用真实人物矛盾进入叙事、求解、代入和培养，不问玩家是否赞同某个宗教。",
+          "interpretation_boundary": "支持或反对她的决定不直接证明现实善恶、同理心或人格类型。"
+        },
+        {
+          "id": "BG306.CORE",
+          "text": "没有遇到影心也能回想已经交谈过的人。哪种信息最让你想把人物经历接下去？",
+          "scene": "已交谈过的人物",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "他怎样讲述过去，又怎样看待现在发生的事情",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "前后说法有了出入，想把分散信息接起来解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己以当前角色的立场，会愿意和他怎样相处",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "人物的声音、外形与相遇场景，共同留下了怎样的画面",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG307",
+      "number": 7,
+      "variants": [
+        {
+          "id": "BG307.V1",
+          "text": "已经能请守墓人重新配置，原角色也玩得下去，但想试一次改变。你会先怎样改？",
+          "scene": "与守墓人重新配置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CLASS",
+            "BG3_BUILD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按职业、属性与装备的关系，重新接一套想研究的构筑",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "走一条没试过的职业路径，拿它处理接下来的问题",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "按角色经历带来的身份变化，调整他会采用的能力",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "沿自己给这名同伴定的长期方向，重新整理培养安排",
+              "signal": "growth_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "将重新配置当作不同动机的正常玩法，不等于原来选错。",
+          "interpretation_boundary": "不考洗点价格，不按是否看构筑攻略判断聪明。"
+        },
+        {
+          "id": "BG307.CORE",
+          "text": "不需要重新配置职业，只整理当前角色的法术、戏法和已会能力。先怎样调整？",
+          "scene": "现有能力的调整",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按职业能力与现有装备的关系，接一套想验证的回合配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "挑一种以前少用的戏法或能力，拿去试新的解决方式",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "按角色刚经历的身份变化，选择更愿意采用的做法",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "沿给这个角色定的长期方向，整理接下来想培养的一步",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG308",
+      "number": 8,
+      "variants": [
+        {
+          "id": "BG308.V1",
+          "text": "同伴对刚才的行动给出不同反应，当前事件可以继续。接下来你先做什么？",
+          "scene": "同伴的不同看法",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CHOICES",
+            "BG3_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "听完各自的反应，把这些话放回他们此前的经历里",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "继续按自己的角色立场行动，让分歧进入这段扮演",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "在之后的相似场面里换一次平时不用的做法，观察新后果",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "对照前后说过的话，先整理每个人没直接明说的信息",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "问关注点而非强迫选站队；允许角色间分歧成为体验。",
+          "interpretation_boundary": "不将同伴好感数值当现实人际能力，也不将游戏立场当心理诊断。"
+        },
+        {
+          "id": "BG308.CORE",
+          "text": "没有发生同伴分歧，只回想最近一段人物对话。接下来先做什么？",
+          "scene": "对话之后的行动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把听到的话放回人物的经历里，理解他怎样走到这里",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "继续按自己角色的立场行动，让这段关系进入扮演",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "在之后相似的场面里试一种新行动，看看会出现什么后果",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "整理前后信息，找几句没有直接说清的话怎样接起来",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG309",
+      "number": 9,
+      "variants": [
+        {
+          "id": "BG309.V1",
+          "text": "法术与其他队伍资源已有消耗，营地补给够用，没有眼前必须处理的限时危险。你先按什么安排休息？",
+          "scene": "休息前的资源整理",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_REST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把下一段路与资源消耗放一起，排一个自己接受的停顿",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按角色处境和今天经历，选一个故事里自然的落脚点",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先看看营地可继续的人物内容，把这段对话接上",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按自己现在的游玩节奏停下来，不再给今天增加目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "资源、代入、叙事与舒缓均可影响休息安排。",
+          "interpretation_boundary": "不声称休息从无剧情后果；不把频繁休息记为不善规划。"
+        },
+        {
+          "id": "BG309.CORE",
+          "text": "没有复杂的营地安排，只准备把当前这段冒险收尾，眼前也没有限时危险。先怎样停下来？",
+          "scene": "这段冒险的停顿",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "清点现有资源和下一段去向，把之后的准备接顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按角色今天的经历，选一个自己觉得自然的落脚点",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "整理刚听过的人物内容，把惦记的一段对话接上",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按自己当前的游玩节奏暂停，不再为今天添新目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG310",
+      "number": 10,
+      "variants": [
+        {
+          "id": "BG310.V1",
+          "text": "熟人联机中，有人想先交涉，有人想探索旁边入口，没有限时危险。你先提出怎样推进？",
+          "scene": "多人冒险的一次分歧",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_WORLD",
+            "BG3_CHOICES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "说清各自想体验什么，约一个都能接受的先后顺序",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "顺着眼下大家的兴趣走，把意外也当成共同经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "轮流按各自角色的身份决定一段，让不同立场进入故事",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "约好试一条平时不会选的行动，看看四个人会把局面带去哪",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "问共同冒险的期待，不把主导、顺从或开麦频率直接当性格。",
+          "interpretation_boundary": "不能用NPC同伴选择替代真人协调；单人玩家必须换题。"
+        },
+        {
+          "id": "BG310.CORE",
+          "text": "一直单人游玩，面前的交涉与旁边入口都能继续，没有限时危险。你先做什么？",
+          "scene": "单人探索",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把两条线的目标和已有信息排清，先接一条能继续推进的安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "走向没看过的入口，看看附近还有什么新发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "按当前角色的身份与立场，选他会先采用的行动",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "试一条平时不用的能力或做法，让这一段出现新变化",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG311",
+      "number": 11,
+      "variants": [
+        {
+          "id": "BG311.V1",
+          "text": "想为这次博德之门旅程留一页记录，哪种内容最值得你整理？",
+          "scene": "一页旅行记录",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CHOICES",
+            "BG3_BUILD",
+            "BG3_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "人物的几次选择怎样前后相接，走到现在这个结果",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己的角色从设定到行动，怎样活成了一条具体道路",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "几种职业、法术与装备是怎样试出配合的",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "角色与场景怎样摆在一起，能留下自己想要的画面",
+              "signal": "style_director"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "给叙事、扮演、构筑与审美一个回顾情境，检验前题是否呼应。",
+          "interpretation_boundary": "截图可用普通记录工具，不依赖特定版本的相机功能。"
+        },
+        {
+          "id": "BG311.CORE",
+          "text": "只为已经体验过的一小段旅程留记录，哪类内容最值得你整理？",
+          "scene": "一小段旅行记录",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "人物说过的话与几次事件，是怎样前后接起来的",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己的角色身份，是怎样逐渐变成具体行动的",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "现有能力与装备，怎样形成了实际有用的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "人物与场景怎样呈现，才能留下自己想要的画面",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "BG312",
+      "number": 12,
+      "variants": [
+        {
+          "id": "BG312.V1",
+          "text": "如果愿意再开始一段博德之门3旅程，下面哪种变化最吸引你？",
+          "scene": "另一次旅程的理由",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_CHOICES",
+            "BG3_BUILD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用另一种种族、背景或角色立场，让身份改变这一路的选择",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "追一条之前没有经历的人物或事件分支",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "围绕另一组职业与法术，让队伍形成不同的能力配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "给自己定一条不同寻常的玩法约定，试出原来没想过的局面",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "把重开明确落实到游戏确实存在的身份、分支、构筑和实验。",
+          "interpretation_boundary": "是否真的有时间重开另行记录，不把现实时间限制解释成缺少兴趣。"
+        },
+        {
+          "id": "BG312.CORE",
+          "text": "不要求已通关或真的重开，只回想当前旅程，哪类变化最让你愿意再体验？",
+          "scene": "还想体验的变化",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BG3_CORE",
+            "BG3_BUILD",
+            "BG3_CHOICES",
+            "BG3_REST",
+            "BG3_CHECK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让不同的角色身份与立场，带出另一条行事道路",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "沿还没经历的人物内容，接出一段新的后续",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "换一组现有能力与装备，形成不同的实际配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "定一条平时不用的玩法约定，试出没有想到过的局面",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+8112666b36cd"
+}

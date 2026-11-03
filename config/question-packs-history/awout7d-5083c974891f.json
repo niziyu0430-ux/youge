@@ -1,0 +1,951 @@
+{
+  "id": "awout7d",
+  "title": "A Way Out（双人合作冒险）",
+  "game_ids": [
+    "steam-1222700"
+  ],
+  "scope": "PC本体双人剧情：里奥与文森特已到过的场景",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "本体必须真人双人，不提供虚构单人或AI搭档；不要求双方即时交换里奥/文森特。",
+    "没有武器配装或角色永久升级题；平台成就与小游戏结果分别给前提。未到后段可换早期放风院情境。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC本体双人剧情：里奥与文森特已到过的场景",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "AWOUT7D01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "医务室取工具这段已经亲手试过，当前可以在这处重新尝试：文森特能与护士交谈，里奥要经过她会回头的位置。真人搭档也在。你先做什么？",
+          "scene": "医务室里的护士和工具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_PLAY",
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和搭档约清什么时候持续交谈、什么时候示意经过，再按同一个取工具目标行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "对照护士交谈与回头时的视线，弄清哪一段行动会被看见",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "固定自己角色负责的一次接话或绕行时点，亲手练这一处",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "和搭档聊刚才护士突然回头的插曲，喜欢两人一起提起这次经历",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "01医务室护士分心取工具是实际早期合作；ALT放风院两人角色分隔，q只约各自查看与结束停留时点，不让物理碰头；p实测各自边界。",
+          "interpretation_boundary": "本作必须真人双人；替代用于进度与场景差异，不虚构单人或NPC搭档。",
+          "id": "AWOUT7D01.V1"
+        },
+        {
+          "text": "只玩到最初放风院：双方角色各在分隔的可达一侧，冲突未触发；各自能走动、与囚犯交谈，真人搭档也能交流并查看分屏。先做什么？",
+          "scene": "医务室里的护士和工具的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_PLAY",
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "约好各自在能去的一侧先看哪里、何时结束停留接主线，再按共同安排行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "对照分屏里的围栏、入口与各自位置，先判断哪些通路各自可达，再亲手到边界核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "选自己角色可用的一处运动互动，亲手练它的操作节奏",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "与真人搭档聊院里人物刚说过的话，让初入监狱的经历成为两人的话题",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "01医务室护士分心取工具是实际早期合作；ALT放风院两人角色分隔，q只约各自查看与结束停留时点，不让物理碰头；p实测各自边界。",
+          "interpretation_boundary": "本作必须真人双人；替代用于进度与场景差异，不虚构单人或NPC搭档。",
+          "id": "AWOUT7D01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "已经进入洗衣间后部，当前能由一人站上较高处，另一人从床单车取物递上；这段尚能行动，真人搭档也能交流。先投入哪件事？",
+          "scene": "洗衣间把床单送上去",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较两人站位与交付提示，试清在哪里才能把床单递接上",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "固定自己负责的一次搬送或投递，亲手练站位与出手",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先在当前仍可达而自己没看过的房间一侧走走，看看这间洗衣房另一面的布置",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先与搭档分清谁留在高处、谁往返取床单，以及什么时候递，再照同一目标行动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "02床单后部高处/下方递送真实且有限，练习仅自己站位与输入；ALT专写本角色可用运动的机制验证、稳定练习、直接反馈与共同结束时点，移除泛探索重用。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D02.V1"
+        },
+        {
+          "text": "还没到洗衣间：放风院冲突未触发，双方仍各在自己可达的一侧；你当前角色有一种可操作的运动，真人搭档也能交流。先做什么？",
+          "scene": "洗衣间把床单送上去的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照运动互动时提示和角色动作，试清一次输入怎样对应一次动作",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "选当前角色能做的运动互动，亲手练操作节奏",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "让提示输入与自己角色的伸展动作接着发生，享受一下一下即时回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "和搭档约好各自先试多久、何时结束停留继续主线，再按共同时间安排行动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "02床单后部高处/下方递送真实且有限，练习仅自己站位与输入；ALT专写本角色可用运动的机制验证、稳定练习、直接反馈与共同结束时点，移除泛探索重用。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "已经到逃狱隧道，手电和当前能操作的阀门都在眼前；两人都实际见过这里的水路与照明限制。当前先怎样继续？",
+          "scene": "隧道里的手电与阀门",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定自己负责的一次转身照明或通过窄处的移动，亲手练得更顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "边走边和搭档聊刚才照错方向或差点走散的插曲，延续两人的话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "按当前谁持手电、谁能到阀门，约清照明方向、转阀与示意继续的时点，再照共同路线行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "对照阀门转动和水路变化，试清哪个变化让眼前通路可走",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "03隧道手电与阀门按当前持有者/可操作位置协调，不要求即时换角色；ALT改分屏构图、交流不同NPC见闻、共同推进时点与分隔通路验证，不再又一组泛运动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D03.V1"
+        },
+        {
+          "text": "没玩过隧道：放风院冲突尚未触发，双方各在可活动的一侧，围栏、人物和器械能在分屏里查看。先投入哪件事？",
+          "scene": "隧道里的手电与阀门的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在自己这一半画面里选择人物站位，让围栏与器械成为前景，用普通截图做一张初入监狱的主题画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "和真人搭档交流各自听到的囚犯反应，把分屏里不同见闻接成两人的话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "约清各自先听哪段人物话、何时结束查看再推进主线，不要求角色走到同一处",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "对照两边画面中的围栏、院门与角色朝向，判断各自能走的边界，再亲手移动核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "03隧道手电与阀门按当前持有者/可操作位置协调，不要求即时换角色；ALT改分屏构图、交流不同NPC见闻、共同推进时点与分隔通路验证，不再又一组泛运动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "背靠背攀墙这段已经玩过，当前能在这里再试；两边的时机提示与身体高度都能看见。开始这一轮，先把注意力放在哪？",
+          "scene": "背靠背攀墙的一次再试",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着把自己的按压、角色上移和攀升反馈连起来，享受两边动作接上的过程",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先与真人搭档约清报数和等待的方式，两人按同一攀升目标保持节奏",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "比较自己输入、提示位置与两人高度，弄清为什么有人快了会失去平衡",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "固定自己这一侧的一次输入，亲手练落在提示区间的时点",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "背靠背攀墙提示与角色高度是真机制。放风院替代两人分隔，q为真人共同按分屏观察一次输入反馈，t专练进入/退出运动接回走动，不要求跨区或轮流共用器械，区别02ALT运动连贯输入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D04.V1"
+        },
+        {
+          "text": "没到过攀墙：放风院冲突未触发，你当前角色有可操作的运动；真人搭档能交流，但两位角色仍各在各自可达的一侧。先做什么？",
+          "scene": "背靠背攀墙的一次再试的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前可用的运动动作连续做出来，享受角色即时响应的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "和搭档约清自己先试哪次输入、他看哪段分屏反馈，一起确认互动怎样响应，再接主线",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "比较一次输入与角色运动的响应，弄清操作怎样对应动作",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "固定一次进入运动、退出后接回走动的衔接，亲手练自己何时停下与转身",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "背靠背攀墙提示与角色高度是真机制。放风院替代两人分隔，q为真人共同按分屏观察一次输入反馈，t专练进入/退出运动接回走动，不要求跨区或轮流共用器械，区别02ALT运动连贯输入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "已经来到农场，卡车维修、加油和启动的这段都实际看过，当前工具与可操作位置已能找到；真人搭档也能交流。你先做什么？",
+          "scene": "农场卡车还差的几步",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_FARM",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "与搭档分清当前谁处理轮胎、谁补燃料，何时一起试启动，再按共同目标行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "对照轮胎、燃料与启动时的反馈，逐项验证卡车为什么还不能走",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "固定自己负责的一次拧紧、搬运或启动输入，亲手练得更顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "在当前仍可进入且没查看过的农场一侧走走，看看逃亡路上这处地方的另一面",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "05卡车维修、燃料与启动已实际见过才用，q是当前可做分工；ALT改真实囚犯故事、个人查看步骤0分、自己一侧未知角落与共同推进，不再第三次泛运动输入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D05.V1"
+        },
+        {
+          "text": "还没到农场：放风院冲突未触发，双方各在能走动的一侧；自己这侧有可谈囚犯、运动处和未看过的角落，也有可继续主线的提示。先做什么？",
+          "scene": "农场卡车还差的几步的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_FARM",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先和搭档决定还要各看哪段、愿意留多久，再按双方约定继续主线",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "听完自己这侧囚犯的话，把他提到的监狱日常与刚见到的入狱过程联系起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先排清自己这一侧看人物、运动处和主线提示的顺序，再亲手照这次安排走",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先到自己这一侧尚未查看的可达角落，看看那边的人物与环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "05卡车维修、燃料与启动已实际见过才用，q是当前可做分工；ALT改真实囚犯故事、个人查看步骤0分、自己一侧未知角落与共同推进，不再第三次泛运动输入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "已到农场能用钢琴与班卓琴的房间；当前账号可取得本体成就，那项共同演奏仍未解锁，双方也愿在这里再试一会。先做什么？",
+          "scene": "钢琴与班卓琴的共同演奏",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_MINI",
+            "AWO7D_FARM",
+            "AWO7D_ACHIEVE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先和搭档约好什么时候开始、哪里互相等一拍，再按共同的演奏目标行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "固定自己乐器的一处输入时机，亲手反复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "边弹边与真人搭档聊两人刚才的错拍，喜欢一起形成的共同话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "和搭档实际把共同演奏接上，争取补入那一项明确仍缺的成就记录",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "06农场钢琴/班卓琴共同演奏只要求当前账号有成就权限、记录仍缺，不用精确音符数或借角色即时互换。ALT无成就要求，个人次数目标非纪录竞争，改当前已有输入节奏体验0分。",
+          "interpretation_boundary": "个人次数目标不冒充内建榜单；如当前角色或阶段没有用过这个运动，也可继续换。",
+          "id": "AWOUT7D06.V1"
+        },
+        {
+          "text": "没到农场或没有那项成就目标：放风院冲突未触发，双方仍各在可达一侧；你当前角色能做一种运动，真人搭档也能交流。先做什么？",
+          "scene": "钢琴与班卓琴的共同演奏的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_MINI",
+            "AWO7D_FARM",
+            "AWO7D_ACHIEVE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "与搭档约清各自停留到何时，再接着推进两人的主线，实际照共同安排行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "固定自己的一次输入节奏，亲手练当前运动互动",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "和真人搭档聊刚才院里人物与运动的趣事，让它成为两人的话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "在自己当前能做的运动里换一次已会的输入节奏，亲手体验角色动作停顿与连贯的差别",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "06农场钢琴/班卓琴共同演奏只要求当前账号有成就权限、记录仍缺，不用精确音符数或借角色即时互换。ALT无成就要求，个人次数目标非纪录竞争，改当前已有输入节奏体验0分。",
+          "interpretation_boundary": "个人次数目标不冒充内建榜单；如当前角色或阶段没有用过这个运动，也可继续换。",
+          "id": "AWOUT7D06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "已经到过医院可玩四子棋的位置，真人搭档同意再来一盘，棋盘刚空下。先给这一盘什么重点？",
+          "scene": "医院里刚空下的四子棋",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_MINI",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和真人搭档边下边聊刚才的堵截与意外，喜欢两人一起有话说",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "双方同意这一盘各自前四步不许连续使用同一列，现在亲自按新增限制落子",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先定这盘自己想争取的胜负结果，实际下完再看结果",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "观察两边刚落子的关系，试清哪条连线会形成威胁",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "07医院四子棋前四步不连续同列是真双方额外规则，保留i但改当前落子措辞。ALT个人运动次数目标不冒充k，改本作固定半屏站位/器械构图a。",
+          "interpretation_boundary": "新棋规只限空盘开局，双方同意，始终有其他可落列；不是本体正式玩法模式。",
+          "id": "AWOUT7D07.V1"
+        },
+        {
+          "text": "没到医院或没玩四子棋：放风院冲突未触发，你当前角色有可操作运动，围栏与器械也能用自己半边画面取景；双方角色各在可达一侧。先做什么？",
+          "scene": "医院里刚空下的四子棋的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_MINI",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "与搭档聊刚才院里人物的反应，让它成为两人的话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "固定自己的一次输入节奏，亲手反复练当前运动",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "在自己半边画面选人物与器械的相对位置，用普通截图做一张自己安排的院中主题画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "比较输入提示与运动动作，弄清当前互动怎样响应",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "07医院四子棋前四步不连续同列是真双方额外规则，保留i但改当前落子措辞。ALT个人运动次数目标不冒充k，改本作固定半屏站位/器械构图a。",
+          "interpretation_boundary": "新棋规只限空盘开局，双方同意，始终有其他可落列；不是本体正式玩法模式。",
+          "id": "AWOUT7D07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "已经到机库，飞镖活动当前可玩，真人搭档也愿意在继续前留一小段时间；机库一侧仍有自己没查看过但可到达的地方。先做什么？",
+          "scene": "机库里的飞镖与另一边",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_MINI",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走到那处没看过的可达一侧，看看这段逃亡终点前还布置了什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先给这轮飞镖定清想争取的分数或胜负目标，玩完再看结果",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "固定同一种瞄准与出手，亲手练把飞镖投向自己选的位置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "和真人搭档边玩边聊两人刚才的出手，喜欢共同的话题",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "08机库飞镖真实计分/胜负k与自己的出手练习t分开；ALT改自己一侧未知角落w、个人查看步骤0分、NPC故事s、真人交换见闻o，减少重复运动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D08.V1"
+        },
+        {
+          "text": "还没到机库：放风院冲突未触发，双方各在能走动的一侧；自己这侧有可交谈囚犯、未查看角落和可继续主线的提示。先做什么？",
+          "scene": "机库里的飞镖与另一边的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AWO7D_MINI",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "到自己一侧没查看过的可达角落，看看院子这边另一处环境与人物",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把自己这一侧听人物话、查看角落与接主线的先后排清，再亲手照这次安排走",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先听完自己这侧一位囚犯的话，想了解他提到的入狱日常和人物处境",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "与真人搭档交流两边刚听到的不同见闻，喜欢这段共同形成的话题",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "08机库飞镖真实计分/胜负k与自己的出手练习t分开；ALT改自己一侧未知角落w、个人查看步骤0分、NPC故事s、真人交换见闻o，减少重复运动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想自己确实做过医务室取工具、洗衣间递床单或背靠背攀墙的一段。哪件真做过的投入最有分量？",
+          "scene": "双人真的把动作接上的一次",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AWO7D_PLAY",
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "与真人搭档先约好时机和分工，后来确实按共同目标把两步接上",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "比较角色位置与提示变化，亲手弄清了那处互动为什么能成立",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "固定自己负责的一次绕行、递物或输入，亲手重复练过",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "和真人搭档聊起那次意外与反应，后来又一起提到这段共同经历",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "09过去合作机关与最初分隔放风院独立；ALT q改实际约结束停留时点而非虚构碰头，p是实际核对各自边界。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D09.V1"
+        },
+        {
+          "text": "只玩到最初放风院也可回想：冲突前，双方各在分隔而可活动的一侧。哪件自己确实做过？",
+          "scene": "双人真的把动作接上的一次的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AWO7D_PLAY",
+            "AWO7D_ESCAPE",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己和搭档约过各自先看哪处、何时结束停留继续主线，并确实按共同安排行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "自己对照过分屏与围栏、院门，亲手走到边界核对，弄清了各自能走的范围",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "选自己角色可用的运动互动，反复练过一次输入节奏",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "与真人搭档聊起院里人物的几句反应，后来又一起说过这段经历",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "09过去合作机关与最初分隔放风院独立；ALT q改实际约结束停留时点而非虚构碰头，p是实际核对各自边界。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己确实看过里奥与文森特谈到家人，或已经得知后段身份变化的经历。哪件真实投入最能说明当时的喜欢？",
+          "scene": "两人前后说过的话",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AWO7D_PLAY",
+            "AWO7D_ESCAPE",
+            "AWO7D_FARM",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和真人搭档继续讨论两人的经历与各自看见的细节，让共同故事延续成话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "回到当时确实能再试的一处合作段，先共同约好分工并实际做过",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "挑自己负责的一处移动、瞄准或输入，亲手反复练过它的控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "把两人前后说过的话与后来的行动连起来，想理解这段关系为什么走成这样",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "10角色关系只据游戏已见剧情；ALT不再重复运动练习，改实际用固定分屏做自己站位构图a；两人各自一侧约主线，不预设物理会合。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D10.V1"
+        },
+        {
+          "text": "还只看过开场身份交代：回想最初真正操控过自己角色的一段，哪件确实发生过？",
+          "scene": "两人前后说过的话的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AWO7D_PLAY",
+            "AWO7D_ESCAPE",
+            "AWO7D_FARM",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "与真人搭档聊起分屏里的不同见闻，让初入监狱的经历成为共同话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "自己和搭档约过各自在可达一侧先看哪里、何时接主线，并实际照共同安排行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "自己选过角色在固定分屏半边里的站位，把围栏或器械放进主题构图，实际截下过那张画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "接着开场人物交代继续玩，想知道两人为何会在这里相遇",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "10角色关系只据游戏已见剧情；ALT不再重复运动练习，改实际用固定分屏做自己站位构图a；两人各自一侧约主线，不预设物理会合。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想自己确实与真人搭档在医院玩过四子棋的一段。哪种真实投入最有分量？",
+          "scene": "主线之外真正下过的棋",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AWO7D_MINI",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "与真人搭档边下边聊，后来还会提起那次共同经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "在空盘开局，两人同意各自前四步不能连续用同一列，并亲自按额外限制玩过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先定过这盘自己想争取的胜负结果，完整下过后确实对照了结果",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "观察两边棋子的连线威胁，亲手验证了自己对某种局面的解释",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "医院四子棋胜负、连线解释与开局额外禁连续同列都真实；早期回顾当时分隔区域里的本角色运动，个人次数不冒充k，已有输入节奏变体只记0分，练习与解释各自成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D11.V1"
+        },
+        {
+          "text": "没玩过后段活动：回想放风院冲突前，双方仍在分隔区域时，自己角色实际做过的院中运动。哪件真实发生过？",
+          "scene": "主线之外真正下过的棋的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AWO7D_MINI",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和真人搭档聊起两人的运动表现或院里趣事，形成共同话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "比较过提示与角色动作，自己想通了这种互动怎样响应",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己换过当时已会的一段输入节奏，亲手体验过同一运动动作停顿与连贯的变化",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "固定同一种输入节奏，亲手练过这项动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "医院四子棋胜负、连线解释与开局额外禁连续同列都真实；早期回顾当时分隔区域里的本角色运动，个人次数不冒充k，已有输入节奏变体只记0分，练习与解释各自成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AWOUT7D12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次两人都还有精力、也能继续新内容的游玩。哪件确实做过的事最能解释那次投入？",
+          "scene": "仍愿意留在一段熟悉经历里",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AWO7D_PLAY",
+            "AWO7D_MINI",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在已经可重玩的熟悉小段或小游戏里多玩了一会，因为那种共同回到熟段的感觉安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "与真人搭档继续聊这段逃亡里的趣事，喜欢共同经历带来的话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "先约好下一处机关目标和谁做哪一步，真正把分工接起来",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "沿已开始的人物事件继续玩，想知道两人怎样面对家人和彼此",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "12强制真人双人，无solo/AI虚构；ALT h有精力且主线可做时真实主动熟悉停留，q是分隔区域各自安排与共同推进时点，不要求角色碰头。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D12.V1"
+        },
+        {
+          "text": "只玩过放风院：回想冲突未触发、双方各在自己可达一侧活动的最初一段。哪件自己真做过？",
+          "scene": "仍愿意留在一段熟悉经历里的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AWO7D_PLAY",
+            "AWO7D_MINI",
+            "AWO7D_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力、主线也能继续，自己仍在这一侧已熟悉短路走过一会，喜欢那段可自主停留的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "与真人搭档聊起院里人物与分屏见闻，享受共同形成的话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "自己和搭档约过各自先看哪处、何时结束停留继续主线，并确实按共同安排行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "沿开场人物交代继续玩，想知道两人为什么会逐步走到一起",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "12强制真人双人，无solo/AI虚构；ALT h有精力且主线可做时真实主动熟悉停留，q是分隔区域各自安排与共同推进时点，不要求角色碰头。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AWOUT7D12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+5083c974891f"
+}

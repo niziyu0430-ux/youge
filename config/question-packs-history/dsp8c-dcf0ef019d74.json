@@ -1,0 +1,971 @@
+{
+  "id": "dsp8c",
+  "title": "戴森球计划：球面带路、双产物与科研输入",
+  "game_ids": [
+    "steam-1366540"
+  ],
+  "scope": "已发布EA基础单人自动化，黑雾可关闭或当前无战斗急事；12手写早期替代不要求炼油、物流站、增产剂或戴森球",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "矿机直接出带，生产机取放通常需供电分拣器；Mk.I距离情境不外推后期集装分拣器。液体同样走带，绝不混幸福工厂水管。",
+    "基础炼油两个产物都需去路；实验室矩阵生产与研究消耗是两种模式；行星站仅同星球，不用星际站规则替换。",
+    "喷涂b要求本配方允许、所有所需输入真实喷好并与机器模式一起运行；不把查看配方当构筑，比较生产条件仅0分。",
+    "研究g要实际继续投入，球壳g要真实继续建造；自由太阳帆不一律视为永久。原生工厂和球壳蓝图保存只留当前编辑0分。",
+    "全部默认单人，不需要Nebula或其他Mod、未发布太空战、完工巨构、真人协作或付费内容。9—12及所有替代均为确实发生的过去。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "已发布EA基础单人自动化，黑雾可关闭或当前无战斗急事；12手写早期替代不要求炼油、物流站、增产剂或戴森球",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DSP8C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "一台早期组装机用Mk.I分拣器从较远的带上取料，有时等料；该带上仍有原料，电网有余，旁边已有更近、同种原料持续供给的测试带段，可改接同一只分拣器。现在先做什么？",
+          "scene": "同一条带上的远近分拣",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜停顿与这只Mk.I往返距离有关，只把它改接到更近的同物料带段，再看取料与机器状态核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把矿机、冶炼、组装、成品消耗与电网接成几轮持续供给，再随库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "在备用空地反复搭同一种已会的带到分拣器连接，专门练熟自己选择起终点的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对现有Mk.I的搬运与距离说明，再回来改自己的这一处",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "p是自己的距离解释与单项实测，不考效率数字；只问Mk.I，不外推后期集装分拣器。y跨生产电网持续运转，t练玩家工具而非机甲等级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C01.V1"
+        },
+        {
+          "text": "只有第一台矿机也可答：矿机能供电，矿脉旁还有可放的位置，手里有基础带；当前可看它覆盖到哪些矿点。先怎样继续？",
+          "scene": "同一条带上的远近分拣的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜只转一下矿机会改变覆盖到的矿点，记住当前覆盖后只转一次再核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把这台矿机换到当前能放的另一侧，亲手看本次布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次回收旧带、留矿机与接新出口的施工先后，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对矿机覆盖与直接接出传送带的说明，再回自己的矿点",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "p是自己的距离解释与单项实测，不考效率数字；只问Mk.I，不外推后期集装分拣器。y跨生产电网持续运转，t练玩家工具而非机甲等级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "一组矿机和电弧熔炉已接风机与Tesla Tower，电网有余；边缘一台设备显示未接上电，Icarus也有现成可用燃料，材料够继续扩建。先处理哪件事？",
+          "scene": "工厂供电与机甲电量",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_POWER",
+            "DSP8C_BASIC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把矿机、熔炉、组装需求与风电负荷一起维持几轮，再按供需变化调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次给机甲留燃料、带施工件和移动电塔的步骤，再实际进行",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对工厂电网与机甲燃料槽分别管什么，再回这次建设",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先解释边缘设备是否落在供电覆盖外，只移动这一根可接回电网的塔，再核对覆盖和设备工作",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不把机甲燃料槽当工厂供能，也不把当前补能当g；p只移一塔验证覆盖，y为工厂持续多环节。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C02.V1"
+        },
+        {
+          "text": "尚未架大电网：一台已供电的矿机能取矿，机甲核心未满且槽里有空位，背包有现成可用燃料，你本人有精神，附近可继续放基础带。先选什么？",
+          "scene": "工厂供电与机甲电量的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清给机甲留多少现有燃料、取矿与铺这次短带的先后",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "在已有燃料可继续建设时，沿熟悉矿机和风机慢走一趟，喜欢这套认识的转动与声音",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先读当前机甲燃料槽说明，再实际回到这次取矿建设",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜加入这一种已有燃料后核心电量会如何恢复，只添这一种并观察核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不把机甲燃料槽当工厂供能，也不把当前补能当g；p只移一塔验证覆盖，y为工厂持续多环节。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "一台已供电的炼油厂正在做Plasma Refining；精炼油出口已堆住，氢的去路仍空着，原油还有，另有可用储存罐和带。当前没有战斗急事，先把这段时间给什么？",
+          "scene": "炼油的两个出口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_OIL",
+            "DSP8C_BASIC",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按这次现有罐、带和分拣器排清改接顺序，再照着施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前炼油配方和两种输出的说明，再回来处理自己的这台",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜精炼油出不去是否让氢也停产，只把这一股接到空罐，再看炼油与氢输出核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把抽油、炼油的两种产物、后续消耗和用电接成持续安排，随几轮库存再调",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "双产物是本作具体约束；氢与油也由带运输。不预设必须烧掉副产物，p改单侧出口核对，y不是单次加罐。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C03.V1"
+        },
+        {
+          "text": "没炼过油也可答：早期电弧熔炉有电和铁矿，刚从铁块切换为磁铁配方，旧输出分拣器却停着；两种配方都已能选，箱子和分拣器也都已有。先做什么？",
+          "scene": "炼油的两个出口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这次更换配方、回收旧输出与接新箱的施工先后排清",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "在备用连接反复练同一种已会的起点到终点放分拣器操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前铁块与磁铁配方的真实输入和眼前用途，再决定这台做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "先猜这只输出分拣器的筛选仍指向旧产物，只改筛选后看新的出料核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "双产物是本作具体约束；氢与油也由带运输。不预设必须烧掉副产物，p改单侧出口核对，y不是单次加罐。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你有能产蓝色矩阵的实验室，也有一台暂未消耗送来矩阵的备用实验室，其所选模式可查看；已有蓝色矩阵可送入，一条已开始的技术还未完成、当前只需这些蓝色矩阵继续研究，供电稳定。先选什么？",
+          "scene": "矩阵生产还是研究消耗",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_LAB",
+            "DSP8C_RESEARCH",
+            "DSP8C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前实验室两种模式的说明，再回来设置自己的实验室",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "让已积累的矩阵继续投入这条未完成研究，想把投入留下后面可用的技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先猜备用实验室没消耗矩阵是否因为模式仍是生产，只改成研究模式，再看研究消耗核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把矿板、线圈电路板、矩阵生产与研究用电接成几轮持续循环，随库存再调",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "g需真实继续消耗形成保留技术，非打开科技树。主情境只给不消耗矩阵的现象、可查看模式和足够矩阵，不预先告诉模式错误；p自己提出模式解释后单改核对，y须持续研究供给循环。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C04.V1"
+        },
+        {
+          "text": "还没搭实验室：科技树里已有一项你开始但未完成、可用机甲库存基础部件继续研究的技术，当前所需部件已有，另有能做的建筑。先怎样投入？",
+          "scene": "矩阵生产还是研究消耗的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对这项研究当前显示的消耗说明，再回自己的机甲库存操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "把这些现有部件继续用于已开始的技术，想留下后面可用的解锁",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可研究技术的实际物料条件，再决定继续哪项",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次要留给研究的部件、要做的建筑与库存空位，再动手",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "g需真实继续消耗形成保留技术，非打开科技树。主情境只给不消耗矩阵的现象、可查看模式和足够矩阵，不预先告诉模式错误；p自己提出模式解释后单改核对，y须持续研究供给循环。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "同一颗星球两座行星物流站都已充电并备有无人机，一站有铁块且设Supply，另一站暂未收到铁块、对应槽的设置可查看，下游能消耗；出口带筛选也可看。先怎么继续？",
+          "scene": "同星球的供与需",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_PLS",
+            "DSP8C_POWER",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜收货站没收到铁块是否因为槽位仍是Storage，只改为Demand，再看无人机与库存核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把采矿冶炼、站内供需、下游用料和充电负荷维持几轮，跟着库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先按现有带和建筑排清这次接收站出口到下游的施工步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对行星站Supply、Demand、Storage与出口筛选说明，再回这两座站",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "主情境只同星球PLS，不冒充星际船或真人协调；两站已备电和无人机是可行前提，不声称双方必须都放无人机。只给没收到货与可查设置，不先给Storage答案，p自己提出设置解释再单改核对。ALT是已可加层的真实储物仓，只加一层保留底层连接再取放验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C05.V1"
+        },
+        {
+          "text": "还没物流站：一座储物仓Mk.I已有底层出入分拣器，手上有第二座，当前建造预览允许在它上面加一层；电网、底层连接和可取放的铁块都已备好。先做什么？",
+          "scene": "同星球的供与需的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜加上的上层是否会与底层共用存取，只加这一层、保持底层连接不动，再取放现有铁块核对容量与出入",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把当前底层仓改放到一处同样能接原带的空位，亲手试这一轮摆放与接回",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清这一轮保留底层连接、放上层仓与接回出口的编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前储物仓叠放与底层存取的已有说明，再回来实际试自己的仓",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "主情境只同星球PLS，不冒充星际船或真人协调；两站已备电和无人机是可行前提，不声称双方必须都放无人机。只给没收到货与可查设置，不先给Storage答案，p自己提出设置解释再单改核对。ALT是已可加层的真实储物仓，只加一层保留底层连接再取放验证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "当前这台组装机的配方明确允许且已选额外产品模式，但这批未出现预想加成；各股输入的喷涂状态都能查看，全部所需输入都能走已放好的喷涂机，增产剂和电网余量足够。现在先做什么？",
+          "scene": "喷涂输入与机器模式",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_SPRAY",
+            "DSP8C_PROLIF"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜加成没出现是否因为其中一种输入没喷，只补这一股的喷涂，再看机器反馈核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前配方允许的喷涂模式与输入条件，再决定本轮用法",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先核对喷涂点和接收机器模式说明，再回这组自己已有的设备",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际把全部所需输入喷好，配合这台机器允许的额外产品模式运行，核对这组搭配的产出和额外用电",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "b是真实全输入喷涂与接收配方模式互补并运行。主情境只给加成未出现及可查各股喷涂状态，p自己提出某股未喷的解释、只补这一股后核对；不把手搓、所有配方或增产剂菜单直接计b。ALT仅尚未开始可取消的队列项，返还种类是待验预想，不声称中间件逆制作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C06.V1"
+        },
+        {
+          "text": "没用过增产剂：机甲复制器里已有基础电路板队列，至少一条还没开始且可以取消；背包有空位，电路板与磁线圈的普通配方都已开放，材料也够继续做一批。先选什么？",
+          "scene": "喷涂输入与机器模式的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT",
+            "DSP8C_REPLICATOR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次要保留的建造料、继续制作的部件与下一趟取料先后，再实际处理队列",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前电路板和磁线圈各用哪些手头材料，再决定本轮继续做哪批",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先核对复制器当前队列与取消的已有说明，再回来操作自己的这一批",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜取消未开始的一条会退回哪些投入，只取消这一条，再对照个人库存与剩余队列核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b是真实全输入喷涂与接收配方模式互补并运行。主情境只给加成未出现及可查各股喷涂状态，p自己提出某股未喷的解释、只补这一股后核对；不把手搓、所有配方或增产剂菜单直接计b。ALT仅尚未开始可取消的队列项，返还种类是待验预想，不声称中间件逆制作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已能编辑一层当前可用戴森球壳，已有自制节点与框架，运载火箭能继续投入建造；眼前图案可改，原生蓝图保存也已能用。先把时间给什么？",
+          "scene": "球壳上自己的节点图案",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_STORE",
+            "DSP8C_SPRAY",
+            "DSP8C_FRAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前满足条件的自己球壳设计保存为原生蓝图，保留这次编辑",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前球壳编辑与可连接范围说明，再回来改自己的这一层",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "实际选节点与框架的可用连法，做出自己想表达的球壳图案",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "继续让现有火箭投入这层已经开始的框架，想让真实建造进度留下更多已完成结构",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "主情境图案a需实际自选表达，g需真实继续建造并保留结构，保存0分。不限完成整球，不把有寿命的自由轨道太阳帆一律当永久成长。ALT给有电有矿却未进料的现象与可查连接，不直接宣告缺分拣器；p自己提出搬运连接解释并只加一只实际核对，普通挪炉与编辑步骤0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C07.V1"
+        },
+        {
+          "text": "还没造戴森球：已供电矿机的铁矿能直接沿基础带运出，旁边电弧熔炉也有电、已选铁块配方却暂未进矿，带与炉之间的连接状态可查看；手上有基础分拣器，空位和材料够用。先做什么？",
+          "scene": "球壳上自己的节点图案的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这一轮保留矿机直出带、放熔炉与接分拣器的编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对矿机直出与分拣器进机器的已有说明，再回自己的这一段实际操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜熔炉不进矿是否缺机器与带之间的搬运，只在这一处加一只分拣器，其他不变，再看炉内铁矿与产物核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把这台熔炉挪到同样有电、仍能接原带的另一处，亲手试这次位置和接回",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "主情境图案a需实际自选表达，g需真实继续建造并保留结构，保存0分。不限完成整球，不把有寿命的自由轨道太阳帆一律当永久成长。ALT给有电有矿却未进料的现象与可查连接，不直接宣告缺分拣器；p自己提出搬运连接解释并只加一只实际核对，普通挪炉与编辑步骤0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "单人现有厂区能继续运行；你有精神，机甲燃料与施工件都够新建，另有一段安全可步行、还没亲自看过的球面地形。现在先投入什么？",
+          "scene": "机甲走在熟悉的球面厂区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_STORE",
+            "DSP8C_BASIC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在备用空地反复搭一种已会的分拣连接，专门练熟起终点与取放方向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "仍沿熟悉矿机、带路与风机走一圈，喜欢认得的转动和球面厂区带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去亲自看看那段未知地形，不先查会有什么资源",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次带哪些施工件、留哪些机甲燃料与先改哪处，再照着做",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "h明确有精神且能推进；w实际可达安全地形，不要求解锁飞行或星际航行；t不是机甲科研升级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C08.V1"
+        },
+        {
+          "text": "只到第一台风机和矿机也可以：你有精神，机甲有可用燃料，库存能继续做基础件，近旁还有一处安全可达但未亲自看的矿脉边缘。先选什么？",
+          "scene": "机甲走在熟悉的球面厂区的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前可做基础建筑说明，再回来实际制作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "沿熟悉风机与矿机慢走一趟，享受已认得的声音和取矿过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "走到那处没亲自看过的边缘，想知道它的地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次给机甲留燃料、取铁矿与做基础件的先后再进行",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "h明确有精神且能推进；w实际可达安全地形，不要求解锁飞行或星际航行；t不是机甲科研升级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你实际用过的Mk.I分拣器与矿带，不要求任何吞吐纪录。哪种已发生过程更有分量？",
+          "scene": "回看真正接过的分拣器",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过取料停顿与距离、方向或供电的关系，只改一处并看真实搬运核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把矿机、冶炼、组装、存储与电网维持过几轮，并随库存调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "为了练熟自己选择起终点，主动重复搭过同一种已经会的短连接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按当时可用材料排清过带、分拣器与电塔的这次施工先后，并照着做过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "真实过去，单变量p、持续多系统y、主动练操作t与当次施工0分分清。不从产量高低推现实能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C09.V1"
+        },
+        {
+          "text": "只回想第一台矿机也能答：哪种你确实做过的过程更贴近？",
+          "scene": "回看真正接过的分拣器的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过转向怎样改变矿点覆盖，只转这台后核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把现有矿机挪到过另一处可放位置，看过本次出带布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "排过回收旧带与接新出口的施工步骤，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "核对过矿机直接接带的已有说明，随后回来动手过",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实过去，单变量p、持续多系统y、主动练操作t与当次施工0分分清。不从产量高低推现实能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你用实验室生产矩阵、消耗矩阵研究的一段过程。哪种已发生投入更像？",
+          "scene": "回看一段真的科研投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DSP8C_LAB",
+            "DSP8C_RESEARCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过实验室不消耗是否与当前模式有关，只改这一项并核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把基础料、矩阵生产、研究输入与电网维持过几轮，并按存量调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对过当时实验室模式说明，随后回来设置过自己的设备",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "让已经开始的技术继续消耗过实际矩阵，重点是留下后面可用的技术",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "四项实际过去，不用技术解锁快慢或矩阵颜色当画像。未建实验室有机甲基础研究独立替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C10.V1"
+        },
+        {
+          "text": "没搭过实验室：只回想最早机甲库存研究或基础部件制作，哪项真的做过？",
+          "scene": "回看一段真的科研投入的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较过当时复制器里已开放基础配方的真实输入，再决定做哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "排清过那一次研究留料、制作建筑与取矿的先后，并执行过",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "读过当时可用研究的消耗说明，回来实际用库存材料操作过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "继续把已有部件投入过已开始而未完成的可用技术，想留下技术进展",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "四项实际过去，不用技术解锁快慢或矩阵颜色当画像。未建实验室有机甲基础研究独立替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "你已处理过Plasma Refining出口，也实际用过允许额外产品的喷涂配方；回顾其中自己真实做过的过程，没用齐这些设备可换早期情境。哪种更贴近当时重点？",
+          "scene": "回看双产物与喷涂的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DSP8C_OIL",
+            "DSP8C_PROLIF",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把原油、精炼油、氢的用途和用电维持过几轮循环，并跟库存调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较过当时已开放生产配方的实际输入条件，再决定那轮用法",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "实际把允许配方的全部输入喷涂，与接收机器的额外产品模式一起运行过，查看过组合效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先解释过炼油停下是否是某一种产物堵住，只清这一股后核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b只来自实际允许的喷涂组合，p来自真实双出口背压测试；都不是读图标。混合回顾可选自己真做过分量，未经历整题独立早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C11.V1"
+        },
+        {
+          "text": "还没用过炼油或喷涂：回想电弧熔炉处理铁矿的一次真实操作，哪项更像？",
+          "scene": "回看双产物与喷涂的一段的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清过更换配方、挪箱和接出料的施工先后，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "反复练过同一种已会的分拣起终点连接，专门让自己用熟放置操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先猜过不出料是否因输出筛选还指旧产物，只改筛选后核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "比较过当时已能做的铁块和磁铁各自输入与用途，再决定那次配方",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "b只来自实际允许的喷涂组合，p来自真实双出口背压测试；都不是读图标。混合回顾可选自己真做过分量，未经历整题独立早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DSP8C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次你有精神、机甲燃料与材料足够继续施工的游玩。哪种确实发生过的投入更有分量？",
+          "scene": "回看自己停留过的星球",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DSP8C_STORE",
+            "DSP8C_SPRAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当时满足保存条件的自制工厂布局存成过原生蓝图，保留那次编辑",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "B",
+              "label": "仍沿熟悉球面厂区走过一圈，因为认得的矿机与物料流让自己安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "走到过当时安全可达却没亲自看过的一段地形，想亲眼发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "用当时已可用的机甲或球壳编辑工具，完成过自己选定的可见主题与图案",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真实过去；a是游戏中自选主题表达，不由机甲外貌推现实身份。保存0分，不要求联机或完整戴森球。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C12.V1"
+        },
+        {
+          "text": "只玩到最早风机矿机也可回顾：当时你有精神、机甲有燃料也有材料继续做件。哪项真实发生过？",
+          "scene": "回看自己停留过的星球的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DSP8C_BASIC",
+            "DSP8C_POWER",
+            "DSP8C_RESEARCH",
+            "DSP8C_SORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "排过那次留燃料、取矿与做基础件的顺序，并实际照着进行了",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍沿用熟的风机与矿机走过一趟，喜欢这套认识的转动和取矿过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看过当时尚未亲自看到的一段安全地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把一台现有矿机换过位置，亲手看过新的覆盖和出带布置",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "真实过去；a是游戏中自选主题表达，不由机甲外貌推现实身份。保存0分，不要求联机或完整戴森球。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DSP8C12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+dcf0ef019d74"
+}

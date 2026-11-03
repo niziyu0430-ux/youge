@@ -1,0 +1,2831 @@
+{
+  "id": "sr09i",
+  "title": "沙石镇时光",
+  "game_ids": [
+    "steam-1084600"
+  ],
+  "scope": "PC 本体；单机剧情与 Online 按各自工坊和城镇进度作答",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "单机与Online不是同一故事存档，资源入口、工坊进展和公共储存不互套。",
+    "只问当前已开放内容，未体验可换同槽较早情境；不要求付费故事、宠物捕捉或外观。",
+    "NPC只有实际人物经历叙述或事件才记叙事，普通互动不解释为真人社交；本稿没有客户端试玩或真人等值验证。"
+  ],
+  "modes": [
+    {
+      "id": "singleplayer",
+      "label": "单机剧情与个人工坊",
+      "initial_variants": {
+        "SR09I01": "SR09I01.SINGLEPLAYER.V1",
+        "SR09I02": "SR09I02.SINGLEPLAYER.V1",
+        "SR09I03": "SR09I03.SINGLEPLAYER.V1",
+        "SR09I04": "SR09I04.SINGLEPLAYER.V1",
+        "SR09I05": "SR09I05.SINGLEPLAYER.V1",
+        "SR09I06": "SR09I06.SINGLEPLAYER.V1",
+        "SR09I07": "SR09I07.SINGLEPLAYER.V1",
+        "SR09I08": "SR09I08.SINGLEPLAYER.V1",
+        "SR09I09": "SR09I09.SINGLEPLAYER.V1",
+        "SR09I10": "SR09I10.SINGLEPLAYER.V1",
+        "SR09I11": "SR09I11.SINGLEPLAYER.V1",
+        "SR09I12": "SR09I12.SINGLEPLAYER.V1"
+      }
+    },
+    {
+      "id": "online",
+      "label": "Online 沙盒城镇与共享工坊（可独自进入）",
+      "initial_variants": {
+        "SR09I01": "SR09I01.ONLINE.V1",
+        "SR09I02": "SR09I02.ONLINE.V1",
+        "SR09I03": "SR09I03.ONLINE.V1",
+        "SR09I04": "SR09I04.ONLINE.V1",
+        "SR09I05": "SR09I05.ONLINE.V1",
+        "SR09I06": "SR09I06.ONLINE.V1",
+        "SR09I07": "SR09I07.ONLINE.V1",
+        "SR09I08": "SR09I08.ONLINE.V1",
+        "SR09I09": "SR09I09.ONLINE.V1",
+        "SR09I10": "SR09I10.ONLINE.V1",
+        "SR09I11": "SR09I11.ONLINE.V1",
+        "SR09I12": "SR09I12.ONLINE.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "SR09I01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "单机工坊已有回收机、熔炉和一张材料能凑齐的基础订单；水箱与燃料可补，院外也有当前能敲的废料堆。订单不赶交期，这轮先做什么？",
+          "scene": "废料回收与日常订单",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_STORE",
+            "SR9I_CURRENT_SP",
+            "SR9I_RECYCLE",
+            "SR9I_COMMISSIONS"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把回收产物、熔炉产材、工作台零件、订单回款与买水补燃料接着照看几轮，依库存和消耗再调队列",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "带镐锤去敲现有废料堆，想连续体验命中、碎裂和拾取接在一起的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前废料回收和矿石熔炼能供出哪些所需材料，再决定开哪条队列",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "在这处已能处理的废料堆反复练选目标、挥镐与重新定位，重点是熟悉输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "持续物料/回款/水燃反馈才y；f是本人敲废料的即时手感，t是主动练输入，较早工具动作顺序0不硬套资源路线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I01.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "刚拿到镐锤时，工坊外已有可敲的小废料堆，背包有余位，眼前没有紧急任务。这一轮怎样投入？",
+          "scene": "废料回收与日常订单的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_STORE",
+            "SR9I_CURRENT_SP",
+            "SR9I_RECYCLE",
+            "SR9I_COMMISSIONS"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续敲这堆现有废料，想体验挥镐到碎裂拾取的接连反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "反复练对准、挥镐和换目标，重点是练熟输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先按手边镐锤排好敲废料、拾材料、收工具和整理已有物资的先后，再亲手做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先查看自己已有废料、工作台基础材料和现成零件的数量，再决定接着处理哪一批",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "持续物料/回款/水燃反馈才y；f是本人敲废料的即时手感，t是主动练输入，较早工具动作顺序0不硬套资源路线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I01.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "Online 的 Urban Planner 已列出一项你们现在能推进的建筑项目，条件和公共材料都可查看；当前有真人伙伴在线，也有普通委托可做。没有要赶的活动，这轮先做什么？",
+          "scene": "城镇规划里的已开放项目",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和现在在线的真人伙伴谈好这项已开放城镇项目先做哪一步、谁取哪些材料、各自何时交付，再一起按分工做",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "按已列条件亲手推进这项城镇建筑，把本次目标完成作为重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看这项项目当前显示的材料、开放条件与回报，再决定是否开做",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "把公共原料、机器加工、水燃与后续项目用料连着照看几轮，按实际库存再调生产和补给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "Online的城镇项目不同于单机主线；q只有当前真人共同目标与分工，NPC解锁和独自施工都不计真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I01.ONLINE.V1"
+        },
+        {
+          "text": "独自进入 Online 时，首批 Urban Planner 项目已有一项开放，要求显示着；公共库存有可用材料，工作台也已有两种材料够、能供这项项目使用的基础零件配方。你可以自己推进，这轮先做什么？",
+          "scene": "城镇规划里的已开放项目的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对这项项目已显示的要求与现有材料，再决定动手次序",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "直接做这项当前已列目标的可做部分，把推进它作为这轮重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "比较当前能做的所需零件配方，再决定先加工哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "排好从公共材料取用、加工到项目处交付的先后，再实际执行",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "Online的城镇项目不同于单机主线；q只有当前真人共同目标与分工，NPC解锁和独自施工都不计真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I01.ONLINE.ALT1"
+        },
+        {
+          "text": "单机中，当前周末与工坊资格都已满足，商会今天还有至少两件可检验的物件。你尚未点开展台；开始后要在有限时间与标记次数内对照左右物件。这轮先怎样投入？",
+          "scene": "第一次可参与的商会检验",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ED_INSPECT",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "开始后先提出一处可疑外观差异可能是缺陷，转动物件对照，只标这一处检验判断，猜错也算尝试",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "在今天仍可做的不同物件间主动练旋转、找对应面和标记，重点是熟悉检验输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先核对检验已有规则与操作说明，再开始这次实看",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "直接选一件当前可检物，亲手试一轮旋转和标记，不要求全部找完",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "检验不同于敲废料；p是本人提一个缺陷解释并用对照/标记反馈实查，题干不指明缺陷位置，尝试可错。有限当日物件才练，不要求满分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I01.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "你目前独自在 Online，已接一张当前可做的赏金任务，目标普通敌人位于已开放区域，已有武器与恢复物品足够；附近也有自己没细看过的可达通路。先投入哪里？",
+          "scene": "独自处理当前赏金目标",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按已接赏金目标实际去处理当前敌人，把这张目标的可做部分作为本次重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "在这处可处理交手中主动练挥击、闪避与重新选目标，重点是熟悉输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "亲自连续出手，想体验命中、受击与走位衔接的即时回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "暂缓这张目标，转进那段可达但没细看过的通路，只想发现里面",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "开发者已发布Online赏金与独自进入内容；不给独自完成记q，不要求打赢或后来进步。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I01.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "一台回收机仍在加工，但完成情况和你的预期不同，原因还没核对。机身有可清的积沙，燃料和水也能看，羽毛掸已拥有，材料暂不短缺；你先做什么？",
+          "scene": "回收机表现不同于预期",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RECYCLE",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对这台回收机已显示的队列、燃料、水与积沙状态，不预定原因",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "连续几轮一起照看废料、机器用水用燃料和后续零件需求，按实际库存再调补给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有回收机与清沙说明，再继续尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己猜这台机器的积沙拖慢了运行，只清它的沙、保持当前材料队列和其他供给不变，再观察变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "未知运行差异由玩家自提积沙解释并单项实测；题干没诊断缺水/缺燃料，检验可以不成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I02.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "还没运行机器时，《新工坊主》已列出制作回收机的目标，装配图已开，工作台能做当前所需基础零件。这轮先做什么？",
+          "scene": "回收机表现不同于预期的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RECYCLE",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前能做的零件配方和手头材料，再决定先做哪项",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "按手头已有工具和材料，排清这次回收机目标中取料、在工作台做零件、到装配台安装的先后，再亲手推进",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先查看已有石料、木料与工作台现成零件的种类和数量，再决定这轮用哪批",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "按这次已列目标实际做零件并装配回收机，把完成该目标作为重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "未知运行差异由玩家自提积沙解释并单项实测；题干没诊断缺水/缺燃料，检验可以不成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I02.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "Online 公共库存和个人箱子都可用，你和此刻在线的真人伙伴各有想做的物件，材料也足够重新分配。双方都没急交期，这轮你先做什么？",
+          "scene": "公共材料与私人箱子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "陪这位熟悉的真人伙伴一起整理储存、聊聊这轮一起遇到的事，共同待着本身就是想做的",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "实际把自己当前携带的一批材料放入已有箱子，再取出这轮要带的物件",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "先核对公共库存、个人材料与当前可做配方的原料状态，再决定拿什么",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "和这位真人伙伴说清各自要做的物件、会用哪些公共材料以及谁先取用，再照商量结果推进",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "分工与陪伴只指现场真人；存取动作0，物料核对0，不把公共仓库本身推成合作人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I02.ONLINE.V1"
+        },
+        {
+          "text": "目前只有你一人在 Online；公共库存、个人箱子与一项公共储存升级都已开放，升级所需材料能支付。你另有一台当前能补原料的机器，也已会储物箱配方且有够做一只的材料。这轮先做什么？",
+          "scene": "公共材料与私人箱子的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把自己这轮不用的物品存进已有个人箱子，再取回要带的材料",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "花当前已有材料实际购入这项已开放的公共储存升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "先比较这次增建当前可造储物箱或补机器供料这两种经营安排",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先查看公共库存、身上材料和现有产出的实际状态",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "分工与陪伴只指现场真人；存取动作0，物料核对0，不把公共仓库本身推成合作人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I02.ONLINE.ALT1"
+        },
+        {
+          "text": "单机院内精炼机已可用，一批现成零件的品质还没达到已接委托要求；当前界面允许提升它，手头适配宝石够这一批，原品质和消耗也可查看，自己的箱子当前可存这批零件。这轮先做什么？",
+          "scene": "已有成品的一次品质处理",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ED_REFINE",
+            "SR9I_COMMISSIONS"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接把这批现成零件按当前可执行选项精炼一次，亲手试这次处理",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可用的品质处理选项和所需资源，再决定采用哪项",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先把暂不处理的已有零件放进自己的箱子，调整手头携带再继续",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先核对委托已显示的品质和交付条件，决定今天是否处理这批",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "精炼现成物件不是矿石熔炼、持续养成或组件构筑；品质要求与宝石按当前界面为准，院里已有箱子可用。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I02.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "Online 的文物商店当前开放，你一件文物已拥有部分碎片，商店正售自己从未得到过的缺片，现有货币够；你也有已得碎片信息，旁边另有可达未逛街路。先做什么？",
+          "scene": "文物商店里的真正缺片",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前这笔交易显示的物件和费用，再决定买不买",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "给自己已经获得的碎片和已见物件说明补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "先去那段没逛过的可达街路，只想发现那一边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "为补这件文物真实缺失的那片，实际去商店尝试购入它，把补缺作为这轮重点",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "Online正式发布明确文物店售古代碎片；c必须真未得且实际追求，不把已持有但未修复当缺项。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I02.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "Gecko Station 废弃遗迹已对你开放，探测器、镐锤和补给可用。你有一件文物的部分碎片，仍缺一片自己没得到过的碎片，已核对它可能出现在这里；同层还有没走过的通道。这轮先做什么？",
+          "scene": "已开放的废弃遗迹",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RUINS",
+            "SR9I_MUSEUM"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在当前安全可挖处反复练探测、转向与挖到标记附近的输入，重点是练熟操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先排这段挖掘、补充体力食物与回出口的顺序，再亲自照着走",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "打开探测器，在当前可采范围继续实际挖找那片未得碎片，想补齐这一件文物，不要求这次找到",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "转进一段自己没看过的可达通道，想先发现那里是什么样，不为特定奖励作保证",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "未得缺项的实际追求才c；探路、本人练工具和当次资源路线0分分开，不以挖到稀有物或效率作门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I03.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "尚没去过 Gecko Station 时，你刚能进入 Eufaula Salvage 废弃遗迹，镐锤和探测器都可用，铜矿与近处通路能看见，背包也有这轮可吃来恢复体力的食物。第一次短探先做什么？",
+          "scene": "已开放的废弃遗迹的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RUINS",
+            "SR9I_MUSEUM"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接对当前能处理的一处铜矿挥镐，亲手试这一次采掘",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有探测器与遗迹操作说明，再继续亲手试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "走向一段尚未看过的可达通路，只为看看那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "排清这轮挖铜矿、用手头食物恢复和返回入口的先后，再照着走",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "未得缺项的实际追求才c；探路、本人练工具和当次资源路线0分分开，不以挖到稀有物或效率作门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I03.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "你在 Online 准备前往 The Breach，当前镐锤已经能处理入口挡路岩块，相关任务允许推进，补给也够。这不是单机回收公司废弃遗迹；这轮先做什么？",
+          "scene": "Online 的第一处矿洞入口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排从工坊到入口敲岩、消耗体力后用已有食物恢复、进矿和返回入口的路线，再照着走",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "在当前可处理的岩块边反复练瞄准、挥镐与换位，重点是熟悉操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "处理当前能打的挡路岩块，再走进自己没看过的通路，想先发现这座矿洞的样子",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "按已列任务亲自处理入口并推进当前目标，把它的完成作为重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "明确Online入口及工具可做条件，不复用单机入场/资源分布；未知发现与目标推进、工具顺序和本人练习分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I03.ONLINE.V1"
+        },
+        {
+          "text": "还没下矿时，你在 Online 工坊准备找初期任务所需纤维废料；物品说明有来源线索，当前能处理那种废料的工具和可吃来恢复的食物都已在手，附近采集区可达。没有体力或时间危机，这轮先做什么？",
+          "scene": "Online 的第一处矿洞入口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清带工具和食物、前往当前可达采集区、取料再返回的顺序，并照着走",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "拐去附近另一处自己还没看过的可达角落，只想先发现那边，不为特定奖励作保证",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先读当前任务与物品已经显示的地点、材料和交付说明，再决定这次去哪",
+              "signal": "mission_briefing_review"
+            },
+            {
+              "id": "D",
+              "label": "实际去处理当前能采的所需废料，推进已列任务的可做部分",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "明确Online入口及工具可做条件，不复用单机入场/资源分布；未知发现与目标推进、工具顺序和本人练习分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I03.ONLINE.ALT1"
+        },
+        {
+          "text": "你已把一件文物所需碎片真正集齐，修复机可用且数据光盘够；自己箱中还放着另一件已经修复的旧藏品。今天无急交期，这轮先做什么？",
+          "scene": "已集齐碎片后的文物修复",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_MUSEUM",
+            "SR9I_RUINS"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把暂不动的已有碎片实际存回箱里，取出这轮要带的旧藏品，调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "给自己已经拿到的碎片和已有文物信息补记记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "亲手用当前修复机把已集齐的一套碎片修复一次，试这个已满足条件的操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对修复界面显示的碎片和光盘要求，再决定这次是否执行",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "这次是已集齐后处理，不把尚未修好但已拥有的全套再算未得收藏；不要求玩家此前已经捐赠。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I03.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "Online 马厩已开放，你已租到一匹当前可骑的坐骑，安全路段能练转向；附近有一条熟悉的另一侧路，也有一段可达但自己没看过的路。你先怎样骑？",
+          "scene": "现有坐骑的第一段实骑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "骑去那段自己还没看过的可达路，想发现那一边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "从另一条已经熟悉且能走的侧路经过，亲手体验不同的行进方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "换用这匹已租到、当前可用的坐骑，亲自试它这次怎样行进",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "在安全路段主动反复练起步、转向和停下，重点是熟悉自己的骑行输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "租用已完成，不假定未买坐骑可免费用；普通换侧路0不i，转向练习不要求后来骑得更好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I03.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "一张已接委托的交付对象、品质和交期都显示着，合格成品已经在你手里；工坊另有材料队列，镇上也有一段已触发的人物支线可继续。时间宽裕，你先做什么？",
+          "scene": "委托交付与人物支线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_COMMISSIONS",
+            "SR9I_STORE",
+            "SR9I_FREE14"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先继续那段已触发支线，读人物当下的对话，想接上前后的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "带合格成品去找当前委托人交付，把这张已接目标的完成作为重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先逐项核对这张委托的品质、物件和交付条件，再决定现在是否交",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "把后续委托所需零件、机器水燃、回款与补料连续照看几轮，依余缺再调生产",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "同一时刻有实际可交委托、生产与支线；任务完成0、看要求0、持续工坊运行y、叙事s分开，不用NPC计真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I04.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "刚接早期商会委托时，要求、对象和截止条件都可查看，物件尚未全做完，手头材料够且还有余量。这轮先做什么？",
+          "scene": "委托交付与人物支线的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_COMMISSIONS",
+            "SR9I_STORE",
+            "SR9I_FREE14"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接把这张已接委托的可做部分做起来，当前重点就是完成它",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先看已显示的交期、品质和交付对象，再决定动手安排",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "比较当前工作台能做的所需零件配方和材料条件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "排清取料、加工、到委托人处交付的本轮先后，再照着推进",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "同一时刻有实际可交委托、生产与支线；任务完成0、看要求0、持续工坊运行y、叙事s分开，不用NPC计真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I04.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "Online 的同一角色已经在采集知识路线投入过点数，现在还能继续沿它做采集并获得经验；商店另有当前可付的已开放配方，工作台也有现成配方能做。这轮先投入哪里？",
+          "scene": "个人知识与当前配方",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接在现有工作台做一件当前材料够的基础零件，亲手试这一项操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "继续沿自己已开始的同一采集知识路线做已有活动，把后来得到的点数接着投入，想保留这条角色成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先花已有资源购入并学会商店当前已开放可支付的一张新配方，增加这项可制作操作",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "D",
+              "label": "先比较自己当前已有的知识节点与可投升级条件，再决定下一步",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "g是同一已投角色路线持续积累，不等于点一次配方或单次购买；Online个人等级/技能与城镇公共进展分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I04.ONLINE.V1"
+        },
+        {
+          "text": "还没形成知识路线时，Online 工作台已有两种材料够的基础零件配方，里程碑面板也有一项当前可推进的条件。这轮先做什么？",
+          "scene": "个人知识与当前配方的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接用当前已有配方做一件基础零件，亲手试一次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "核对这一项里程碑已列要求，再实际推进它的可做部分",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前已开放且材料够的零件配方",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "先查看公共原料、手头已有材料与现成零件的种类数量，再决定这批先做什么",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "g是同一已投角色路线持续积累，不等于点一次配方或单次购买；Online个人等级/技能与城镇公共进展分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I04.ONLINE.ALT1"
+        },
+        {
+          "text": "你在商会板前，还没接这轮委托；当前两张已显示的委托都符合承接条件，各自所需配方已会、材料能做，今天只能先认真处理其中一张。先做什么？",
+          "scene": "尚未承接的两张委托",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_COMMISSIONS",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接好所选委托后，排清取料、加工和去当前委托人处交付的先后，再照着推进",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对两张已显示的物件、品质、交期和报酬，再决定接哪张",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "比较当前能做的两组零件配方与材料占用，再决定本轮生产方向",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "选一张当前能接的委托，实际承接并动手做它的可做部分，把推进该目标作为重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "承接前有真实信息和生产取舍；不把接单、安排当i/y，品质交期按当前板面，不写最优报酬。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I04.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "独自 Online 工坊里，一台回收机已有待处理废料，水箱与燃料当前都还能供它运行；你有可补的水、燃料和材料，工作台另有两种能做基础配方。没有要赶的项目，先做什么？",
+          "scene": "第一条回收队列的补给选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把回收材料、基础零件、机器水燃与下一批项目用料连续照看几轮，按实际余缺再调供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有废料、水量、燃料与回收产出的数量，再决定补哪批",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "直接把手头适配废料投入这台当前可运行机器，亲手试这次投料",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "比较眼下能做的两种基础配方和材料占用，再决定先加工哪一项",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "不是单机已知故障题；现有补给条件明确，单次投料0，只有多轮物料消耗与反馈才y，不把等机器当f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I04.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "单机种植模式已开，一块你此前种收过几轮的地已有土壤经验且仍有可积累空间，当前能继续种；种子、草方格材料和水都够，也能做工坊零件。这轮把投入给哪里？",
+          "scene": "同一块已有投入的种植土",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_FARM",
+            "SR9I_RECYCLE",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续在这块自己已经培育过的地种植和收获，跨几轮关注它保留下来的土壤成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可种种子与可做工坊零件的材料条件，再决定这一轮做哪项",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "按自己的“沙地小绿洲”主题，实际铺草方格、播已有种子并调整田边轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把种植用水、机器用水、收成回款与再买种补料连着照看几轮，依实际余缺再调安排",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "g是同一已投土壤继续积累，不是新放一格或等作物自然成熟；沙石镇作物不照搬别作的换季全枯规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I05.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "还没种植时，工坊已有水箱与一台回收机；你有一份已有的水和能处理的废料，基础零件配方可用，也有买水或补一台基础机器的资金。这轮先怎样投入？",
+          "scene": "同一块已有投入的种植土的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_FARM",
+            "SR9I_RECYCLE",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前废料回收和基础零件配方的材料条件，再决定先做哪一项",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "把手头已有的水补进当前水箱，亲手试这一次补给操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先查看水箱里当前水量、已有废料与已经产出的回收材料，再决定怎样补给",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前买水补给或再建一台已可造基础机器的资金与材料条件",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "g是同一已投土壤继续积累，不是新放一格或等作物自然成熟；沙石镇作物不照搬别作的换季全枯规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I05.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "你在 Online 已通过当前城镇项目迎来一位 NPC，这个人现在能进行普通交谈；工作台另有材料够的零件，商店也有已开放可付配方。没有紧迫交期，这轮先做什么？",
+          "scene": "招募之后来镇上的人",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和这位现在能交谈的新来者实际说一次话，亲手试当前已开放的普通互动",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "亲手做一件现有材料够的工作台零件，先体验这一次制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "花已有资源购入并学会当前已开放可付的新配方，增加这项可制作操作",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前几种可做零件的原料条件，再决定做哪种",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "Urban Planner当前确已解锁并到镇的NPC可互动；普通交谈和已有配方制作均为具体操作0，购入可付配方0、比较条件0。NPC不当真人，也不把普通寒暄强作人物往事。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I05.ONLINE.V1"
+        },
+        {
+          "text": "只在早期 Online 镇上活动时，你已接一张基础制作委托，材料与交付点已显示且手头材料够；眼前也有一位当前能普通交谈的镇民，不用等其他玩家。这轮先做什么？",
+          "scene": "招募之后来镇上的人的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和眼前这位当前可交谈的镇民实际说一次话，亲手试这次普通互动",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "直接用现有配方做一件当前材料够的基础物件",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先查看这次已列任务的材料与交付条件",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "按这次任务已有材料、加工与到目的地交付的先后排好，再照着推进",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "Urban Planner当前确已解锁并到镇的NPC可互动；普通交谈和已有配方制作均为具体操作0，购入可付配方0、比较条件0。NPC不当真人，也不把普通寒暄强作人物往事。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I05.ONLINE.ALT1"
+        },
+        {
+          "text": "单机院里的露水收集器现在确有可收露，背包已有露水，加起来够工作台当前制水配方；另有一种已会的基础零件配方，现有材料也够做，机器水箱尚能运行一轮，自己的箱子可用。这次先做什么？",
+          "scene": "已收露水怎样处理",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ED_DEW",
+            "SR9I_RECYCLE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对现有露水、水箱水量和手头材料数量，再决定何时制水",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "收取眼前这批露水，并在工作台按已满足条件的配方制一份水，亲手试这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "比较当前制水配方与其他材料够的基础配方，再决定这一轮做哪项",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "把已持有的露水实际存入自己的箱子，留好这轮要携带的材料",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "集露后台过程不记f；现在确有露与制水条件。一次处理或留存是0，不暗示必须某固定时刻收取。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I05.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "你独自在 Online，已有可用精炼机和自己的两件可处理装备，当前界面列出的适配材料都在手，但这轮只够先处理其中一件；自己的箱子也能用。先做什么？",
+          "scene": "Online现有装备的一次精炼",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ED_REFINE",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较这两件当前可处理装备的现有属性与可选处理条件，再决定这一轮选哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "直接对自己选定、条件满足的一件装备执行一次当前精炼，亲手试这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先核对精炼界面已显示的材料消耗与处理条件，再决定是否执行",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "把这轮暂不动的已有装备存进自己的箱子，取好要带的材料",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "Online精炼由正式发布说明补证；装备都是自己的。普通比较和一次处理全为0，不强凑b/g；仅问当前界面已经可执行的装备与材料条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I05.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已完成为 Mort 做相册的那段任务，现在又拿到一张可送回的旧照，Mort 当前能交谈；相机也已解锁，附近有你还没仔细看过的小路。没有急交期，这轮先做什么？",
+          "scene": "Mort 手里的旧故事",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_MORT",
+            "SR9I_PHOTO",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经找到的旧照和人物信息补几句记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "围绕自己的“旧镇与新工坊”主题调整相机取景，拍下当前镇景",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "沿附近自己尚未看过的可达小路走一段，只为发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把旧照送给 Mort 并听他讲关联的往事，想把前面听过的人物经历接起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "固定照片故事可直接入题但不能改写结局；已有旧照补记0，不把拿着未交物当未得收藏缺项。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I06.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "还未接触 Mort 旧相册时，早期 Jasmine 的镇上导览当前可继续，镇街也能自由走；你已认识过她，眼前无急务。这轮先做什么？",
+          "scene": "Mort 手里的旧故事的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_MORT",
+            "SR9I_PHOTO",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "转去一条自己还没走过的可达街巷，只想看看那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为已经遇见的 Jasmine 和镇街信息补上自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "选自己的“初到沙石镇”画面主题，调整普通游戏视角并用PC截图留下街口",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "跟上这段现有导览，听她介绍镇上的人和地方，想知道这座小镇的日常",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "固定照片故事可直接入题但不能改写结局；已有旧照补记0，不把拿着未交物当未得收藏缺项。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I06.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "你和此刻在线的真人伙伴都想修改 Online 共享工坊，现有家具和场地可编辑，目前没人正在编辑；家园工具一次由一人操作。这轮你先做什么？",
+          "scene": "共享工坊轮流编辑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想要的“沙漠共同据点”主题，实际安排当前家具与院落轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看这座共享工坊当前已可选的家具和外观方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "排清自己这一轮收回、移位和重新放置现有家具的次序，再照着编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "和真人伙伴先谈各自想改的区域、谁先使用编辑器以及何时交接，再照这个安排动手",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "真人编辑交接与个人空间表达分开；不是同时多光标编辑，不要求未经核实的模板导入/平台共享。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I06.ONLINE.V1"
+        },
+        {
+          "text": "当前只有你在 Online，早期共享院落有自己能放的现成椅子与箱子，放置预览和合法空地都可用。这轮先做什么？",
+          "scene": "共享工坊轮流编辑的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只把现有椅子的放置预览换到另一块合法空地，先试一次位置变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先看看当前已经拥有的家具外观方案，再决定摆什么",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "排清收回旧箱子、给入口留空和重新放椅子的顺序，并实际照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按自己的“临时沙地据点”主题摆出椅子、箱子和入口的关系",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真人编辑交接与个人空间表达分开；不是同时多光标编辑，不要求未经核实的模板导入/平台共享。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I06.ONLINE.ALT1"
+        },
+        {
+          "text": "齐衡正研究你此前已提交的一张机器图纸，当前界面允许用额外数据光盘加速，手头够支付；研究所仍可到达，院里现有机器也有材料可加工。没有急交期，先做什么？",
+          "scene": "已经在研究的图纸",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ED_RESEARCH",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际交当前够用的额外光盘，加速这张已在研究的图纸，试这次可用操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "回院里比较当前机器可接的已有原料与配方，再决定这轮加工什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "给自己已经取得的数据光盘与去过的研究所补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前加速选项显示的光盘成本和图纸说明，再决定是否支付",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "已有研究也不自动是g；付一次加速与等邮件不冒充持续培养。只问当前实际有加速入口和足额光盘。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I06.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "Online 共享工坊现在只有你在编辑，你已做出一组房间；当前界面实际已允许保存自己的 Show Room，整组也已可选中，屋内现有外观仍可调整。先做什么？",
+          "scene": "当前可保存的Online房屋方案",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RELEASE",
+            "SR9I_ED_SHOWROOM"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的沙漠连廊主题，继续实际调整这组房间与已有外观的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "只移动一间当前可移动房间的合法预览，先查看这次位置变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "排清这一轮先选整组、调整一间和回看连接关系的步骤，再实际编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先把这份已经具备条件的自己房屋方案保存为本机可用Show Room预设，保留本轮编辑",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "只在当前Online真正开放保存入口时问；开发者已发布导出功能，原玩家界面步骤只作共同操作旁证。不要求分享、上传或导入别人文件，保存不是成长或收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I06.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "单机家园编辑已开放，你已有一个能改的房间、几件现成家具和可用墙地面方案；没有要赶的剧情或加工。这轮只认真处理一处，你先做什么？",
+          "scene": "自己工坊的家园编辑",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_STORE",
+            "SR9I_RELEASE",
+            "SR9I_FREE14"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清这一轮先收回哪件、再移哪件和改哪片墙面的次序，再实际编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先查看自己现有家具和墙地面可选方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "按自己的“荒漠机械师住处”主题重排桌椅、墙面和留空，让房间表达这个样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "移动一件已有家具的放置预览，先试它与门口的距离变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "个人表达、单处编辑、已执行编辑步骤与素材比较是不同动作；只用当前已拥有选项，不默认DLC外观。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I07.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "还没扩建房间时，院里已有可放的一张椅子和一个储物箱，当前放置预览可用，门口也有合法空地。这轮先怎么做？",
+          "scene": "自己工坊的家园编辑的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_STORE",
+            "SR9I_RELEASE",
+            "SR9I_FREE14"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排移箱子、摆椅子和留下入口空位的次序，再照着摆",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先看看自己已经拥有的椅子和箱子外观方案，再决定摆哪件",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "按自己想要的“小工坊门廊”主题，实际摆放椅子、箱子并调整入口的空间关系",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把现有箱子的放置预览移到另一处合法空地，先看一次间距变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "个人表达、单处编辑、已执行编辑步骤与素材比较是不同动作；只用当前已拥有选项，不默认DLC外观。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I07.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "Online 中你和真人伙伴现在都已能进入一处开放的危险遗迹，武器和恢复物品都准备好；当前没有必须冲成绩的要求，门外也能先练。这轮怎样投入？",
+          "scene": "和真人进危险遗迹",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入当前已开放的遗迹后，在遇到的可处理普通敌人面前反复练挥击、闪避和重选目标，想练熟输入，不要求之后进步",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "进入这处已开放遗迹后，亲自连续挥击遇到的可处理普通敌人，想体验出手、命中与动作衔接的即时反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "和真人伙伴谈好本次处理哪个目标、各自先接近哪边和何时停下来恢复，再按约定进入",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "陪这位熟悉的真人伙伴再走这段已开放内容，重点是一起经历这趟",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "真人协作、陪伴、本人练习和直接交手反馈分开，不从队友打得好坏判断能力；独自Online也有可答路径。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I07.ONLINE.V1"
+        },
+        {
+          "text": "独自早期 Online、尚未去危险遗迹时，你已有能用的基础武器，工坊外安全空地可空挥与闪避，现有武器操作说明也能看。这轮先做什么？",
+          "scene": "和真人进危险遗迹的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在安全空地用一次当前普通挥击，亲手试这项具体动作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先阅读已有武器与基础操作说明，再继续自己的实际尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "反复练当前可用的空挥与闪避衔接，重点是练熟自己的输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "亲手连续挥击并闪避，想体验动作衔接和操作回应的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "真人协作、陪伴、本人练习和直接交手反馈分开，不从队友打得好坏判断能力；独自Online也有可答路径。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I07.ONLINE.ALT1"
+        },
+        {
+          "text": "你停在单机新建人物界面，还没确认开始；当前有可选发型、颜色和面部外观方案。这段编辑时间先怎样投入？",
+          "scene": "开局人物外观的可选方案",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_STORE",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前可选发型和面部外观方案，再决定采用哪组",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "排清这一轮先选发型、再调色和回看整体的编辑次序，并照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的“沙漠工坊新人”画面主题，实际组合当前可选发型、颜色与外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "只动一次当前可调颜色设置，先亲手看看变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "开局外观不需房屋扩建或付费衣装；a来自实际主题表达，不由面部、性别或肤色推现实人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I07.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "当前 Online 种植功能已由任务开放，你有可铺草方格的材料、两种现有可播种子与水，院里有合法空地；这次没有真人伙伴在场。先做什么？",
+          "scene": "Online已开放的种植功能",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的沙漠试验田外观主题，实际安排几格合法田块与现有种子的位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有种子、水和草方格材料的现状，再决定怎样动手",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "比较现有种子与当前可用空地、材料条件，再决定这一轮播哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "实际铺一格草方格并播下已有种子、浇水，亲手试这次已开放操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "Online原生种植确已发布，但不借单机土壤经验推g；第一次操作/个人布局和当前材料查看分别解释，独自可答。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I07.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "沙捕已解锁，你已有基础笼和另一款当前可用笼，鱼饵足够，沙坑目前开放。你还给自己列了一种从没捕到、已核对这里会出的沙鱼；这轮先投入哪里？",
+          "scene": "沙坑边的鱼饵与笼",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_SANDFISH",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续做几次投饵到放笼的动作，想体验瞄准、抛出和收回反馈接连发生",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "实际投饵和罩鱼，继续找那种自己确实没捕到的沙鱼，想补上清单缺口，不要求这轮抓到",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "在现有沙坑反复练投饵后重新瞄准鱼影与放笼时点，重点是熟悉自己的输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前两款可用笼的范围和条件，再决定用哪件",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "真实未捕种类且实际寻找才c；已有笼比较0，主动练习与直接操作手感分开，不以捕获量/鱼王/熟练成功为门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I08.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "只拿到基础沙捕笼时，你有够本次几轮的当地可用鱼饵和恢复食物，当前早期任务列出沙鲤需求，正在工坊准备去已开放沙坑尝试。这轮先做什么？",
+          "scene": "沙坑边的鱼饵与笼的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_SANDFISH",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有沙捕操作说明，再继续自己的第一次尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "亲自投饵和罩鱼，推进当前已列的沙鲤目标，不要求第一次就捕够",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "反复练当前投饵、瞄准与放笼输入，重点是练熟它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "排清从工坊取饵去沙坑、消耗鱼饵体力放笼、用已有食物恢复和回工坊的路线，再照着试",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "真实未捕种类且实际寻找才c；已有笼比较0，主动练习与直接操作手感分开，不以捕获量/鱼王/熟练成功为门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I08.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "你和熟悉的真人伙伴此刻同在镇上，照相功能已经可用，现有画面也能取景；双方都没急任务。这轮你怎样投入？",
+          "scene": "Online 里的一张合影",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_PHOTO",
+            "SR9I_CURRENT_ONLINE",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接用当前镜头拍一张在场合照，先亲手试这一次拍摄操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "邀请真人伙伴一起留张合影，想把你们这次同玩的片段记下来",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "按自己的“沙地同行留影”主题，实际调整自己的站位、普通游戏视角与画面时机，给已在附近的伙伴和镇景作PC截图构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先比较自己当前可选的姿势与表情外观方案，再决定这张采用哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "共同纪念只在真人在场计o；a要实际构图保存。只用已解锁照相和自己的可选姿势，不声称能操纵伙伴表情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I08.ONLINE.V1"
+        },
+        {
+          "text": "只有自己在早期 Online 镇上时，你已逛过一处街口，另一条可达小路还没看；另有已接基础零件委托和足够材料，不用照相功能也能用普通PC截图。这轮先做什么？",
+          "scene": "Online 里的一张合影的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_PHOTO",
+            "SR9I_CURRENT_ONLINE",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去工作台做这张已接委托所需的基础零件，把推进它作为这轮重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "按自己的“新镇起点”主题调整普通游戏视角，用PC截图取一张自己要的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "去看看那条还没看过的可达小路，只为发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "为已经逛过的街口和遇见的人物补上信息记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "共同纪念只在真人在场计o；a要实际构图保存。只用已解锁照相和自己的可选姿势，不声称能操纵伙伴表情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I08.ONLINE.ALT1"
+        },
+        {
+          "text": "单机中，一位当前允许切磋的NPC就在眼前，今天还能发起这次切磋；入场会提供石制武器供选择。这里是游戏内比试，不是与真人联机，你想怎样投入？",
+          "scene": "NPC切磋前的武器选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_ED_SPAR",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当场可选石制武器的操作条件，再决定这局用哪种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "进场后以击败这个游戏内对手为这场目标，实际争取赢下这一局，输了也算这次投入",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "选一件当场提供的石制武器，反复练出手、走位与闪避，重点是熟悉输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "选好武器后亲自连续交手，想体验攻击、命中和闪避衔接的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "NPC是明确有胜负的游戏对手可记k，不能记真人o/q；练习可只发生在本场输入中，不要求赢、变强或重复同NPC无限次。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I08.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "Online 中你已有两套可换的本体衣物，当前人物外观界面能改自己的穿着；这次不买新衣、不要求别人配合，也没有急任务。先做什么？",
+          "scene": "只用现有衣物的本人外观",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SR9I_STORE",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清这一轮先换上衣、再改下装和回看整体的编辑步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "按自己想表达的沙漠旅人工装主题，实际组合现有衣物与自己的外观呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "只换一件当前已有衣物，亲手查看这次外观变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看自己已有衣物的外观方案，再决定这轮采用哪套",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "当前自己的可换衣物已拥有，不要求DLC；外观主题不推现实身份，普通换装/浏览/步骤均0，不把其他玩家当可操纵角色。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I08.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回看你已经用过机器并接过委托的一段，哪件实际投入更有分量？不要求最后准时或高效交单。",
+          "scene": "已经跑过的工坊循环",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_RECYCLE",
+            "SR9I_COMMISSIONS",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我连续几轮一起调过废料回收、零件加工、回款和水燃补给，按实际库存再改队列",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我在原因尚未弄清时自己猜过积沙影响某台运行，只清过那一台并保持其他安排，再实看过结果",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我在采集时连续敲过现有废料，重点是反复体验命中和碎裂拾取的即时反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "我为自己已经亲手装配过的回收机或熔炉，补记过取零件、安装部件和取走成品的处理过程",
+              "signal": "work_task_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去行为；p可猜错，y须实际多轮反馈，f是玩家输入而非自动机器声画；亲手机器部件装配的过程记录0，台内装配准备0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I09.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "回想只做过早期采集与第一台机器的一段，哪件确实做过的事更有分量？",
+          "scene": "已经跑过的工坊循环的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_RECYCLE",
+            "SR9I_COMMISSIONS",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我反复敲过当时废料堆，想体验挥镐、碎裂和拾取接上的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "我主动重复练过对准、挥镐与重选目标，当时重点是练熟输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我按当时已有工具、材料与首台回收机目标，排过取料、回工作台做零件和到装配台安装的先后，并亲手做过",
+              "signal": "work_task_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "我给自己已经亲手装配过的第一台回收机，补记过零件安装和取走成品的过程",
+              "signal": "work_task_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去行为；p可猜错，y须实际多轮反馈，f是玩家输入而非自动机器声画；亲手机器部件装配的过程记录0，台内装配准备0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I09.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "回看你在 Online 已实际推进过的城镇项目，哪种当时做过的投入更有分量？没有跟真人一起做过，可换独自情境。",
+          "scene": "已经共同推进的城镇",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我和当时在线的真人伙伴谈过目标、取料分工与交付节奏，并按商量结果一起推进过",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "我连续几轮一起调过公共材料、加工、水燃和项目消耗，按实际库存再补给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我按当时已经列出的城镇条件做过可做部分，重点是完成那项目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "我为当时已经实际完成的城镇建筑项目补记过材料交付与建成的过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "真过去，不把同服有别人或NPC解锁自动算协调；只有实际商量真人推进才q。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I09.ONLINE.V1"
+        },
+        {
+          "text": "回想只独自做过早期 Online 项目的一段，哪件确实做过的事更有分量？",
+          "scene": "已经共同推进的城镇的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时已经列出的材料与目标条件实际推进过那项城镇任务",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我比较过当时可做的零件配方，再决定先加工什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "我核对过当时公共材料与已有产出状态，再作安排",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "我为自己已经取得的基础物件或已逛过的镇街补记过信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "真过去，不把同服有别人或NPC解锁自动算协调；只有实际商量真人推进才q。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I09.ONLINE.ALT1"
+        },
+        {
+          "text": "回想你已在符合条件的周末亲手做过商会检验的一段，哪种实际投入更有分量？可以没找齐缺陷。",
+          "scene": "已经尝试过商会检验",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ED_INSPECT"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出过某个可疑轮廓是缺陷的判断，转动左右物件对照并只标那一处，实际看过反馈，判断也可能错",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我主动在当时仍可检的物件间重复练过旋转、找对应面和标记，重点是熟悉输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我先核对过当时已有的检验规则，再亲手开始过尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我直接选过一件当时可检物，亲手试过那轮旋转与标记",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "全部真过去，检验可以失败；不把满分或找到全部缺陷设为计分门槛，不把自动展物动画计f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I09.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "回顾你只在 Online 独自用过公共库存、个人箱子或做过储存升级的一段，哪件实际做过的事更有分量？",
+          "scene": "独自用公共存储的真实经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为当时一轮制作核对过公共材料和自己已有产物的种类数量，再决定取哪批",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我实际存取过自己已有物品，调整过带去制作或交付的材料",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "我花当时已有且足够的材料购入过一项已开放公共库存升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "D",
+              "label": "我为自己已经取得的材料、成品或见过的物件说明补记过信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "本人独自库存操作不计真人协调；一次容量购买0，不将公用箱容量变大称持续养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I09.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回顾你已经种过或建设过的单机工坊，哪种实际投入更有分量？不要求土壤已升到顶或工坊已建成理想样子。",
+          "scene": "已经留在同一存档的成长",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_FARM",
+            "SR9I_STORE",
+            "SR9I_KNOWLEDGE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为了自己的院落主题，实际调过菜地、机器与家具的空间关系",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我比较过当时已开放可做的种子或零件配方，再决定那次生产",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "我核对过当时已有作物、材料和机器产出的状态，再决定安排",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "我继续在同一块此前已种收过的地投入种植，隔几轮关注它保留下来的土壤经验成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "g是同一已投土壤或角色知识路线的持续培养；一次解锁、菜单比较和看状态均不冒称成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I10.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "尚未种过地时，回想早期同一角色的采集与工坊生活，哪种实际做过的事更有分量？",
+          "scene": "已经留在同一存档的成长的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_FARM",
+            "SR9I_STORE",
+            "SR9I_KNOWLEDGE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主动反复练过已有镐锤的瞄准和挥动，重点是练熟输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我比较过当时已有工具与已开放升级的条件，再决定下一步",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "我花当时已有资源买过一项已开放可支付的工具或装备升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "D",
+              "label": "我在同一存档沿已经开始投入的采集知识路线持续采集，并把后来得到的点数接着投在这条路线",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "g是同一已投土壤或角色知识路线的持续培养；一次解锁、菜单比较和看状态均不冒称成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I10.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "回顾 Online 里同一角色已经做过的活动，哪种实际投入更有分量？不要求已升到高等级。",
+          "scene": "已经保留的个人投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我花当时已有资源购入过一项已经开放且可支付的工具或装备升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "我比较过已有知识节点或装备条件，再决定那次采用哪种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "我主动重复练过当时镐锤或武器输入，当时重点是练熟操作而非必须表现更好",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我持续沿同一角色已经开始的知识路线做采集或制作，把后来得到的点数继续投在这条路线，想留下后续成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "个人持续已投路线g与一次购买0/菜单比较0分开，不把城镇目标列表、移居或资源增多自动等同成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I10.ONLINE.V1"
+        },
+        {
+          "text": "只做过早期 Online 制作和采集时，回想真实发生过的一段，哪件更有分量？",
+          "scene": "已经保留的个人投入的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际做过一件当时已会、材料够的基础零件，想亲手试这次制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "我比较过当时可做的基础零件配方，再决定投入",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "我核对过当时公共原料、身上材料和现成物件的种类数量，再决定做哪批",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "我主动反复练过对准当时废料、挥镐和重新选目标，重点是熟悉输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "个人持续已投路线g与一次购买0/菜单比较0分开，不把城镇目标列表、移居或资源增多自动等同成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I10.ONLINE.ALT1"
+        },
+        {
+          "text": "回想你曾集齐碎片、使用过修复机或整理过自己的文物的一段，哪件确实做过的事更有分量？",
+          "scene": "全套文物在手以后的经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_MUSEUM"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我核对过当时修复界面已经显示的碎片和材料条件，再决定那轮是否执行",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "我实际存取过自己已有碎片和文物，调整过携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "我给自己已经获得的碎片、修复文物或已见展品信息补记过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "我用当时已有的完整碎片和足够光盘实际修复过一次文物，亲手试过那个操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "已有全套后的操作与信息回顾，不把未修复误判为从未拥有的缺项，不强塞收藏或成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I10.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "回想 Online 马厩开放后，你已租到或拥有坐骑并亲自骑过的一段，哪种实际投入更有分量？不要求比赛或熟练成功。",
+          "scene": "真正骑过现有坐骑的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际骑过当时已可用的坐骑，重点是亲手试它怎样行进",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "我从一条已熟悉但不同侧的可走路线骑过，想体验不同的行进方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "我骑去过当时可达却自己没看过的路，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我主动反复练过当时可骑坐骑的起步、转向与停下，重点是熟悉输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "实际骑行、本人练习与两种路线动机分开；不由坐骑价格、速度或能否获胜推画像。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I10.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回看你已接触过废墟、文物或旧照片的一段，哪件当时确实做过的事更有分量？找碎片不必成功。",
+          "scene": "文物与旧照里的实际经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_RUINS",
+            "SR9I_MUSEUM",
+            "SR9I_MORT",
+            "SR9I_MAIL"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我送回过 Mort 的旧照并听过关联往事，想接上镇上人物的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我为自己已经找到的照片、文物或已见人物信息补上过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "我为了某件文物实际未得的一片碎片，回过已开放且有机会出它的遗迹，真用探测器和镐锤找过",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "我走进过一段自己没看过的可达遗迹通道，重点是发现里面有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "回顾未得缺项的实际追求、未知发现、人物叙述与已有信息记录；已有未展示藏品不算缺失，固定往事不假装可改。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I11.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "只逛过早期镇街时，回想确实发生过的一段，哪件更贴近你的投入？",
+          "scene": "文物与旧照里的实际经历的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_RUINS",
+            "SR9I_MUSEUM",
+            "SR9I_MORT",
+            "SR9I_MAIL"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己想要的“初来小镇”主题调整过普通游戏视角，再用PC截图取景",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我为当时已经遇见的人或去过的镇街补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "我读过已经收到的家人或旧识来信，想接上人物先前的生活",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我绕去过一条当时可达但自己没走过的镇街，只想发现那边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "回顾未得缺项的实际追求、未知发现、人物叙述与已有信息记录；已有未展示藏品不算缺失，固定往事不假装可改。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I11.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "回想你确实与真人伙伴同在 Online 的一段，哪件实际做过的事更有分量？这里的伙伴不包括 NPC。",
+          "scene": "已经一起发生过的片段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_PHOTO"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为自己的共享工坊或同伴合照主题实际布置过场地或取过景",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我为当时已取得的物件、已体验地点或人物信息补过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "我为了陪熟悉的真人伙伴，再参加过一次他当时想做的采集、游逛或遗迹经历，重视一起发生的事",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "我和真人伙伴商量过共享编辑、公共材料或城镇目标的交接与分工，并照着做过",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "共同经历和共同安排是两种真实人际偏好；不由NPC好感、服务器人数或聊天频率推断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I11.ONLINE.V1"
+        },
+        {
+          "text": "还没和真人一起玩过时，回顾自己早期 Online 的真实经历，哪件更有分量？",
+          "scene": "已经一起发生过的片段的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE",
+            "SR9I_PHOTO"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为当时已经拿到的物件或去过的地方补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我实际做过已列基础任务的可做部分，把推进目标作为当时重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "我主动重复练过当时已有工具的对准与切换，当时重点是练熟输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我走过一段当时可达但自己没看过的镇街或采集区，只想发现那边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "共同经历和共同安排是两种真实人际偏好；不由NPC好感、服务器人数或聊天频率推断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I11.ONLINE.ALT1"
+        },
+        {
+          "text": "回想自己真正与可切磋NPC交过手的一场，哪种实际投入更有分量？不要求胜出。",
+          "scene": "已经和NPC切磋的一场",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ED_SPAR"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我亲自连续交手，重点是享受攻击、命中和走位反馈连起来的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "我比较过当场提供的石制武器操作条件，再决定用哪种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "我以击败这名游戏内对手为当场目标，实际争取过赢下这场切磋",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "我主动重复练过当场提供武器的出手和闪避，重点是熟悉输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "真实NPC对手胜负与本人练习/手感分开；输局仍可答，不把NPC比试叫真人共同经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I11.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "回顾你在 Online 没有真人伙伴在场、但照相已开放并亲自取过景的一段，哪件真实发生过的事更有分量？",
+          "scene": "独自使用照相的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_PHOTO",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为自己已经拍到的物件和已逛地点补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我转去过当时可达但自己还没看过的街口，想先发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的沙镇日常主题，实际调整自己站位、镜头角度与时机，留下过个人构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我用当时已可用照相功能直接拍过一张镇景，亲手试过那次操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "独自摄影不伪造真人共同纪念；a有实际主题构图，普通拍摄和已有照片信息记录0，不要求PC分享系统。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I11.ONLINE.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SR09I12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你有精力、角色状态也够用，还有新工程或新支线可做，且没有急交期的一段，哪种真实选择更有分量？",
+          "scene": "仍可发展时的熟悉工坊",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_STORE",
+            "SR9I_RECYCLE",
+            "SR9I_FARM"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我转去过当时可达却没仔细看过的沙漠小路，想看看那里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我主动回到熟悉工坊补水添燃料、整理院子，喜欢这段从容重复，所以暂缓了新项目",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我连续几轮一起照看过加工、订单回款、种植用水和补料，按实际余缺再调安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的工坊外观主题改过房间、院子或机器的布局",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h有本人余力、角色可继续与新内容可做，主动喜欢熟悉日常；不由体力耗尽、忙不过来或剧情未解锁推断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I12.SINGLEPLAYER.V1"
+        },
+        {
+          "text": "回想初到镇上但已有熟悉的小工坊日常时，你当时有精力、角色状态够用，还有新委托可接，哪种实际选择更有分量？",
+          "scene": "仍可发展时的熟悉工坊的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_STORE",
+            "SR9I_RECYCLE",
+            "SR9I_FARM"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我给自己已经亲手装配过的回收机补记过零件安装与取走成品的处理过程",
+              "signal": "work_task_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "我主动重复熟悉的敲废料、回工坊做基础物件，喜欢自己从容掌握节奏而暂缓新委托",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我去过另一条当时能走但没看过的镇街，想先发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我实际推进过当时已经列出的新工坊目标，把它的完成作为那次重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "h有本人余力、角色可继续与新内容可做，主动喜欢熟悉日常；不由体力耗尽、忙不过来或剧情未解锁推断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I12.SINGLEPLAYER.ALT1"
+        },
+        {
+          "text": "回想 Online 还有新城镇项目可推进、你有精力且角色状态够用，也没有被迫等人或赶活动的一段，哪种真实选择更有分量？",
+          "scene": "还可开新项目时留在旧工坊",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我转去过当时已可达但自己没看过的一段荒漠路线，想先发现那里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我主动回熟悉工坊补给和做已有基础物件，因为喜欢从容重复这段日常而暂缓新项目",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我为了陪当时在线的熟悉真人伙伴，继续过他想体验的已开放活动，重视这次一起玩",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "我把公共原料、水燃、加工与后续项目消耗连续几轮一起调过，按库存再改安排",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "h不是离线等待、体力用尽或进度被锁；o明确实际真人陪伴。仅自己Online也有完整真实过去替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I12.ONLINE.V1"
+        },
+        {
+          "text": "回想独自早期 Online 时，你当时有精力、角色状态够用且还有新任务可做，哪种已发生选择更有分量？",
+          "scene": "还可开新项目时留在旧工坊的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_CURRENT_ONLINE",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为当时已经拿到的物件或已逛过的地方补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我主动重复熟悉的采集回工坊日常，因为喜欢从容处理这一段而暂缓新任务",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我去过当时可达但没逛过的镇街，重点是发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我亲自推进过当时已列任务的可做部分，把这项目标作为重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "h不是离线等待、体力用尽或进度被锁；o明确实际真人陪伴。仅自己Online也有完整真实过去替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I12.ONLINE.ALT1"
+        },
+        {
+          "text": "回想照相已开放、你有精力且角色状态够，还有新委托或可达新地点能推进的一段。你在熟悉镇街确实怎样投入过？",
+          "scene": "有余力时在熟悉镇景取景",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_PHOTO",
+            "SR9I_STORE"
+          ],
+          "modes": [
+            "singleplayer"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为自己已经拍到的照片和已经走过的镇街补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我主动留在熟悉街口慢慢换站位拍景，喜欢这段不赶目标的熟悉节奏，所以暂缓新委托",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的旧镇光影主题，实际调整取景角度和时机，留下过个人构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我转去过当时可达但自己没看过的街巷，想发现那一边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h有本人余力、角色可继续和真实新进度可做，主动喜欢熟悉取景；a须实际构图，不把截图数量当收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I12.SINGLEPLAYER.ALT2"
+        },
+        {
+          "text": "回想 Online 的 The Breach 已熟悉，你本人有精力、角色体力与补给够，没有正在交战且仍有新城镇项目可做的一段，哪种真实选择更有分量？",
+          "scene": "有余力时重访熟悉矿点",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SR9I_ONLINE_FAQ",
+            "SR9I_RELEASE"
+          ],
+          "modes": [
+            "online"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为当时已经取得的矿物和已到过的矿洞位置补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我主动回熟悉、当时仍可采的普通矿点敲料，喜欢按自己的节奏重复这段，所以暂缓新城镇目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我在当时还能处理的矿点主动练过镐锤对准与换位，重点是练熟输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我去过矿洞里当时可达但自己还没看过的通路，想发现那边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h是真有余力与进度可做而喜欢熟悉采矿，不是等服务器、缺补给或卡任务；不承诺特定矿物掉落。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SR09I12.ONLINE.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+d7be5a284926"
+}

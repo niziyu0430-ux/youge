@@ -1,0 +1,1060 @@
+{
+  "id": "gi",
+  "title": "原神",
+  "game_ids": [
+    "genshin-impact"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按自己熟悉的体验回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "GI01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "GI01.V1",
+          "text": "去交任务的路上，远处有座没去过的遗迹，近处的仙灵飞向另一条岔路。这次只想先推进一件事，你会怎么走？",
+          "scene": "探索途中改变路线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去遗迹，看看那片还没走过的空间里有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "跟上仙灵，把眼前这条引导和它的宝箱收完",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "继续去交任务，把刚才那个人的后续接上",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "沿眼前舒服的路慢慢走，暂时不给这段旅途加目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "区分未知地点、可完成的收集目标、人物后续与自主节奏；不是问哪条路线收益更高。",
+          "interpretation_boundary": "不把探索度、宝箱数量或交任务效率当作能力。"
+        },
+        {
+          "id": "GI01.CORE",
+          "text": "这次从蒙德城外出发，只想先走一小段路。面对岔路，你会先怎样安排？",
+          "scene": "旅途路线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "往还没走过的高处看看，找一条新的路线",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "跟完眼前仙灵的引导，把这一处发现收完整",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "接着走已在推进的任务，看看刚才人物的后续",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "沿熟悉的路散步，暂时不再追新的目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "GI02.V1",
+          "text": "几名已培养的角色可以组成一支新队伍。试过一场战斗后，什么最让你想接着研究这队人？",
+          "scene": "元素队伍磨合",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "切人顺序一改，元素反应和技能衔接就有了新变化",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "几个动作接起来特别顺，想再打一遍那种手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "还有没试过的角色组合，想看看搭在一起会发生什么",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "练了很久的角色终于在队里站稳了位置",
+              "signal": "growth_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "同样是喜欢一支队伍，区分构筑关系、即时手感、实验与长期培养。",
+          "interpretation_boundary": "不要求报出标准配队；不按角色稀有度或伤害高低赋分。"
+        },
+        {
+          "id": "GI02.CORE",
+          "text": "用已经熟悉的几名角色在野外打过一段之后，哪种变化最让你记住？",
+          "scene": "元素配合",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "调整切人和技能顺序，让元素之间形成了新的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "几次攻击与移动接得顺，声音和动作反馈很痛快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "换成少用的组合，出现了之前没试过的打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "一直培养的角色，终于能接上自己常用的队伍",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "GI03.V1",
+          "text": "一名已经拥有的角色还没常驻队伍，你愿意用这一小段空闲了解他。先做哪件事？",
+          "scene": "角色加入后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "带出去打几场怪，亲手试普通攻击、战技和切人的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "完成一项现阶段做得到的等级、天赋或装备培养",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "按他的身份配一队人，走一段自己想象中的主题路线",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "打开已解锁的角色故事与语音，把他的经历先读下去",
+              "signal": "story_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "把角色喜爱拆成操作、养成、角色代入和叙事，不把抽取或花费当作人格证据。",
+          "interpretation_boundary": "已拥有是情境前提，不默认玩家抽卡或付费。"
+        },
+        {
+          "id": "GI03.CORE",
+          "text": "这次只带已经拥有的角色在蒙德附近活动，不需要额外获取角色。出发前你先做什么？",
+          "scene": "已有角色",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一名少用的角色，亲手试试招式与移动节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "整理现有经验材料，让惦记的角色继续培养一步",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "按角色身份配一支主题队伍，带着这个想法走一段",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "看看已解锁的角色故事和语音，把这个人的经历接上",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "GI04.V1",
+          "text": "想培养的两名角色缺不同材料，你还留了一段时间做任务。这次先怎样安排养成？",
+          "scene": "材料安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_GROWTH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把秘境开放日与采集路线排好，按几次上线接着推进",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先集中培养最惦记的那名角色，让另一名晚一些上场",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先补影响元素队伍配合的那一环，再实际打一场看看",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "跟着今天的任务路线走，路过材料时顺手收一些",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "区分流程组织、对象投入、整体构筑与不被目标催促的节奏。",
+          "interpretation_boundary": "没有最优效率答案；不把现实可用时间多少计为偏好高低。"
+        },
+        {
+          "id": "GI04.CORE",
+          "text": "背包里已有一些养成材料，今天也想留时间探索。先怎么使用这段准备时间？",
+          "scene": "材料与路线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "列好材料与路线，下次回来可以接着推进",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先培养自己最惦记的那名角色，另一名晚点也可以",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先补队伍中影响配合的一环，再到野外打一场",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先出去走，路过材料时顺手收，不单独排进度",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "GI05.V1",
+          "text": "一只世界首领已经打得过，但有几招仍不满意。现在还有一小段自由时间，你会先做什么？",
+          "scene": "世界首领的反复尝试",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续用熟悉角色再试，把那几次闪避和出手练顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "调整角色与技能顺序，再去验证一次队伍配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "换一队平时不带的角色，试着用另一种方式打过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "离开这只首领，去推进还想看的任务或区域",
+              "signal": "wanderer"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在已经能通过的前提下问自愿投入，避免把卡关时的资源不足误作动机。",
+          "interpretation_boundary": "练习兴趣不等于操作水平；更换目标不等于不能坚持。"
+        },
+        {
+          "id": "GI05.CORE",
+          "text": "蒙德野外一群已经能打过的敌人就在前面，仍有时间试一次。你先怎么做？",
+          "scene": "熟悉敌人",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用熟悉角色再打，专门留意上次没处理好的闪避",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "调整角色出场与技能顺序，实际试一轮配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "带一队平时少用的人，给自己试一种不同打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "不再多打一遍，去看地图上另一个惦记的地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "GI06.V1",
+          "text": "经历芙宁娜相关的舞台故事后，如果再回看《轻涟》这一段，你最想重新体会什么？",
+          "scene": "芙宁娜与轻涟",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_FURINA"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "她的经历怎样让这次登台有了不同的情绪分量",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "站在她的处境里，想象这次开口和走上舞台意味着什么",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "歌声、镜头与舞台如何共同留下这段画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "和也看过的同好聊聊，彼此记住的是哪些细节",
+              "signal": "social_spark"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "同一剧情片段区分叙事情感、角色视角、审美表达与共同讨论；四项都可以喜欢角色。",
+          "interpretation_boundary": "不问应不应该原谅角色，不把同情角色直接解释为现实善良或共情能力。"
+        },
+        {
+          "id": "GI06.DRAFTALT1",
+          "text": "回想已经经历的一段蒙德人物故事，如果再去重温相关内容，你最想做什么？",
+          "scene": "较早的基础情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回看人物前后的对话，体会那段经历怎样改变了他",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "带着旅行者当时的视角，回到事情发生的地方走一次",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "重新安排画面与配乐的记录，留住自己喜欢的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "与也经历过的人聊聊，看看彼此记住的片段是否相同",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "替代未体验芙宁娜剧情的情境；同一拟定信号不代表已完成统计等值。",
+          "interpretation_boundary": "按当前情境解释；不假定与原题统计等值。"
+        },
+        {
+          "id": "GI06.CORE",
+          "text": "回想已经体验过的一段提瓦特人物内容，你最愿意留住哪部分？",
+          "scene": "已经体验的人物",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "人物经历前后怎样连起来，让一句话有了新的分量",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "带着旅行者当时的位置，体会自己怎样经过这件事",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "人物、声音与场景共同呈现出的画面和氛围",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "和也体验过的同好谈起时，彼此记住的不同细节",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "GI07.V1",
+          "text": "刚经历妮露在花神诞日献舞的片段，接下来暂时不赶主线。你会先把注意力放到哪件事上？",
+          "scene": "花神之舞",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_DANCE",
+            "GI_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "整理刚才的人物对话，把庆典前后的愿望和经历串起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "留下一份演出画面的记录，琢磨舞姿、服饰和配乐的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "以旅行者的视角回到现场，沿自己刚走过的路线再走一段",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "从现场往须弥城的陌生街巷走，找还没认真看过的角落",
+              "signal": "wanderer"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以实际演出进入玩家体验，不出剧情记忆题，也不把四项都归成单一剧情兴趣。",
+          "interpretation_boundary": "该题与上一题的信号有重复，后续计分必须检查叙事与审美曝光量；不因同时出现两个名场面就认为是两种独立测量。"
+        },
+        {
+          "id": "GI07.DRAFTALT1",
+          "text": "回想已经历的一段蒙德人物故事，接下来暂时不赶新的目标。你先做什么？",
+          "scene": "较早的基础情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "整理人物讲过的经历，把前后的事情接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选一个喜欢的城中角落，调整人物与画面留张记录",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "按心里旅行者的行事方式，回到相关地方再走一段",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "沿没认真走过的城墙或小路，找一个新角落",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "以较早接触的城市替代须弥演出；没有体验对应人物内容仍不强迫回答。",
+          "interpretation_boundary": "按当前情境解释；不假定与原题统计等值。"
+        },
+        {
+          "id": "GI07.CORE",
+          "text": "回到已经到过的蒙德，暂时不赶新的任务。先给这段时间安排哪件事？",
+          "scene": "蒙德的停留",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "整理已听过的人物对话，把前后的经历接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选一处街景，调整人物与镜头留下自己的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "带着对旅行者的理解，回到相关地方再走一段",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "沿没认真走过的城墙与小路，看看还有什么角落",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "GI08.V1",
+          "text": "尘歌壶里空出一块地方，现有摆设够用。这次只整理这一角，你先动手做什么？",
+          "scene": "尘歌壶的一块空地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_TEAPOT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕庭院或街景调整建筑、路径与视线",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先定下谁会住在这里、怎样生活，再按这个背景布置",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "把惦记的一组摆设做齐，让这一角的收集完整起来",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "放好一个自己喜欢停留的位置，先在这里听会儿音乐",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "区分空间审美、虚构生活、补全与舒缓；不问摆设数量、洞天等级或收益。",
+          "interpretation_boundary": "没有体验家园不能选某项冒充不感兴趣，必须走替代题。"
+        },
+        {
+          "id": "GI08.DRAFTALT1",
+          "text": "路过一处已经到过的蒙德风景，暂时没有任务催促。你先给这段时间安排哪件事？",
+          "scene": "较早的基础情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "调整人物站位与镜头，拍出符合自己想法的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "换上与这里有联系的角色，按想象中的身份走一段",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "整理这里还没补齐的宝箱记录，补完一个小区域",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "沿熟悉的小路随便走，停一会儿就好",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "未玩尘歌壶时保留审美、代入、补全与舒缓四个拟定信号；与其他题相似需查重。",
+          "interpretation_boundary": "按当前情境解释；不假定与原题统计等值。"
+        },
+        {
+          "id": "GI08.CORE",
+          "text": "在已经走过的一处蒙德风景前停下来，不需要任何家园系统。这次先做什么？",
+          "scene": "野外画面",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "调整人物与镜头，让树、城墙和远景形成想要的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "换上与这里有联系的角色，按想象中的身份走一段",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "整理这一片仍惦记的宝箱与发现，补完整一个小区域",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "沿熟悉的路随意走一会儿，听听环境的声音",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "GI09.V1",
+          "text": "和熟人打完约好的秘境，大家还有一会儿空闲，也都愿意再待一下。你会先提出哪种安排？",
+          "scene": "联机之后的安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "边逛边聊，路上遇到什么再一起决定",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "问清大家还缺哪些材料，约一条都愿意跑的路线",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "选一个喜欢的地点，商量站位和镜头一起留张合影",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "去熟悉的地方随便走走，不给这段时间再添任务",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "区分共处、协调、共同创作与松弛节奏；不给愿意帮助别人更高价值。",
+          "interpretation_boundary": "联机是前提而非默认，没联机过要替代；不由单人游玩推断内向。"
+        },
+        {
+          "id": "GI09.DRAFTALT1",
+          "text": "不进入多人世界，但可以与熟人聊原神。这次你会先怎样把交流接下去？",
+          "scene": "较早的基础情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "互相讲讲路上遇到的事，聊到哪里算哪里",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "把彼此要找的材料和地点整理清楚，下次各自去试",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "互相看截图，商量怎样拍出一组想要的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "只聊熟悉的小事，不给彼此安排新的游戏目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "未联机时只问同好交流；若也没有此类交流，应继续换题，不代填社交答案。",
+          "interpretation_boundary": "按当前情境解释；不假定与原题统计等值。"
+        },
+        {
+          "id": "GI09.CORE",
+          "text": "即使一直单人游玩，也可以在这段蒙德旅途中选一件事先做。你先选哪一种？",
+          "scene": "单人旅途",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走一条没到过的小路，看看地图上还有什么新发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "整理已有任务与材料位置，接顺下一段路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "带喜欢的角色到一处熟悉地点，留一张自己的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "回到听惯音乐的地方待一会儿，不再安排目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "不要求同游或聊天经验；重新记录可适用的动机，报告按实际替代题解释。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "GI10.V1",
+          "text": "野外的一组元素机关没解开，你暂时也不赶路。接下来先采用哪种做法？",
+          "scene": "元素机关的卡点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "换几种触发顺序并记下变化，检验自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "去附近找图案、文字与地形线索，再回来看机关",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "只查一个针对当前机关的提示，剩下自己串起来",
+              "signal": "guide_hint"
+            },
+            {
+              "id": "D",
+              "label": "看完整做法先打开通路，把时间留给后面的内容",
+              "signal": "guide_full_solution"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "把机关求解与资料边界放回同一真实情境；查提示和看解法只记行为，不自动给能力或毅力贴标签。",
+          "interpretation_boundary": "两个攻略选项不记低分；是否独立解开不代表聪明程度。"
+        },
+        {
+          "id": "GI10.CORE",
+          "text": "碰到一处还没弄清怎样互动的野外装置，暂时不赶路。下一步先做什么？",
+          "scene": "野外互动装置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "改变元素与触发顺序，记录每次变化再验证解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "走到周围看看图案、地形和文字，找装置与附近的联系",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "只查当前这一步的提示，剩下仍由自己试",
+              "signal": "guide_hint"
+            },
+            {
+              "id": "D",
+              "label": "查完整做法先通过，把时间留给之后想看的内容",
+              "signal": "guide_full_solution"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "GI11.V1",
+          "text": "回到已经很熟悉的风起地，任务暂时不催你离开。你更可能为什么在那里多待一会儿？",
+          "scene": "熟悉地点的停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "调时间和镜头，让熟悉的树与人物呈现想留下的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "带上与这片地方有联系的角色，体会这段旅行的氛围",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "就听一会儿声音、看看风景，不再安排别的目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "想起与同好聊过的故事，把这次重访发给对方接着聊",
+              "signal": "social_spark"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "用前期可访问地点区分审美、代入、休憩和分享；不默认能重播已完成的主线。",
+          "interpretation_boundary": "截图工具是普通记录方式，不考游戏内相机功能是否解锁。"
+        },
+        {
+          "id": "GI11.CORE",
+          "text": "回想已经熟悉的一处提瓦特风景，哪种停留最让你愿意回去？",
+          "scene": "熟悉风景",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "调好人物和视角，留下符合自己想法的一幅画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "让角色身份与这片地方呼应，带入一段自己的旅途",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "不急着交任务，只在熟悉的声音与景色里待一会儿",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "和同好交换各自的记录，让这处地方成为共同话题",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "GI12.V1",
+          "text": "这段时间你既跑过地图，也养了角色、试过队伍。如果只给自己的提瓦特旅途留一页记录，你最想整理哪类变化？",
+          "scene": "旅途记录的重点",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "地图上原先没去过的地方，是怎样一步步连起来的",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "角色怎样从拿到手的状态，慢慢成长为常用伙伴",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "几套元素搭配怎样试出来，哪些配合还想再改",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "一组惦记的收集目标怎样被逐项补齐",
+              "signal": "collector"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "把收尾问题限定为已经发生的具体投入，给主要动机第二情境的证据。",
+          "interpretation_boundary": "这一题用于核对前面选择的呼应，不把投入总量当作人格强度。"
+        },
+        {
+          "id": "GI12.CORE",
+          "text": "回想自己在提瓦特已经做过的事情，最想留下哪一页记录？",
+          "scene": "提瓦特旅途记录",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "原本没去过的地方，怎样沿着旅途逐渐连起来",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "一名角色怎样从刚开始使用，慢慢变成常用伙伴",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "几种角色与元素怎样配合，哪些方案还想继续改",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "惦记的宝箱、物品或其他收集，怎样逐项补上",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+9f6195755465"
+}

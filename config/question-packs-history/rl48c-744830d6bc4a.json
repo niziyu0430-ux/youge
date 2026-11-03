@@ -1,0 +1,1461 @@
+{
+  "id": "rl48c",
+  "title": "火箭联盟 / Rocket League",
+  "game_ids": [
+    "steam-252950"
+  ],
+  "scope": "当前原生PC普通线上Soccar双打/标准比赛＋离线FreePlay/原生训练包/车库/回放，一套＋换题；不声称仅机器人、其他球类/道具模式、赛事/UGC历史全覆盖。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "12槽各3个手写情境，24行动/12真实回顾；4共享/max2补问不改。",
+    "每槽至少一条普通Soccar比赛或赛后共有入口；有限三变体不等于所有经历覆盖，未体验继续换已核专属、不跳过。",
+    "Q/O只对应选项要求真实回应同伴；09ALT2/12ALT2是真二人回顾才整题限定真人，不要求其他题都有朋友。",
+    "不要求付费车/物品、自定义比赛、MOD/Workshop/活动；碰撞箱仅OfflineFreeplay，原生新工具按2026已发布边界。",
+    "不凑16画像，不把外观当属性成长或真人数据、一次调菜单当P/B、NPC当竞争；没有客户端/真人效度/97%验证，不代表已经上线。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "普通Soccar与原生训练/赛后，一套换题",
+      "initial_variants": {
+        "RL48C01": "RL48C01.V1",
+        "RL48C02": "RL48C02.V1",
+        "RL48C03": "RL48C03.V1",
+        "RL48C04": "RL48C04.V1",
+        "RL48C05": "RL48C05.V1",
+        "RL48C06": "RL48C06.V1",
+        "RL48C07": "RL48C07.V1",
+        "RL48C08": "RL48C08.V1",
+        "RL48C09": "RL48C09.V1",
+        "RL48C10": "RL48C10.V1",
+        "RL48C11": "RL48C11.V1",
+        "RL48C12": "RL48C12.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "RL48C01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "RL48C01.V1",
+          "scene": "开球时自己在后，球与空门不能都顾",
+          "text": "普通线上Soccar双打开球，你的位置比队友更靠后，队友已向中圈出发。自己可以跟到中场附近准备接下一脚，也能留在后侧防第一下球直接弹回。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际跟到中场后侧准备接开球后的来球，先投自己选定的这次衔接",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际留在后侧看第一下反弹，先做自己选定的本轮防守准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若队友当时愿回应，实际沟通谁争第一下、谁留后并按约开球",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己当前绑定和开球已有原生说明，再实际选择这一轮位置",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "更靠后位置的接球与空门风险，不硬套左开/固定必胜路线。",
+          "interpretation_boundary": "只当前能看到的双方位置；对方是真人不代表每项自动竞争K，C仅真实回应同伴。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C01.ALT1",
+          "scene": "刚开球回弹到己方半场，自己追球还是先关门",
+          "text": "普通Soccar开球后球已弹回己方半场，你能从侧面追到球，队友仍在中圈附近；球尚没直接进门，但自己若转去角落大垫就要暂时离开这条回防线。先投什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_BOOST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际切向球当前路线，先尝试把它送离己方门前",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先回球门一侧等下一次触球，暂不绕去拿大垫",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我主要想赢过这场对面真人队伍，实际按当时判断执行更可能守住这轮的回位/解围，并继续投入后续攻防",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "先看当前自己的boost与身体朝向，再决定能否及时迎球",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "开球后实际回防窗口与资源绕行，胜负动机由C显式承担，不让一切解围都K。",
+          "interpretation_boundary": "只有普通线上对手真人的C才K；不保证任何一条必能碰到球或守住。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C01.ALT2",
+          "scene": "无人立刻碰球，自己能推进也能把球留身前",
+          "text": "普通Soccar里你先碰到一个地面慢球，对手尚在回位，队友也没贴着你。当前可以把球大力送向对方半场，也能先轻碰留在车前继续带；两种都真有操作空间。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CRASH",
+            "RL48C_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把球向前送远，先争自己选定的这次压入对方半场",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际轻碰留车前继续带，先投自己选定的这次持球推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "专门反复练自己尚未掌握的轻触与车速衔接，允许这次丢球，主要想练会本人控球动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "持续自己转向、调油门与boost追随球的变化，主要享受每次触球立刻改变走向的操控反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "同一地面球的远送、留球和不同实际执行动机，不要求已会颠球/空中花式。",
+          "interpretation_boundary": "轻触不保对手不抢；T本人未掌握并反复练，F本人持续主动输入，不以皮肤/进球动画算F。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "RL48C02.V1",
+          "scene": "回防路线上小垫与偏远大垫争时间",
+          "text": "普通Soccar你正在从中场回己方半场，boost不多；已见沿当前回防线有可取小垫，侧角另有当前亮着的大垫。球与对手还在移动，绕角落会离开自己原本能及时到的后场位置。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_BOOST",
+            "RL48C_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际沿回防线取眼前小垫，先回自己选定的后场位置",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际绕向当前可取的大垫补充，再接受这段较晚回位的代价",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "主要为赢这场对面真人队伍，实际按当前球路选资源与回位线路，并继续投入本轮攻防",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己当前boost余量与球所在位置，再决定走哪条线",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "真实路线/资源/空位成本；不用精确刷新数字，不把小垫永远正确写成测验答案。",
+          "interpretation_boundary": "只当前实见可取垫；其他车可能先拿，不能把当前发亮保证到达仍在。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C02.ALT1",
+          "scene": "队友圆环很低，自己有球但仍有不同打法",
+          "text": "普通Soccar你已开启且看见队友名牌boost圆环很低，自己带球在边线附近，仍有余量能继续往角落推；也可以先向中间可接位置送球，但队友尚未答应接应。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_GAUGE",
+            "RL48C_BOOST",
+            "RL48C_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际继续自己带向对方角落，先推进当前已定的边路安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际把球送向当时可用的中路区域，先试自己选定的这次传球，不当队友已承诺到位",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若队友真实愿回应，先约这脚谁接球、谁取附近垫，再按约真实执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先观察自己与队友当时实际位置及可见boost显示，再决定是否传出",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "队友资源只提供信息，不凭圆环假造协作已发生，也不显示敌人boost。",
+          "interpretation_boundary": "圆环须当前实际可见，仅本队；D是本人当前可控车与周边现场状态核对0，而非配装比较/B功能拼装。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C02.ALT2",
+          "scene": "被拆车后短窗口选哪里回来",
+          "text": "当前已更新的普通线上Soccar，你被拆车后出现本方可选复活位置的短窗口；一侧更靠近眼前自己想回去的边路，另一侧便于先接本方后场位置。球还在跑。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_TOOLS",
+            "RL48C_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际选择当前可用的边路侧位置，先接自己已定的边路回场安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际选择当前可用的后场侧位置，先接自己已定的回防安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "专门反复练自己仍未熟的复活后转向、找球与重新入场衔接，主要想练会本人重返球局",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "暂不作选择，让这次按原生随机位置复活，再从实际位置继续原定比赛",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "利用已发v2.70复活点原生窗口形成真正位置取舍，不借随时传送。",
+          "interpretation_boundary": "只拆车后实际可选本方位置，不造能拖到任意时刻/点敌方半场；没用过继续本槽普通垫路线。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "RL48C03.V1",
+          "scene": "门前来球，向边线解围还是试直送队友",
+          "text": "普通Soccar你已到己方门前来球侧面，真实有机会碰球；向边线送能先离开中路，另一方向可把球打向前方队友附近，但那条中路也有对手。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_BOOST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把球送向当时可到的边线，先完成自己选定的这次离门解围",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际把球送向前方队友附近，承担中路可能被截的代价，先投这次反击出球",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "主要想赢过这场对面真人队伍，实际按当时对双方位置的判断处理这脚并继续守/攻下一段",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "先看当前已有比分与比赛进度，再决定自己接下来愿承担的风险",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "离门与中路反击的不同目标，不把所有传球等于真人协作，不保证解围正确角度。",
+          "interpretation_boundary": "球路须当前真可碰；C明确真人胜负，D只是现况核对0。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C03.ALT1",
+          "scene": "球沿侧墙升起，自己上墙还是留地面等落点",
+          "text": "普通Soccar球正沿侧墙往上走，你能驶上墙继续追，也能留在地面去看可能的落点；自己若上墙，这段就不在原先的地面回防位置。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_CRASH",
+            "RL48C_BOOST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际沿墙继续追这次球，先投自己选定的边墙推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际留地面调整到自己已选落点附近，先等这一脚从墙边下来",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "专门反复练自己未熟的上墙转向、下墙与回到轮胎落地，主要想练会本人壁面操控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前墙面球路与自己可见boost，再决定这次追多高",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "墙面追击以地面空位为成本；替代不要求翻重置或任一付费车。",
+          "interpretation_boundary": "上墙不是自由飞行，不保证球照预测落；T只本人未熟而实际反复练。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C03.ALT2",
+          "scene": "高球下落，提前起跳还是等一次反弹",
+          "text": "普通Soccar一个高球正落向自己可到的区域，自己现在能起跳并用boost迎它，也能等落地反弹后再出手；早点起跳会花掉更多当前资源。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CRASH",
+            "RL48C_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际现在起跳迎球，先争自己已选的这次提前触球",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际留地面等可见反弹后再处理，先投自己已定的较低接球",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "持续由自己调转向、跳跃和空中boost跟住球的变化，主要享受这一段主动操控的连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对本人当前跳跃/boost绑定与原生操作说明，再尝试这一脚",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "提前抢点与节省资源/等待反弹，F为持续本人控制而非球自己弹。",
+          "interpretation_boundary": "不要求高阶空翻取消/空中带球，空中boost不等于能无限停留。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "RL48C04.V1",
+          "scene": "前面队友已经起脚，自己要不要也冲同一个球",
+          "text": "普通Soccar自己正从后面接近球，前方队友已明显冲向同一个落点；此时自己仍能继续争触球，也能转去后侧留接反弹的位置。先把这一段给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_CRASH",
+            "RL48C_BOOST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际转去当时可到的后侧位置，先留自己选定的下一次接球空间",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际继续争当前这一脚，接受两车可能挤在同处的代价，先投自己选定的这次触球",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若队友当时真实愿回应，明确约这次谁先碰、谁在后，并真实按约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "专门反复练自己尚未熟的收油、手刹转向与重新回位衔接，主要想把本人转换操作练会",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "同时争同球与留后接应的当前机会成本；不要求固定朋友/岗位。",
+          "interpretation_boundary": "D必须实际练本人转换动作，不把一次正确站位自动算T；C只有真协商。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C04.ALT1",
+          "scene": "刚落地车头朝反方向，要转身还是接着动量走",
+          "text": "普通Soccar你从一次争球落回地面，车头朝向与自己准备回去的方向不一致；球已被别人碰开。可以在当前位置转向回去，也能先顺现有移动方向走一小段再绕回。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_BOOST",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际立刻用当前能做的转向/手刹把车调整回原定方向，再追下一段",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际顺现有动量走到当时可绕的位置，再转回自己原定路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "持续自己调转向、油门与手刹去接这一段滑动，主要享受车身变化和本人输入的即时连动",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先看当前球和自己朝向，再决定怎样回到可用位置",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "落地后的动量/朝向成本区别追球站位，不给一键自动完美恢复。",
+          "interpretation_boundary": "只普通可做手刹/转向，不要求wavedash/翻滚取消，D只当前状态检查0。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C04.ALT2",
+          "scene": "练习落轮时，先改空中姿态还是直接回比赛",
+          "text": "你在原生离线FreePlay里刚把车跳离地面，落下时常不是四轮先着地；现在能继续试airroll落轮，也能退出去打普通Soccar。接下来主要怎么投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CRASH",
+            "RL48C_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复实际跳起、在下落时改airroll并接落地，主要想把自己仍未掌握的轮胎落地动作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "不追求这项学会，持续亲自调姿态、转向和落地后的滑动，主要享受反复输入带来的连续手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "实际退出训练去打当前想玩的普通比赛，把这一段给自己已定的赛场体验",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己当前airroll绑定与原生落地说明，再照着尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "训练掌握/连续操控/进入赛场争同一段时间，非动作三编辑方法。",
+          "interpretation_boundary": "只本地原生练习，F非自动重复；未训练有本槽两条普通比赛替代。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "RL48C05.V1",
+          "scene": "落后一球时有进攻窗口，自己为这轮胜负投多少",
+          "text": "普通线上Soccar当前落后一球，时间仍足以继续攻防；你已到边路能接下一段球的位置，自己能尝试传中，对面是真人队伍。此时你最愿实际投入哪一段？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_CRASH",
+            "RL48C_HISTORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主要想把本轮较量赢回来，实际继续看双方站位、争可做进攻并回防，把注意力放在赢过对面",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "先实际完成自己当时选定的一次边路传中，不把本轮最终输赢作为这段投入重点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "借接下来真实能碰到的球反复练自己还不稳的起跳触球时机，主要想练会本人动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前比分、剩余进度和原生已有目标，再决定下一段怎样打",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "常规真人胜负窗口提供明确K，同时允许当下具体目标/练习而非自动每次射门K。",
+          "interpretation_boundary": "不把落后=必须翻盘/不退比赛当道德；T可在可行机会练，不保证立刻重复同球。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C05.ALT1",
+          "scene": "自己到了远门柱，能等传球也能返身守后",
+          "text": "普通Soccar球在队友一侧的对方角落，你已到远门柱附近，能继续等可能传球，也能现在返身去后侧；自己尚未收到队友答应传球。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_BOOST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际留在当时可到的远门柱区域，先投自己选定的这次接传球机会",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先转回后侧留下一段接应，放下这次近门触球机会",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若队友确实愿回应，约当前能做的传球/留后分工并实际照约执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "实际一边转向、一边调速度追随场上球与车的变化，主要享受这段本人持续操控反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "近门等待与后场准备争位置，实际传球不能凭想象锁朋友。",
+          "interpretation_boundary": "不保证远柱必进或对方角球会传中；Q只实际协商项。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C05.ALT2",
+          "scene": "领先时球能送远，也能留在角落继续带",
+          "text": "普通Soccar你方当前领先，自己拿到一脚边路球；能将球大力送离己方半场，也能继续带向侧角保有下一次触球机会，但后者会花自己这一段boost。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_BOOST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际先把球送远，先做自己选定的本轮离门处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际继续带向当时可达侧角，先投入自己选定的这次保球推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "主要想赢下这场对面真人队伍，实际按当时判断选处理方式，再继续投入后续攻防保持领先",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "先看本人boost与球的当前距离，再决定能否接着带",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "领先资源/球权与解除眼前压力，不把特定拖时间规则或0秒悬空规则当已核。",
+          "interpretation_boundary": "不要求特定剩余秒数/拖时必胜；不用进球动画直接判F。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "RL48C06.V1",
+          "scene": "球还在跑，自己继续跟还是把这一脚送走",
+          "text": "普通Soccar里你正追一串连续反弹，当前还能继续转向、加减速和碰球；也有机会把这一脚直接送向自己已选的远处区域，再退到后侧。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_CRASH",
+            "RL48C_BOOST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "持续亲自调整车速、转向和boost追着反弹接触，主要享受球路随本人输入不断变化的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "实际把这一脚送向当时已选区域，再退到自己原定后侧位置",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "专门反复练自己还不熟的转弯后对准球、接下一次触碰，主要想练会本人衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前球与自己当前boost/朝向，再决定这段能跟多久",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "连续操控F与未熟掌握T及明确送球目标区分，非只看球弹就F。",
+          "interpretation_boundary": "反弹因现场而变，不承诺无限连触，非必须高级带球。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C06.ALT1",
+          "scene": "自由训练当前站在球门侧，先接射门还是把球放车顶",
+          "text": "原生离线FreePlay里，你当前靠近己方球门，可以用DefendShot把球送向最近球门来自己接，也能用StartDribble把球置到车顶开始带；自己这一段只准备先做一项。怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_FREE",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际用DefendShot出球并反复自己移动、跳起接球，主要想把本人还不稳的这类扑救操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "实际用StartDribble把球置车顶，再亲自调车速与转向维持带球，先投自己已定的带球练习",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "实际放下这两项，退出去打当时更想玩的普通Soccar，先投真实赛场的下一段攻防",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时FreePlay球控的已有说明与自己的绑定，再开始尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "替掉与02V1同样的小垫/大垫绕行三同项；此处是原生两种具体出球机制与不同训练任务。",
+          "interpretation_boundary": "DefendShot只朝最近球门、不保每次轨迹相同；StartDribble只置球、不替玩家自动持续带，不把训练球控带正式比赛。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C06.ALT2",
+          "scene": "找球时总偏路线，想核BallCam是不是影响自己",
+          "text": "普通Soccar里你几次为看球绕偏了原先想走的小垫路线；本人还没核清是否BallCam视角影响自己的路线判断。下一段可进原生FreePlay复现同一小垫线路，也可继续排普通比赛。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_BOOST",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出视角可能影响自己的解释，实际在FreePlay沿同一路线切换BallCam与车头视角多次跑，比较偏离；不符就改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "实际继续打普通比赛，先按自己已知路线取垫，不把这一段给原因检验",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "专门反复练本人尚未熟的切视角、观察垫和转向衔接，主要想练会操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前BallCam切换绑定与官方视角说明，再决定怎样试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "本人未知解释、实际换视角/重复线路可否定的P；不是看一段攻略就算发现。",
+          "interpretation_boundary": "不造训练自动记录偏差/路线评分；自己观察实际跑出的偏离，非所有偏移都来自镜头。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "RL48C07.V1",
+          "scene": "对方门前有反弹机会，直射还是先撞侧墙",
+          "text": "普通Soccar你到对方门前侧面，有机会把当前球直接打向门，也能先送到侧墙等回弹后再接；对手仍能回防，后一做法要再花一次自己的接球窗口。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_CRASH",
+            "RL48C_BOOST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际直接朝当时可用门口射这一脚，先投自己选定的当前射门",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际先送侧墙再去接可见反弹，先投自己选定的这次二次接球",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "专门反复练自己仍未熟的判断侧墙反弹与重新对准球，主要想练会本人接反弹操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "主要想赢过这场对面真人，实际按当时对防守位置的判断处理这次攻门并继续比赛",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "直射与多一拍墙面反弹有原生时间成本，学习或竞争由动机明确承担。",
+          "interpretation_boundary": "不保墙面反弹到固定点/直射一定入门，不借球体轨迹MOD。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C07.ALT1",
+          "scene": "同一训练射门忽左忽右，先排除随机化还是继续接",
+          "text": "你在原生CustomTraining已选同一道射门，发现开局球位/车位会变化；当前设置中确实开着相关随机化，本人还没证实它是不是这次触球不一致的主要原因。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_RAND",
+            "RL48C_TRAIN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出开局随机化影响的解释，实际先关相关随机偏移，反复做同一球比较触点；仍不符就改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "保留当前随机变化，反复练本人尚未掌握的临场转向/触球，主要想练会应对",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "实际换选包里当前另一道可做射门，先投自己原定的那道练习",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前随机化与球位/车位设置说明，再选择怎样练",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "已发原生随机化下真实控制变量检验，与BallCam路线P不是时态复制。",
+          "interpretation_boundary": "只当前确有随机化的包，不说关一项保证完全一样/自动归因；新功能不用MOD。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C07.ALT2",
+          "scene": "低boost起步射门，先改起始量还是按现量练",
+          "text": "原生CustomTraining当前这球起始boost偏少，你仍能尝试地面触球；当前已发原生设置也能调起始boost。自己原先想练的是少资源下的出脚，另一条计划则是练高一点的迎球。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_TOOLS",
+            "RL48C_TRAIN",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留当前较少起始boost，实际反复做自己仍未掌握的少资源触球，主要想练会本人这一动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "实际调到当前允许且适合自己计划的起始boost，再练自己已定的迎高球安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先照现有这球完成一次，先投自己选定的当前训练进度",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对原生起始boost设置已有说明，再决定是否调整",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "低资源目标与另一训练目标争时间，调滑块不自动B/P。",
+          "interpretation_boundary": "不造起始boost滑块改变正式比赛开局，非要求完成高阶空中训练。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "RL48C08.V1",
+          "scene": "边线球有人来抢，继续自己带还是回传后侧",
+          "text": "普通Soccar你沿边线带球，对手正从前方接近；自己当前能尝试过这一车，也能把球送回后侧的可用区域，但那里队友是否接到仍未确定。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_BOOST",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际继续尝试越过眼前这辆对手车，先投自己选定的本轮边路推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际把球送回当时可用后侧区域，再转去自己已定的下一接应位置",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若队友真实愿回应，明确约当前回传/接应方向并实际照约做，不把没回应当同意",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "持续由自己转向、控速和轻碰应对这段车球变化，主要享受临场输入的连续反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "普通边线当前攻防与回传争球权窗口，不以传球自动Q或过人自动K。",
+          "interpretation_boundary": "对手可拦截，未响应队友不承诺在位；不要求高级盘带。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C08.ALT1",
+          "scene": "自由训练自己定一轮有输有赢的过线挑战",
+          "text": "原生离线FreePlay里球和车都可自己操作，你现在想做一局自己规定的挑战：从当前已知位置出发，在球碰到自己选定的另一侧墙前先触球进门；未做到算本轮失败，自己重置后再来。也能直接去普通比赛。先怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_FREE",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自立下并执行这条过线/入门成败规则，实际跑成功或失败后人工重置再玩，不只是想一个规则",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "不加这套输赢，持续自己开车追球、转向和触球，主要享受连续操控的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "放下这局自定挑战，实际去打当前想玩的普通Soccar",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前FreePlay球控与重置绑定，再决定要不要开这局",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "I须真建规则/真玩/成败重试，非创意想法；手动判断，不造自动计分器。",
+          "interpretation_boundary": "墙前进门不保证总可做到，允许失败；只是原生训练上自设玩法，不称官方任务。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C08.ALT2",
+          "scene": "自己尚不会的一侧射门，镜像还是先做另一题",
+          "text": "你在原生CustomTraining包里有一道当前可练的地面射门，自己已会其中一侧，另一侧还不稳；原生镜像和选题当时都可用。先把这一段给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_TRAIN",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际镜像并反复练自己还不会的一侧对准和触球，主要想练会本人弱侧动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "实际选包里另一道当时更想做的射门，先投自己已定的那段训练",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "实际退出训练去普通比赛，先体验自己当前更想打的真实攻防",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前包进度和当前所选射门，再决定要练哪道",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "弱侧掌握与另一训练/赛场目标争时间，镜像不算新装备成长。",
+          "interpretation_boundary": "只当前包/当前可镜像；不把每次左右差异都判P，不要求全部玩家写包。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "RL48C09.V1",
+          "scene": "个人没有进球，但那场实际留后帮球队赢了",
+          "text": "回想一场普通Soccar，你自己没进球，几次本可继续冲前的窗口却实际留在后侧，最终球队赢了；当时确实也有自己能去争个人触球的机会。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_HISTORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主要想赢过那支真人队伍，实际放下几次个人冲前机会继续留后接攻防，最在意球队赢这场较量",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "我主要为自己选定的后场位置目标，实际继续处理当时的回球，不把输赢当这段重点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若同场队友当时愿协商，我与他明确约留后/前压并真实照约做",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "我实际打开当时仍可看的这场比赛历史，亲手看看其中列出了哪些当时可见数据，再继续下一段",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "真实已经发生的个人数据与球队胜负/位置投入区别，非把05落后时选择换过去时。",
+          "interpretation_boundary": "没进球不自动牺牲/团队人格，必须当时实际动机和可做窗口；回放不读队友心。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C09.ALT1",
+          "scene": "怀疑自家车挡住射门者视线，切进球者视角核对",
+          "text": "回想一次普通比赛进球回放，你原先觉得自己那一侧车身挡住了对方射门视线，但本人尚未证实；当前原生进球回放确可切到进球者视角。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_TOOLS",
+            "RL48C_HISTORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出视线遮挡解释，亲自切进球者视角看这次实际画面并对照原先看到的位置；若并未遮挡就放弃该解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我没追这个原因，实际继续投入下一段比赛，先做当时已选的回防",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我实际保存这场仍可保存的回放，先把自己想留的这次比赛存好",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我先核对当前回放视角开关与已有说明，再决定是否看",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "实际原生进球视角是对本人未知空间解释的可否定观察检验，不假造任意实时透视。",
+          "interpretation_boundary": "只本次确可切视角的进球回放；不能仅凭视角判断对手真实注意/心理，保存不自动A。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C09.ALT2",
+          "scene": "本来要继续排位，真正回应队友后改投一段聊天",
+          "text": "回想一场普通Soccar结束后，你原本已准备接着打下一场；当时有真实队友愿意回应，你们实际能在原生可用聊天里继续聊刚才几次传球。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CRASH",
+            "RL48C_HISTORY",
+            "RL48C_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际暂缓自己原本要排的下一场，接着来回聊各自记得的失误和好球，主要想和这位真人多交流",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "我实际把沟通留在下一场怎么开球/谁接球的安排上，与他约好后真实再打一场",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "我实际结束这段聊天，接着打自己原先准备的下一场，先投当时更想玩的比赛",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我实际先保存了这场可保存回放，想留住当时确发生的几脚球",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "真实两人往返交流与任务安排区别，付出原定下一场窗口，不假后台陌生人社交。",
+          "interpretation_boundary": "本条真正二人事件才整题需实际愿回应真人；不具备继续本槽其他单人可答回顾，聊天权限以当时实际可用为准。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "RL48C10.V1",
+          "scene": "几场门前乱碰后，自己真的改了清球后的回位顺序",
+          "text": "回想你连续几场普通Soccar常是自己清完球又立刻追同一个球，回防线路因此反复打结；后来仍有后续比赛可继续玩。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_BOOST",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把自己多场已跑出的清球、看下一触球、取沿路垫和回位先后重排，实际在后面多场继续运行对照并再改，想让自己整套回转更顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我只先在下一次门前把球送向自己已选边线，先完成眼前这次解围目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我专门反复练自己尚未熟的清球后收油、手刹与转向动作，主要想练会本人衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我先核对了自己当前余量和当时的球位，才决定下一次去哪里",
+              "signal": "unit_state_review"
+            }
+          ],
+          "design_purpose": "多场真实循环调整并后续再跑为Y，不只是一次留后/画流程；回顾对象为多轮运行。",
+          "interpretation_boundary": "不造自动旋转系统/固定所有队友，调整本人可控过程；T与Y按主要投入区别。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C10.ALT1",
+          "scene": "觉得车头看着碰上却没碰，真的打开原生碰撞箱试过",
+          "text": "回想你在原生离线FreePlay里曾觉得车头外形看着碰到球，实际球却没按自己预想改变；本人当时没证实是不是可见车壳与实际碰撞范围不同，原生碰撞箱显示当前可开。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_TOOLS",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出外形与实际碰撞范围不同的解释，实际开显示、保持同一已用车反复从相近角度接球，比较画面与触球；不符就改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我不追这次原因，实际换成自己当时更想开的已拥有车，继续原定训练",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我反复练自己还未掌握的靠近球与调整触点，主要想把本人接球动作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我先核对原生碰撞箱开关与当时车的已有说明，再决定怎么试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "本人未知解释实际原生显示/触球检验，区别07随机起点和06镜头路线，非换付费车升级数值。",
+          "interpretation_boundary": "仅OfflineFreeplay显示，不比赛透视；不承诺显示外壳=接触点绝对一一对应/所有车相同碰撞箱，不用精确旧尺寸。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C10.ALT2",
+          "scene": "一辆现车，后来真的做出蓝橙两种想要的外观",
+          "text": "回想你已有一辆能用的车与当前兼容的贴花/车轮，原本可以直接继续普通比赛；那次你却有自己想实际呈现的蓝队与橙队不同外观。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CRASH",
+            "RL48C_LOOK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际给蓝/橙队分别选当前能用配色与已拥有兼容物件，装到这辆车并看实际呈现，再改到自己想要的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我保留原来外观，实际进入当时更想打的普通比赛，先投球场里的下一段体验",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我实际保存了当时自己选好的另一套可用车库预设，先做已定的快速切换准备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我先比较当时已有且兼容的车库物件，再决定是否改这辆车",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "真实蓝橙呈现A，其他为比赛/预设备用/兼容比较0；不把贴花换成动力或G/B。",
+          "interpretation_boundary": "只已拥有且当前真兼容外观，无付费/全黑色保证、无玩家物品交易；不是只想一套方案。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "RL48C11.V1",
+          "scene": "状态很好仍回熟悉球场，手感熟的那套也有别的可玩",
+          "text": "回想一次你精神和精力都足，普通Soccar能开，自己还有一项尚没练会且当时可练的动作；但熟悉的开车追球、落地回转也随时能继续。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_CRASH",
+            "RL48C_HISTORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际回到自己已熟的普通Soccar节奏继续开车、追球和回转，主要想待在这套熟悉舒服的过程里，当时也有别事可做",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "我实际转去反复练自己仍不会的那项起跳/触球动作，主要想把本人动作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我实际接着打线上普通比赛，主要想赢过接下来对面的真人队伍",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "我先核对当时普通Soccar与原生训练已有说明，再决定下一段投哪里",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "H明确精力足且有真实可做别项仍自主选熟悉过程；不是疲惫休闲/低难度/不想动。",
+          "interpretation_boundary": "只真实当时经历，机器人对局不能C的K；不从单次熟悉选择推稳定现实性格。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C11.ALT1",
+          "scene": "自建射门还加了先碰侧墙的规矩，真的试玩后又改",
+          "text": "回想你在原生CustomTraining给自己建过一道射门，另外定下至少先碰自己指定的那一侧墙再进门才算成功，直接进门或没进都算这一轮失败、自己重开；试跑时发现车起步方向不合这套玩法。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CRASH",
+            "RL48C_TRAIN",
+            "RL48C_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际改这道自建射门的起点/车向，自己再开局玩，人工按先碰指定墙再进门判成败，失败就重来继续玩",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "我不继续自建这一题，实际选当时已有可玩的训练包练自己原定那项动作",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我实际反复练自己尚不会的起步转向与对准，主要想把本人操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我先核对原生自建训练与车向设置已有说明，再决定怎样改",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "I不是标准射门包完成，而是真自建后追加墙面限制并玩成败重试；区别08球碰墙前先入门的Freeplay挑战。",
+          "interpretation_boundary": "只原生创建/当前能编辑的参数，附加先碰哪墙由本人判断，不造原生自动识别额外规则/计分；不借Workshop/BakkesMod、自动比赛复刻，不假发布后有观众数据。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C11.ALT2",
+          "scene": "不换现有推进外观，那次自己改了听到的boost声音",
+          "text": "回想你已有当时能用的boost外观，原本可以直接继续普通Soccar；那次当前原生设置也能让比赛里本人听到的boost改用标准音，不换所装视觉效果。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_RAND",
+            "RL48C_CRASH",
+            "RL48C_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际启用标准boost音后进比赛，持续亲自转向、点按/松开boost去接球，主要体验输入、推进声音和车身反应连起来的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "我不改这项声音，实际带原来这套进入下一场，先投当时自己已定的球场体验",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我没继续比较声音，实际投入下一场对真人队伍的攻防，主要想赢这场较量",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "我先核对原生OverrideBoostAudio的已有说明，再决定是否试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "替掉与02复活侧目标和10/12的P/目标/T/说明四法近壳；是真实声音与本人持续输入的组合经历。",
+          "interpretation_boundary": "标准音覆盖仅本人比赛里听到的boost，不换他人声音/菜单回放音、不增推力；F须随后持续主动驾驶，单点开关不算F。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    },
+    {
+      "id": "RL48C12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "RL48C12.V1",
+          "scene": "赛后自己没有立刻重排，真的把一场回放留下",
+          "text": "回想一场普通Soccar结束后，你既能继续排下一场，也能从当时仍有记录的比赛历史里保存这场回放；那场有一脚自己特别想留的长距离碰球，但保存它不会改变赛果。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_HISTORY",
+            "RL48C_CRASH",
+            "RL48C_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际把这场回放保存下来，想为自己真发生过的那脚球留一份可再看的记录",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我实际直接排下一场普通比赛，主要想赢过下一支真人队伍",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "我实际进入离线FreePlay，反复练自己在那脚球上仍未掌握的对准与出脚，主要想练会本人动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我实际打开当时仍可看的这场比赛历史，亲手看看它列出了哪些可见比赛数据，再决定是否保存",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "记录保存与下一场/当下弱项争真实窗口，非重放自动作心理P或审美A。",
+          "interpretation_boundary": "只当前历史仍有/可保存的回放，不能无限找回过去比赛/一键从回放生成训练；不是只点收藏未真存。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C12.ALT1",
+          "scene": "一直按boost却不知有没有继续提速，自己真看图验证过",
+          "text": "回想你在普通Soccar回场时习惯长按boost，后来想核自己已经很快时，继续按到底是否仍让当前车速增加；本人当时没验证，原生车速显示当前可开，离线FreePlay也能跑直线。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_TOOLS",
+            "RL48C_CRASH",
+            "RL48C_BOOST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把高速时继续boost未必继续提速当待证解释，亲自开速度显示，在FreePlay同车直线多次比较持续按与松开后的速度变化；若图不支持就改解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我没追这次原因，实际继续按自己已知的回场方式打下一场，先投当时已定比赛",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我专门反复练自己尚未熟的松boost、前翻和回到转向的衔接，主要想练会本人动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我先核对原生速度显示与boost操作已有说明，再决定怎样处理",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实车速图与资源投入的个人未知解释检验，替掉与08ALT2弱侧训练几乎同四动作的回顾壳。",
+          "interpretation_boundary": "不预设检验结论/固定最高速度数字，不把曲线当自动因果判定；自己保持同车与相近直线路径、比较实际变化，非MOD仪表。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        },
+        {
+          "id": "RL48C12.ALT2",
+          "scene": "本来想自己练动作，答应一个真实队友再打一场后变了安排",
+          "text": "回想你原本更想进FreePlay练一项当时真能练的动作；一个真实队友当时愿意并邀请再一起打一场普通Soccar，你也确实能选择不去。哪段真实投入最接近？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "RL48C_CORE",
+            "RL48C_CRASH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主要想和这位真人继续一起经历下一场，实际放下当时更偏好的个人训练，跟他入场共同玩完这一轮",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "我与他实际约下一场开球与留后分工，然后真实照约开打，主要为了把这一场安排接好",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "我先核对了当时自己准备练的动作与原生训练已有说明，再决定接下来投哪边",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我实际婉拒这次再排，进入当时更偏好的个人训练，先投自己已定动作练习",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "真实共同经历与任务协调/个人练习争时间，不给普通陪伴加身份尾句硬凑R；不同于09赛后往返聊天。",
+          "interpretation_boundary": "真正二人回顾才整题需真实邀请/回应；未经历可换本槽单人回顾，不按是否接受邀请推合作能力/现实品德。 未经历继续换其他已核专属，不跳过；机器人不作真人Q/O/K，不把技术高低、得分或效率直接当人格。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+744830d6bc4a"
+}

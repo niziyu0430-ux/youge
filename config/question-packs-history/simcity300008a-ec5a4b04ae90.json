@@ -1,0 +1,936 @@
+{
+  "id": "simcity300008a",
+  "title": "模拟城市3000 探索无限：分区、协议与原版造楼",
+  "game_ids": [
+    "steam-2741560"
+  ],
+  "scope": "Windows Steam所收Unlimited探索无限本体单人城市；Building Architect Plus仅限本机已能正常使用且本人有体验，否则用纯城市建设替代。不要求模组、额外组件、旧联网交换或自制资产导入。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "按Unlimited而非仅1999基础版；普通泵站需淡水及电，铺管后运行才供水；填埋场划区，不套天际线排污口或清空按钮。",
+    "邻城协议由NPC提出，不能像四代在同一区域切自己相邻城市；本作公交上车站与可途中下车的规则不混四代两端站点。",
+    "BAP属于原版附属工具，但兼容与体验先决条件单独写明；不要求修复、安装外部组件、下载模组或导入资产，纯建城玩家有完整较早替代。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Windows Steam所收Unlimited探索无限本体单人城市；Building Architect Plus仅限本机已能正常使用且本人有体验，否则用纯城市建设替代。不要求模组、额外组件、旧联网交换或自制资产导入。",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "SIMCITY300008A01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "当前已划出住宅、商业与工业，基础道路和电力可以接上；还没让大批居民搬入，资金够做一轮调整，也能操作后运行时间。先做什么？",
+          "scene": "住商工业已经划下，城市可以开始长",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把用地、就业、道路和供电接起来，再按几轮RCI需求、供电余量与年度开支继续调分区和公共供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "用当前可建道路、树与地块位置实际整理入口，做出自己的最初城市轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先只拖出一小片当前可用的工业分区，调整它的矩形长宽，亲手查看这次划下的格子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先猜一小片不开发来自电力传输没有接到，补一条连接后运行，再核对供电变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "原版RCI建筑由需求和供给决定，不保证一涂密区便出高楼；水电验证留运行时间，不用暂停时没有变化来判断能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A01.V1"
+        },
+        {
+          "text": "还只画了最早几段普通路，当前有可用电厂和低密用地，城市刚要开始入住；你有钱再做一点基础建设。先做什么？",
+          "scene": "电厂与第一片低密用地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接上少量住宅、工作和电力，按几轮开发需求、用电与常规开支再调整分区与供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "用普通道路与已有树木实际勾出一处自己的开城主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先给电厂附近少量空地划低密住宅，再让时间运行，跟看这片最早用地后来怎样开发",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "先猜电厂与用地之间缺传输连接，接线并运行后核对通电范围",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "原版RCI建筑由需求和供给决定，不保证一涂密区便出高楼；水电验证留运行时间，不用暂停时没有变化来判断能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "新准备的一处泵站已经接电，但供水效果还没弄清，是你想再试的卡点；另有水源维持旧城区，泵站旁有可加淡水的空地，预算也够调整基础水管或这小片地表水。先做什么？",
+          "scene": "新泵站已经接电，却还没供上水",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把淡水旁泵站、供电、地下管线与新增片区需求接好，持续跟进供水和开支",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先在地下视图从现有管端铺一小截水管，调整它这一段的走向与端点，亲手查看落下的管线",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "只看公用设施顾问关于当前供水卡点的一小段说明，再留其余步骤自己试",
+              "signal": "guide_hint"
+            },
+            {
+              "id": "D",
+              "label": "先猜这座已通电泵站没有泵量是淡水不够近，只在附近空地补一小块当前可用淡水，再运行核对泵量是否变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "普通泵站须淡水、电和独立管网，运行后更新；p实际在当前可用空地补淡水并核泵量，不暗示通用搬楼。管线位置单编辑0，真卡点局部顾问提示独立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A02.V1"
+        },
+        {
+          "text": "还没建泵站，只在最早电厂、普通道路与用地之间，已试过仍没接通一处小片，正卡在这里；旧有小区仍稳定。先做什么？",
+          "scene": "供水以前先处理已卡住的电力连接",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接少量住宅、工作和电力后，按几轮开发需求、负载与常规开支继续调地块和供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先在电厂与现有用地之间预览一小段电线，改动线段的端点和走向后放下，亲手查看这次铺设",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "只看当前供电卡点的一小段顾问说明，再自己把剩余连接做完",
+              "signal": "guide_hint"
+            },
+            {
+              "id": "D",
+              "label": "先猜传输连接断在两片用地之间，补一条电线并运行后验证",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "普通泵站须淡水、电和独立管网，运行后更新；p实际在当前可用空地补淡水并核泵量，不暗示通用搬楼。管线位置单编辑0，真卡点局部顾问提示独立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "当前有垃圾持续产生，填埋用地区能扩，车辆也有接路空间；城市没有急迫危机，预算够做一轮处理。先做什么？",
+          "scene": "垃圾场是要划出来的一片地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让现有填埋区继续运行，跟看垃圾车从哪些街区驶入、垃圾怎样逐渐占用这片已划用地",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "给已划下的垃圾地和已铺接路补一段建设小记",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "把填埋容量、运输道路和垃圾常规开支接成持续安排，运行后继续跟进流转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先猜垃圾进不去是道路连接而非缺电，核对接路后补一段，再运行验证",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "本作填埋场是划区并接路，不是天际线一代可按清空的建筑，也不是二代升级模块；不要求玩家事先背垃圾场是否用电。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A03.V1"
+        },
+        {
+          "text": "最早小镇刚划下第一片填埋区，还没看见垃圾进入；普通垃圾用地与道路工具已可用，供电和原小区能维持，没有急迫危机。先做什么？",
+          "scene": "第一块填埋用地的接路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先只扩一小条当前可划的填埋用地，调整这次矩形的边界，亲手查看新增范围",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "给已建小镇、垃圾地位置和现有道路补一段个人小记",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "接好填埋用地和道路后，按几轮小镇垃圾产生、接收容量与维护开支继续调整用地和接路",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先猜预留垃圾地没接到路，核对道路后补一段，再运行观察能否进场",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "本作填埋场是划区并接路，不是天际线一代可按清空的建筑，也不是二代升级模块；不要求玩家事先背垃圾场是否用电。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前已有邻城市长提出可用的水、电或垃圾协议，本城连接、余量和资金能满足眼前选项；旧城区运行稳定。先把时间给什么？",
+          "scene": "邻城协议当前确实已经来谈",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL",
+            "SC3K08A_FINANCE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先给本城已经发生的供给收支与部门安排补一段年度小记，再决定怎样处理这次新协议",
+              "signal": "management_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "实际安排一项当前可履约协议，把接口、保留容量和每月收支一起持续跟进",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先猜资源明明有余却送不到，是来源没有连到边界接口，补一处传输后运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先把当前协议与自己扩供给的可行方案对照，比较常规费用和容量安排，暂不决定签约",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "NPC邻城提资源约，不是本人另城或真人；未签比较0。已发生供给收支与部门安排可经营补记0，ALT明确只记真实电厂建造维护与道路支出，不暗含已签协议或把已建对象当地点收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A04.V1"
+        },
+        {
+          "text": "还没有邻城来谈，只经营最早一座小镇；已有电厂、普通道路与用地，当前也能查看年度收支。先做什么？",
+          "scene": "邻城协议以前先看本地供给",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL",
+            "SC3K08A_FINANCE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给已经发生的电厂建造、维护和道路支出补一段经营小记",
+              "signal": "management_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "把本地电力、就业、道路和常规开支接起来，持续跟进小镇运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先猜一处用地没发展来自传输断开，接线并运行后对照变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先对照当前可建的基础供给方案与可用资金，比较下一步而暂不施工",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "NPC邻城提资源约，不是本人另城或真人；未签比较0。已发生供给收支与部门安排可经营补记0，ALT明确只记真实电厂建造维护与道路支出，不暗含已签协议或把已建对象当地点收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "当前已有公交站，铁路、地铁或两者换乘设施也有你已实际开放的选项；道路与运营预算都能调整。先做什么？",
+          "scene": "公交上车点和铁路地铁的连接",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际补好上车点或当前已可建的换乘连接，连同道路与公共交通常规经费持续跟进",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先猜车站少客来自上车点离住宅远，对照站点查询和周边用地，补一处站后运行验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "用当前可建小公园和树木实际整理站旁空地，做出自己的旧城交通街角",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "缩放到现有车站，先查看站点、相邻道路与接入轨道这些已有设施，再决定下一处",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "本作公交以路边上车站为基础，手册允许乘客途中下车，不照搬四代必须两端站点的说法；铁路地铁仅在当前有相应设施时用，不虚构手画线路。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A05.V1"
+        },
+        {
+          "text": "还没有公共交通，最早小镇已有普通道路与基础用地，其中一段车流拥挤但城里仍稳定；交通图和查询工具能看，当前也能再铺一小段。先做什么？",
+          "scene": "普通道路里的第一张交通图",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把住房、工作、道路维护与基础供给一起调整，持续跟进这片来往",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先猜一处拥挤与工商业之间缺连接有关，对照交通图，补一段后运行观察",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先让这片普通道路运行，跟看一辆实际经过拥挤路段的车怎样穿过工商业街，再决定要不要动路",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "给已铺道路和落下的用地边界补一段当时建设小记",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "本作公交以路边上车站为基础，手册允许乘客途中下车，不照搬四代必须两端站点的说法；铁路地铁仅在当前有相应设施时用，不虚构手画线路。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "当前账上仍有资金，年度预算、顾问建议与已有协议都能看；你也记着本城上一年度净收支的个人纪录，城市暂时稳定。先做什么？",
+          "scene": "账上现金和年终预测不是同一件事",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL",
+            "SC3K08A_FINANCE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜预测差额来自每月协议或常规开支而非眼前建造费，对照明细并运行一段核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "对照自己记下的旧年度净收支纪录设一个明确目标，再围绕这次目标推进并比较年度结果",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "给本城已经实际发生的建造、维护和部门收支补一段经营小记",
+              "signal": "management_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "实际安排部门经费、税收、常规协议与下一步建设，运行后持续跟进收支和服务",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "年度现金、预测与月费分开；实际提出原因并运行核对才p，旧年度明确纪录并比较才k。主替代的经营记录均只记已经实际发生的建造维护与部门收支，不将未来预算预测写成已发生收支；跨部门供需多轮安排才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A06.V1"
+        },
+        {
+          "text": "还只在最早小镇首次查看年度预算；基础用地和供电已能维持，当前条例列表里也有已开放、付得起的现有选项。先做什么？",
+          "scene": "首次预算与一项可用条例",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_MANUAL",
+            "SC3K08A_FINANCE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜现金下降主要来自一次建造还是每月常规费用，对照预算明细并运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先启用一项当前可选现有条例，实际运行一段，只体验这项已有设置怎样发挥",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "给自己已经实际发生的建造开销、设施维护与当年收支明细补一段经营小记",
+              "signal": "management_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "先安排基础部门经费、税收与小片建设，再按几个运行周期的收入和服务需求继续调预算与用地",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "年度现金、预测与月费分开；实际提出原因并运行核对才p，旧年度明确纪录并比较才k。主替代的经营记录均只记已经实际发生的建造维护与部门收支，不将未来预算预测写成已发生收支；跨部门供需多轮安排才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "如果本机Building Architect Plus已经能正常打开，当前正编辑本体教程房屋，构造、贴图、门窗与道具工具都可用。先给哪件事时间？",
+          "scene": "建筑设计器已经能打开教程房屋",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL",
+            "SC3K08A_BAP_SCOPE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先不急完成房屋，反复练一次把门窗贴到指定墙面边线的定位操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先用当前墙面贴图给教程房屋换一面墙，再转到另一可见面，亲手查看这次涂层和边界",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "实际选墙面、屋顶、门窗和院边道具，把房屋组织成自己的街角住宅主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先猜某个编辑平面会把方块放到模型哪层，移动选面、放一小块，再旋转核对空间关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "BAP须本机实际正常且本人有体验；门窗定位专练t、平面放块因果核对p、个人房屋主题a不同，单面换墙纹查看结果0。不要求安装组件、导入或联网。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A07.V1"
+        },
+        {
+          "text": "没用过建筑设计器，只在最早小镇有普通路、树木与可用小公园，基本用地和供电能维持；当前有钱做一点调整。先做什么？",
+          "scene": "没用设计器时的一处城市街角",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL",
+            "SC3K08A_BAP_SCOPE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "补少量用地和公园后，按几轮就业、供电余量与公园常规开支继续调整地块和公共预算",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先只调整一处当前可建小公园的位置，放下后查看它与现有街路之间留下的空地",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "用道路、树和小公园实际整理一处街角，形成自己的开城主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先猜一片用地没开发是供电没接到，补线并运行后核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "BAP须本机实际正常且本人有体验；门窗定位专练t、平面放块因果核对p、个人房屋主题a不同，单面换墙纹查看结果0。不要求安装组件、导入或联网。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "旧城已经保存且运行稳定，当前列表里有另一份本人可打开、却没细看过的预设城市或地图；旧城的路网与现有绿化也能继续调。先做什么？",
+          "scene": "旧城可继续，也能打开另一座城",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精力也有新城可看，仍缩放慢看熟悉旧城，喜欢回到认得的街道与天际线",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "打开那份当前可用的陌生城市或地图，亲自认识不同的海湾、山地和街区",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "留在旧城，把已有道路、供给、部门经费与下一步用地继续接入持续运营",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "用旧城当前可建道路、树木与地标重新安排一处视觉轴线，实际呈现自己的城市主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "打开另一城是另一个存档，不虚构四代区域里的本人邻城联动；地标用当前已可放项目，不要求全收集或外部资产。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A08.V1"
+        },
+        {
+          "text": "还只玩最早一座小镇，未建海岸或树林还没细看过；基础道路、树木和用地能继续调，主城当前稳定。先做什么？",
+          "scene": "第一座城里还没细看的海岸",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精力也能继续建，仍缩放慢看熟悉首片街路，享受这座已认识小镇的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "缩放到本城当下可查看却没细看过的海岸或树林，认识新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "分步接少量道路、供电和用地，按几轮开发需求与常规开支再调供给容量和下一片地块",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "用基本道路、树木和当前可用建筑位置实际整理入口，形成自己的城市轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "打开另一城是另一个存档，不虚构四代区域里的本人邻城联动；地标用当前已可放项目，不要求全收集或外部资产。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "如果自己真正建过供水，回想一次淡水旁泵站、供电与地下管线接起来后实际运行的经历，哪件事更有分量？",
+          "scene": "淡水旁泵站与地下管网确实运行过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC3K08A_MANUAL",
+            "SC3K08A_FINANCE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把泵站水源、供电、管网覆盖与后续用地需求接好，还持续跟进过供给和年度经费",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾猜泵站没有泵量是淡水不够近，在旁边空地补过可用淡水，恢复运行后核对过泵量变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾铺好一段水管并运行，跟看过供水怎样从管网逐步扩到那片已经划好的用地",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "自己给已建泵站、现有管线和已发生的供水调整补过个人记录",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "泵淡水电管真实运行，未建水网可换早期电网；实际供水扩给观察及已建工程补记0，过去因果试验与持续供给分开，不把数周水色更新当手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A09.V1"
+        },
+        {
+          "text": "只回想最早道路、电厂与基本住商工业已经运行起来的一段，哪种实际发生过的过程更鲜明？",
+          "scene": "初始电网与用地真正运行过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC3K08A_MANUAL",
+            "SC3K08A_FINANCE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把用地、工作、道路和供电调过，并继续跟进了需求与开支",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾猜过一处传输缺口，补线并运行后核对过通电变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾给电厂旁划过一小片低密用地，调整过矩形范围，亲手查看过那次分区格子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "自己给已建电厂、已铺道路和现有用地补过一段个人小记",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "泵淡水电管真实运行，未建水网可换早期电网；实际供水扩给观察及已建工程补记0，过去因果试验与持续供给分开，不把数周水色更新当手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "如果实际用过Building Architect Plus，回想一座自己真正编辑过的建筑，哪种已发生的过程更留住你？",
+          "scene": "已经做过的原版造楼过程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL",
+            "SC3K08A_BAP_SCOPE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为门窗或道具定位专门反复练习，当时的重点是把选面与定位操作练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己猜过编辑平面与模型位置的对应，放块或移动选面后亲手核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾给已编辑的楼房换过一面墙的贴图，再旋转模型，亲手查看过那次墙面涂层",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "自己选过体块、贴图、门窗和道具，让楼房实际呈现了一个个人主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "回顾实际原版BAP：专为练熟而反复定位t，不要求后来必然更能控制；平面实测p、单面贴图编辑0和主题表达a分开。纯建城ALT自动生长观察0，不强迫造楼或导入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A10.V1"
+        },
+        {
+          "text": "没有建筑设计器经历，只回想最早小镇一次实际建设和停留，哪件事更鲜明？",
+          "scene": "没有造楼经历的首轮小镇建设",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL",
+            "SC3K08A_BAP_SCOPE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把住商工业、道路、供电与常规开支一起调过，并跟进它运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾让最初住商工业用地运行，跟看过建筑逐渐开发、车辆去来和街区开始活动的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "当时有精力也能继续建，自己仍缩放慢看过熟悉首片街路，因为认得的街景让自己安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "自己实际安排过道路、树木或公园位置，让首片城区留下个人主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "回顾实际原版BAP：专为练熟而反复定位t，不要求后来必然更能控制；平面实测p、单面贴图编辑0和主题表达a分开。纯建城ALT自动生长观察0，不强迫造楼或导入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想一段实际经营过的城市过程，哪件事已经发生、也更有分量？",
+          "scene": "年终预算和自己定过的目标",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC3K08A_MANUAL",
+            "SC3K08A_FINANCE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先猜过一个年度预测或容量原因，改一项后运行并核对过结果",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力也有新内容可推，自己仍慢看过熟悉旧城，喜欢重温这些已经认识的街区",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己为超过记下的旧年度净收支纪录定过明确目标，并实际比较过两个年度的结果",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "自己把部门经费、供给协议与持续需求接在一起，实际跟进过一段收支",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "已定旧年度纪录且真比较才k；过去预算记录用经营过程0；p有真实运行核对，y多个部门供给持续，h精力足新内容可推仍喜欢熟悉过程。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A11.V1"
+        },
+        {
+          "text": "还没追过年度纪录，只回想最早小镇第一次打开预算、当时已有电厂与基础服务的一段，哪项真的发生过？",
+          "scene": "第一份年度预算确实看过一次",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC3K08A_MANUAL",
+            "SC3K08A_FINANCE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己给第一份已看过的预算、当时已发生的建造和维护支出补过一段小记",
+              "signal": "management_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力也有建设可做，自己仍从电厂到首片街区缩放慢看过，享受认得的旧路带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己把电厂维护、部门经费和少量新增用地一起调过，并继续跟进了年度收支",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "自己曾猜现金下降来自一次建造还是常规费用，运行前后对照明细核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "已定旧年度纪录且真比较才k；过去预算记录用经营过程0；p有真实运行核对，y多个部门供给持续，h精力足新内容可推仍喜欢熟悉过程。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "SIMCITY300008A12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾目前自己实际玩过的一段探索无限经历，哪种已经留下的过程更有分量？",
+          "scene": "一座探索无限城市留下的东西",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力也有新目标可推，自己仍慢看过熟悉城区，喜欢回到这些已认识的街景",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "自己把道路、用地、公用设施与常规开支接成过持续运转的一部分",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "自己细看过原先没认识的一座预设城或本城地形，发现了新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己实际安排过街廓、绿化、地标，或在可用原版工具里做过建筑，让它呈现个人主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不要求全场景、所有地标或附属工具；表达须实际建设或造楼，不把经典画风欣赏当a，不把NPC邻城或顾问当真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A12.V1"
+        },
+        {
+          "text": "只玩过最早一座小镇，回想那一小段已经发生的经历，哪种更有分量？",
+          "scene": "最早探索无限小镇的真实经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SC3K08A_STORE",
+            "SC3K08A_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "本来有精力也能继续建，自己仍缩放慢看过熟悉首片街路，享受认得的小镇日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "自己接好最早道路、住商工业和电力后，按几轮开发需求、供给余量与常规开支又调过用地和预算",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "自己缩放到过一段当时可查看却没细看过的海岸或树林，认识了新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己实际整理过入口道路、树木或小公园，留下自己的开城样貌",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不要求全场景、所有地标或附属工具；表达须实际建设或造楼，不把经典画风欣赏当a，不把NPC邻城或顾问当真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SIMCITY300008A12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+ec5a4b04ae90"
+}

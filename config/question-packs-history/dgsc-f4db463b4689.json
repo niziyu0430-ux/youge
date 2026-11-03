@@ -1,0 +1,934 @@
+{
+  "id": "dgsc",
+  "title": "往日不再",
+  "game_ids": [
+    "steam-1259420"
+  ],
+  "scope": "本体单人故事；未遇暴走潮可换早期小群遭遇",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "本体故事12槽，各含手写替代；8行动与4真实已发生回顾。",
+    "燃油、废铁、近战修理技能、营地服务与永久注射成长分别核对；暴走潮不是强制体验门槛。",
+    "不要求Broken Road DLC；NPC无线电与信任系统不计真人社交。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体单人故事；未遇暴走潮可换早期小群遭遇",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DGSC01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "迪肯刚停到一处暂时安全的岔口，燃油和车况足够再骑一段，当前任务不倒计时。你先往哪边接？",
+          "scene": "摩托旁的岔路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_STORE",
+            "DGSC_DEV",
+            "DGSC_SUPPLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把加油、找废铁和任务地点串成一趟往返",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "沿一条未亲自骑过的林道去看看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "接上无线电或已开始的人物交代，先把这段经历听清",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "回已知位置补一份漏过的录音或历史标记",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "燃油与修理流程、未知道路、人物和收集分开；无线电NPC不算真人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC01.V1"
+        },
+        {
+          "text": "只在最早熟悉的几条公路活动，车况够继续，眼前有主路与侧道。你先做什么？",
+          "scene": "摩托旁的岔路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_STORE",
+            "DGSC_DEV",
+            "DGSC_SUPPLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把附近油桶、拾荒点与回营地接成一程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "骑进上次没走过的小路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "听完布泽或已有无线电里的那段谈话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "去补一件位置已知的录音或标记记录",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "燃油与修理流程、未知道路、人物和收集分开；无线电NPC不算真人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "到了确实提供摩托改装的营地，已有几项可买部件和可用涂装，信用点够优先一项，车也能继续骑。你先围绕什么整理？",
+          "scene": "营地机械师前的车",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较现有油箱、发动机与轮胎的用途，搭出适合这趟路的组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "用已有涂装、贴花与外观部件，做出自己想表现的机车主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把维修、加油与之后几次营地停靠排成资源流程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "继续投入一路照料的车，沿已开始的升级方向留下成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "营地服务按实际提供范围，不假设每个营地同时卖高级枪械和摩托部件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC02.V1"
+        },
+        {
+          "text": "刚开始照料最初的摩托，尚无多种涂装，车况够骑到营地外熟路；出发前只留一轮准备时间，你先做什么？",
+          "scene": "营地机械师前的车的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前枪械与可制作投掷物，安排一组互补工具",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "在熟悉空地练一次刹车转向，让一个动作更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把油料、废铁与下一次回营地的先后排清",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "骑出营地沿熟路转一段，享受引擎、转弯与路面连续回应的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "营地服务按实际提供范围，不假设每个营地同时卖高级枪械和摩托部件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "已经学会Field Repairs，摩托和常用近战武器都还有耐久、也都有一点消耗。废铁只够先充分照顾一边，你先怎样决定？",
+          "scene": "废铁不只留给摩托",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_SUPPLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留熟悉装备，借下一场小遭遇练一次近身后退时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把少用的已有近战或远程工具带上，完整试一种新打法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把后面骑行、拾荒与近战消耗排成几段，先补流程缺口",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "让近战、枪械与投掷物各有用途，再决定哪件工具先修",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "近战修理明确需已学技能；不是先修车或先修武器的攻略判断。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC03.V1"
+        },
+        {
+          "text": "还没学会修理近战武器，只在摩托旁有一点废铁和现有武器。先做什么？",
+          "scene": "废铁不只留给摩托的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_SUPPLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去熟悉的小遭遇，专练一次躲开后再出手",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "换一种过去少用的接近和工具使用次序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "把修车、找油和后续拾荒点接成一段行程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "让已有远程武器与投掷物补上不同距离",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "近战修理明确需已学技能；不是先修车或先修武器的攻略判断。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "来到尚未通电的NERO检查站，燃油够启动，仍有扬声器未处理，四周暂时没有交火。你先给准备时间什么重点？",
+          "scene": "尚未启动的NERO发电机",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_NERO",
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一只已看清的扬声器，练一次拉开距离后稳定瞄准的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿电线、屋顶与设备观察，自己弄清哪些声源和通电有关",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把加油、停车位置与撤回摩托的路线排清再动手",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "绕外围没走过的小路，看看检查站背面还是什么地形",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "直接给出扬声器与供电前提，不考正确关闭顺序或位置记忆。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC04.V1"
+        },
+        {
+          "text": "还没处理过NERO设备，只在早期一处空建筑旁准备下段路，先做什么？",
+          "scene": "尚未启动的NERO发电机的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_NERO",
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在安全位置练一次抬枪后对准已知目标的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "对照门口、车辆与可走通道，理解它们怎样连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把油料、废铁与返回摩托的路线排清",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "去建筑背面没亲自看过的角落看看",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "直接给出扬声器与供电前提，不考正确关闭顺序或位置记忆。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "一片感染区还有已发现的巢穴，手头可制作燃烧工具，已有可用吸引工具和枪械，也有能继续别处的路。物资够处理一段，你先怎样安排？",
+          "scene": "巢穴和沿路材料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_SUPPLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把燃烧材料、弹药、停车与处理后补给接成一趟清理行程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "观察巢口、围栏和退路，弄清惊动后可以怎样移动",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "让火源、吸引工具和枪械各接一段，试出一套配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "换一个平时不从那里接近的位置，试不同的引出与脱离次序",
+              "signal": "route_choice"
+            }
+          ],
+          "design_purpose": "按玩家已拥有工具可行，不把白天、夜晚或某种清巢方法当唯一答案。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC05.V1"
+        },
+        {
+          "text": "还没清过完整感染区，只在一小群异变者附近有熟悉且可用的投掷物、枪械，也有退回摩托的通路。只尝试一小段、不要求清空整群，你先给这场什么重点？",
+          "scene": "巢穴和沿路材料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_SUPPLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好制作、用弹与退回摩托后补给的次序",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "看清来向与障碍，判断哪里有退路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "让已有投掷效果与枪械补上彼此空档",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "规定这场不许开枪，只准已拥有的投掷物与移动，按自己新增的限制实际打一段",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "按玩家已拥有工具可行，不把白天、夜晚或某种清巢方法当唯一答案。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "如果见过暴走潮：这次在交战前有准备时间，已拥有可用陷阱或吸引工具、枪械与一种爆破或燃烧工具。只先改进一部分，你选什么？",
+          "scene": "一处已经见过的暴走潮地形",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把制作、几次投掷、子弹与摩托退路排成一套流程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "让吸引、爆破或燃烧与现有枪械互相接力",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "保留熟悉方案，只练一个转身、换弹或冲刺的具体时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "看清瓶颈、障碍与可绕回的路，推这一片的流动关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不要求已打赢暴走潮，不把人数或难度当门槛；未遇过可换。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC06.V1"
+        },
+        {
+          "text": "没有接触暴走潮，当前正接近早期能处理的一小群异变者；手头普通工具够用。眼前先做什么？",
+          "scene": "一处已经见过的暴走潮地形的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把投掷物、用弹和事后拾荒安排成一段流程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "让现有枪械与燃烧工具分担不同一段",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "只练一次看清逼近后躲开再还击的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "对照门口、车体和退路，推能来回移动的空间",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不要求已打赢暴走潮，不把人数或难度当门槛；未遇过可换。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "刚听到一段关于布泽、莎拉或营地人物的无线电交代，眼前也能继续拾荒和行车。没有倒计时，下一段先给什么？",
+          "scene": "无线电响起以后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_STORE",
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把新目标、油料与沿途物资点排成一趟行程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "沿附近没骑过的支路看看，再接回已有路线",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "接上人物已经开始的经历，想知道这次交代从何而来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先沿已熟悉且可骑行的短路段查看已有落脚处，回到摩托旁再去故事地点",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只按已听过的人物内容；熟路巡查只记现场查看，不凭营地归属、NPC请求或普通准备推断角色代入与真人关系。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC07.V1"
+        },
+        {
+          "text": "只知道开头迪肯与布泽的经历，下一小段没有紧急追赶。你先做什么？",
+          "scene": "无线电响起以后的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_STORE",
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把下一处目标与补油、修车停靠接清",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "去一段上次没骑到头的林道看看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "听清布泽已经开始的那段谈话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先骑到已知落脚处，查看入口与摩托停靠位置，再接回下个目标",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只按已听过的人物内容；熟路巡查只记现场查看，不凭营地归属、NPC请求或普通准备推断角色代入与真人关系。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "回到能改装摩托的营地，已有外观可选，也有一项位置已知的收集物与可走公路。精力和车况都够继续，先给哪项时间？",
+          "scene": "营地里还可自由待一会",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "即使任务还可推进，也愿在熟悉营地低紧迫地慢待",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "调整涂装、贴花与外观细节，让车像自己想表现的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "补回那份已知位置的录音或历史标记",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "骑向一条还没亲自走过、当前可达的道路",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "主动外观表达、已知补全、未知探索与舒缓分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC08.V1"
+        },
+        {
+          "text": "还没有可换涂装，只在最早营地与熟悉公路之间有空档，车况和精力都够。先选什么？",
+          "scene": "营地里还可自由待一会的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "有可做任务也愿在熟悉营地按舒服节奏停留一会",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "在空地练一次刹车或转向，让总不稳的动作更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "拿回自己已看见却漏记录的一项收集物",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "骑进眼前一条仍未探过的侧路",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "主动外观表达、已知补全、未知探索与舒缓分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想实际修车、补油并骑完的一段公路，哪种已经发生的变化更有分量？",
+          "scene": "这辆车真的带自己走了很远",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_SUPPLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "油料、废铁与营地停靠被自己接成了一条可持续行程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "持续投入的摩托部件留下了可保留的成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "一处原来仓促的刹车或转向，经过练习更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "车声、转弯与路面颠簸连起来，有直接的骑行手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "不按跑图距离、驾驶成绩或升级价钱比较玩家。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC09.V1"
+        },
+        {
+          "text": "只回想最早实际骑过的几段路，哪种片段在当时更鲜明？",
+          "scene": "这辆车真的带自己走了很远的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_SUPPLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "找油、修车与再出发第一次被自己排成了流程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "听到车声、转弯穿过路面的连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "自己曾专练一个起初不稳的转向或停车动作，后来比开始更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己换了一种接近与停车方式，试出了与上次不同的遭遇次序",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "不按跑图距离、驾驶成绩或升级价钱比较玩家。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想实际应对过的一群异变者，地形与手头工具都影响了场面。哪种当时的过程更有分量？",
+          "scene": "一群异变者经过了那个瓶颈",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己看懂了瓶颈、障碍与敌群移动的关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "制作、用弹与撤回摩托的流程真正运作起来",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "奔跑、转身与连续命中的反馈接成一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "吸引、燃烧或爆破与枪械真的接成了一套",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "大群小群均可回顾，不以击杀数或是否挑战暴走潮定优劣。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC10.V1"
+        },
+        {
+          "text": "只回想最早能处理的一小群，不要求暴走潮，哪种已发生体验更鲜明？",
+          "scene": "一群异变者经过了那个瓶颈的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "车体与门口之间的空隙被自己理解成了退路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "用弹、脱离和补给被自己排成顺手流程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "移动、命中和声音一直连续回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "一件投掷物和枪械刚好补上不同一段",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "大群小群均可回顾，不以击杀数或是否挑战暴走潮定优劣。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回顾实际走过的迪肯旅程，哪种已发生的经历更有分量？",
+          "scene": "公路上留下的人与地点",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DGSC_STORE",
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾沿陌生林道走进去，发现了地图上原来没亲眼见过的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "一份已知线索的NERO录音或历史标记，后来被自己补回",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "布泽、莎拉或沿路人物的讲述，已经接成了一段具体经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先骑到熟悉落脚处，查看入口和停车处，再接回原来的目标",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只回顾实际道路、收集与人物经历；熟悉落脚处的检查不加身份分，不把照料同伴、交易或NPC信任当现实品德与社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC11.V1"
+        },
+        {
+          "text": "只回想开头几段实际行车与营地经历，哪部分更鲜明？",
+          "scene": "公路上留下的人与地点的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DGSC_STORE",
+            "DGSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己转入过一条陌生支路，亲自发现新的落脚点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "一个已看见却漏过的标记或录音，终于被自己找回",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "自己听过人物交代，让这段公路有了具体的旧日关系",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己曾骑完一段熟路，实地查看沿途已知落脚处，然后再回到目标路线",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只回顾实际道路、收集与人物经历；熟悉落脚处的检查不加身份分，不把照料同伴、交易或NPC信任当现实品德与社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DGSC12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想实际用过注射器、技能或持续维护装备的一段过程，哪种已经发生的变化更有分量？",
+          "scene": "迪肯留下的成长与打法",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己主动试过少用工具，熟悉遭遇出现了新打法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "长期投入的生命、体力或专注方向留下了持续成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "已有技能、枪械与制作工具开始互相补位",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "一个自己总处理不好的动作经过练习更可控",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "永久成长与一次战斗临时状态分开；不按注射器数量或最高难度判断。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC12.V1"
+        },
+        {
+          "text": "还没用过注射器，只回想开头实际打过的小遭遇和行车，哪种体验更鲜明？",
+          "scene": "迪肯留下的成长与打法的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DGSC_DEV",
+            "DGSC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己换了一条接近或工具使用次序，试出了新的处理方法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "骑行或命中时动作、声音连续给出的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "油料、废铁、弹药与返回停靠被自己接成了一段安排",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己曾把躲开、装填或转向中的一个时机拿来反复练，后来能更主动做出来",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "永久成长与一次战斗临时状态分开；不按注射器数量或最高难度判断。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DGSC12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+f4db463b4689"
+}

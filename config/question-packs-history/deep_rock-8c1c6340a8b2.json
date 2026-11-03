@@ -1,0 +1,954 @@
+{
+  "id": "deep_rock",
+  "title": "深岩银河",
+  "game_ids": [
+    "steam-548430"
+  ],
+  "scope": "本体普通任务；全套可用单人Bosco路径，不要求高危或深潜",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "12题位均有单人可答路径；第8题真人同游可换单人太空站情境，替代四选项独立赋予b/g/a/h信号。",
+    "Bosco与Molly均不计真人社交；未用过工程师可换通用镐子开路题，不要求机器人Mod。",
+    "不要求高危、深潜、超频或赛季事件；硝石与补给只用机制关系，不使用易变阈值。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体普通任务；全套可用单人Bosco路径，不要求高危或深潜",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DEEP_ROCK01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "进入一处新生成的洞穴，照明弹照出矿脉、上下两层通道和压实泥土。当前没有紧迫虫群，第一段时间你先给什么？",
+          "scene": "第一支照明弹落下",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_TOOLS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进一条还没照清的通道，想看看洞穴会怎样展开",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "转动地形扫描器，对照高低层与泥土墙，先推通空间",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把落地点、存矿处与可回走的路接起来，给之后搬运留安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "在附近安全坡面练一次挖路后的起跳落脚，把总不稳的动作练清楚",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "随机可挖地形中的探索、空间、物流与移动练习可分别执行。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK01.V1"
+        },
+        {
+          "text": "只进入过最初的采矿洞穴，眼前有可挖泥土、一处矿脉和能回去的落地点；先做什么？",
+          "scene": "第一支照明弹落下的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_TOOLS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挖开泥土后亲眼看看另一边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "看扫描器，把自己位置与下一处洞穴对上",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "清出落地点到矿脉之间的来回路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "沿一小段熟悉坡面练镐子开路再迈上去的动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "随机可挖地形中的探索、空间、物流与移动练习可分别执行。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "这次是有Molly的采矿任务；已经背了一些矿，附近有硝石，前面还没探开，弹药也足够眼前这一段。你先怎样接下一步？",
+          "scene": "硝石与存矿的来回",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE",
+            "DRGSC_TOOLS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回去拿自己记着位置的副目标采集物，补上一项已知缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先照亮前方没去过的洞口，看看会出现怎样的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "用扫描器和矿物位置排一遍路线，找能减少重复绕行的连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先存矿并接着采硝石，把补给与之后的挖掘行程接清楚",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "硝石用于补给而非永久货币；副目标以回到已知位置补全为动机。",
+          "interpretation_boundary": "Molly只是存矿机器人；资源安排不由囤积多少推断现实消费或责任感。",
+          "id": "DEEP_ROCK02.V1"
+        },
+        {
+          "text": "只在单人早期任务里挖过矿，当前背包快满，Molly可叫来；离下一段挖掘还有空档，你先做什么？",
+          "scene": "硝石与存矿的来回的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE",
+            "DRGSC_TOOLS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿回自己已经看见的一个副目标物，让清单少一处遗漏",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先看看旁边自己没进过的小洞，再决定往哪边挖",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照扫描器与来路，弄清两处矿点之间有没有更直接的路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把存矿位置和下一处矿脉接成方便往返的一程",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "硝石用于补给而非永久货币；副目标以回到已知位置补全为动机。",
+          "interpretation_boundary": "Molly只是存矿机器人；资源安排不由囤积多少推断现实消费或责任感。",
+          "id": "DEEP_ROCK02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "这次使用工程师，眼前矿脉在高处，平台弹药还有余量，普通绕路也能到。只先处理这一面岩壁，你怎样放置并使用平台？",
+          "scene": "工程师的平台要放在哪里",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练一次发射平台后跳上去，掌握距离与落点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "试一条平时不会搭的走法，看看这面墙还能怎样被自己改造",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "对照岩壁形状找落点，自己解出能逐步到矿脉的路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把平台连到存矿与回程的位置，让之后几次搬运也能用",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "工程师专用工具明确体验前提，其他职业可换通用镐子情境。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK03.V1"
+        },
+        {
+          "text": "没用过工程师，只用通用镐子在岩壁边开路；面前有一块矿，绕行也能到，你先怎样挖？",
+          "scene": "工程师的平台要放在哪里的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿同样一小段岩边练挖、跳和落脚的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "换一侧开口，试一种平时没开过的通道形状",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "看高低差与墙厚，挖出自己判断可达的一段台阶",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "让新挖的路接回存矿与回程，之后还可反复走",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "工程师专用工具明确体验前提，其他职业可换通用镐子情境。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "太空站里已经有几项可选武器改装，下一次还是普通任务。预算和准备时间只先够认真调整一组，你先围绕什么配？",
+          "scene": "下矿前只调整一组装备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用一项平时略过的改装，完整试一趟不同的职业玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "让主武器、副武器与投掷物补上彼此不方便处理的距离或敌群",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "核对这次任务路线与补给方式，把弹药和工具消耗接起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "保留大部分熟悉装备，只为一个想练稳的动作调整余裕",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不要求超频或特定流行配装，选项按实际已解锁内容可执行。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK04.V1"
+        },
+        {
+          "text": "还没有多少改装可换，只能带初始主副武器和职业工具下矿；准备时先想一件什么事？",
+          "scene": "下矿前只调整一组装备的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "改变平时一进洞就做的事，试一套不同的挖掘和接敌次序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "哪一种武器接哪类距离，让工具与火力互相补上空档",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "把存矿、照明与补给留给之后的几段路",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "只给一个总用得仓促的动作留练习机会",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不要求超频或特定流行配装，选项按实际已解锁内容可执行。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "本次主目标已完成，还没有呼叫回收舱；弹药足以再留一小段，副目标仍差一点，旁边也有未探洞口。你先把最后这段用在哪里？",
+          "scene": "主目标完成但还没叫撤离",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去补已经有线索的那一点副目标，让这趟少个未完成项",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "进未探洞口，看看随机洞穴还有哪块没见过的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先把存矿与撤离会经过的路理顺，再结束这趟行程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "借这段余裕练一次岩壁边起跳与落脚，再呼叫回收舱",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "呼叫前的补全、探索、流程与练习不等同倒计时冒险，不设置道德化等待。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK05.V1"
+        },
+        {
+          "text": "只玩过前期采矿任务，主矿已够但尚未按撤离按钮；接下来先选一件事，你选什么？",
+          "scene": "主目标完成但还没叫撤离的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回到一处已记住的副目标物旁把它补齐",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "照亮另一条没有走到底的支路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "把最后一包矿与来路安排清楚再出发",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "在熟悉坡面再练一次挖跳衔接，随后按撤离按钮",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "呼叫前的补全、探索、流程与练习不等同倒计时冒险，不设置道德化等待。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "任务控制提示虫群将到，眼前仍有短暂准备时间；岩石可挖，场地也有几条路。你先把这点时间用在哪里？",
+          "scene": "虫群来前整理一块地形",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把补给位置、照明和之后继续采矿的路线接到同一片场地",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "保留熟悉武器，选一类已见过的虫子练一个瞄准或换弹时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "留在适合持续走动的位置，让火力与移动保持自己喜欢的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "看清虫子会从哪几面接近，挖掉一处妨碍观察或移动的凸起",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "同样要应对虫群，分别选择空间整理、资源链、练习与战斗反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK06.V1"
+        },
+        {
+          "text": "只遇到过早期一小群虫子，下一群到来前可以整理几秒；你先做什么？",
+          "scene": "虫群来前整理一块地形的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "安排照明、存矿与剩余弹药，免得交火后打断行程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把注意留给一种熟悉虫子的出手或瞄准时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "站到能边走边打的区域，接一段连续开火与命中",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "看门口与岩柱，清出一条自己能绕回来的路",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "同样要应对虫群，分别选择空间整理、资源链、练习与战斗反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "单人下矿，Bosco可以挖高处矿、照亮区域或协助战斗；这会儿没有紧急敌人。高处有硝石，旁边还有没照清的空间，你先怎样指挥它？",
+          "scene": "给Bosco的一道指令",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE",
+            "DRGSC_TOOLS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让它照亮一段已看见的岩壁，自己对照扫描器推清矿点与通道能怎样相接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "让它负责熟悉矿点，自己把一个职业移动动作练清楚再接回工作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "让它挖高处矿，自己存矿或挖近处，把两个工作接成一套行程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先让它照亮陌生高处，看看洞穴还有什么没见过的角落",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "明确Bosco是单人自动助手，指令用途只记录资源、探索、空间推理或练习。",
+          "interpretation_boundary": "机器人响应不计真人社交，单人同样有完整选项；不要求Bosco替玩家执行全部目标。",
+          "id": "DEEP_ROCK07.V1"
+        },
+        {
+          "text": "还没认真指挥过Bosco，只在单人洞穴里用过照明弹、镐子和存矿；眼前暂时安全，先做什么？",
+          "scene": "给Bosco的一道指令的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE",
+            "DRGSC_TOOLS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照扫描器与门口高差，弄清自己能怎样回到来路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "在熟悉坡面练一次挖开落脚点后跳过去的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把照明、挖矿和存矿排成能反复做的一程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先照亮一处上次没看清的岩洞边缘",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "明确Bosco是单人自动助手，指令用途只记录资源、探索、空间推理或练习。",
+          "interpretation_boundary": "机器人响应不计真人社交，单人同样有完整选项；不要求Bosco替玩家执行全部目标。",
+          "id": "DEEP_ROCK07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "若你确实和真人同伴下过矿：主目标已够，大家也同意先不叫撤离、再留一小段。你最愿意把这段共同时间用在哪里？",
+          "scene": "和真人同伴多留的一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和愿意试的人各带一种已会的工具或火力，看看能形成怎样的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "边处理顺路矿点边聊刚才的遭遇，享受真人同伴彼此接话与玩笑",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "先谈清谁想补副目标、谁想多探索，再协调各自要接的矿点与撤离时机",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "找愿意同行的人一起进一条没走过的岔路，看随机洞穴还有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "真人共同经历与共同目标协调分开；先同意停留，避免用礼貌或赶人作人格推断。",
+          "interpretation_boundary": "V1的social_spark与quest_board均只来自真实玩家交流；ALT1独立记录b/g/a/h，不含真人关系或协调信号，不声称两情境等值。",
+          "id": "DEEP_ROCK08.V1"
+        },
+        {
+          "text": "如果一直单人游玩：回到太空站，出发前只留一小段空档，你先去做什么？",
+          "scene": "和真人同伴多留的一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己有精力也有能继续的任务，仍愿在熟悉太空站慢待，按舒服节奏再出发",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "到装备终端想一组主副武器与职业工具的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "继续投入已经在用的职业，计划下一项能保留下来的装备升级",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "整理已拥有的胡子、护甲或涂装，搭出自己喜欢的矿工外观",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "真人共同经历与共同目标协调分开；先同意停留，避免用礼貌或赶人作人格推断。",
+          "interpretation_boundary": "V1的social_spark与quest_board均只来自真实玩家交流；ALT1独立记录b/g/a/h，不含真人关系或协调信号，不声称两情境等值。",
+          "id": "DEEP_ROCK08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想一次照明实际让随机洞穴展开，矿脉与高低层一起出现。哪种已经发生的经历更有分量？",
+          "scene": "整片洞穴被照出来",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_TOOLS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾走进陌生通道，亲眼发现了洞穴更深处的新空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力也能推进，自己仍在熟悉安全矿点慢挖过一阵，没有加新目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "扫描器里的层次终于与自己站的位置对上，空间关系被自己理解了",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "矿点、存矿和回程被自己连成了一条真正运作起来的路线",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾已发生的探索、自主舒缓、空间理解和采矿流程，不把环境欣赏当审美表达。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK09.V1"
+        },
+        {
+          "text": "只回想最早实际照亮的一个小矿洞，哪种当时发生的体验更鲜明？",
+          "scene": "整片洞穴被照出来的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_TOOLS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾进入那个陌生洞口，亲眼看到了原来不知道的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当时还能做任务，也主动在熟悉安全矿点按自己的节奏慢挖过一会",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "扫描器上的方向与眼前岔路，逐渐被自己对清楚",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "挖到矿、背回去存好与再次出发，被自己接成了一段顺手流程",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾已发生的探索、自主舒缓、空间理解和采矿流程，不把环境欣赏当审美表达。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己的武器与职业工具实际在同一趟任务里都派上用场，哪部分当时的体验更有分量？",
+          "scene": "职业工具真的派上用场",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续开火、移动与虫群倒下的声音反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "一个原本总用得仓促的工具动作终于能主动控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "工具、补给和存矿接上，让整趟工作没有频繁折断",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "火力与移动或支援工具互相补位，组成自己的一套职业玩法",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "不按职业强弱或团队贡献评判人，只比较本人实际工具体验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK10.V1"
+        },
+        {
+          "text": "只用过初始武器、镐子和照明弹，回想实际做过的其中一趟任务，哪部分在当时更鲜明？",
+          "scene": "职业工具真的派上用场的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "照亮后边走边打、连续命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "一次在岩边挖路落脚的动作比以前更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "挖矿、存矿与补弹有前后安排的那段行程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "武器管住敌人，镐子和照明让自己真正到达矿点的配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "不按职业强弱或团队贡献评判人，只比较本人实际工具体验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想一趟实际结算、带回矿物并回到太空站的任务，哪种已经发生的收获更有分量？",
+          "scene": "任务结算后的积累",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "新开放的武器或改装与已有装备真的配合起来，形成了一套用法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己实际调整过胡子、护甲或涂装，矿工外观变成了心里想表现的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "自己惦记的指派清单又补齐了一项，已接目标少了一个明确缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "一直投入的职业与装备逐步开放，能看见持续积累",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "为了清单补全、持续成长、配装用途与外观表达分开，不以等级高低代表投入强度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK11.V1"
+        },
+        {
+          "text": "还只做过最初几单，回想实际回站后的准备与收获，哪部分在当时更有分量？",
+          "scene": "任务结算后的积累的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "已有主副武器与工具被自己安排成了一组能互相补位的用法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己整理过已有服装和胡子，给矿工做出了喜欢的外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "自己特意补完了已接指派清单的一项遗漏，让这串目标少了一个空缺",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "自己持续投入已经开始使用的职业，逐渐开放了能保留下来的新内容",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "为了清单补全、持续成长、配装用途与外观表达分开，不以等级高低代表投入强度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DEEP_ROCK12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次实际撤离，回收舱倒计时开始后，你沿挖过的洞穴回到了舱口。哪种当时发生的体验更有分量？",
+          "scene": "带着矿回到回收舱",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己维持了扮演的矿工做事方式，实际先存好已有矿，再沿撤离路回站",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "刚才看不明白的高低通道在回程终于连成能走的路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "之前挖好的通路和留出的补给真的接住了撤离行程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "奔跑、转身开火与赶到舱口的动作反馈连成一段",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "撤离回顾不问是否丢下同伴；单人经验完整可答，代入不算真人关系。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK12.V1"
+        },
+        {
+          "text": "只回想最早一次实际返回回收舱的经历，单人也可答；哪部分在当时更鲜明？",
+          "scene": "带着矿回到回收舱的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRGSC_STORE",
+            "DRGSC_FAQ",
+            "DRGSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己维持了认定的矿工做事方式，实际存好矿就先上舱，没有为额外杀虫折返",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "自己把来时洞口与地形扫描图对上，终于找到了回去的路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "存好矿后，自己沿已经安排过的通路顺畅接到了舱口",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "边走边处理眼前虫子，最后几步连得很顺的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "撤离回顾不问是否丢下同伴；单人经验完整可答，代入不算真人关系。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DEEP_ROCK12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+8c1c6340a8b2"
+}

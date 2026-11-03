@@ -1,0 +1,952 @@
+{
+  "id": "wrsr09a",
+  "title": "工人与资源：实体建材、通勤与一座共和国",
+  "game_ids": [
+    "steam-784150"
+  ],
+  "scope": "正式PC基础本体单人经营或教学后的自建存档。各题明确当前已启用设置与可用设施；资源自建、铁路、四季供热、能源和大学研究均有较早基础替代，不要求真实预设全开、DLC、模组或联网。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "真实模式不是全部题的共同必需，资源自建也可在普通存档使用；四季、能源和研究前提逐题明确，关闭者使用基础替代。",
+    "煤矿原煤到加工煤、散料与仓库货不同载具、实体公交步行、配送库存阈值与铁路编组均按本作，不套其他城市或纪元。",
+    "NPC劳动、居民日程与大学不算真人社会性；没有将现实政治立场、环保道德、建设能力或延后施工物流读成性格分。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "正式PC基础本体单人经营或教学后的自建存档。各题明确当前已启用设置与可用设施；资源自建、铁路、四季供热、能源和大学研究均有较早基础替代，不要求真实预设全开、DLC、模组或联网。",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "WRSR09A01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "当前正用资源自建一处小工程，建筑办公室已配材料源、工人站和相应车辆，工地有阶段材料等待；已有道路可通，其他居民供给稳定。先做什么？",
+          "scene": "建筑办公室等的不是同一种车",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_CONSTRUCTION",
+            "WRSR09A_QA",
+            "WRSR09A_REALISTIC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把材料来源、不同货车、工人巴士、现场阶段与日常民生运输接起来，持续跟进几轮建设和补给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先猜当前停工是某种材料源未正确指派，只改这一项来源，再核对相应车辆能否送到工地",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按当前已有材料来源、可用运输车与工人巴士，排清这处工程的供料和到场先后，再实际调整施工优先级与来源安排",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "移近办公室、当前材料装载点与工地入口，逐处查看实际设施和接路",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "自建靠适配车辆与来源，不是点建筑立即完成；持续材料人员民生多流才y，单工程步骤0分，NPC施工不计真人合作或即时手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A01.V1"
+        },
+        {
+          "text": "还没运行完整资源自建，当前正在首片建址安排住宅、食品仓储与道路预览；这些基础建筑已可选，地面与连接可查看，也能取消或换一处尚未开工的预览，不要求建筑已竣工。先做什么？",
+          "scene": "完整资源自建前的首片建址",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_CONSTRUCTION",
+            "WRSR09A_QA",
+            "WRSR09A_REALISTIC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可选住宅、食品仓储与道路的占地和连接条件，选下一项方案但暂不放置",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "把本轮道路、仓储与住宅预览的放置和调整先后排清，再照这个次序实际编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "只换一处尚未开工建筑预览的位置或朝向，亲手查看这项已有摆法",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "移近当前边境道路、第一片建址和已有连接，逐处查看现场再决定下一处预览",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "自建靠适配车辆与来源，不是点建筑立即完成；持续材料人员民生多流才y，单工程步骤0分，NPC施工不计真人合作或即时手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "居民区到工厂已有巴士线路，站台与车上能区分工人、学生和普通乘客，工厂仍会缺人；当前有可用巴士与可建步道，基础供给能维持。先做什么？",
+          "scene": "站台有人，工厂不一定有工人到岗",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_CITIZENS",
+            "WRSR09A_QA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜厂里到岗不足与下车后的步行连接有关，只调整厂门旁一段步道，再对照下车与到岗变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前添一辆已有巴士与添一段步道的运力、供给和建设条件，暂不执行",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "移近两端站台和厂门，查看当前步行路径与现有设施，再决定调整",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "把工人来源、班车、下车后步行、工厂原料与居民食品服务接起来，持续跟进轮班供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "岗位不是居民终身固定职业，按本作工人公交过滤与步行可达性；不要求返程班车或把NPC调度记真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A02.V1"
+        },
+        {
+          "text": "还没开巴士线，首片居民、食品店和一处岗位已运行，但一排住户偶尔没买到食品；目前靠步行，可添步道或调整未开工住宅选址，总体供给稳定。先做什么？",
+          "scene": "没有公交时，住户怎样步行买食品",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_CITIZENS",
+            "WRSR09A_QA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜一片住户买不到食品与步行连接有关，只调整住区到店门的一段步道，再运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前补步道与在另一可达位置建设新住宅的供给、用地和材料条件",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "查看现有住宅出口、食品店入口与岗位连接，亲自认识当前现场",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "把住户步行、店员、食品到货与现有岗位人员接起来，持续经营首片生活供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "岗位不是居民终身固定职业，按本作工人公交过滤与步行可达性；不要求返程班车或把NPC调度记真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "当前已有煤矿、原煤加工厂和适配散料堆场，加工厂偶尔等原煤；工人运输已运行，煤有现成去向，一段传送带接口可调整，居民生活稳定。先做什么？",
+          "scene": "原煤要先加工，散料还要对上接口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_RESOURCES",
+            "WRSR09A_DISTRIBUTION",
+            "WRSR09A_QA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前扩大加工、扩散料储存与添现有适配货运的供给条件，暂不执行",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "移近煤矿出口、传送带接口与堆场装卸处，逐处查看现有设施",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "把采矿、原煤加工、散料储运、工人通勤与煤的实际去向接起来，持续跟进工业链",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先猜加工厂等原煤与一处传送带连接有关，只调整这一个接口，再运行核对入料与成煤",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "原煤与加工煤不同，散料用适配堆场自卸或传送带，不照抄商店泛称平板车；普通看接口只0分，不考最优产业链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A03.V1"
+        },
+        {
+          "text": "还没有煤矿链，第一批钢材或木板已在露天堆场，另一处本人露天堆场也已建；一辆适配敞车已能按现有直接线路在两者间运行。先做什么？",
+          "scene": "煤矿之前，两处露天堆场间的敞车",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_RESOURCES",
+            "WRSR09A_DISTRIBUTION",
+            "WRSR09A_QA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只给现有货车换用一项当前可选装卸设置，跑一趟体验这个现成配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "亲自查看当前堆场装载口、目标堆场卸货口与道路连接，再决定这趟运输",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先排这次材料装车、目标露天堆场与卸货步骤，再照安排转运一趟",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先比较把材料留在首堆场与运到新堆场支持附近建设的供给、运输条件，暂不发车",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "原煤与加工煤不同，散料用适配堆场自卸或传送带，不照抄商店泛称平板车；普通看接口只0分，不考最优产业链。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "现有配送办公室已有适配篷车、食品来源和居民区商店，自动调车能运行；当前一个目的地补货偏迟，库存阈值可改，居民暂无危机。先做什么？",
+          "scene": "配送办公室看的是目的地库存阈值",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_DISTRIBUTION",
+            "WRSR09A_CITIZENS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前增加来源供货与增加适配车辆或储位的供给条件，暂不执行",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "把食品来源、配送阈值、车辆、店员与居民消费接起来，持续跟进几轮补货",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先猜延迟来自这个目的地的当前库存阈值，只改这一项，再核对调车和到货",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "只换用办公室当前可选的另一补货阈值，实际运行体验这个现成配置",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "配送阈值针对目标建筑库存，不套直接线路的车厢百分比；只用实际界面已可配食品目的地，不由换阈值推新规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A04.V1"
+        },
+        {
+          "text": "还没有配送办公室，食品仓库和商店已有适配篷车直接线路；仓库尚有食品而商店偶尔等货，当前可改两站装卸与等待设置，住户基本稳定。先做什么？",
+          "scene": "配送办公室之前的一条直接食品线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_DISTRIBUTION",
+            "WRSR09A_CITIZENS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给已经实际安排或观察过的食品装卸、车辆往返与商店补货补一段运转记录",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "把现有食品来源、车次、店员与居民消费接起来，持续跟进这条补货",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先猜等货来自某站的等待条件，只改这一站设置，再核对实际装载与商店到货",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "只换用当前线路另一项已可选装卸设置，跑一轮体验这个现成配置",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "配送阈值针对目标建筑库存，不套直接线路的车厢百分比；只用实际界面已可配食品目的地，不由换阈值推新规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "当前煤矿加工、铁路和货站已运行，并已有一列可用列车；车库另有可编组的本体柴油机车与散料货厢，燃油与试跑线路具备，运输暂无危机。先做什么？",
+          "scene": "货运列车要兼顾机车、货厢和站台长度",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_RAIL",
+            "WRSR09A_QA",
+            "WRSR09A_RESOURCES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把车库当前允许的一台柴油机车与一组已有适配散料货厢编成一列，装煤试跑，体验这套常规运煤配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已有机车和货厢的牵引、容量与长度，选配置但暂不编组运行",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "把上游采矿加工、列车装卸、人员燃油与实际工业或出口去向接起来，持续经营",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "只给一列当前已有列车换用一项已可选站点装卸设置，跑一轮体验现成配置",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "普通机车与适配货厢编组试跑记0分，不因必需部件相接自动推构筑动机；只用当前车库允许的本体配置，不断言所有列车可拆，也不要求Early Start车型。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A05.V1"
+        },
+        {
+          "text": "还没铺铁路，当前首条公路货运用适配篷车在仓库与商店间送食品，商店偶尔等货而原因未定；站点设置能改，也有另一辆当前可用车辆可比较。先做什么？",
+          "scene": "铁路之前，现有篷车和站点设置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_RAIL",
+            "WRSR09A_QA",
+            "WRSR09A_RESOURCES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前两辆可用车辆的载货类别、容量与既有线路条件，暂不替换",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "把食品来源、车次、店员与住户消费接起来，持续跟进首条货运",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "只给现有车辆换用一项当前已有装卸或等待设置，实际跑一轮体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先猜一处断货来自某站错误的货物选择，只改这一项，再核对下一轮实载",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "普通机车与适配货厢编组试跑记0分，不因必需部件相接自动推构筑动机；只用当前车库允许的本体配置，不断言所有列车可拆，也不要求Early Start车型。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "当前四季与供暖已开启，煤热厂、供热管和换热站已运行，热出有起伏；工人通勤另有一辆可用巴士，来煤也能调整，眼前不是寒潮危机。先做什么？",
+          "scene": "四季开启，热厂和换热站要一起维持",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_HEAT",
+            "WRSR09A_CITIZENS",
+            "WRSR09A_SETTINGS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜热出起伏与工人到厂不连续有关，只给现有通勤线添一辆当前可用巴士，再核对到岗与热出",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可建的地上管与地下管方案的材料、施工和供给条件，暂不改建",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "把视点移到热厂、当前管线与换热站，逐处查看实际设施和连接",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "把煤源、热厂工人、供热管与换热站、住宅食品和通勤接起来，持续经营冬季供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "明确四季开启且已玩供热，使用煤热厂和管网，不混2205工厂余热；不以应急救人、温度知识或最优管线考能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A06.V1"
+        },
+        {
+          "text": "关闭四季或还没建供热，食品店已有货，居民也能走到店，但接待偶尔排队；当前有可到岗人手，店员岗位上限可调，另可预览一处新店，基本生活稳定。先做什么？",
+          "scene": "没有冬季供暖，食品店现有店员岗位",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_HEAT",
+            "WRSR09A_CITIZENS",
+            "WRSR09A_SETTINGS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜排队来自现有店员岗位上限，只提高这一处上限，再运行核对到岗与接待",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前扩一处新店与给现有商店增加人手配供货的建设、供给条件",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "只把未开工新店的预览换一个位置或方向，亲手查看这个已有编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "把食品到货、店员岗位、居民消费与其他岗位通勤接起来，持续经营这片生活供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "明确四季开启且已玩供热，使用煤热厂和管网，不混2205工厂余热；不以应急救人、温度知识或最优管线考能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "当前已有一条能出口现有产品的车辆线路，其中一辆车迟迟未到海关而原因未定，装卸等待设置可改；实际可达的海关、对应外币与余额均可查，国内食品稳定，没有资金危机。先做什么？",
+          "scene": "海关用外币买卖，国内还要留住现货",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_QA",
+            "WRSR09A_REALISTIC",
+            "WRSR09A_DISTRIBUTION"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这次已有出口货物、适配车辆与海关装卸步骤，再亲自调度一趟",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先猜一辆车迟迟未出口是当前等候装满造成，只改这一个等待设置，再核对车辆和到账",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把现有出口、该海关对应外币的进出、进口食品与车辆燃料持续接起来，跟进多轮国内外供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前扩大既有出口与减少一种可替代进口的实际供给、运输和建设条件，暂不执行",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "卢布美元是对外交易，国内不向每栋房自动收税；海关由地图提供，不捏造可新建海关，也不以价格涨跌或最优贸易考能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A07.V1"
+        },
+        {
+          "text": "还没有本国产品可出口，当前可达海关、适配篷车和首个食品储位已经存在，居民区刚开始运作。先做什么？",
+          "scene": "首次出口之前，海关食品与首社区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_QA",
+            "WRSR09A_REALISTIC",
+            "WRSR09A_DISTRIBUTION"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看当前海关出口、仓库装卸口和首条公路，亲自认识现场",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可购食品、对应外币预算与已有储位和车辆容量，选进口方案而暂不发车",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先排这次海关已有食品、对应外币、车辆与卸货步骤，再亲自安排首趟进口",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "把食品进口、现有车辆、店员与居民消费接起来，开始持续跟进补给和外币用度",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "卢布美元是对外交易，国内不向每栋房自动收税；海关由地图提供，不捏造可新建海关，也不以价格涨跌或最优贸易考能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "当前已启用研究，大学有教授且已完成保留一项技术，后续项目已开放但研究推进偏慢；教授研究分配、通勤与居民基本供给都能调整。先做什么？",
+          "scene": "大学已经留下的技术，还能沿同档继续研究",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_RESEARCH",
+            "WRSR09A_CITIZENS",
+            "WRSR09A_SETTINGS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已建大学、铺过的连接和实际投入过的技术研究补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "继续沿同一共和国培养已有技术进展，分几轮推进自己选的后续研究，看这份长期积累怎样留下来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把教授与学生的到达、民生供给、现有生产运输与研究需求接起来，持续经营",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先猜当前研究较慢与教授研究分配有关，只改这一项分配，再核对研究进度",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只有研究设置开启且已有技术留存在同档，愿意后续持续培养才g；不是点学校、一般受教育率或一次菜单购买，不能指定某个NPC保证未来成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A08.V1"
+        },
+        {
+          "text": "关闭研究或还没有大学，首片住宅和食品店已运行，当前两项文化或运动设施均可建；建造所需条件已具备，食品稳定，也能继续预览公共空间。先做什么？",
+          "scene": "没有大学时的一项邻里公共设施",
+          "question_type": "situational_action",
+          "source_ids": [
+            "WRSR09A_RESEARCH",
+            "WRSR09A_CITIZENS",
+            "WRSR09A_SETTINGS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在现有住宅与食品店之间实际补建步道和一项已可用公共设施，让首社区表现自己的邻里广场主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较这两项当前公共设施的可达位置、供给和材料条件，暂不施工",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先排清这一轮公共设施与步道预览的放置、移动和调整次序，再照顺序实际编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "只换一处未开工公共设施预览的方向或位置，亲手查看这项已有摆法",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "只有研究设置开启且已有技术留存在同档，愿意后续持续培养才g；不是点学校、一般受教育率或一次菜单购买，不能指定某个NPC保证未来成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想自己实际安排过材料、车辆或工人到场的一处工程，不要求真实预设或竣工成功。哪项当时确实做过的过程更有分量？",
+          "scene": "回想一处你确实用资源建起来的工程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WRSR09A_CONSTRUCTION",
+            "WRSR09A_QA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把材料来源、车辆、工人和其他民生运输一起调整过，后来还连续跟进了几轮施工供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我对一次停工提出过原因解释，只改一个材料源或接路条件后核对过施工运行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我比较过当时可行的施工或供料方案，先选下一步而没有马上改动",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "我给当时已搭建的工程与铺过的连接补记过供料、到场和施工过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "正文只回顾实际资源自建，ALT只回顾实际预览编辑，不把预览当施工或竣工；NPC施工不计即时手感，不由成功率或工程能力计分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A09.V1"
+        },
+        {
+          "text": "还没用资源自建，就回想第一片住宅、食品仓储与道路的实际预览编辑；不要求建筑已经开工或竣工。哪件事确实发生过？",
+          "scene": "回想第一片实际放置过的建址",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WRSR09A_CONSTRUCTION",
+            "WRSR09A_QA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我亲自转过或挪过一处建筑预览，查看了这项实际编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "我按自己的工业小镇主题，实际安排过住宅、食品仓储与道路预览的轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我先排过那轮道路、仓储与住宅预览的编辑次序，也照安排实际放置和调整过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我把视点移近过当时的边境道路、建址地形与已有连接，查看了实际现场",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "正文只回顾实际资源自建，ALT只回顾实际预览编辑，不把预览当施工或竣工；NPC施工不计即时手感，不由成功率或工程能力计分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己实际开过的一条工人巴士或铁路通勤线，不要求工人全部到岗。哪项当时确实做过的过程更有分量？",
+          "scene": "回想一条你真运行过的通勤线",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WRSR09A_CITIZENS",
+            "WRSR09A_QA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我对一次到岗不足提出过解释，只改一个过滤、站点或步道条件后核对过运行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我把视点移近过站台、厂门与步行连接，查看了当时的实际现场",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "那时我仍有精力也有新工业可建，却主动调了一条熟悉通勤线，整理了已会的站点，享受了安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "我把工人来源、车次、下车步行、厂区原料与居民生活接着经营过，后来还持续跟进了轮班供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "实际过去的线路经历，h有主动熟悉活动与其他可做新进展；NPC通勤不是和真人相处，也不以到岗多少判断能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A10.V1"
+        },
+        {
+          "text": "还没开公共交通，就回想第一片靠步行生活的住宅和食品店。哪种已经做过的过程更鲜明？",
+          "scene": "回想首片靠步行生活的社区",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WRSR09A_CITIZENS",
+            "WRSR09A_QA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我对一次住户买不到食品提出过解释，只改一段步道或一个供给条件后核对过运行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我亲自查看过住宅出口、店门与岗位步行路径，认识了当时的现场",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "我给当时实际观察或安排过的住户步行、店员活动与食品供给补过运转记录",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我把食品到货、店员、步行与岗位人员接着经营过，后来还持续跟进了生活供给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "实际过去的线路经历，h有主动熟悉活动与其他可做新进展；NPC通勤不是和真人相处，也不以到岗多少判断能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "如果已启用能源并用过供电网络，回想自己实际调整过的一次边境进口或本地供电。哪项当时确实做过的过程更有分量？",
+          "scene": "回想一段你实际运行过的供电网络",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WRSR09A_POWER",
+            "WRSR09A_SETTINGS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把视点移近过实际边境接口、已有线段与配电设施，查看了当时的现场",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "我给当时实际观察或安排过的来电、发电来料与住户供电补过运转记录",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "我把进口或发电来料、人员、线网配电、工厂与住户需求接着经营过，后来还持续跟进了供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我曾提出一处缺电与某段线路或配电范围有关的解释，只改这一处后核对过运行",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "本作有线网和范围配电，不套纪元共享电力池；只回顾能源设置开启的真实经历，不考现实电工知识。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A11.V1"
+        },
+        {
+          "text": "关闭能源或还没运行电网，就回想自己实际用过的一处食品仓库与适配篷车。哪种已经做过的过程最鲜明？",
+          "scene": "回想没有电网时的食品仓库和篷车",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WRSR09A_POWER",
+            "WRSR09A_SETTINGS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我亲自查看过仓库装卸口、车辆停靠处与商店入口，认识了当时的现场",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "我给当时实际安排或观察过的食品装卸、车辆往返与商店补货补过运转记录",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "我把食品来源、仓储、车辆、店员与住户消费接着经营过，后来还跟进了几轮供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我曾提出一处等货与站点装卸选择有关的解释，只改这一项后实际核对过装载",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "本作有线网和范围配电，不套纪元共享电力池；只回顾能源设置开启的真实经历，不考现实电工知识。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WRSR09A12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次自己真实载入原共和国继续玩的经历，当时有熟悉社区，也有新工业或运输可做。哪项已发生的过程更有分量？",
+          "scene": "回想你真回到旧共和国的一段时间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WRSR09A_STORE",
+            "WRSR09A_CITIZENS",
+            "WRSR09A_DISTRIBUTION"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我曾以超过自己已记的同一货运线一轮交货吨数为目标，实际配车跑过新一轮并比较过吨数；没有超过也算这段尝试",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "我把工业原料成品、人员通勤、居民民生与外贸补给接着经营过，后来还持续跟进了多条供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我在旧住宅与已有公共设施之间补建过街路、步道和当时可用装饰，让回访社区表达了自己的苏式工业城镇主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "那时我仍有精力也有新工程可做，却主动留在熟悉首社区，整理了已会的步道与小线路，享受了安稳过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "正文是真实载入后的行动，ALT仅回顾首轮实际预览；k有本人已记旧成绩与超越尝试，h有余力仍主动熟悉，a须本人主题表达，不把观看NPC生活计分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A12.V1"
+        },
+        {
+          "text": "还没载入过旧共和国，就回想第一片基础建址或首社区实际做过的一段。哪种已经发生的过程最鲜明？",
+          "scene": "回想首轮落地建设与预览",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "WRSR09A_STORE",
+            "WRSR09A_CITIZENS",
+            "WRSR09A_DISTRIBUTION"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先排过那轮住宅、食品仓储与道路预览的编辑次序，也照安排实际放置和调整过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我亲自换过尚未开工建筑或道路预览的位置，查看了这项实际编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "我比较过当时可选住宅、食品仓储与道路的用地和供给条件，先选方案而没有马上施工",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "我把视点移近过当时的边境道路、第一片建址和设施入口，查看了实际现场",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "正文是真实载入后的行动，ALT仅回顾首轮实际预览；k有本人已记旧成绩与超越尝试，h有余力仍主动熟悉，a须本人主题表达，不把观看NPC生活计分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WRSR09A12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+3bb59a5ea9d4"
+}

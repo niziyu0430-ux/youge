@@ -1,0 +1,930 @@
+{
+  "id": "dcv5",
+  "title": "死亡细胞",
+  "game_ids": [
+    "steam-588650"
+  ],
+  "scope": "本体已解锁的城堡路线与战斗",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体已解锁的城堡路线与战斗",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DCV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "这一局已拿到能用的武器，当前解锁的出口中有常走路线，也有不熟悉的路线。你先怎样选？",
+          "scene": "离开被囚者牢房",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走不熟悉的生物群落，看看这次会遇见什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按当前武器与技能安排，选适合检验搭配的路线",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "走熟悉路线，把上次没处理顺的敌人再练一次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "去补一张还想带回收藏家的图纸",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "路线去向与当前构筑、练习、解锁目标分别记录。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV501.V1"
+        },
+        {
+          "text": "还没有开启其他出口的符文，只在最初牢房拿到基础武器。当前有可走的房间、平台和一类已见敌人。先做什么？",
+          "scene": "离开被囚者牢房的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走向还没看过的房间或平台，看看这一层有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "比较手里基础近战、弓或盾的可用组合，实际按当前已拿到的工具接敌",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "固定基础武器，专练一次已见敌人的翻滚或招架时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿移动、出招和命中连续接上的节奏打一小段",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "路线去向与当前构筑、练习、解锁目标分别记录。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "地上出现一件没怎么用过的武器，旧武器仍够用。你更愿意怎样继续这一局？",
+          "scene": "新武器与熟悉武器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较它能否和现有技能、词条形成配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "保留旧武器，继续练自己已经选定的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "换一套平时不会选的搭配，给这局一个不同玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "换上新武器，先摸清它的距离与节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "不给换装或保留熟悉武器设正确答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV502.V1"
+        },
+        {
+          "text": "商店里有几种自己已经会用的装备，预算只想花一部分。你先考虑什么？",
+          "scene": "新武器与熟悉武器的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "哪件装备能把当前技能与状态配合接起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "继续使用熟悉武器，把原来的练习做下去",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "拿一件会迫使自己改变打法的装备试一局",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "哪把武器这次最想亲手打出它的出招节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "不给换装或保留熟悉武器设正确答案。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你在关卡间过渡区，仍有一个变异空槽，可从当前已解锁项目选择一项；不必花钱重置已有变异。你先围绕什么选择？",
+          "scene": "关卡间的变异选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_BUILD",
+            "DC_MUTATIONS_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "试一个过去从没认真用过的组合",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把本局的武器、变异与下一段路线一起理顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "让变异与当前武器、技能的触发条件接起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "为想练的招架或出手机会留出余裕",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "明确过渡区新选变异，不许诺任意地点免费重置；若重置须另有费用与可用前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV503.V1"
+        },
+        {
+          "text": "如果这局可选变异还不多，只整理现有武器与技能，你先想哪件事？",
+          "scene": "关卡间的变异选择的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_BUILD",
+            "DC_MUTATIONS_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "能不能用一套平时没试过的配合",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把装备使用顺序和接下来走哪条路一起安排好",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "它们的触发条件怎样互相照应",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "哪种安排能让我多练几次想掌握的动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "明确过渡区新选变异，不许诺任意地点免费重置；若重置须另有费用与可用前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "清过一段敌人后，看见一处可能通向隐藏区域的入口。这一局没有竞速要求，你先做什么？",
+          "scene": "秘密房间与前进",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续走向出口，先把当前构筑带到下一场战斗",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "进去看看，想知道城堡在这里还藏了什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先核对这一区域是否有自己缺的图纸或物品",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "观察入口周围的地形与机关，自己推一下怎样进去",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "探索、补全、机关求解与构筑检验，不把计时门当必要前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV504.V1"
+        },
+        {
+          "text": "熟悉关卡里出现了一段此前没留意的墙后通道。你更想怎样处理？",
+          "scene": "秘密房间与前进的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先不绕进去，继续测试手里这套武器技能",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "走到底，看看它连着怎样的房间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "核对这里是否能补上一个解锁目标",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先观察通路与机关，自己找到进入方法",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "探索、补全、机关求解与构筑检验，不把计时门当必要前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "眼前又出现一类已经会打的敌人，刚看见它认得的起手动作；附近有翻滚与移动余地。当前先做什么？",
+          "scene": "敌人招式练习",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用熟悉武器，专门练清楚翻滚或招架的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "调整武器技能，让它们的控制与输出接得更顺",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "找不同地形和接近方向，试另一种处理办法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "沿常走的节奏把它打过去，享受连续清场的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "已能通过后询问自愿投入，不用死亡次数评价毅力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV505.V1"
+        },
+        {
+          "text": "你已开始新一局，正走到一段熟悉小怪前，手中基础武器与技能都可用。当前先做什么？",
+          "scene": "敌人招式练习的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把一个原来靠乱按度过的时机练明白",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让技能、武器和状态触发形成配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "换一种先后顺序或接敌角度试试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "保持顺畅推进，让一段动作连续打出来",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "已能通过后询问自愿投入，不用死亡次数评价毅力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "一张惦记的图纸已经交给收藏家。之后收集到的细胞可以自由安排，你更想先做什么？",
+          "scene": "把图纸带回去之后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续投入常用的长期升级，看后续尝试逐步成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "解锁一件会改变打法的装备，尽快拿来试新组合",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先看看各项还差多少细胞，安排接下来几局的投入",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "完成这项解锁，让收藏里少一个空缺",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "区别解锁补全与持续成长；不使用具体细胞消耗。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV506.V1"
+        },
+        {
+          "text": "刚回到可以投资解锁的过渡区域，手里有一批细胞。你更愿意先投向哪里？",
+          "scene": "把图纸带回去之后的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续推进自己一直在养的基础升级",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选一个从没玩过的武器或技能方向",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先比较各项进度，把下一轮解锁顺序排好",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "把已经开始的一张装备图纸补完",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "区别解锁补全与持续成长；不使用具体细胞消耗。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "上一局结束后，你已经重新在牢房醒来并拿到本局可用装备，面前路线与房间能自行选择。当前先改哪件事？",
+          "scene": "一局结束后的下一局",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一条已解锁但少走的路线，看城堡另一侧",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "换一种不常选的玩法，把这局当新的尝试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "带着一个明确练习点，回去把那次应对练顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按手上能拿到的装备重想武器与技能配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "不把立即重试作为坚持的唯一表现。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV507.V1"
+        },
+        {
+          "text": "还没有多条区域出口可选，你已在新一局拿到初期装备，眼前一类熟悉敌人与未看过的小房间都能接近。先做什么？",
+          "scene": "一局结束后的下一局的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走进那间未看过的房，看看里面有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "给本局定一条新的起手或工具使用顺序，实际试出不同打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "用现有武器专练一次认得的敌招回应",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "把当前已拿到的基础武器与弓、盾或技能按实际拥有项配好，再接敌",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "不把立即重试作为坚持的唯一表现。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "这一局走到熟悉区域，现有路线能稳妥继续。你愿意把可自由支配的一小段时间花在哪里？",
+          "scene": "熟路里的可选时间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给现有装备换个用法，看能否形成新套路",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "回头看还没探清的房间，确认它连着什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "补一项图纸或隐藏物品的寻找目标",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "在熟悉敌人身上练一段连贯的动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "具体可选投入，不把全清或速通当默认目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV508.V1"
+        },
+        {
+          "text": "在通向出口前，还有一小段可以自己安排的空间。你最想怎样用？",
+          "scene": "熟路里的可选时间的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用这一局的装备试一个和平常不同的打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "看看支路尽头与没走过的平台",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "检查有没有自己一直在找的解锁内容",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "再拿眼前敌人练一次时机与衔接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "具体可选投入，不把全清或速通当默认目标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想一段打得很满意的死亡细胞关卡，最让你想再体验的是哪种过程？",
+          "scene": "打得顺的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "翻滚、出招与移动连续衔接，动作反馈特别顺",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "原本总躲不开的招式，终于能主动应对",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "武器、技能与变异之间的关系真正运转起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "临时想到的怪点子，居然形成了能玩的套路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手感、学习、配装与实验分开，不按难度或无伤纪录赋分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV509.V1"
+        },
+        {
+          "text": "只回想第一片自己已经熟悉的区域，哪种进步最让你开心？",
+          "scene": "打得顺的一段的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动和战斗不再割裂，能连续打完一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "专门练过的一次敌招回应，后来能由自己更稳地选准时机做出",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "手上两件装备不再各打各的，能相互配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己有意换过进场或出手规则，实际试出从没用过的一种经过方式",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手感、学习、配装与实验分开，不按难度或无伤纪录赋分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想从自己实际玩过的路线穿过城堡，哪件已经发生的事最有分量？",
+          "scene": "城堡路线留下的吸引力",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿路反复练过一种敌招，后来自己的应对更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把武器与技能的配合带进不同路线，实际看到了组合用处的差别",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "找到并带回自己已知缺少的图纸，解锁目录少了一个缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "亲自走入支路，看到另一片原先不知道的城堡",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "不要求都解锁或都去过，换题可回到前期区域。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV510.V1"
+        },
+        {
+          "text": "只回想自己最早真正走过的一条牢房通路，哪件事最让你记住？",
+          "scene": "城堡路线留下的吸引力的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重复面对一种敌招后，真的把翻滚或出手时机练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "在不同距离实际组合过基础近战与弓、盾或技能，发现互补作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "取到一项事先已经惦记的图纸或隐藏物，补进自己的解锁记录",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "亲自走进陌生小房间，看到了此前不知道的空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "不要求都解锁或都去过，换题可回到前期区域。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想把细胞投进解锁或升级的过程，哪种变化最能让你记住自己的投入？",
+          "scene": "永久成长的意义",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DC_BUILD",
+            "DC_PERSIST_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "新解锁的武器或技能被自己拿进实际关卡，与原有工具形成了互补配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "每轮怎样获得与分配细胞，逐渐有了自己的安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "常用的基础功能一点点成长，下一局能接着用",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己惦记的图纸与装备逐渐不再缺项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "成长只含跨局保留的符文及收藏家基础升级；当局卷轴与武器词条不是永久积累。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV511.V1"
+        },
+        {
+          "text": "只回想早期最先投入的一项解锁，你满意的是哪一点？",
+          "scene": "永久成长的意义的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DC_BUILD",
+            "DC_PERSIST_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在这段前后实际让武器与技能触发配合起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把手头细胞与当前可选项目排好先后，并真正按这套安排投过一次",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "投入后基础功能或永久升级已经记入存档，结束当局仍保留",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把一个自己预先记下的解锁项目补齐，目录少了一个缺项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "成长只含跨局保留的符文及收藏家基础升级；当局卷轴与武器词条不是永久积累。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DCV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回看最近实际玩过的几局，不比较通关成就，哪件自己做过的事最说明投入？",
+          "scene": "从牢房出发后已经留下的事",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动、翻滚与连续出招连起来，重温了喜欢的直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "比较并试用了武器、技能与变异的组合，效果真的接上",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "反复练一个原来仓促的翻滚或招架时机，后来比之前稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿已开放却陌生的路线走过，发现了另一片城堡",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只回顾已经发生的组合、练习、发现或反馈，不把未来新局愿望当回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV512.V1"
+        },
+        {
+          "text": "只给最近几局留一句记忆，你更想记哪种事？",
+          "scene": "从牢房出发后已经留下的事的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DC_CORE",
+            "DC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "哪段移动、翻滚和出招连起来最痛快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "这一局几件装备怎样彼此配合起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "一个原来总失误的动作怎样逐渐练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己终于从哪条岔路看到了新区域",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只回顾已经发生的组合、练习、发现或反馈，不把未来新局愿望当回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DCV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+eeb68b984675"
+}

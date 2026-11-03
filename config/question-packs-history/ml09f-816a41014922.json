@@ -1,0 +1,1010 @@
+{
+  "id": "ml09f",
+  "title": "庄园领主 Manor Lords",
+  "game_ids": [
+    "steam-1363080"
+  ],
+  "scope": "PC EA 当前 Main 0.8.104；和平及有战斗模板共用经营题",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "五种原生开局模板的目标、对手与难度不另造题组。战斗题有无战斗早期替代。",
+    "采用2026已发布家庭等级、维护、季节分配和施工场规则；0.8.117 beta不强制。可选税务、天气、腐坏和井限制只按当前开启情况。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "当前Main聚落经营／已体验战斗可答对应主项",
+      "initial_variants": {
+        "ML09F01": "ML09F01.DEFAULT.V1",
+        "ML09F02": "ML09F02.DEFAULT.V1",
+        "ML09F03": "ML09F03.DEFAULT.V1",
+        "ML09F04": "ML09F04.DEFAULT.V1",
+        "ML09F05": "ML09F05.DEFAULT.V1",
+        "ML09F06": "ML09F06.DEFAULT.V1",
+        "ML09F07": "ML09F07.DEFAULT.V1",
+        "ML09F08": "ML09F08.DEFAULT.V1",
+        "ML09F09": "ML09F09.DEFAULT.V1",
+        "ML09F10": "ML09F10.DEFAULT.V1",
+        "ML09F11": "ML09F11.DEFAULT.V1",
+        "ML09F12": "ML09F12.DEFAULT.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "ML09F01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你已能按季安排家庭岗位，现有农田、后院菜地、柴薪和建筑都在用家庭劳力。春季安排即将切换，食物暂够；这轮只先处理一部分，你怎样投入？",
+          "scene": "季节调工与家中后院",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_STORE",
+            "ML9F_CONSTRUCTION",
+            "ML9F_REWORK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把田间农时、后院食物、柴薪与施工用工连着照看几季，依据区域库存和家庭需求再改分工",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "比较目前以采集补食物和先加燃料供应这两种供给安排，再决定哪边先加家庭",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先跟看一个家庭在家中后院与工作场所间实际怎样往返",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "先留出未分配家庭、核对现有木料，再按选定的基础工地次序放置并开工",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "不同家庭活动有实际时间冲突；持续跨季循环才计运营，单次施工排序为中性。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F01.DEFAULT.V1"
+        },
+        {
+          "text": "刚开局时，你已有伐木营、采食点、柴薪岗位、仓储和未分配家庭。家中补给安全，下一处宅地也可建，人手只够先推进一边，这轮做什么？",
+          "scene": "季节调工与家中后院的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_STORE",
+            "ML9F_CONSTRUCTION",
+            "ML9F_REWORK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先给当前基础工地留出未分配家庭和木料，按这轮顺序实际开工，之后再把家庭派回岗位",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "连续几轮照看采食、柴薪、仓储和住户消耗，依食物燃料存量再调家庭分配",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较给采食点加家庭和留人建宅地的当前用途",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "跟看目前一名运料者实际从哪里拿料、送到哪里",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "不同家庭活动有实际时间冲突；持续跨季循环才计运营，单次施工排序为中性。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F01.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "粮仓里有食物，部分宅地的供给却不同于预期，原因还没查明。当前粮仓仍有可填岗位，也有一家未分配家庭；市场摊位与宅地面板可查，眼前不缺粮。这轮先做什么？",
+          "scene": "仓储有货而住宅供给不同",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_REWORK",
+            "ML9F_FAMILY",
+            "ML9F_ED_MARKET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看宅地、市场与仓储显示的状态，不预定是哪一环出问题",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "把食物类别、仓储岗位、摊位补货与家庭消耗连着照看几轮，按库存和宅地需求反馈再改安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "跟看仓储员工实际把食物补到摊位，再核对宅地当前显示的供给",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "自己猜粮仓人手忙不过来，只给这个粮仓增加一家，位置和食物安排不动，再对照补摊过程",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "未知补货表象可单改粮仓家庭数检验自己的解释；只跟看实际仓储补摊，不假定宅地供给必须由家人亲自逛市场实现。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F02.DEFAULT.V1"
+        },
+        {
+          "text": "初期粮仓已经在给摊位补食物，补货时有时无，原因还未核对。粮仓有空岗位，也有一家未分配家庭，眼前食物安全。这轮先做什么？",
+          "scene": "仓储有货而住宅供给不同的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_REWORK",
+            "ML9F_FAMILY",
+            "ML9F_ED_MARKET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己猜粮仓岗位人手影响了补货，只增加一家进这个粮仓，再看实际补摊间隔",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先核对仓储和市场的当前面板",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "把自己已经观察到的仓储收货和摊位补货过程补记下来",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "跟看这次从仓里取货到摊位补货的过程",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "未知补货表象可单改粮仓家庭数检验自己的解释；只跟看实际仓储补摊，不假定宅地供给必须由家人亲自逛市场实现。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F02.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "一块果园后院已经种下并投入过时间，同一片果树还在成长；另一宅地有当前可支付的后院方案，旁边也有合法空地可划新宅地。粮食安全，这轮先投入哪里？",
+          "scene": "已有果园与另一种后院",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_STORE",
+            "ML9F_REWORK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想要的林间街巷，调整后续宅地的轮廓与道路关系",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先记录已经经历的果树种下、成长和家庭劳作过程",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "继续保留并照看这块自己已经种下、已投入过劳动的果园后院，为同一片树留后续劳作时间，跨季关注成熟",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先比较另一块宅地当前可做的后院作物与成本条件",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "g 仅同一已种果园多年成长与后续投入；花钱开一个后院不是持续养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F03.DEFAULT.V1"
+        },
+        {
+          "text": "还没用过果园时，你已有一块实际种过菜、也看过家庭劳作的后院，当前另一个宅地可划，扩展菜园也付得起。这轮怎样投入？",
+          "scene": "已有果园与另一种后院的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_STORE",
+            "ML9F_REWORK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清这一轮运材料、建宅地和安排家庭的先后，再实际推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "把当前已观察过的后院耕作与家庭往返过程补记下来",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可种蔬菜和宅地后院面积的材料、费用条件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "按自己的窄巷与长后院主题实际划一块宅地",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "g 仅同一已种果园多年成长与后续投入；花钱开一个后院不是持续养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F03.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前一处工匠作坊能选择活动配方，已有两种可做产品与足够原料。你可改优先次序，也能暂不生产其中一种；这轮愿先怎样安排？",
+          "scene": "工匠的活动配方",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_CONSTRUCTION",
+            "ML9F_REWORK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把其中一种当前可做配方暂时移出活动清单，实际体验单配方配置怎样运转",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "把这两种产品的消耗、贸易储备、原料回补和维护需求接成持续几轮的安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较已经可做的两个配方与现有原料，不急着改变生产",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "实际换一次当前可用的活动配方优先次序，体验这套设置怎样运作",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "当前 Main Active Recipes，不沿用只能选一个 Production Focus 的旧规则；普通换设置为中性。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F04.DEFAULT.V1"
+        },
+        {
+          "text": "还没工匠时，伐木与柴薪岗位已经可用，家庭可重新分配，木料储备暂够。当前列出的一项基础建设目标也有材料人手可做，这轮先怎样投入？",
+          "scene": "工匠的活动配方的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_CONSTRUCTION",
+            "ML9F_REWORK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看已列出的早期建设目标，并实际推进其中一项",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "比较让现有家庭继续补施工木材，或转去补住户柴薪这两种当前供给安排",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "把施工木材和住户燃料这两路生产、仓储与家庭用工连着照看几轮，按木料柴薪存量再调岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "按现有家庭与木料排好本轮搬运和建造次序",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "当前 Main Active Recipes，不沿用只能选一个 Production Focus 的旧规则；普通换设置为中性。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F04.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "当前工作场所已经有维护设置。你注意到一处作坊产出时快时慢，但尚未检查维护、原料、工作家庭或运输状态；它并未处于必须立刻修好的危机。你先做什么？",
+          "scene": "维护、劳速与现象",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_REWORK",
+            "ML9F_CONSTRUCTION"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己猜维护品消耗节奏与停顿有关，只改这座工作场所一个维护级别，保持岗位和原料安排不动，再对照运行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先读当前工作场所的维护与产出状态，再决定怎么改",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "连续照看维护品回补、生产原料、家庭岗位与产出消耗，按几轮库存和停工情况再调供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "把自己已经看到的停工与恢复过程补记下来",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "不直接告知缺维护物料；p 需自提解释，单改与观察不要求猜中。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F05.DEFAULT.V1"
+        },
+        {
+          "text": "初期采集点已有家庭工作，但这次停留与离开的节奏不同于预期，原因还没核对。当前能按季勾选该建筑工作，也有木料可开一处基础工地，眼前不缺粮。这轮先做什么？",
+          "scene": "维护、劳速与现象的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_REWORK",
+            "ML9F_CONSTRUCTION"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看岗位和库存当前显示什么",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "实际换用这座采集点当前可选的一季工作勾选，体验这套季节安排怎样运行",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "跟看这个家庭在采集点与住处之间一轮实际活动",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "比较让这座采集点当前继续供食，与把现有家庭留做基础施工这两种可做安排",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "不直接告知缺维护物料；p 需自提解释，单改与观察不要求猜中。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F05.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已建施工场并有专业建筑家庭，高级结构可开工；基础工程也有材料。施工场维护和运输都能调整，这轮你愿把精力放在哪里？",
+          "scene": "专业施工场与基础建造",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_CONSTRUCTION"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只排这次先运什么、哪些家庭先施工，再照本轮步骤推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前高级结构与基础工程的材料、专业工条件",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "为了自己设想的庄园入口主题，实际调整可建模块与道路轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把伐木供材、维护品回补、牛车和专业工岗位连着照看多个工地批次，按材料库存与施工进度再调分工",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "高级结构明确已有专业工，普通施工与专业建造分清；单轮排工不是持续系统。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F06.DEFAULT.V1"
+        },
+        {
+          "text": "还没有施工场时，你已有一处基础工地正在引牛运木，也有未分配家庭。当前另可开仓储或新宅地，余料只够先做一处；这轮怎样投入？",
+          "scene": "专业施工场与基础建造的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_CONSTRUCTION"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较仓储与宅地当前成本和用途，再决定这次做哪处",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "按自己的村口空间主题调整宅地轮廓与路边空地",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先跟看当前家庭引牛与运料的实际过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "先给基础工地留出未分配家庭和木料，再按这轮工地次序开工，跟进实际引牛与施工",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "高级结构明确已有专业工，普通施工与专业建造分清；单轮排工不是持续系统。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F06.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "当前存档有战斗，已装备的民兵能够集结，眼前没有敌人接触。你可在附近可达地形移动他们，也能解散回岗位；没有必须立刻作战的要求。这轮怎样投入？",
+          "scene": "民兵离开岗位的一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_STORE",
+            "ML9F_SETUP",
+            "ML9F_FAMILY",
+            "ML9F_CONSTRUCTION"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把民兵动员离岗、田间农时、燃料回补与住户供给连着照看几轮，按实际库存再调家庭回岗和生产",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有的民兵操作说明，再实际尝试移动",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "按已有队伍与可达地形，排好先集结到何处、再移到哪里、何时回岗位，并实际下令",
+              "signal": "unit_movement_plan"
+            },
+            {
+              "id": "D",
+              "label": "反复练选择队伍和短距离移动的下令过程，重点是练熟操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "这是玩家直接下令的军队，不是真人协作；和平存档用无战斗替代，未要求战斗胜利。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F07.DEFAULT.V1"
+        },
+        {
+          "text": "没有战斗或还没民兵时，你已能重新分配采木、采食和仓储家庭；一项已列出的早期建设目标也有材料人手可做。这轮更想做什么？",
+          "scene": "民兵离开岗位的一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_STORE",
+            "ML9F_SETUP",
+            "ML9F_FAMILY",
+            "ML9F_CONSTRUCTION"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续照看采食、柴薪、仓储与住户需求，按几轮区域库存反馈再派家庭",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先读已有早期任务的要求，再推进当前可做的建设",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "核对手头木料并留出未分配家庭，按选定的一处基础工地次序实际开工",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "反复练查看家庭、重新分配和核对结果的操作，重点是熟悉界面",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "这是玩家直接下令的军队，不是真人协作；和平存档用无战斗替代，未要求战斗胜利。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F07.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你准备推进当前聚落等级，界面已列出需要的家庭等级条件。已有住户的升级与新宅地都可做，当前材料和食物够先做一边。你更愿怎么投入？",
+          "scene": "家庭等级与空宅地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_FAMILY",
+            "ML9F_REWORK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按现有可支付条件办理一次已经开放的宅地升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "核对当前已出现的等级目标，并实际推进其中已有家庭可做的条件",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "晋升后连续几轮照看新的食物类别、家庭岗位和区域收支，依据库存与宅地供给显示再安排后续升级",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "比较先升级一块已有住户宅地，还是先划并建设新宅地这两种当前可做方案",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "当前进展按实际居住家庭等级，不是多放已解锁空建筑；即时升级不计长期养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F08.DEFAULT.V1"
+        },
+        {
+          "text": "刚开局时，当前任务列着基础供给与住处。你已有一块住人宅地，也能再建，木料只够先做一处；这一轮怎么投入？",
+          "scene": "家庭等级与空宅地的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ML9F_FAMILY",
+            "ML9F_REWORK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先确认木料和未分配家庭，按本轮选定的基础设施工地顺序实际开工",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先推进任务已列出的一个当前可做条件",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "连续几轮照看新家庭加入后的采食、柴薪与仓储，依区域存量和宅地需求再调岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "比较新宅地与当前可建供给设施的用途",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "当前进展按实际居住家庭等级，不是多放已解锁空建筑；即时升级不计长期养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F08.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回看你已经安排过的一段家庭劳动，哪种实际做过的投入更有分量？不要求那段产量高或安排成功。",
+          "scene": "已经调整过的劳力",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ML9F_CONSTRUCTION",
+            "ML9F_REWORK",
+            "ML9F_ED_MARKET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把几个季节的农时、柴薪、后院食物和施工用工连着调过，按实际收成与区域库存再作调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我自己猜过维护品消耗节奏影响停工，只改过一座工作场所的维护级别并实际对照过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我排过本轮搬料与施工的步骤，并实际照着推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "我把实际经历的家庭往返、供给与收获过程补记下来",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "所有项都回顾实际行动；不把后来更有效率当入选条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F09.DEFAULT.V1"
+        },
+        {
+          "text": "回想开局几户家庭在采木、采食与建宅地之间分工那一段，哪种真实经历最接近你？",
+          "scene": "已经调整过的劳力的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ML9F_CONSTRUCTION",
+            "ML9F_REWORK",
+            "ML9F_ED_MARKET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我连续几轮一起调整过食物、柴薪、仓储和家庭需求，按实际库存再派工",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我猜过粮仓人手影响补货，只给同一个粮仓加过一家、保持其他供给安排不变，并看过实际补摊变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我先留出过未分配家庭与木料，再按本轮基础工地的次序实际开工",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "我把自己实际看过的仓储收货、补摊或引牛运木过程补记下来",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "所有项都回顾实际行动；不把后来更有效率当入选条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F09.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回顾你已经经历过的后院、作坊或庄园建设，哪种当时做过的事对你更有分量？",
+          "scene": "已有投入和当前可选方案",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ML9F_REWORK",
+            "ML9F_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的街巷或庄园主题，实际改过宅地轮廓、道路与模块布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先比较当时可做的配方、作物和材料，再作过选择",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "我给已经实际搭好的建筑或模块部分补记过建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我持续给同一片已种果园留出家庭工作时间，关注它多年留下的成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "果园需已种下、继续成长且持续照看；没有后院果园可换不含果树的早期情境。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F10.DEFAULT.V1"
+        },
+        {
+          "text": "回想你已经建过的第一批宅地与供给设施，以下哪种实际投入更贴近你？",
+          "scene": "已有投入和当前可选方案的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ML9F_REWORK",
+            "ML9F_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我比较过当时可建的基础供给与新宅地，再作决定",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "我先留出过未分配家庭、推进一处基础工地，之后再把家庭派回其他工作，并照这个次序做过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "我补记过已经搭建的宅地或仓储过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我为了自己的村口与街巷样子，实际改过宅地和道路轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "果园需已种下、继续成长且持续照看；没有后院果园可换不含果树的早期情境。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F10.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你已有可用外贸、也能负担食物进口的一段，哪件当时真实做过的事更有分量？自定规则不必坚持到底或供给成功。",
+          "scene": "真试过的自定限制",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ML9F_REWORK",
+            "ML9F_CONSTRUCTION",
+            "ML9F_ED_MARKET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把家庭用工、本地食物柴薪生产和贸易补货连续几轮一起调过，依实际区域库存与宅地需求再改安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我跟看过商人交货和仓储员工补摊的实际过程，再核对过宅地供给显示",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "我给几个完整季节加过不进口任何食物的规则，真试靠当时可用的采集、后院或田地继续供给",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "我先比较过当时可用的进口与本地配方，再决定怎么安排",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "多个季节禁用本可负担的全部食物进口才是有实义的额外规则；普通货源选择或家庭岗位配置是中性。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F11.DEFAULT.V1"
+        },
+        {
+          "text": "回顾还没贸易时的一段基础建设，哪件实际做过的事更接近你？",
+          "scene": "真试过的自定限制的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ML9F_REWORK",
+            "ML9F_CONSTRUCTION",
+            "ML9F_ED_MARKET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先留过未分配家庭与木料，再按选定基础工地的顺序实际开工",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "我核对过已列出的早期目标，并实际推进了可做部分",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "我实际换过一次已有仓储的家庭岗位配置，体验这套分配怎样运转",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "我比较过当时基础设施的材料与用途，再选了投入",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "多个季节禁用本可负担的全部食物进口才是有实义的额外规则；普通货源选择或家庭岗位配置是中性。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F11.DEFAULT.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "ML09F12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你有精力、还可继续开新产业，而且没有迫近战斗或饥荒的一段。哪种当时的实际选择更有分量？",
+          "scene": "有余力时的小村生活",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ML9F_STORE",
+            "ML9F_REWORK",
+            "ML9F_ED_MARKET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看过当前家庭与生产面板，核对状态后才决定怎么继续",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我有余力仍主动留在熟悉后院与村口，照看劳作、粮仓补摊和引牛，因为喜欢这份从容重复",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我连续几轮一起调整过家庭用工、供给与运输，按实际区域库存和宅地需求再作安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我为自己想要的村落样子改过宅地、道路或庄园模块",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "熟悉过程需主动喜欢且有精力、可继续新进展；不是等 NPC 动画就计即时反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F12.DEFAULT.V1"
+        },
+        {
+          "text": "回想只到早期采集与建宅地、仍能继续扩建而你也有精力的一段，哪种实际选择更有分量？",
+          "scene": "有余力时的小村生活的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ML9F_STORE",
+            "ML9F_REWORK",
+            "ML9F_ED_MARKET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先核对过家庭岗位与仓储面板，再决定这一轮怎么做",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我有精力仍回到熟悉村口，照看采集家庭或引牛运木的往返，喜欢从容重复而暂缓新工程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我把采食、柴薪、仓储和新增家庭连续几轮一起调过，按实际存量再改分工",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我为了自己的小村主题调整过宅地和路边空地",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "熟悉过程需主动喜欢且有精力、可继续新进展；不是等 NPC 动画就计即时反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "ML09F12.DEFAULT.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+816a41014922"
+}

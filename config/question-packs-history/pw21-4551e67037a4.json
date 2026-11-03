@@ -1,0 +1,1440 @@
+{
+  "id": "pw21",
+  "title": "幻兽帕鲁（Palworld）",
+  "game_ids": [
+    "steam-1623730"
+  ],
+  "scope": "原生PC正式1.0及当前1.0.5，一套普通单人生存/据点/伙伴与真实条件替代；不含MOD、未来SideBySide或手机专属",
+  "status": "private_draft_pending_complete_manual_author_and_independent_reviews",
+  "author_review": "handwritten36_not_yet_accepted",
+  "player_trial": "not_performed",
+  "editorial_notes": "12槽各3已研究情境，前8行动后4真实回顾；接入后保留4共享，总16加最多2补问。未体验继续已核专属、不跳过；三个有限替代不保证所有个人进度。主线日志、温泉、强化、涂色、繁殖、真人只本人真实条件替代；各槽保留普通基础入口。",
+  "modes": [
+    {
+      "id": "default",
+      "label": "原生普通单人及真实已体验替代",
+      "initial_variants": {
+        "PW2101": "PW2101.V1",
+        "PW2102": "PW2102.V1",
+        "PW2103": "PW2103.V1",
+        "PW2104": "PW2104.V1",
+        "PW2105": "PW2105.V1",
+        "PW2106": "PW2106.V1",
+        "PW2107": "PW2107.V1",
+        "PW2108": "PW2108.V1",
+        "PW2109": "PW2109.V1",
+        "PW2110": "PW2110.V1",
+        "PW2111": "PW2111.V1",
+        "PW2112": "PW2112.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "PW2101",
+      "number": 1,
+      "variants": [
+        {
+          "id": "PW2101.V1",
+          "scene": "这只帕鲁已被削弱，球还要不要现在投",
+          "text": "野外这只帕鲁已经被自己打到低生命，手里还有可用帕鲁球；再打可能把它击倒。附近另有原本想采的矿，自己仍能选择先捕获或离开。你先投入哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CAPTURE",
+            "PW21_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先停攻击，实际投球尝试拿下眼前这一只，接受这次仍可能捕获失败",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "保留现有球，转去采原先需要的那处矿，眼前这只暂时放过",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若它正是本人图鉴里惦记的未捕获种类，就为补这一缺项继续准备并实际捕获，不只看目录",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先看自己当下生命、可用帕鲁球和随身补给，核对还能承担多少尝试再动手",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "低生命目标的捕获消耗与既有采矿目标竞争；C仅本人真缺且实际追求，投球不保证成功。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2101.ALT1",
+          "scene": "矿还没采完，背包已经超重",
+          "text": "自己正在野外采矿，负重已超过当前上限，前面还有原定要采的矿；这里不在据点范围，也没有眼前可用的传送点。身上有能放下的木石，也确有一条已走过的回程。先怎样处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CARRY",
+            "PW21_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把一部分当前木石留在此处，先腾出负重继续采自己这趟要的矿",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "只有当时自己仍确实能移动时，才保留已取得的矿，沿已知回程慢慢运回，不继续把负重堆高",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "实际整理并放下当前选定的一叠物品，亲手处理这次负重后再决定走向",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先看各叠实际数量和重量、哪些是这趟需要的材料，再决定卸哪份",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "真实超重携带取舍；不照搬旧超重绝不能跳、不臆造野外任意地图传送。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。 本题沿回程运矿的B只限当前仍可实际移动；不从超过上限一概推定任何超重量都还能慢走，动不了仍可放下实际物品。"
+        },
+        {
+          "id": "PW2101.ALT2",
+          "scene": "据点箱子里的材料，要不要再背着跑",
+          "text": "站在自己据点内，身上带着建造用的木石，眼前已有能存放的箱子；此刻既能继续摆一项已解锁建筑，也能先存材料准备外出。你先实际做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_BASE",
+            "PW21_CARRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前木石存进据点箱子，再在据点内开始那项可建蓝图，体验用箱中材料施工",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "暂缓建造，先把当前材料存好、留出外出携带空间，按原目的地出发",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对箱中和身上实际有多少材料，以及眼前蓝图还差多少，再取放",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "D",
+              "label": "若同据点有真愿回应的玩家，就约好这批材料先建什么、谁补缺料，再按共同安排动手",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "箱内材料据点施工与外出携带空间是真竞争；不保证跨据点任意共享或权限无条件。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    },
+    {
+      "id": "PW2102",
+      "number": 2,
+      "variants": [
+        {
+          "id": "PW2102.V1",
+          "scene": "莓果田等浇水，这只帕鲁也想带出门",
+          "text": "据点已有莓果田和饲料箱，当前种植阶段已经做完，田地还等浇水。自己拥有一只眼下确能浇水、也可带出门的帕鲁，而原定外出就想带它。先把这次安排投向哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_FARM",
+            "PW21_WORK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "让它先留据点完成眼前浇水，自己暂改外出队伍，让这批莓果继续长",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把它带进当前外出队伍，这一轮田地先等着，先走原定行程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己已实际跑过几轮种植、浇水、收获、入饲料箱，就补齐缺的工作环节，再观察下一轮供应并调整分配，让这条供食流程继续运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先核对这只帕鲁当前界面的工作适应性与田地阶段说明，再决定放哪",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "单一现有帕鲁的据点与队伍用途冲突；Y真多轮依赖和调后再运行，不是给田派一次工。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2102.ALT1",
+          "scene": "工作台上的那件还没做好，木头也不够下一项",
+          "text": "据点工作台已经排着一件实际可制作的物品，进度还没完成；附近有可砍的树，另一项自己想建的东西还缺木头。自己可以手动继续工作，也可先出去取料。你先把时间用在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_BASE",
+            "PW21_WORK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自把眼前已经开始的这件做完并取走，下一项建筑稍后再说",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去把下一项需要的木头采回来，当前这件先留在工作台",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先排清这件完成、取出、补木和下一项施工的实际先后，再照顺序去做",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "若确有愿回应的真人同伴，就商定一人继续工作台、一人补木，按这次分工实际开工",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "当前半成品与后续木料争本人时间；自动帕鲁工作不F，真人分工不由NPC代替。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2102.ALT2",
+          "scene": "炉里这批矿等生火，烧木炭也想现在做",
+          "text": "自己已经用过原始炉，当前有矿石与木头，具备生火工作适应性的帕鲁也确实在据点可用。想要的金属锭与木炭这轮都可排，但自己只想先完成其中一批。怎样开始？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_FURNACE",
+            "PW21_WORK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前要用的矿石排成金属锭，让这只帕鲁先给这一批生火",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先用已有木头排木炭，把矿石留给这批之后，再做自己原定的后续制品",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前木头、矿石和两种配方实际耗用，再定先排哪批",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "D",
+              "label": "亲自选定一批当前可做的炉内配方，并让现有生火帕鲁开始处理，体验这次设施操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "炉内两个真实配方争先后和材料；不编双队列同时跑、固定转换比或指定物种工作等级。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    },
+    {
+      "id": "PW2103",
+      "number": 3,
+      "variants": [
+        {
+          "id": "PW2103.V1",
+          "scene": "科技点只够眼前两种解锁中的一项",
+          "text": "科技页当前有两项已到开放条件、各自都付得起的配方：一项是眼下想用的装备，另一项是据点设施；已有点数不能把两项都解锁。你先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_TECH",
+            "PW21_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解锁这次外出实际要用的那份装备配方，把设施留给之后的点数",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先解锁当前据点要接着建的设施，把装备目标往后排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对两项当前显示的点数、前置与解锁结果，再决定这一笔花在哪",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "按自己下一趟目的地和据点缺口排实际步骤，再把这次点数投入先需要的一项",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "真实可支付的科技机会成本，全中性准确；解锁配方不等于已经制造或长期成长。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2103.ALT1",
+          "scene": "武器耐久快没了，这批材料也想盖房",
+          "text": "自己当前武器耐久已很低，据点已有能用的修理台；按眼前配方看，修它会用掉自己原本想投给建筑的一部分材料。已有另一件现在真可用的武器。先怎样安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_REPAIR",
+            "PW21_TECH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先花当前要求的材料修好这件武器，房子的这一部分晚些再建",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "暂不修它，改带自己已拥有的另一件可用武器，现有材料先留给房子",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两件现在确能使用的装备与当前耐久，再定这一趟带哪件、是否维修",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对修理台当前实际要求与箱中存料，确认修后还够建什么",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "武器维修与建筑同用材料，配方按现有界面，不把已移除的建筑RepairKit混入。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2103.ALT2",
+          "scene": "熟悉的伙伴还能再投魂，新抓的也能带",
+          "text": "自己队伍里有一只帕鲁，力量石像当前确能用已有魂再强化；身边也有刚捕获、当前可直接换入队伍的另一只。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_PALGROW",
+            "PW21_WORK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若这正是自己此前已多趟带出门、持续培养的同一伙伴，就继续做当前可支付强化并带它实战，想看已有培养接着成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把刚捕获且当前确能入队的那只换进来，实际带一段，体验不同伙伴",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先比较自己当前拥有的这两只的实际技能、属性和可用作用，再选下一趟队伍",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对石像当前强化效果与所需魂的现有说明，再花这笔资源",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "同一仍延续且已反复培养只限制成长选项，其他可用伙伴比较/换用仍可选；魂强化须真可付，不把任意新捕获算成长。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    },
+    {
+      "id": "PW2104",
+      "number": 4,
+      "variants": [
+        {
+          "id": "PW2104.V1",
+          "scene": "天色已暗，火把还在身上",
+          "text": "野外天色变暗，自己当前确有可用手持火把，前面有一段已经走过的路，附近也有眼下能取的莓果。原来想先回据点。你现在先怎样走？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_NIGHT",
+            "PW21_CARRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿起现有火把，沿已知路线先回据点，暂不绕去采莓果",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先借当前火把照亮附近可达位置，采这一批莓果，再按实际情况返程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先看自身饥饿、温度与火把能照到的范围，核对这一段实际限制再走",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "若自己尚未练会持火把时找路与切换其他手头物品，就在这段已知可走路上练衔接，核对哪里会失去照明",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "原生火把照明/保暖和真实采食返程竞争；不造所有夜间自动冻死或火把绝对防护。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2104.ALT1",
+          "scene": "饲料箱快空了，身上也留着这份莓果",
+          "text": "据点饲料箱里当前食物已不多，自己身上有一份现可食用莓果，同时自己的饥饿也在增长；下一批田地产物还没收完。先把这份现有食物怎么用？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_FARM",
+            "PW21_NIGHT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这份放进现有饲料箱，补当前据点帕鲁的食物，自己稍后再找",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先吃掉自己这次要用的一部分补饥饿，给饲料箱留其余真实剩量",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先看身上与饲料箱里食物的实际数量，再按这次缺口取放",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "D",
+              "label": "若同据点有愿回应的真人，就约好谁先补田地收获、谁负责这次外出食物，再实际分配现有储备",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "同一份食物本人续航与据点供应争储备，不从喂谁推善恶，也不把NPC喂食称Q。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2104.ALT2",
+          "scene": "温泉这只还在休息，眼前工作缺人",
+          "text": "据点有可用温泉，一只自己拥有的工作帕鲁当前正在里面恢复SAN；眼前另有工作需要它的适应性。自己仍能改用另一只确有相应能力的帕鲁，或等它休息。先安排哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_WORK",
+            "PW21_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让当前这只继续休息，眼前工作等待这一轮恢复，不立刻把它调走",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把自己另一只确能承担该项工作的帕鲁派来，实际试这一轮，温泉那只仍休息",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前SAN、温泉作用和两只帕鲁实际工作适应性的说明，再改安排",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "若此前已反复跑过工作、供食和休息循环，就重排真实可用人手与工序，观察下一轮工作和恢复是否接得上，再继续调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "温泉休息与工作人手冲突；1.0休满才自行出泉不等于不能调度，Y只已有多轮再调再跑。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    },
+    {
+      "id": "PW2105",
+      "number": 5,
+      "variants": [
+        {
+          "id": "PW2105.V1",
+          "scene": "地图边缘能继续走，背包里也有该送回的矿",
+          "text": "自己已带着一批矿走到当前已探路线的边缘，前面另有一段已看见、当前确能开始走的路；身后是已知回程。现在没有非走不可的任务时限。你先往哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CORE",
+            "PW21_CARRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿已知路把这批矿运回据点，不让本趟已经采到的材料继续占身上",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若前面那段当前可达地形本人尚未走过，就先走进去看看，愿意为新的发现暂缓送矿",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先看当前已经显示的地图、标记和已解锁传送点，再选路线",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "若自己精力充足、未知路也真可去，仍更想按自己的节奏再走一段熟悉采集路线，就先这样玩",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "个人未走过只限W选项，不把熟悉该路的玩家锁出整题；探索与已有运矿目标竞争，H精力足仍自主熟悉。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2105.ALT1",
+          "scene": "传送雕像就在旁边，先激活还是赶回去",
+          "text": "途中已看到一座本人尚未激活、此刻真能靠近使用的快速旅行雕像；原定这趟先回据点，附近还有能实际采的资源。你先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_FAST",
+            "PW21_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先亲自到雕像旁完成这次解锁，再用当前真正可选的已解锁目的地试一次传送",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先不在此停留，沿自己已经走过的路线继续原定返程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先采眼前这一批原本需要的资源，雕像留待采完再处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先看雕像周边实际入口、落脚处和能接近的路径，再决定是否现在靠过去",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "已知可用设施操作不凭未按按钮算W；不把传送解锁当收集人格或全图任意传送。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2105.ALT2",
+          "scene": "找到日志以后，还要不要继续读下去",
+          "text": "自己实际在1.0原生流程中找到一段已可阅读的NPC相关日志；刚读到一部分人物或事件线索，旁边仍有原定要采集的资源。暂且不知道继续读完会不会给额外奖励。你先把这段时间用在哪？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_STORY",
+            "PW21_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把眼前已找到的日志接着读完，想知道其中人物与事件怎样接起来，采料稍后",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先收起阅读，按原计划采这一批眼前资源，之后再回来处理已有日志",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先给自己刚实际读到的人物或到过的日志地点补笔记，只记已经体验的信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "若有真实愿意听的同好，就交流自己已经读过的这段发现，先把共同聊这段经历放前面",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "真实已找到日志的叙事/资源取舍，不编未经核实具体剧情、奖励或NPC真人互动。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    },
+    {
+      "id": "PW2106",
+      "number": 6,
+      "variants": [
+        {
+          "id": "PW2106.V1",
+          "scene": "小屋已能住，今天先补墙还是摆样子",
+          "text": "自己的据点小屋已有能进入的部分，当前材料能继续补一段自己想要的墙，也能造一件眼下已解锁且真可摆的家具；自己这轮只想先做其中一件。先怎样用材料？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_BUILD",
+            "PW21_TECH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这段自己原本想补的墙实际搭起来，让这一部分房屋形状接上",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先按自己想要的小屋主题选家具与摆放位置，实际摆出这一角的样子，补墙稍后",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先核对眼前两项实际用料与现有木石，再决定这一批给哪项",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "D",
+              "label": "选一件当前确能造和放的家具，先亲自建造并放一次，体验这次摆物操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "建墙与个人呈现争同批材料；只有主题调整并实际呈现A，普通放一个家具仍0。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2106.ALT1",
+          "scene": "箱旁快捷存放，要把这趟的箭一起送进去吗",
+          "text": "自己在据点箱旁，箱里已经有木材和箭的同类物品，身上这批木材想入库，箭却原本要带出门。当前确能使用箱子的快捷存放，也能编辑已有批量存放排除清单；自己原定这会儿就出发。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CHEST_N",
+            "PW21_CARRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前确能设为排除的箭加入名单，实际执行这次箱旁快捷存放，查看哪些真入库、哪些仍留身上",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先不花这轮时间调整存放规则，带着当前物品去原定目的地，接受木材暂时仍占携带量",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不知道箱旁存放是否受这份名单影响，就先猜排除设置会改变箭的去向；用同一箱子、相同起始叠数和余位，分别排除/不排除实际存一次并核对，也保留不符结果",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "按自己原定目的地，先排清这趟携带箭和食物、材料入库与出发的步骤，再照本轮安排做",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "整替旧改色/命名与6V1同A/V/G/MAT壳，改现行Chest快捷存放排除的真实外出负重/操作取舍与本人未知规则试验；不把箱子命名当成长或角色扮演。",
+          "interpretation_boundary": "只当前真有可编辑排除清单与箱旁快捷存放；P个人未知仅C，须本人真可取回重建两次相同初始状态，箱内同类叠/容量/权限不可同时变。题干不先宣布排除一定成功；无响应不作因果证据。普通6V1仍不锁新版本箱子操作，继续已核换题不跳过。"
+        },
+        {
+          "id": "PW2106.ALT2",
+          "scene": "角屋顶就在菜单里，先封顶还是试造型",
+          "text": "自己已经有可用屋顶部件和足够这轮材料，当前小屋可以先用现有直面屋顶封上一段，也能用已开放的斜角或三角屋顶调整造型。两种都在眼前确能放置。怎样先动手？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_BUILD",
+            "PW21_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿当前已有墙面把这一段封顶，自己原定的完整屋壳先接起来",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先围绕自己想要的屋顶轮廓组合这些现可用部件，实际摆到合意，接受封顶进度慢些",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不熟旋转和对齐现有屋顶部件，就在当前能放处练接角，核对哪次朝向不对",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前部件形状和放置条件的已有说明，再决定用哪一种接这一角",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "原生结构部件的封顶/主题/未熟执行差异；不假设任意角度无碰撞，也不将建筑本身强Y。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    },
+    {
+      "id": "PW2107",
+      "number": 7,
+      "variants": [
+        {
+          "id": "PW2107.V1",
+          "scene": "逃走的目标还在射程内，箭也有限",
+          "text": "自己手持当前可用的弓和箭，眼前一只帕鲁正在移动，仍有本人实际能瞄射的时机；同一区域里还有原先要采的材料。你先继续哪部分？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CAPTURE",
+            "PW21_NIGHT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若自己还不熟这把弓的瞄准与出手时机，就以本次真实射击练命中，逐次核对箭落在哪、自己怎样调整",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲自持续瞄准、移动和出箭，享受自己输入与目标反应接起来的操作过程",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "保留这批箭，停止追这只，先去把原定需要的材料采到",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己当前生命和剩余箭数，看看还能投入多少补给，再决定继续追射还是离开",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "连续真实弓输入与未熟执行/资源目标区分；移动目标不必杀死、不把与NPC较量贴K。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2107.ALT1",
+          "scene": "队伍里两只伙伴，此刻换谁上场",
+          "text": "自己当前队伍有两只真实可派出的帕鲁，各有当下能用的技能。眼前这场野外战斗尚未结束，自己能换上另一只，也能继续用现在这只。你先投入哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CORE",
+            "PW21_WORK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留当前这只，先把眼前这一轮自己已经选定的战斗目标接着打完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "实际换出另一只当前可用伙伴，让它在这轮上场，体验不同可用技能",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两只当下真实可用的技能、状态和作用，再决定是否更换",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前技能说明和属性关系的已有信息，再做这次换队安排",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "两已拥有可用伙伴比较0/试用0准确，不由换一只自动B或成长；无虚构固定技能强克规则。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2107.ALT2",
+          "scene": "钓鱼辅助能同队，下一战的伙伴要不要先换",
+          "text": "只按本人确实钓过鱼、当前拥有Jelliette与Gloopie且都能编入队伍的经历。鱼竿、鱼饵和钓点当时真可用，但当前队伍若不换出原有成员，就没有足够空位把两只都带上；自己下一段也有原定战斗目标。先怎样安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_FISHING_N",
+            "PW21_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先保留当下要用于原定战斗的伙伴，把这轮队伍安排投入那场自己已经选定的战斗，钓鱼队稍后再调",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人已分别单带这两种辅助实际钓过，就把Jelliette的钓获物收益与Gloopie的降低失败作用同时纳入队伍，真正钓一轮，再与自己的单用经历比较合用是否合意",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两只当前真实可入队的钓鱼作用与原有战斗队伍的可用配置，再决定本轮留谁",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先只换入其中一只当前可用辅助，带着实际鱼竿和鱼饵钓一轮，体验这次已有配置怎样发挥",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "整替旧野外树矿与2ALT2炉配方同G/G/V/MAT壳，改现行真实钓鱼队伍的不同功能组合和战斗位代价。两效果官方均While in party，可同队同时满足，不是两只互斥的召唤主动技；B局部真单用baseline后连用实钓。",
+          "interpretation_boundary": "两只和实际钓鱼前置只本替代，7V1仍普通弓单人入口。B仅本人已有两种真实单用经历；两辅助需同时在当前队伍，不能用轮流召唤伪同时。奖励/失败有随机性，鱼种、地点、鱼饵、操作差别需保留，不把一轮变化当唯一因果或保证额外奖励。"
+        }
+      ]
+    },
+    {
+      "id": "PW2108",
+      "number": 8,
+      "variants": [
+        {
+          "id": "PW2108.V1",
+          "scene": "这趟本来可以传送，自己要不要加一条规则",
+          "text": "自己准备在两个已解锁据点或传送点之间跑一趟普通取料，当前原生确能使用传送，也真有本人能走的陆路。没有现成任务要求你步行。你这趟更想怎样玩？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_FAST",
+            "PW21_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "另立本趟禁用快速旅行、途中一用就算自己失败的规则，真实走陆路；失败后在真可重开的下一趟调整安排再试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "直接用眼前确可用的传送完成这次取料，把时间留给原本要做的建筑",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若陆路有本人没走过且当前可达的一段，就先亲自沿那段探索，不另立禁用规则",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排当前取哪些材料、先到哪个真已解锁点和回程，再按这次可行顺序跑",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "自限必须额外规则+本人判败+实际运行再试；原生传送不自动I，W个人未知局部。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2108.ALT1",
+          "scene": "下一段主线已经标出，支线人物也在附近",
+          "text": "自己在原生1.0已经接到可继续的主线，地图里有当前目标标记；附近另一位NPC的支线也确实已可交互推进。先把这次行动给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_STORY",
+            "PW21_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前主线已列目标出发，把这一轮路程投给它的实际推进",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去接上这位NPC眼前可继续的支线对话，想知道这个人物后面发生什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先看现有主线标记、NPC位置与真实可走路线，再决定先到哪边",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "若有真实同行且愿回应的玩家，就一起经历这段眼下可推进的人物故事，重视这次共同体验",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "现行重做主线与NPC支线是真叙事目标冲突；不借NPC当真人、未亲读具体剧情不编情节。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2108.ALT2",
+          "scene": "真实同伴在据点，一人出发还是一起准备",
+          "text": "只有自己确实与真人同住过原生合作据点时才答：双方都愿回应，眼前各有一套现在能用的装备，也都能选择继续据点工作或出去探索。你先怎样安排这次同行？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CORE",
+            "PW21_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先谈清这趟共同去哪、谁留哪批材料、何时回据点，再按两人都同意的分工行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先和对方一起出发，想接着经历路上发生的事，具体收益不是这次唯一目的",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "先完成自己原本已能做的据点工程，清楚告知对方自己稍后再同行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先按当前资源和可去地点列自己的准备步骤，做完再决定加入哪段",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "真实合作整事件可锁真人，但同槽V1普通solo；Q目标分工与O共同经历不同，不推现实外向/领导。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    },
+    {
+      "id": "PW2109",
+      "number": 9,
+      "variants": [
+        {
+          "id": "PW2109.V1",
+          "scene": "刚捕获的伙伴进了箱子，接下来怎么认识它",
+          "text": "回想自己第一次实际捕获一只帕鲁、它已经进入自己可管理的队伍或帕鲁终端之后。自己当时既能将它放进队伍，也能在已有据点派工。那次实际先投入什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CAPTURE",
+            "PW21_WORK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这只当时确能入队的伙伴换进队伍，带出去实际用一段，体验自己刚取得的可用伙伴",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先把它派到当时确有且适应性匹配的据点工作，让眼前已经需要做的那批事先动起来",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先给自己刚实际到过的捕获地点补个人笔记，留下这次亲自走到的地段信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "先看它当时已有的属性、技能与工作说明，再决定自己下一步怎么用",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "捕获后的队伍/据点用途而非1V1捕不捕；记录实际到过的捕获地点，不泛收物种资料。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2109.ALT1",
+          "scene": "捕获奖励清单还差同种，身边却有另一种",
+          "text": "只回想自己在原生1.0确实查看过当前捕获奖励进度：某种帕鲁还没完成界面列出的次数，眼前又确有自己可尝试捕获的另一种。球和可行动时间当时有限，后来实际更愿先做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CURRENT",
+            "PW21_CAPTURE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续捕当前进度尚未完成的那种，把这批球先用在界面还列着的捕获奖励目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若眼前另一种正是本人图鉴中明确想补的缺项，就转去真实捕它，为补这个种类改变这批球的用途",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前界面里的奖励条件与自己已经完成的次数，再安排这批球",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先不补这两种，按自己当时还没做完的采集或建造目标行动，把球保留",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "1.0现有捕获奖励次数以UI为准，不照旧10/12；C真个人缺种，不次数奖励自动C。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2109.ALT2",
+          "scene": "刚把据点材料存箱，为什么施工仍有缺口",
+          "text": "回想自己真实把一批材料放进据点箱子，随后选中一项已解锁蓝图，却仍看到缺料提示的那次；后来自己仍能查看箱中存量、该蓝图要求与当前所在范围。你实际更想接着做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_BASE",
+            "PW21_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先逐项核对蓝图当时列出的具体材料与需求量，再看缺的是哪一种",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "若当时仍不明白，就把材料种类/数量不足与当前范围或权限问题分开猜；在确能查看并亲自调整的条件中逐项实改再试，不拿一次失败直接认定原因",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先停这项建筑，改做当时材料已够的另一项自己原先也想建的东西",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先把箱中与身上当时真已有的材料逐份看清，再决定是否外出补料",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "真实施工失败回顾的核条件/可反驳解释/换目标；未知仅P局部，不能把根本没权限或未观察的状态伪造成已验证。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    },
+    {
+      "id": "PW2110",
+      "number": 10,
+      "variants": [
+        {
+          "id": "PW2110.V1",
+          "scene": "亲手做出的第一件，现在先取走还是接着做",
+          "text": "回想自己在工作台亲手制作完成过一件装备，成品当时已经可取，旁边还确有另一份当前可开工的配方。自己原先也有外出计划。那一刻先怎样处理？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_BASE",
+            "PW21_TECH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这件真正完成的装备取走并用于原定外出，把另一份配方留后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先留在工作台开下一份当时确能做的东西，让这段制作先接下去再走",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "亲手取出并换上刚做好的这件，主要想体验这次从成品到实际装备的操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "若当时有实际愿回应的真人，就约好这件谁拿、下一份做给谁，再按这次分工制作",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "真实成品取用/再开工争本人时间，区别2ALT1半成品与补木冲突；同伴只本选项条件。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2110.ALT1",
+          "scene": "取消过一批制作，材料回到哪里",
+          "text": "只回想自己在当前1.0.4之后确实取消过一批设施制作，原材料当时有返还、自己也能查看背包的那次。另一个真实想做的配方现在确能开工。你后来实际先做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CURRENT",
+            "PW21_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用这次真实返还而当前够用的材料，转去开自己另外想做的那份配方",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先看背包里这次实际返还了哪些材料和数量，再决定下一批",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "C",
+              "label": "若本人当时还不清楚取消返还落在背包还是原处，就先猜一种；新开当时真能支付的小批、取消前后核对背包与原处，分开其他拾取，不从没看见就定论",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "若自己当时为弄清返还规则真做过开工、取消与查看的对照，就先给这些实际试过的求解过程补记录，不记没试的步骤",
+              "signal": "puzzle_process_recording"
+            }
+          ],
+          "design_purpose": "当前取消设施制作材料回背包已核，但不在stem教位置后P；P可再试有真实基线，过程记录仅实际为求解尝试过才用puzzle_process_recording，非任意生产流水账。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2110.ALT2",
+          "scene": "带回的矿还在，先出金属锭还是留给别项",
+          "text": "回想自己确实把一批矿送回据点，原始炉与能生火的现有帕鲁当时都可用；矿也还可以先留箱中，自己另有能开工的建筑目标。那次实际愿先做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_FURNACE",
+            "PW21_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这批矿投入当前可做的金属锭，让接下来自己要用的金属制品早点有料",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把矿存好，去完成眼前确能做的那项建筑，炉子这批留待之后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若当时自己已经反复跑过采矿、储存、冶炼与下游制品几轮，就改实际数量或派工先后，再跑下一轮核对哪里继续断料并调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "若有真正愿回应的同好，就把自己刚跑过的这一趟采矿和回据点经历分享给对方，再接着安排",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "反思实际完成运输后的链路/建筑目标，Y多轮依赖+改后再跑，非一次点炉子。和2ALT2炉内两配方有有限资源主题交叉，不称全独立。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    },
+    {
+      "id": "PW2111",
+      "number": 11,
+      "variants": [
+        {
+          "id": "PW2111.V1",
+          "scene": "第一次外出回据点，包里的东西先落在哪",
+          "text": "回想自己一次普通采集后实际回到据点：身上已有带回的材料，自己的饥饿或装备耐久也确有需要处理的一项，眼前原定建筑还没完成。那时先投入什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_BASE",
+            "PW21_REPAIR",
+            "PW21_NIGHT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把带回的当前材料交给原定那项真能继续的建筑，先把这一部分进度推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先处理自己当时实际缺的食物或装备维修，给下一次外出准备好，再继续建筑",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先排这次入库、本人补给和建筑所需实际步骤，照这轮顺序做",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先给自己刚实际到过的采集地点与取得的材料补个人记录，留下这趟已有的信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "普通一趟归来即可回顾；资源投工程与本人续航冲突，记录不编未探地点，不把休整自动H。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2111.ALT1",
+          "scene": "紧急脱离之后，重生位置先选哪一处",
+          "text": "只回想自己在原生1.0确实使用过“紧急脱离”，随后真的来到能选择已有据点或其他已解锁快速旅行点的重生界面。自己原先还有一段未完成外出行程，也有据点工程可接着做。当时怎样继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CURRENT",
+            "PW21_FAST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选自己当时已解锁且真能选、较方便接回原行程的那一处，先把刚才未完成的外出目标继续做",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "选自己已有据点，把这一段外出先结束，回去继续当时能做的据点工程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前重生界面真实列出的地点、地图位置和原行程的距离，再选这次落点",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前紧急脱离与重生选择的已有说明，再决定这次选哪处，不沿用旧掉落规则",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "整题替换3ALT2同成长/换伙伴/看说明近壳，改原生紧急脱离后实际重生去向；须本人真实到过该界面，不保证任意地图点都可选。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2111.ALT2",
+          "scene": "那位谈判访客来了，付钱取消还是留下迎战",
+          "text": "只回想自己在原生1.0据点真正遇到过谈判访客：当时已出现可用金币取消即将到来袭击的实际提示，价格确实付得起，也能不付而准备防御。回想那一刻，更愿意先把投入给哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_NEGOTIATOR_N",
+            "PW21_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留这笔金币，不取消眼前这次袭击，去把当时确能使用的据点防御准备好，投入这次迎战",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "支付当时实际要求的金币取消这一次，自己继续原先可做的据点工作，接受这笔开销",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对访客当时明确列出的金币金额、作用和支付条件，再决定这次是否成交",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "若当时有真实愿听的同好，就讲自己亲历的这次访客和袭击取舍，享受有人回应这段经历",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "整替旧人物日志与8ALT1同已列主线/叙事/导航三项壳，改已发布谈判访客金币与当前袭击的实际代价；NPC谈判不是Q/O，O仅真人分享。",
+          "interpretation_boundary": "必须本人真遇到这一位谈判访客和当前可做的取消提示，不保证任何访客都可谈判或未来永久免袭击；不保证迎战胜利/金币退款。支付不推现实品德，真人分享只D局部，同槽11V1仍普通归来。"
+        }
+      ]
+    },
+    {
+      "id": "PW2112",
+      "number": 12,
+      "variants": [
+        {
+          "id": "PW2112.V1",
+          "scene": "这一趟捕获回来了，接着和帕鲁待据点还是再出门",
+          "text": "回想自己把一次捕获或采集旅程收在已有据点、整理过帕鲁终端之后，仍有精力再玩一段；眼前已有自己能料理的据点工作，也有本人当时真能开始的外出目标。下一段实际最愿投入哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_CORE",
+            "PW21_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "精力还足、也真能再出门，仍想按自己的节奏待在熟悉据点，照料已会处理的饲料箱或田地，享受和已有帕鲁在这里活动的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "若据点外有本人还没走过又确能进入的区域，就先带当前伙伴去那边看看，不先要求装备奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "若当时还有自己没练会的弓瞄准或帕鲁球投掷，就拿当时实际可用的一套继续练，核对本人哪里改善",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先把当时自己已经选好、材料也确够的另一段据点建筑搭下去，先做完那项工程",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "普通回据点后下一段帕鲁供食/同行/投球/建造具体动机；H精力足有选择，W未知可达/T未熟只局部，不要求通关/终局。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        },
+        {
+          "id": "PW2112.ALT1",
+          "scene": "商人就在据点，背包金币少却仍显示可买",
+          "text": "只回想自己在原生1.0据点访问商人前真正遇到的情况：背包金币看起来不足以买一件当时确有库存的商品，交易界面却仍显示可以购买。自己有权限的据点箱里另有金币，当时真能在箱子和背包间取放；旁边也有原先可做的工作台制作。那时先怎样继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_BASE_SHOP_N",
+            "PW21_BASE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际买下这件当时确可支付、自己当前要用的商品，把这笔金币投入本次购买目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先不做这笔交易，保留现有金币，转回当时原本可做的那份工作台制作",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不知道可支付额度来自哪里，就先猜箱中金币也被计入；保持同一商品和金币总量，分别把这份钱放本人箱中/背包后实际重开交易核对，排除其他取放并保留反例",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对商人当时列出的商品价格、库存和本次购买要求，再决定是否支付",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "整替旧房屋风格回顾与6V1的审美/工程/材料近壳，改当前据点内购物资金来源的亲历疑问与买物/保金制作冲突；P未知仅局部，两可控位置实际对照，不由目录或记账推C/Y。",
+          "interpretation_boundary": "当时必须真的据点内购物、箱子有本人权限且两位置可控；题干仅报告看见的可支付状态，不宣布合计公式。P不同时改金币总数/商人/价格/库存/位置范围，排除其他箱钱、他人取放和其他资金来源混杂；只比较实际可见交易状态，不造免费购买或任何野外商人跨据点取钱。普通12V1仍单人据点续玩。"
+        },
+        {
+          "id": "PW2112.ALT2",
+          "scene": "配种前那次换技能，先顾后代还是父母下一战",
+          "text": "只回想本人在原生1.0真正准备过一轮配种：自己当时已知道遗传主动技会从父母已设的主动技位中随机选择；这两只亲本都真有其他已学会、当前可切换的技能，自己下一趟也还想带其中一只去战斗。那次实际先怎样安排？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "PW21_BREED",
+            "PW21_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己希望后代有机会继承、父母当前真已学会的技能放入可换位置，接受亲本这一轮暂不保留原本战斗用的那组",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先保留自己下一场真要用的亲本技能配置，再按现有配置继续这轮配种，不为后代另改这一组",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较亲本当前可切换的已学技能与自己实际可用的两组方案，再决定这一轮保留哪组",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时已有的配种与主动技遗传说明，再设置这轮当前能改的技能位",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "整替成长/换队近壳为1.0亲本技能位遗传与亲本当前战斗用途冲突；规则已知不P，随机继承不保证一次得所愿，不造全技能可选或重滚。",
+          "interpretation_boundary": "只答本人实际经历的原生PC普通玩法，物品、科技、帕鲁和路径须当时真实可用。未知原因、尚未练会、个人缺项、特殊设施与真人响应条件只限制相应选项；整段特殊事件另明示。未体验继续换其他已核专属，不跳过；每槽三个有限情境不保证所有个人进度。帕鲁与NPC不是真人队友，不从游戏选择推现实品德或操作能力。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+4551e67037a4"
+}

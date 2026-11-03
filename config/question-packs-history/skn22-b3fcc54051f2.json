@@ -1,0 +1,1468 @@
+{
+  "id": "skn22",
+  "title": "只狼 影逝二度（Sekiro）",
+  "game_ids": [
+    "steam-814380"
+  ],
+  "scope": "原生PC本体与已发布GOTY免费更新，一套普通单人城郊/鬼佛/刀战入口；忍具、技能、潜水、龙咳治疗、战斗回忆、钟鬼和衣装只本人真实已体验的有限替代",
+  "status": "private_authoring_pending_independent_review",
+  "author_review": "author_full_read_completed_pending_independent_review",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12专属题位各3个有限已核情境，另保留4共享；16题加最多2道补问。",
+    "未体验继续其他已核专属情境，不提供跳过；有限题池不代表所有玩家/进度均覆盖。",
+    "不强凑画像；真人Q/O/K与NPC练习分清，不以表现好坏推能力或现实人格。",
+    "官方PC手册标明Ver1.05，采用其已核机制并交核2020免费更新；不把回生当真正死亡，不混普通实战与战斗回忆消耗，不造真人合作/入侵。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "原生PC本体与已发布GOTY免费更新，一套普通单人城郊/鬼佛/刀战入口；忍具、技能、潜水、龙咳治疗、战斗回忆、钟鬼和衣装只本人真实已体验的有限替代",
+      "initial_variants": {
+        "SKN2201": "SKN2201.V1",
+        "SKN2202": "SKN2202.V1",
+        "SKN2203": "SKN2203.V1",
+        "SKN2204": "SKN2204.V1",
+        "SKN2205": "SKN2205.V1",
+        "SKN2206": "SKN2206.V1",
+        "SKN2207": "SKN2207.V1",
+        "SKN2208": "SKN2208.V1",
+        "SKN2209": "SKN2209.V1",
+        "SKN2210": "SKN2210.V1",
+        "SKN2211": "SKN2211.V1",
+        "SKN2212": "SKN2212.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "SKN2201",
+      "number": 1,
+      "variants": [
+        {
+          "id": "SKN2201.V1",
+          "scene": "对面的体干快满了，你也还在刀距内",
+          "text": "城郊一名普通持刀兵还活着，体干已经积了不少；自己仍能接招，也有当前能退到的已知空地。先把接下来的动作交给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_MOVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手连续接住来刀、斩返再压上去，享受自己输入与刀响/敌方反应不断接起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "若本人还没掌握这名普通兵连刀中的某一拍，就盯住本轮真可练的那一拍专项练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先后撤到已知空地，把这轮投入自己选定的保留生命再走下一段的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先看自己当前生命、体干和瓢箪余量，再决定还接多少招",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "普通刀战入口，持续本人攻防F与具体未熟T、撤退目标/当前身体状态不同；不以击杀NPC计K。",
+          "interpretation_boundary": "不保证空地永远安全或所有刀都可硬挡，查看不自动暂停敌人；未熟仅T选项，不把熟练玩家锁出。"
+        },
+        {
+          "id": "SKN2201.ALT1",
+          "scene": "自己体干已高，先压对方还是脱开恢复",
+          "text": "自己刚接完一轮刀，体干接近危险状态；敌人仍在当前可交锋距离，身后却真有能暂时脱离这次攻击的空间。此时先投入哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_MOVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拉到实际攻击范围外，把这轮投入自己选定的恢复后再打",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人还不明白持防是否影响自己体干回落，就在真正脱离来刀时，以相近生命/初始体干分别持防与不持防观察，保留不符和时间差异",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先看眼前可退路线、台阶和敌人的实际位置，再决定从哪边脱开",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "继续压自己眼前这一轮忍杀目标，接受暂时不让自身体干恢复",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "P个人未知持防恢复解释与真实两条件，不在stem教快慢；攻击范围/受击/生命差异是混杂。",
+          "interpretation_boundary": "试验必须真实有两次相近状态且未继续受击，不保证原地持防便不会崩体干，也不把无变化当已证实。"
+        },
+        {
+          "id": "SKN2201.ALT2",
+          "scene": "被崩体干倒地后，眼前还有一拍可动",
+          "text": "你确实被普通敌人打崩体干而倒地，当前已出现本人能操作起身的机会；附近有刚才看清的退路，对方也仍在眼前。先怎样接这次失手？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_MOVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人还没熟悉倒地后的起身/翻滚衔接，就针对眼前这一步实际练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先核对自己当下生命、瓢箪和回生可用状态，再选继续还是撤退",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "用当前真能做的翻滚起身接上后撤，先完成自己这一轮离开连击的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "起身后把这次可行动窗口投入原本要继续的近身反击，接受再受击风险",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "崩体干起身与真正回生区分；实际两种后续去向，不编翻滚无敌必逃，未熟T只局部。",
+          "interpretation_boundary": "只是当前真的可操作时点，不造暂停/倒地无限等待或起身全恢复；身体状态不推现实能力。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2202",
+      "number": 2,
+      "variants": [
+        {
+          "id": "SKN2202.V1",
+          "scene": "草外两名守兵，先从背后接近哪一位",
+          "text": "城郊草边两名普通守兵的朝向你已经看见；当前有一条真能绕到其中一人背后的路，也能直接进入正面交战。你先怎样投入这段？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_MOVE",
+            "SK22_SPECIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "不绕这段路，先把动作投给自己原本想打的正面刀战",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先看两人的视线、墙角与当前能藏身的位置，再决定怎么近身",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "亲自蹲入眼前草丛并按当前可行路线移动，体验这次已经可用的潜行动作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "沿现有草边绕后，先完成自己这轮取一记潜行忍杀的目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "正面刀战和绕后争时间，潜行本身不神秘P；草丛只降低发现，不保证隐身或自动连杀。",
+          "interpretation_boundary": "两条当前能起手不等于成功，敌人会移动；NPC不是真人竞争对手，无K/Q/O。"
+        },
+        {
+          "id": "SKN2202.ALT1",
+          "scene": "将军还没发现你，小兵也没有清完",
+          "text": "只按本人真到过赤鬼后山内典膳（General Tenzen Yamauchi）所在庭院的经历：将军还未察觉，当前确能绕到背后做一次忍杀，但周围仍有活着的小兵。你先怎样开这段？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_BEADS",
+            "SK22_SPECIAL",
+            "SK22_MOVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人还不熟接近后把握忍杀红点窗口，就在这次真实机会专练时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先看庭院敌位、墙边和退路，再选本次进入方向",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先处理眼前自己能接触到的小兵，把这一轮投入清出单独交锋空间",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先用当前真实绕后机会取将军一记忍杀，接受随后仍需应付小兵和余下战斗",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "具体早期将军的开战先后，不把第一忍杀写成全杀；练红点T仅本人未熟，源已核多忍杀标记。",
+          "interpretation_boundary": "不保证小兵一直不动、无限重置潜行或一击结束将军；未到此处换同槽普通守兵。 此处对应赤鬼后的山内典膳及多名枪兵，非前一处河原田直盛。"
+        },
+        {
+          "id": "SKN2202.ALT2",
+          "scene": "背刺后有忍术窗口，纸人还想留给后面",
+          "text": "你已学并装好血烟一类当前可用的背刺忍术，这次背刺后仍真能追加发动，纸人也足够；同一段后路还原本想留纸人给忍具。先把这份资源用在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_SPECIAL",
+            "SK22_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前忍术已经有的触发/耗用说明，再做这次追加操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "现在追加这次已可发动的忍术，先投入自己本轮想用烟幕打开的近身行程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "不追加这次忍术，把纸人留给自己后段原本想用的忍具",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己现有生命、纸人和后路补给，再决定这次耗不耗",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "已装背刺忍术与后段忍具争真实纸人，不把自动烟幕计F、操控敌人计真人Q。",
+          "interpretation_boundary": "只当前已开放忍术窗口，不保证有无限思考时间、烟幕对任何目标都成功或不需要纸人；无技能换普通潜行。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2203",
+      "number": 3,
+      "variants": [
+        {
+          "id": "SKN2203.V1",
+          "scene": "钩绳点亮绿了，原路线却在脚下",
+          "text": "自己在城郊已走到可站位置，眼前有当前确实亮绿、真能钩去的树枝；脚下还有本人已走过的一段路。你先把路程投给哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_MOVE",
+            "SK22_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前枝点、落脚地和回来要经过的位置，再决定",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "若本人还没掌握钩去后接落地与转向，就在当前真实能试的这一段专项练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "若枝后那片当前可达地形本人尚没去过，就亲自过去看看，接受暂离原路线",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "沿自己已知路线继续原先要到的鬼佛或路口，不为眼前枝点改目的地",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "个人未知空间W仅选项局部；绿色真实钩点不是任意飞行，也不承诺未知处有奖励。",
+          "interpretation_boundary": "路线可开始不保证无敌人/摔落；没有未去地形仍可选原路或查看，不锁整题未知。"
+        },
+        {
+          "id": "SKN2203.ALT1",
+          "scene": "屋阁里取到手里剑轮，寺院和前路都能回去",
+          "text": "你实际在城邑外挂门路附近的屋阁取到了手里剑轮，但还没有让佛师装入义手；当前原路可回寺院，前方也有自己想继续走的路。先怎样处理这个收获？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_TOOLS",
+            "SK22_TEMPLE",
+            "SK22_MENU"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己实际取得的轮与刚到过的屋阁补个人记录，不把尚未到的路线写进已访",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "回当前可找到的佛师处装入，再带着真实可付纸人的忍具试一次使用",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先带着零件沿原定城郊路线前进，暂不把这轮时间花在返回寺院",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先读自己已取得这件零件的现有说明，再决定何时装入",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "原生零件必须找佛师装入才工具，取到不等于已经装备；回程/前进与已有信息记录不同，不自动C。",
+          "interpretation_boundary": "佛师要当前确可互动，使用还要真有纸人；不凭未装零件比较已可用战斗配置或保证所有剧情永久回到寺院。"
+        },
+        {
+          "id": "SKN2203.ALT2",
+          "scene": "已能潜水，仙峰寺旧池底那枚还没取",
+          "text": "只按本人已取得潜水能力、又真实回到仙峰寺寺院境内池塘的经历；这枚池底数珠当周目确实还没拿，当前也能下水，自己还有原定陆上行程。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_BEADS",
+            "SK22_MOVE",
+            "SK22_MENU"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若这枚正是本人清单惦记的未取缺项，就实际潜下去取它，为补这项暂缓原行程",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先继续自己原定陆上目标，这轮暂不下到池底",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "用当前已解锁潜水在这处真能下去的池中试一次，体验这项已有能力",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前已学潜水能力的已有说明和自己这处可下水位置，再动身",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "特定原生池底珠与真实潜水前置，C个人明确缺项并实际补，不是见任何拾物就收藏。",
+          "interpretation_boundary": "此处为池底拾物不是凭空造箱子；未学潜水不适用，未体验换3V1普通钩绳，不保证所有旧池塘都同样有珠。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2204",
+      "number": 4,
+      "variants": [
+        {
+          "id": "SKN2204.V1",
+          "scene": "瓢箪只剩一口，对方体干却在往回落",
+          "text": "当前普通交战中自己已掉一部分生命，伤药瓢箪确还剩一次；对方也有自己刚积起来的体干，你现在有能选择喝药或继续压上的短空隙。先把这一拍交给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_MOVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对自己当前位置、敌方出手距离与眼前真实空隙，再决定这次是否用药",
+              "signal": "unit_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先用眼前这一口恢复自身生命，接受暂时不继续压对方体干",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "继续自己的本轮忍杀目标，把这次空隙投入压上去，不立刻喝掉最后一口",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "亲手连续接刀、斩返再进，享受自己持续输入与刀战反馈接起来",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "瓢箪/生命与对方体干时机真冲突，F必须本人持续操控；当前受控狼位置与周边用unit状态0。",
+          "interpretation_boundary": "不承诺喝药必安全/敌条完全归零或药能补纸人，查看状态不保证世界暂停。"
+        },
+        {
+          "id": "SKN2204.ALT1",
+          "scene": "盾还挡在正面，当前纸人不多了",
+          "text": "你确实装好了机关斧，当前纸人够再用但余量有限；眼前一名普通木盾兵还在，自己也能尝试沿可行侧路近身。先怎么投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_AXE",
+            "SK22_SPECIAL",
+            "SK22_MENU"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "这次实际用机关斧处理当前木盾，把纸人投给眼前的破盾目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先不用斧，沿已知能起手的侧路接近，保留这份纸人给后段",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先比较自己当前已装斧与其他真实可用忍具的作用和纸人耗用，再选这轮配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先看自己当前生命、瓢箪与纸人余量，再定能承担哪次尝试",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "原生木盾和已装斧资源，不把攻击加纸人叫B；比较只可用装备，挥斧仍能受伤。",
+          "interpretation_boundary": "不保证侧路一定能绕背或所有盾材质同效；不造斧无敌/无限纸人，未装斧换普通交战。"
+        },
+        {
+          "id": "SKN2204.ALT2",
+          "scene": "赤鬼还在，油和吹火筒要不要连着用",
+          "text": "只按本人真实带着油、已装吹火筒与够用纸人面对城郊赤鬼的经历；自己现在也能按已知退路拉开。先把这一轮资源和动作投给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_FIRE",
+            "SK22_SPECIAL",
+            "SK22_MOVE",
+            "SK22_CN_NAMES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先不消耗这瓶油，按自己选定的走位/刀击目标继续这段赤鬼交锋",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先拉到真实可脱开位置，保留现有油和纸人，下一轮再来处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先沿已知退路真实脱开，再按现有油、纸人、所装忍具和回赤鬼处的目的地排好补给/使用顺序，按安排再出发",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "若本人已分别试过单扔油与不先上油的吹火筒，就本轮先让油实际命中再用短程火焰，观察预处理加点火合用，并与自己的单用结果比较是否合意",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "唯一B是油预处理与火焰作用两功能，真单用baseline再合用实际测；不是两道自动伤害数相加，也不凑构筑配额。",
+          "interpretation_boundary": "油必须实际命中、火焰真在范围，不保证一次烧伤/固定硬直；敌状态、距离和时机混杂要保留。C项准备只真能脱开再安排者，不在抓取中造暂停。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2205",
+      "number": 5,
+      "variants": [
+        {
+          "id": "SKN2205.V1",
+          "scene": "鬼佛已在手边，刚清过的路也还空着",
+          "text": "你已到一座可对座的鬼佛旁，刚才清过的普通兵暂时不在路上；自身生命或瓢箪有需要补的一项，而前方一段当前真能开始的路还可继续。先怎样安排这次停留？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_IDOL",
+            "SK22_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "现在休息补上本轮需要的恢复，接受部分已倒敌人重新出现",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先不休息，利用刚清过这段路继续自己选定的前进目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先看自己当下生命、瓢箪和纸人储备，再决定是否把这轮交给休息",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有鬼佛休息/补充规则说明，再决定这次使用哪项",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "鬼佛真实补给和部分敌重置代价；对座菜单与休息分清，不写所有敌永久复活或永不复活。",
+          "interpretation_boundary": "不保证所有快捷物无限补充，超限储备要真有才补；不造任意野外传送或无条件解除每种剧情限制。"
+        },
+        {
+          "id": "SKN2205.ALT1",
+          "scene": "散钱想先存进钱袋，还是先补纸人",
+          "text": "自己当前有一笔散钱，附近真可到的商人还有可买钱袋，已开鬼佛也能买纸人；本轮想先花其中一笔，不准备把散钱都继续带进下一段风险。先怎样用？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_ECON",
+            "SK22_IDOL",
+            "SK22_MERCHANT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把本轮够买的一部分散钱投入纸人储备，供自己下一段真会用的忍具",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先核对商人当下标价、钱袋内容与鬼佛纸人购买条件，再决定这笔用途",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "亲自在已有鬼佛完成一次当前可支付的纸人购买，体验这次补充操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "买下当下可付的钱袋并暂不开封，把这份钱先换成自己想保留的袋装储备",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "钱袋有溢价但封存不受死亡散钱损失，与即用纸人真资源竞争；买袋不收藏、不自动成长。",
+          "interpretation_boundary": "两处真可到、库存/价格当前可付，不写固定手续费或总能买到；打开钱袋后已经转成散钱，不继续当封存。"
+        },
+        {
+          "id": "SKN2205.ALT2",
+          "scene": "机关筒已经交过，手头部件先投哪条忍具线",
+          "text": "你确实击败过鬼形部并让佛师开启了忍具强化；当前有两项前置已满足且各自付得起的方案，但这轮材料不足两项都做。先怎样投入这些部件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_FIRE",
+            "SK22_AXE",
+            "SK22_TEMPLE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较已拥有的旧版忍具与当前确能完成的两项升级方案，再决定",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先逐项核对已有金属/火药部件、钱和这轮需求，确认做完会剩什么",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "C",
+              "label": "先把当前材料投入自己下一段原本想用的那条忍具强化，另一条暂缓",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先做自己更想试的另一项当前方案，把原定那条留待补料",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "机关筒后真实前置/材料机会成本，旧版仍可用；造升级变体不自动当同一对象长期成长G。",
+          "interpretation_boundary": "只界面已开且真可付两项，不造返还材料/重置树或无限稀有素材，纸人耗用不以旧固定数替代现有说明。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2206",
+      "number": 6,
+      "variants": [
+        {
+          "id": "SKN2206.V1",
+          "scene": "识破和旋风斩都能学，本轮先把时间花哪",
+          "text": "鬼佛技能页里，识破与旋风斩当前都已满足开放条件，各自付得起但点数不够同时学；附近半兵卫当前也有自己可选的基础修练。下一段本来想去应付平田的持枪敌人。先投入哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_SKILLS",
+            "SK22_IDOL",
+            "SK22_TEMPLE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先学当前可付的旋风斩，把这一轮投入自己更想尝试的流派技",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人连当前已能练的弹反基本拍点仍没掌握，就先去半兵卫做真实开放的专项，暂不花这笔点数",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "按下一处实际目的地，先排学习、现有修练和出发的可做顺序，再照这轮安排去做",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先学当前可付的识破，把这次点数投入自己接下来想处理的突刺应对",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "明确早期两技能、点数与尚未练会的已有动作争本轮；不是所有技能解锁就自动会，也不把当前未学技能当可直接练。",
+          "interpretation_boundary": "半兵卫和修练要当前真可选，点数/前置以当前为准；不指固定技能点数或承诺识破克下段/抓取。"
+        },
+        {
+          "id": "SKN2206.ALT1",
+          "scene": "学到了旋风斩，装备槽却还没换",
+          "text": "你确实学过旋风斩，当前已能在流派技槽选择它，但这轮还没装备；眼前原定要继续的一段普通刀战也能开始。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_SKILLS",
+            "SK22_MENU",
+            "SK22_SPECIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人还没掌握这项已可装备技的触发与收招衔接，就围绕本轮真能使用的位置专项练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前技能的已有输入/条件说明，再实际选择并使用",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "实际把已学的旋风斩装入当前流派技槽，在真可尝试的交锋用一次，体验已有技能怎样发生",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "暂不改槽，按自己原来的普通斩击/弹反目标继续眼前路段",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "已学不等于已装备的真实槽位机制；T只未熟执行，不把看菜单当P，也不自动给固定动画F。",
+          "interpretation_boundary": "不保证技能施放无敌/不会被打断，不把所有流派技都说成无纸人消耗；本场必须当前真能装这项。"
+        },
+        {
+          "id": "SKN2206.ALT2",
+          "scene": "流派技槽只有这一项，当前另一个也已经学会",
+          "text": "你确实已有两种当前能装备的流派技，当前槽里装着其中一种；下一段路上自己还有一个原定要处理的普通交锋。先怎样换用或保留？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_SPECIAL",
+            "SK22_MENU",
+            "SK22_IDOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若当前真实能付另一项的耗用，就先安排这趟纸人补充与下一段行程，再按安排出发",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "保留现有那项，把这次可行动时间投入自己原定的交锋目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "实际换成另一项当前已学技，再去真可用处打一轮，体验不同已有配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先比较本人当下两项实际作用、触发条件与纸人耗用，再定本次槽位",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "原生一项流派技槽与当前可用配置比较，换一种不自动B/成长；准备是实际资源和目的地安排。",
+          "interpretation_boundary": "两技必须真已学且可装备，不假设都花纸人或都不花；尚未解锁者可换6V1早期选择。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2207",
+      "number": 7,
+      "variants": [
+        {
+          "id": "SKN2207.V1",
+          "scene": "寺院的人还可以说话，城郊也能继续走",
+          "text": "你在破旧寺院当前可与佛师或永真继续一段真实已出现的对话；外面又有自己原定要走的一段城郊路线。你先把这次停留交给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_TEMPLE",
+            "SK22_CORE",
+            "SK22_MENU"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前寺院人物、可互动位置与出口的实际状态，再决定这轮找谁",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "先为本人已经实听的人物信息或到过的寺院地点补个人记录，不编后续未听的情节",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "接着听眼前人物尚可说的那段话，想理解他的经历和自己已接触到的人物关系，先不急着出门",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先沿自己已能开始的城郊路线推进原定目标，这段对话稍后",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "普通早期人物停留与行程竞争，叙事S不推角色扮演/善恶；记录只实听人物/已访地，不是对话操作日志。",
+          "interpretation_boundary": "对话和人物必须当前真实可继续，不保证全程原位或NPC等于愿回应真人，无Q/O/K。"
+        },
+        {
+          "id": "SKN2207.ALT1",
+          "scene": "老妇人的铃已经拿到，先去平田还是留在城郊",
+          "text": "你实际拿到了老妇人交给你的铃（Young Lord’s Bell Charm），当前寺院佛像也真能使用它；自己原来还想继续城郊行程。此刻先把路程投给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_HIRATA",
+            "SK22_TOOLS",
+            "SK22_IDOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按这次实际可用铃与已开鬼佛，排好献铃、探索和回当前路线的顺序，再照安排做",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "把已得铃交到当前寺院佛像处，进入这段三年前的平田记忆，想追眼前人物往事的线索",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "若平田这处当前可进入的地方本人尚没去过，就亲自进去探索，未承诺奖励也愿意先认识空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先沿当前城郊路线继续原本目标，这轮暂不献铃",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "铃进入三年前平田是真原生入口，叙事动机S与未知空间W区分；W个人未到只局部，不造所有时间物品丢失。",
+          "interpretation_boundary": "只本人真实可献铃阶段，已开鬼佛才可往返；未到平田不是奖励/未按按钮就自动探索画像。"
+        },
+        {
+          "id": "SKN2207.ALT2",
+          "scene": "穴山的情报费，与下一轮忍具补给",
+          "text": "穴山当前有一笔真实可付的情报对话，自己手头散钱也能留给已开鬼佛补纸人；本轮只想先把钱与路程投给一边。你先怎样处理这个开店阶段？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_MERCHANT",
+            "SK22_ECON",
+            "SK22_IDOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "付当前这笔实际情报费，接着听他对平田或忍具线索当下能说的内容，想知道人物经历怎样接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先保留这笔散钱，到实际可用鬼佛补自己下一段忍具要用的纸人",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对穴山当下明确列出的情报费用与这轮补给的实际价格，再决定支付哪笔",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先为自己已经实听到的穴山人物信息补笔记，不把尚未买到的线索写成已知",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "穴山具体情报阶段与鬼佛纸人资源，支付信息为S仅叙事动机而非善恶；不编他一定给同一物/可卖东西。",
+          "interpretation_boundary": "对话阶段/库存和两处路程当前须真可行，不用固定50/100费用或未经核实盐/米后续；NPC交易不是Q/O。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2208",
+      "number": 8,
+      "variants": [
+        {
+          "id": "SKN2208.V1",
+          "scene": "这段熟路，本来可以喝瓢箪",
+          "text": "你准备从当前已开鬼佛走到自己选好的已知路口，原生允许沿途用伤药瓢箪，手头也确有可用次数；当前这段路实际能开始。先怎样给自己安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_MOVE",
+            "SK22_IDOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对自身生命、瓢箪与纸人储备，再决定这趟投入",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "另立本段不喝瓢箪的规则，真实走；真喝了或没到路口就记个人失败，在下一次确能重走时调整再试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "不另加禁令，按当前原生恢复方式走完自己原定这段目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若本人还没掌握这段某个具体接刀或钩绳落位，就只围绕真实未熟处练，不另立个人成败",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "额外自限+实做+人工失败+真实可重走才I，原生困难/钟鬼/不带御守不自动I。",
+          "interpretation_boundary": "不保证路一定过、不造存档随意回滚/无限免费重试；是游戏内自定方式，不推现实意志能力。"
+        },
+        {
+          "id": "SKN2208.ALT1",
+          "scene": "半兵卫还在寺院，自己先练还是先出发",
+          "text": "你已与半兵卫相遇，当前真有已开放的修练项可选；外面也有自己当下能继续的城郊行程。现在先把这段时间用在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_TEMPLE",
+            "SK22_MOVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人仍没掌握当前已开放修练中的具体弹反拍点，就选那项亲手练，并核对自己失在哪拍",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先不再留寺院，把当前时间投入自己原定的城郊行程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看寺院当前可互动人物、修练入口与出口，再定这轮先到哪里",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "只为自己已到过的寺院和半兵卫实际说过的人物信息补记录，不把练习按键流水当地点资料",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "原生不死半兵卫训练项随经历开，训练T与出发/现场/已体验人物记录不同，避免与装备技试用四项同壳。",
+          "interpretation_boundary": "半兵卫必须当前仍可互动、项目真已开，未熟仅T；不保证任何剧情后仍可无限练，不把训练NPC当真人对手。"
+        },
+        {
+          "id": "SKN2208.ALT2",
+          "scene": "给熟悉守兵路另定一次零警觉挑战",
+          "text": "你已普通走过一小段城郊守兵路，当前还能真实再从已用鬼佛起步；本轮也能直接照常战斗通过。这次准备怎样走？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_MOVE",
+            "SK22_SPECIAL",
+            "SK22_IDOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "不加额外限制，直接以自己本轮到那个已知路口为目标，途中被看见也按普通刀战处理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人贴壁离开墙角的衔接还没掌握，就在当前真实能练的墙角专练这一步",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先核对已经有的蹲行、贴壁和忍杀说明，再决定本轮用哪项已有操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "额外自定从鬼佛到一个已去过路口都不让守兵进入发现自己的状态，亲自潜行；实际被发现便人工判本轮失败，只有真实能再起步才调整路线重试",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "将旧上方忍杀/贴墙四项壳整题替为本人额外零警觉规则：真实跑、人工失败、真实可重试才I；普通通路同槽可选，T未熟局部。",
+          "interpretation_boundary": "零警觉不是游戏原生新模式，也不保证全程可隐身；规则终点本人已到过，不能任意回档清敌或强制脱战重置，重试只真实可行时。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2209",
+      "number": 9,
+      "variants": [
+        {
+          "id": "SKN2209.V1",
+          "scene": "真死回鬼佛以后，经验条还差一截",
+          "text": "你真实死亡后回到鬼佛，散钱和未满格经验有过损失；当时附近已有一段可再走的普通兵路线，也还想继续原来那场难战。自己接下来实际愿先做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_ECON"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当时已接近满格的经验通过真实可走路线补到下一技能点，再投入难战，接受先绕这趟",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "直接回原本要挑战的那场，接受现有散钱与未满格经验仍有风险",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若当时真有可买钱袋且付得起，就先封存这笔散钱，给下一段风险保留袋装储备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对已知死亡损失/技能点与钱袋说明，再决定这轮怎么安排",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实死亡后的经验格与散钱安排，不照魂系造可捡回遗魂；已取得点不掉、袋未开不丢不等于无成本。",
+          "interpretation_boundary": "补经验路线须当时真能走，不保证无风险/必获冥助；钱袋购买只是局部真实库存条件，无钱也可其他选项。"
+        },
+        {
+          "id": "SKN2209.ALT1",
+          "scene": "敌人同样歇了一会，体干回落却不一样",
+          "text": "回想你真实在同一种普通敌人交锋中见过体干回落快慢不同；后来仍有可接触的同类敌人，自己也能选择继续原路线。更想怎样处理这次发现？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_MOVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按自己原来的路段目标继续打完，不再追这次回落差别",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "为自己实际拿到的物品或确实走到的交锋地点补笔记，不把未试的招法写成结论",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "先核对现有敌生命/体干关系说明，再决定下一轮试什么",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "若本人还不知道原因，就先猜敌生命高低会影响恢复；在真能做到的两次高/低生命状态下，以相近停攻时段观察体干，保留不符和敌动作/时间差异",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "P实际可反驳生命/体干关系，不把一次变快直接当猜对；记录严格已得物/已访地而非战斗流水。",
+          "interpretation_boundary": "须真能保相近对象与停攻，敌自有动作/时间/其他buff是混杂，不造无伤重置或全敌同速度。"
+        },
+        {
+          "id": "SKN2209.ALT2",
+          "scene": "这次刚起身，回生标记却暂时不能再用",
+          "text": "只回想本人真实回生后看到回生标记被暂时限制、当时还没再次可用的经历；自己仍有可行动的已知退路，也能接着交锋。那一刻先投入什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_IDOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若当时本人仍不清楚限制怎样解除，就保留“单纯等候”与“完成实际击杀/忍杀”的不同解释，在后来真实可观察的回生经历中分别核对，也保留不符与节点储量差异",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先看自身当前生命、瓢箪、纸人与回生可用状态，再决定这一段",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先沿真正能走的退路脱开，把这轮投入回当前可用鬼佛再整理的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "继续当前交锋，把动作投入自己想取下一记忍杀的目标，接受暂时不能再回生的风险",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "P个人未知回生暂限解释，真实以后两类经历对照，不采旧攻略单等会解黑线的断言；不能回生与已经真正死亡分开。",
+          "interpretation_boundary": "不会为测试造免费回生/即时同局连续使用；对照须后来真发生且剩余节点/状态可核，光等无响应不是已证实解释。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2210",
+      "number": 10,
+      "variants": [
+        {
+          "id": "SKN2210.V1",
+          "scene": "捡到的葫芦种子，要不要这趟就交永真",
+          "text": "你确实取得过一颗葫芦种子，当时也有当前能找到并交付的永真；另一边还有自己原定能继续的路线。回想那次后续投入先给哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_SEED",
+            "SK22_TEMPLE",
+            "SK22_IDOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先继续原定那段路，把回去交种子留到之后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人此前已多轮主动投入同一个狼的成长，就接着交这颗种子并带着增加的恢复去实战，想看自己持续培养的这个对象延续起来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先核对已得种子与当前瓢箪成长的已有说明，再定这次交不交",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先回当时真可互动的永真处交种子，让下一段有这次真实增加的瓢箪次数",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "种子交永真加次数不等于已拿就自动增加；G仅此前多轮同一狼持续培养+本次再投入实用，不从一次拾种子硬推成长。",
+          "interpretation_boundary": "永真位置随剧情变，需当时真能交；不保证交后立刻过boss或回去路线全安全，未体验换其他已核回顾。"
+        },
+        {
+          "id": "SKN2210.ALT1",
+          "scene": "四枚珠已经换过一次身体力，下一段还往哪投",
+          "text": "你确实凑过四枚数珠，并在鬼佛完成过一次身体力成长，后来仍能选择接着前进或做自己已确认可开始的下一段准备。更愿把后续投入哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_BEADS",
+            "SK22_IDOL",
+            "SK22_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看自己现在已显示的生命、体干状态和携带恢复，再定下一段能投入什么",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前四珠成长与战斗记忆成长的不同说明，再选择下一项准备",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "带着已经提升的狼继续自己原定下一场交锋，把这轮动作投给当时的前进目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若本人此前已持续多轮培养同一狼，而且当时真有已确认可取的下一颗数珠或可用战忆，就继续那段实际培养并再投入实战，想延续这份成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "真实已完成身体力成长后，当前前进/同对象长期投入/状态/不同成长资源规则；普通加数值不一律G，G后续资源只局部真可用。",
+          "interpretation_boundary": "不把攻击力战忆和四珠共用，不造数珠刷新/免费返还；现有属性不保证任何boss必胜。"
+        },
+        {
+          "id": "SKN2210.ALT2",
+          "scene": "战斗回忆里用了物品，回来后想核哪份变化",
+          "text": "只回想你已真正进入过一个已击败强者的战斗回忆，期间用了当前可用快捷道具或纸人，后来确实回到现实并查看过储备。接下来更想怎样投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_UPDATE",
+            "SK22_IDOL",
+            "SK22_MENU"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人仍没掌握该已开放boss的一段弹反，就在真能再进的回忆里专项练那一段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "若本人当时还不明白是否返还，就先猜回忆与普通实战的消耗处理不同；在真实再进回忆前核同一道具/纸人总量，实用后回现实对照，再与本人真做过的普通实战消耗比较，保留反例和补库混杂",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先回现实继续自己原先没做完的路线，不继续拿这一轮回忆做测试",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若本人真为解这条消耗规则做过进入、实用、退出和库存比较，就只记录这些实际求解步骤与结果",
+              "signal": "puzzle_process_recording"
+            }
+          ],
+          "design_purpose": "原生回忆资源返还的真实后验疑问，P两种模式实际对照且未知局部；求解记录只实试过才用，不冒一般战斗日志。",
+          "interpretation_boundary": "需能核携带+实际储备总量，排除休息自动补库/购买/捡物；不是普通实战免费回溯，不把连战每一关自动返还混入。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2211",
+      "number": 11,
+      "variants": [
+        {
+          "id": "SKN2211.V1",
+          "scene": "普通兵没再发现你，回生后的退路还在",
+          "text": "回想自己在普通敌人附近真实回生后，对方当时还没再次发现自己；眼前真有可接近的背后位置，也有已知退路。那次下一段更想先做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_SPECIAL",
+            "SK22_MOVE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先为自己已经实际到过的这段交锋地点与退路补位置笔记，不把回生操作步骤当地点",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "先核对当时生命、瓢箪、纸人与回生是否可用，再选留下还是撤退",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "利用当时真实没被发现的机会，从背后接近并尝试这次潜行忍杀",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "沿已知退路先离开，保留身上仍有的资源，不继续这次近身机会",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "回生现场后机会/撤退，不把9V1真死回佛的损失重写过去式；记录只已访地点，NPC巡逻不真人K。",
+          "interpretation_boundary": "必须对方当时真没发现且可接近，不保证任何boss会失去兴趣或回生必隐身，不能把下一次回生当免费后手。"
+        },
+        {
+          "id": "SKN2211.ALT1",
+          "scene": "曾治好的龙咳又出现，这次露滴先用不用",
+          "text": "只回想自己已获得痊愈护身符和龙胤露滴，曾治过龙咳，后来又真实见到一位相识NPC患病的经历；当时这条人物后续确被病状阻住，自己也有原定要继续的挑战。先把后续投入哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_DRAGONROT",
+            "SK22_IDOL",
+            "SK22_MENU",
+            "SK22_CN_NAMES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看自己的生命、恢复与纸人补给，决定能否先把当前挑战目标走下去",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先用当时实际可付的露滴治当前这一轮，再去听自己惦记的人物后续，想把这条故事接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先保留这份露滴，继续当时已能开始的挑战，人物线这轮稍后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对鬼佛当前列出的治疗所需物和自己确有的护符/露滴，再决定这次用不用",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "真实再发后NPC剧情与稀缺露滴/挑战时机不同，不继承旧攻略治后永久免疫或NPC必死；S是真叙事牵引，不推善恶。",
+          "interpretation_boundary": "治疗入口与患病阻断必须本人当时确见，不说所有商店都关闭/固定死几次就发病；不用游戏病理作现实医学解释。"
+        },
+        {
+          "id": "SKN2211.ALT2",
+          "scene": "自己录过残影后，要不要再留一段路线提示",
+          "text": "只按本人真用过原生残影录制并留下的经历：你已在去过的路段实际录下一小段走法并配过留言，当时也能继续自己的主线路段。接下来更想把这一段时间用在哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_UPDATE",
+            "SK22_MENU"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回当时自己已经选定的主线路段，把剩下时间投入那个真实目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "亲自再录一段当前能做的短走法并用原生入口配上留言、留下残影，实际体验这套录制发布操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先看自己当时实际生命、瓢箪和纸人余量，再决定还在这里停留还是回鬼佛",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时已经可查看的残影功能说明，分清已有录制、留言和查看入口，再决定是否另录",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "整题改为真实本人录制并发布后的行动回顾，区别看别人残影再探索；原生录制操作0，不把操作影像误绑物品人物地点记录或把匿名观众当真人同伴。",
+          "interpretation_boundary": "必须本人当时真开放并用过原生残影和网络入口；录制有原生时长限制，不保证有人看或评价、更不保证一定回血；无此经历换普通回顾。"
+        }
+      ]
+    },
+    {
+      "id": "SKN2212",
+      "number": 12,
+      "variants": [
+        {
+          "id": "SKN2212.V1",
+          "scene": "城郊走过一趟，还想再接一段怎样的体验",
+          "text": "你已经真实从一段城郊行程回到可用鬼佛，当前仍有精力，也有自己真能开始的另一段路或挑战。下一段更愿把时间投给哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_COMBAT",
+            "SK22_MOVE",
+            "SK22_IDOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只在真有愿听的同好时，分享自己刚走过的这趟经历，享受有人回应",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "按自己的节奏再走一趟熟悉的潜行/刀战路，明明还可去其他目标，仍主动享受熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "若附近某段当前能去的枝后或屋后本人仍没到过，就亲自过去认识它，不先保证有道具奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "若本人仍有一拍普通弹反或钩绳落地没练会，就围绕下一段真可练位置专项练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通早期回佛即可反思，H精力足另有目标而自主熟悉，W未到/T未熟/O真愿听均局部，不要求通关。",
+          "interpretation_boundary": "不把疲劳或低难等于H，不造原生真人合作；NPC、半兵卫或残影不充当这里的真人。"
+        },
+        {
+          "id": "SKN2212.ALT1",
+          "scene": "敲过钟后，这轮要不要先让钟鬼离开",
+          "text": "你确实敲过钟并持有当前能令鬼退去的相关道具，见过这种原生增难状态；后来也有能继续的普通路线。先怎样安排这一轮？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_DIFFICULTY",
+            "SK22_COMBAT",
+            "SK22_MENU"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "使用当前确能令鬼退去的物品，把这轮投入自己原定的普通难度路线目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先保留当前钟鬼状态，继续自己当时真想试的那段挑战，接受现行增难条件",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人仍没掌握某个具体接刀时机，就在当前真实可练的位置专项练，不把敲钟本身当练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前所持相关物与增难/解除的已有说明，再选这次是否使用",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "原生增难与额外自制规则I严格分开，T必须具体未熟执行；选普通难度不自动H/能力弱。",
+          "interpretation_boundary": "不保证增难给固定收益或随处可重新敲钟；道具需当时真能用，想再加要回真正可到的钟处。"
+        },
+        {
+          "id": "SKN2212.ALT2",
+          "scene": "已经有衣装可换，鬼佛前先留哪种样子",
+          "text": "只按本人真正解锁过衣装、也在鬼佛使用过姿态变更的经历；当前已有可选外观，另有原定要继续的路线。先把这次停留用于哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SK22_UPDATE",
+            "SK22_IDOL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先保持现有样子，把这轮时间投入自己原定路线，不为换装停留",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前已经解锁的可选衣装，再决定这次应用哪一项",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "若真有愿看且愿回应的人，就展示自己当前实际装扮并聊这次呈现，享受共同看这个角色",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "实际换用自己已有的衣装并看狼的呈现，选出更合自己风格的那一种再上路",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "已得衣装真实应用并看呈现A，目录中性不C；O真人观看，不把NPC或异步残影假当回应者。",
+          "interpretation_boundary": "衣装只外观没有额外技能优势，未解锁者换12V1普通回佛；不造捏人、任意染色/免费新衣装。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+b3fcc54051f2"
+}

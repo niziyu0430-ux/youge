@@ -1,0 +1,946 @@
+{
+  "id": "celestv5",
+  "title": "蔚蓝：落脚、草莓与自己的登山节奏",
+  "game_ids": [
+    "steam-504230"
+  ],
+  "scope": "本体基础章节单人经历",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "不要求B/C面、Farewell、金草莓、模组或高级技巧。",
+    "资源题注明普通一次冲刺与体力条件，替代不根据辅助设置评分。",
+    "不把收集与操作熟练虚构成角色属性成长；r只用于自设向导后实际勘路，h明确安全、精力足且前路可走。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体基础章节单人经历",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "CELESTV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "玛德琳站在一块安全平台上，前方出口已看见；另一侧有一颗你还没登记的普通红草莓，上方还通着没看过的小房间。此刻你先往哪边去？",
+          "scene": "草莓在出口的另一侧",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_core",
+            "celestv5_collect",
+            "celestv5_feel"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先取那颗已知缺的草莓，再落到安全地面把这格收集记下来",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "进上方的小房间看看，不要求里面一定有收集物",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "留在这段练跳起接冲刺的衔接，只想比自己的上一回更顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先按熟悉路线跳向出口，享受起跳和冲刺连续发生的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "同一房间里区别清单、未知、练习与反馈，草莓不是能力升级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV501.V1"
+        },
+        {
+          "text": "还没开始追草莓的话：在第一章一个能停在安全平台上的房间，出口和一个尚未去过的小角落都可达。你现在先做什么？",
+          "scene": "草莓在出口的另一侧的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_core",
+            "celestv5_collect",
+            "celestv5_feel"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去小角落看看，被挡住的空间本身就让我好奇",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先猜平台间隔适合在哪个位置冲刺，再跳一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "重复自己跳离平台后接冲刺的一段，修正总接早的一拍",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "连着跳过已经走熟的平台，只为落地与冲刺的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "同一房间里区别清单、未知、练习与反馈，草莓不是能力升级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "这是普通的一次冲刺房间，攀爬会耗体力；眼前有可站的地面、墙面和一颗补充冲刺的绿水晶。现在更想先怎样过这一段？",
+          "scene": "一次冲刺和攀爬体力",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_player",
+            "celestv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜贴墙与落地对冲刺、体力的影响有何不同，再分别试一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "只练自己离墙后触到水晶再冲刺的一小段，目标是比刚才稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "沿一条已走通的线路连着跳冲，享受补充声和冲刺声接在一起",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先安排地面停留、攀爬与接水晶的先后，让这段资源接得起来",
+              "signal": "platform_route_plan"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "CELESTV502.V1"
+        },
+        {
+          "text": "如果你的设置不受这一预算限制：眼前仍是能用跳跃、冲刺和墙面通过的基础房间。你此刻先做什么？",
+          "scene": "一次冲刺和攀爬体力的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_player",
+            "celestv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "猜不同起跳点会怎样改变空中落点，再试两次确认",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "专练自己容易撞到边角的一次起跳，只比较自己的改善",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "直接接一串熟悉跳跃，享受角色落地、腾空和冲刺的回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "看清可站平台与出口，排好每一段的落脚和转向再照着走",
+              "signal": "platform_route_plan"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "CELESTV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "第一章移动平台就在眼前，可从安全地面重新起跳；这小段已确认不用攀爬也能走通，出口路径已知。你现在先做哪种尝试？",
+          "scene": "会移动的平台",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_player",
+            "celestv5_feel"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "踩上平台顺着移动接一跳，享受被带动和飞离边缘的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "给这小段定禁用攀爬键的规则，不许贴墙停留，只靠现有跳跃、冲刺与平台通过，试限制后的接法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先猜在平台移动前后起跳会怎样改变落点，分别试一趟解释差别",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "挑自己常在平台边缘跳偏的那一下，反复修正起跳时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "i是新自定动作规则，不是把既有路线分组；不要求高级借速术语。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV503.V1"
+        },
+        {
+          "text": "还没留意移动平台。当前走熟的静止平台短段已确认不用回落同一平台也能到出口，安全起点可重复。先做什么？",
+          "scene": "会移动的平台的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_player",
+            "celestv5_feel"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连着跳到熟悉平台，感受几次落地接冲刺的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "规定每块安全台只许落地一次，若回落同一台就从本房起点重试，实际玩一回自己新增的规则",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "猜早跳与晚跳分别会落到哪里，再各跳一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "只练自己在窄台上落地转向的一段，比刚才更稳就够",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "i是新自定动作规则，不是把既有路线分组；不要求高级借速术语。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已到能冲进星空纹样梦境方块的段落，眼前可从安全地面反复尝试穿出后的落点。此刻你更想把注意力给哪件事？",
+          "scene": "已经激活的梦境方块",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_player",
+            "celestv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在已确认能平穿的小段，规定只用水平冲刺、不用斜向，实际试一次新走法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先猜进入方向与穿出位置之间的关系，换个入口角度实测",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "练自己穿出方块后抓墙的衔接，只求比上一回连贯",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "接连穿过已会的一小串梦境方块，享受冲入与弹出的回声",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "方块已激活才可穿；选择目的不同，不拿会不会穿块判定人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV504.V1"
+        },
+        {
+          "text": "还没到梦境方块。当前基础房间有绿水晶与两块可站平台，你已经确认不按攀爬键也能到出口。现在先做什么？",
+          "scene": "已经激活的梦境方块的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_player",
+            "celestv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给这一间定禁用攀爬键的规则，只靠普通跳跃、冲刺和水晶接续，亲自试限制后的走法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先猜从哪个起点冲过水晶会接到想去的平台，再试一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "专练自己接到水晶后转冲刺方向的一下",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿已走通的线路连着触水晶和冲刺，享受反馈串起来",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "方块已激活才可穿；选择目的不同，不拿会不会穿块判定人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已经找到一个磁带房，方块随节拍交替出现；磁带仍未取得，也可以回到普通主路。此刻你更想在这里先做什么？",
+          "scene": "磁带房里的交替方块",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_collect",
+            "celestv5_log"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这盒尚缺的磁带作为本次目标，沿能到达它的方块一路取回",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "选一处交替方块，练自己跟节拍起跳的稳定度",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先猜两种方块何时交替，等一轮再跳过去核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "跳一段已经踩熟的交替节奏，享受音乐、落脚和方块出现接在一起",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "追磁带是补全；跟拍练习、验证周期与反馈分开，不要求B面进度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV505.V1"
+        },
+        {
+          "text": "还没找过磁带房的话：第一章可回走的一间房里，你知道有一颗漏下的红草莓，也能从安全处重复平台跳跃。你现在先做什么？",
+          "scene": "磁带房里的交替方块的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_collect",
+            "celestv5_log"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回去取那颗已知草莓，并落到安全地面把这一格补上",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "挑自己落窄台时总多挪一步的地方练一次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先猜平台间隔需要在哪里起跳，再亲自核对落点",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "走一遍已熟悉的跳冲线路，享受落地和冲刺的连续回馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "追磁带是补全；跟拍练习、验证周期与反馈分开，不要求B面进度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你在一个有观察镜和安全平台的房间，出口路线已能走；镜中还能查看后面一段平台和一条未去的侧路。你此刻先怎样行动？",
+          "scene": "观察镜前先做哪件事",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_log",
+            "celestv5_player"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先观察一个机关与平台的关系，作出猜想后走过去验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "收起观察镜，在已确认可到的同一块窄台反复练冲刺后收住落点，让自己比上一回更能控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先转向未探侧路，想知道主路之外的房间长什么样",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先用观察镜把落脚、绿水晶和出口排成一趟，按这段预算动身",
+              "signal": "platform_route_plan"
+            }
+          ],
+          "design_purpose": "观察镜、近处机关与可达平台可实际使用；个人落脚安排只记路线行为，提出猜想后核对为p，反复练落点为t，未知侧路为w，不靠向导标签硬记r。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "CELESTV506.V1"
+        },
+        {
+          "text": "没用过观察镜的话：你在一间可安全停留的基础房间，出口、近处机关和一条未走侧边都已可处理。你现在先做什么？",
+          "scene": "观察镜前先做哪件事的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_log",
+            "celestv5_player"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜近处机关会改变哪块平台，再触发一下核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先连一段自己已走通的跳跃与冲刺，单为腾空、冲出和落地连续回应的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "进入没看过的侧边，先看原本被墙挡住的那一角",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "看清安全平台与出口，安排跳跃落脚顺序再照着走",
+              "signal": "platform_route_plan"
+            }
+          ],
+          "design_purpose": "观察镜、近处机关与可达平台可实际使用；个人落脚安排只记路线行为，提出猜想后核对为p，反复练落点为t，未知侧路为w，不靠向导标签硬记r。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "CELESTV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "玛德琳来到一段已无追逐、可安全停留的路上，眼前人物还有可选对话；主路可继续，旁边也有没去过的小转角。你精力充足，现在先做哪件？",
+          "scene": "可继续前进时的交谈",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_core",
+            "celestv5_collect"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已经走熟的这小段路慢慢走，主动留一会不赶进度的时间，享受熟悉山路里安稳又自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "回到已知漏了一颗普通草莓的房间，先把那一格补上",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "停下来听完眼前对话，想弄懂这个人与玛德琳为何这样看待登山",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "走到小转角后面看看，不先查它有没有草莓",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "可选对话仅为NPC叙事；h要无追逐、精力足且主线可走。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV507.V1"
+        },
+        {
+          "text": "若刚到开头：在已经走熟、没有危险追来的小段山路，人物对话可以继续听，前路也能走；你精力足。此刻更想先做什么？",
+          "scene": "可继续前进时的交谈的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_core",
+            "celestv5_collect"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在熟悉安全的小段路上慢行一会，自愿把空闲留在山里，享受熟悉山路里安稳又自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "到附近基础平台处练自己起跳接冲刺的一小段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先把当前对话听完，想知道人物为什么劝说或回应玛德琳",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "走到主路旁没看过的一角，看看那里连接什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "可选对话仅为NPC叙事；h要无追逐、精力足且主线可走。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已完成过第一章，现在准备从章首重玩，日志里有可比的整章用时，也知道一颗仍缺的草莓。你精力充足，此刻给这一趟定什么目标？",
+          "scene": "日志上的记录与眼前的房间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_log",
+            "celestv5_collect",
+            "celestv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已走熟且安全的小段慢行，自愿留一会儿不催目标的山路时间，享受熟悉山路里安稳又自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "把自己的整章纪录作为目标，从章首开始按计时跑一趟",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "专门回到那颗已知漏下的草莓处，补上清单的一格",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "选择一个常接不稳的小房间练习，这次不以整章成绩为目标",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "完整纪录须从章首；练习与纪录目标分离，不拿实际成绩评价能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV508.V1"
+        },
+        {
+          "text": "如果还没完成整章：当前一间基础房间的出口已能走，你精力足，附近也有可回跳的安全平台和一个没看清的侧口。此刻先做什么？",
+          "scene": "日志上的记录与眼前的房间的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "celestv5_log",
+            "celestv5_collect",
+            "celestv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿走熟且安全的平台边慢慢挪一段，主动留下不催进度的一会儿，享受熟悉山路里安稳又自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "练自己起跳后变向的一小段，只跟自己的上一回比较",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "到侧口后面看看，不要求一定有收集物",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先猜平台间距与起跳位置的关系，再跳一次核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "完整纪录须从章首；练习与纪录目标分离，不拿实际成绩评价能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想蔚蓝里一段你确实偏离出口的经历，哪一种最像你当时愿意多停留的原因？",
+          "scene": "回看一次离开主路的理由",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "celestv5_core",
+            "celestv5_collect",
+            "celestv5_log"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "明确想补一颗漏下的红草莓或一盒未取磁带，并实际回去拿过",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "没查有没有收集物，就进过一个看不见尽头的小房间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为了理解机关与平台如何相连，提出猜想后亲手试过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "停下来听完已有对话，想把玛德琳与眼前人物的经历接上",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "回顾已发生的偏航，不用草莓数量或通关程度评能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV509.V1"
+        },
+        {
+          "text": "若还没取得磁带：回想最早几个房间里真实发生的一次停步，哪种更贴近？",
+          "scene": "回看一次离开主路的理由的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "celestv5_core",
+            "celestv5_collect",
+            "celestv5_log"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回去取了先前已看见却没登记的普通红草莓",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "单纯想知道转角后是什么，所以走进过侧间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "试过不同起跳位置，确认了自己猜的落脚关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "为了听懂人物对玛德琳说的话，停下把对话看完了",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "回顾已发生的偏航，不用草莓数量或通关程度评能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你在蔚蓝里真正反复做过的一小段跳跃，哪种过程更让你愿意继续？",
+          "scene": "回看一小段跳跃带来的吸引力",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "celestv5_player",
+            "celestv5_feel"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "落地、冲刺与碰到水晶的声音连起来，本身就让我想再来一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "换过起点或冲刺方向，确认了自己关于落点的猜想",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "给一段确认可行的熟路定过只用水平冲刺的规则，并真按它走过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "自己的起跳、抓墙或冲刺衔接比前一回更稳定了一点",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "练习、反馈、验证与自定规则分别来自实际经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV510.V1"
+        },
+        {
+          "text": "若还没接触水晶或抓墙：回想基础房间里已经发生的重复，哪一种更像你？",
+          "scene": "回看一小段跳跃带来的吸引力的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "celestv5_player",
+            "celestv5_feel"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重复只是因为腾空和冲刺的回馈让我满足",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把早跳与晚跳各试过一次，确认了两种落点的差别",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "给熟悉小房间定过每块安全台只许落一次、回落同台便重试的规则，并真照着玩过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "为了让自己的跳跃接冲刺比上一回顺，重复过一个地方",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "练习、反馈、验证与自定规则分别来自实际经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你确实重玩过的一段章节，不要求整章通关。哪一种投入更像你当时看重的事？",
+          "scene": "回看重玩时追的是什么",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "celestv5_log",
+            "celestv5_player",
+            "celestv5_collect"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把落地休整、攀爬与冲刺补充排成连续流程，并按这个安排走过",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "B",
+              "label": "照章节收集缺口折回去，把原本记着的一颗草莓或一盒磁带补上",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "从章首开始为自己的整章用时纪录作过一次尝试，注意力在纪录目标上",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "挑一个不顺的动作单独练，重心是自己的改善而不是成绩表",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "CELESTV511.V1"
+        },
+        {
+          "text": "若还没完整重玩过章节：回想同一房间里确实作过的再次尝试，哪一种更贴近？",
+          "scene": "回看重玩时追的是什么的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "celestv5_log",
+            "celestv5_player",
+            "celestv5_collect"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "安排过先落哪块台、再从哪里冲刺，并实际照着走过",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "B",
+              "label": "为了补一颗已知漏下的普通红草莓，专门折回去取过",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "为了修正自己常起跳太早的一拍，重复做过那一小段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "试过新的起跳位置，验证了原来对距离的猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "CELESTV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CELESTV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想蔚蓝里一段由你自己决定的停留，哪种真实经历最像你愿意留在山里的原因？",
+          "scene": "回看登山途中的停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "celestv5_core",
+            "celestv5_log"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "没有奖励保证也去过一个侧间，只想知道主路之外还有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先听完了人物对话，想理解玛德琳与这个人如何看待眼前的事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "在同一基础房间把起跳接冲刺重复练过，只为自己掌握得比前一回更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "当时精力充足、没有追逐且前路可走，仍自愿在熟悉安全路段慢行一会，享受熟悉山路里安稳又自主的节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "真实过去的对白理解、自我练习、主动熟悉舒适与未知发现分开；普通预先勘路不足以凭身份称呼记r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV512.V1"
+        },
+        {
+          "text": "如果只玩过开头：回想一段你确实自己停留过的山路，哪种情况更像？",
+          "scene": "回看登山途中的停留的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "celestv5_core",
+            "celestv5_log"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "见到没看清的小角落就过去看了，即使不知道有没有东西",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为了弄明白眼前人物说的话，把已经出现的对话看完",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "为了让自己起跳后转向冲刺更可控，在同一个早期房间重复练过",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "当时精力足、没有危险追来且前路可走，仍愿意在熟悉安全的小路慢行片刻，享受熟悉山路里安稳又自主的节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "真实过去的对白理解、自我练习、主动熟悉舒适与未知发现分开；普通预先勘路不足以凭身份称呼记r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CELESTV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+1f4411b23ba3"
+}

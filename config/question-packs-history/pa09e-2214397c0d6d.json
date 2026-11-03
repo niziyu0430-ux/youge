@@ -1,0 +1,2855 @@
+{
+  "id": "pa09e",
+  "title": "监狱建筑师原作：三个原生操作模式",
+  "game_ids": [
+    "steam-233450"
+  ],
+  "scope": "PC2015原作当前正式本体；普通设计管理、Warden亲控与Escape分别完整12槽及手写早期替代。无DLC、mod或当前联机要求；普通NPC不计现实社交。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "普通设计管理独立12槽；与WardenMode近身可见范围、EscapeMode手头物品声望规则分别问，不借NPC关系推现实q/o。",
+    "水电、厨房、洗衣b只用于实际多部件连通并运行核对；普通菜单、单次施工与等待NPC工作多为准确0。",
+    "当前高级研究、办公室人员、课程、预算与工具前提明确；未接触者可换最早本体墙门家具与施工情境。",
+    "WardenMode是2017正式本体新增并在2023Sunset明确保留的原生模式，独立12槽；不把普通管理的自由镜头或Escape声望升级套给本人。",
+    "监控只当前真实显示的室内范围，官方与玩家冲突写入来源；本人不能看拐角外全图，没有监控可亲自行走替代。",
+    "装备和保镖只当前可用；NPC保镖与医护不是现实社交，未受攻击不能主动打囚犯，防弹衣不承诺随意脱下。",
+    "地面指引是可被忽略的原生提示；普通换路、预览、看入口与一次编辑均0，不借身份词或额外规则套画像。",
+    "本地EscapeMode完整独立12槽，不借管理建房、水电面板或Warden自卫限制；本人鼠标/WASD操控、工具、声望与NPC队员分别核实。",
+    "藏物只当前本人牢房有可用提示的床铺，挖掘只当前工具可用的本人厕所；不保证所有物件可藏、藏物不被搜、NPC自动跟隧道或一人走出就完成。",
+    "声望能力持续保留培养g和玩家本人输入练习t分开；普通比较、存物、跟随开关、换路与出发准备多用精确0。",
+    "没有真人社交、DLC、mod、在线下载、复制物品漏洞或升级最优答案；额外禁钥匙规则只在钥匙门路本来可用时实际试一段。"
+  ],
+  "modes": [
+    {
+      "id": "management",
+      "label": "普通监狱设计管理",
+      "initial_variants": {
+        "PA09E01": "PA09E01.MANAGEMENT.V1",
+        "PA09E02": "PA09E02.MANAGEMENT.V1",
+        "PA09E03": "PA09E03.MANAGEMENT.V1",
+        "PA09E04": "PA09E04.MANAGEMENT.V1",
+        "PA09E05": "PA09E05.MANAGEMENT.V1",
+        "PA09E06": "PA09E06.MANAGEMENT.V1",
+        "PA09E07": "PA09E07.MANAGEMENT.V1",
+        "PA09E08": "PA09E08.MANAGEMENT.V1",
+        "PA09E09": "PA09E09.MANAGEMENT.V1",
+        "PA09E10": "PA09E10.MANAGEMENT.V1",
+        "PA09E11": "PA09E11.MANAGEMENT.V1",
+        "PA09E12": "PA09E12.MANAGEMENT.V1"
+      }
+    },
+    {
+      "id": "warden_avatar",
+      "label": "典狱长亲自操控模式",
+      "initial_variants": {
+        "PA09E01": "PA09E01.WARDEN_AVATAR.V1",
+        "PA09E02": "PA09E02.WARDEN_AVATAR.V1",
+        "PA09E03": "PA09E03.WARDEN_AVATAR.V1",
+        "PA09E04": "PA09E04.WARDEN_AVATAR.V1",
+        "PA09E05": "PA09E05.WARDEN_AVATAR.V1",
+        "PA09E06": "PA09E06.WARDEN_AVATAR.V1",
+        "PA09E07": "PA09E07.WARDEN_AVATAR.V1",
+        "PA09E08": "PA09E08.WARDEN_AVATAR.V1",
+        "PA09E09": "PA09E09.WARDEN_AVATAR.V1",
+        "PA09E10": "PA09E10.WARDEN_AVATAR.V1",
+        "PA09E11": "PA09E11.WARDEN_AVATAR.V1",
+        "PA09E12": "PA09E12.WARDEN_AVATAR.V1"
+      }
+    },
+    {
+      "id": "escape",
+      "label": "逃脱模式",
+      "initial_variants": {
+        "PA09E01": "PA09E01.ESCAPE.V1",
+        "PA09E02": "PA09E02.ESCAPE.V1",
+        "PA09E03": "PA09E03.ESCAPE.V1",
+        "PA09E04": "PA09E04.ESCAPE.V1",
+        "PA09E05": "PA09E05.ESCAPE.V1",
+        "PA09E06": "PA09E06.ESCAPE.V1",
+        "PA09E07": "PA09E07.ESCAPE.V1",
+        "PA09E08": "PA09E08.ESCAPE.V1",
+        "PA09E09": "PA09E09.ESCAPE.V1",
+        "PA09E10": "PA09E10.ESCAPE.V1",
+        "PA09E11": "PA09E11.ESCAPE.V1",
+        "PA09E12": "PA09E12.ESCAPE.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "PA09E01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "普通管理里一间Holding Cell临时牢房已标区域，当前房间清单仍有未满足项；眼前预算、建材和施工人手足，基础长椅、厕所与围合都可调整，暂无紧急事件。先做什么？",
+          "scene": "房间标了，要求还没全部满足",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BASIC",
+            "PA9E_STORE"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这一次墙门、家具和接管的搬运施工次序，再按可用工人推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先猜未认定与一处围合缺口有关，保持区域和家具设置，只补这段墙，再运行核对房间要求是否变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前房间要求与已摆物件的面板，核实眼前状态后再决定",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "实际安排当前可用地面、长椅与入口位置，让这间空间呈现自己的布局主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "p不由题干先给缺墙答案，允许猜想未成立；单次施工0，不以牢房质量、待遇或职业选择推善恶人格。NPC不是现实协调对象。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E01.MANAGEMENT.V1"
+        },
+        {
+          "text": "只在普通管理的最早地基与房间区域里，还没有入住或高级设施；预算和施工人手够，当前能建基础墙门并摆长椅。先做什么？",
+          "scene": "最早地基与基础墙门",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BASIC",
+            "PA9E_STORE"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这一间基础房的地基、门和长椅所需材料及工人次序，再照着推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "只调整一段待建墙和门的位置，亲手查看当前围合预览",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先读当前区域划房、室内与家具要求的已有说明，再回来做这一间",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际用基础墙、门和地面排出自己想要的第一条走廊样貌",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "p不由题干先给缺墙答案，允许猜想未成立；单次施工0，不以牢房质量、待遇或职业选择推善恶人格。NPC不是现实协调对象。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E01.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "已选择Warden Mode，自己控制的典狱长在办公室外；去一间已开放餐厅有两条已走过且门已可通的走廊。当前没冲突，预算与工人够，也可继续眼前基础建设。先做什么？",
+          "scene": "亲自从办公室走向餐厅",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手沿较少走的那条已通走廊到餐厅，体验这一次不同的行进方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "先移近眼前办公室入口、门与已有家具，查看这些已可达位置",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先排好这次巡场已通目的地、返回办公室与眼前可做步骤，再照着走",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "在当前看得见、能施工的走廊实际安排地面与基础长椅，让现场呈现自己的空间主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "原生亲控模式的行走与近身UI，不把普通换路计i或查入口计r；NPC职员不计真人共同目标。建设只在当前本人可见且有预算人手处。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E01.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "刚进亲控典狱长模式，只在最早办公室与两段已走过、门已可通的短廊；没有餐厅巡场经历，预算和工人足，当前可补一处基础入口。先做什么？",
+          "scene": "刚到办公室的亲自行走",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手沿另一段已经可通的短廊走回办公室，体验这次方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前WASD、TAB与门口行走的已有说明，再实际试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先移近现有桌、文件柜和办公室门，查看这些可达物件与入口",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "先排清眼前这一次门与基础家具搬运施工的次序，再让现有工人推进",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "原生亲控模式的行走与近身UI，不把普通换路计i或查入口计r；NPC职员不计真人共同目标。建设只在当前本人可见且有预算人手处。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E01.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "本地逃脱模式中，自己已能行动，牢房到食堂和院子的路当前都已开放，暂时没有追击；有一间可到但未进去过的房，也有已经走过的另一条短廊。先做什么？",
+          "scene": "第一次能自己走出牢房",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自走进那间当前可达却未见过的房，想认识这座监狱的新空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "亲手沿另一条已经认识且能通的短廊去院子，体验这次行进方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前HELP里本人移动、物品交互与逃脱的说明，再回来实际走",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次已经可达的房间、能查看的工具位置和回牢房先后，再照这轮准备走",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "本地可加载监狱即可，不要求Workshop或联机；认识未知空间才w，普通已通换路0。没有管理员布房功能，操控逃犯本身不r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E01.ESCAPE.V1"
+        },
+        {
+          "text": "刚能操控逃犯，只认识自己的牢房，当前门已开到一小段可走短廊，没有追击，也还没有工具或队员。先做什么？",
+          "scene": "最早牢房门刚打开",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先移近当前可达的床、厕所和门口，查看这间牢房的现有物件",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "亲自走到短廊里一处尚没见过的可达转角，想认识门外的新空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先看当前HELP里的本人移动与交互说明，再在这段短廊试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "亲手从已经走通的门口另一侧经过，再回牢房，体验这次方向",
+              "signal": "route_variant"
+            }
+          ],
+          "design_purpose": "本地可加载监狱即可，不要求Workshop或联机；认识未知空间才w，普通已通换路0。没有管理员布房功能，操控逃犯本身不r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E01.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "已有一座普通电站，旁边有可安装电容的位置，新增厨房冰箱、炉灶和水泵当前都能施工；预算与工人足，其他电站的网没有接到这里。先做什么？",
+          "scene": "电容、电缆与新一批负载",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_POWER",
+            "PA9E_WATER",
+            "PA9E_KITCHEN"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按后面几天新入住带来的厨房和水泵负载、员工日常开支与可用经费，继续调供电扩建和启用房区的节奏",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先查看已有电站的当前容量、使用量与线路状态，再决定这轮怎样接",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可建的电容、线路分段与眼前用电建设方案，暂不施工",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先排清电站旁电容、电缆与这批设备接电的材料和施工次序，再用现有工人按步骤装起并查看设备工作",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "普通电站、电容与电缆按默认用途安装是一次建设0，不硬计b；多日供电、入住、工资与经费反馈才y。独立电站不能随意并网，施工完成不计即时手感f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E02.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没加电容或开厨房，最早普通电站旁已有一处室内灯装好却还未亮；当前预算和工人够，线路可补建，容量还有余量。先做什么？",
+          "scene": "第一处室内照明线路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_POWER",
+            "PA9E_WATER",
+            "PA9E_KITCHEN"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜灯不亮与一处断开的线路有关，保持电站和灯的位置，只补那段线，再运行核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先下达这段电缆施工，再跟看工人安装与该区域供电显示的实际变化",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "给已经建好的电站和现有真实线路补一份建设记录",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "先排清这一次电缆铺设和室内接通的施工次序，再交现有工人推进",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "普通电站、电容与电缆按默认用途安装是一次建设0，不硬计b；多日供电、入住、工资与经费反馈才y。独立电站不能随意并网，施工完成不计即时手感f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E02.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "亲控典狱长的当前室内CCTV、有人值守的监视台和供电已接通，画面已经实际显示相邻室内走廊的建筑范围；另有一处可建的室内镜头位置和预算，自己也能步行到这些走廊。先做什么？",
+          "scene": "当前室内监控实际显示了什么",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SURVEILLANCE",
+            "PA9E_POWER"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手从另一条已经可达的走廊到相邻入口，体验这次现场方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次新室内镜头、现有监视台接线与供电施工的材料和工人次序，再实际接起并核对当前显示的室内范围",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "有精力也能继续眼前监控建设，仍亲自重走熟悉的办公室短廊，喜欢认得的现场节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前已实际显示的室内监控画面，只核对其中已有的建筑范围与入口，再决定本人往哪里走",
+              "signal": "surveillance_view_review"
+            }
+          ],
+          "design_purpose": "监控只限题面确已显示的室内建筑范围；官方与实玩冲突，不保证人物、遗失物或室外可见。新镜头常规安装是一次施工0，已有画面查看0，不由普通接线凑b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E02.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "没有任何可用监控，只在最早亲控典狱长模式里，眼前一个相邻房间已经开门却还没进去过；另一条回办公室短廊已认识，当前平静可走。先做什么？",
+          "scene": "没有监控，亲自走到门后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SURVEILLANCE",
+            "PA9E_POWER"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读当前视野与行走的已有说明，再本人走到门口试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "亲手沿另一段已认识的短廊回办公室，体验这次路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "先移近眼前已有门和入口装置，查看这处已经可达的现场",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "亲自走进那间当前可达却还没见过的房，想发现它和门后空间的样子",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "监控只限题面确已显示的室内建筑范围；官方与实玩冲突，不保证人物、遗失物或室外可见。新镜头常规安装是一次施工0，已有画面查看0，不由普通接线凑b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E02.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "当前可到的厨房有一把勺和一把小刀，物件提示都确认可取得，其中勺可用于挖掘；自己能回本人牢房，床铺当前明确有可用藏物提示，没有追击。先做什么？",
+          "scene": "厨房的勺与本人床铺藏处",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_STASH",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较眼前两件当前可取得物品的用途与携带安排，暂不取物",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次取勺、回床铺存放和到本人厕所的先后，再照这轮准备走",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先移近当前可达的工具位置、本人床铺和厕所，查看眼前物件与接口",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "实际取到这把勺，回本人牢房把它存入当前可用的床铺藏处，再继续行动",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "只按当前实际可用藏处存物，不说所有家具都能藏；挖掘工具对厕所可能直接开挖，故明确用床铺，不把取一次勺计收藏c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E02.ESCAPE.V1"
+        },
+        {
+          "text": "还没有到过能取工具的房，只在最早本人牢房与已开短廊里，床、厕所和门可到达，当前没有追击。先做什么？",
+          "scene": "尚未到工具所在的房",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_STASH",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读当前HELP的物品交互说明，再沿已通短廊实际检查能到哪些房",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "亲手沿另一侧已走通的门口回牢房，体验这一轮方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "给自己已经体验过的牢房、门口和短廊补一份地点记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "先移近床、厕所和门，查看这些已经可达的物件与入口",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只按当前实际可用藏处存物，不说所有家具都能藏；挖掘工具对厕所可能直接开挖，故明确用床铺，不把取一次勺计收藏c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E02.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "当前水泵已正确接电，主管旁一处厕所或水槽仍显示缺水；预算、工人和大小管都可用，其他供水设备保持稳定，暂无紧急需求。先做什么？",
+          "scene": "主管已经到旁边，末端仍缺水",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_WATER",
+            "PA9E_POWER"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先移近已有水泵、管路接口与末端装置，查看这些已可达位置",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前泵供电、管线和设备需水的已有说明，再试这一个末端连接",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜问题与末端支管接入位置有关，保持泵和用水设备不动，只改这一段支管，再运行核对当前水流与缺水标识",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先排清这一段主管、支管与设备接口的材料和施工人手，再照次序铺",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "只用本体清水大小管，不凭固定半径保证供水；p自提原因单改核标识，不要求猜中。查接口0，不硬贴身份r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E03.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没有长主管，只在最早普通水泵旁为一处已摆好的基础厕所接水；泵已接电，当前预算和工人够，管线可施工。先做什么？",
+          "scene": "泵旁第一段厕所支管",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_WATER",
+            "PA9E_POWER"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让工人铺下这一次泵旁短支管，跟看建造和厕所供水显示的实际变化",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "给已经建好的这一个水泵和已摆放的厕所补一份建设小记",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "先排清这一次泵旁支管到厕所的铺设次序，再用当前工人建",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "只调整一小段待建管线的走向，亲手查看本次连接预览",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "只用本体清水大小管，不凭固定半径保证供水；p自提原因单改核标识，不要求猜中。查接口0，不硬贴身份r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E03.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "亲控典狱长已能到达当前开放的军械库，防弹衣和电击器都可拾取，自己尚未穿这件防弹衣；附近走廊平静可通，当前没有交手，身体状态允许继续巡场。先做什么？",
+          "scene": "TAB里是自己真正带着的装备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次取装备、去已开放区域和回办公室的先后，再照着走",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先移近当前可达的装备摆放处与军械库入口，查看眼前实物和接口",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先取穿当前可用防弹衣，再以这一项装备继续亲自巡场，体验当前携带与行动状态",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可得的防弹衣、电击器与手头装备，暂不更换",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "取穿一件已有防具0，不当永久成长或组合；不承诺本体可自由脱下防弹衣，不调用mod武器架。未受攻击不能主动伤害囚犯，题目不要求开火测试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E03.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "还没有军械库或防身装备，只在最早亲控典狱长的办公室短廊里；TAB当前可打开，门已可通，眼前还能做基础建设。先做什么？",
+          "scene": "空手的TAB与办公室短廊",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手从另一侧已通入口回办公室，体验这次行进方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "先排清眼前一张基础长椅和入口的施工次序，再让现有工人搬装",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先读TAB行动界面与当前携带栏的已有说明，再回这段短廊实际操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先移近已有办公室门、桌椅与文件柜，查看这处现场",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "取穿一件已有防具0，不当永久成长或组合；不承诺本体可自由脱下防弹衣，不调用mod武器架。未受攻击不能主动伤害囚犯，题目不要求开火测试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E03.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "自己携带栏当前已满，手头物品都已实际取得；本人床铺当前可存也可取，另一件当前允许取得的工具仍在可达处。没有追击，现有物品也可按提示丢弃。先做什么？",
+          "scene": "携带栏满了，当前有真实藏处",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_STASH",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较自己已有物品与眼前可取工具的用途，暂不换动",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次存物、取物和回牢房的路线与步骤，再照这个当前准备行动",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "把选定的一件手头物品实际存进当前床铺藏处，空出位置再去取那件可用工具",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "按当前提示实际丢下一件可弃物品，空出携带位置，再沿已通走廊继续",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "真正存取丢弃0，不能把腾位置当部件组合b或额外限制i；不保证放地上的东西永远保留，也不保证藏物不会被后续搜查。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E03.ESCAPE.V1"
+        },
+        {
+          "text": "只拿到过最早一件当前可用物品，本人床铺现在能存取，自己也能按提示丢弃；没有追击，尚无复杂装备安排。先做什么？",
+          "scene": "第一件物品与可用床铺藏处",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_STASH",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走近本人床铺，查看当前手持物件与床铺已有的存取提示",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前HELP的存取、手持和丢弃说明，再回来实际处理这一件",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "把这一件物品实际存入本人床铺当前可用藏处，暂时空手继续",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "把这件当前允许丢弃的物品实际放下，再沿已通短廊走",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "真正存取丢弃0，不能把腾位置当部件组合b或额外限制i；不保证放地上的东西永远保留，也不保证藏物不会被后续搜查。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E03.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "物流与微观管理当前已开放，两处现有厨房和餐厅都可用；厨工、原料与预算有余量，当前一处餐厅供餐慢的原因还没认清。先做什么？",
+          "scene": "厨房备餐与餐厅接上同一时段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_KITCHEN",
+            "PA9E_LOGISTICS"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先跟看一批食材进冰箱、烹饪后到餐桌再回洗盘的实际过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "先猜一处餐厅的供给分配与慢餐有关，保持进餐时段和厨工不变，只改这一条厨房到餐厅的分配，再运行核对备餐送餐",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按几天送货、冷藏、烹饪、进餐与清盘变化，继续调厨工、时段和分配",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前供餐人数、可用餐食与厨房分配面板，核实状态再安排",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "当前研究与两处可用分配是主情境条件；p须自提原因且单改分配实跑，不保证马上解决供餐。早期厨房普通设备不计b，状态、说明与单次施工0；不用固定每锅人数。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E04.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没有物流研究，最早一间基础厨房当前能摆冰箱、炉灶和水槽；已有厨工与食材，供电供水和可用餐厅能接，预算与施工工人够。先做什么？",
+          "scene": "还没物流的基础厨房",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_KITCHEN",
+            "PA9E_LOGISTICS"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际安排厨具位置、地面与餐厅入口，让这一片呈现自己的厨房院落主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先核对这间厨房当前的房间要求、已摆设备与食材库存，查看眼前状态后再决定添哪件",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先排清这间厨房的设备搬运、供电供水施工次序，再推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "先读已有厨房物件与厨工说明，再用当前这间基础厨房试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "当前研究与两处可用分配是主情境条件；p须自提原因且单改分配实跑，不保证马上解决供餐。早期厨房普通设备不计b，状态、说明与单次施工0；不用固定每锅人数。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E04.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "亲控典狱长身旁有一名当前空闲可用守卫，TAB可编保护配置；自己能查看现有职员与日常开支，预算够，去餐厅的两条已通走廊当前平静。先做什么？",
+          "scene": "保镖跟随还会增加日常支出",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先亲手沿另一条已可通的走廊到餐厅，体验这次路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "把这名现有守卫加入自己的保护配置，再亲自走向已开餐厅，实际体验这一项跟随安排",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前职员、保护配置与日常开支状态，再决定本轮是否带人",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次巡场的现有装备、可用保护安排和目的地，再照这个次序出发",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "单项NPC保护配置实用0，不算现实q/o或多角色组合b；日常额外开支真实存在，不给出固定工资或默认每位守卫都可同时抽走。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E04.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "还没编过保镖，只在最早亲控模式的办公室门口；当前有工人把一张基础长椅运来，门已能通，另一条短廊也可走。先做什么？",
+          "scene": "未编保镖时的一次运椅",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已经亲自走过的办公室与门口位置补一份地点小记",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "先跟看工人把长椅送进眼前房间并安装的实际过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "先移近当前可达的办公室门与已有长椅摆放处，查看这段现场",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "亲手走另一条已经通的短廊再回这里，体验这次方向",
+              "signal": "route_variant"
+            }
+          ],
+          "design_purpose": "单项NPC保护配置实用0，不算现实q/o或多角色组合b；日常额外开支真实存在，不给出固定工资或默认每位守卫都可同时抽走。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E04.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "自己当前已有能用的钥匙与挖掘工具，门路已经确认可走，本人牢房厕所也有可开始挖掘的提示；没有追击，不要求这一轮成功逃出。先做什么？",
+          "scene": "已经能走门路，仍给这轮另定规则",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_STASH"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前HELP的挖掘与物品使用说明，再回本人厕所实际试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "为这轮新定不用现有钥匙走门路的额外规则，明明能开门仍只从本人厕所实际开挖一段，试这条自定限制",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先排清当前挖掘工具、厕所入口与已知门路的步骤和去向，再照这轮准备做",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先移近已可达的本人厕所、手头工具和现有门锁，查看眼前装置",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "i有原本可用钥匙门路而自禁并实际挖过，不把普通改走隧道自动计发明；不要求成功、善恶或高难。挖掘起点是本人牢房厕所，不是任意墙角。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E04.ESCAPE.V1"
+        },
+        {
+          "text": "还没有钥匙或挖掘工具，只在最早本人牢房与已开短廊能自由走；当前有可到达的床、厕所和门，没有追击。先做什么？",
+          "scene": "还没有钥匙与挖掘工具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_STASH"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手从另一侧已经可通的短廊回本人牢房，体验这次路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "先查看本人厕所、床铺和已开门口这些可达装置",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先读当前HELP的逃脱与物品说明，再沿已通短廊实际走一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排清这轮从牢房出门、走过已通短廊再返回的次序，再亲手照着走",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "i有原本可用钥匙门路而自禁并实际挖过，不把普通改走隧道自动计发明；不要求成功、善恶或高难。挖掘起点是本人牢房厕所，不是任意墙角。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E04.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "现有洗衣房已满足本体房间要求、岗位开放且在用；现在空位还能增加一组洗衣机、熨衣板与篮子，水电、预算和施工人手足，已有衣物回收配送，没有紧急事件。先做什么？",
+          "scene": "洗衣、熨整与送回监舍",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_LOGISTICS",
+            "PA9E_WATER",
+            "PA9E_POWER",
+            "PA9E_ED_ORIGINAL"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次新增洗衣机的水电、熨衣板、篮子和接路施工的材料与次序，再按现有人手装起开工",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "按几天脏衣回收、洗熨、送回与新入住变化，继续调岗位和供给分配",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前洗衣岗位、供给房区和积压状态，再决定这一轮安排",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "给已经建好的这间洗衣房与现有水电连接补一份建设小记，再回来安排这次设备扩建",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "洗衣设备按基本用途接入属于一次施工0，不因几个必需物件串接计b；连续几天衣物流、入住与岗位反馈才y。建设补记只记已有房间连接；早期Closed接收设置0，NPC岗位非现实q/o。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E05.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没有洗衣房或囚犯工作安排；普通管理里下一次接收时刻还没到，当前Intake报告可设Closed，工人正安装基础房间。预算与施工人手够，临时牢房还可补墙门家具，先做什么？",
+          "scene": "洗衣房以前的首次接收安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_LOGISTICS",
+            "PA9E_WATER",
+            "PA9E_POWER",
+            "PA9E_ED_ORIGINAL"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把下一次接收改成当前可选的Closed，实际运行查看这项接收设置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先核对Intake当前接收人数，再查看可用容量与房间待办，核实状态后决定这一轮安排",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先排清临时牢房这次墙门和家具的材料、工人次序，再按步骤推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "先跟看工人把已到货的基础家具运入房间并安装的过程",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "洗衣设备按基本用途接入属于一次施工0，不因几个必需物件串接计b；连续几天衣物流、入住与岗位反馈才y。建设补记只记已有房间连接；早期Closed接收设置0，NPC岗位非现实q/o。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E05.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "亲控典狱长正站在一间尚未收押的基础房里，眼前可见工人绕行送料，原因还没认清；附近一段墙能补门，预算与人手够，房内基础家具和地面也可安排。先做什么？",
+          "scene": "站在现场给工人补一个入口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜绕行与这段墙的入口位置有关，保持工人任务和其他门不变，只补这一扇门，留在现场核对这段实际通行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清眼前墙门和基础家具的搬运施工次序，再让当前工人推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "只调整这一处待建门的位置，亲手查看当前通路预览",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "实际安排现场地面、入口和基础家具，让这段空间呈现自己的走廊主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "亲控视野只核本人现场能看见的通行，不越墙假定已见全监狱；p有单处入口因果检验，不保证新门一定缩短绕行。普通预览0非i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E05.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "还没做过巡场改建，只在最早亲控办公室里能看见一张待放基础椅和可建门口；预算与工人够，没有紧急事件。先做什么？",
+          "scene": "最早门口与待放基础椅",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这张椅和门口的搬运施工先后，再让当前工人推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "只改待放椅子的方向和位置，亲手查看这一次室内预览",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "用基础地面、椅与门口实际排出自己的办公室角落",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先移近当前已有桌和门，查看这些已可达物件与入口",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "亲控视野只核本人现场能看见的通行，不越墙假定已见全监狱；p有单处入口因果检验，不保证新门一定缩短绕行。普通预览0非i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E05.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "自己已用声望招募两名NPC队员，当前都能行动、未被铐或昏迷；三人都有眼前院子的可通路线，暂时没有冲突，头像切换与跟随开关当前可用。先做什么？",
+          "scene": "头像切换与NPC队员跟随",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "切到一位当前可控队员，亲手从其已经可通的另一条路线走到院子，体验这个现场方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "只切换一次现有队伍的跟随开关，实际行走看这一项配置怎样带人",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前队员已经拥有的装备与个人声望能力，暂不花点或换物",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先排清这轮各人当前携带、可通去向和实际带离的先后，再照准备行动",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "队员全是NPC，头像切换和跟随0，不当真人q/o；普通同走不是b，尚未执行的能力比较0，不承诺NPC都会沿同一隧道自动跟上。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E05.ESCAPE.V1"
+        },
+        {
+          "text": "没有招募队员，只操控最早一个逃犯；已开门口两侧的短廊都能走，当前可查自己的携带栏与HELP，没有追击。先做什么？",
+          "scene": "只有自己一名逃犯",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手沿另一侧已可通短廊走回牢房，体验自己的这次路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "先移近自己当前可达的床铺、厕所与门口，查看这些现有装置",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前HELP的本人移动、物品与队员功能说明，再回这段短廊实际走",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "给自己已经走过的牢房与门外短廊补一份地点小记",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "队员全是NPC，头像切换和跟随0，不当真人q/o；普通同走不是b，尚未执行的能力比较0，不承诺NPC都会沿同一隧道自动跟上。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E05.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "本体工作坊安全培训已经开放并在上课，工头、有效房间、设备、工作时段和可用名额都齐；自己已持续关注的一名囚犯仍是当前学员，也已参加过前面的课；另有已合格囚犯可做基础工坊生产，原料、日常供给与经费都足。先做什么？",
+          "scene": "正在上安全培训的那名学员",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_LOGISTICS",
+            "PA9E_STORE"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按后面几轮培训、工作时段、原料交付、机器负载与日常经费，继续调工坊和其他岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前课程到课、岗位与已合格名额，再决定这轮安排",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对现有工坊生产、原料与设备要求的已有说明，再继续本轮安排",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "继续为这名确实在读的学员保留课程与可用工作条件，之后仍跟看其出席、学习与资格状态，让同一存档的这段培养接下去",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "g限同一实际学员已有课程投入并持续维护学习与后续资格，不要求保证通过或能指定其就业，也不等于玩家鼠标t。不套SecondChances经验系统，不从虚拟课程推现实善恶；核对已有说明0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E06.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没有工作坊、培训或囚犯岗位，只在最早普通管理里有工人和基础室内；预算够，眼前可以补一处门和基础家具。先做什么？",
+          "scene": "培训以前的入口施工",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_LOGISTICS",
+            "PA9E_STORE"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前待办施工和工人状态，再决定这一轮先做哪里",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先读已有房间、门与施工队的玩法说明，再回来做这一个入口",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "只调整一处待建门的位置，亲手查看本次通路预览",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次门与家具的搬运施工次序，再用现有工人推进",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "g限同一实际学员已有课程投入并持续维护学习与后续资格，不要求保证通过或能指定其就业，也不等于玩家鼠标t。不套SecondChances经验系统，不从虚拟课程推现实善恶；核对已有说明0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E06.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "亲控典狱长现在已受到攻击，当前可防身，附近有已通退路与医疗照应，角色仍能行动；这里只问这一段亲手操作，不要求制服对方。先怎样做？",
+          "scene": "已经受到攻击时的防身与退开",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已经会的防身出手与退步再操作一小段，享受按下动作后声响、命中与位移接续的直接回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把已会次序换成先退到门侧再防身一次，亲手体验这个普通动作变化",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "亲手从另一条已经可通的退路离开当前交手方向，体验这次现场路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "D",
+              "label": "在当前仍可自卫的这段过程反复练对准后一次防身出手与退开的衔接，注意自己操作是否更稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只在已被攻击、原生允许自卫时出手，不要求杀伤或主动挑衅；t是本人练操作，f是实际输入命中位移反馈，普通换序0。医疗与退路是当前条件，不保证不受伤或获胜。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E06.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "没遇过攻击，只在最早亲控典狱长的办公室窄门与短廊里，当前平静、门可通；有精力也能继续眼前建设。先做什么？",
+          "scene": "没有攻击的窄门定位",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手沿另一段已经通的短廊回办公室，体验这次方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "先看当前WASD行走与行动界面的已有说明，再在这处窄门实际试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "仍用正常步行重走熟悉短廊，喜欢刚认得的现场节奏，眼前新建设留待之后再接",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "把这处窄门来回当小段反复练，用WASD停到自己选定的门侧位置，留意定位是否更稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只在已被攻击、原生允许自卫时出手，不要求杀伤或主动挑衅；t是本人练操作，f是实际输入命中位移反馈，普通换序0。医疗与退路是当前条件，不保证不受伤或获胜。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E06.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "同一名当前仍在用的逃犯，已经过自己的几次声望投入，保留了已取得的能力；现在又有够用点数，界面里至少一项后续能力当前可购，不在追击中。先做什么？",
+          "scene": "声望留下的是这名角色的能力",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可买的能力与自己已有能力，暂不花点",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先购入当前已决定、点数足且已可用的一项能力，完成这次升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "先核对现有声望点、这名角色的升级与本人操作说明，再回可达房间实际继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "沿自己一直培养的能力方向继续投入，并在后续实际行动里用它，让这名角色已经保留的能力接着积累",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "g是同一当前角色持续投入并保留的能力，不是玩家鼠标t；一次购买0。不给固定伤害概率、最佳能力或击杀门槛，不要求角色死亡后继承。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E06.ESCAPE.V1"
+        },
+        {
+          "text": "还没有声望点或升级经历，只在最早逃犯可走的短廊与房间里，当前能按提示击打一件家具，也有已通退路，没有追击。先做什么？",
+          "scene": "还没赚到声望点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先移近当前可达家具与门口，查看眼前交互对象",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "把已会动作换成先在门侧站定、再对家具出手一次，亲手体验这次普通次序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "亲手沿另一条已经可通的短廊回牢房，体验这次行进方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "D",
+              "label": "先看当前HELP的攻击、停止冲突和个人升级说明，再对这件可交互家具实际试一次",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "g是同一当前角色持续投入并保留的能力，不是玩家鼠标t；一次购买0。不给固定伤害概率、最佳能力或击杀门槛，不要求角色死亡后继承。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E06.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "同一本地监狱已经沿自己选的后勤方向投入过几次官僚研究，已开的功能仍能用；当前所需行政人员、办公室与经费齐，下一项后续研究已可选；另有一间可补家具的新办公室，预算与施工人手也够。先做什么？",
+          "scene": "研究保留的是这座监狱的能力",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_STORE",
+            "PA9E_LOGISTICS",
+            "PA9E_SURVEILLANCE"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先为当前已决定、经费足且可投入的一项官僚研究支付费用，把这次购入作为当前重点",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "先按现有家具、材料与工人排清这间新办公室的搬运和安装次序，再实际补起这一间",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "沿一直投入的方向继续研究并实际用后续功能，让这份存档保留的管理能力接着积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可选研究与已有功能的作用和前置，暂不投入",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "连续保留研究投入才g，单项付费研究完成0；研究需当前正确人员办公室，不让早期无行政前提直接开高级功能。办公室一次建设不是长期系统y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E07.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没开过连续研究，只在最早普通办公室旁放当前已可用的桌、椅和文件柜；预算与工人齐，基础建设可以继续。先做什么？",
+          "scene": "第一间普通办公室",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_STORE",
+            "PA9E_LOGISTICS",
+            "PA9E_SURVEILLANCE"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际用基础办公家具、门和地面排出自己的第一处行政角",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前办公室要求与已摆物件，核实状态后再继续",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先排清这间办公室三件家具与门的搬运施工次序，再照着做",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "只调整一张待放办公桌的位置和朝向，亲手查看室内预览",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "连续保留研究投入才g，单项付费研究完成0；研究需当前正确人员办公室，不让早期无行政前提直接开高级功能。办公室一次建设不是长期系统y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E07.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "亲控模式的Deployment与Floor Signage已开放，眼前室内交叉口已有一段指引；工人反复向同一工地送料，却常绕向一侧，两边门都可通，原因还没查清。当前能改指引，预算和基础改建都有余量，先做什么？",
+          "scene": "地面指引与眼前的交叉口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际选择当前可用线条的走向与排列，让这个交叉口呈现自己的清楚视觉主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先跟看当前工人如何走过已有交叉口与指引，观察这段实际通行后再决定",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "先猜绕向那侧是这段指引的方向在起作用；保持门、岗位和工地不变，只反转这段指引，再跟看送往同一工地的实际路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先排清这一轮指引线条的布局、绘制和调整步骤，再照顺序亲手完成",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "官方地面线只是提示，可被更短路线和紧急行为忽略；题干不先给指引效果答案，p允许结果不符合猜想。绘制一次流程0，不伪造强制单向或自由传送。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E07.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "还没有Deployment或地面指引，只在最早亲控的基础走廊里有待建门和墙；材料与工人足，相邻一间房已开门可走入。先做什么？",
+          "scene": "没有指引工具的第一扇门",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先移近已有走廊门与入口，查看这处能到达的现场",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "亲自走进当前能到却还没进去过的相邻房间，认识这片新的内部空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "只调整眼前待建门的位置，亲手查看这一轮通路预览",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排清这一处墙门的材料、搬运和施工人手，再按序推进",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "官方地面线只是提示，可被更短路线和紧急行为忽略；题干不先给指引效果答案，p允许结果不符合猜想。绘制一次流程0，不伪造强制单向或自由传送。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E07.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "这一轮已击损一件仍在的可破坏家具，自己仍在冲突中但能行动，眼前有可退开的路线；还未主动投降，当前可以继续普通出手或结束冲突，不要求击倒任何人。先做什么？",
+          "scene": "这一轮冲突结束后，原物件会怎样",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已会动作换成先退到门侧再对当前可破坏物出手一次，亲手体验普通时序变化",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "亲手从另一条已经能通的退路离开当前击打方向，体验这次现场路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "先猜主动投降会触发这处家具的修复；记住原物件状态后只主动投降，等恢复可行动再回同一处核对实际状态",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "愿意再做一小段已经会的家具出手与退步，因为喜欢击打声、破坏与位移紧接输入的直接回应",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "开发者正式更新说明投降/昏迷后自动修复、补员与灭火，不把损坏假设永久保留；p实际结束冲突、恢复可行动后回原处核状态，不承诺被关期间能看见维修全过程，题干不预告答案。不由破坏或投降推善恶与能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E07.ESCAPE.V1"
+        },
+        {
+          "text": "还没经历过一轮冲突结束，只在最早可走房间里有一件当前提示能击打的家具，自己能行动，附近有已通门口。先做什么？",
+          "scene": "第一次家具出手以前",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前HELP的攻击与主动结束冲突说明，再对这件家具实际尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "亲手沿另一侧已通门口离开这间房，体验这次普通路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "利用当前能出手的这段过程，反复练对准家具后一次出手再退到门侧的输入衔接，留意定位是否更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "愿意再做一小段已经会的出手与退步，享受击打声和破坏紧接操作的直接回应",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "开发者正式更新说明投降/昏迷后自动修复、补员与灭火，不把损坏假设永久保留；p实际结束冲突、恢复可行动后回原处核状态，不承诺被关期间能看见维修全过程，题干不预告答案。不由破坏或投降推善恶与能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E07.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "普通沙盒里当前发现了一张尚未点击的Game Bible碎页，Extras仍有未获得页；另有一项已列出的基础房间待办，日常稳定，预算和工人够，也能查看已经体验过的房区。先做什么？",
+          "scene": "地面碎页要进入Extras才算取得",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际用当前可选的基础墙、地面与家具，接着做自己想要的房区视觉主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "为了补自己的Game Bible收藏缺页，实际点击这张尚未取得的碎页，再核对Extras新登记",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先推进当前已经列出的基础房间建设待办，把这一项已明确目标完成",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "给自己已经体验过的房区入口和人物信息补一份记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "GameBible是原作真实收藏登记，重读已有页不c；不要求出现随机碎页者回答，早期替代不需收藏进度。不把固定人物剧情改写。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E08.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没见到收藏碎页，只在最早普通管理里有一项已接受补助列出的基础房间待办；当前预算、工人和基础墙门可用，暂无紧急事件。先做什么？",
+          "scene": "收藏碎页以前的房间待办",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精力也能接新房区，仍慢看熟悉的工人送料、进出门与安装，喜欢认得的安稳施工日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先按当前房间待办核条件，实际推进这一项建设，把完成这次目标作为重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先排清这处墙门和基础家具的搬运施工次序，再照着推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "只调整一段待建墙与门的占地位置，亲手查看预览",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "GameBible是原作真实收藏登记，重读已有页不c；不要求出现随机碎页者回答，早期替代不需收藏进度。不把固定人物剧情改写。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E08.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "亲控典狱长的现有办公室、餐厅与走廊已经走熟，一间新房当前也已开门可达；精神好、预算有余，现场平静，可以继续巡场或眼前改建。先做什么？",
+          "scene": "下一间未见房，或再走熟悉短廊",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已经亲自体验过的房间、入口与路线补一份地点记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "亲自进入那间尚未见过的可达房，想认识当前视野之外的新空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "主动再走熟悉的办公室与餐厅短线，喜欢认得的日常行走与现场安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "实际安排当前看得见且可施工的基础地面和家具，让眼前房区接上自己的主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "视野外未知空间须本人真走入才w，不是普通排查路线；h精力足能推新内容仍喜欢熟悉；a真实施工表达，旧地点补记0非收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E08.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "只走过最早办公室和短廊，相邻空房当前已开门可达；精神好，有预算和工人继续基础建设，眼前没有冲突。先做什么？",
+          "scene": "只认识办公室与短廊",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只调整待放椅的位置与朝向，亲手查看本次室内预览",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "亲自进相邻空房，想知道门后这片还没认识的空间长什么样",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "仍步行重走刚认得的办公室短廊，喜欢熟悉现场带来的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先排清眼前一张基础椅与门的施工次序，再让当前工人推进",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "视野外未知空间须本人真走入才w，不是普通排查路线；h精力足能推新内容仍喜欢熟悉；a真实施工表达，旧地点补记0非收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E08.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "当前已确认一条可通出口，自己和已招募NPC队员都能行动，各人去出口的路也都已确认可走；没有追击，精神好，附近还有一间可到但未见过的房，也能留在熟悉院子。先做什么？",
+          "scene": "已经通的出口要带走当前全队",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "仍在不触发离开的熟悉院内短线走一小段，喜欢认得的安稳过程，新出口之后再接",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "按当前全队都离开的已明确目标，实际切换仍在里面的成员，把他们沿已通出口逐个带离，推进这次逃脱",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先排清当前各人携带物、出口和带离先后，再照这轮准备行动",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先亲自走进那间当前能到却未见的房，想认识这座监狱还没见过的空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "原作目标是当前整队逃出，不假定一人离开就算全队成功；NPC非真人。h无追击、精神好且出口可推仍主动享熟悉，不借害怕失败或卡关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E08.ESCAPE.V1"
+        },
+        {
+          "text": "还没有逃出路线或NPC队员，只认识最早牢房与一段短廊；精神好、没有追击，一间相邻房当前已可进入但还没看过。先做什么？",
+          "scene": "尚未见出口的牢房短廊",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已经体验过的牢房、床铺位置与门口补一份地点小记",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "亲自走进那间未见可达房，想认识门后新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "仍重走熟悉的牢房门口短线，喜欢刚认得的安定，有新房可去也愿意稍后再看",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先排清这轮从牢房到已开房间再返回的去向和步骤，再照着走",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "原作目标是当前整队逃出，不假定一人离开就算全队成功；NPC非真人。h无追击、精神好且出口可推仍主动享熟悉，不借害怕失败或卡关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E08.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想普通管理里自己实际接过的水电设施，哪件已经发生的事更有分量？",
+          "scene": "水电真的装起来过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_POWER",
+            "PA9E_WATER",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己用当时预算购入并装过一只已可用的普通电容，把那一次供电容量升级作为当轮投入",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "自己曾猜厕所缺水与支管接入点有关，保持泵与厕所不动，只改那一段支管，再核对过缺水标识",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己先排过一轮设施搬运、施工和接口次序，并照着推进过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己给已经装好的泵、管线或电缆补过真实建设记录",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "一次普通电容购装0、单次施工准备0、已建补记0，不从常规接电凑b；p要自提厕所支管原因并单改核对，不要求修好全部设施。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E09.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没用过电容或长管网，只回想最早基础房间与工人施工已经发生的一段，哪件事发生过？",
+          "scene": "第一间房真实施工过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_POWER",
+            "PA9E_WATER",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先排过一间墙门和家具的材料、人手与次序，再实际推进过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己只调过待建门或长椅的位置，亲手看过预览",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "自己跟看过工人送料、进门安装的实际过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "D",
+              "label": "自己先读过现成房间要求，再回到基础房间实际摆过物件",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "一次普通电容购装0、单次施工准备0、已建补记0，不从常规接电凑b；p要自提厕所支管原因并单改核对，不要求修好全部设施。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E09.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "回想亲控典狱长已经走过的现场与可用室内监控，哪件确实发生的事更有分量？",
+          "scene": "本人视野真正走出来过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SURVEILLANCE"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己亲手换过一条已可达走廊，体验过不同方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "自己曾猜一片室内范围没显示是被墙角遮住，保持镜头和门设置不变，只让本人移到门线另一侧，再核对过可见建筑范围",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己先查看过当时确已显示的室内监控画面，只核过已有建筑范围与入口",
+              "signal": "surveillance_view_review"
+            },
+            {
+              "id": "D",
+              "label": "自己移近查看过当时已可达的门、装置或装备摆放处，再继续过这段巡场",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "监控回顾仍只限当时真实显示，不借2017宣传保证NPC可见；看现场0，普通换路0；p要当时自己解释与位置实核，不由视野规则知识自动得分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E09.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "没有监控或复杂巡场，只回想最早亲控办公室与短廊已经走过的一段，哪件发生过？",
+          "scene": "最早本人走过的现场",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SURVEILLANCE"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先看过WASD或TAB已有说明，之后在这段现场实际试过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "自己亲手从另一条已通短廊回过办公室，体验过那次方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "自己亲自走进过一间当时未见但可达的相邻空房，认识过新空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己给已经体验过的办公室、门口和短廊补过地点小记",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "监控回顾仍只限当时真实显示，不借2017宣传保证NPC可见；看现场0，普通换路0；p要当时自己解释与位置实核，不由视野规则知识自动得分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E09.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "回想本地逃脱模式里自己已经走过的房间与短廊，哪件确实发生的事更有分量？",
+          "scene": "本人真走过的本地监狱",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己亲自进入过当时可达但从未见过的房，认识了新的内部空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "自己亲手沿另一条已通路线走过，体验了不同方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "自己先看过当时HELP，再回这段监狱实际做过相应操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己给已经亲自到达的牢房、门口或工具所在房间补过地点小记",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "只回顾本人真正操控的原作逃脱，不要求最终逃出或下载社区图；普通换路与旧地点记录0，不硬计探索以外画像。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E09.ESCAPE.V1"
+        },
+        {
+          "text": "只走过最早本人牢房和已开门口的一小段，哪件真实发生过？",
+          "scene": "刚走出门口的真实经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己移近查看过已可达的床、厕所和门，再继续过行动",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "自己亲自到过当时未见但可走的短廊转角，发现了门外空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "自己先看过HELP里的本人移动与交互说明，再实际试过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己给已经体验过的牢房和门口补过地点小记",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "只回顾本人真正操控的原作逃脱，不要求最终逃出或下载社区图；普通换路与旧地点记录0，不硬计探索以外画像。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E09.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想普通管理里自己已运行过的日常供给、课程或官僚研究，哪件真实过程更留住你？",
+          "scene": "日常时段和保留投入有过来回",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_LOGISTICS",
+            "PA9E_STORE",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己持续关注同一名确在读学员，实际维持过课程与可用岗位条件，之后仍跟看该名囚犯的学习和资格状态，让同档培养接着延续",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己沿同档已有研究方向继续投入并使用后续功能，让能力接着积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己核对过当时清单里一项明确的基础建设目标并实际推进，把完成那项目标作为当时重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "自己按几天送货、餐食、洗衣、岗位和新入住变化，持续调过分配与时段",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "实际多轮供给才y，课程g与研究g各有真实持续保留投入，不由培训点选计玩家t，也不把单个补助目标自动给成就画像。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E10.MANAGEMENT.V1"
+        },
+        {
+          "text": "没有课程或连续研究，只回想最早普通管理的一项基础建设待办与已发生施工，哪件事发生过？",
+          "scene": "第一次课程以前的建设目标",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_LOGISTICS",
+            "PA9E_STORE",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先排过门、家具与接路的材料和工人次序，再照着施工过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己给已经搭起来的基础房间和连接补过建设小记",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己用基础地面、门和长椅，实际留下过个人布局主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己核过已有清单条件并实际推进过那一项房间目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "实际多轮供给才y，课程g与研究g各有真实持续保留投入，不由培训点选计玩家t，也不把单个补助目标自动给成就画像。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E10.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "如果亲控典狱长取用过防身装备或编过NPC保镖，回想本人真的做过的一种，哪件更有分量？",
+          "scene": "装备与NPC保镖的实际安排",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先比较过当时可得的装备方案，没在那轮更换",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "自己为已经亲历的保镖额外日常支出或职员安排补过记录",
+              "signal": "management_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己先排过当时取装备、可用保护和目的地先后，再照着亲自走过",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己实际换用过当时可得的一件装备或单项保护配置，并带着它继续过巡场",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "NPC保护不是现实社交，单件防具或保护配置0不冒充b；不声称本体能随意脱防弹衣，不以装备强弱或巡场危险判能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E10.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "没有装备或保镖经历，只回想最早亲控办公室里的门、椅与实际行走，哪件事发生过？",
+          "scene": "取装备之前的一段办公室",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只改过待放椅的方向或位置，亲手看过预览",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己移近查看过已有门、桌和文件柜，再继续过现场行走",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "自己亲手沿另一段已通短廊回过办公室，体验过这次路线",
+              "signal": "route_variant"
+            },
+            {
+              "id": "D",
+              "label": "自己排过眼前一张椅与门口的搬运施工先后，并让现有工人推进过",
+              "signal": "construction_action_plan"
+            }
+          ],
+          "design_purpose": "NPC保护不是现实社交，单件防具或保护配置0不冒充b；不声称本体能随意脱防弹衣，不以装备强弱或巡场危险判能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E10.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "如果存取过工具，或从本人牢房厕所挖过，回想已经发生的一种，哪件事更留住你？",
+          "scene": "手头工具和厕所开挖真的试过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_STASH",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把已取得物品实际存进过当时可用床铺藏处，或从那里取出过",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "自己先排过取工具、存放和去本人厕所的步骤，再照着实际走过",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "自己只比较过当时已持有或可取的物品用途，没在那一轮换物",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "自己在钥匙门路本来可用时，新定过本轮不用它的额外规则，并真的从本人厕所开始挖过一段",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i必须确有原本可用钥匙并自禁后实试，不把单纯选隧道自动计i；存取限真实当前可用藏处，不把厕所起挖误称藏勺。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E10.ESCAPE.V1"
+        },
+        {
+          "text": "没有挖掘或复杂存物经历，只回想最早本人牢房里自己已实际接触过的物件，哪件发生过？",
+          "scene": "挖掘以前的本人牢房",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_STASH",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先读过当时HELP的物品交互说明，再实际走到可达物件旁试过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "自己亲手从另一侧已通短廊回过牢房，体验过那次方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "自己给已取得物品或已体验牢房位置补过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己移近查看过本人床、厕所和已开门口，再继续过行动",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "i必须确有原本可用钥匙并自禁后实试，不把单纯选隧道自动计i；存取限真实当前可用藏处，不把厕所起挖误称藏勺。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E10.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "如果看过原作教程剧情，或在普通沙盒做过自己的房区，回想已经发生的一种，哪件事更有分量？",
+          "scene": "教程剧情与沙盒房区的真实印象",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己为已经建好的房间、实际接通的设施补过建设过程记录",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己先核过当时房间要求或经营面板，再回来调整过眼前安排",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "自己读过教程里已经出现的人物对话，并继续看了剧本实际给出的后续，想理解这段虚拟人物经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己实际安排过基础房区墙门、地面与家具，让空间呈现个人主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "剧情是固定教程的已出现叙述与后续，不虚构可改写结局；选择操控典狱长本身不是r。未看教程者可换纯早期沙盒。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E11.MANAGEMENT.V1"
+        },
+        {
+          "text": "没看过教程剧情，只回想最早普通沙盒的门、长椅和基础地面已经做过的一段，哪件发生过？",
+          "scene": "纯早期沙盒的门与长椅",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己排过材料、工人和家具施工先后，并照着推进过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己跟看过工人把长椅运入室内、安装后离开的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "自己实际用基础墙门与家具，留下过第一处个人空间主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己只改过待放长椅或待建门的位置，亲手看过预览",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "剧情是固定教程的已出现叙述与后续，不虚构可改写结局；选择操控典狱长本身不是r。未看教程者可换纯早期沙盒。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E11.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "回想亲控典狱长在现场做过的入口改建或已开放地面指引，哪件已经发生的事更留住你？",
+          "scene": "现场改建与地面指引真的试过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先排过一次指引布局、绘制与调整的编辑步骤，再亲手按序做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己跟看过工人在眼前房间与交叉口的真实通行，再决定过下一步安排",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "自己曾猜送料绕行是被一段墙的入口位置拖长，只补一扇可建门，保持其他门与工地不变，再现场核对过实际路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己实际用基础地面、入口或可用指引线排列，做出过个人空间主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "原生指引可能被忽略，过去p不要求猜对；编辑流程0，不把普通画线计发明i；现场观察不是身份r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E11.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "没有地面指引或巡场后改建经历，只回想最早亲控办公室的基础门、椅已经施工过的一段，哪件发生过？",
+          "scene": "第一间办公室真正施工过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己实际用基础地面、门与椅留下过个人办公室主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己跟看过眼前工人送料、开门和安装椅子的实际过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "自己排过基础门与椅的材料、工人和搬装次序，再按序推进过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己只调过待建门或待放椅的位置，亲手看过预览",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "原生指引可能被忽略，过去p不要求猜对；编辑流程0，不把普通画线计发明i；现场观察不是身份r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E11.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "如果培养过当前逃犯能力或用过NPC队员，回想自己真正发生过的一种，哪件事分量更大？",
+          "scene": "声望培养与NPC控制留下的实际变化",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只比较过当时可买的能力与已有装备，没在那轮花点",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "自己实际切到一位可控NPC队员，亲手沿其已可通的另一条路线走过",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "自己沿同一名角色已投入的方向继续买过并使用后续能力，让当时保留的培养接着积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己只购入过一项当时点数足、已经可选的能力，完成了那次升级",
+              "signal": "purchase_available_upgrade"
+            }
+          ],
+          "design_purpose": "个人声望能力保留投入是虚拟g，不是玩家t；单次购买与比较0；切NPC控制换路0，不是现实共同目标q或同游o。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E11.ESCAPE.V1"
+        },
+        {
+          "text": "还没有能力升级或队员经历，只回想最早单人可走短廊与家具的一段，哪件真实发生过？",
+          "scene": "第一次升级和招募以前",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE",
+            "PA9E_KEYS"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只换过一次先退开再出手的普通动作次序，亲手体验过",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "自己先看过HELP的攻击和结束冲突说明，再回可用家具实际试过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "自己利用当时能出手的过程，反复练过对准家具出手再退到门侧的输入衔接，当时重点是练熟这段操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾因为喜欢击打声、破坏与位移的直接回应，主动再做过已会的家具出手与退步，享受操作接续",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "个人声望能力保留投入是虚拟g，不是玩家t；单次购买与比较0；切NPC控制换路0，不是现实共同目标q或同游o。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E11.ESCAPE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PA09E12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾自己真正玩过的普通设计管理，哪件已发生的选择更有分量？",
+          "scene": "已经熟悉的普通监狱日常",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_STORE",
+            "PA9E_LOGISTICS",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己给已经发生的物资供应、餐食或衣物配送补过过程记录",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力、预算也有新房区可推，自己仍慢看过熟悉的送货、备餐与换班，喜欢那份安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己实际选择过基础墙、地面、家具与路径，留下个人房区主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己细看过已可查看却先前没认识的地块边界或新房区空间，发现了新的样貌",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h是主动享熟悉非疲劳停摆；w是新空间本身，不把只查现场贴身份或发明；NPC日常不是真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E12.MANAGEMENT.V1"
+        },
+        {
+          "text": "只回想最早基础房间与第一批施工已经发生的一小段，哪件更鲜明？",
+          "scene": "第一批送料与安装的记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_STORE",
+            "PA9E_LOGISTICS",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己细看过当时可查看却没认清的地块边界与建筑空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力也能接新工地，自己仍看过熟悉的送料和安装，喜欢这段认得的日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己用基础墙门、地面和长椅实际做过个人走廊样貌",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己给已经搭起的房间和接好的入口补过建设记录",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "h是主动享熟悉非疲劳停摆；w是新空间本身，不把只查现场贴身份或发明；NPC日常不是真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E12.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "回顾自己真正玩过的亲控典狱长模式，哪件已发生的选择更有分量？",
+          "scene": "这段亲自行走留下的记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先核对过已有行走、视野或行动界面说明，再回本人现场实际试过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力、新房可达也能改建，自己仍重走过熟悉的巡场短线，喜欢那份现场安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己亲自进入过当时未见的可达房区，认识了新的内部空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己为已经走过的房间、入口或见过的人物信息补过记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "只有实际亲控经历作证据，不把选了典狱长角色本身计r；h有能量与可推进新内容，旧地点记录0而非收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E12.WARDEN_AVATAR.V1"
+        },
+        {
+          "text": "只回想最早亲控办公室与短廊真实发生的一小段，哪件更鲜明？",
+          "scene": "第一段亲自行走的实际记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_SUNSET",
+            "PA9E_BASIC"
+          ],
+          "modes": [
+            "warden_avatar"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己用基础门、地面与椅子实际留下过个人办公室样貌",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "当时有精力也能接基础建设，自己仍重走过熟悉短廊，喜欢刚认得的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己亲自进过一间此前未见但可达的空房，认识过门后空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己给已经走过的办公室和门口补过地点记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "只有实际亲控经历作证据，不把选了典狱长角色本身计r；h有能量与可推进新内容，旧地点记录0而非收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E12.WARDEN_AVATAR.ALT1"
+        },
+        {
+          "text": "回顾自己真正玩过的逃脱模式，哪件已发生的选择更有分量？",
+          "scene": "新房间、已明目标与熟悉短线",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己给已经体验的牢房、门口或已经拿到的物品补过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时没有追击、精神好也有新去向可推，自己仍重走过熟悉院内短线，喜欢那份认得的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己亲自走进过未见但当时可达的房，认识了新的监狱空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己按全队都离开的当时明确目标，实际带仍在里面的成员走过已通出口，推进过这次目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "回顾真事而非下一轮愿望；完成逃脱目标0，不按输赢给人格，NPC队员非真人。h有能量新去向仍喜熟悉，旧地点物品记录0非c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E12.ESCAPE.V1"
+        },
+        {
+          "text": "只回想最早本人牢房和门外短廊已经发生的一小段，哪件更鲜明？",
+          "scene": "最早牢房短线的实际记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PA9E_BUILD",
+            "PA9E_ESCAPE"
+          ],
+          "modes": [
+            "escape"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己给已经体验过的床铺、厕所位置与门口补过地点记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时没有追击、精神好且相邻新房可去，自己仍重走过熟悉牢房门口，喜欢刚认得的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己亲自进入过当时未见但可达的相邻房，认识了门后空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己先排过一轮从牢房到已开短廊再返回的步骤，并按序亲手走过",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "回顾真事而非下一轮愿望；完成逃脱目标0，不按输赢给人格，NPC队员非真人。h有能量新去向仍喜熟悉，旧地点物品记录0非c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PA09E12.ESCAPE.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+2214397c0d6d"
+}

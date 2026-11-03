@@ -1,0 +1,960 @@
+{
+  "id": "kzerov5",
+  "title": "武士零：短房间、回应条与正常速度录像",
+  "game_ids": [
+    "steam-460950"
+  ],
+  "scope": "普通本体Zero与已开放剧情检查点",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "慢动作不是暂停或任意倒带；清房后录像与主动房间重试、剧情入口重看分别说明。",
+    "Factory风扇不设禁慢规则，不把通关后剑、Hard/Speedrun或Dragon能力放早期；Prism Key只取钥匙本身。",
+    "对话红区打断与等完选项逐条第一手核对，不把礼貌/固定角色计r或善恶；h仅玩家精力足的公寓自由安定段。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "普通本体Zero与已开放剧情检查点",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "KZEROV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "武士零普通本体的一间熟悉小房里，默认刀和慢动作可用，眼前持枪敌人发射的是能被刀反弹的普通子弹。你现在先怎样试一轮？",
+          "scene": "普通子弹到刀刃之前",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_core",
+            "kzerov5_tutorial",
+            "kzerov5_firsthour"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜子弹与出刀轨迹何时相遇，开一小段慢动作观察再核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "练自己出刀反弹的一拍，只想比自己的上一回顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "用已经会的翻滚与斩击走一段，享受刀光、音效与动作连贯的回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "给确认可行的小房新增每次出刀前必须先完成一次翻滚的限制，实际按新规则处理这一房",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "只谈普通可反子弹，不要求弹反成功或禁慢动作，不用散弹、特殊能力判断水平。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV501.V1"
+        },
+        {
+          "text": "若还没练过弹反：眼前普通小房能用默认斩击、翻滚和已有投掷物处理，现在可重试这一房。你先做什么？",
+          "scene": "普通子弹到刀刃之前的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_core",
+            "kzerov5_tutorial",
+            "kzerov5_firsthour"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜滚到哪里会接近目标，再试一次核对落点",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "只练自己翻滚后接斩击的一下，比刚才连贯就够",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "直接玩一段熟悉的斩击与翻滚，享受节奏反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "在已确认只靠刀与翻滚也可通过的这房，自定禁止拾取投掷物，按新增限制实际玩一遍",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "只谈普通可反子弹，不要求弹反成功或禁慢动作，不用散弹、特殊能力判断水平。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前普通本体房间里有可拾的瓶子或刀具，门后与高处的对手位置已经看见，前进路线也已可处理。此刻先做什么？",
+          "scene": "门边的可投掷物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_core",
+            "kzerov5_firsthour"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己投出物件后接翻滚的一拍，只看自身改善",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用已经会的投掷、过门和斩击连过小段，享受碰撞与音效回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先沿这房仍没查看的可达高处看一眼，想知道空间另一面怎样接着",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先猜投掷物出手方向与门后目标怎样相交，实际扔一次核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "瓶刀是关内临时物件，不当永久配装或收藏；不把执行顺序练习标运营y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV502.V1"
+        },
+        {
+          "text": "如果还没用过投掷物：早期普通房间能用默认刀与翻滚通过，眼前有阶梯和已看清的位置。现在先做什么？",
+          "scene": "门边的可投掷物的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_core",
+            "kzerov5_firsthour"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己翻滚后转向出刀的一下，只跟自己的上一回比较",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "连续做已会的滚动与斩击，享受刀光和脚步回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "换一次翻滚后接斩击的时点，亲手体验不同的已有动作衔接",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "猜从阶梯下起刀的距离怎样接到上方，再试一次核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "瓶刀是关内临时物件，不当永久配装或收藏；不把执行顺序练习标运营y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已到Factory的风扇处，当前能启用慢动作看清叶片间隙，再通过这一段，旁边有安全起点可以重试。现在更想怎样投入？",
+          "scene": "厂房里的转动风扇",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_firsthour",
+            "kzerov5_interview"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已经试过的走法过一段，享受慢下的音乐回到常速与翻滚接上的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "接着过当前风扇去处理委托，想弄懂电话里那位科学家与任务到底怎么回事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先猜叶片间隙、启用慢动作与自己翻滚的先后，再试一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "练自己看清间隙后翻滚通过的一拍，只与刚才比较",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通本体风扇须慢动作，不写全程禁慢动作规则；慢放是战斗工具，不标舒缓h。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV503.V1"
+        },
+        {
+          "text": "还没到风扇的话：当前早期房有默认刀、翻滚和可用慢动作，能从本房起点重试。你现在先做什么？",
+          "scene": "厂房里的转动风扇的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_firsthour",
+            "kzerov5_interview"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用已经会的动作接一小段，享受音乐、刀光与脚步的回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "继续当前已开放房间，想接着弄懂委托与科学家的事情",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先猜翻滚起点会怎样改变结束位置，再试一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "练自己翻滚接起刀的一拍，只求比前一回顺",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通本体风扇须慢动作，不写全程禁慢动作规则；慢放是战斗工具，不标舒缓h。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你正从已开放的剧情检查点重看一段可回应的问答；已知道这处有可结束当前问答的回应，也可以等对方说完出现更多选项。此刻先怎样处理？",
+          "scene": "回应条还在红区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_release",
+            "kzerov5_interview",
+            "kzerov5_tutorial",
+            "kzerov5_replay"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用当前确实能结束这段问答的回应收尾，先回可重玩的动作段，想体验斩击与翻滚回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "等对方说完整，再从已出现的回答里追问，想接上人物与当前委托的信息",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先对某个回答会怎样改变随后一句话提出猜想，选它再看实际反馈核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "用当前已出现且能收尾的回应结束这段，再回已开放动作房，专练自己翻滚后转身出刀的一拍",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "对话等待、打断与局部反馈不直接推品德、身份或练习；练习选项要实际回到可用动作房专练具体衔接。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV504.V1"
+        },
+        {
+          "text": "若还没重看过剧情：最早的电话回应条正在进行，眼前可等对方说完，也可用已经出现的打断选项。你现在先做什么？",
+          "scene": "回应条还在红区的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_release",
+            "kzerov5_interview",
+            "kzerov5_tutorial",
+            "kzerov5_replay"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先完成当前通话已有的收尾回应，再进入随后动作段，想体验斩击、翻滚与音乐连贯发生的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先听完当前电话，再选已显示的问题，想弄懂委托的背景",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先猜现有某个回答会接出怎样的后话，再选它核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "用当前可收尾的回应完成通话，再到随后动作房专练自己翻滚接出刀的一小段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "对话等待、打断与局部反馈不直接推品德、身份或练习；练习选项要实际回到可用动作房专练具体衔接。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已到Studio 51并拿回默认刀，电梯有三个尚可选择的电影布景楼层，任务卡还没齐；可以自行决定层序。现在先怎么走？",
+          "scene": "Studio 51的三层布景",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_studio",
+            "kzerov5_interview"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先选没看过的一个布景层，想知道这间摄影棚还搭了什么空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "进入一层后先对眼前机关与通路提出猜想，动手核对它怎样连起来",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "任选当前可走的一层继续找任务卡，想接着弄懂V与自己这场冲突的后续",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先把三个已开放布景楼层的处理顺序排好，再按自己的行程逐层寻找任务卡",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "三个电影布景楼层可自选先后；排楼层与取任务卡的个人行程只记准备，不计收藏或自创规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV505.V1"
+        },
+        {
+          "text": "没到Studio 51的话：Factory普通小房当前能用默认刀与翻滚处理，也有安全阶面可观察。你此刻先做什么？",
+          "scene": "Studio 51的三层布景的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_studio",
+            "kzerov5_interview"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜翻滚与眼前位置怎样相接，再试一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "练自己滚过后转向出刀的一下，只看自身改善",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "用已经会的刀和翻滚连过熟悉小段，享受动作回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "换一次翻滚、转向与出刀的先后，亲手体验另一种已经会用的接法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "三个电影布景楼层可自选先后；排楼层与取任务卡的个人行程只记准备，不计收藏或自创规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已开放这段的重玩入口，当前一次清房后的录像正按正常速度播放，刚才用过慢动作。此刻先看哪一处、接着做什么？",
+          "scene": "正常速度播放的这一房",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_firsthour",
+            "kzerov5_tutorial",
+            "kzerov5_replay"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "找自己翻滚接出刀仍多停的一拍，再回已开关段练那一下",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先把这一遍动作与音乐完整看过，享受自己刚才操作变成连贯录像的回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "回到已开且确认不用慢动作也能完成的熟房，自定禁止启用慢动作，再按新限制玩一遍",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "对照子弹与刀的先后提出解释，再从已开入口重走到这段验证",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "正常速度录像不支持主动倒带；回已开放房间重玩，具体禁慢动作只在已确认可过熟房，不含必须慢动作的风扇段。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV506.V1"
+        },
+        {
+          "text": "如果还没留意录像或重玩入口：当前早期普通小房可从本房起点重试，默认刀、翻滚与慢动作都可用。现在先做什么？",
+          "scene": "正常速度播放的这一房的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_firsthour",
+            "kzerov5_tutorial",
+            "kzerov5_replay"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己翻滚后接跳斩的一拍，只跟刚才比较",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "重复已会的刀光与滚动，优先享受声音和动作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "给当前已确认不靠慢动作也可完成的熟房新增禁用慢动作的限制，只靠刀与翻滚实际试一轮",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先猜一个出刀位置为何会接到目标，再亲自核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "正常速度录像不支持主动倒带；回已开放房间重玩，具体禁慢动作只在已确认可过熟房，不含必须慢动作的风扇段。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你知道开场左上屋顶尸体处仍有未取的Prism Key，已确认能用现有跳斩回到那块台；右侧Factory入口也可走。此刻先往哪边？",
+          "scene": "开场左上方的Prism Key",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_key",
+            "kzerov5_firsthour"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜斜向跳斩为何能接回屋顶，再跳一次核对位移关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "练自己跳斩后落到上层平台的一拍，只看自身动作改善",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "回到已知钥匙处真正取走它，补上自己记着缺的这枚收藏",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先进入还没看过的Factory入口，想知道里面的空间与布置",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "Prism Key为真实早期收藏，剑仍需之后实验室；跳斩到高台说落台而非虚构抓边攀爬。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV507.V1"
+        },
+        {
+          "text": "如果没打算追钥匙：当前早期普通房里有可用默认刀、阶梯与翻滚，能从起点重试。你现在先做什么？",
+          "scene": "开场左上方的Prism Key的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_key",
+            "kzerov5_firsthour"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用已会的滚动与斩击穿过熟悉部分，享受动作和音效回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "换一次跳斩接翻滚的先后，亲手体验不同的已有动作衔接",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "先猜起刀方向怎样影响跳斩去向，再亲自核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "练自己跳斩后接翻滚的一小段，只与自己的上一回比",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Prism Key为真实早期收藏，剑仍需之后实验室；跳斩到高台说落台而非虚构抓边攀爬。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已回到一段能自由走动的熟悉公寓，草药茶已喝，可在沙发结束当天，当前没有异常桥段触发；你本人精力充足。电视可播放新闻，现在先做什么？",
+          "scene": "可以在沙发结束当天以前",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_firsthour",
+            "kzerov5_release"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走近还没仔细看过的厨房一角，想知道这间公寓还能看见什么细节",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先听完当前新闻，想把它与刚才委托、城市里的事接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先在熟悉公寓小段慢走一会，享受回到这处认得环境的安定感，暂不坐下结束当天",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先猜新闻报道的事件是否和刚才委托是同一件事，再听地点与经过核对线索",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "公寓电视、茶与沙发由PC首小时实玩核对；h只取玩家精力足的自由安定片刻，不从Zero睡觉或慢放推偏好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV508.V1"
+        },
+        {
+          "text": "若还没回到公寓：当前早期普通房仍能重试，默认刀、翻滚和前进出口都可处理。你此刻先做什么？",
+          "scene": "可以在沙发结束当天以前的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "kzerov5_firsthour",
+            "kzerov5_release"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用已经会的滚动与斩击走熟一段，享受动作、音乐与声音回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "继续当前已开放的房间，想接上电话委托中的事情",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先猜翻滚起点怎样影响刀能接到的位置，再试一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "练自己翻滚后转身出刀的一拍，只看自己的改善",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "公寓电视、茶与沙发由PC首小时实玩核对；h只取玩家精力足的自由安定片刻，不从Zero睡觉或慢放推偏好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想武士零普通本体里你真正重复过的一间房，哪种过程最像你愿意继续的原因？",
+          "scene": "回看一轮房间重试",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "kzerov5_core",
+            "kzerov5_firsthour",
+            "kzerov5_tutorial"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜投掷、翻滚或出刀与目标的关系，再实际试过核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "为自己的反弹、翻滚接刀或跳斩更顺，专练过一小段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "刀光、音乐与动作接在一起的反馈，本身让我又玩了一轮",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "给确认可行的熟房定过每次出刀前必须先翻滚的新限制，并真按这条自定规则玩过",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "只问真做过的过程，不从死亡、一击清房或是否用慢动作推水平。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV509.V1"
+        },
+        {
+          "text": "若只玩过最早几房：回想默认刀与翻滚中已经发生的一次重复，哪种更贴近？",
+          "scene": "回看一轮房间重试的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "kzerov5_core",
+            "kzerov5_firsthour",
+            "kzerov5_tutorial"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换过出刀位置，验证了自己对斩击距离的猜想",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "为自己的翻滚接出刀比前一回顺，重复过那一下",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "单是滚动、斩击与声音回馈合意，就又走过熟段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "自己换过翻滚后接出刀的时点，亲手体验过另一种已有动作接法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "只问真做过的过程，不从死亡、一击清房或是否用慢动作推水平。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想本体里一次确实由你决定的回查或停步，哪种经历更像？",
+          "scene": "回看自己追过的另一个信息",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "kzerov5_key",
+            "kzerov5_studio",
+            "kzerov5_release",
+            "kzerov5_interview",
+            "kzerov5_replay"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了看看未走过的可达高处或电影布景层，主动改过路线",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为了把人物与委托的事情接起来，等过已有对白说完再看后续选择",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先对回答或机关会产生的局部变化提出猜想，再从已开入口试过核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "为先前明确未取的Prism Key返回开场，把这枚钥匙真正补上",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "c真钥匙、w真实未知、s叙事、p验证分开；不把必经任务卡当收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV510.V1"
+        },
+        {
+          "text": "还没回查钥匙或到摄影棚也可回顾：想最早电话与普通房里已经发生的一次停留，哪种更像？",
+          "scene": "回看自己追过的另一个信息的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "kzerov5_key",
+            "kzerov5_studio",
+            "kzerov5_release",
+            "kzerov5_interview",
+            "kzerov5_replay"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把已有电话听完，想知道委托为何这样安排",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "换过翻滚或起刀位置，核对了自己对位移的猜想",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "为自己的斩击接跳跃更顺，重复练过那一小段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "查看过当前房间未走近的可达角落，想知道空间另一面",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "c真钥匙、w真实未知、s叙事、p验证分开；不把必经任务卡当收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想本体里一段你确实自己操作过的回应条问答，哪种投入更贴近？",
+          "scene": "回看自己怎样处理回应条",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "kzerov5_release",
+            "kzerov5_interview",
+            "kzerov5_tutorial",
+            "kzerov5_replay"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用当时可收尾的回应结束问答后，回已开放动作房专练过自己翻滚后转身出刀的一拍",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用当时确有的结束选项接着回动作段，主要想体验斩击、翻滚与音乐回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "为了接上人物背景和当前事件，等对方说完并看过后续回答",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "在已开放剧情重看中选过一个不同回答，核对了自己对局部后话的猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不由对话态度推品德、固定身份不计角色扮演；只有实际回到动作房专练才支持练习，不把普通等待选项计作训练。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV511.V1"
+        },
+        {
+          "text": "若只经历最早电话：回想已发生的电话回应与其后动作，哪种更像？",
+          "scene": "回看自己怎样处理回应条的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "kzerov5_release",
+            "kzerov5_interview",
+            "kzerov5_tutorial",
+            "kzerov5_replay"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "结束当时已有电话后，在随后动作房专练过自己翻滚接出刀的一小段，只看自身改善",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用当时已有的结束通话选项进入动作段，想接着体验刀光和翻滚的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "听完过已有电话，想弄明白科学家与委托的背景",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "选过一个已显示回答，接着看其后话来核对自己的猜想",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不由对话态度推品德、固定身份不计角色扮演；只有实际回到动作房专练才支持练习，不把普通等待选项计作训练。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "KZEROV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想本体里一次确实自行选择的停留，哪种经历最像？",
+          "scene": "回看愿意留在这一幕的原因",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "kzerov5_firsthour",
+            "kzerov5_key",
+            "kzerov5_release"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "即使不知道有何奖励，也查看过没走近的房间角落或电影布景",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "本人精力足、公寓可结束当天且无异常触发，仍自愿慢行过熟悉小段，享受回到认得环境的安定感",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为了接上城市新闻、委托与人物背景，看过当时可播内容或听过已有对白",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "为明确缺的Prism Key回过开场，并实际取走它",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "h不是慢动作、卡关喘息或剧情疲惫；真实钥匙不等于早期装备实验室剑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV512.V1"
+        },
+        {
+          "text": "如果还没回公寓：回想最早几房里已发生的一次自主选择，哪种最贴近？",
+          "scene": "回看愿意留在这一幕的原因的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "kzerov5_firsthour",
+            "kzerov5_key",
+            "kzerov5_release"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "听完过当前电话，想弄明白这场委托为何发生",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先猜出刀与翻滚位置怎样影响目标，再实际核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "为自己的跳斩接落地更顺，重复练过一个小段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "只是喜欢刀光、音乐与动作反馈，又玩过一遍熟路",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "h不是慢动作、卡关喘息或剧情疲惫；真实钥匙不等于早期装备实验室剑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "KZEROV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+0c2653daa808"
+}

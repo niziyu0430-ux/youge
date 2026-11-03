@@ -1,0 +1,911 @@
+{
+  "id": "sv",
+  "title": "星露谷物语",
+  "game_ids": [
+    "steam-413150"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按自己熟悉的体验回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "SV01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "SV01.V1",
+          "text": "雨水已经照料露天作物，今天多出一段不用浇水的时间。你先把农夫带去哪里？",
+          "scene": "不用浇水的雨天",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_MINES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "带好工具下矿井，继续找还没到过的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "去钓这个季节还缺的鱼，把惦记的记录补上",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "去镇上找想继续了解的居民，把人物故事接下去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "留在农舍和附近慢慢转，不给雨天再加一个目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "用同一空闲情境区分探索、补全、人物与舒缓。",
+          "interpretation_boundary": "前提明确为雨天露天作物；不出收益比较题。"
+        },
+        {
+          "id": "SV01.CORE",
+          "text": "照料完眼前的农田，还留有一段自由时间。先让农夫做哪件事？",
+          "scene": "照料之后的时间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿没认真走过的山路与林地走一段，看看会发现什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "整理本季惦记的鱼、作物或采集记录，先补一个缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "去镇上找已经想了解的居民，继续一段对话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "留在农舍和田边慢慢转，先不添新的目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "SV02.V1",
+          "text": "刚清出一块农场空地，材料够用，基本生活也已稳定。这次先怎么改这块地？",
+          "scene": "农场的一块新空间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "安排道路、围栏与建筑，先做出想要的整体样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把作物、加工和收取路线接起来，先整理日常运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "留给准备慢慢养大的动物或果树，先种下长期项目",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先定一个农夫生活主题，再按这个身份布置用途",
+              "signal": "role_player"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "建设农场也有审美、流程、培养与代入的不同理由。",
+          "interpretation_boundary": "不按赚钱多少或农场面积判断能力。"
+        },
+        {
+          "id": "SV02.CORE",
+          "text": "只整理已经有的农场空间，不需要新建筑。今天先改哪一处？",
+          "scene": "已有农场空间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "调整小路与现有物件的位置，做出自己喜欢的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把工具、田地和常走路线接顺，减少日常来回",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "留好一片愿意长期照料的作物，让投入慢慢留下变化",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先给农夫设想一种生活，再按这个主题安排空间",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "SV03.V1",
+          "text": "快换季了，社区中心收集包还有缺项，下一季的农场也需要准备。时间足够先做一件事，你先选什么？",
+          "scene": "临近换季的收集包",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CENTER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前能补的当季物品找齐，先完成惦记的那一包",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先整理换季所需的种子、机器和路线，让之后接着运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先去完成今天可继续的居民对话，把惦记的人物线接上",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "给这一天留出自由活动，缺项和换季准备之后再安排",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "区分补全、组织、叙事结果与自主节奏。",
+          "interpretation_boundary": "走Joja路线不是道德较低；无收集包体验需替代。"
+        },
+        {
+          "id": "SV03.CORE",
+          "text": "快换季了，仓库里已有一些收成，也留着几件惦记的事。今天先推进哪件？",
+          "scene": "换季的安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "补一项本季还没记全的作物、鱼或采集记录",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "整理现有种子、工具与路线，让下一阶段接着运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先去镇上把想听的人物对话接下去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "给今天留出自由活动，让季节慢慢过去",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "SV04.V1",
+          "text": "一位鹈鹕镇居民已经让你想继续了解，什么最容易让你主动去找他？",
+          "scene": "熟悉一位镇民",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想看更多对话和事件，理解他平时没显露的一面",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "喜欢以这个农夫的身份，维持自己在镇上的一段关系",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "看着关系一点点积累，想把这段投入延续下去",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把遇见他当成日常的一部分，熟悉的来往就很舒服",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "区分NPC叙事、代入、养成与日常。",
+          "interpretation_boundary": "NPC互动不当真人社交证据；不默认恋爱，不按送礼效率推断性格。"
+        },
+        {
+          "id": "SV04.CORE",
+          "text": "只回想已经见过的鹈鹕镇居民，不需要恋爱或特别事件，哪种来往最让你愿意继续？",
+          "scene": "镇民的日常来往",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一句新的对话，让这个人的经历多了一点后续",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "以自己心里农夫的身份，在镇上保持一段生活关系",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "看着熟悉程度一点点积累，让这段投入延续",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "在每天熟悉的路线里碰面，成为一种舒服的日常",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "SV05.V1",
+          "text": "已经够用的收入与补给都不催你，今天只想再留一个下午钓鱼。你怎样安排这一趟？",
+          "scene": "河边的钓竿",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑一种总容易跑掉的鱼，专门练它的拉扯节奏",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "去符合季节条件的地点，找还没记进图鉴的那一条",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "带上已有的鱼饵和浮标，比较几种搭配的体验",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "回熟悉的水边随意钓，不给这一下午设数量目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "钓鱼也可出于精进、补全和配装，不默认只有休闲。",
+          "interpretation_boundary": "辅助设置与钓鱼难度不作为能力或努力证据。"
+        },
+        {
+          "id": "SV05.CORE",
+          "text": "暂时不钓鱼，只用已有工具再过一个普通农场日。先把时间留给什么？",
+          "scene": "普通农场日",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "找一个自己还不顺的工具使用或行动细节，亲手练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "补一项惦记的当季采集物或作物记录",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "比较已有工具与安排，试一条不同的取材和行走路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "在农场附近随意活动，不给今天设收集数量",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "SV06.V1",
+          "text": "准备再下矿井，食物与背包都够这次使用。进电梯前先给自己留哪一个目标？",
+          "scene": "矿井电梯旁的选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_MINES",
+            "SV_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续往还没见过的区域走，看看会出现什么新发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "凑齐一批农场需要的矿石，让工具与加工继续升级",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "找一类熟悉敌人，把原先不顺的走位和攻击练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "盯住还没补上的几种矿物，整理这一趟的收集",
+              "signal": "collector"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "同一下矿行为区分探索、生产链、战斗掌握和补全。",
+          "interpretation_boundary": "不默认需通关，不考最佳层数或炸弹效率。"
+        },
+        {
+          "id": "SV06.CORE",
+          "text": "不进入矿井，也能用这一段时间为农场找材料。先怎么走？",
+          "scene": "矿井以外的取材",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿没认真看过的林地与山路走，寻找新的地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先凑一批当前能取得的木材或石头，让现有计划接着做",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "集中处理一个自己还不熟的工具操作，逐步做顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "整理还没收齐的采集记录，先补一个惦记的缺项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "SV07.V1",
+          "text": "社区中心收集包与Joja社区发展提供不同推进方式。先不选哪条更好，你更关心哪种体验？",
+          "scene": "社区修复的两条路线",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CENTER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "到不同季节和活动中凑齐物品，把缺项逐个补上",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "用喜欢的经营方式积累资金，再按安排购买改善",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "按照给农夫设定的生活立场，选择愿意走的路",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "留意修复之后，镇上的人和地方会怎样改变",
+              "signal": "story_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "问路线的吸引点，不要求道德站队。",
+          "interpretation_boundary": "不从路线选择推断现实善恶或政治价值观。"
+        },
+        {
+          "id": "SV07.CORE",
+          "text": "还没有走到社区修复的分支，只回想眼前的农场生活。哪种投入最值得你延续？",
+          "scene": "眼前的农场生活",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在不同地方找齐具体物品，看着缺项逐一补上",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "用已有的种植、加工或取材，让日常前后运转起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "按自己给农夫设定的生活，做出一条愿意扮演的道路",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "留意镇上人物说过的话，想知道他们之后怎样生活",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "SV08.V1",
+          "text": "露天农田到了冬季暂时空下来，你也不急着把每一天塞满。什么最吸引你接着住在农场？",
+          "scene": "不急着种满的冬天",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "重新安排道路、家具和建筑，做出想要的冬季样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "照料动物和已有的长期项目，看它们慢慢积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "去镇里看看还没经历的居民事件与对话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "保留喂养、散步和回家的熟悉日常，轻松过一段时间",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "避免把冬季等同于无法玩，区分合理的停留理由。",
+          "interpretation_boundary": "不声称冬天完全不能种植；题干限定露天农田。"
+        },
+        {
+          "id": "SV08.CORE",
+          "text": "还没过冬，只回想当前季节已经熟悉的农场，哪种停留最让你愿意继续？",
+          "scene": "当前季节的停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "整理屋内与田边的画面，做成自己喜欢的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "照料已有的长期项目，让它们一点点留下变化",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "去镇上接一段还想听的人物对话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "做熟悉的照料与散步，让一天从容过去",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "SV09.V1",
+          "text": "准备增加几台加工机器，材料和位置都够，但这次只先改一处。你先动哪一环？",
+          "scene": "加工机器的摆放",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先改原料、加工与收取之间的路线，处理日常卡住的环节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先调整机器与建筑的位置，让这一片的画面更符合想法",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先确定这座农场的生活主题，再选择相应的产品与空间",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "先扩一项一直喜欢的长期项目，让它继续慢慢长大",
+              "signal": "growth_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "把流程、视觉、代入和长期经营拆开。",
+          "interpretation_boundary": "不按收益、机器总量或查不查布局评价玩家。"
+        },
+        {
+          "id": "SV09.CORE",
+          "text": "还没有加工机器，只整理已经在使用的工具、田地与存放位置。这次先改哪件事？",
+          "scene": "工具与田地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把取工具、照料和收取的路线接顺，处理日常卡住的一环",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "调整现有物件的位置，让农场看起来符合自己的想法",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "按农夫的生活主题，决定这一角要怎样使用",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "先扩大一项一直喜欢照料的作物，让它慢慢积累",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "SV10.V1",
+          "text": "和熟人在同一座农场上线，今天都有空。开始这个游戏日时，你先提出哪种安排？",
+          "scene": "多人农场的一天",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "问好谁照料、谁下矿，把今天共同想做的升级排清",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "各做各的边玩边聊，出现有趣状况时再聚到一起",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "约一条都愿意尝试的经营限制，看看农场会怎样变化",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "留出各自自由活动的时间，只约好之后回家碰面",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "问同游安排，不把分工、聊天或独处写成正确与错误。",
+          "interpretation_boundary": "单人玩家需要替代；NPC关系不替代真人合作答案。"
+        },
+        {
+          "id": "SV10.CORE",
+          "text": "一直单人经营农场，今天也准备自己过一个游戏日。先怎样安排？",
+          "scene": "单人农场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把照料、取材和升级目标排好，按顺序接着推进",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "去一条没认真走过的林地或镇上路线，看看新发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "给自己定一条新的种植或取材约定，试不同的农场生活",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "留一些随意活动的时间，不把今天全部排成任务",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "SV11.V1",
+          "text": "明天是星露谷展览会，库存足够让你自行安排准备。今晚先做什么？",
+          "scene": "星露谷展览会",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_FAIR"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较现有展品，准备一次自己想争取好名次的展示",
+              "signal": "festival_contest_goal"
+            },
+            {
+              "id": "B",
+              "label": "列出还惦记的节日奖品，安排明天先补哪一项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "挑几样最能代表今年种养与手艺积累的物品带去",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "不额外安排准备，明天去镇上逛一圈就好",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "区分节庆里的竞赛目标、补全、积累和氛围。",
+          "interpretation_boundary": "竞赛选项先只记行为，不能直接等同于真人PvP排位动机；不考得分。"
+        },
+        {
+          "id": "SV11.CORE",
+          "text": "还没有参加展览会，只整理这一季已有的收获。今晚先做哪件事？",
+          "scene": "这一季的收获",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把工具和收取步骤排好，给下一次经营留一套安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "整理还没齐全的作物与采集记录，先补一处缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "留几样代表这段照料成果的东西，看看积累怎样留下来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先不增加整理任务，在农场与镇上逛一圈就好",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "SV12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "SV12.V1",
+          "text": "农场已能维持自己想要的生活。继续过下一年时，哪件事最让你愿意留下？",
+          "scene": "下一年的农场",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE",
+            "SV_CENTER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把种植、养殖和加工再接顺一轮，看农场运转起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让喜欢的动物、果树和关系继续留下长期变化",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把还没收齐的鱼、矿物或收集包逐项完成",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "继续做熟悉的小事，季节怎样过去都慢慢体验",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "用长期生活核对主要吸引点，不误套长流程重开。",
+          "interpretation_boundary": "与建造和养成题有信号重复，计分时须查曝光偏差。"
+        },
+        {
+          "id": "SV12.CORE",
+          "text": "只回想当前这个季节已经有过的生活，哪件事最让你愿意接着过下一天？",
+          "scene": "愿意继续的一天",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "种植、取材与收取逐渐接顺，日常越来越能运转起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "照料的作物与关系留下积累，愿意继续看它们成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "惦记的鱼、作物或采集记录，一项项被补完整",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "继续做熟悉小事，让这座农场保留自己的节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+b6e5dd541fd4"
+}

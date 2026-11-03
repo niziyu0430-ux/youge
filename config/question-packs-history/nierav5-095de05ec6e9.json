@@ -1,0 +1,931 @@
+{
+  "id": "nierav5",
+  "title": "尼尔 机械纪元",
+  "game_ids": [
+    "steam-524220"
+  ],
+  "scope": "本体已玩角色与区域；2B武器组、9S黑客分别有基础动作替代",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "插件芯片、Pod、武器故事与访问点属于机械纪元；不移植人工生命的白之书、言灵或钓饵。",
+    "9S黑客与2B武器组均有当前角色基础动作替代；不要求后续角色、结局或DLC竞技场。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体已玩角色与区域；2B武器组、9S黑客分别有基础动作替代",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "NIERAV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "回到抵抗军营地，当前可以整备，也有已接支线与没走过的可达区域。主线暂时不紧迫，你先做什么？",
+          "scene": "抵抗军营地再出发",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "找支线里已经认识的人，听清这次请求背后的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "沿还没亲自走过的出口，看看废墟城市的另一片地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "把商店、材料需求与下一趟路线接成一次整备",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "有精力也能继续做任务，仍愿在熟悉营地慢慢走一段，暂不加目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "任务NPC不算真人社交，主动熟悉日常与被迫停下休息分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV501.V1"
+        },
+        {
+          "text": "还没接很多支线，只在最早已可走动的营地与附近废墟整备，你先给时间哪件事？",
+          "scene": "抵抗军营地再出发的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已经触发的人物交流听清楚",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "去看看当前能走、但自己还没到过的街角",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "理顺现有物品、商店和下一处任务去向",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "即使能出发也先在熟悉安全角落按自己的节奏走看",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "任务NPC不算真人社交，主动熟悉日常与被迫停下休息分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前用2B，已有几件可用武器，也已经会安排轻重攻击与两组切换。下一场熟悉战斗只认真调一组，你先按什么选？",
+          "scene": "轻重攻击换一组武器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_BATTLE",
+            "NA_RANGED_GUIDE",
+            "NA_AUTO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定熟悉组合，练清切换到回避反击的一次衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "挑最想亲手体验的动作，把挥击、移动与命中连续接上",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "换一组原来少搭的武器，让同一敌人出现另一种接法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "让轻重武器的距离、速度与Pod作用互相补位",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "限定2B可用武器组；不把9S的黑客键写成同一套重攻击。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV502.V1"
+        },
+        {
+          "text": "不按2B武器组作答，只用自己当前角色已有的近战与Pod；眼前是已能通过、也已确认普通Pod远射能伤到的敌人小段，不含要求近战破盾的目标。你先做什么？",
+          "scene": "轻重攻击换一组武器的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_BATTLE",
+            "NA_RANGED_GUIDE",
+            "NA_AUTO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定已有动作，练一次回避后再出手的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把移动、挥击与Pod命中接成顺畅反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "若辅助会自动代出近战，先停用这项效果；再规定这段禁止近战，只准当前Pod远射与移动，亲自按新限制试一段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "让近战距离与Pod远射分别接住合适场面",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "限定2B可用武器组；不把9S的黑客键写成同一套重攻击。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "已经拥有几种插件芯片，容量只够先放一组；现在不追最强模板，现有配置也能继续。你先怎样安排？",
+          "scene": "芯片容量留给谁",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_BATTLE",
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "装上一种自己平时不选的效果，认真试一段不同规则的战斗",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "保留大部分熟悉设置，只练一个总做得仓促的回避或切换时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "让芯片触发与武器、Pod程序形成互相支持的关系",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "读清一项不懂的条件，去熟悉敌人前验证它怎样生效",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "容量取舍是本作真实机制，不把当次回血或装上芯片自动算长期养成。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV503.V1"
+        },
+        {
+          "text": "还没整理过很多芯片，只能用初期已有武器和Pod；给下一场一个重点，你先选什么？",
+          "scene": "芯片容量留给谁的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_BATTLE",
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一次平时少用的起手与移动次序",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "固定熟悉武器，把一次回避后出手练稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "让近战和Pod攻击各自在合适距离接力",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "对照动作说明与敌人反应，解释一项功能怎样起效",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "容量取舍是本作真实机制，不把当次回血或装上芯片自动算长期养成。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "已到能强化现有武器的商店，材料允许先投一件；武器菜单还有已开放却没读完的故事。你先把时间花在哪里？",
+          "scene": "武器强化也打开了故事",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_BATTLE",
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己已列的武器收藏清单，先补一个明确缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "继续强化从早期就在用的那件，让这份投入有延续",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "读完目前已经开放的武器故事，想知道器物背后是谁的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "比较它与另一件武器、Pod的距离和动作，整理一套配合",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "武器故事随强化开放；不保证初期能完成全部等级或强制隐藏锻造地点。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV504.V1"
+        },
+        {
+          "text": "还没强化过武器，只有最早已拥有的几件；停下来整理时你先做什么？",
+          "scene": "武器强化也打开了故事的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_BATTLE",
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把自己已得到但尚未归入清单的一件武器记录补齐",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "看清常用武器当前可走的强化条件，给之后持续投入留一个方向",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "读当前已经开放的一小段武器文字",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "比较已有武器与Pod如何在远近距离互相接上",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "武器故事随强化开放；不保证初期能完成全部等级或强制隐藏锻造地点。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "如果已经用9S成功进入过黑客小游戏：眼前又有一类熟悉可侵入目标，正常交战也能继续。你先把这次尝试用在哪里？",
+          "scene": "9S的一次黑客入口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练稳小空间里移动、射击与躲弹的一次衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "观察屏障、弹道与目标的关系，自己推通可走路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把突破、命中与回到外部交战的反馈连续接起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "改变一段原先固定的移动与处理次序，试一个不同接法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "黑客属于已解锁角色与适用目标；不假定所有主角都能随时侵入。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV505.V1"
+        },
+        {
+          "text": "没有用过黑客，只回到当前主角已能通过的一段普通近战与Pod交火，你先想做什么？",
+          "scene": "9S的一次黑客入口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定已有配置，练一次看清攻击后回避再出手",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看敌人弹道、障碍与自己站位，解释哪边还有通路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "让移动、挥击与Pod射击不断开，体验连续回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "从平时不进的一侧接近，试一次不同的起手次序",
+              "signal": "route_variant"
+            }
+          ],
+          "design_purpose": "黑客属于已解锁角色与适用目标；不假定所有主角都能随时侵入。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "已经在可钓鱼的水边用过Pod，当前任务允许停留，仍有精力也能继续前进。再留一段时间，你先用什么目的抛一次？",
+          "scene": "把Pod投进水里",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己记下的鱼种目标，给还没钓到的一类留收集记录",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "把钓上物品的出售或材料用途接到之后商店整备",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "观察不同水面与这次钓上物的关系，验证自己的一条猜想",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "按舒服节奏在熟悉水边钓一会，暂时不加新的进度要求",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "机械纪元用Pod钓鱼，不套用人工生命的钓饵与拉竿系统；不是技能或概率考试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV506.V1"
+        },
+        {
+          "text": "没有钓过鱼，只在最早的营地与已清静废墟有一段空档，你先做什么？",
+          "scene": "把Pod投进水里的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "整理自己已经找到的一件物品，补上预先记录的收藏缺项",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "把当前拾取、出售与下次出发需要排成一趟",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "对照刚见过的装置与可走通路，解释一处没弄清的关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "本可以继续做任务，仍愿在熟悉安全路段慢慢走一会",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "机械纪元用Pod钓鱼，不套用人工生命的钓饵与拉竿系统；不是技能或概率考试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "已经用过营地的点唱机，当前能选择已有曲目及人声、曲调等呈现方式。旁边人物与商店也可接触，你先用这点时间做什么？",
+          "scene": "营地里自己想留下的声音与画面",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "即使有精力和可推进任务，也愿按熟悉音乐在营地慢待一会，不添目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "把商店、材料与下一处去向理成清楚的整备行程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "自己挑曲目与呈现方式，让营地响成心中这段旅程想表达的听觉气氛",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "听完当前已经触发的人物交流，把营地居民的事情接上",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "审美表达来自主动选择呈现方式；只喜欢音乐本身不自动支持a。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV507.V1"
+        },
+        {
+          "text": "没用过点唱机，只在当前可走动的营地和废墟有一点时间，你先做什么？",
+          "scene": "营地里自己想留下的声音与画面的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "有目标也能出发，仍愿在熟悉安全角落按舒服节奏停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "整理手头材料、出售物与下一趟要去的地方",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "选择人物、Pod与建筑残骸的站位视角，留一张自己想表达的废墟画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把当前已经出现的一段NPC对话听完整",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "审美表达来自主动选择呈现方式；只喜欢音乐本身不自动支持a。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "当前已开放访问点运输，几处地点也确实还能回访；有一处已知任务缺项，另有没走过的可达通路。先去做什么？",
+          "scene": "访问点与仍未走过的路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_SYSTEM",
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回已确认的位置补上自己惦记的任务或收藏缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "进那段陌生通路，想亲眼看看废墟另一片地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照当前地图、地形与访问点，弄清几处区域怎样相接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把回访、商店与当前任务地点接成一趟方便行程",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "运输按故事阶段开放；不许诺所有地区在任何章节都能自由回访。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV508.V1"
+        },
+        {
+          "text": "尚未开放运输，只能在当前区域步行，旁边也有陌生通路和一处已知未取物品；先做什么？",
+          "scene": "访问点与仍未走过的路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "NA_SYSTEM",
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回已知位置拿到那件明确惦记的物品",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "走进那条当前可达却没看过的路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照地形与门口，推通几条步行路线的连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把取物、返回营地与继续目标安排在一趟",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "运输按故事阶段开放；不许诺所有地区在任何章节都能自由回访。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想一次自己打得满意的近战与Pod交火，最让你满足的是哪种实际体验？",
+          "scene": "武器与Pod真的互相接上",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "NA_BATTLE",
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "武器、Pod程序与芯片效果互相支持，形成了自己的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "连续回避、挥击和远射接在一起，动作很快得到回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "一个原先总会仓促的回避反击或切换时机，经练习变得能掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "自己调过近战、回避与Pod开火的先后，亲手体验了另一种已会动作的接法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "不以难度、自动模式或角色选择判断能力；只回顾本人使用过的内容。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV509.V1"
+        },
+        {
+          "text": "只回想最早用基础武器和Pod打过的一场，哪部分最有分量？",
+          "scene": "武器与Pod真的互相接上的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "NA_BATTLE",
+            "NA_SYSTEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "近战和远射各自补上另一方不方便处理的距离",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "移动、挥击与命中连成顺手的一段回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "自己曾把躲开后出手的时机单独反复练过，后来更能主动做出来",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "改变一次原来固定的接近与开火次序，让同一敌人有了新展开",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "不以难度、自动模式或角色选择判断能力；只回顾本人使用过的内容。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己已经经历的一段人物或机械生命体支线，哪种已做过的事最让相遇有分量？",
+          "scene": "机器与人造人的相遇",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "NA_SYSTEM",
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先走到当前可达的委托现场，查看周围入口与机器位置，再回来接人物的请求",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "把任务文字、眼前生活痕迹与人物的话对照后，对事情有了自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己选过人物、机器和废墟的站位视角，用画面呈现这次相遇带给自己的主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "听完对话与后续请求后，这些相遇逐渐接出了具体的人物经历",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "剧情人物不计真人关系，现场查看不加身份分；固定过场不冒充任意可改写的分支。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV510.V1"
+        },
+        {
+          "text": "还没深入支线，只回看最初在废墟与营地已经发生的一小段，哪点最让你记住？",
+          "scene": "机器与人造人的相遇的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "NA_SYSTEM",
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先查看废墟里当前可达的出入口与机器位置，再回营地或继续前进",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "眼前痕迹与已听信息接上，让陌生世界有了自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "曾用站位与当前镜头挑出人物和机器的画面，整理成一组自己想表达的旅途记录",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "几句话让自己在意已遇见的人接下来怎样",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "剧情人物不计真人关系，现场查看不加身份分；固定过场不冒充任意可改写的分支。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回顾已做过的武器强化与整备，哪种实际积累最让你满足？",
+          "scene": "一路使用的武器留下了什么",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "NA_SYSTEM",
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "强化后的武器与已有芯片、Pod程序真正接成了互相支持的组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "材料、商店与几处任务地点被自己安排成了一条顺畅的准备流程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "从早期在用的那件武器，随着材料投入留下了持续变化",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己预先列出的武器收藏或强化目录缺项，终于补齐了一项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "成长看同一存档可延续的投入，不将一次恢复状态当培养。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV511.V1"
+        },
+        {
+          "text": "还没强化过武器，只回顾最早整理已有装备的一次经历，哪部分最有分量？",
+          "scene": "一路使用的武器留下了什么的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "NA_SYSTEM",
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "基础武器与Pod不再各用各的，开始有互补作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "当前物品、出售与下一趟准备终于有了清楚先后",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "同一个角色在实际战斗升级后，留下了能继续延续的等级变化",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "一件已拿到的武器被补进自己明确记着的收藏清单",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "成长看同一存档可延续的投入，不将一次恢复状态当培养。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "NIERAV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回看当前已经走过的机械纪元旅途，哪一种实际留下的经历最有分量？",
+          "scene": "废墟旅途的一页记录",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "NA_SYSTEM",
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑选过人物、Pod与废墟结构的构图，让旅途记录有了自己想表达的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己多走过一条可达通路，原先陌生的废墟有了具体认识",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "人物的几次请求与来往，让这个机器世界不再只是战场",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "有精力也有目标可做时，自己仍在熟悉营地或水边主动慢待过一段",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "不要求多周目、全部结局或存档删除选择；回顾当前实际经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV512.V1"
+        },
+        {
+          "text": "只玩过最早废墟与营地，回看这一小段实际经历，哪点最留住你？",
+          "scene": "废墟旅途的一页记录的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "NA_SYSTEM",
+            "NA_BATTLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用自己选的站位和视角留下过一组人物与机器同框的主题画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己走进主路外一处陌生角落，亲眼看见了未知细节",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "最初几次人物交流让自己记住了他们为何还在这里",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "即使可以出发，仍曾按舒服节奏在熟悉安全地方慢走停留",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "不要求多周目、全部结局或存档删除选择；回顾当前实际经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "NIERAV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+095de05ec6e9"
+}

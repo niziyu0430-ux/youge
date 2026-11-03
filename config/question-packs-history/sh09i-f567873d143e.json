@@ -1,0 +1,1466 @@
+{
+  "id": "sh09i",
+  "title": "太阳港",
+  "game_ids": [
+    "steam-1432860"
+  ],
+  "scope": "PC 正式3.1.3b本体；本人在单人与联机共同核心中已开放的农场、任务与冒险",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "没有体力条；法术仍需当前魔力和已学技能，水壶与雨云不套别作喷灌。",
+    "季节作物效果只在开启且已遇见时问；Snaccoon季节请求不继承上年部分投入。",
+    "只用本体已拥有外观和已触发剧情，不要求可选DLC。个人经验背包可沿用单人与联机，不为菜单新增重复题目路径。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "当前角色已有的魔法农场生活",
+      "initial_variants": {
+        "SH09I01": "SH09I01.DEFAULT.V1",
+        "SH09I02": "SH09I02.DEFAULT.V1",
+        "SH09I03": "SH09I03.DEFAULT.V1",
+        "SH09I04": "SH09I04.DEFAULT.V1",
+        "SH09I05": "SH09I05.DEFAULT.V1",
+        "SH09I06": "SH09I06.DEFAULT.V1",
+        "SH09I07": "SH09I07.DEFAULT.V1",
+        "SH09I08": "SH09I08.DEFAULT.V1",
+        "SH09I09": "SH09I09.DEFAULT.V1",
+        "SH09I10": "SH09I10.DEFAULT.V1",
+        "SH09I11": "SH09I11.DEFAULT.V1",
+        "SH09I12": "SH09I12.DEFAULT.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "SH09I01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你在Sun Haven农场已有待浇作物、水壶、镰刀和成熟可收的地，已有加工器与恢复魔力食物可用；Rain Cloud已学且魔力足，种子材料够。本作无体力条，这轮先做什么？",
+          "scene": "水壶与已经学会的雨云",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_FARM",
+            "SH9I_RAIN",
+            "SH9I_31"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已经学会的雨云装入当前可用法术槽并亲自施放，体验它经过现有作物的一次浇水",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "把种子、收成、加工、卖出回款与再买种和恢复魔力的食物连着照看几轮，依实际存量再改安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "带镰刀连续收当前成熟作物，想体验自己的挥动与成片收获反馈接在一起",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前季可种的已有种子和已开放加工配方，再决定这一轮用什么",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "无体力不等于法术无条件；已会且魔力足才试雨云。f是玩家镰刀输入，不是看自动机器产出；多轮物料/回款反馈才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I01.DEFAULT.V1"
+        },
+        {
+          "text": "还没雨云时，初始农场已有可浇作物与能收的一小片成熟小麦，水壶可去水边装水，镰刀也已可用；当前有种子可继续播。这轮先做什么？",
+          "scene": "水壶与已经学会的雨云的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_FARM",
+            "SH9I_RAIN",
+            "SH9I_31"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手装水后给眼前一格作物浇水，试这一项当前操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "排清去水边补水、回田消耗壶中水浇这些地块、再返回补水的路线与先后，并照着做",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "用镰刀连续收眼前成熟小麦，想体验挥动与收获反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先看当前地块、作物和手头种子的状态，再决定从哪处动手",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "无体力不等于法术无条件；已会且魔力足才试雨云。f是玩家镰刀输入，不是看自动机器产出；多轮物料/回款反馈才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I01.DEFAULT.ALT1"
+        },
+        {
+          "text": "一格未成熟作物占着你想调整的田块，现有锄头可取消这格并返种；旁边有合法可耕空地，返还的种子在当前季仍能播。你还没动手，这轮先怎么处理？",
+          "scene": "把未成熟作物还原为种子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_FARM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接用当前锄头取消这一格，亲手试一次返种操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "排清取消旧格、锄新格、把返还种子放上工具栏再播下的顺序，然后亲手尝试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先核对这格作物、相邻地块与已有种子的当前状态，再决定是否移动",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有锄头取消地块的说明，再亲手继续",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "Sun Haven未熟作物可由锄头取消返种，不套他作铲除即损失；已知规则不计p/i，操作顺序无路线恢复时不套tool_operation_plan。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I01.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前是夏季，你开着季节作物效果，一片作物已出现会暂停生长的火焰效果；它不会直接烧毁作物。水壶有水，雨云已会且魔力够，当前季稻草人与田边装饰也可做。这轮先做什么？",
+          "scene": "当前开启的夏季作物效果",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_FARM",
+            "SH9I_RAIN",
+            "SH9I_STORE",
+            "SH9I_SEASON"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把现有雨云装入法术槽并实际施放，试用这一项已有配置处理眼前作物",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "按自己的“夏日魔法田园”主题，实际做出并摆放当前可做的当季稻草人与田边装饰",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先查看作物、季节效果与现有材料的当前状态，再决定处理顺序",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "直接给当前一处着火作物用水壶灭火，亲手处理这一次操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "题干已说明暂停生长，不再拿复述原因计p；季节效果与害虫不是同一机制，关闭这项或未遇过有基础替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I02.DEFAULT.V1"
+        },
+        {
+          "text": "尚未使用季节效果时，Anne 的初始小麦任务仍有可做部分；田里已有几格小麦，手里有当前季能播的小麦种子、可用空地、锄头和水壶。这轮先做什么？",
+          "scene": "当前开启的夏季作物效果的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_FARM",
+            "SH9I_RAIN",
+            "SH9I_STORE",
+            "SH9I_SEASON"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看现有小麦、种子和地块是否已浇的状态，再决定先浇还是先播",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排清去水边装水、回田浇已有地块和把剩余水留给新播区的路线与先后，再照着做",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "用现有锄头把一格当前可用空地翻好，再播已有种子，亲手试这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "按当前已列小麦目标亲手翻土播种，推进这项目标的可做部分",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "题干已说明暂停生长，不再拿复述原因计p；季节效果与害虫不是同一机制，关闭这项或未遇过有基础替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I02.DEFAULT.ALT1"
+        },
+        {
+          "text": "当前是秋季，季节作物效果开着，田里有几处已经出现、可用现有斧头清掉的荆棘；作物状态和手头材料能看，本轮没有急任务。先做什么？",
+          "scene": "秋天已经缠住作物的荆棘",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_ED_EFFECTS",
+            "SH9I_FARM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看这批作物、地块效果与现有材料的状态，再决定处理哪里",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "在仍有可清目标时主动练斧头对准与出手，重点是熟悉这次输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有秋季效果与工具说明，再继续亲手处理",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "用当前斧头实际清掉一处已出现荆棘，亲手试这次操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "秋季实际用斧，不照搬夏季灭火或冬季敲冰；作物不会因斧清荆棘被当成熟作物收掉。练习允许没进步。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I02.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你在Sun Haven矿山有当前适配的锻造钥匙，面前矿门仍未永久打开，镐与补给可用；门后未细看，当前矿区也可能出自己真正未得的一件馆藏宝石。这轮先做什么？",
+          "scene": "临时钥匙与永久开门",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_MUSEUM",
+            "SH9I_CURRENT",
+            "SH9I_MINE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为博物馆一块自己确实从没得过、已核对当前矿区可能出的宝石，实际采掘寻找，不要求本次找到",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先排用这把钥匙开门、沿可达矿层采料和回出口的路线，把钥匙用后消耗也纳入安排，再亲自照着做",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "直接在这道符合条件的门上用已有锻造钥匙，亲手试一次永久开门操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "进入当前能开的下一层，想发现自己未细看的矿洞样子，不为特定掉落作保证",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "锻造钥匙一次永久开门0，不叫成长；未得宝石实际追求c，未知矿层w。SunHaven不用别作体力消耗规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I03.DEFAULT.V1"
+        },
+        {
+          "text": "还没锻造钥匙时，你只到初期矿层，手里有这次能用的生锈钥匙，镐与现有恢复物品可用，近处有当前能敲矿石。这轮先做什么？",
+          "scene": "临时钥匙与永久开门的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_MUSEUM",
+            "SH9I_CURRENT",
+            "SH9I_MINE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清用生锈钥匙开门、去可达矿层敲矿和回出口的路线，把这把钥匙用后消失纳入安排，再照着走",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有矿山钥匙与操作说明，再继续自己的尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "直接用这把当前生锈钥匙开一次符合条件的矿门，亲手试这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "去看当前新开矿层里自己还没走过的可达地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "锻造钥匙一次永久开门0，不叫成长；未得宝石实际追求c，未知矿层w。SunHaven不用别作体力消耗规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I03.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已经到过一处挡路的Ore Muncher，它的当前材料要求已显示；现在农场准备再去，所需整套矿石等材料都已有，个人储物箱可取放，通往它的矿层已开放。先做什么？",
+          "scene": "准备把矿怪要的物资带去",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_MINE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从箱子取出本轮所需矿物、存回不用的已有物品，调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "排清在农场取现有材料、走到已开放矿层交付和回程的先后，再照着做",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对它已经显示的材料种类与数量条件，再决定这轮是否带去",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "带已有整套合格材料去当前矿怪处交付，把推进这个已出现通路目标作为重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "这是矿怪材料关口，不是把锻造钥匙套到所有门；要求已知不硬p。单次交付/准备全0，不当持续研究或收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I03.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你遇到一只当前季的 Snaccoon，要求和玩偶奖励已显示，手里已有一部分可交所需物，剩余可在当前采集或制作；这只玩偶自己还从未得到，附近另有一条自己没看过的可达小路。没有要赶的主线，这轮先做什么？",
+          "scene": "季节 Snaccoon 当前要的东西",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_SNACCOON",
+            "SH9I_31",
+            "SH9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "绕去附近另一条自己还没看过的可达小路，只想发现那里，先不围着这只安排",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先核对它当前显示的所需物、已交进度和奖励，再决定今天交多少",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "为补上自己从未得到的这只玩偶，实际去筹当前所需食材和物件并尝试交付，不要求本轮完成",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "按当前已列请求，把手头已够的一部分所需物实际交上去，把推进这项请求作为重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "玩偶必须真实未得且实际追求才c；季节Snaccoon每年重置，不许写上年部分投入一直保留。请求推进0，不用关卡/道德优劣判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I04.DEFAULT.V1"
+        },
+        {
+          "text": "初期农场出口的 Farmer Snaccoon 当前能互动，要求已显示，手里有它当前接受的一部分苹果或小麦，另一条已可达镇路也能走。这轮先做什么？",
+          "scene": "季节 Snaccoon 当前要的东西的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_SNACCOON",
+            "SH9I_31",
+            "SH9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已经看过的 Snaccoon 和已取得食材信息补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "先查看它当前显示的要求与已交进度，再决定怎样安排",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "直接把手头当前符合要求的一部分食物交给它，亲手试这次交付",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "沿另一条自己没走过的可达镇路去看看，不为奖励作保证",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "玩偶必须真实未得且实际追求才c；季节Snaccoon每年重置，不许写上年部分投入一直保留。请求推进0，不用关卡/道德优劣判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I04.DEFAULT.ALT1"
+        },
+        {
+          "text": "当前冬季，你已能走到Kitty店西侧温泉，一只泡暖的Snaccoon现在可以普通互动，却没有索要物资；旁边另有没细看过的可达路，普通PC截图也可用。先做什么？",
+          "scene": "冬天温泉里的那只Snaccoon",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_SNACCOON",
+            "SH9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已经看见的温泉与Snaccoon信息补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "对这只Snaccoon使用当前互动，亲手查看它泡暖时出现的现场提示",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "按自己的冬日暖泉主题，实际调整自己的站位与画面时机，用PC截图作构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先去旁边那段自己没细看过的可达路，发现那一边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "它不索物，互动只出现泡暖提示，不虚构可对话人物、喂食目标、奖励或真人社交；a是实际取景，不只欣赏。无需取得任何玩偶或后期法术。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I04.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "博物馆 Fishing Bundle 还缺一件你确实没钓到过的旧物，当前水域能出这类旧物，钓竿可用；附近也有自己未仔细走过的地。今天不赶任务，你先投入哪里？",
+          "scene": "博物馆仍缺的水中旧物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_MUSEUM",
+            "SH9I_FISH",
+            "SH9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际带钓竿到当前水域继续抛竿，想补上这件未得旧物，不要求这次钓到",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "转去附近没细看过的可达地方，只想发现它的样子",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "在这里反复练浮标沉没时提钩、小游戏标记进目标区时确认，重点是练熟输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经取得的鱼或水中旧物说明补几句信息记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "FishingBundle旧物要钓竿，不用BubbleNet代替；未得缺项追求c和已有物记录0分开。鱼种不用别作的日内时段或天气条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I05.DEFAULT.V1"
+        },
+        {
+          "text": "还没逛过博物馆时，你已有可用钓竿，初期水边能看见鱼影，今天还有空闲。这轮先做什么？",
+          "scene": "博物馆仍缺的水中旧物的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_MUSEUM",
+            "SH9I_FISH",
+            "SH9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练抛竿、等浮标完全沉下再提钩与确认条输入，重点是熟悉操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "直接朝眼前可钓鱼影抛一竿，亲手试这一次，不要求钓上来",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "连续做几次当前允许的抛竿和提钩，想体验动作与浮标反馈接上的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有钓竿和钓鱼小游戏说明，再继续亲手试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "FishingBundle旧物要钓竿，不用BubbleNet代替；未得缺项追求c和已有物记录0分开。鱼种不用别作的日内时段或天气条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I05.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已学会Bubble Net，当前魔力够尝试数次，已有钓竿也可用，眼前水里有几处可捕普通鱼影；这轮不找博物馆旧物。你更想怎样投入？",
+          "scene": "已有气泡网的水边",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_ED_BUBBLE",
+            "SH9I_ED_FISHPLAYER",
+            "SH9I_FISH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这项已会的气泡网装进当前法术槽并亲自施放，试它这次怎样发挥",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已有钓竿与已会气泡网的操作和魔力条件，再决定用哪种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "亲自连续施放当前够魔力的气泡，主要想体验指向、出手与法术即时反馈接上的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "用现有钓竿主动重复练浮标完全沉下后的提钩与确认时点，重点是熟悉输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只在法术已会且当前够施放时用；气泡是玩家直接施法，不捏能出FishingBundle旧物。t/f均不要求捕到或表现提高。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I05.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "当前 Salon 已可使用且费用可付，你已有几件本体衣物可搭、几件已拥有且可摆的农舍外装饰，眼下能编辑现有农舍外观。没有紧迫事件，这轮先做什么？",
+          "scene": "Salon 与自己已有的外观",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只改一次当前可用的发色或发型设置，亲手查看这一次结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先查看自己当前可选的发型、衣物和屋外方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "排清这一轮先改人物、再摆房外已有装饰和回头调整画面的编辑步骤，再实际照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "定自己的“森林魔法农人”主题，实际调整发型、现有衣物与农舍外观，让它们表达同一个样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "a是实际个人表达，单改或比较0；只用本体已有外观，Salon修复不是新人物属性成长，也不以种族外观推现实身份。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I06.DEFAULT.V1"
+        },
+        {
+          "text": "你现在停在新建角色的开局编辑界面，发型、发色与服装外观有当前可选方案，还没确认进入世界。这轮先怎样投入？",
+          "scene": "Salon 与自己已有的外观的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只换一次现有发色设置，亲手查看当前变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先浏览当前可选的发型和服装方案，再决定用哪组",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "排清这一轮先选发型、再调颜色和回看服装的顺序，并照着编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按自己想表达的画面主题，实际搭配当前可选发型、颜色与服装外观",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "a是实际个人表达，单改或比较0；只用本体已有外观，Salon修复不是新人物属性成长，也不以种族外观推现实身份。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I06.DEFAULT.ALT1"
+        },
+        {
+          "text": "你正为一轮制作准备材料，有一只当前能改名的大箱子，里面已有矿物和农场材料，背包也有这轮要存的物品；此前已取得的物件说明可以补记。没有急交期，先做什么？",
+          "scene": "已放好的大箱子与现有物资",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_31",
+            "SH9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把本轮不带走的已有物资实际存进去，再取出需要的材料",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有矿物、种子和现成加工材料的数量，再决定这一轮用什么",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "给自己已经取得的矿物或现成物件说明补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "直接给这只当前可改名的大箱子输入一个名字，亲手试这次操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "箱名编辑不自动算a/g/c；普通存取和已有信息补记也是0。只问3.1当前可命名大箱子，不捏所有容器都同样支持。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I06.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已修过 Dog House，当前后续任务或事件已出现可读对话；另外一处可修结构的要求已显示且材料能支付，手头也能做现有农场物件。这轮先做什么？",
+          "scene": "已经修好的狗屋与下一处请求",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_31",
+            "SH9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对另一处结构已显示的材料与交付条件，再决定这轮修不修",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可做的农场配方与材料条件，再决定今天制作哪件",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "继续狗屋相关的当前后续任务对话，想知道这段人物和动物经历怎么接下去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按另一处已列维修目标实际交现有材料并推进，把这项完成作为本次重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "3.1狗屋后续只在已触发时问，不虚构可以改变固定过场；交材料推进不是复杂本人修理技艺或长期成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I07.DEFAULT.V1"
+        },
+        {
+          "text": "还没修过结构时，当前已有一项基础任务列出你能采的木料等材料，手头工具可用，农场也有当前能做配方。这轮先做什么？",
+          "scene": "已经修好的狗屋与下一处请求的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_31",
+            "SH9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清带已有工具、前往可达采集点、取料再交付的先后，并照着推进",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前能做农场配方和手头材料，再决定制作哪项",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先查看这项任务已显示的材料、对象与交付条件",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "实际取当前能采的所需物，推进已列任务的可做部分",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "3.1狗屋后续只在已触发时问，不虚构可以改变固定过场；交材料推进不是复杂本人修理技艺或长期成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I07.DEFAULT.ALT1"
+        },
+        {
+          "text": "Journey to Withergate已触发，你当前确已获北行通行，尚未进入这次守卫与Nathaniel的任务对话；旅程当前目标与地点提示能查看，手头有可带食物，附近另有未细看的可达林路。先做什么？",
+          "scene": "已获通行的北方旅程",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_ED_WITHERGATE",
+            "SH9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按现有任务排清带已有食物、前往获准通行处和返回的先后，再实际推进",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先走那条自己没细看过的可达林路，只想发现那里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "继续当前任务里的这段守卫与Nathaniel事件，读他们面对北方阻路时的叙述，想接上之前旅程",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先查看旅程当前已显示的目标与提示，核对自己已经走到哪一步，再决定这一轮怎样继续",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "只在当前真的已获通行且未被强制对话锁住时问；不是把任意NPC寒暄算故事，更不假定所有初学者已能进Withergate。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I07.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已有可用剑、弩和一项已学会的战斗法术，眼前有当前能处理的敌人；生命和魔力够，当前没有必须打赢的任务。这轮你怎样投入？",
+          "scene": "自己当前可用的交手方式",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_31",
+            "SH9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自连续出手，想体验挥击或射击、命中与反馈衔接的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先比较自己已拥有武器和已会法术的条件，再决定这次采用哪套现成手段",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "换用自己已有的一件武器或已会法术，实际试它这次怎样发挥",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "主动重复练当前出手、走位和重新选目标的输入，重点是熟悉控制，不要求后来更强",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通比较/试用0，不把换剑弩必需选型硬b；t练的是本人输入，f是本人直接交手反馈。魔力存在，体力条不存在。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I08.DEFAULT.V1"
+        },
+        {
+          "text": "尚未学战斗法术时，你已有一把可用基础剑，正站在农场安全空地，可以空挥和走位；另有一条可达但没逛过的镇路。这轮先做什么？",
+          "scene": "自己当前可用的交手方式的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_31",
+            "SH9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手连续挥剑并走位，想体验动作衔接与即时操作回应的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先核对基础武器已有的操作说明，再继续自己的实际尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先去那条自己没逛过的可达镇路，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "主动重复练基础剑空挥、朝向与移动衔接，重点是熟悉输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通比较/试用0，不把换剑弩必需选型硬b；t练的是本人输入，f是本人直接交手反馈。魔力存在，体力条不存在。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I08.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已有能用的Cooking Pot，当前麻糬（Mochi）与蛋挞（Egg Tarts）都已由相应技能开放，现有米糖与蛋奶面粉够各自配方；身边储物处可用，另有一份已做好的恢复魔力食物。这批食材先怎样处理？",
+          "scene": "烹饪台前的一批现有食材",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SH9I_ED_COOK",
+            "SH9I_STORE",
+            "SH9I_31"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有食材和现成料理的种类数量，再决定这一批怎样用",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可做麻糬与蛋挞的配方、现有米糖和蛋奶面粉占用，再决定先做哪道",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "直接在现有台子做一份当前条件满足的料理，亲手试这次制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "把这轮准备留用的已有食材存回储物处，取出本轮要带的恢复食物",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "是当前已开放配方的普通制作，不编盲配发明或即时手感；食物作用以当前说明为准，不恢复本作不存在的体力条。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I08.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回看你已经在同一角色上种植、加工或使用农业技能的一段，哪件实际投入更有分量？不要求等级或收益达到某个标准。",
+          "scene": "已经留在同一角色的农业投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_FARM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我沿此前已经投入的农业技能路线持续种植收获，并把后来得到的点数接着投入，关注这份角色成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我连续几轮一起调过种子、浇灌、加工、售卖回款与再购材料，按实际库存再改供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我亲自连续用镰刀收过成熟作物，重点是享受挥动和收获反馈接上的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "我比较过当时可种种子与已解锁加工配方，再决定那轮生产",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "持续同一已投角色技能才g；一次解锁/购配方不等于成长。y是真实多轮经营，f不是自动加工动画。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I09.DEFAULT.V1"
+        },
+        {
+          "text": "尚未加工或用过魔法时，回想初始小麦和基础工具的一段，哪种确实做过的事更有分量？",
+          "scene": "已经留在同一角色的农业投入的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_FARM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主动重复练过对准地块、切工具与浇种输入，重点是熟悉动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我按已经列出的小麦目标实际播过种，把推进它作为当时重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "我先排过去水边补水、回田消耗壶中水浇地和再补水的路线，并照着做过",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "D",
+              "label": "我核对过当时已有作物、种子与地块是否浇过的状态，再作安排",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "持续同一已投角色技能才g；一次解锁/购配方不等于成长。y是真实多轮经营，f不是自动加工动画。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I09.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你用已有锄头取消过未成熟作物、把种子放回可种地的一段，哪件实际做过的事更有分量？",
+          "scene": "真正做过的返种调整",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_FARM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我直接用过当时可用的取消操作，亲手试过返种这一次处理",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "我排过取消旧格、锄新格、把返种放上工具栏再播下的动作顺序，并亲手做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "我核对过当时作物、已有种子与地块状态，再决定那次怎样调整",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "我先核对过已有锄头取消地块说明，再继续过自己的实际尝试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "全部真实过去；已知返种机制不装作未知p，不要求调整后长得更好。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I09.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回顾你已经去过矿山或用钓竿尝试过的一段，哪件确实做过的事更有分量？寻找可没成功。",
+          "scene": "已经进过的矿层与未得旧物",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_MUSEUM",
+            "SH9I_FISH",
+            "SH9I_MINE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我进入过一段当时可达却没细看过的矿层或林地，想先发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我用当时已有且符合条件的锻造钥匙开过一道永久矿门，亲手试过这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "我为当时已经取得的矿物或钓得旧物补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "我为博物馆自己确实未得的一件宝石或水中旧物，重新去过当时能出它的地点并实际采掘或垂钓",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "真未得加实际追求才c；单开门0不硬g，已有物记录0不当补全。未把BubbleNet产物误写成钓竿旧物。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I10.DEFAULT.V1"
+        },
+        {
+          "text": "还没进矿或逛馆时，回想初期农场与近处镇街，哪件真实做过的事更有分量？",
+          "scene": "已经进过的矿层与未得旧物的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_MUSEUM",
+            "SH9I_FISH",
+            "SH9I_MINE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我用当时已有锄头翻过一格当时可用空地，亲手试过那次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "我为当时已经取得的食材或已经逛过的地方补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "我比较过当时能种的已有种子和配方材料，再决定做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "我转去过当时可达但没看过的镇街或林边，只想发现那边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "真未得加实际追求才c；单开门0不硬g，已有物记录0不当补全。未把BubbleNet产物误写成钓竿旧物。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I10.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你已经见过Ore Muncher要求、准备过或交过它所需材料的一段，哪件实际投入更有分量？",
+          "scene": "真正到过矿怪材料关口",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_MINE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际把当时符合条件的材料交到关口，把推进这个已出现目标作为当时重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我从已有箱子存取过要带的矿物和其他物资，调整过携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "我在农场排过取现有材料、去已开放关口交付与回程的次序，并实际走过",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "我核对过当时已显示的矿物要求，再决定带哪些现有材料",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "真过去的材料门槛，不把交付当收藏/成长，不要求后来已经走通后面全部矿层。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I10.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你已经读过人物任务或改过家园的一段，哪件实际投入更有分量？",
+          "scene": "已经遇见的人与自己的农舍",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_31",
+            "SH9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为自己已经遇见的人、读到的故事信息或拿到的物品补记过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我排过这一轮已有家具和外观调整的编辑先后，并照着编辑过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "我继续读过当时已触发的人物或地区故事对话，想把它接上之前的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我按自己想表达的魔法农舍主题，实际改过已有房屋外观、家具或院子布局",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "NPC故事不是现实o；个人表达a需实际改，既有信息与当轮编辑步骤0。没有给固定剧情捏可改变分支。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I11.DEFAULT.V1"
+        },
+        {
+          "text": "只接触过初期人物与一间小屋时，回顾实际发生过的一段，哪件更贴近投入？",
+          "scene": "已经遇见的人与自己的农舍的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_31",
+            "SH9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为当时已经见过的人或去过的镇街补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我排过先挪已有家具、再留过道和回看外观的次序，并照着编辑过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "我读过初期当时已触发任务里人物讲述自己经历的对话，想了解小镇里的人",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我为自己的小屋主题实际摆过已有家具或调整过现有外观",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "NPC故事不是现实o；个人表达a需实际改，既有信息与当轮编辑步骤0。没有给固定剧情捏可改变分支。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I11.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你为当时一轮制作准备材料、用过可命名大箱子并存过已有材料的一段，哪件确实做过的事更有分量？",
+          "scene": "已用过大箱子的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_31",
+            "SH9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我核对过当时已有材料与产出的种类数量，再决定接着做什么",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我给自己当时已取得的物件和已知说明补记过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "我给当时实际可改名的大箱子输入过名字，亲手试过那次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "我实际存取过自己已有的种子、矿物或现成食物，调整过携带",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "改名、存取、查看和已获信息记录全是0，不凭个人命名强加风格或系统人格，也不要求人物故事经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I11.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SH09I12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你本人有精力、角色生命魔力也够，还有新任务或地区能推进且没有紧迫事件的一段，哪种真实选择更有分量？",
+          "scene": "有余力仍喜欢熟悉农场",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_FARM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我去过当时可达但自己没看过的一段林地或镇街，只想发现那里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我主动回熟悉农场浇水、收菜和照看已有日常，因为喜欢从容重复这一段而暂缓新任务",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我沿同一角色已开始的技能路线继续做过活动并投入后来点数，想留下后续成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的魔法田园主题改过已有院落、房屋或服装外观",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h来自主动喜欢熟悉过程，不是恢复不存在的体力条、疲劳或进度卡住；当前仍可发展且有余力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I12.DEFAULT.V1"
+        },
+        {
+          "text": "回想早期农场日常已经熟悉、你有精力且角色状态够，还有新任务能做的一段，哪种实际选择更有分量？",
+          "scene": "有余力仍喜欢熟悉农场的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_STORE",
+            "SH9I_FARM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为当时已经取得的物品或去过的地点补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我主动重复过熟悉的装水、浇地和收小麦，喜欢按自己的节奏从容处理而暂缓新目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我按当时已列基础任务实际做过可做部分，把推进目标作为那次重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "我转去过当时可达但没看过的镇路或水边，想先发现那边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h来自主动喜欢熟悉过程，不是恢复不存在的体力条、疲劳或进度卡住；当前仍可发展且有余力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I12.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你本人有精力、角色生命魔力够，还有新任务或新林地可推进，而近处钓竿水岸已熟悉的一段，哪种真实投入更有分量？",
+          "scene": "有余力时的熟悉钓竿",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SH9I_FISH",
+            "SH9I_ED_FISHPLAYER",
+            "SH9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为自己已经取得的鱼与已经去过的钓点补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我主动留在熟悉水岸慢慢抛竿，喜欢从容重复这一段，所以暂缓新内容",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我刻意练过浮标沉没后提钩和确认条时点，重点是熟悉自己的输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我连续亲自抛竿提钩，主要享受动作、声音与浮标反馈连起来的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "h是真有余力且可继续进度的主动熟悉，不是缺体力恢复；t和f分别是练熟与本人即时手感，不以钓获为门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SH09I12.DEFAULT.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+f567873d143e"
+}

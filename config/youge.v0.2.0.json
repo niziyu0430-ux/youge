@@ -1,0 +1,3467 @@
+{
+  "manifest": {
+    "product": "游格",
+    "release": "v0.2",
+    "status": "原创探索版，尚未经真实样本验证",
+    "schema_version": "1.0.0",
+    "versions": {
+      "instrument": "0.2.0",
+      "scoring": "0.2.0",
+      "report_rules": "0.2.0",
+      "catalog": "0.2.0"
+    },
+    "language": "zh-CN",
+    "created_date": "2026-10-26",
+    "allowed_score_inputs": [
+      "core"
+    ],
+    "deterministic": true
+  },
+  "instructions": {
+    "reference": "请参考过去一年，优先参考近半年的经历，在有选择余地时的通常偏好。",
+    "clarification": "喜欢什么，与有无时间、设备、经验或是否做得好分开考虑。没有适用经历或无法判断时，请使用无法判断／不适用。",
+    "time_target": "默认三款作品及常见分支以6—10分钟为设计目标，实际用时待试测；扩展作品和研究任务另计。",
+    "flow": [
+      "instructions",
+      "core",
+      "taste",
+      "supplement",
+      "background_and_applicability",
+      "conditional_followups",
+      "report"
+    ],
+    "score_label": "问卷偏好分",
+    "no_norms": true
+  },
+  "answer_scale": {
+    "options": [
+      {
+        "value": 1,
+        "label": "非常不符合"
+      },
+      {
+        "value": 2,
+        "label": "比较不符合"
+      },
+      {
+        "value": 3,
+        "label": "中立"
+      },
+      {
+        "value": 4,
+        "label": "比较符合"
+      },
+      {
+        "value": 5,
+        "label": "非常符合"
+      }
+    ],
+    "missing_option": {
+      "value": null,
+      "label": "无法判断／不适用"
+    },
+    "missing_reasons": [
+      {
+        "value": "cannot_judge",
+        "label": "无法判断"
+      },
+      {
+        "value": "not_applicable",
+        "label": "不适用"
+      },
+      {
+        "value": "no_choice",
+        "label": "没有选择余地"
+      },
+      {
+        "value": "prefer_skip",
+        "label": "选择不回答"
+      }
+    ]
+  },
+  "dimensions": [
+    {
+      "id": "EXP",
+      "name": "探索发现",
+      "display_order": 1,
+      "definition": "享受发现此前不知道的内容，而不只为明确奖励行动。",
+      "must_not_infer": "奖励驱动的清图、收集和机制最优化",
+      "question_ids": [
+        "EXP01",
+        "EXP02",
+        "EXP03",
+        "EXP04"
+      ],
+      "archetype": {
+        "name": "迷雾探险家",
+        "one_line": "你更在意沿途还有什么没见过。",
+        "interpretation": "你会为新发现留下空间；具体如何探索，仍要看作品和当次约定。",
+        "enjoyment": "遇到陌生路线、未说明互动或意外内容时，有继续了解的兴趣。",
+        "self_check": "在游戏之外，遇到没有明确收益的新事物时，你也会想了解吗？",
+        "portrait": "这个原型强调未知本身带来的吸引力。发现过程可以与资源规划、练习挑战或查规则并存；清图数量并不能单独说明这种偏好。",
+        "example_situations": ["没有任务标记的支路仍会引起兴趣。","为了理解操作机制查资料，同时保留剧情和谜底。"],
+        "co_play_focus": ["探索与推进的切换","剧情与谜底的边界"]
+      }
+    },
+    {
+      "id": "NAR",
+      "name": "叙事沉浸",
+      "display_order": 2,
+      "definition": "享受理解人物、故事和世界中的叙事联系。",
+      "must_not_infer": "阅读能力、道德品质、现实共情能力",
+      "question_ids": [
+        "NAR01",
+        "NAR02",
+        "NAR03",
+        "NAR04"
+      ],
+      "archetype": {
+        "name": "故事共鸣者",
+        "one_line": "故事中的人为什么这样选择，会影响你的体验。",
+        "interpretation": "你会把故事体验作为游戏的一部分；剧情停留和剧透边界需要单独确认。",
+        "enjoyment": "有角色动机、情节线索和可回味的人物关系的体验。",
+        "self_check": "游戏之外，你也会反复回味故事中人物的选择吗？",
+        "portrait": "这个原型强调人物选择、故事联系和体验过程。关心角色并不证明现实中的共情能力，也不要求每次都有时间看完所有文本。",
+        "example_situations": ["在重要人物选择前愿意停留。","游玩结束后仍想回味人物关系。"],
+        "co_play_focus": ["剧情一起看还是各自看","允许透露哪些剧情"]
+      }
+    },
+    {
+      "id": "MAS",
+      "name": "挑战精进",
+      "display_order": 3,
+      "definition": "享受通过练习改善自己的表现和掌握技巧。",
+      "must_not_infer": "技术水平、失败承受能力、赢过别人",
+      "question_ids": [
+        "MAS01",
+        "MAS02",
+        "MAS03",
+        "MAS04"
+      ],
+      "archetype": {
+        "name": "极限攀登者",
+        "one_line": "看见自己逐渐掌握一件事，是一种吸引力。",
+        "interpretation": "你在意练习带来的变化；实际难度和失败后的安排由同游回答决定。",
+        "enjoyment": "能观察练习进展、改善自身表现或逐步掌握技巧的内容。",
+        "self_check": "游戏之外，你也喜欢有机会反复练习并观察进展的事情吗？",
+        "portrait": "这个原型强调自己逐渐掌握技巧带来的乐趣。喜欢练习不意味着实际水平高，也不意味着每次失败后都想立即再来。",
+        "example_situations": ["为自己的练习设置一个可观察的目标。","没有排名时也能从进步中获得兴趣。"],
+        "co_play_focus": ["初始难度和调整方式","失败后的尝试与暂停安排"]
+      }
+    },
+    {
+      "id": "COM",
+      "name": "竞技胜负",
+      "display_order": 4,
+      "definition": "享受与其他玩家比较表现和争取胜利。",
+      "must_not_infer": "攻击性、合作能力、实际竞技水平",
+      "question_ids": [
+        "COM01",
+        "COM02",
+        "COM03",
+        "COM04"
+      ],
+      "archetype": {
+        "name": "赛场逐胜者",
+        "one_line": "与别人较量，会让目标更有吸引力。",
+        "interpretation": "你对竞争反馈有兴趣；这不能说明你如何对待队友或输赢。",
+        "enjoyment": "直接对抗、队伍竞争或异步纪录比较的体验。",
+        "self_check": "游戏之外，与别人比较表现也会增加你的参与兴趣吗？",
+        "portrait": "这个原型强调人与人较量和胜负反馈。是否喜欢竞争，与是否尊重队友、能否配合或实际排名分别记录。",
+        "example_situations": ["直接对抗和异步纪录比较都可能有吸引力。","准备下一场较量时关注如何赢过对手。"],
+        "co_play_focus": ["本次目标是否包含胜负","队伍失败后怎样商量"]
+      }
+    },
+    {
+      "id": "STR",
+      "name": "策略规划",
+      "display_order": 5,
+      "definition": "享受理解机制、安排资源和优化可行方案。",
+      "must_not_infer": "聪明程度、专业经验、个人创作表达",
+      "question_ids": [
+        "STR01",
+        "STR02",
+        "STR03",
+        "STR04"
+      ],
+      "archetype": {
+        "name": "策略规划师",
+        "one_line": "理解系统怎样运转，本身就是乐趣的一部分。",
+        "interpretation": "你会关注方案与结果的联系；参考攻略还是自行尝试是另一项具体习惯。",
+        "enjoyment": "可分析机制、安排资源、规划步骤并比较方案的内容。",
+        "self_check": "游戏之外，你也享受比较几种方案如何影响结果吗？",
+        "portrait": "这个原型强调机制、资源和方案效果。优化是一种体验偏好，不是聪明程度的判断；自行摸索和参考成熟方案都可能服务这一偏好。",
+        "example_situations": ["安排资源在不同目标之间怎样分配。","比较多种可行方案的结果。"],
+        "co_play_focus": ["攻略查阅时机","队伍是否需要共同规划"]
+      }
+    },
+    {
+      "id": "CRE",
+      "name": "创造表达",
+      "display_order": 6,
+      "definition": "享受用风格、搭配、作品或自定规则表达自己的想法。",
+      "must_not_infer": "创作能力、Mod安装技术、方案效率",
+      "question_ids": [
+        "CRE01",
+        "CRE02",
+        "CRE03",
+        "CRE04"
+      ],
+      "archetype": {
+        "name": "自由造物者",
+        "one_line": "你希望体验里留有自己的表达空间。",
+        "interpretation": "你在意表达和定制的空间；是否能使用Mod取决于具体条件。",
+        "enjoyment": "能进行外观、空间、玩法风格或自定主题表达的内容。",
+        "self_check": "游戏之外，你也会希望在可行的选择中保留自己的风格吗？",
+        "portrait": "这个原型强调把自己的想法放进体验。外观、布置、玩法搭配和自定主题都可能承载表达，不要求会制作或安装Mod。",
+        "example_situations": ["把空间布置成自己想要的样子。","在可行玩法中保留自己的风格。"],
+        "co_play_focus": ["表达空间与共同目标","Mod用途与实际条件"]
+      }
+    },
+    {
+      "id": "SOC",
+      "name": "社交联结",
+      "display_order": 7,
+      "definition": "享受通过游戏共同体验、维系联系或结识同好。",
+      "must_not_infer": "外向人格、沟通水平、团队配合能力",
+      "question_ids": [
+        "SOC01",
+        "SOC02",
+        "SOC03",
+        "SOC04"
+      ],
+      "archetype": {
+        "name": "同伴联结者",
+        "one_line": "游戏也可以是一种与人保持联系的方式。",
+        "interpretation": "你重视游戏中的联结机会；同游节奏和合作方式需另看直接回答。",
+        "enjoyment": "共同体验、分享经历和维系同好关系的机会。",
+        "self_check": "游戏之外，共同做一件事也是你保持联系的方式吗？",
+        "portrait": "这个原型强调共同体验及联系需求。单人作品的讨论也可能有社交价值；需求高低不能换算成沟通水平或合作能力。",
+        "example_situations": ["把一起游玩作为维系熟人联系的方式。","愿意与同好分享单人游戏经历。"],
+        "co_play_focus": ["同游过程怎样交流","剧情、探索及失败后的共同安排"]
+      }
+    },
+    {
+      "id": "CAL",
+      "name": "舒缓体验",
+      "display_order": 8,
+      "definition": "在精力充足时，也享受节奏可控、低紧迫感的体验。",
+      "must_not_infer": "近期疲劳、能力不足、不能接受挑战",
+      "question_ids": [
+        "CAL01",
+        "CAL02",
+        "CAL03",
+        "CAL04"
+      ],
+      "archetype": {
+        "name": "自在栖居者",
+        "one_line": "从容体验本身也能构成吸引力。",
+        "interpretation": "你会欣赏不必一直赶进度的段落；这与喜欢挑战可以同时存在。",
+        "enjoyment": "节奏可控、安稳熟悉、可从容体验的内容。",
+        "self_check": "在精力充足的日子，你也会主动选择节奏较从容的活动吗？",
+        "portrait": "这个原型强调在精力充足时仍有吸引力的从容过程。节奏自主、熟悉日常和较低紧迫感可以与练习挑战同时存在，不能直接解释为最近疲劳。",
+        "example_situations": ["不赶目标时仍享受熟悉的游戏日常。","希望失误后有从容继续的空间。"],
+        "co_play_focus": ["探索推进的节奏","难度可调性与暂停方式"]
+      }
+    }
+  ],
+  "core_questions": [
+    {
+      "id": "EXP01",
+      "module": "core",
+      "dimension": "EXP",
+      "text": "面对一条没走过、也不知道通往哪里的路线，我会想亲自去看看。",
+      "context": "未知路线",
+      "measurement_target": "好奇路线的未知内容，不推断奖励或完成率",
+      "display_order": 1,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "EXP02",
+      "module": "core",
+      "dimension": "EXP",
+      "text": "即使没有收集奖励或完成度提示，我也享受发现先前不知道的内容。",
+      "context": "没有明确奖励的新发现",
+      "measurement_target": "区分发现兴趣与为了奖励清图",
+      "display_order": 14,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "EXP03",
+      "module": "core",
+      "dimension": "EXP",
+      "text": "遇到游戏没有说明用途的东西时，我会想试试与它互动会发生什么。",
+      "context": "未说明的互动",
+      "measurement_target": "目标是想知道会发生什么，而非找最优解",
+      "display_order": 20,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "EXP04",
+      "module": "core",
+      "dimension": "EXP",
+      "text": "原本有明确目标时，沿途意外出现的新内容也会吸引我暂时绕过去看看。",
+      "context": "意外内容",
+      "measurement_target": "不把能否腾出时间当作兴趣",
+      "display_order": 31,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "NAR01",
+      "module": "core",
+      "dimension": "NAR",
+      "text": "故事中的角色作出重要选择时，我喜欢了解他们为什么这样做。",
+      "context": "角色动机",
+      "measurement_target": "测量理解角色的兴趣，不推断现实共情或品德",
+      "display_order": 2,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "NAR02",
+      "module": "core",
+      "dimension": "NAR",
+      "text": "我享受把零散的故事线索联系起来，理解情节发生了什么。",
+      "context": "情节线索",
+      "measurement_target": "不测阅读速度或能否正确解谜",
+      "display_order": 12,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "NAR03",
+      "module": "core",
+      "dimension": "NAR",
+      "text": "遇到重要的剧情段落时，我愿意先停下来体验这段故事。",
+      "context": "重要剧情停留",
+      "measurement_target": "不把实际跳过或时间不足直接解释为缺乏兴趣",
+      "display_order": 23,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "NAR04",
+      "module": "core",
+      "dimension": "NAR",
+      "text": "结束一段故事后，我喜欢回味人物关系后来发生的变化。",
+      "context": "回味人物关系",
+      "measurement_target": "不把记忆能力或社交分享次数当作兴趣",
+      "display_order": 29,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "MAS01",
+      "module": "core",
+      "dimension": "MAS",
+      "text": "我喜欢给自己设定一个需要练习才能达到的游戏目标。",
+      "context": "自设挑战",
+      "measurement_target": "不使用相对名次或他人评价",
+      "display_order": 5,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "MAS02",
+      "module": "core",
+      "dimension": "MAS",
+      "text": "面对一个暂时做不好的操作环节，我享受通过练习逐渐掌握它的过程。",
+      "context": "困难环节练习",
+      "measurement_target": "测量练习的吸引力，不要求现实坚持次数",
+      "display_order": 15,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "MAS03",
+      "module": "core",
+      "dimension": "MAS",
+      "text": "即使不与别人比较，看见自己的表现比以前有所改善，也会让我想继续玩。",
+      "context": "改善自己的表现",
+      "measurement_target": "明确区别于赢过别人",
+      "display_order": 18,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "MAS04",
+      "module": "core",
+      "dimension": "MAS",
+      "text": "当一个原先生疏的技巧逐渐用得顺手时，我会享受这种变化。",
+      "context": "逐步掌握技巧",
+      "measurement_target": "不把操作水平作为偏好分",
+      "display_order": 30,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "COM01",
+      "module": "core",
+      "dimension": "COM",
+      "text": "与其他玩家直接比一场、争取赢下比赛，会增加我玩游戏的兴趣。",
+      "context": "直接对抗",
+      "measurement_target": "不推断攻击性或竞技能力",
+      "display_order": 6,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "COM02",
+      "module": "core",
+      "dimension": "COM",
+      "text": "即使不同时在线，比较我和其他玩家的纪录或排名，也对我有吸引力。",
+      "context": "异步纪录",
+      "measurement_target": "关注人与人比较，不是只刷新自己的纪录",
+      "display_order": 10,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "COM03",
+      "module": "core",
+      "dimension": "COM",
+      "text": "参加队伍之间有明确胜负的比赛，对我有吸引力。",
+      "context": "队伍竞争",
+      "measurement_target": "不把配合水平当成胜负兴趣",
+      "display_order": 24,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "COM04",
+      "module": "core",
+      "dimension": "COM",
+      "text": "为了下一次更有机会赢过对手，我愿意研究上一场的得失。",
+      "context": "围绕胜负准备",
+      "measurement_target": "以相对胜负为动机，不泛指复盘能力",
+      "display_order": 27,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "STR01",
+      "module": "core",
+      "dimension": "STR",
+      "text": "我享受弄清一项游戏机制怎样影响结果。",
+      "context": "机制与结果",
+      "measurement_target": "关注机制的结果联系，不评判理解能力",
+      "display_order": 3,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "STR02",
+      "module": "core",
+      "dimension": "STR",
+      "text": "游戏给出有限资源时，我喜欢安排它们怎样使用。",
+      "context": "资源安排",
+      "measurement_target": "不把拥有资源多少当作偏好",
+      "display_order": 9,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "STR03",
+      "module": "core",
+      "dimension": "STR",
+      "text": "开始一个需要多个步骤的目标前，我喜欢先想一想步骤之间怎样衔接。",
+      "context": "多步骤规划",
+      "measurement_target": "不把是否按计划完成当作兴趣",
+      "display_order": 22,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "STR04",
+      "module": "core",
+      "dimension": "STR",
+      "text": "几种方案都可行时，我享受比较怎样调整能得到更合适的结果。",
+      "context": "方案优化",
+      "measurement_target": "关注方案效果，不将优化等同于个人表达",
+      "display_order": 32,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "CRE01",
+      "module": "core",
+      "dimension": "CRE",
+      "text": "有多种可用的外观选择时，我喜欢搭配出符合自己想法的角色风格。",
+      "context": "角色风格",
+      "measurement_target": "不要求付费外观或稀有物品",
+      "display_order": 4,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "CRE02",
+      "module": "core",
+      "dimension": "CRE",
+      "text": "可以布置或建造时，我享受把空间做成自己想要的样子。",
+      "context": "空间表达",
+      "measurement_target": "不以产出效率或建筑水平评分",
+      "display_order": 16,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "CRE03",
+      "module": "core",
+      "dimension": "CRE",
+      "text": "几种玩法都能用时，我喜欢组合出带有自己风格的一套玩法。",
+      "context": "玩法表达",
+      "measurement_target": "不把是否偏离最优方案当作创造力证明",
+      "display_order": 19,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "CRE04",
+      "module": "core",
+      "dimension": "CRE",
+      "text": "游戏允许自由安排目标时，我喜欢为一次游玩自定一个主题或小规则。",
+      "context": "自定主题",
+      "measurement_target": "不要求编程、制作Mod或其他技术经验",
+      "display_order": 26,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "SOC01",
+      "module": "core",
+      "dimension": "SOC",
+      "text": "和别人共同经历一段游戏过程，这件事本身对我有吸引力。",
+      "context": "共同体验",
+      "measurement_target": "不要求队伍成功或高水平配合",
+      "display_order": 7,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "SOC02",
+      "module": "core",
+      "dimension": "SOC",
+      "text": "为了和熟人保持联系而一起玩游戏，是我愿意选择的体验。",
+      "context": "维系联系",
+      "measurement_target": "不使用朋友数量测量需求",
+      "display_order": 13,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "SOC03",
+      "module": "core",
+      "dimension": "SOC",
+      "text": "我喜欢和同好交流自己的游戏经历，即使这些游戏是单人玩的。",
+      "context": "分享经历",
+      "measurement_target": "不把联机频率等同于社交需求",
+      "display_order": 17,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "SOC04",
+      "module": "core",
+      "dimension": "SOC",
+      "text": "通过游戏认识兴趣相近的新朋友，对我有吸引力。",
+      "context": "结识同好",
+      "measurement_target": "测量兴趣，不评判主动交谈能力",
+      "display_order": 28,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "CAL01",
+      "module": "core",
+      "dimension": "CAL",
+      "text": "即使精力充足，我也会主动选择没有紧迫目标、可以从容体验的游戏段落。",
+      "context": "精力充足时的从容体验",
+      "measurement_target": "明确区别于近期疲劳",
+      "display_order": 8,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "CAL02",
+      "module": "core",
+      "dimension": "CAL",
+      "text": "可以按自己的节奏决定继续或暂歇的游戏过程，对我有吸引力。",
+      "context": "节奏自主",
+      "measurement_target": "不以现实是否有空评分",
+      "display_order": 11,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "CAL03",
+      "module": "core",
+      "dimension": "CAL",
+      "text": "重复一段已经熟悉、节奏安稳的游戏日常，本身也会让我觉得愉快。",
+      "context": "安稳熟悉的过程",
+      "measurement_target": "不把怀旧、习惯频率或奖励驱动等同于舒缓",
+      "display_order": 21,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    },
+    {
+      "id": "CAL04",
+      "module": "core",
+      "dimension": "CAL",
+      "text": "在可以选择时，我也喜欢失误后能从容继续、不必立刻补救的游戏段落。",
+      "context": "失误后仍可从容体验",
+      "measurement_target": "关注失误后的紧迫感，不推断技术、失败承受力或是否喜欢挑战",
+      "display_order": 25,
+      "response_type": "likert_1_5",
+      "scored": true,
+      "weight": 1,
+      "score_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "applicability": "参考有类似选择的经历；缺乏经历、没有选择余地或无法判断时可选无法判断／不适用。"
+    }
+  ],
+  "taste": {
+    "default_slots": 3,
+    "min_games": 0,
+    "max_games": 5,
+    "max_attractions_per_game": 2,
+    "attractions": [
+      {
+        "id": "discovery",
+        "label": "未知发现",
+        "report_dimension": "EXP",
+        "scored": false
+      },
+      {
+        "id": "story",
+        "label": "人物与故事",
+        "report_dimension": "NAR",
+        "scored": false
+      },
+      {
+        "id": "mastery",
+        "label": "练习与突破",
+        "report_dimension": "MAS",
+        "scored": false
+      },
+      {
+        "id": "competition",
+        "label": "胜负较量",
+        "report_dimension": "COM",
+        "scored": false
+      },
+      {
+        "id": "strategy",
+        "label": "机制与策略",
+        "report_dimension": "STR",
+        "scored": false
+      },
+      {
+        "id": "expression",
+        "label": "个人表达",
+        "report_dimension": "CRE",
+        "scored": false
+      },
+      {
+        "id": "connection",
+        "label": "同伴联系",
+        "report_dimension": "SOC",
+        "scored": false
+      },
+      {
+        "id": "calm",
+        "label": "舒缓节奏",
+        "report_dimension": "CAL",
+        "scored": false
+      },
+      {
+        "id": "instant",
+        "label": "即时爽感",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "feel",
+        "label": "操作手感",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "growth",
+        "label": "数值成长",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "completion",
+        "label": "收集补全",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "atmosphere",
+        "label": "视听氛围",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "nostalgia",
+        "label": "怀旧重温",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "role",
+        "label": "角色代入",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "random",
+        "label": "随机惊喜",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "humor",
+        "label": "幽默趣味",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "arousal",
+        "label": "紧张刺激",
+        "report_dimension": null,
+        "scored": false
+      },
+      {
+        "id": "other",
+        "label": "其他",
+        "report_dimension": null,
+        "scored": false
+      }
+    ],
+    "experience_options": [
+      {
+        "value": "yes",
+        "label": "亲自体验过"
+      },
+      {
+        "value": "no",
+        "label": "没有亲自体验"
+      },
+      {
+        "value": "unknown",
+        "label": "无法确认"
+      }
+    ],
+    "negative_max_games": 1,
+    "negative_max_reasons": 2,
+    "negative_reasons": [
+      {
+        "value": "gameplay",
+        "label": "玩法循环没有吸引我"
+      },
+      {
+        "value": "story",
+        "label": "人物或故事没有吸引我"
+      },
+      {
+        "value": "pace",
+        "label": "节奏体验不合"
+      },
+      {
+        "value": "difficulty",
+        "label": "难度体验不合"
+      },
+      {
+        "value": "audiovisual",
+        "label": "视听体验不合"
+      },
+      {
+        "value": "social",
+        "label": "社交环境让我不适"
+      },
+      {
+        "value": "technical",
+        "label": "技术问题影响体验"
+      },
+      {
+        "value": "time",
+        "label": "时间安排不合"
+      },
+      {
+        "value": "device",
+        "label": "设备或操作条件受限"
+      },
+      {
+        "value": "other",
+        "label": "其他原因"
+      }
+    ],
+    "free_text_policy": "只引用原话，不自动抽取人格或维度标签。"
+  },
+  "supplement": {
+    "id": "X01",
+    "text": "下列哪些体验也是你通常喜欢的？可多选，也可跳过；未选择不代表厌恶。",
+    "options": [
+      {
+        "value": "instant",
+        "label": "即时爽感"
+      },
+      {
+        "value": "feel",
+        "label": "操作手感"
+      },
+      {
+        "value": "growth",
+        "label": "数值成长"
+      },
+      {
+        "value": "completion",
+        "label": "收集补全"
+      },
+      {
+        "value": "atmosphere",
+        "label": "视听氛围"
+      },
+      {
+        "value": "nostalgia",
+        "label": "怀旧重温"
+      },
+      {
+        "value": "role",
+        "label": "角色代入"
+      },
+      {
+        "value": "random",
+        "label": "随机惊喜"
+      },
+      {
+        "value": "humor",
+        "label": "幽默趣味"
+      },
+      {
+        "value": "arousal",
+        "label": "紧张刺激"
+      }
+    ],
+    "scored": false
+  },
+  "background_questions": [
+    {
+      "id": "B01",
+      "text": "过去一年，你通常有哪些可用游戏平台？可多选。",
+      "response_type": "multi",
+      "scored": false,
+      "options": [
+        {
+          "value": "pc",
+          "label": "PC"
+        },
+        {
+          "value": "playstation",
+          "label": "PlayStation"
+        },
+        {
+          "value": "xbox",
+          "label": "Xbox"
+        },
+        {
+          "value": "switch",
+          "label": "Nintendo Switch"
+        },
+        {
+          "value": "other",
+          "label": "其他平台"
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "text": "过去一年，你有机会亲自体验过哪些玩法？可多选；这不是喜爱程度。",
+      "response_type": "multi",
+      "scored": false,
+      "options": [
+        {
+          "value": "action",
+          "label": "动作或即时战斗"
+        },
+        {
+          "value": "adventure",
+          "label": "冒险探索"
+        },
+        {
+          "value": "rpg",
+          "label": "角色扮演"
+        },
+        {
+          "value": "strategy",
+          "label": "策略或战术"
+        },
+        {
+          "value": "management",
+          "label": "经营或建造"
+        },
+        {
+          "value": "competitive",
+          "label": "竞技对战"
+        },
+        {
+          "value": "puzzle",
+          "label": "解谜"
+        },
+        {
+          "value": "rhythm_sport",
+          "label": "音乐、竞速或体育"
+        },
+        {
+          "value": "casual",
+          "label": "休闲日常"
+        },
+        {
+          "value": "other",
+          "label": "其他玩法"
+        }
+      ]
+    }
+  ],
+  "branch_applicability": {
+    "modules": [
+      "guide",
+      "replay",
+      "coop",
+      "approach",
+      "mod"
+    ],
+    "question": "哪些场景适用于你的经历，或你有依据表达通常选择？没有相应经历时可以跳过。",
+    "statuses": [
+      {
+        "value": "applicable",
+        "label": "适用，可以表达选择"
+      },
+      {
+        "value": "no_experience",
+        "label": "缺乏相应经历"
+      },
+      {
+        "value": "not_applicable",
+        "label": "当前不适用"
+      },
+      {
+        "value": "prefer_skip",
+        "label": "选择跳过"
+      }
+    ],
+    "missing_status": "not_provided",
+    "no_inference_from_skip": true
+  },
+  "followup_questions": [
+    {
+      "id": "G01",
+      "module": "guide",
+      "text": "你通常为了哪些目的使用游戏外的攻略或资料？最多选两项。",
+      "response_type": "multi",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "guide",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "mechanics",
+          "label": "理解机制或操作规则"
+        },
+        {
+          "value": "stuck",
+          "label": "卡住后获取提示"
+        },
+        {
+          "value": "efficiency",
+          "label": "减少重复试错"
+        },
+        {
+          "value": "completion",
+          "label": "查漏补缺"
+        },
+        {
+          "value": "build",
+          "label": "参考成熟搭配或方案"
+        },
+        {
+          "value": "story",
+          "label": "梳理已经体验的剧情"
+        },
+        {
+          "value": "avoid",
+          "label": "通常愿意自己摸索，不借助攻略"
+        },
+        {
+          "value": "varies",
+          "label": "随作品或内容改变"
+        }
+      ],
+      "max_selections": 2,
+      "exclusive_options": [
+        "avoid",
+        "varies"
+      ]
+    },
+    {
+      "id": "G02",
+      "module": "guide",
+      "text": "别人介绍内容或提供攻略前，你通常希望怎样处理剧情和谜题答案？",
+      "response_type": "single",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "guide",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "no_story_or_puzzle",
+          "label": "回避提前知道剧情和谜底"
+        },
+        {
+          "value": "puzzle_ok",
+          "label": "可以知道谜底，但回避剧情"
+        },
+        {
+          "value": "story_ok",
+          "label": "可以知道剧情，但回避谜底"
+        },
+        {
+          "value": "all_ok",
+          "label": "剧情和谜底都可提前知道"
+        },
+        {
+          "value": "ask_each_time",
+          "label": "每次先问我这次的边界"
+        },
+        {
+          "value": "uncertain",
+          "label": "目前无法判断"
+        }
+      ]
+    },
+    {
+      "id": "R01",
+      "module": "replay",
+      "text": "在有合适作品、时间安排也允许时，你通常愿意再次游玩已经体验过的内容吗？",
+      "response_type": "single",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "replay",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "willing",
+          "label": "通常愿意"
+        },
+        {
+          "value": "conditional",
+          "label": "有新路线、新玩法或其他合适理由时愿意"
+        },
+        {
+          "value": "prefer_new",
+          "label": "通常更愿意接触新作品"
+        },
+        {
+          "value": "not_interested",
+          "label": "通常不想再次体验已有内容"
+        },
+        {
+          "value": "uncertain",
+          "label": "目前无法判断"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "module": "replay",
+      "text": "哪些原因最能解释你的二刷选择？最多选两项。",
+      "response_type": "multi",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "replay",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "new_routes",
+          "label": "体验新分支或不同路线"
+        },
+        {
+          "value": "mastery",
+          "label": "尝试新打法或进一步掌握技巧"
+        },
+        {
+          "value": "completion",
+          "label": "补全遗漏内容"
+        },
+        {
+          "value": "revisit",
+          "label": "重温熟悉的体验"
+        },
+        {
+          "value": "friends",
+          "label": "陪同别人再次体验"
+        },
+        {
+          "value": "new_works",
+          "label": "更想把机会留给新作品"
+        },
+        {
+          "value": "first_enough",
+          "label": "已有体验对我来说已经足够"
+        },
+        {
+          "value": "other",
+          "label": "其他原因"
+        }
+      ],
+      "max_selections": 2,
+      "option_groups": {
+        "positive": [
+          "new_routes",
+          "mastery",
+          "completion",
+          "revisit",
+          "friends"
+        ],
+        "negative": [
+          "new_works",
+          "first_enough"
+        ],
+        "neutral": [
+          "other"
+        ]
+      },
+      "depends_on": {
+        "question_id": "R01",
+        "accepted": [
+          "willing",
+          "conditional",
+          "prefer_new",
+          "not_interested"
+        ]
+      }
+    },
+    {
+      "id": "R03",
+      "module": "replay",
+      "text": "现实中可支配的游戏时间，对你再次游玩已有内容通常有多大限制？",
+      "response_type": "single",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "replay",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "enough",
+          "label": "通常没有明显时间限制"
+        },
+        {
+          "value": "limited",
+          "label": "有一定时间限制"
+        },
+        {
+          "value": "severe",
+          "label": "时间限制很明显"
+        },
+        {
+          "value": "uncertain",
+          "label": "目前无法判断"
+        }
+      ]
+    },
+    {
+      "id": "P01",
+      "module": "coop",
+      "text": "一起玩时，你通常希望怎样安排探索与推进？",
+      "response_type": "single",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "coop",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "advance",
+          "label": "先推进约定的目标"
+        },
+        {
+          "value": "thorough",
+          "label": "尽量把当前区域探索充分"
+        },
+        {
+          "value": "detour",
+          "label": "遇到好奇内容时临时绕路"
+        },
+        {
+          "value": "switch",
+          "label": "事先约定探索和推进的时段"
+        },
+        {
+          "value": "uncertain",
+          "label": "目前没有明确偏好"
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "module": "coop",
+      "text": "一起玩遇到剧情段落时，你通常希望怎样安排？",
+      "response_type": "single",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "coop",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "watch",
+          "label": "共同停下来体验剧情"
+        },
+        {
+          "value": "separate",
+          "label": "各自看完需要的剧情再汇合"
+        },
+        {
+          "value": "skip_agreed",
+          "label": "双方都同意时快速略过"
+        },
+        {
+          "value": "flexible",
+          "label": "按这次队伍的约定安排"
+        },
+        {
+          "value": "uncertain",
+          "label": "目前无法判断"
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "module": "coop",
+      "text": "一起玩之前，你通常希望怎样确定难度？",
+      "response_type": "single",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "coop",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "stretch",
+          "label": "选择需要练习和尝试的难度"
+        },
+        {
+          "value": "comfortable",
+          "label": "选择能比较从容体验的难度"
+        },
+        {
+          "value": "adjust",
+          "label": "选择过程中可以随时调整的难度"
+        },
+        {
+          "value": "decide_together",
+          "label": "优先和同游者协商这次的难度"
+        },
+        {
+          "value": "uncertain",
+          "label": "目前无法判断"
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "module": "coop",
+      "text": "共同的尝试反复失败后，你通常最希望先做什么？",
+      "response_type": "single",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "coop",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "retry",
+          "label": "继续尝试"
+        },
+        {
+          "value": "review",
+          "label": "先交流情况、调整方案"
+        },
+        {
+          "value": "guide",
+          "label": "先找提示或攻略"
+        },
+        {
+          "value": "adjust",
+          "label": "先调整难度或换一条路线"
+        },
+        {
+          "value": "break",
+          "label": "先暂停休息"
+        },
+        {
+          "value": "decide_together",
+          "label": "先一起商量接下来的安排"
+        },
+        {
+          "value": "uncertain",
+          "label": "目前无法判断"
+        }
+      ]
+    },
+    {
+      "id": "A01",
+      "module": "approach",
+      "text": "接触一个新的游戏系统时，你通常更喜欢怎样开始？",
+      "response_type": "single",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "approach",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "try_then_reference",
+          "label": "先自己试，再在需要时参考资料"
+        },
+        {
+          "value": "learn_rules_then_try",
+          "label": "先了解基本规则，再自己尝试"
+        },
+        {
+          "value": "reference_first",
+          "label": "先参考成熟方案，再决定怎样用"
+        },
+        {
+          "value": "varies",
+          "label": "根据内容改变起步方式"
+        },
+        {
+          "value": "uncertain",
+          "label": "目前无法判断"
+        }
+      ]
+    },
+    {
+      "id": "M01",
+      "module": "mod",
+      "text": "下面哪一项最接近你目前接触Mod的条件和经历？",
+      "response_type": "single",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "mod",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "actual_use",
+          "label": "有适用作品和条件，实际使用过Mod"
+        },
+        {
+          "value": "available_not_used",
+          "label": "有适用作品和条件，目前还没有使用"
+        },
+        {
+          "value": "platform_unavailable",
+          "label": "常用平台或版本不支持我想用的Mod"
+        },
+        {
+          "value": "device_time_limited",
+          "label": "安装条件、设备或安排受到限制"
+        },
+        {
+          "value": "no_relevant_title",
+          "label": "尚未接触适用作品"
+        },
+        {
+          "value": "not_interested",
+          "label": "有条件时通常也没有使用意愿"
+        },
+        {
+          "value": "uncertain",
+          "label": "目前无法判断"
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "module": "mod",
+      "text": "你实际使用过、或条件允许时愿意尝试哪些Mod用途？先标记依据，再选最多两项；实际经历与假设意愿请勿混填。",
+      "response_type": "multi_with_basis",
+      "scored": false,
+      "dimension": null,
+      "gate": {
+        "module": "mod",
+        "status": "applicable"
+      },
+      "options": [
+        {
+          "value": "fix",
+          "label": "修复问题或使用更方便"
+        },
+        {
+          "value": "visual",
+          "label": "调整画面、外观或风格"
+        },
+        {
+          "value": "content",
+          "label": "扩展可体验的内容"
+        },
+        {
+          "value": "rules",
+          "label": "改变玩法规则"
+        }
+      ],
+      "max_selections": 2,
+      "basis_options": [
+        {
+          "value": "actual",
+          "label": "这些用途是实际使用过的"
+        },
+        {
+          "value": "hypothetical",
+          "label": "这些用途是条件允许时愿意尝试的"
+        }
+      ],
+      "depends_on": {
+        "question_id": "M01",
+        "accepted": [
+          "actual_use",
+          "available_not_used",
+          "platform_unavailable",
+          "device_time_limited"
+        ]
+      }
+    }
+  ],
+  "display_rules": {
+    "status": "以下均为可配置展示规则，不是科学界限",
+    "min_valid_per_dimension": 3,
+    "preference_threshold": 60,
+    "leading_gap": 10,
+    "all_high_threshold": 75,
+    "all_low_threshold": 25,
+    "neutral_value": 3,
+    "many_neutral_ratio": 0.75,
+    "positive_value": 4,
+    "max_insights": 3,
+    "max_behavior_tags": 3,
+    "max_self_checks": 2,
+    "sensitivity_step": 1,
+    "sensitivity_rule": "枚举每个有效核心答案合法范围内±1档；主型与副偏好分别检查。",
+    "special_priority": [
+      "partial",
+      "all_high",
+      "all_low",
+      "no_clear",
+      "ordinary"
+    ],
+    "compatible_versions": []
+  },
+  "report_rules": [
+    {
+      "id": "I_EXP_GUIDE",
+      "section": "insight",
+      "priority": 120,
+      "condition": {
+        "all": [
+          {
+            "all": [
+              {
+                "fact": "scores.EXP",
+                "op": "gte",
+                "value": 75
+              },
+              {
+                "fact": "positive_counts.EXP",
+                "op": "gte",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "fact": "followups.G01",
+            "op": "contains",
+            "value": "mechanics"
+          },
+          {
+            "fact": "followups.G02",
+            "op": "eq",
+            "value": "no_story_or_puzzle"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "EXP",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "EXP"
+        },
+        {
+          "kind": "answer",
+          "id": "G01"
+        },
+        {
+          "kind": "answer",
+          "id": "G02"
+        }
+      ],
+      "text": "你对发现未知内容有兴趣，也愿意借助资料理解机制，并且明确回避提前得知剧情与谜底。这里需要区分的是查规则与看答案，而不是简单地把探索和攻略放在两端。",
+      "dedup_group": "exploration",
+      "covered_dimensions": [
+        "EXP"
+      ]
+    },
+    {
+      "id": "I_MAS_CAL",
+      "section": "insight",
+      "priority": 115,
+      "condition": {
+        "all": [
+          {
+            "all": [
+              {
+                "fact": "scores.MAS",
+                "op": "gte",
+                "value": 75
+              },
+              {
+                "fact": "positive_counts.MAS",
+                "op": "gte",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "fact": "scores.CAL",
+                "op": "gte",
+                "value": 75
+              },
+              {
+                "fact": "positive_counts.CAL",
+                "op": "gte",
+                "value": 2
+              }
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "MAS",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "MAS"
+        },
+        {
+          "kind": "positive_core",
+          "dimension": "CAL",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "CAL"
+        }
+      ],
+      "text": "练习带来的进展和从容的游戏过程都对你有吸引力。一次游玩可以偏重突破，另一次偏重节奏自主；这些答案本身并没有说明你一定要在挑战后休息。",
+      "dedup_group": "challenge_calm",
+      "covered_dimensions": [
+        "MAS",
+        "CAL"
+      ]
+    },
+    {
+      "id": "I_STR_CRE",
+      "section": "insight",
+      "priority": 113,
+      "condition": {
+        "all": [
+          {
+            "all": [
+              {
+                "fact": "scores.STR",
+                "op": "gte",
+                "value": 75
+              },
+              {
+                "fact": "positive_counts.STR",
+                "op": "gte",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "fact": "scores.CRE",
+                "op": "gte",
+                "value": 75
+              },
+              {
+                "fact": "positive_counts.CRE",
+                "op": "gte",
+                "value": 2
+              }
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "STR",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "STR"
+        },
+        {
+          "kind": "positive_core",
+          "dimension": "CRE",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "CRE"
+        }
+      ],
+      "text": "你既会关注机制和方案效果，也在意表达自己的风格。选一套有效方案与把它改成自己想要的样子，可以是两种同时存在的乐趣。",
+      "dedup_group": "strategy_creation",
+      "covered_dimensions": [
+        "STR",
+        "CRE"
+      ]
+    },
+    {
+      "id": "I_REPLAY_LIMITED",
+      "section": "insight",
+      "priority": 110,
+      "condition": {
+        "all": [
+          {
+            "fact": "followups.R01",
+            "op": "in",
+            "value": [
+              "willing",
+              "conditional"
+            ]
+          },
+          {
+            "fact": "followups.R03",
+            "op": "in",
+            "value": [
+              "limited",
+              "severe"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "R01"
+        },
+        {
+          "kind": "answer",
+          "id": "R03"
+        }
+      ],
+      "text": "你在条件合适时有再次体验的意愿，但实际可支配时间形成了限制。即使实际二刷较少，也不能据此解释成对二刷没有兴趣。",
+      "dedup_group": "replay"
+    },
+    {
+      "id": "I_MOD_LIMITED",
+      "section": "insight",
+      "priority": 105,
+      "condition": {
+        "fact": "followups.M01",
+        "op": "in",
+        "value": [
+          "platform_unavailable",
+          "device_time_limited"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "M01"
+        }
+      ],
+      "text": "你报告的是Mod使用条件受到限制。这个回答只能说明当前可行性，不能用来判断你是否喜欢个人表达或改变玩法。",
+      "dedup_group": "mod"
+    },
+    {
+      "id": "I_REPLAY_NOT_INTERESTED",
+      "section": "insight",
+      "priority": 103,
+      "condition": {
+        "all": [
+          {
+            "fact": "followups.R01",
+            "op": "in",
+            "value": [
+              "prefer_new",
+              "not_interested"
+            ]
+          },
+          {
+            "fact": "followups.R03",
+            "op": "eq",
+            "value": "enough"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "R01"
+        },
+        {
+          "kind": "answer",
+          "id": "R03"
+        }
+      ],
+      "text": "即使时间通常允许，你也更倾向于接触新作品或结束已有体验。这与想二刷但腾不出时间，是不同的选择。",
+      "dedup_group": "replay"
+    },
+    {
+      "id": "TAG_GUIDE_BOUNDARY",
+      "section": "tag",
+      "priority": 100,
+      "condition": {
+        "all": [
+          {
+            "fact": "followups.G01",
+            "op": "contains",
+            "value": "mechanics"
+          },
+          {
+            "fact": "followups.G02",
+            "op": "eq",
+            "value": "no_story_or_puzzle"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "G01"
+        },
+        {
+          "kind": "answer",
+          "id": "G02"
+        }
+      ],
+      "text": "查机制，保留剧情与谜底",
+      "dedup_group": "guide"
+    },
+    {
+      "id": "TAG_REPLAY_LIMITED",
+      "section": "tag",
+      "priority": 95,
+      "condition": {
+        "all": [
+          {
+            "fact": "followups.R01",
+            "op": "in",
+            "value": [
+              "willing",
+              "conditional"
+            ]
+          },
+          {
+            "fact": "followups.R03",
+            "op": "in",
+            "value": [
+              "limited",
+              "severe"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "R01"
+        },
+        {
+          "kind": "answer",
+          "id": "R03"
+        }
+      ],
+      "text": "有二刷意愿，时间受限",
+      "dedup_group": "replay"
+    },
+    {
+      "id": "TAG_MOD_LIMITED",
+      "section": "tag",
+      "priority": 90,
+      "condition": {
+        "fact": "followups.M01",
+        "op": "in",
+        "value": [
+          "platform_unavailable",
+          "device_time_limited"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "M01"
+        }
+      ],
+      "text": "Mod条件受限",
+      "dedup_group": "mod"
+    },
+    {
+      "id": "TAG_TRY_FIRST",
+      "section": "tag",
+      "priority": 85,
+      "condition": {
+        "fact": "followups.A01",
+        "op": "eq",
+        "value": "try_then_reference"
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "A01"
+        }
+      ],
+      "text": "先试再参考",
+      "dedup_group": "approach"
+    },
+    {
+      "id": "TAG_GUIDE_BUILD",
+      "section": "tag",
+      "priority": 80,
+      "condition": {
+        "fact": "followups.G01",
+        "op": "contains",
+        "value": "build"
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "G01"
+        }
+      ],
+      "text": "参考成熟方案",
+      "dedup_group": "guide"
+    },
+    {
+      "id": "TAG_MOD_ACTUAL",
+      "section": "tag",
+      "priority": 75,
+      "condition": {
+        "all": [
+          {
+            "fact": "followups.M02.basis",
+            "op": "eq",
+            "value": "actual"
+          },
+          {
+            "fact": "followups.M02.purposes",
+            "op": "exists",
+            "value": true
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "M01"
+        },
+        {
+          "kind": "answer",
+          "id": "M02"
+        }
+      ],
+      "text": "有Mod实际使用经历",
+      "dedup_group": "mod"
+    },
+    {
+      "id": "D_SPOILER",
+      "section": "drain",
+      "priority": 100,
+      "condition": {
+        "fact": "followups.G02",
+        "op": "in",
+        "value": [
+          "no_story_or_puzzle",
+          "puzzle_ok",
+          "story_ok"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "G02"
+        }
+      ],
+      "text": "你明确设置了剧透边界。提前提供超出边界的剧情或谜底，是需要避免的体验安排。",
+      "dedup_group": "spoiler"
+    },
+    {
+      "id": "SELF_APPROACH",
+      "section": "self_check",
+      "priority": 100,
+      "condition": {
+        "fact": "followups.A01",
+        "op": "in",
+        "value": [
+          "try_then_reference",
+          "learn_rules_then_try",
+          "reference_first"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "answer",
+          "id": "A01"
+        }
+      ],
+      "text": "游戏之外，接触新事物时，你也常采用相似的起步方式吗？",
+      "dedup_group": "self_approach"
+    },
+    {
+      "id": "I_EXP_HIGH",
+      "section": "insight",
+      "priority": 59,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.EXP",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.EXP",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "EXP",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "EXP"
+        }
+      ],
+      "text": "你会为新发现留下空间；具体如何探索，仍要看作品和当次约定。",
+      "dedup_group": "dim_EXP",
+      "covered_dimensions": [
+        "EXP"
+      ]
+    },
+    {
+      "id": "E_EXP_HIGH",
+      "section": "enjoyment",
+      "priority": 59,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.EXP",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.EXP",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "EXP",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "EXP"
+        }
+      ],
+      "text": "遇到陌生路线、未说明互动或意外内容时，有继续了解的兴趣。",
+      "dedup_group": "enjoy_EXP"
+    },
+    {
+      "id": "SELF_EXP",
+      "section": "self_check",
+      "priority": 49,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.EXP",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.EXP",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "EXP",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "EXP"
+        }
+      ],
+      "text": "在游戏之外，遇到没有明确收益的新事物时，你也会想了解吗？",
+      "dedup_group": "self_EXP"
+    },
+    {
+      "id": "I_NAR_HIGH",
+      "section": "insight",
+      "priority": 58,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.NAR",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.NAR",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "NAR",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "NAR"
+        }
+      ],
+      "text": "你会把故事体验作为游戏的一部分；剧情停留和剧透边界需要单独确认。",
+      "dedup_group": "dim_NAR",
+      "covered_dimensions": [
+        "NAR"
+      ]
+    },
+    {
+      "id": "E_NAR_HIGH",
+      "section": "enjoyment",
+      "priority": 58,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.NAR",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.NAR",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "NAR",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "NAR"
+        }
+      ],
+      "text": "有角色动机、情节线索和可回味的人物关系的体验。",
+      "dedup_group": "enjoy_NAR"
+    },
+    {
+      "id": "SELF_NAR",
+      "section": "self_check",
+      "priority": 48,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.NAR",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.NAR",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "NAR",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "NAR"
+        }
+      ],
+      "text": "游戏之外，你也会反复回味故事中人物的选择吗？",
+      "dedup_group": "self_NAR"
+    },
+    {
+      "id": "I_MAS_HIGH",
+      "section": "insight",
+      "priority": 57,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.MAS",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.MAS",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "MAS",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "MAS"
+        }
+      ],
+      "text": "你在意练习带来的变化；实际难度和失败后的安排由同游回答决定。",
+      "dedup_group": "dim_MAS",
+      "covered_dimensions": [
+        "MAS"
+      ]
+    },
+    {
+      "id": "E_MAS_HIGH",
+      "section": "enjoyment",
+      "priority": 57,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.MAS",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.MAS",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "MAS",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "MAS"
+        }
+      ],
+      "text": "能观察练习进展、改善自身表现或逐步掌握技巧的内容。",
+      "dedup_group": "enjoy_MAS"
+    },
+    {
+      "id": "SELF_MAS",
+      "section": "self_check",
+      "priority": 47,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.MAS",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.MAS",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "MAS",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "MAS"
+        }
+      ],
+      "text": "游戏之外，你也喜欢有机会反复练习并观察进展的事情吗？",
+      "dedup_group": "self_MAS"
+    },
+    {
+      "id": "I_COM_HIGH",
+      "section": "insight",
+      "priority": 56,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.COM",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.COM",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "COM",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "COM"
+        }
+      ],
+      "text": "你对竞争反馈有兴趣；这不能说明你如何对待队友或输赢。",
+      "dedup_group": "dim_COM",
+      "covered_dimensions": [
+        "COM"
+      ]
+    },
+    {
+      "id": "E_COM_HIGH",
+      "section": "enjoyment",
+      "priority": 56,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.COM",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.COM",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "COM",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "COM"
+        }
+      ],
+      "text": "直接对抗、队伍竞争或异步纪录比较的体验。",
+      "dedup_group": "enjoy_COM"
+    },
+    {
+      "id": "SELF_COM",
+      "section": "self_check",
+      "priority": 46,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.COM",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.COM",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "COM",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "COM"
+        }
+      ],
+      "text": "游戏之外，与别人比较表现也会增加你的参与兴趣吗？",
+      "dedup_group": "self_COM"
+    },
+    {
+      "id": "I_STR_HIGH",
+      "section": "insight",
+      "priority": 55,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.STR",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.STR",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "STR",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "STR"
+        }
+      ],
+      "text": "你会关注方案与结果的联系；参考攻略还是自行尝试是另一项具体习惯。",
+      "dedup_group": "dim_STR",
+      "covered_dimensions": [
+        "STR"
+      ]
+    },
+    {
+      "id": "E_STR_HIGH",
+      "section": "enjoyment",
+      "priority": 55,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.STR",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.STR",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "STR",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "STR"
+        }
+      ],
+      "text": "可分析机制、安排资源、规划步骤并比较方案的内容。",
+      "dedup_group": "enjoy_STR"
+    },
+    {
+      "id": "SELF_STR",
+      "section": "self_check",
+      "priority": 45,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.STR",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.STR",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "STR",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "STR"
+        }
+      ],
+      "text": "游戏之外，你也享受比较几种方案如何影响结果吗？",
+      "dedup_group": "self_STR"
+    },
+    {
+      "id": "I_CRE_HIGH",
+      "section": "insight",
+      "priority": 54,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.CRE",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.CRE",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "CRE",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "CRE"
+        }
+      ],
+      "text": "你在意表达和定制的空间；是否能使用Mod取决于具体条件。",
+      "dedup_group": "dim_CRE",
+      "covered_dimensions": [
+        "CRE"
+      ]
+    },
+    {
+      "id": "E_CRE_HIGH",
+      "section": "enjoyment",
+      "priority": 54,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.CRE",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.CRE",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "CRE",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "CRE"
+        }
+      ],
+      "text": "能进行外观、空间、玩法风格或自定主题表达的内容。",
+      "dedup_group": "enjoy_CRE"
+    },
+    {
+      "id": "SELF_CRE",
+      "section": "self_check",
+      "priority": 44,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.CRE",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.CRE",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "CRE",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "CRE"
+        }
+      ],
+      "text": "游戏之外，你也会希望在可行的选择中保留自己的风格吗？",
+      "dedup_group": "self_CRE"
+    },
+    {
+      "id": "I_SOC_HIGH",
+      "section": "insight",
+      "priority": 53,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.SOC",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.SOC",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "SOC",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "SOC"
+        }
+      ],
+      "text": "你重视游戏中的联结机会；同游节奏和合作方式需另看直接回答。",
+      "dedup_group": "dim_SOC",
+      "covered_dimensions": [
+        "SOC"
+      ]
+    },
+    {
+      "id": "E_SOC_HIGH",
+      "section": "enjoyment",
+      "priority": 53,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.SOC",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.SOC",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "SOC",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "SOC"
+        }
+      ],
+      "text": "共同体验、分享经历和维系同好关系的机会。",
+      "dedup_group": "enjoy_SOC"
+    },
+    {
+      "id": "SELF_SOC",
+      "section": "self_check",
+      "priority": 43,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.SOC",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.SOC",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "SOC",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "SOC"
+        }
+      ],
+      "text": "游戏之外，共同做一件事也是你保持联系的方式吗？",
+      "dedup_group": "self_SOC"
+    },
+    {
+      "id": "I_CAL_HIGH",
+      "section": "insight",
+      "priority": 52,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.CAL",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.CAL",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "CAL",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "CAL"
+        }
+      ],
+      "text": "你会欣赏不必一直赶进度的段落；这与喜欢挑战可以同时存在。",
+      "dedup_group": "dim_CAL",
+      "covered_dimensions": [
+        "CAL"
+      ]
+    },
+    {
+      "id": "E_CAL_HIGH",
+      "section": "enjoyment",
+      "priority": 52,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.CAL",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.CAL",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "CAL",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "CAL"
+        }
+      ],
+      "text": "节奏可控、安稳熟悉、可从容体验的内容。",
+      "dedup_group": "enjoy_CAL"
+    },
+    {
+      "id": "SELF_CAL",
+      "section": "self_check",
+      "priority": 42,
+      "condition": {
+        "all": [
+          {
+            "fact": "scores.CAL",
+            "op": "gte",
+            "value": 75
+          },
+          {
+            "fact": "positive_counts.CAL",
+            "op": "gte",
+            "value": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "positive_core",
+          "dimension": "CAL",
+          "min_value": 4,
+          "minimum": 2
+        },
+        {
+          "kind": "dimension",
+          "dimension": "CAL"
+        }
+      ],
+      "text": "在精力充足的日子，你也会主动选择节奏较从容的活动吗？",
+      "dedup_group": "self_CAL"
+    }
+  ],
+  "advice_topics": [
+    {
+      "id": "spoiler",
+      "title": "剧透",
+      "question_id": "G02",
+      "fallback": "先确认这次允许透露的是机制、剧情还是谜底。",
+      "by_answer": {
+        "no_story_or_puzzle": "先交流机制或操作；涉及剧情和谜底时，得到同意后再展开。",
+        "puzzle_ok": "可以交流谜题答案；涉及剧情时先征得同意。",
+        "story_ok": "可以交流剧情；涉及谜底时先征得同意。",
+        "all_ok": "你允许提前知道剧情和谜底；向同游者提供这些内容前，仍需确认对方边界。",
+        "ask_each_time": "每次开始前确认本次可透露的范围。",
+        "uncertain": "先确认这次允许透露的是机制、剧情还是谜底。"
+      }
+    },
+    {
+      "id": "story",
+      "title": "剧情",
+      "question_id": "P02",
+      "fallback": "开局前确认剧情是一起看、各自看，还是双方同意后略过。",
+      "by_answer": {
+        "watch": "为剧情段落留出共同停下来的安排。",
+        "separate": "约定剧情各自体验后，在同一个进度点汇合。",
+        "skip_agreed": "仅在双方都同意时略过剧情。",
+        "flexible": "开始前给本次剧情安排一个明确约定。",
+        "uncertain": "开局前确认剧情是一起看、各自看，还是双方同意后略过。"
+      }
+    },
+    {
+      "id": "difficulty",
+      "title": "难度",
+      "question_id": "P03",
+      "fallback": "共同确定初始难度和调整时机，不从偏好分推断技术水平。",
+      "by_answer": {
+        "stretch": "共同选一个愿意练习的难度，并先约定什么时候讨论调整。",
+        "comfortable": "共同确认从容体验的难度范围，再开始推进。",
+        "adjust": "优先确认当前模式是否允许中途调整，以及谁来提出调整。",
+        "decide_together": "开始前协商这次的难度和调整方式。",
+        "uncertain": "共同确定初始难度和调整时机，不从偏好分推断技术水平。"
+      }
+    },
+    {
+      "id": "exploration",
+      "title": "探索推进",
+      "question_id": "P01",
+      "fallback": "先约定这次以推进目标还是探索沿途为主。",
+      "by_answer": {
+        "advance": "先明确本次推进目标，再约定遇到支线时是否停留。",
+        "thorough": "为区域探索留出空间，并约定何时转向下一目标。",
+        "detour": "允许遇到好奇内容时提出绕路，同时确认队友是否愿意同行。",
+        "switch": "事先区分探索时段与推进时段。",
+        "uncertain": "先约定这次以推进目标还是探索沿途为主。"
+      }
+    },
+    {
+      "id": "guide",
+      "title": "攻略",
+      "question_id": "G01",
+      "fallback": "先约定什么时候查资料、由谁查，以及哪些内容不能提前透露。",
+      "by_answer": null
+    },
+    {
+      "id": "mod",
+      "title": "Mod",
+      "question_id": "M01",
+      "fallback": "开始前确认平台、版本、可用Mod和双方接受的改动范围。",
+      "by_answer": {
+        "actual_use": "先列出实际要使用的Mod，确认双方版本、兼容性和改动范围。",
+        "available_not_used": "如考虑使用Mod，先确认用途、安装条件和双方同意的范围。",
+        "platform_unavailable": "先确认双方平台和版本的实际条件；在可用方案确定前，以双方都能参与的内容为准。",
+        "device_time_limited": "先确认安装条件和安排；有条件限制时，共同选择当前可行的方案。",
+        "no_relevant_title": "先确认当前作品是否支持双方需要的Mod。",
+        "not_interested": "你目前通常没有使用意愿；共同确认这次是否采用原有玩法。",
+        "uncertain": "开始前确认平台、版本、可用Mod和双方接受的改动范围。"
+      }
+    },
+    {
+      "id": "failure",
+      "title": "失败后的安排",
+      "question_id": "P04",
+      "fallback": "提前约定何时讨论继续、复盘、找提示、调整或暂停。",
+      "by_answer": {
+        "retry": "提前约定连续尝试到何时再共同讨论下一步。",
+        "review": "连续失败后先交流情况，再共同决定新的方案。",
+        "guide": "先确认可以查哪种提示，以及剧情和谜底的边界。",
+        "adjust": "共同确认可以调整的难度或路线，再继续尝试。",
+        "break": "提前约定暂停信号和之后是否继续。",
+        "decide_together": "把讨论下一步作为失败后的第一个共同动作。",
+        "uncertain": "提前约定何时讨论继续、复盘、找提示、调整或暂停。"
+      }
+    }
+  ],
+  "comparison": {
+    "topics": [
+      "spoiler",
+      "story",
+      "difficulty",
+      "exploration",
+      "guide",
+      "mod",
+      "failure"
+    ],
+    "statuses": [
+      {
+        "value": "shared",
+        "label": "已有共同选择"
+      },
+      {
+        "value": "coordinate",
+        "label": "需要协调"
+      },
+      {
+        "value": "insufficient",
+        "label": "资料不足"
+      }
+    ],
+    "title_matching": "作品ID及版本匹配，别名归并；未列出不等于不喜欢。",
+    "forbidden_outputs": [
+      "性格契合度百分比",
+      "根据作品重合数计算人格相似度",
+      "根据维度差直接认定冲突"
+    ]
+  },
+  "game_catalog": [
+    {
+      "id": "elden_ring",
+      "title": "Elden Ring",
+      "aliases": [
+        "艾尔登法环",
+        "ELDEN RING"
+      ],
+      "series_id": "elden_ring",
+      "edition": "base"
+    },
+    {
+      "id": "stardew_valley",
+      "title": "Stardew Valley",
+      "aliases": [
+        "星露谷物语"
+      ],
+      "series_id": "stardew",
+      "edition": "base"
+    },
+    {
+      "id": "slay_the_spire",
+      "title": "Slay the Spire",
+      "aliases": [
+        "杀戮尖塔"
+      ],
+      "series_id": "slay_the_spire",
+      "edition": "base"
+    },
+    {
+      "id": "hollow_knight",
+      "title": "Hollow Knight",
+      "aliases": [
+        "空洞骑士"
+      ],
+      "series_id": "hollow_knight",
+      "edition": "base"
+    },
+    {
+      "id": "subnautica",
+      "title": "Subnautica",
+      "aliases": [
+        "深海迷航"
+      ],
+      "series_id": "subnautica",
+      "edition": "base"
+    },
+    {
+      "id": "minecraft",
+      "title": "Minecraft",
+      "aliases": [
+        "我的世界"
+      ],
+      "series_id": "minecraft",
+      "edition": "unspecified"
+    }
+  ],
+  "catalog_note": "仅为模拟报告提供的最小作品别名字典，不是游戏属性、平台功能或游戏—人格对应表。未知作品保留自填名称。",
+  "derived_report_rules": [
+    {
+      "id": "T_REPEAT_PLAYED",
+      "trigger": {
+        "experience": "yes",
+        "distinct_game_ids_min": 2,
+        "same_attraction": true,
+        "exclude_attractions": [
+          "other"
+        ]
+      },
+      "template_key": "taste_repeat_played",
+      "evidence": "每款作品的吸引点与亲玩状态"
+    },
+    {
+      "id": "T_REPEAT_ANTICIPATED",
+      "trigger": {
+        "experience": [
+          "no",
+          "unknown"
+        ],
+        "distinct_game_ids_min": 2,
+        "same_attraction": true,
+        "exclude_attractions": [
+          "other"
+        ]
+      },
+      "template_key": "taste_repeat_anticipated",
+      "evidence": "每款作品的吸引点与未确认亲玩状态"
+    },
+    {
+      "id": "T_SINGLE_PLAYED",
+      "trigger": {
+        "experience": "yes",
+        "no_repeated_attraction_in_group": true
+      },
+      "template_key": "taste_single_played",
+      "evidence": "点名作品的吸引点"
+    },
+    {
+      "id": "T_SINGLE_ANTICIPATED",
+      "trigger": {
+        "experience": [
+          "no",
+          "unknown"
+        ],
+        "no_repeated_attraction_in_group": true
+      },
+      "template_key": "taste_single_anticipated",
+      "evidence": "点名作品的吸引点与状态"
+    },
+    {
+      "id": "T_ECHO",
+      "trigger": {
+        "requires": "T_REPEAT_PLAYED",
+        "dimension_score_gte": 75
+      },
+      "template_key": "taste_echo",
+      "evidence": "重复作品吸引点＋独立维度分与其核心题"
+    },
+    {
+      "id": "T_DIFFERENCE",
+      "trigger": {
+        "requires": "T_REPEAT_PLAYED",
+        "dimension_score_lte": 25
+      },
+      "template_key": "taste_difference",
+      "evidence": "重复作品吸引点＋独立维度分与其核心题"
+    },
+    {
+      "id": "D_NEGATIVE_GAME",
+      "trigger": {
+        "negative_experience": "yes",
+        "explicit_reason_required": true
+      },
+      "template_key": "negative_game",
+      "evidence": "点名的未喜欢作品及所选原因"
+    },
+    {
+      "id": "SUPPLEMENT_SELECTED",
+      "trigger": {
+        "explicitly_selected": true
+      },
+      "evidence": "补充体验清单所选项"
+    },
+    {
+      "id": "DISPLAY_*",
+      "trigger": {
+        "algorithm": "完整性→全高→全低→无明显主型→领先组；再做单题敏感性呈现",
+        "parameters": "display_rules"
+      },
+      "evidence": "八维分、核心题、缺失情况与敏感性枚举"
+    },
+    {
+      "id": "ADVICE_*",
+      "trigger": {
+        "explicit_answer": "advice_topics.question_id",
+        "otherwise": "待确认的一般协商建议"
+      },
+      "evidence": "对应条件追问；未回答时不得声称知道偏好"
+    },
+    {
+      "id": "PAIR_*",
+      "trigger": {
+        "algorithm": "版本可比且双方对应追问均有明确回答；按主题比较选择和条件",
+        "parameters": "comparison及advice_topics"
+      },
+      "evidence": "左右双方的原始选择；不能读取八维分来认定冲突"
+    }
+  ],
+  "system_templates": {
+    "profile_labels": {
+      "partial": "局部偏好画像",
+      "all_high": "多面倾向：多种体验都有吸引力",
+      "all_low": "暂无明确原型：本次吸引点偏少",
+      "no_clear": "暂无明显主型",
+      "sensitive": "暂定偏好组合",
+      "multi": "多面倾向"
+    },
+    "profile_explanations": {
+      "partial": "部分维度的有效答案不足三题，当前只解释有依据的局部偏好，暂缓完整主副称号。",
+      "all_high": "你对八类体验都给出了较高的问卷偏好分；本次不靠细小分差强排主副。",
+      "all_low": "本次列出的八类体验普遍没有获得高偏好回答。可以结合补充体验看题库是否遗漏了你在意的内容。",
+      "no_clear": "目前没有维度达到本版暂定展示门槛；这不说明缺乏兴趣或能力。",
+      "sensitive": "单个答案小幅改变就可能改变主型或领先组；本次以分数和具体判断呈现偏好，暂不区分主副。",
+      "dual": "两个维度都处于本版暂定领先范围，先并列呈现，不把细微差异当作明确高低。",
+      "multi": "多个维度处于相近的暂定领先范围，本次不强排主副。"
+    },
+    "secondary_sensitive": "主型在本次单题检查中保持不变，但副偏好可能变化；副偏好暂不排序。",
+    "taste_repeat_played": "你在亲自体验的{titles}中都选择了“{attraction}”。这是这些作品对你重复出现的吸引点，依据来自你填写的原因。",
+    "taste_repeat_anticipated": "你在未确认亲玩体验的{titles}中都选择了“{attraction}”。这是了解或期待层面的共同吸引，不能当作这些作品中的实际行为。",
+    "taste_same_series": " 这些依据主要来自同一系列，对跨系列口味的说明仍有限。",
+    "taste_single_played": "你为亲自体验的《{title}》选择了“{attractions}”；这段只解释这款作品。",
+    "taste_single_anticipated": "你为未确认亲玩体验的《{title}》选择了“{attractions}”；这段记录吸引或期待，不推断实际玩法。",
+    "taste_echo": "作品原因中重复出现“{attraction}”，独立情境题的“{dimension}”分数也较高。这里并列记录两份自述的呼应，不把吻合当作测量有效的证明。",
+    "taste_difference": "你在具体作品中重复选择“{attraction}”，但独立情境题的“{dimension}”分数较低。先保留这两份自述；差异可能与具体情境有关，不能据此判断哪一份更真实。",
+    "taste_empty": "本次没有填写喜欢作品，因此尚不能解释跨作品的共同吸引；核心画像照常独立计算。",
+    "taste_no_attractions": "作品名称已经记录，但吸引点未填写，当前不根据游戏名称补写共同口味。",
+    "taste_varied": "已填写作品的吸引点没有在同一体验依据下重复出现；它们可能满足了不同需求，暂不强找统一主题。",
+    "taste_scope": "这些是玩家自述的作品吸引点；它们不参与八维计分，也不证明现实人格。",
+    "negative_game": "你在亲自玩过但没有喜欢起来的《{title}》中选择了“{reason}”。这说明该作品有需要留意的体验或条件，不自动泛化到所有同类作品。",
+    "guide_advice": "你选择的用途是“{purposes}”。一起玩前先约定什么时候查、由谁查，并另行确认剧透边界。",
+    "mod_advice": "本次用途依据为“{purposes}”；假设意愿不表示已有安装或使用经历。",
+    "comparison_version_mismatch": "两份报告的版本不一致，当前没有兼容映射；保留各自结果，不合并比较分数或生成共同称号。",
+    "pair_shared": "双方在“{title}”的直接回答相同；请把该选择落实成本次具体安排。",
+    "pair_coordinate": "双方在“{title}”的直接回答不同；先确认本次采用哪种安排，差异不等于性格冲突。",
+    "pair_spoiler_ask": "至少一方希望逐次确认范围；每次提供信息前先问本次可透露什么。",
+    "pair_spoiler": "目前双方都明确允许的范围是：{allowed}。额外内容由想了解的一方单独查看；扩大共享范围前再确认。",
+    "pair_mod_limited": "至少一方报告Mod条件受限。先核对双方平台、版本和可行方案，未确认前以双方都能参与的内容为准。",
+    "pair_mod_no_interest": "双方都明确表示当前通常没有Mod使用意愿，可先按原有玩法安排。",
+    "pair_mod_insufficient": "已有条件或经历信息还不足以确定本次Mod方案；请补充双方具体用途及实际／假设依据。",
+    "pair_mod_purposes": "并排核对双方用途及实际／假设依据，再确认这次是否启用、启用哪些Mod；用途重合不等于已经同意安装。",
+    "pair_guide": "先比较双方查资料的用途，再共同约定查阅时机；剧情与谜底范围以剧透协商项为准。",
+    "pair_scope": "共同作品和画像分开比较；没有性格契合度百分比。未列出的作品不等于不喜欢，“需要协调”只表示本次安排尚待确认。",
+    "insight_gap": "可用证据不足以支持三条具体判断，当前只保留有依据的内容。",
+    "no_drains": "本次没有足够的明确回避或负面体验资料，暂不根据低分补写消耗点。",
+    "neutral_note": "大多数有效回答选择了中立，整体可区分信息较少；仍保留明确的局部证据。",
+    "repeat_note": "答案分布较集中；仅记录这一现象，不自动判定无效或不认真。",
+    "limitations": [
+      "八维是待验证的原创模型；称号与阈值均为展示规则。",
+      "分数描述通常游戏偏好，不是能力、品德或现实人格结论。",
+      "低偏好不自动等于厌恶；未选择和未回答不等于不喜欢。",
+      "模拟案例只检查规则一致性，不提供假设成立的证据。"
+    ]
+  },
+  "research": {
+    "hypotheses": {
+      "A": "作品口味相似是否对应独立测得的游戏偏好相似",
+      "B": "作品口味相似是否对应自愿独立测得的现实人格相似",
+      "cross_game": "总体偏好能否在不同作品的情境中相对稳定"
+    },
+    "pilot": {
+      "comprehension_n": 12,
+      "trial_n": 120,
+      "retest_n": 40,
+      "retest_days": 14,
+      "retest_window_days": 3
+    },
+    "independent_measure": {
+      "name": "IPIP 50-item Big-Five markers",
+      "language": "zh-Hant",
+      "translator": "Sih-Ci Jhu",
+      "source": "https://ipip.ori.org/ChineseAB5CFactorMarkers.htm",
+      "key": "https://ipip.ori.org/new_ipip-50-item-scale.htm",
+      "permission": "https://ipip.ori.org/newPermission.htm",
+      "status": "独立自愿研究起点；未并入核心测试；简体适配需另存版本并做理解测试。"
+    },
+    "never_use_fixture_as_evidence": true
+  },
+  "sources": [
+    {
+      "title": "Motivations for Play in Online Games",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17201605/",
+      "use": "玩家动机分解参考，不证明本八维结构"
+    },
+    {
+      "title": "How We Developed the Gamer Motivation Profile v2",
+      "url": "https://quanticfoundry.com/2015/07/20/how-we-developed-the-gamer-motivation-profile-v2/",
+      "use": "结构探索与迭代方法参考，不复制题目"
+    },
+    {
+      "title": "Validating Motives of Autonomous Players inventory",
+      "url": "https://link.springer.com/article/10.1007/s11257-025-09431-7",
+      "use": "跨游戏动机量表开发方法参考"
+    },
+    {
+      "title": "On the similarity between exchangeable profiles",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3771326/",
+      "use": "双人数据依赖与画像相似性研究参考"
+    },
+    {
+      "title": "Chinese Translation of IPIP 50-item markers",
+      "url": "https://ipip.ori.org/ChineseAB5CFactorMarkers.htm",
+      "use": "自愿独立人格研究的译本起点"
+    },
+    {
+      "title": "IPIP permission",
+      "url": "https://ipip.ori.org/newPermission.htm",
+      "use": "IPIP材料公开使用说明"
+    }
+  ]
+}

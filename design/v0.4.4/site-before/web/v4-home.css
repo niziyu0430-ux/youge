@@ -1,0 +1,60 @@
+/* A continuous portrait ribbon, between the masthead and the landscape. */
+.persona-ribbon{--ribbon-card-width:138px;--ribbon-gap:18px;position:relative;max-width:1440px;margin:0 auto 18px;padding:2px 0 7px;isolation:isolate}
+.persona-ribbon-viewport{overflow:hidden;width:100%;padding:5px 0 7px;mask-image:linear-gradient(to right,transparent,#000 30px,#000 calc(100% - 30px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 30px,#000 calc(100% - 30px),transparent);scrollbar-width:none;overscroll-behavior-x:contain}
+.persona-ribbon-viewport::-webkit-scrollbar{display:none}
+.persona-ribbon-track{display:flex;width:max-content;animation:portrait-ribbon var(--ribbon-duration,70s) linear infinite;will-change:transform}
+.persona-ribbon-group{display:flex;flex:none;gap:var(--ribbon-gap);padding-right:var(--ribbon-gap)}
+.ribbon-persona{width:var(--ribbon-card-width);flex:none;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:7px;padding:2px 6px 5px;border-radius:14px;touch-action:pan-y;color:var(--forest);transition:background .18s ease}
+.ribbon-persona picture{display:block;width:100%}
+.ribbon-persona img{width:100%;height:144px;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.ribbon-persona span{font:600 16px/1.5 var(--serif);white-space:nowrap;letter-spacing:.4px}
+.ribbon-persona:hover{background:#e9ebdf88}
+.ribbon-pause{position:absolute;right:10px;bottom:1px;z-index:2;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#faf8efed;color:var(--forest);box-shadow:0 3px 12px #29412e0b}
+.ribbon-pause svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.persona-ribbon[data-paused=true] .persona-ribbon-track{animation-play-state:paused}
+.persona-ribbon.ribbon-keyboard .persona-ribbon-track,.persona-ribbon[data-reduced-motion=true] .persona-ribbon-track{animation:none;transform:none;will-change:auto}
+.persona-ribbon.ribbon-keyboard .persona-ribbon-viewport,.persona-ribbon[data-reduced-motion=true] .persona-ribbon-viewport{overflow-x:auto;touch-action:pan-x pan-y}
+.persona-ribbon.ribbon-keyboard .persona-ribbon-group[aria-hidden],.persona-ribbon[data-reduced-motion=true] .persona-ribbon-group[aria-hidden]{display:none}
+.persona-ribbon.ribbon-keyboard .ribbon-persona,.persona-ribbon[data-reduced-motion=true] .ribbon-persona{touch-action:auto}
+@keyframes portrait-ribbon{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(hover:hover) and (pointer:fine){.persona-ribbon-viewport:hover .persona-ribbon-track{animation-play-state:paused}}
+
+/* Every secondary view and modal has a quiet, explicit way home. */
+.page-back-shell{max-width:1200px;margin:5px auto 0;padding:0 36px}
+.home-back{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:9px 16px;border:1px solid #d5dbce;border-radius:100px;background:#fffef790;color:var(--forest);font-size:13px;line-height:1.4;text-decoration:none;white-space:nowrap;transition:background .18s,border-color .18s}
+.home-back .icon{width:17px;height:17px}
+.home-back:hover{background:#fffef9;border-color:#aebda7}
+.modal-heading-copy{min-width:0}
+.modal-heading-copy .home-back{margin:0 0 12px;padding:7px 12px;min-height:40px;font-size:12px}
+.modal-header{align-items:flex-start}
+
+body[data-view=home] .hero{min-height:520px}
+body[data-view=home] .hero-copy{padding-top:60px;padding-bottom:64px}
+@media(min-width:1540px){.persona-ribbon{max-width:1480px}}
+@media(max-width:1480px){.persona-ribbon{margin-left:28px;margin-right:28px}}
+@media(max-width:1000px){.persona-ribbon{--ribbon-card-width:128px;--ribbon-gap:16px}.ribbon-persona img{height:136px}.page-back-shell{padding:0 28px}}
+@media(max-width:700px){
+  .site-header{min-height:74px;height:auto;gap:12px;padding:15px 20px}
+  .site-header nav{gap:10px}.site-header .nav-link{min-height:44px;padding:10px 1px;font-size:12px}
+  .site-header .archive-button{min-height:44px;padding:8px 12px;font-size:12px}
+  .persona-ribbon{--ribbon-card-width:104px;--ribbon-gap:12px;margin:0 12px 12px;padding-top:0}
+  .persona-ribbon-viewport{padding-top:0;mask-image:linear-gradient(to right,transparent,#000 15px,#000 calc(100% - 15px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 15px,#000 calc(100% - 15px),transparent)}
+  .ribbon-persona{padding-left:3px;padding-right:3px;gap:4px}.ribbon-persona img{height:118px}.ribbon-persona span{font-size:14px;letter-spacing:0}
+  .ribbon-pause{width:44px;height:44px;right:0;bottom:0;background:#faf8eff2}
+  .page-back-shell{padding:0 21px;margin-top:0}.home-back{min-height:44px;padding:9px 14px;font-size:12px}
+  body[data-view=home] .hero{min-height:540px;margin-top:0}
+  body[data-view=home] .hero-copy{padding:32px 25px 145px}
+  body[data-view=home] .hero h1{font-size:clamp(29px,7.8vw,39px);letter-spacing:.3px;line-height:1.5;margin-top:18px}
+  body[data-view=home] .hero-description{font-size:14px;line-height:1.95;margin-top:18px}
+  body[data-view=home] .hero-actions{margin-top:22px;gap:4px}
+  body[data-view=home] .hero-actions .text-button{font-size:13px;min-height:44px}
+}
+@media(max-width:380px){
+  .site-header{padding:12px 15px;gap:9px}.site-header .wordmark{font-size:22px;gap:7px}.wordmark small{font-size:7px;letter-spacing:1.2px}
+  .site-header nav{gap:7px}.site-header .nav-link{font-size:11px}.site-header .archive-button{font-size:11px;padding:8px 10px;gap:5px}
+  .persona-ribbon{--ribbon-card-width:98px;--ribbon-gap:11px}.ribbon-persona img{height:108px}.ribbon-persona span{font-size:13px}
+  body[data-view=home] .hero-copy{padding-left:22px;padding-right:22px}
+}
+@media(max-width:350px){.site-header{align-items:center;flex-wrap:wrap;padding-bottom:8px}.site-header nav{margin-left:auto;gap:12px}.site-header .wordmark{font-size:21px}.site-header .archive-button{padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){.persona-ribbon-track{animation:none;transform:none;will-change:auto}.persona-ribbon-viewport{overflow-x:auto}.persona-ribbon-group[aria-hidden]{display:none}.ribbon-pause{display:none}}
+@media print{.persona-ribbon,.page-back-shell,.home-back{display:none!important}}

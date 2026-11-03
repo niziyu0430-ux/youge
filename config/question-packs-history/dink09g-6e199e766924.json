@@ -1,0 +1,1933 @@
+{
+  "id": "dink09g",
+  "title": "Dinkum：普通生活与原生Creative",
+  "game_ids": [
+    "steam-1062520"
+  ],
+  "scope": "PC正式本体，普通资源规则与原生Creative各有手写12主+12较早替代；不将危险设置、地图、单人/真人同岛拆出重复题库。许可证、工具和地契按当前实际开放。",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "普通规则的种植要当前季节、许可、工具和天数；基础铲是一挖一放，未用高级地形笔刷。高级台附近取料不套给普通台。",
+    "主08是实际真人共同游玩并有单人替代；访客、Fletch和可跟随NPC不计q/o。许可与人物技能是保留虚拟成长，不是玩家手部练习。",
+    "原生Creative自1.0正式进入PC；此路径不要求普通经营玩家改存档，题只面向本人已体验Creative。不能生成NPC店铺/地契，也不假定当前所有工具用途已开放。",
+    "目录生成与天气时钟只记录实际操作，不从纯创作强推收藏、角色扮演或成长；a必须亲手呈现，p需自己提原因并单项实测，i只有一处具体额外创作条件。",
+    "普通铲仍一格持土；没有无限飞行、自由缩放地形、蓝图本机保存或未核实NPC建房操作。主07真人共同编辑有完全单人基础替代。"
+  ],
+  "modes": [
+    {
+      "id": "normal",
+      "label": "普通生活与资源经营",
+      "initial_variants": {
+        "DINK09G01": "DINK09G01.NORMAL.V1",
+        "DINK09G02": "DINK09G02.NORMAL.V1",
+        "DINK09G03": "DINK09G03.NORMAL.V1",
+        "DINK09G04": "DINK09G04.NORMAL.V1",
+        "DINK09G05": "DINK09G05.NORMAL.V1",
+        "DINK09G06": "DINK09G06.NORMAL.V1",
+        "DINK09G07": "DINK09G07.NORMAL.V1",
+        "DINK09G08": "DINK09G08.NORMAL.V1",
+        "DINK09G09": "DINK09G09.NORMAL.V1",
+        "DINK09G10": "DINK09G10.NORMAL.V1",
+        "DINK09G11": "DINK09G11.NORMAL.V1",
+        "DINK09G12": "DINK09G12.NORMAL.V1"
+      }
+    },
+    {
+      "id": "creative",
+      "label": "原生Creative物品与天气编辑",
+      "initial_variants": {
+        "DINK09G01": "DINK09G01.CREATIVE.V1",
+        "DINK09G02": "DINK09G02.CREATIVE.V1",
+        "DINK09G03": "DINK09G03.CREATIVE.V1",
+        "DINK09G04": "DINK09G04.CREATIVE.V1",
+        "DINK09G05": "DINK09G05.CREATIVE.V1",
+        "DINK09G06": "DINK09G06.CREATIVE.V1",
+        "DINK09G07": "DINK09G07.CREATIVE.V1",
+        "DINK09G08": "DINK09G08.CREATIVE.V1",
+        "DINK09G09": "DINK09G09.CREATIVE.V1",
+        "DINK09G10": "DINK09G10.CREATIVE.V1",
+        "DINK09G11": "DINK09G11.CREATIVE.V1",
+        "DINK09G12": "DINK09G12.CREATIVE.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "DINK09G01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "Farming许可、锄头和水壶当前都可用，手头两袋种子都适合本季、余下天数也够；有两块合法田地和能做饭的现成材料。手头还有当前能合法放下的围栏部件。先怎样安排这一轮？",
+          "scene": "有季节提示的两袋种子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_FARM"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读两袋种子的季节和成熟提示，对照田格与已有料理材料，比较先种哪一袋",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "选其中一种，亲手锄地、播种和浇好当前这轮水，试用现有种植做法",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "跟着后面几轮收成、留作料理与卖出后再买种的变化，持续调整田块和用料",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "把田埂、已可做围栏和入口实际排成自己想要的小菜园轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "普通种植步骤与比较0；y需多轮收成、料理和再投资互相牵动，非水壶能量单循环；a须实际主题布局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G01.NORMAL.V1"
+        },
+        {
+          "text": "还没拿Farming许可，只有营地、篝火和附近当下能摘的野果，营地也已有可用箱子，自己有精力继续行动。先做什么？",
+          "scene": "Farming许可以前的营地野果",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_FARM"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有可烤的野果放上当前篝火，亲手试这项起步加工",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次摘果、回篝火加工和收起的工具流程，再照序动手",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先把已得木石放进当前可用箱子，留出这次采集格",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "走向营地外自己还没到过、当前可通的一小片地，想看看那里有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "普通种植步骤与比较0；y需多轮收成、料理和再投资互相牵动，非水壶能量单循环；a须实际主题布局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G01.NORMAL.ALT1"
+        },
+        {
+          "text": "当前Creative工具栏已经能打开，现有营地外有可合法放置的平地；两种路径、一段围栏和一只灯都可从目录取出。你先怎样动手？",
+          "scene": "从目录拿到的围栏和路径",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把路径、围栏和灯实际做成自己想要的夜市入口，安排主色和入口留白",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先只取出一种路径、铺几格再收起一格，亲手查看这项可用编辑的结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清这一轮铺路、放门口围栏和补灯的顺序，再照着做完",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先在当前目录对照这几种路径与灯的外观，暂不生成或放下",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "纯Creative的真实呈现a、实际编辑0、单次编辑顺序0与目录浏览0；不把已有列表当新藏品，不假定放NPC建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G01.CREATIVE.V1"
+        },
+        {
+          "text": "刚开启Creative，只有营地和一小块可放物的地面；目录中当前能取出的箱子、凳子与两种路径已经可见。手头已有一只可存物的箱子。先做什么？",
+          "scene": "刚开Creative的箱凳",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只拿一只箱子在合法空格放下、收起再换格，亲手看看摆放结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "用箱子、凳子和一种路径实际做出自己想要的第一块营地小角",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先看这次可选箱子、凳子和路径外观，暂不取出",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "先把当前手头无须携带的物品存进已有箱子，再回目录继续",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "纯Creative的真实呈现a、实际编辑0、单次编辑顺序0与目录浏览0；不把已有列表当新藏品，不假定放NPC建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G01.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前已有能用的鱼竿、相关许可和足够耐久体力；岸边有可钓的鱼，其中有一种本人尚未捕到的鱼在当前季节时段可能出现，没有到点必须交的事。你先怎样用这段河岸时间？",
+          "scene": "浮标入水以后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_FISH",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手接咬钩与收放，喜欢水花、竿线拉回和鱼靠近随输入连续回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先为这一水域本季确能出现、本人尚未捕到的一种鱼下竿，实际追补自己的缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "精神足也能继续新镇务，仍在熟悉河岸钓一会儿，喜欢认得的收放和安静等待",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "用几竿专练看浮标、接咬钩和在鱼挣扎后再收线的时点，关注自己操作能否更稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Dinkum不要求Portia外圈跟鱼；t本人练习，c当前真实未捕目标且无需成功；h排除疲劳和卡关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G02.NORMAL.V1"
+        },
+        {
+          "text": "鱼竿还没买，当前手头有能用的虫网和附近可接近的普通昆虫，精力充足。先做什么？",
+          "scene": "尚未买鱼竿的虫网",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_FISH",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手挥网接近昆虫，享受挥出、收网与捕获提示对动作的直接回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先看已有虫网操作提示，再去当前草地实际试一次",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先离开眼前熟地，去当下能走、自己还没见过的一段树林边认识环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "专门练几次靠近、对准和挥网的输入，关注自己何时出手更稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Dinkum不要求Portia外圈跟鱼；t本人练习，c当前真实未捕目标且无需成功；h排除疲劳和卡关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G02.NORMAL.ALT1"
+        },
+        {
+          "text": "自己已经摆好一小段带灯路径，Creative里当前有可选择的白天和夜晚时刻，也有可用天气切换；脚边地形不变；当前从同一观察点看，这片地砖比预想暗，原因自己尚未核实。目录中另有当前能取出的座椅。现在先做什么？",
+          "scene": "同一片灯光在不同时刻",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜眼前地砖显暗主要是天气而非灯位；保持时刻、灯位和观察点不变，只切一次当前可用晴天或阴雨，亲眼对照明暗",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先对照已可选时刻和天气方案，暂不改当前画面",
+              "signal": "environment_setting_options_review"
+            },
+            {
+              "id": "C",
+              "label": "先排清这轮设时刻、放灯和沿路查看的编辑步骤，再照序动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "把时钟设到当前可选夜晚，实际调整灯和座椅的位置，做出自己想表达的夜间小站",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "p自提明暗原因、同一时刻同一灯位，只改天气实看；普通设置浏览0。a实际改变作品，单看天色不是个人表达。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G02.CREATIVE.V1"
+        },
+        {
+          "text": "尚未铺过带灯路径，只有营地一小块地面和当前能生成的一只灯；时钟页可用，手头也已有一只可放下的箱子。先做什么？",
+          "scene": "尚未铺路的第一只灯",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看时钟页已经可选的时段，暂不切换",
+              "signal": "environment_setting_options_review"
+            },
+            {
+              "id": "B",
+              "label": "把灯和当前已有箱子实际排成自己喜欢的营地留灯小角，再到当前可选夜色中查看",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先排好取灯、放置、再切当前可选时刻的步骤，动手完成这轮",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先生成这只灯放到合法空格，亲手看它在当前画面怎样出现",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "p自提明暗原因、同一时刻同一灯位，只改天气实看；普通设置浏览0。a实际改变作品，单看天色不是个人表达。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G02.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "博物馆已开，自己的记录里有一种仍未捐的虫，当前季节和时段在已可达区域有机会出现；虫网可用。另有手头常见重复虫能卖，暂不用的木石小材料可存进营地已有且空格够的箱子。先做什么？",
+          "scene": "Theodore处一个真实空白",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_MUSEUM",
+            "DINK9G_BUGGROUND",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较这批已有重复虫现在卖给John还是留作地面展示的方案，暂不处置",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "先去可达却没走过的另一片岛岸，想认识那里的地形而不只盯这只虫",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为这项真实未捐记录去当前区域用网尝试捕捉，再带回博物馆补缺",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先把手头暂不用的木石小材料实际存入营地现有箱子，腾出这轮携带格",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "当前实际未捐且能捕才c；已有目录浏览和重复虫整理0。未知地形w不借地图已标记目标；NPC捐赠不是现实协作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G03.NORMAL.V1"
+        },
+        {
+          "text": "博物馆还没建，也没形成物种清单；当前有可用虫网，工具栏已有几只捕到的普通虫，自己手头也有暂不用的木石材料；营地有当前能存这些材料和工具、空位够的箱子，旁边有可摆物的地面。先做什么？",
+          "scene": "博物馆以前的已有虫箱",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_MUSEUM",
+            "DINK9G_BUGGROUND",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把手头暂不用的木石材料和工具实际存进现有箱子，调整本轮携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "先看已出现的虫网或物品摆放提示，再去营地尝试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "从工具栏把一只已捕虫放到当前允许的地面，生成它的虫箱，再收起换到另一可放位置，亲手看摆放变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "把已捕普通虫从工具栏放成地面虫箱，围着营地现有储物箱实际排成自己想要的陈列角",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "当前实际未捐且能捕才c；已有目录浏览和重复虫整理0。未知地形w不借地图已标记目标；NPC捐赠不是现实协作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G03.NORMAL.ALT1"
+        },
+        {
+          "text": "当前基础铲确实能用，Creative可补取同类工具；营地边有可挖、可填的一段矮坡，放下土后仍有合法落脚处；自己刚从固定起点直走时被挡住，具体原因尚未核实。先怎样处理这一段？",
+          "scene": "铲上一格土与临时台阶",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_SHOVEL",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清挖土、把铲上土放到空格、再回坡口查看的这一轮工具动作，照着试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "只换一种已会的挖一格、退到旁格再放下的次序，亲手体验这段操作",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "先猜刚才直走受阻是因为其中一格高差；其他地格和物件不动，只从那格挖走一铲土，把土留在铲上、不放到别格，再从同一起点亲自试走核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把矮坡挖填成自己想要的错层花园边，亲手做出轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "保留基础铲实体持土规则，生成工具不等于地形无限画笔；p只挖同一格一铲土并持在铲上、不改第二格，再同起点实走；不把普通换动作记i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G03.CREATIVE.V1"
+        },
+        {
+          "text": "还没拿铲，当前平地只有可收放的箱子和凳子，目录也能补取这些物件。先做什么？",
+          "scene": "还没拿铲的平地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_SHOVEL",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清收凳、腾箱旁空位和重新放下的步骤，再亲手编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先只看目录中当前可选的两种凳子外观，再决定用哪一种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "只把凳子收起换到另一个合法格，亲手查看位置变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "实际挪箱子和凳子，让门口形成自己想要的小小等候区",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "保留基础铲实体持土规则，生成工具不等于地形无限画笔；p只挖同一格一铲土并持在铲上、不改第二格，再同起点实走；不把普通换动作记i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G03.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "基础铲当前能用且耐久足，自己已放的围栏门能开关，门外有一小段高低地，自己刚从同一起点试着直走时受阻，具体挡住的原因还没核实，旁边空位可落脚。手头另有一块当前能拾取重放的路径砖。先怎么处理？",
+          "scene": "门口一格土的高低",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_SHOVEL",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用当前土色和现有围栏，把门前实际做成自己想要的有层次入口",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先猜直走受阻来自门外某格高差、不是门向；门和围栏不动，只从那格挖走一铲土，把土留在铲上、不放到别格，再从同一起点亲自试走比较",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先排清这轮挖一格、把铲上土放到合法空位、再走回门口的动作并实际做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先只把已有可拾取路径砖换到另一合法格，亲手看这次摆放",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "p自提可证伪原因，门和围栏不动，只挖去一格的一铲土并留在铲上，再从同起点试走；不改另一地格，也不假定自由拉伸地形。普通编辑和工具顺序0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G04.NORMAL.V1"
+        },
+        {
+          "text": "尚未取得铲，营地已有两只可收起再放的箱子，旁边已有篝火和合法空格，里面东西可以先取出。先做什么？",
+          "scene": "尚未有铲的营地箱子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_SHOVEL",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先只把手头不用的材料存进已有箱子，调整这轮携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "先取出一只箱里的物品，再把空箱收起换个位置，亲手查看结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "让箱子和篝火实际排成自己喜欢的营地小角，保留可走入口",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先排清取料、收箱和重放的本轮编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "p自提可证伪原因，门和围栏不动，只挖去一格的一铲土并留在铲上，再从同起点试走；不改另一地格，也不假定自由拉伸地形。普通编辑和工具顺序0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G04.NORMAL.ALT1"
+        },
+        {
+          "text": "当前角色确可使用锄头和水壶，已有两种本季可种、都适用这块普通田的种子；一小块田始终在屏幕附近，Creative天气页有当前可用雨天。土刚耕好还干着。另有现成可放围栏和小径部件。先做什么？",
+          "scene": "屏幕内的干田与天气页",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_FARM",
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先对照这两种当前适季种子的成长提示与现有数量，比较这一轮先种哪种，暂不下种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "保持这块已耕田在画面附近，实际切到当前可用雨天，亲眼看这次天气操作和田地怎样变化，再按现状决定是否浇水",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先用已有水壶给这块田亲手浇水，再播当前可种种子，试完这轮已有种植",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "把田、现有围栏与小径实际布成自己想要的菜园图案",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "Creative种子仍要当前许可、工具和适季条件；只试当前雨天切换是可用操作0，步骤安排与可做生产比较各为0，真实田园主题另a。不把普通已知雨水操作包装成猜因p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G04.CREATIVE.V1"
+        },
+        {
+          "text": "尚未耕田或取得农具；Creative目录能取出两种普通花盆，营地边有合法空格。先做什么？",
+          "scene": "未耕田时的花盆",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_FARM",
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排好取盆、留入口和最后补角的编辑顺序，再动手做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "取出一种花盆，实际放一只、换一个格再看结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "把两种花盆实际排成自己想要的营地入口色块",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先看当前两种花盆的外观方案，暂不拿取",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "Creative种子仍要当前许可、工具和适季条件；只试当前雨天切换是可用操作0，步骤安排与可做生产比较各为0，真实田园主题另a。不把普通已知雨水操作包装成猜因p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G04.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "John处取得的炉子与锯木台都已可用，现有锡矿、锡锭和桉树原木；当前建设明确会用到锡片、钉子和木板，相关配方、许可与材料都满足。先把这一轮给什么？",
+          "scene": "锯木台、炉子与建设用料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_LICENSE",
+            "DINK9G_PROCESS"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "跟着后面几轮锡矿入炉、锡锭分给锯台做锡片或工作台做钉子、原木做板与建设消耗，持续调各处留料",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先对照当前锡片、钉子和木板的已列需求与现有料，比较这次先做哪一批",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "只把手头一批可用原木送入当前锯木台，亲手试这一次木板加工",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次取锡矿、入炉等锭、再把现有锡锭送锯台的操作先后，并按顺序完成一轮",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "Dinkum炉子直接处理适用矿石，不沿用Portia木料燃料。锡锭可在普通锯木台做锡片、工作台做钉子；多轮加工与建设留料持续反馈才y，单轮操作和排步骤0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G05.NORMAL.V1"
+        },
+        {
+          "text": "还没有多台加工设备，只有可用篝火和一种当前能烤的野果，旁边箱子有木石。先做什么？",
+          "scene": "第一处篝火的加工",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_LICENSE",
+            "DINK9G_PROCESS"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手把当前可烤野果放上篝火并收下，试一次已有做法",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清取果、放火上和收起的动作，再按这一轮顺序做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "只把已有木石存进箱子，空出手头位置后继续",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先读已经收到的篝火加工提示，再动手试现有野果",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "Dinkum炉子直接处理适用矿石，不沿用Portia木料燃料。锡锭可在普通锯木台做锡片、工作台做钉子；多轮加工与建设留料持续反馈才y，单轮操作和排步骤0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G05.NORMAL.ALT1"
+        },
+        {
+          "text": "这份存档本来已拥有能进的房屋，不需要生成地契；Creative当前能取桌椅和两款室内地板，屋内有合法摆放空位，背包也留了接回旧地板的空格，已有可存家具的箱子。先怎样编辑？",
+          "scene": "已经有屋子的一轮家具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_CREATIVE",
+            "DINK9G_STORE",
+            "DINK9G_INTERIOR"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把桌椅和地板实际搭成自己想要的茶室，安排个人主色和座位关系",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先拿一份当前可用室内地板在屋内应用，替换这间屋的地面外观，亲手看结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先把手头多取的家具实际存入当前可用箱子，留下本轮要摆的几件",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前已可选的桌椅与地板外观，再决定要取哪些",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "明确原存档已有房屋，Creative不能任意刷地契。室内地板为在屋内应用整体外观，不是室外一格路径；留背包空格接回旧地板。主题实际呈现a，普通编辑取放比较0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G05.CREATIVE.V1"
+        },
+        {
+          "text": "还只有起步帐篷，不能进入房屋编辑；目录当前能取出室外桌、椅与灯，帐篷外有合法平地。旁边也有一只可存家具的已有箱子。先做什么？",
+          "scene": "只有帐篷的室外茶角",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_CREATIVE",
+            "DINK9G_STORE",
+            "DINK9G_INTERIOR"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用室外桌椅和灯实际做成自己喜欢的营地茶角",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "只把一把椅子放下后移到另一个合法格，亲手查看这次摆放",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先把多拿的椅子实际放回已有箱子，整理本轮携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可选室外家具的外观，再决定这次用哪些",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "明确原存档已有房屋，Creative不能任意刷地契。室内地板为在屋内应用整体外观，不是室外一格路径；留背包空格接回旧地板。主题实际呈现a，普通编辑取放比较0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G05.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "自己当前已有高级工作台；一只可先取空再收放的现有箱子里，有够做台上当前已选配方的材料，但台边似乎没把这批箱料计入。物件都可正常使用，旁边有能放箱的合法空位。先做什么？",
+          "scene": "高级台认不认这只箱子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_CRAFT",
+            "DINK9G_CURRENT"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前高级台已显示的说明，核对它与普通台的取料区别",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先把箱内所需材料直接取到身上，亲手用当前已有配方做一件",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前台上已选配方显示的材料要求和这批现有数量，再决定这次是否开工",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先猜箱子离台太远；台和配方不变，先取空这只箱、把空箱移近，再将同批同量材料放回，实际核材料可用情况并尝试制作",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "已有高级台且可搬箱前提，单项移距实际验证不预告结果；核对已选配方要求0，不冒称已换装或已试；原始台不声称远程取料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G06.NORMAL.V1"
+        },
+        {
+          "text": "只有起步普通工作台，当前配方和材料都已够，材料在营地箱子里。先怎样做？",
+          "scene": "普通台的携料制作",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_CRAFT",
+            "DINK9G_CURRENT"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从箱里实际取出当前需要的材料，调整手头携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "取齐料后只做一件当前已会的成品，试这项可用制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "排清本轮取料、到台制作和把剩料存回的步骤，照着做一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先看现有工作台的材料要求和操作提示，再动手",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "已有高级台且可搬箱前提，单项移距实际验证不预告结果；核对已选配方要求0，不冒称已换装或已试；原始台不声称远程取料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G06.NORMAL.ALT1"
+        },
+        {
+          "text": "Creative目录当前能取普通箱子、凳子与一把自己确实已能用的斧；Fletch有一张尚未购买、前置满足且现有Permit Points够的起步许可。旁边有可砍小树和合法摆物空地。先做什么？",
+          "scene": "当前许可与目录里可用的物件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_CREATIVE",
+            "DINK9G_LICENSE",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只购入Fletch当前已开放且点数足的一张许可，完成这次购买",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "拿当前确实能用的斧去砍一棵可砍小树，亲手试这项已有工具",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先不碰工具许可，实际用现有凳子和箱子做出自己想要的树下座位",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先读已有许可说明，核对这张许可当前会开放哪些购买或制作选项，再回已有工具继续试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "许可购买和已有工具用途分开，单次购许可0；不沿用攻略对所有高级工具的笼统使用限制，也不声称Creative可刷地契。只问当前已能用斧和现有可摆物；实际主题a，普通砍树0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G06.CREATIVE.V1"
+        },
+        {
+          "text": "刚开启Creative，只想用眼前已经能拿取和摆放的箱子、凳子，不要求买许可或开新店。手头另有一只当前能存物的箱子。现在先做什么？",
+          "scene": "不开新店的基础物件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_CREATIVE",
+            "DINK9G_LICENSE",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只拿一只凳子放下再收起，亲手体验当前编辑",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "把箱子和凳子实际摆成自己想要的营地小角",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先把已多取的箱子存进当前另一只可用箱，调整这轮携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先看已经出现的物件摆放与收起提示，再去平地试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "许可购买和已有工具用途分开，单次购许可0；不沿用攻略对所有高级工具的笼统使用限制，也不声称Creative可刷地契。只问当前已能用斧和现有可摆物；实际主题a，普通砍树0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G06.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "这名人物已采过矿并买过早期采矿许可；当前经验已达到下一张许可条件，Permit Points也够，后续工具所需现有材料也够。先做什么？",
+          "scene": "同一个人物的采矿进展",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LICENSE",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较已有与当前可选工具的条件，暂不买或制作",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先为已经用过的工具、取得的矿料和走过的矿点补经历记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "沿这名人物已投入的采矿方向继续换下一张许可、做出当前可用的后续工具，并在当前可采矿点接着用，在意这份保留成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "只先买下当前已开放、可支付的这一张许可，完成这次购入",
+              "signal": "purchase_available_upgrade"
+            }
+          ],
+          "design_purpose": "g是已有同人物投入后继续许可与使用保留进展；单次许可购买0。采矿虚拟经验不当本人t；不要求深矿电梯。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G07.NORMAL.V1"
+        },
+        {
+          "text": "还没发展采矿，Fletch当前有一项起步许可能选，Permit Points足够，自己已有的普通工具也可用。先做什么？",
+          "scene": "第一张许可的当前选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LICENSE",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用自己当前能用的工具处理一处可采资源，体验这项现有做法",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先读已有许可提示，再去试当前开放的工具",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前许可与工具开放条件，再决定买哪一项",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "只购买当前可支付的一张起步许可，完成这次购入",
+              "signal": "purchase_available_upgrade"
+            }
+          ],
+          "design_purpose": "g是已有同人物投入后继续许可与使用保留进展；单次许可购买0。采矿虚拟经验不当本人t；不要求深矿电梯。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G07.NORMAL.ALT1"
+        },
+        {
+          "text": "这次确有另一位真人同岛；你们双方的Creative与岛屿编辑权限已可用，当前目录都有同一批围栏、路径和灯。眼前平地允许摆放。先怎样开始？",
+          "scene": "真人共同搭一处小广场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CURRENT",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先用现有路径和灯实际做出个人想表达的广场边缘，再让对方看看",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己只取一只当前可用灯放下、换格并看结果，先试这一项编辑",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先与对方说好广场入口和这轮各放哪一段，实际分工编辑后一起核对进度",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先叫对方来边摆边聊各自喜欢的角落，重视一起造这片地方的共同经历",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "权限已实际可用且另一玩家是真人才q/o；不是NPC帮工或共享截图的异步假协作。单人ALT不带真人前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G07.CREATIVE.V1"
+        },
+        {
+          "text": "只玩单人Creative；目录当前能取路径、围栏和灯，帐篷边有一小块合法空地。已有箱子当前能存本轮多取物件。先做什么？",
+          "scene": "单人Creative小广场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CURRENT",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先只看当前目录里两种围栏的外观，暂不生成",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "把这一轮已经多取的物件存进现有箱子，留下这次准备摆的部分",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "先排清铺几格路、放一段围栏和补灯的本轮编辑步骤，再照序完成",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际把路径和灯摆成自己想要的小广场一角",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "权限已实际可用且另一玩家是真人才q/o；不是NPC帮工或共享截图的异步假协作。单人ALT不带真人前提。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G07.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "这次确实有另一位真人同岛；双方已明确允许彼此取用指定箱料并放置手边物件，箱内有现成围栏部件，你身上有暂不用矿石。眼前有一小段围栏要布置，也有已开放河岸能同行。先怎样开头？",
+          "scene": "真人来岛上的这一轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从对方当前明确允许自己使用的箱子取出这轮已有围栏部件，再把暂不用的矿石存进去，调整自己的携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "与对方先说好这一轮围栏入口放哪、谁取料谁摆件，再各自做并对一下实际进度",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "先邀请对方沿已开放河岸走一小段，边走边聊这次岛上的见闻，重视一起发生的经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "自己先围着现有箱子摆好这批可用围栏，实际做出想表达的河岸入口，再叫对方来看",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "只真人同岛、双方权限明确才q/o；q沟通分工，o重共同经历。实际指定箱取存0，主题布局a；完全单人另有独立信号替代，不需要钓具。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G08.NORMAL.V1"
+        },
+        {
+          "text": "一直单人或没有这段共同游玩；当前营地有一段可收放围栏、箱子和附近可达河岸。当前另有一项已接且能继续的起步任务；箱内有可取木料，自己也带着暂不用矿石。先做什么？",
+          "scene": "单人营地的这一轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己精神足也能继续新任务，仍沿熟悉营地边走一圈，喜欢认得的平缓过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "围着现有箱子调整当前可收放的围栏，实际做出自己喜欢的营地入口",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先把箱里这轮要用的木料取出，存回暂不用的矿石，调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "去当前可走却自己没看过的河岸另一段，想发现新环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只真人同岛、双方权限明确才q/o；q沟通分工，o重共同经历。实际指定箱取存0，主题布局a；完全单人另有独立信号替代，不需要钓具。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G08.NORMAL.ALT1"
+        },
+        {
+          "text": "Creative里路径、围栏和灯当前都能生成，前方合法平地足够搭一个小入口；这次不赶任务。先怎样试这一小块地？",
+          "scene": "给一小段作品加的条件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看已有物件和合法空格，排清本轮布局编辑顺序再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "给自己加“这一段禁用本来可放的路径和围栏，只靠灯的位置引出入口”的新条件，实际放灯并亲自走一遍试作品",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "不加禁用条件，用路径、围栏与灯实际做出自己想要的入口主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "从当前目录取可用路径，在合法空格试铺几块，再收起其中一块，亲手看这一项位置编辑变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "i是真额外禁用当前可用两类物件并实际试创作条件，无成功门槛；普通位置改变0，主题造景a不因虚构背景自动r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G08.CREATIVE.V1"
+        },
+        {
+          "text": "还没做入口作品；目录当前能取两种普通围栏和其中一种配套栅门，帐篷外有合法平地，手头已有可存物的箱子。先怎样试这一小段？",
+          "scene": "入口作品以前的栅门",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这轮多取的围栏部件实际存进已有箱子，留下门和要放的一段",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "只在合法平地放好当前栅门，亲手开、关并从门口走过一次，体验这项现有操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "用围栏、栅门与帐篷的相对位置，实际做出自己喜欢的第一段营地入口",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先对照当前这段围栏与另一种已可选围栏的外观，再决定这一轮取哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "i是真额外禁用当前可用两类物件并实际试创作条件，无成功门槛；普通位置改变0，主题造景a不因虚构背景自动r。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G08.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想自己实际种过田、加工过材料之后的一段，不要求收入高或布局好：哪件真做过的事更有分量？",
+          "scene": "田里与加工点已经怎样运转过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_FARM"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己跟着几轮收成、料理留用、卖出与再买种的变化，持续调过田块和加工批次",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己只排过一轮取料、播种或加工的先后，再亲手做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "自己曾先比过当时可种的种子和现有配方，尚未在那轮改设置",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "自己曾给已经观察或安排过的收成、供料和加工过程补过记录",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "后4真实过去；单轮步骤0、菜单比较0、过程记录0；多轮相互依赖运营才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G09.NORMAL.V1"
+        },
+        {
+          "text": "还没种过田或做多台加工，只回想营地篝火和箱子的最早一段：哪件确实发生过？",
+          "scene": "尚未种田时的篝火记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_FARM"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只用现有篝火烤过一批当时可烤的野果，亲手试过已有做法",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己排过一次取果、加工和收整步骤，并亲手做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "自己曾实际取放过箱内木石，调整过那轮携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先看已出现的篝火说明，再去加工过现有野果",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "后4真实过去；单轮步骤0、菜单比较0、过程记录0；多轮相互依赖运营才y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G09.NORMAL.ALT1"
+        },
+        {
+          "text": "回想自己确实用Creative取物并编辑过的一小块地方，不要求完成整座岛：哪件真实做过的事更有分量？",
+          "scene": "已经摆过的一角",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己实际调整过路径、家具或围栏的细节，做出想表达的个人主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己只把一件现有物件收起再换格放下，亲手看过编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "自己先排过一轮先腾空位、再摆主物、最后补角的顺序，并亲手做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己曾给已经摆起的营地物件、铺过的路和实际用料补记建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "真实过去，创作表现证据限本人实际回答；摆物不是持续g，也不因已有目录多就计c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G09.CREATIVE.V1"
+        },
+        {
+          "text": "只在刚开启Creative时试过几件箱子或凳子，回想那次已经发生的事：哪项更鲜明？",
+          "scene": "首次箱凳摆放的回忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾亲手把箱凳排成想要的营地小角",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "自己只试放过一件物品再收起或换格，看过那次编辑变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "自己先看过目录里当前可用的两件物品，再决定取哪件",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "自己曾实际把多取的物品存入已有箱子，调整过那轮携带",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "真实过去，创作表现证据限本人实际回答；摆物不是持续g，也不因已有目录多就计c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G09.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回顾自己真正钓过鱼或用过虫网的一段，哪件当时的行为更突出？",
+          "scene": "鱼线、虫网与本人练过的动作",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_FISH",
+            "DINK9G_MUSEUM",
+            "DINK9G_LICENSE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己因为喜欢水花、鱼线回收或挥网后的直接响应，主动又做过那段操作",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己为当时确实能遇到、个人尚未捕到的一种鱼虫去过相应地点实际尝试补缺",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "自己只换过一次抛近些再收线、或换侧靠近挥网的已会做法，亲手体验过",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "自己为摸准咬钩、收放或挥网时点，专门反复练过一小段输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不以捕到或记录多少为门槛；c须真缺项，t练习意图与虚拟熟练等级分开，普通变换0不i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G10.NORMAL.V1"
+        },
+        {
+          "text": "若尚未用过鱼竿和虫网，只回想最早拿到Permit Points、看过Fletch许可页并做过起步目标之后：哪件真实发生过？",
+          "scene": "鱼竿虫网以前的首张许可",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_FISH",
+            "DINK9G_MUSEUM",
+            "DINK9G_LICENSE"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只买过当时已经开放、点数够的一张起步许可，完成过那次购买",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "自己先比较过当时可选许可与已有工具能做的事，再决定是否花点",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "自己按当时已经列出的起步目标，亲手取过材料或做过那件物品，实际推进目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "自己给最早已经拿到的工具、材料和见过的营地位置补过经历记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "不以捕到或记录多少为门槛；c须真缺项，t练习意图与虚拟熟练等级分开，普通变换0不i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G10.NORMAL.ALT1"
+        },
+        {
+          "text": "回想自己真正用过Creative天气页或基础铲的一段，不要求猜对：哪件已发生的行为更突出？",
+          "scene": "天气或高低地的一次实际验证",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_SHOVEL",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己在直走受阻且原因未明时，先怀疑是一格高差；固定其他地格和物件，只从那格挖过一铲土，留在铲上没有放到别格，再从同一起点试走对照过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己只切到过当时可用的另一种天气，亲自体验过同一营地画面的那次变化",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "自己只看过已有设置或工具说明，再回当前场地实际试过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己曾怀疑同一片灯光显暗主要来自天气，固定时刻、灯位和观察点，只改过天气并亲眼比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "两条p均本人先提原因再单项实改实看，无猜对门槛；地形测试只挖一格并将土留在铲上，不改别格。普通天气切换与先读工具说明各0。ALT只切时刻，不要求天气或铲。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G10.CREATIVE.V1"
+        },
+        {
+          "text": "若没有测过天气或用过铲，只回想最早在Creative时钟页和帐篷边实际试过的一段：哪件真发生过？",
+          "scene": "未测天气时的基础时钟",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_SHOVEL",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己先排过那轮放一只现有灯、切到当前可选夜晚再回原位查看的编辑顺序，并亲手做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己给已经走过的帐篷周围与已经生成的物件补过经历记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾先看过当时已出现的时钟页说明，再实际试过时刻切换",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己只把时钟切到过当时可选的另一个时刻，亲手看过营地天色的那次变化",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "两条p均本人先提原因再单项实改实看，无猜对门槛；地形测试只挖一格并将土留在铲上，不改别格。普通天气切换与先读工具说明各0。ALT只切时刻，不要求天气或铲。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G10.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想自己确实用过已开放高级工作台的一段；当时有可移动箱子和同种材料，也亲手制作过，哪件真发生过的事更有分量？",
+          "scene": "高级工作台曾从哪里取到材料",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_CRAFT",
+            "DINK9G_LICENSE",
+            "DINK9G_PROCESS"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只从当时可用箱子手动取齐材料，再按已有配方在当时可用的工作台实际做过一件",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己先核过当时已有高级工作台的取料与制作说明，再回台边亲手试过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "自己先猜取料问题来自箱距；保持同台同配方，曾把同一箱取空移到另一距离，再放回同批同量材料，实际核过材料状态并尝试制作",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾把现有箱子与工作台实际重新摆成个人想要的营地工坊轮廓，整理过通道和外观细节",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "高级台确可取近箱材料；p本人先猜、同箱同料同配方只变距离再实制，不由题干先给距离答案。审美实际摆放a；手取制作与读工具说明0。早期ALT不要求高级台。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G11.NORMAL.V1"
+        },
+        {
+          "text": "没有高级工作台，就回想自己最早已经用过普通锯木台、旁边也有可用箱子的一段：哪件真发生过？",
+          "scene": "高级台以前的锯木和箱子",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_CRAFT",
+            "DINK9G_LICENSE",
+            "DINK9G_PROCESS"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己实际把多带的材料存进过已有箱子，再取出那一轮需要的部分",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "自己先排过那一轮取原木、加工和收木板的工具操作先后，再亲手做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "自己先核过当时锯木台支持原料的说明，再选可用原木亲手试过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己只把一批可用原木实际送进过锯木台，取走过那次木板",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "高级台确可取近箱材料；p本人先猜、同箱同料同配方只变距离再实制，不由题干先给距离答案。审美实际摆放a；手取制作与读工具说明0。早期ALT不要求高级台。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G11.NORMAL.ALT1"
+        },
+        {
+          "text": "回想自己真正用过Creative动物页或为它整理过营地一段；当时动物生成、平地和手边围栏都可用，哪件已经做过的事更有分量？",
+          "scene": "动物页与自己实际摆过的场地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只在当时允许生成的平地生成过一只当前可选的普通动物，亲眼体验过那次出现",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己曾把已有围栏、路径和灯实际排成想表达的动物观察角，整理过通道与外观细节",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "自己只在当时动物页查看过已可选的动物素材，尚未在那一轮生成",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "自己给已经实际生成并见过的动物、物品和周围场地补过经历记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "官方Creative动物生成实际可用；普通生成0、已有动物素材查看0、既见记录0，个人布局必须实际摆才a。不按动物种类推现实性格，不承诺动物留圈或可控；早期ALT不要求动物经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G11.CREATIVE.V1"
+        },
+        {
+          "text": "若只刚打开过Creative目录、在营地试过一两件物品，就回想那段已发生的事：哪件更鲜明？",
+          "scene": "刚打开目录的真实经过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_LAUNCH",
+            "DINK9G_CREATIVE",
+            "DINK9G_STORE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只把一件当前可用物品试放到另一合法格，看过那次变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己曾把已拿出的两件物品实际排成想要的第一块营地角落",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "自己曾先看当时已经可选的箱子和凳子外观，再决定取哪件",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "自己曾实际存回多取的一件物品，调整过当前携带",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "官方Creative动物生成实际可用；普通生成0、已有动物素材查看0、既见记录0，个人布局必须实际摆才a。不按动物种类推现实性格，不承诺动物留圈或可控；早期ALT不要求动物经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G11.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DINK09G12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾真正发生过的一段岛上生活，哪件选择最想留下？",
+          "scene": "熟悉小镇边缘的过去选择",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_FISH",
+            "DINK9G_MUSEUM"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己为已经见到的地点、取得的物品或已捐物种补过经历记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时自己和人物状态都好、也有新镇务可推，却仍在熟悉河岸钓过一段，喜欢认得的平稳收放",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己为了看看未知，走进过当时可达却从未看过的一段树林或海岸",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己为博物馆当时确实未捐且本季能捕的一种鱼虫，实际带工具去尝试补过那一项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "h明示有精力有进度仍喜熟悉，c真实缺项非重读已有记录，w是未知发现。全为真实过去、无通关和长期居民要求。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G12.NORMAL.V1"
+        },
+        {
+          "text": "尚未钓鱼或建馆，只回想最早营地和周围小段路已经发生的事：哪件更鲜明？",
+          "scene": "还没建馆的第一圈岛岸",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_FISH",
+            "DINK9G_MUSEUM"
+          ],
+          "modes": [
+            "normal"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己给已经采到的木石、已见地点补过经历记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时精神好、角色状态也好、还有新目标可做，自己仍在熟悉营地边采过一小圈，喜欢认得的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己实际走进过当时能通行却从未见过的一片岛岸",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己按已经列出的起步目标取料或制作过一件物品，推进过那次目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "h明示有精力有进度仍喜熟悉，c真实缺项非重读已有记录，w是未知发现。全为真实过去、无通关和长期居民要求。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G12.NORMAL.ALT1"
+        },
+        {
+          "text": "回想自己确实玩过的Creative存档，哪件已经发生的停留更值得记住？",
+          "scene": "熟悉的小角与未走过的岛岸",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经走过的地方和已经得到的物品补过经历记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时精力足也有新作品能继续，自己仍在已搭熟的小角慢慢走看并重摆惯用桌椅，喜欢认得的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己离开已有作品，亲自走进过当时可达却未见过的一段岛岸，想发现自然环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为一个新主题实际调整现有路径、灯或家具，让作品呈现个人想法",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h正向熟悉且有能量/新内容；w必须本人真进未知处；a实际改作品；普通旧物地点记录0。无成就、NPC店或高级许可要求。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G12.CREATIVE.V1"
+        },
+        {
+          "text": "只回想刚开启Creative后的帐篷外小角，不要求已造整座岛：哪件真发生过？",
+          "scene": "第一块小角的安稳记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DINK9G_STORE",
+            "DINK9G_CREATIVE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己只给已经看过的地形或已得物件补过经历记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时精神好也能取新物件继续搭，自己仍慢慢重摆过刚认得的箱子和凳子，喜欢这套安定过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己实际走到过当时可达、自己还没见过的帐篷外另一段岛岸",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按喜欢的主色和形状摆过箱凳，呈现过个人营地样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h正向熟悉且有能量/新内容；w必须本人真进未知处；a实际改作品；普通旧物地点记录0。无成就、NPC店或高级许可要求。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DINK09G12.CREATIVE.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+6e199e766924"
+}

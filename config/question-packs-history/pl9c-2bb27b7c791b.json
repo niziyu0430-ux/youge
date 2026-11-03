@@ -1,0 +1,939 @@
+{
+  "id": "pl9c",
+  "title": "Production Line : Car factory simulation（建造及自动化模拟）",
+  "game_ids": [
+    "steam-591370"
+  ],
+  "scope": "PC2019正式本体汽车生产模拟；高级已开放/基础大工位可换",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "不含付费车门或外形DLC；车体与零件网、普通蓝图与已购设施分清。",
+    "NPC维护与装配不当真人，经营选择不推现实职业或财务能力。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC2019正式本体汽车生产模拟；高级已开放/基础大工位可换",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "PL9C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "一条基础汽车线已搭到出口，但其中一处有车等待；车体方向、工位库存、顶置零件带和进口点都可查，原因未定，钱够试改小段。先做什么？",
+          "scene": "汽车和零件走不同的网",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_NET",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出一个等待与车流方向或零件供应有关的解释，只改一处后看同一工位下一辆车",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先打开该工位的活动与库存面板，核对等待类型和现有零件，再决定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "把进口、工位用料、车体流转和现金支出接着看几轮，持续调节这条线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮工位移动、车体带和零件带重接的编辑步骤，再照着改",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "两张网络分清，题干不给原因；p单改，y多轮资源/资金/车流，不以盈利或正确为门槛。ALT只基础起点和工位。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C01.V1"
+        },
+        {
+          "text": "只搭过最早底盘工位：现在有进口点、顶置零件带和该工位，底盘还没开始连续出现；工位库存和连接可查，原因未定，资金够试改。先选什么？",
+          "scene": "汽车和零件走不同的网的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_NET",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开当前底盘工位的活动与库存面板，核对等待类型、零件与进料配置",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "自己猜一处连接是否相关，只改这一处后看下一次生产",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前进口和零件输送的已有说明，再重接眼前一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排这轮进口连接、工位朝向和带段的编辑次序，再亲手做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "两张网络分清，题干不给原因；p单改，y多轮资源/资金/车流，不以盈利或正确为门槛。ALT只基础起点和工位。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "一项工序专门化研究已完成，大工位可保留或换成已开细分工位；另有一项已经开始的研究能继续，空地与资金够，供应状态可看。先做什么？",
+          "scene": "大工位已经能拆细",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_STORE",
+            "PL9C_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续跟进另一项已经投入的工序研究，想让积累留成以后可用的生产技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前大工位与已开细分工位的要求，再决定这一轮怎么改",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先用原生蓝图把这轮工位与车带位置排出来，再照本轮编辑顺序落实",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "把细分前后车流、零件用量、各站等待和运营支出连看几轮，再持续调节整段分工",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "菜单比较0，研发持续保留技术g；细分不是自动更优。蓝图预排不等于已付款设施；蓝图里尚未研究的工位不能直接购建，蓝图工具本身不需被虚构成另项研究。ALT无专门化。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C02.V1"
+        },
+        {
+          "text": "还没研究专门化：界面当前已列基础线目标，现有底盘与车身大工位都可放，普通车带和零件带可接，资金够。先做什么？",
+          "scene": "大工位已经能拆细的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_STORE",
+            "PL9C_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在蓝图模式摆出当前已开放工位的位置，查看这轮布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对现有大工位和车流方向说明，再继续接线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "按当前已列基础生产目标，实际搭出要求的这段工序",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先排这轮工位、车带和顶置零件带的编辑顺序，再照次序搭",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "菜单比较0，研发持续保留技术g；细分不是自动更优。蓝图预排不等于已付款设施；蓝图里尚未研究的工位不能直接购建，蓝图工具本身不需被虚构成另项研究。ALT无专门化。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "当前同一车型有车进入展厅但没及时卖出；价格、库存、车辆实际特性和销售面板可看，也能改该车型当前价格。生产与现金暂有余量。先投入哪里？",
+          "scene": "展厅里留下来的车",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把排产、零件成本、展厅存量与销售收入连看几轮，再持续调生产安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "给自己的当前车型定一组想表达的外观配色，实际修改它可用的车身颜色",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "提出一个价格是否影响这批车滞留的解释，只调这一车型价格，隔一段同样运行后核对销售变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看展厅现车、车型定价与当前市场信息，弄清现在有哪些差别",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "p实测允许结果不支持解释，市场会变故不声称严格因果证明。颜色只主题表达，不影响销量。ALT不要求复杂车型。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C03.V1"
+        },
+        {
+          "text": "只做过初始车型：展厅已有几辆当前车型，价格能调，当前现车与销售情况可看，资金有余量。先做什么？",
+          "scene": "展厅里留下来的车的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对展厅与车型定价已有说明，再亲手继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先按这轮车带与工位移位安排编辑顺序，再处理眼前布局",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先查看这几辆现车与当前价格、销售面板，再决定这一轮怎么安排",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "提出一个价格相关解释，只调该车型这一项后实际运行一段看变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "p实测允许结果不支持解释，市场会变故不声称严格因果证明。颜色只主题表达，不影响销量。ALT不要求复杂车型。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "智能分流与选装工位已开，现有可运行路口有两条支路，设置可调；当前排产的两款设计中，一款要求这项特性、一款不要求；实际车流去向可看，现有可建共用工位段能处理两款设计，场地与资金够。先选什么？",
+          "scene": "智能分流与选装工位",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_168"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前按车型分流和按特性分流的已有设置，再决定采用什么",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "实际设成按设计所需特性分流，把需要该工序的车送入选装支路，另一款绕过，再接回共用后段试运行",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先猜一款车为何走到某侧，只改这处分流的一项设置，再看下一辆同款车",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "给本轮加上不用当前可用智能分流的限制，实际让两款车共走能处理它们的普通工位段",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "b具体分流和专用工序互补；i禁已可用智能工具且明确普通工位段可处理两款，不要求效率提升。ALT早期不需第二车型/智能分流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C04.V1"
+        },
+        {
+          "text": "只有基础单车型：现有两座已放好的基础工位可移动重接，普通车带可按朝向接通，顶置零件网另有现成进口可用。先做什么？",
+          "scene": "智能分流与选装工位的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_168"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际改一处工位位置，看看车带与零件接口的新摆位",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先打开这两座工位的活动与库存面板，核对车流配置与当前零件，再决定怎么接",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先排本轮放工位、接车带与接零件带的编辑顺序，再照着搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先看当前单向车带和顶置零件带的已有说明，再实际接一段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "b具体分流和专用工序互补；i禁已可用智能工具且明确普通工位段可处理两款，不要求效率提升。ALT早期不需第二车型/智能分流。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "已建Supply Stockpile可链接工序需求，现有工序需求变动后，一处库存没有按预期变化，原因未定；链接、库存与零件带都可查可调，资金够。先投入哪项？",
+          "scene": "仓储跟着工序需求走",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_168",
+            "PL9C_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际移动这座已建Supply Stockpile的位置，亲手查看它与现有零件带和需求链接的接入情况",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "提出一处库存为何没跟当前需求变化的解释，只改一项链接或连接设置后看下一轮",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把进口订料、储备、工序花用和现金支出连看几轮，持续调供应安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先查看该库存当前链接、现有物料与对应工序状态，再决定下一步",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "普通需求链接与储备配送不单凭串接计b，一座现有仓储移动试改0，1.68确认移动保留配置。p先自提再单改，不预告手改解除链接就是原因，也不套建议中的优先级控制。ALT只基础工位自带库存。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C05.V1"
+        },
+        {
+          "text": "没建Supply Stockpile也能选：最初工位自带零件库存，当前进口连接可改，生产时有等待；资金够小改，原因尚未确定。先做什么？",
+          "scene": "仓储跟着工序需求走的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_168",
+            "PL9C_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看工位当前等待类型、已有零件和进口连接，核对现状",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先猜一项供料条件是否相关，只改一处后看同一工位下一辆车",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先核对基础工位库存与顶置带说明，再亲手继续接线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排这一轮工位朝向、库存接点与带段编辑次序，再照安排做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "普通需求链接与储备配送不单凭串接计b，一座现有仓储移动试改0，1.68确认移动保留配置。p先自提再单改，不预告手改解除链接就是原因，也不套建议中的优先级控制。ALT只基础工位自带库存。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "现有研究办公室中，一项此前投入的车型特性或生产技术仍能继续；现金和场地有余量，两项已开放工位升级也能比较。先把时间给哪里？",
+          "scene": "在办公室里已经开始的研发",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_STORE",
+            "PL9C_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已开放且可支付的两项工位升级，再决定下一步采用哪项",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "把研发费用、生产投入、库存与销售回款连看几轮，持续留出运营余量",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前研发进度、办公室和实际现金流状态，再决定这轮是否扩投入",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "继续跟进那项已开始的研发，重视投入会留下以后仍能使用的特性或技术",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "g已投入研究持续保留；比较升级0而非b，付钱买升级本身不自动成长。ALT没有办公室。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C06.V1"
+        },
+        {
+          "text": "还没建研究办公室：当前已有基础制造目标，基础工位与两张输送网可调整，资金够这轮改线，也能查看现有花费。先做什么？",
+          "scene": "在办公室里已经开始的研发的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_STORE",
+            "PL9C_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排本轮工位摆位与两张带网接入的编辑顺序，再照次序改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有基础工位说明，再亲手继续连接",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "按当前已列基础制造目标，实际推进还缺的那一段工序",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先看当前现金支出、工位等待和库存，再决定这一轮改不改",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "g已投入研究持续保留；比较升级0而非b，付钱买升级本身不自动成长。ALT没有办公室。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "当前已建一座维护设施，一处工位正在停机；维修进度、设施距离覆盖与停工面板能看，钱够移动这座设施或另行布置，当前恢复速度的影响因素尚未确定。先做什么？",
+          "scene": "可用的维护范围",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把维护开支、生产停顿、零件储备和回款连看几轮，持续调整经营安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按自己的工厂外观主题，实际安排已有墙面与地板装饰",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "提出维护距离是否影响这处恢复过程的解释，只改这一设施位置后核对同一类停机表现",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前两个可放位置的覆盖、空位和费用，再决定这一轮用哪处",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "只当前已研究可支付维护；p不保证重复故障条件相同，不声称一次排除全部原因；NPC员工不是社交。ALT只有本体免费装饰与早期布局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C07.V1"
+        },
+        {
+          "text": "没研究维护也能选：眼前基础厂房可随时更换已有地板和墙面外观，现有工位能移动，两张输送网可改。先做什么？",
+          "scene": "可用的维护范围的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际改一处现有地板或工位位置，查看它的新样子",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排这一轮移工位、接带和改外观的编辑步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的厂房主题实际搭配墙面、地板与工位区轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先浏览当前已可用的地板与墙面方案，再决定用哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "只当前已研究可支付维护；p不保证重复故障条件相同，不声称一次排除全部原因；NPC员工不是社交。ALT只有本体免费装饰与早期布局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你有精力，现金和现有工具足够继续扩线，一项已投入研发也能继续；当前小厂生产稳定，你已认得几处工位和车流。先选什么？",
+          "scene": "熟悉的装配大厅",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把随后几轮进口、排产、展厅存量与回款接起来，持续调节这座小厂",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "暂不扩线，在熟悉大厅从容看认得的装配过程，喜欢这段可控的日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "继续跟进那项已经开始的研发，想把积累留成以后仍可用的生产技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按自己想要的厂区主题，实际改现有墙面、地板与工位外缘",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h有精力可发展仍主动熟悉停留，机器自动装配观赏不计f；g已投入项目，不把NPC工作计玩家练习。ALT无需研发。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C08.V1"
+        },
+        {
+          "text": "只建了早期小线：你有精神、资金和空间还能继续，已熟悉眼前几处基础工位。先做什么？",
+          "scene": "熟悉的装配大厅的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前现金、库存和工位等待状态，再决定下一轮投入",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先在认得的小厂从容看车流，正是喜欢熟悉过程，暂缓扩线",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "实际按自己的简洁车间主题安排地板、墙面与工位区轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先排本轮移工位与重接两种输送网的编辑步骤，再照着改",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h有精力可发展仍主动熟悉停留，机器自动装配观赏不计f；g已投入项目，不把NPC工作计玩家练习。ALT无需研发。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你实际处理过一次车或零件停住的经历，不要求修好或盈利。哪段已经发生的过程更贴近？",
+          "scene": "那次真实查过的等待",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_NET"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出过一处车流、零件或库存条件的解释，只改对应一项后观察同一工位的下一辆车",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先看当时工位活动、车辆与库存状态，再决定从哪里改",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "我把进口、工位用料、车辆流转和现金支出连着调过几轮",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我排过那轮工位与两种带网的编辑先后，并亲手照着改了",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "过去实测可失败；y多轮互依经营，单次接线不y。ALT初始工位即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C09.V1"
+        },
+        {
+          "text": "只回想最初底盘工位和进口的一次真实试跑，不要求后来产出成车。哪件事已经发生？",
+          "scene": "那次真实查过的等待的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_NET"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看了当时工位库存和进口连接，再定下一步",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我猜一处连接是否相关，只改那一处后实际运行看了",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我核对已有进口和零件输送说明，随后自己重接了一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我排清那轮工位摆位与顶置带编辑次序，并实际照做了",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "过去实测可失败；y多轮互依经营，单次接线不y。ALT初始工位即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一次你确实调整过的工厂方案，不要求更高产量或收益。哪种过程真实贴近？",
+          "scene": "那次实际用过的不同方案",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_168"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我明确禁用过当时可用的智能分流，让两款当前能共线处理的车实际走了普通工位段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "我为自己的厂房主题实际调过地板、墙面与布局轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我主要先比较了当时可用的工位升级，再决定采用哪一项",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "我实际按设计所需特性设置过分流，让需要的车进选装支路、另一款绕过，再接回共用后段，试过这套联动",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "b实际机制联动；i真禁已可用工具，非普通换路，且普通共线可行。ALT初始蓝图与大工位。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C10.V1"
+        },
+        {
+          "text": "回想还只有基础大工位时的一轮编辑，不要求智能分流或第二车型。哪件事确实发生？",
+          "scene": "那次实际用过的不同方案的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_168"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过放工位、接车带和接零件带的编辑步骤，并实际照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我按自己选的车间主题实际改过地板和墙面",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我核对过已有车流方向说明，再亲手重接了一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我在蓝图模式实际摆过当前开放工位，查看了这一轮布局",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "b实际机制联动；i真禁已可用工具，非普通换路，且普通共线可行。ALT初始蓝图与大工位。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想一次你已经开始后又实际继续过的研发或经营安排，不要求研究完成或公司盈利。哪种过程更贴近？",
+          "scene": "那次继续投入以后",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PL9C_STORE",
+            "PL9C_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主要按当时已经列出的目标实际补过一段工序",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我先看清当时研究或工位的实际状态，再决定下一轮投入",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "我继续跟进过同一项已投入研发，重视积累会留成以后可用的车型特性或工序技术",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我把研发支出、零件进口、生产与销售回款连看了几轮，持续调过互相牵动的安排",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "成长不是单次买设施或核菜单；过去不以完成为门槛。ALT未建研究办公室仍完整。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C11.V1"
+        },
+        {
+          "text": "没有研发经历：回想最早基础线仍未搭完时真实做过的一轮，不要求后来完工。哪件事已经发生？",
+          "scene": "那次继续投入以后的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PL9C_STORE",
+            "PL9C_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过这一轮工位与两张带网的编辑先后，并亲手照做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我核对已有基础工位说明，再继续了自己的连接",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "我照着当时已列的制造目标实际补过一段工序",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "我先看过当时库存、资金和工位等待，再决定下一步",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "成长不是单次买设施或核菜单；过去不以完成为门槛。ALT未建研究办公室仍完整。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "PL9C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你已玩过的一段小厂时光，不要求复杂工序或后期车型。哪种真实发生的投入更贴近？",
+          "scene": "那次自主待在小厂",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先核对当时的运行面板，随后决定了那一轮怎样调整",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我当时有精神、资金与可继续内容，仍因为喜欢认得的装配日常，主动从容待在熟悉车间",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我按自己想表达的厂房主题，实际调过地板、墙面与布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我为一处展厅或工位现象提出过解释，只改一项后实际运行看变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "h有余力且正向熟悉；自动机运行不f，真实经营选择不推现实能力。ALT只有起步厂房。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C12.V1"
+        },
+        {
+          "text": "只回想最初几处工位的一段，不要求出过成车，哪件事真实发生？",
+          "scene": "那次自主待在小厂的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PL9C_GUIDE",
+            "PL9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我看过当时库存和工位状态，再决定下一步从哪里接",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "我有精神且资金够继续，仍喜欢在认得的早期车间从容停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我为车间想过自己的配色主题，也实际改过墙面和地板",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我先排过那轮工位与输送网的编辑步骤，再亲手照着做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h有余力且正向熟悉；自动机运行不f，真实经营选择不推现实能力。ALT只有起步厂房。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "PL9C12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+2bb27b7c791b"
+}

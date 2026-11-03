@@ -1,0 +1,952 @@
+{
+  "id": "crash4v5",
+  "title": "古惑狼4：箱子、量子面具与一趟重玩",
+  "game_ids": [
+    "steam-1378990"
+  ],
+  "scope": "单人本体普通关卡与已开放时间挑战",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "四面具仅在本作指定且已给出的区段使用，替代回到基础跳跃、二段跳、滑铲和旋转。",
+    "计时只要求当前普通关已完成，不默认后期三重旋转，不混三部曲速度鞋。",
+    "外观只用已通过游玩获得者；不以死亡、宝石数、遗物成绩或Modern/Retro选择判能力与人格。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "单人本体普通关卡与已开放时间挑战",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "CRASH4V501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "在古惑狼4的一段普通关卡，主路可继续，旁边还看得见一条未查侧路；你知道本关上次缺箱，正想决定这一趟先做什么。你此刻怎么走？",
+          "scene": "箱子计数和主路出口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_core",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "这趟查齐主路、侧路和奖励段的箱子，到关底争取尚缺的全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先进入没查过的侧路，不要求里面恰好有漏箱",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "挑自己跳到箱顶后常接偏的一段练习，只比自己的上一回",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "直接旋转打碎眼前普通箱子再接跳，享受碎箱、果子与落地接连出现",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "c追的是全箱宝石明确缺项，不把Wumpa当长期属性；选择不按砸箱数评价能力。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V501.V1"
+        },
+        {
+          "text": "如果还没重玩过关卡：当前普通路线有可跳的箱子、一个未走小角落与前进出口。你现在先做什么？",
+          "scene": "箱子计数和主路出口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_core",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "到小角落后面看看，不先规定必须找到什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先猜跳上箱顶再跳会落到哪块平台，再实际核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "反复练自己从箱顶接下一跳的落点，只看自身改善",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "旋转清掉普通箱子、接着跑跳，优先享受碎箱和拾果声的回馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "c追的是全箱宝石明确缺项，不把Wumpa当长期属性；选择不按砸箱数评价能力。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前指定路段已经给到Lani-Loli，能切换一组箱子与障碍的存在状态，眼前也有安全落脚处。这一段你现在先怎样尝试？",
+          "scene": "Lani-Loli正在这段路上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_masks",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只练自己起跳后切相位的一下，让时机比上一回稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿已经会走的一小段切换与跳跃，享受箱子显现、落脚和继续前进的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先打完当前相位里本趟未处理的箱子，再同趟查齐余下箱子，到关底争取全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先猜这次相位切换会让哪块箱台出现或消失，再切一次验证路线",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "面具由当前区段给出，不说在其他关随时自由装备；相位题不考唯一按键答案。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V502.V1"
+        },
+        {
+          "text": "若还没遇到相位面具：普通关卡里有可跳箱台、基础旋转和一段可以回走的侧路。你现在先做什么？",
+          "scene": "Lani-Loli正在这段路上的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_masks",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己从箱台跳向旁边平台的一下",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "连着跳箱与旋转碎箱，先享受动作与拾果声的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "回去打完本趟已见未打的箱子，再同趟查齐其余箱子并到关底，争取全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先猜先打哪只箱子会改变可落脚的位置，再动手核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "面具由当前区段给出，不说在其他关随时自由装备；相位题不考唯一按键答案。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "一段普通关卡的问号奖励平台已经可进，主路也能继续；你这趟在追本关全箱宝石，但并不急着冲终点。现在先做什么？",
+          "scene": "问号奖励平台旁",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_launch",
+            "crash4v5_trial",
+            "crash4v5_bonus",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把奖励段、已知侧路和回主路的顺序排好，按这趟清箱流程走",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "B",
+              "label": "先去主路旁没查过的小角落，看它是不是连接另一段空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先清完奖励段本趟未打的箱子，再同趟查齐其余箱子，到关底争取全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先观察奖励段能看见的箱台关系，猜哪些落脚会受打箱顺序影响再试",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V503.V1"
+        },
+        {
+          "text": "还没进过奖励段的话：普通关卡里有已知漏下的箱子、一个未探侧角与可站的平台。你此刻先选什么？",
+          "scene": "问号奖励平台旁的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_launch",
+            "crash4v5_trial",
+            "crash4v5_bonus",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把查侧路、打已见箱子和回主路排成少折返的一趟，照着走",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "B",
+              "label": "到未探侧角另一面看看，先不打听有没有宝石",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "回头处理本趟已见未打的箱子，再同趟查齐其余箱子并到关底，争取全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先猜跳箱和打箱顺序会怎样改变落点，再做一次核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "这一普通关卡你已经完成过，重玩时关首秒表已出现，可以触发Time Trial，也可以继续普通模式。你此刻先做哪种尝试？",
+          "scene": "秒表已经能在关首触发",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_trial",
+            "crash4v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂不碰秒表，给确认可行的短段加普通木箱只用跳踩、不用旋转的规则，实际玩一回",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "触发秒表，围绕自己的更好用时或想追的遗物时间目标正式跑一趟",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "暂不触发秒表，只练自己滑铲后接跳的动作，收获看自身改善",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "用熟悉的旋转与跳跃走一段，先享受打箱和落地的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "计时只需已完成当前普通关；不默认通关后三重旋转或三部曲速度鞋。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CRASH4V504.V1"
+        },
+        {
+          "text": "若还没开Time Trial：当前普通路线可以用基础二段跳、滑铲和旋转继续。你现在先做什么？",
+          "scene": "秒表已经能在关首触发的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_trial",
+            "crash4v5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给一段确认可行的普通木箱路线加只跳踩、不旋转的新规则，按它实际走一遍",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先猜滑铲接跳与直接起跳会落在哪些位置，再分别试一次",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "专练自己二段跳后落台的那一下，只与刚才比较",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "连着旋转打普通箱子再起跳，优先享受连续动作反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "计时只需已完成当前普通关；不默认通关后三重旋转或三部曲速度鞋。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CRASH4V504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "当前指定区段已给到Kupuna-Wa，眼前有快速移动的平台，也有安全起点可重新尝试。这一刻更想先怎样用缓时？",
+          "scene": "Kupuna-Wa给出的缓时窗口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_masks"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜在哪个位置开始缓时会改变可踩的平台间隔，再开一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把缓时起止、落脚平台和下一段等待点排清，再按流程走",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "C",
+              "label": "专练自己缓时后接下一跳的时机，只看自己的衔接是否更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "跑一段已经走通的缓时跳跃，享受时间变化和动作重新接上的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "CRASH4V505.V1"
+        },
+        {
+          "text": "若还没遇到缓时面具：一段普通移动平台前有可等候的安全地面，基础跳跃就能通过。你此刻先做什么？",
+          "scene": "Kupuna-Wa给出的缓时窗口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_masks"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "猜平台移动到哪处时起跳能接上落脚，再试一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "安排等平台、起跳、落稳与下一跳的先后，再照着走",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "C",
+              "label": "练自己落到移动平台后转向的一下，比上一回稳就好",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿已经走熟的跳跃顺序连着过一段，享受平台移动与落地回馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "CRASH4V505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你正处在已给到Akano的区段，暗物质旋转能改变空中移动并处理加固箱；眼前有能重复起跳的安全平台。现在先做什么？",
+          "scene": "Akano旋转改变了移动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_masks",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己结束这一轮旋转后控制落点的一下，只和前一次比较",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用已经熟悉的旋转移动接上加固箱，享受转动、碎箱与落地的连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "处理本趟这段已知未打的箱子，再同趟查齐其余箱子，到关底争取全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先猜旋转开启前后的空中移动怎样影响落台，再各试一段验证",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "Akano只在已提供区段使用；不把四面具写成可同时自由装的构筑。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V506.V1"
+        },
+        {
+          "text": "若还没遇到Akano：普通关卡有几只可用基础旋转处理的箱子、可站平台和主路。此刻先做什么？",
+          "scene": "Akano旋转改变了移动的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_masks",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己从箱顶落到平台后接下一跳的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "连着旋转碎普通箱子、拾果再跳，享受反馈串起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先打完眼前本趟未处理的普通箱子，再同趟查齐余下箱子，到关底争取全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先猜跳到箱顶后再起跳会改变哪段距离，再亲自核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "Akano只在已提供区段使用；不把四面具写成可同时自由装的构筑。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "选关前你已有两身通过游玩取得的Crash或Coco外观，下一关可进，另有一枚已知且仍可取得的隐藏宝石尚缺。你精力足，先选什么？",
+          "scene": "出发前换哪身已获得外观",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_launch",
+            "crash4v5_core",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入下一段已开放主线，想看Crash和Coco如何继续追踪时空异常",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "进一关已熟悉的普通路线，在安全宽平台慢走片刻，主动暂不追新目标，享受熟悉平台上从容、安稳又自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "实际换上自己想用的已获得外观，让这趟关卡有自己选的造型",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "回到已知且仍可取得的隐藏宝石位置，实际补上这项收藏缺口",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "外观必须已获得；不要求付费、N.Verted或宝石成绩。h精力足、主线可走且普通模式安全。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V507.V1"
+        },
+        {
+          "text": "若还没获得额外外观：当前普通关卡在安全宽平台上，前路可继续，也有未探侧角和自己记着的漏箱，你精力足。先做什么？",
+          "scene": "出发前换哪身已获得外观的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_launch",
+            "crash4v5_core",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿已开放主线推进，想接着看时空追赶会怎样展开",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "沿已走熟且安全的小段慢行一会，自愿把这会儿留成不催目标的时间，享受熟悉平台上从容、安稳又自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去侧角看看，未知空间本身就值得绕一下",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "处理本趟已见未打的箱子，再同趟查齐其余箱子并到关底，争取全箱宝石",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "外观必须已获得；不要求付费、N.Verted或宝石成绩。h精力足、主线可走且普通模式安全。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已经在当前区段得到Ika-Ika，能在地面与天花板之间反转重力，眼前有安全落脚处可重新起步。你此刻先试什么？",
+          "scene": "Ika-Ika这次翻到哪一面",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_masks",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在当前可切换的重力面处理本趟已知未打箱子，再同趟查齐其余箱子并到关底，争取全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先猜在不同横向位置翻转会落到哪一块上方平台，再实测核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "专练自己翻转后控制横向落点的一下，比上一回稳定就够",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "连着走一小段已经会的地面、天花板切换，享受上下倒转的运动反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅当前指定区段有重力能力，不把反转重力当其他关自由切换的装备。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V508.V1"
+        },
+        {
+          "text": "还没碰到重力面具的话：普通关卡的基础二段跳与箱台就在眼前，主路可继续也可回到安全地面重复。现在先做什么？",
+          "scene": "Ika-Ika这次翻到哪一面的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "crash4v5_masks",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回去打完本趟已见未打的普通箱子，再同趟查齐余下箱子，到关底争取全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先猜第一跳落点与第二跳方向怎样接到侧台，再跳一次验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "练自己二段跳后收住落点的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "连着跳箱、落台再旋转碎箱，享受动作反馈接起来",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅当前指定区段有重力能力，不把反转重力当其他关自由切换的装备。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想古惑狼4里一段你真正回头查过的普通关卡，哪种经历更像你愿意绕路的原因？",
+          "scene": "回看全箱和隐藏宝石的绕路",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "crash4v5_launch",
+            "crash4v5_trial",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为全箱宝石把一次关卡里的箱子全部打齐并到达关底，或实际拿到了已知遗漏的隐藏宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "没先查奖励就绕进一个未见侧角，想知道主路之外的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照箱台与落点关系提出过猜想，打箱或跳箱后核对了它",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "排清过查侧路、处理已知漏箱、回主路的顺序，并实际照着走过",
+              "signal": "platform_route_plan"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V509.V1"
+        },
+        {
+          "text": "若还没取得宝石：回想基础关里一段你已经重新查过的路，哪一种更贴近？",
+          "scene": "回看全箱和隐藏宝石的绕路的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "crash4v5_launch",
+            "crash4v5_trial",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回头处理过本趟已见未打箱子，再同趟查齐其余箱子到关底，争取全箱宝石",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "走进了没去过的小角落，即使不知道有没有道具",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "换过跳箱先后，验证了自己对可落台位置的判断",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把查角落、打已见箱子与继续主路排成顺序，并实际照着走过",
+              "signal": "platform_route_plan"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你确实用过的一段相位、缓时、暗物质或重力面具路段，哪种经历最像你愿意多试的原因？",
+          "scene": "回看一种面具带来的过程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "crash4v5_masks"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "面具切换、移动与落地回馈接在一起，本身就让我愿意再玩一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "猜过能力起止或切换位置为何影响落点，并亲手核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "在确认不用面具也可过的短段，给普通木箱加过只跳踩、不旋转的规则，并真照着玩过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "为让自己切能力后接跳更连贯，主动重复练过那一下",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只需用过一类面具；不是检查四种能力或按难度判断玩家。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CRASH4V510.V1"
+        },
+        {
+          "text": "若面具还未开放：回想基础二段跳、滑铲与旋转的一段真实经历，哪种更像？",
+          "scene": "回看一种面具带来的过程的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "crash4v5_masks"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "喜欢旋转碎箱与拾果声连起来，所以愿意再玩一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把直接起跳与滑铲后起跳试过，确认了落点为什么不同",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "给确认可行的普通木箱小段定过只跳踩、不旋转的规则，并用它实际走过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "为了自己的滑铲接跳比上一回顺，重复过同一小段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只需用过一类面具；不是检查四种能力或按难度判断玩家。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CRASH4V510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你重玩过的一关，不要求已经通关故事。哪种投入最像你当时愿意继续的理由？",
+          "scene": "回看计时之外也可留下什么",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "crash4v5_trial",
+            "crash4v5_launch"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只是喜欢旋转、碎箱、拾果与落地的反馈，主动多跑过一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "已经换上自己选择的一身已获外观，想让这趟跑关带自己的造型想法",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "触发过关首秒表，专门为自己的用时纪录或遗物时间目标跑了一趟",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "为了自己某次跳跃或滑铲衔接的改善，单独练过一段，不以全关成绩为重点",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "计时纪录、练习、反馈与真实外观表达分开；不以实际遗物等级判能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CRASH4V511.V1"
+        },
+        {
+          "text": "若还没计时或换过外观：回想普通关卡里一段确实重新玩过的箱台路，哪一种更像？",
+          "scene": "回看计时之外也可留下什么的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "crash4v5_trial",
+            "crash4v5_launch"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重复旋转打箱，只为声音和动作回馈合意",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "对一段可行的普通木箱路线加过只靠跳踩清箱的规则，并真的玩过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "专练过二段跳后的落点，只想比自己的上一回稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "为了看主路外侧角是什么，主动走过去过",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "计时纪录、练习、反馈与真实外观表达分开；不以实际遗物等级判能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CRASH4V511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "CRASH4V512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想古惑狼4里一次真正由你自行决定的推进或停留，哪种经历最贴近？",
+          "scene": "回看自己把这一趟留给了谁",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "crash4v5_core",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在未去过的侧角看过另一段布局，单是未知就让我愿意改路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为了接着看Crash和Coco追查时间异常，继续进入了当时已开放的主线",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "精力充足、主线也能继续，仍在熟悉且安全的普通路段慢行一会，自愿暂不加目标，享受熟悉平台上从容、安稳又自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "为明确缺少的隐藏宝石回过旧关，或同一趟打齐过全部箱子并到关底补得全箱宝石",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "真实回顾不改写固定主线；h在普通安全路段，不把卡关休息当舒缓。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V512.V1"
+        },
+        {
+          "text": "只玩过早期也可回顾：想一个已经发生的停步或转向，哪一种更像你？",
+          "scene": "回看自己把这一趟留给了谁的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "crash4v5_core",
+            "crash4v5_launch",
+            "crash4v5_collect_official"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进了原本没计划查的小角落，想知道那面还有什么空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "想看这次时空旅程下一步怎样展开，所以接着玩了已开放主线",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "当时精力足、前路可走，仍在熟悉安全的宽平台慢行一会，不急着推进，享受熟悉平台上从容、安稳又自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "为本趟已见未打的普通箱子折回过，再同趟查齐其余箱子到关底，争取全箱宝石",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "真实回顾不改写固定主线；h在普通安全路段，不把卡关休息当舒缓。",
+          "interpretation_boundary": "全箱宝石要求同一趟关卡内的全部箱子并到达关底，不能把退出关卡前后拆箱跨次累计；题中处理眼前箱子仅推进本趟目标。当前动作路线仅记行为，不由效率、死亡、模式或成绩推能力与人格。",
+          "id": "CRASH4V512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+80ec93db696a"
+}

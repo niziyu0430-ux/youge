@@ -1,0 +1,958 @@
+{
+  "id": "ahatv5",
+  "title": "时光之帽：屋顶、缝帽与徽章的分工",
+  "game_ids": [
+    "steam-253230"
+  ],
+  "scope": "本体单人Mafia Town及已开放章节",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "特殊帽、钩爪、相机、足够徽章位与已上架升级都有明确前提；基础普通帽路径可答。",
+    "构筑真实使用一顶帽与兼容徽章，不同时激活两顶帽；Sprint开启时不套普通二段跳规则。",
+    "只有真正缝帽或买槽才记成长，Pons库存与临时能力效果不记g；不要求DLC、Death Wish、联机或mod。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体单人Mafia Town及已开放章节",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "AHATV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你已能在Mafia Town自由走动，当前时光碎片目标可继续，旁边却有没上过的屋顶和一件自己记着缺的遗物。你现在先去哪？",
+          "scene": "Mafia Town屋顶与目标之间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_core",
+            "ahatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "爬上没去过的屋顶，看看房子另一面还连着什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "去拿已知的那件遗物，让正在拼的收藏少一个缺件",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "把查屋顶、取已见物品与回目标的路线排成一趟，按这个顺序走",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "D",
+              "label": "先跟上当前已开放的主线，想接着看帽子女孩如何面对Mafia Town的事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV501.V1"
+        },
+        {
+          "text": "若还在最早的Mafia Town：普通跳跃、二段跳与扑跃都已可用，主路能继续，旁边有未看的屋顶小角落。你现在先做什么？",
+          "scene": "Mafia Town屋顶与目标之间的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_core",
+            "ahatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "到屋顶角落看看，不要求一定有毛线或奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先猜二段跳接扑跃会落到哪个台，再实际跳一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "专练自己扑跃后的落点，比自己的上一回稳就够",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先继续当前已开放主线，想看这位小访客怎样应对这里的人物",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "个人平台的落脚、转向、冲刺或补充安排仅记platform_route_plan行为，无画像分；含当场动作资源也不自动计持续运营。其余按实际练习、机制验证、补缺或自定硬规则区分。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已有Sprint Hat，已找到Brewing Hat所需毛线且数量够缝；Scooter与磁铁徽章也已持有，两徽章位可用。此刻你先处理哪件？",
+          "scene": "够缝一顶新帽子的毛线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_badges",
+            "ahatv5_scooter",
+            "ahatv5_hats"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "戴Sprint Hat并装Scooter与磁铁，试骑行接近物品、由磁铁补拾取的组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先猜只装上或卸下磁铁会怎样改变Pons拾取距离，再保持同一帽子、同一物品位置各试一次",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先去补自己已知的一件遗物缺片，重点是让这一组收藏完整些",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "真正用毛线缝出Brewing Hat，让自己的可用帽子能力留下一项持续积累",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "购买、缝制或新增槽位须实际留下可保留能力才计成长；只改一项后核对效果是机制验证，多部件功能关系才计构筑。个人买物准备不计持续运营。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV502.V1"
+        },
+        {
+          "text": "若还没缝新帽或取得这些徽章：Mafia Town里你戴着普通帽，基础屋顶与未探侧路可走，目标近处也能使用Kid Hat指路。现在先做什么？",
+          "scene": "够缝一顶新帽子的毛线的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_badges",
+            "ahatv5_scooter",
+            "ahatv5_hats"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先爬到未探屋顶的另一面，看看这块城镇还接着什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "保持普通帽，选侧台反复练二段跳接扑跃，看看自己的落点是否比刚才稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "用普通跳跃和扑跃连过熟悉平台，先享受腾空、滑出和落地反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先猜帽子提示会指向哪层平台，用一次再跳过去核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "购买、缝制或新增槽位须实际留下可保留能力才计成长；只改一项后核对效果是机制验证，多部件功能关系才计构筑。个人买物准备不计持续运营。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你来到徽章商人旁，额外徽章位已上架，Pons够买；Sprint Hat与Scooter徽章已经持有，至少一个徽章位可用。出发前你先做什么？",
+          "scene": "商人已经上架的额外徽章位",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_badges",
+            "ahatv5_scooter",
+            "ahatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先预测Sprint Hat装上或卸下Scooter会怎样改变移动方式，再去熟悉平地各试一段核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "沿用普通移动先去跑一段熟悉平台，享受二段跳与扑跃的回馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "实际买下这个已上架徽章位，让之后的帽子方案多一份能长期保留的装配空间",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先戴Sprint Hat配上Scooter，试这顶帽与专属徽章合起来的骑行方式",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "购买、缝制或新增槽位须实际留下可保留能力才计成长；只改一项后核对效果是机制验证，多部件功能关系才计构筑。个人买物准备不计持续运营。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV503.V1"
+        },
+        {
+          "text": "若还没接触徽章商人：Mafia Town里你戴着普通帽，基础二段跳、扑跃和Kid Hat近处指路都能用。你此刻先做什么？",
+          "scene": "商人已经上架的额外徽章位的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_badges",
+            "ahatv5_scooter",
+            "ahatv5_manual"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练自己二段跳接扑跃后收住落点的一下",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿已经走熟的基础路线跳扑一段，先感受移动反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "去一个未探小屋顶看看，不先追奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "在帽子能提示的目标近处先猜它会指哪层平台，使用一次再去核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "购买、缝制或新增槽位须实际留下可保留能力才计成长；只改一项后核对效果是机制验证，多部件功能关系才计构筑。个人买物准备不计持续运营。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已缝出Dweller Mask，也持有Fast Hatter徽章；眼前这段有可由面具显出的通路和安全落脚处。现在先怎样处理？",
+          "scene": "Dweller Mask与再用能力的间隔",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_core",
+            "ahatv5_badges",
+            "ahatv5_manual",
+            "ahatv5_fast_hatter"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿刚显出的未去通路看看，想知道原本看不见的空间通向哪里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "装上Fast Hatter，配合Dweller Mask缩短再使用的等待，把两者作为一组通路方案试一遍",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先猜面具开启与关闭会让哪段平台变化，再触发一次实测",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "专练自己使用面具后接跳、落到安全台的一下，目标是自身衔接更稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "一顶帽配被动徽章是真组合；不要求同时激活两顶帽，不默认早期有Dweller。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV504.V1"
+        },
+        {
+          "text": "若还没有Dweller Mask：Mafia Town里你戴普通帽，目标近处可用Kid Hat指路，旁边还有未探屋顶和已知遗物缺口。你现在先做什么？",
+          "scene": "Dweller Mask与再用能力的间隔的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_core",
+            "ahatv5_badges",
+            "ahatv5_manual",
+            "ahatv5_fast_hatter"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去取自己已经记着少的那件遗物，补上这组收藏的一格",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先猜帽子的近处提示会指向哪层，再用一次并走过去确认",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "在普通帽下练二段跳接扑跃，修正自己常落偏的位置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先上未探屋顶另一面，看看挡住视线的后方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "一顶帽配被动徽章是真组合；不要求同时激活两顶帽，不默认早期有Dweller。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已取得并装备Hookshot徽章，眼前有可用钩点通向上层，另一边还有一件自己正在拼组的遗物缺件与没去过的侧台。你现在先做什么？",
+          "scene": "已经装上的钩爪徽章",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_badges"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从钩点荡到未探上层，看看高处后方还有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "去取正在拼的那组遗物已知尚缺的一件，让这组收藏少一格",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "专练自己从钩爪松开后落台的时机，只跟自己的上一回比较",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "荡过一段已经会的钩点路线，享受摆动、松开与落地的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "钩爪必须已经取得且占有徽章位，不把所有屋檐当任意抓点。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV505.V1"
+        },
+        {
+          "text": "若还没有钩爪：Mafia Town的普通帽、二段跳与扑跃足够通过眼前基础平台，旁边也有已见遗物缺口和未探侧台。现在先做什么？",
+          "scene": "已经装上的钩爪徽章的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_badges"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "到未探侧台另一面看看，不要求一定开出奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "取到那件自己已看见但漏拿的遗物，补上收藏一格",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "保持普通帽、不开冲刺，练自己二段跳接扑跃的落点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿已经走熟的基础平台跳扑一段，享受空中移动和落地反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "钩爪必须已经取得且占有徽章位，不把所有屋檐当任意抓点。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你在Murder on the Owl Express的调查阶段，尚未触发结案；还有已知缺少且当前可到车厢取得的线索、可选人物对白和未查角落。此刻先做什么？",
+          "scene": "猫头鹰快车的调查",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_core",
+            "ahatv5_manual",
+            "ahatv5_owl_clues"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把人物对白听完整，想弄明白这场列车故事为何这样展开",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "照这次调查里已知仍缺的线索项，逐个回相应车厢补上",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先查看没查过的车厢角落，想知道布景后面还藏着什么空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把已见线索与角色说法摆在一起，提出一种解释，再去找下一条线索核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "调查是单人叙事与线索机制，不将NPC当真人社交，也不虚构可改写的固定真相。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV506.V1"
+        },
+        {
+          "text": "若还没到快车：Mafia Town当前目标可继续，也有可听对白、未探屋顶和你记着的遗物缺口。你现在先做什么？",
+          "scene": "猫头鹰快车的调查的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_core",
+            "ahatv5_manual",
+            "ahatv5_owl_clues"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先跟上当前已有对白或主线，想知道帽子女孩与这里的人物为何这样互动",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "去补自己已知少的那件遗物，先完成清单的一项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "上未探屋顶后面看看，不先规定必须拿到物品",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先对照Kid Hat在目标近处给的提示与平台位置，提出落脚猜想再跳去核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "调查是单人叙事与线索机制，不将NPC当真人社交，也不虚构可改写的固定真相。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已回安全飞船，精力足，下一Act可进；相机徽章与Sprint Hat、Scooter已持有，毛线够缝已发现新帽，Pons够买可达商人的已上架徽章。先做什么？",
+          "scene": "飞船出发前的自己的片刻",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_core",
+            "ahatv5_badges"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自设徒步考察员身份，把已经能用的Scooter留着不用；进入Mafia Town后持续只靠步行与普通跳跃查看目标周边，再去已知主线",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先用毛线缝出当前已发现的新帽，再去可达商人买已上架徽章，让同一帽子女孩的能力在后续旅程里继续保留",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "实际用相机取景、调整画面与滤镜，拍一张带自己构图想法的飞船照片",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "在已经熟悉的飞船房间慢慢走一会，主动留一点不赶目标的时间，喜欢熟悉船舱里安稳又自在的感觉",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "身份需已有代步能力却持续照徒步设定不用；g需实际缝成新帽并购得保留徽章，a需真实取景，h为精神足的主动舒适。早期路线安排仅中性行为。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV507.V1"
+        },
+        {
+          "text": "若还没有相机徽章：你在熟悉安全的飞船里，精力足，Mafia Town已有目标可进，也有基础平台能跑。现在先做什么？",
+          "scene": "飞船出发前的自己的片刻的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_core",
+            "ahatv5_badges"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把本趟已看见的物品、可回走屋顶和返回目标的顺序排清，再出发照着走",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "B",
+              "label": "保持普通帽，到熟悉基础平台练二段跳接扑跃的一下",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "在走熟的船舱慢行一会，自愿暂缓出发而不添目标，喜欢熟悉船舱里安稳又自在的感觉",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "进入已开放Mafia Town后，先上目标旁还没看过的可达屋顶，看看后方究竟连着什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "身份需已有代步能力却持续照徒步设定不用；g需实际缝成新帽并购得保留徽章，a需真实取景，h为精神足的主动舒适。早期路线安排仅中性行为。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已进入一个本体时间裂隙，眼前短段已确认只靠普通跳跃与二段跳也能通过，扑跃仍可用，安全平台可重复起步。现在先做什么？",
+          "scene": "只用基础移动的时间裂隙",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给这小段定禁用扑跃的规则，只许普通跳跃、二段跳与走动，实际试拿掉常用动作后的路线",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "练自己扑跃结束后的落台，目标是比自己的上一回更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先猜第一跳、第二跳与扑跃的起点会怎样改变距离，再分别试一趟核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "连续走一段已会的跳扑路线，享受腾空、滑出与落地反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只取已进入的本体裂隙，基础移动足够，不默认后期帽、DLC或徽章效果。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV508.V1"
+        },
+        {
+          "text": "还没进时间裂隙。普通帽下Mafia Town这小段已确认只靠普通跳跃与二段跳可走通，扑跃仍能使用。先做什么？",
+          "scene": "只用基础移动的时间裂隙的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "规定这小段禁用扑跃，只许普通跳跃、二段跳和走动，实际试这条新限制",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "挑自己扑跃落地后常多滑的一步练习，只求比刚才稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先猜二段跳后什么时候扑跃会接到想去的平台，再试一次核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "连着走过熟悉基础平台，享受空中滑出与落地反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只取已进入的本体裂隙，基础移动足够，不默认后期帽、DLC或徽章效果。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你在时光之帽里真正缝帽、装徽章或整理资源的经历，哪一种更像你愿意继续的原因？",
+          "scene": "回看帽子身上留下的积累",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_badges",
+            "ahatv5_scooter"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际缝成新帽或买下已开放的徽章位，可用能力和装配空间留在后续旅程里",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把Sprint Hat、Scooter与已有磁铁在足够槽位下装成一组，试出了骑行与拾取的分工",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "只换过自己已有的一枚徽章，先预测帽子动作或拾取范围哪部分会变，再亲手试过核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "为一组遗物明确缺少的一件，专门回去取过，想把这一组拼完整",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "购买、缝制或新增槽位须实际留下可保留能力才计成长；只改一项后核对效果是机制验证，多部件功能关系才计构筑。个人买物准备不计持续运营。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV509.V1"
+        },
+        {
+          "text": "若还没缝新帽或装多枚徽章：回想Mafia Town基础移动与路线里已经发生的选择，哪一项更贴近？",
+          "scene": "回看帽子身上留下的积累的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_badges",
+            "ahatv5_scooter"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对二段跳接扑跃的起点提出过落点猜想，再分别跳过核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "为了看看没去过的屋顶，主动绕过已知目标上去看过",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "安排过已见物品、可回走屋顶和返回目标的路线，并照着走过",
+              "signal": "platform_route_plan"
+            },
+            {
+              "id": "D",
+              "label": "为补一件明确漏下的遗物，专门回到旧处取过",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "购买、缝制或新增槽位须实际留下可保留能力才计成长；只改一项后核对效果是机制验证，多部件功能关系才计构筑。个人买物准备不计持续运营。",
+          "interpretation_boundary": "只解释这次情境的行动偏好；platform_route_plan只记录个人路线安排，不映射人格。未体验可换题，不由效率、成绩、辅助设置或通关程度推断能力与现实人格。",
+          "id": "AHATV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你在本体已经做过的一段调查或探索，不要求进过每个章节。哪种停留最像你？",
+          "scene": "回看线索和故事把自己带去哪",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ahatv5_core",
+            "ahatv5_manual",
+            "ahatv5_owl_clues"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了把角色对白和前后发生的事情接起来，主动看完了已开放故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "进入过原本没打算去的车厢角落或屋顶，只想知道另一面",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "照着一项已知线索或遗物缺口，返回原处把清单补上",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "把已见线索或机关关系连成解释，再亲手到下一处核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只回顾真实已开放内容，调查NPC不是现实协调，不改固定剧情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV510.V1"
+        },
+        {
+          "text": "如果只玩过Mafia Town：回想这片城镇里确实发生的一次停留，哪种比较像？",
+          "scene": "回看线索和故事把自己带去哪的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ahatv5_core",
+            "ahatv5_manual",
+            "ahatv5_owl_clues"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了接上帽子女孩与人物的经历，把当前对白看完了",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "绕上了没去过的屋顶，单是未知空间就让我好奇",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "回头取了正在拼组的遗物明确少的一件，让这一组收藏少一格",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "对照过近处帽子提示与平台位置，试清自己猜的可达路线",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只回顾真实已开放内容，调查NPC不是现实协调，不改固定剧情。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想时光之帽里你实际自由选择过的一段移动，哪种过程最像你愿意继续玩的原因？",
+          "scene": "回看自己怎样穿过一片屋顶",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_core",
+            "ahatv5_scooter"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给已确认只靠二段跳也能通过的熟段定过禁用扑跃的规则，并真的按限制走过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "自定徒步考察员身份后，明明已有可用Scooter，仍在那段旅程持续不用代步，只凭步行与普通跳跃查看屋顶再去目标",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "二段跳、扑跃或钩爪摆动的反馈本身好玩，让我愿意多走一段",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "为了自己扑跃后落台更稳，或松钩时机更顺，主动练过同一小段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "身份需在真实可选工具或行动之间持续照设定选择，普通预先检查不靠人设标签计r；其余按具体练习、未知发现或当前行为解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV511.V1"
+        },
+        {
+          "text": "若还没钩爪或代步能力：回想普通帽下基础二段跳与扑跃的真实一段，哪种更贴近？",
+          "scene": "回看自己怎样穿过一片屋顶的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_core",
+            "ahatv5_scooter"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在普通帽下，给确认二段跳即可通过的小段定过禁用扑跃的规则，并真照着做过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "因为主路旁还有没看过的可达屋顶，实际绕过去看了另一面，即使不知道有没有物品",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "空中扑出与落地接起来的回馈，让我主动又走了一轮",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "为让自己的扑跃落点比前一回稳，重复过同一小段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "身份需在真实可选工具或行动之间持续照设定选择，普通预先检查不靠人设标签计r；其余按具体练习、未知发现或当前行为解释。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "AHATV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你在本体里真正停留或作过的外观选择，哪种经历更像你愿意留下这一会儿的原因？",
+          "scene": "回看飞船与自己选的造型",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为拼完整自己正在追的一组遗物，专门回到旧处拿过明确缺的一件",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "实际换过已获得的配色、帽子外形，或主动取景拍照，想做出自己喜欢的可见风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "当时精力足、下个Act可进，仍在熟悉安全飞船慢行，主动不急着添目标，喜欢熟悉船舱里安稳又自在的感觉",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "为了把帽子女孩与已经遇见人物的故事接起来，继续看过当前已开放对白或主线",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "a需要实际表达而非看风景；外观已得不保证轮盘任意指定，h非疲劳。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV512.V1"
+        },
+        {
+          "text": "若还没外观或相机：回想最初飞船和Mafia Town里一段确实发生的停留，哪种最贴近？",
+          "scene": "回看飞船与自己选的造型的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ahatv5_manual",
+            "ahatv5_core"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连着跳扑过熟悉平台，只因腾空与落地的反馈本身合意",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "精力充足且已有目标可出发，仍愿意在熟悉安全船舱慢行片刻，喜欢熟悉船舱里安稳又自在的感觉",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "进入过主路旁没探过的屋顶，只想看看另一头有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "为了自己的二段跳接扑跃比前一回稳，主动练过一小段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "a需要实际表达而非看风景；外观已得不保证轮盘任意指定，h非疲劳。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "AHATV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+307e8c625ec3"
+}

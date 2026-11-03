@@ -1,0 +1,1442 @@
+{
+  "id": "at27",
+  "title": "美国卡车模拟",
+  "game_ids": [
+    "steam-270880"
+  ],
+  "scope": "原生PC当前普通本体货运、手动驾驶与已体验的自营；QuickJob/借车每槽留普通入口，车队、特定挂车、学院章节与真人分享只条件替代，不默认付费地图/Online/RoadTrip。",
+  "status": "private_author_review_complete_pending_independent_review",
+  "author_review": "complete_actual_author_whole_sources_bindings_review_pending_independent_peer",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12题位×3情境=36，前8行动后4真实回顾，保留共享4/总16+最多2补问/未体验换专属不跳过。",
+    "正式1.61与1.60休息优先，1.62测试与付费RoadTrip不默认。",
+    "不凑16画像，不以自动巡航或NPC员工充F/Q/O/K。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "普通单人货运与本人真实经营/驾驶经历",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "AT2701",
+      "number": 1,
+      "variants": [
+        {
+          "id": "AT2701.V1",
+          "scene": "快速任务里，两张货单把下一程拉向不同地方",
+          "text": "当前Quick Jobs里有本人能接的两单：一单报酬较高、终点是已经跑熟的城市；另一单报酬较低，但途中有自己尚未实际到过的可达地段。雇主都提供车和已挂好的货。先接哪一段？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_MANUAL",
+            "AT27_JOB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接报酬较高的熟线，把这趟实际收入投入自己原先选定的存钱目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若那段路对本人确实还未知，就接经过它的较低报酬任务，愿为亲自发现改变去向",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先核对这两张单已列的货物、交付条件与报酬，再决定这次承接",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "若本人仍不熟其中一单的长挂车转弯，就选它来专项练当前真能承担的车尾轨迹",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "QuickJob雇主提供车/已挂货，初期普通入口；收益目标0与个人未访W真实代价，T本人未熟局部，不保证高报价就高净收益。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2701.ALT1",
+          "scene": "自有车接货，还要先空驶到哪里",
+          "text": "只按本人真有车且当前Freight Market可接的货单来想：近处货场有能承接的单，较远货场另一单标价更高；去远处得先开自己这辆车过去，燃油和车况都由自己承担。先怎样接这一轮？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_MANUAL",
+            "AT27_JOB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接近处货场的单，实际少跑这段取货空驶，把本轮先用于就近交付",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先开去远处货场争取那张仍有效的高报价单，接受取货前的油耗与行程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "把到货场、补油和交付目的地的实际先后排清，再照本轮资源安排出发",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前两单的有效条件、货物与报酬，不把标价直接当净赚",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "自有车FreightMarket先到货场/自付燃油维修，和QuickJob直接开始不同；不是把任意远单到达仍有效当保证，PLAN真排先后。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2701.ALT2",
+          "scene": "借来的驾驶室不同，先怎样把这单开出去",
+          "text": "一张普通快速任务已经开始，雇主的车和挂车就在眼前；你当前能调座位与后视镜，也能按这辆车已有配置出发。它与上一趟驾驶室的视野和手感不同。先把准备给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_MANUAL",
+            "AT27_STORE",
+            "AT27_JOB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把座位和镜面调到这辆车当前看得到的路口与车尾位置，再实际出车完成本单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人还不熟这辆车的转向与拖挂衔接，就在眼前实际有余地的出场路段专项练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先用当前可用的这套驾驶室与控制配置出发，亲手体验它同上一辆的不同",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读已有镜面、座位与当前变速方式说明，再回驾驶室继续",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "借用车普通起步，不要求自有车或昂贵方向盘；设置差异不自动B，调视野后实际推进0，T局部。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2702",
+      "number": 2,
+      "variants": [
+        {
+          "id": "AT2702.V1",
+          "scene": "这次导航直达，还是把补给点排进路线",
+          "text": "一单本体地图内的普通货运正在路上；当前地图能看到终点、可达加油站和休息点，手头这辆车的油量可查；若本人开启了休息系统，相关状态也可看。还没走到下一处分岔，先怎样安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_MANUAL",
+            "AT27_PATCH",
+            "AT27_REST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把补油、实际需要的休息与交付终点排成这趟能执行的先后，再按安排开过去",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "按眼前仍可完成的直达路线先推进本单，后续到达可用停靠点再处理补给",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若沿途另有本人未到过、且本单余量真允许的可达路段，就为亲自看看它改这次去向",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对地图已标的位置、当前导航线和目的地，再决定下一处分岔",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "具体补给与终点次序，未知只W；不保证任意油量能直达，不把导航查阅推P或跨期体系Y。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2702.ALT1",
+          "scene": "双击油门已启用，这次起步要怎样接",
+          "text": "只按本人用键盘、当前已开启原生双击油门选项的一次来想：车辆停在眼前可继续起步的位置，自己能长按或双击油门键，也有一张未完成的普通货单。先把这轮输入给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_INPUT",
+            "AT27_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人仍不知道两种输入有何不同，就先猜持续按住和双击会给出同样的油门；保持眼前车辆与观察方式，实际分开亲试并核对变化，不符就修正",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "若本人已明白这个选项却还接不稳起步，就专项练自己实际不熟的按键与松开时点，重在下一次能做稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "若自己已经会用当前控制，仍愿亲手连续接油门、制动与转向，享受车身和声音跟着输入变化的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先按自己当前已经会用的方式继续这张货单，把本轮时间给实际交付，不为比较两种输入多停留",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "实质整替2ALT1原加油预算G/G/OBJ/PLAN，它与1ALT1/5ALT1/7ALT1/12ALT2的资金分配方法组过密。现行1.58官方明确可选keyboard double-tap；题干和其他选项不预教两输入油门结果，P本人未知、肯定可反驳候选与实际输入比较，不宣称现实油门规则。T知道含义但本人输入未熟，F只已会后的连续手动。键盘/开关仅本替代，不给手柄玩家强设。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2702.ALT2",
+          "scene": "短睡一会儿，还是给完整强制休息留窗口",
+          "text": "只按本人已开启现行休息系统的一次普通货运来想：当前到可休息的位置，Rest State已下降，Mandatory Break还显示剩余时间；本单仍有交付余量，界面可选睡多久。怎样安排这次停靠？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_REST",
+            "AT27_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前允许的长度先休一段，再把实际恢复后的状态与剩余交付时间用于继续本单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把这次停靠留给界面当前要求的连续强制休息，接受本轮出发时刻随之改变",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先把休多久、醒后补给和到货顺序按当前余量排清，再确认这次休息",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先读这两个休息指标现有说明，弄清自己这次启用了哪一项再操作",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "1.60两指标可独立开关且可选睡时；不沿旧固定10小时/一觉同时全解决，短睡不许保证重置强制休息。题只系统真开才答，02V1普通入口不锁。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2703",
+      "number": 3,
+      "variants": [
+        {
+          "id": "AT2703.V1",
+          "scene": "路口有余地，长挂车的内侧却贴近路缘",
+          "text": "普通送货途中，右转前能在路口停住观察：当前挂车较长，内侧路缘和出口车道都看得见，后方并非可以随意倒退的空场。先怎样转过去？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_STORE",
+            "AT27_MANUAL",
+            "AT27_PARK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先停下看清出口与挂车内侧，再从眼前确可用的空间调整入弯位置，把这次送货继续下去",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人仍没掌握长挂车转弯的车头/车尾衔接，就用本次实际可承担的窗口专项练它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "亲自持续衔接转向、松油、制动和镜面观察，注意车身轨迹跟着输入变化的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先查看已可达路口入口和当前镜面能看见的挂车、停靠空间，再继续",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "普通道路长挂内轮差，不造倒退穿车/任意挪NPC；F持续手动，SC入口/装备/停靠处，不把只看地图当SC。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2703.ALT1",
+          "scene": "进入加州前，自己的滑动轴组还留在旧位置",
+          "text": "只按本人真用支持滑动轴组的挂车、当前能在可操作位置调整来想；这一趟将驶入加州，界面当前轴组位置和该车实际设置可看，货还要送。先怎样处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_SLIDER",
+            "AT27_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前可调轴组移到自己这次选定、符合已核要求的位置，再继续本单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先核对眼前已列的挂车设置说明与加州轴距限制，再确定这次调整",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "比较这台挂车当前可用的轴组位置与已列配置，再选本趟方案",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "把调整、实际路线和后续交付的先后排清，再照安排继续",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "1.53原生selecttrailers可自由滑动，非所有挂车；只采用游戏加州罚款边界，不写现实法律建议/保证只调整就免全部检查。无P预教后再验证同事实。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2703.ALT2",
+          "scene": "载货下坡，先让哪种制动承担这段",
+          "text": "只按当前这辆车确有可用发动机制动、本人也能用行车制动来想：普通货运进入眼前下坡，载货仍在，自己能在坡前控制速度。先怎样开这段？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_STORE",
+            "AT27_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按当前路线和载荷把速度降到自己本段选定的范围，再让实际可用制动接住下坡",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人还不熟发动机制动与行车制动的介入，就用本次可承担坡段专项练衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "持续亲手调松油、制动和方向，主要享受有重量的车跟着输入变化的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对这辆车现有制动和变速方式说明，再按当前可用功能继续",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不把每辆车默认装retarder，不造制动自动万能/无损极限；真实输入F，读说明0，技能未熟仅对应T。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2704",
+      "number": 4,
+      "variants": [
+        {
+          "id": "AT2704.V1",
+          "scene": "货到场里，倒进去还是用眼前另一种交付",
+          "text": "普通送货已到货场，当前交付面板真提供较难倒车泊位、较直接的泊位和跳过停车选项；货仍在挂车上，自己还可以选这一段怎样结束。先做哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_PARK",
+            "AT27_JOB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选较难泊位，亲手把车尾送到实际标记里，争取这次自己选定的停车奖励",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "选较直接的可用泊位，把本轮用于完成交付，接受这次停车奖励不同",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人尚没掌握倒车纠偏，就选当前真能承担的泊位专项练这段，不只为多拿奖励",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "使用面板当前允许的跳过停车，把本单先收尾，接受这次不拿手动停车奖励",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "三档以当场提供为条件，不把自动泊车叫F/真人帮助，不固定经验值或困难偏好等现实能力；普通QuickJob同样可经历。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2704.ALT1",
+          "scene": "拖头已到货场，先把这次接挂做完",
+          "text": "只按本人开自有拖头到当前Freight Market货场、眼前有本次真可挂接的货运挂车来想：自己的车还没连上，能看见挂接位置，眼前也有当前实际能用的外部视角。先怎样接货？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_MANUAL",
+            "AT27_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用当前看得清的视角把拖头对到本次挂接点，实际连上后继续这张货单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若本人还不熟倒向挂接点的车尾位置，就在当前可承担空间专项练对准和停住",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前拖头、挂车连接部位与货场停靠处，再继续接挂",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "先读这辆车与挂车已有挂接操作说明，再回本次位置操作",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "自有车Freight实际先取货，手册原生attach/detach与外视角；不默认为借用QuickJob需重接已挂货，无未核高级挂接开关前提。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2704.ALT2",
+          "scene": "学院倒车时，挂车刚才转向让自己意外",
+          "text": "只按本人进入原生Driving Academy、当前倒车情境确能重试来想：自己亲见挂车向没料到的一侧偏，当前还能实际操控这一组车。下一步先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_ACADEMY",
+            "AT27_PARK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人仍不知道方向盘与挂车偏向怎样对应，就先猜在这次起点小幅左打会让挂车尾向左偏；保持同一观察方向，从同一重试起点分别亲试小幅左打与右打，核对预计方向，不符便修正",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先照自己当前已会的办法完成眼前原生学院目标，不另加试验任务",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先读学院这段已有图示与倒车说明，再继续这次操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "若本人已懂方向关系却还做不稳，就重试自己实际不稳的纠偏衔接，想把它练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "P本人未知、先具体预期再实际可失败对照，不在题干教左右关系，不把一次试验解释所有物理；T懂规则但操作未熟区分，学院只替代不全槽锁。 独审把“某侧”收紧为本次起点向左的明确可反驳预期，固定同一观察方向，不把不同铰接角或不同镜面画面当普遍因果。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2705",
+      "number": 5,
+      "variants": [
+        {
+          "id": "AT2705.V1",
+          "scene": "货还没交，车况已经有了损伤显示",
+          "text": "普通货运中，自己亲见一次接触后当前车辆有损伤显示，但车仍可驾驶；到终点与到当前可达服务点是不同方向，交付时间还在走。先把这段给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_PATCH",
+            "AT27_TRUCK",
+            "AT27_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开去眼前可达服务点处理本次实际可维修项目，接受这单多一段行程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按当前仍可驾驶且自己能承担的状态先完成这张货单，把车辆处理留到交付后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先用当前可用外部视角查看眼前的车与挂车，再对照损伤界面核实刚才已见的情况，之后继续这段",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "先核对这张单当前的交付条件和剩余要求，再决定是否转向服务点",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "当前Damagewidget车/挂/货分开，不能修车=修好货物或清除全部永久磨损；不造临场一定无碍，目标取舍0，不将事故推现实人格。 独审C明确实际可达装备的外部视角查看，再对照UI；避免只有读损伤数字却用现场查看SC，不发明下车步行或修货功能。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2705.ALT1",
+          "scene": "第一辆自有车，贷款还是再跑雇主的车",
+          "text": "只按本人当前银行确已开放、眼前可负担一笔实际贷款与选定卡车来想：用这笔钱可先买到自己的车，但之后要自己付油钱与维修；继续Quick Jobs则仍由雇主提供车。先走哪条？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_FINANCE",
+            "AT27_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按这次真可承担的贷款条件买下选定车，开始把本轮运货投入自营目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先继续一张当前能接的Quick Job，再积攒买车资金，接受自营开始得更晚",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对这笔贷款已列的分期条件和当前购车费用，再决定是否交易",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先把贷款扣款、留作补给的现金与下一张可做货单排清，再照这个本轮安排执行",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "真实早期贷款/自营与雇主成本差异，普通首购不G、一次预算不Y；不沿旧利率/额度/价格和固定多久回本。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2705.ALT2",
+          "scene": "车卡在路边，拖回道路还是去服务点",
+          "text": "只按本人在普通单人本地货运里真卡住、当前Service菜单确可用Tow to Road与Tow to Service来想；车辆损伤和费用也能查，挂车目前仍连着。先选哪种恢复？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_TOW",
+            "AT27_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "付当前列出的费用拖回最近一次安全道路位置，回到可行驶位置后再按实际车况续行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "选择当前可用的拖往服务点，把这轮先用于车辆处理，接受自己的地点与行程改变",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对这两项已有说明和当前费用，再确认本次服务",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "若当前还有自己未掌握、实际可承担的脱困操作，就先专项练这一步，不把车挪回路当自动修好",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "1.59正式TowRoad与TowService不同，当前本地合同/菜单允许才答；不保证外部合同保留，脱挂拖车留原地，越远可能不可用，不写免费瞬移修车。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2706",
+      "number": 6,
+      "variants": [
+        {
+          "id": "AT2706.V1",
+          "scene": "这一趟的车和景，照片里想留下什么",
+          "text": "当前普通送货暂停在原生Photo Mode中，借来的车也可入镜；自己刚才亲到的路段和当前画面都在，能调镜头角度、颜色和景深，也能退出回货运。先做哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_PHOTO",
+            "AT27_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕自己想要的公路与卡车画面调构图、颜色和景深，实际留下一张选定风格的照片",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "退出照片模式，先把这张仍未完成的货单送完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "把这辆自己真开过的车和亲到路段补进自己的旅行记录，照片只记已有经历",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "若有真愿回应的同好，就用这次真实拍到的画面交流路上见闻，重在彼此回应",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "普通借车同样可用PhotoMode，不锁自有资产/上传；A实际呈现，REC真实车地点，O局部，暂停镜头不F。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2706.ALT1",
+          "scene": "车漆和账本都能改，这次钱先给哪项",
+          "text": "只按本人已有车、当前服务点有确可购买的本体涂装来想：选定的公司主题漆能实际装上，但这笔钱原也打算给下一趟补给；当前都还能承担。先花在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_TRUCK",
+            "AT27_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这辆车实际涂成自己选定的公司主题，让当前车队画面呈现想要的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先保留这笔钱去跑已选货单，把这次主题改色留后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对眼前涂装的适用车型、费用和当前持有资金，再决定这次购买",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "比较当前确可用的原漆与主题方案，再选这次配置，不急着把预览当已经装好",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "1.60原生companypaint已发布，不要求付费涂装DLC；实际装车才A，首购漆不G，比较预览诚实0。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2706.ALT2",
+          "scene": "刚才视野有变化，镜面里那一角为什么不同",
+          "text": "普通借用车或自有车都可以：当前车辆停好，你刚亲见一次座位或镜面调整后车尾可见范围不同，现有设置还能改回。自己还没出发。先怎样准备？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_STORE",
+            "AT27_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人还不明白刚才差异怎样产生，就先猜只动镜面这一项就能看见自己指定的那处车尾；保持座位等其他可控条件，亲调并改回核对，不符就修正，不把其他差异都归给镜面",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "按自己当前已会的方式把眼前车尾与出口调到可见，再实际出发完成本单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "亲用另一套当前可用的视角或镜面配置，体验这次观察路口的不同",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先读已有座位、镜面与视角工具说明，再继续当前设置",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "座位/镜面原生实际可调；P本人未知一变量可改回，不把没有注意到的过去补基线，不先教镜面因果。非镜头自动跟随F。 独审把“是否足够”改为本人肯定、可被实际视野推翻的候选，保留既有基线与其他可控条件，不预先教正确镜面角度。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2707",
+      "number": 7,
+      "variants": [
+        {
+          "id": "AT2707.V1",
+          "scene": "跑货升了级，这个技能点先给哪条路",
+          "text": "只按本人已通过普通送货得到一个当前可分配技能点来想：界面真能看到尚未点满的长途与另一项货运技能，现有货单也能继续接。先怎样用这一轮成长机会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_SKILL",
+            "AT27_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人已多轮投入这同一司机档案、亲见等级与技能成长且仍有空间，就继续实际分配给自己原来在培养的路线，再跑对应可做任务看积累延续",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把这个点给当前另一项能解锁自己这次想接货物的技能，再去做实际已经开放的货单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先按当前已有能力接一张已可承接的货单，把这次分配留待自己决定",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先读当前技能等级与下一步已列效果，再决定这个点怎样投入",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "普通送货技能成长，G只既有同档案多轮投入/亲见变化且能继续；不沿旧ADR误称/百分比/里程门槛，解锁不保证当场出现所有货单。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2707.ALT1",
+          "scene": "现有车库加位，还是把新车库开到另一城",
+          "text": "只按本人真有公司、当前能负担一种扩位选择来想：原车库可以升级，另一个自己已到城市也有可买车库；两边都要另配实际车辆和司机，当前资金不够把这两条扩张一次做齐。先投哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_FLEET",
+            "AT27_FINANCE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先升级现有车库，把本次资金用于原地点的新增车位，再按实际余量补车与司机",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先买另一已到城市的车库，把这次扩张放到新的基地，接受原车库升级留后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先把购位、买车、雇佣与当前货运的先后按本次现金排清，再照这一轮安排执行",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对两项眼前可交易车库的费用、空位和实际配套条件，再决定这次投入",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "实质替掉与11空返回顾近壳的员工G/Y/REQ三同项组：现有基地升级与另一城市购位竞争本次资金；一次扩位0/本轮计划0，不把单次消费伪G/Y。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2707.ALT2",
+          "scene": "雨进了驾驶视野，货还是要送",
+          "text": "普通货运中，当前路段下起雨，自己能用雨刷、灯光和实际制动，也能在眼前确可到的安全停靠处停住。先怎样把这段接下去？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_MANUAL",
+            "AT27_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在当前可用位置停靠，待自己选定的出发条件合适后再继续这张货单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "用当前实际可用雨刷与灯光改善观察，再按本段真实可承担速度继续送货",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不熟雨中看镜、减速与转向的衔接，就在当前可承担路段专项练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "亲手持续调整转向、油门和制动，注意雨中车身、声音与输入连起来的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "普通借车雨刷/灯光基础入口，湿路不硬写未核附着数值；安全停靠确存在才可选，F手动、T本人未熟，天气偏好不推现实能力。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2708",
+      "number": 8,
+      "variants": [
+        {
+          "id": "AT2708.V1",
+          "scene": "学院同一泊位，想不想给自己多一道限制",
+          "text": "本人当前能进入原生Driving Academy里已开放的一项普通停车情境，也能正常按学院要求完成。另一个想法是给自己加一条可实际遵守的额外规则：这次最多只允许自己三次向前修正。先怎么玩这一轮？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_ACADEMY",
+            "AT27_PARK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际按三次上限跑这段，超过就自己判这一轮失败；用当前真实重试入口再来，想看看额外规则能否做成",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "按学院本来已列的要求完成情境，不给这次额外加次数限制",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人仍没掌握其中一段倒车纠偏，就专练这段，关注亲手练会它而不是额外规则",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先读当前学院已有图示、目标与操作说明，再继续这次尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "额外个人规则+亲玩+明确失败+实际可重试才I；原生学院评分/难度本身不I，不假造自动计玩家修正次数。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2708.ALT1",
+          "scene": "普通快速任务，也想按自己的无碰撞规则跑吗",
+          "text": "当前能接一张普通Quick Job；你还可以给自己加一项原生任务之外的规则：以接单时实际车/挂车/货物损伤显示为基线，这一单自己不接受任何新增损伤。先怎样玩？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_JOB",
+            "AT27_PATCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先记真实基线再亲手跑，若显示新增损伤就自己判这次挑战失败；收尾后用下一张真可接的普通单再试，按自己这条规则玩下去",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "照当前普通任务交货目标跑这一单，结果按原生结算处理，不把自己加的无碰撞当必须",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人仍不熟长挂车经过窄口的车尾位置，就把这单可承担的一段用于专项练它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先读当前损伤显示与交货已有说明，再决定这次尝试怎样安排",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "原生送货不是自设I；I明确额外无新增损伤、基线/实际跑/判败/下一真实普通单重试，不造任意立刻刷新原单或自动挑战榜。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2708.ALT2",
+          "scene": "学院奖励还缺一个，下一次跑哪章",
+          "text": "只按本人当前真能打开已发布Driving Academy章节来想：双挂车章节的Frankie狗玩偶尚未取得，另一已开情境也可练；当前界面能看实际领取要求。先把这一段给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_ACADEMY",
+            "AT27_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若Frankie确是本人惦记的缺项，就实际推进当前还没完成的必要情境，争取亲手补到这个奖励",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先进入另一项自己当前更想完成的已开放情境，把玩偶所需章节留后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人仍不熟双挂车的某段转向，就只选当前能练的那段专项练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前章节已列的奖励与剩余要求，再决定这次进入哪一项",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "1.58正式DoubleTrailer章节全情境奖Frankie绑当前profile；C真惦记未有且实际追，不用付费货物/旧Nerd23关门槛，学院只是8替代。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2709",
+      "number": 9,
+      "variants": [
+        {
+          "id": "AT2709.V1",
+          "scene": "错过出口以后，这单继续绕行还是付费结束",
+          "text": "回想本人普通本地货运里真错过出口的一次；当时重新导航后的路线还可开，但会多花时间，当前任务界面也真允许承担已列代价取消。自己在可停靠处能看地图与货单。后来做过什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_MANUAL",
+            "AT27_PATCH",
+            "AT27_JOB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿当时重新给出的可行路线继续送货，为完成原单接受新增行程与实际可能的晚到扣款",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按当时面板允许的条件实际取消本单，承担已列代价，把后续时间留给自己原已选的另一件事",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看当时地图已显示的导航线与可达出口，核对绕行实际去向再继续",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时这张单的交付条件、剩余时间与取消已列代价，再决定继续还是结束",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "实质替掉02补给规划的GO/PLAN/W/NAV四同项组：已误出口后的继续绕行/晚到与真付费取消是不同目标冲突；不把取消当现实韧性或任意不罚重开，排旧取消费用/等待时数/RouteAdvisor旧页。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2709.ALT1",
+          "scene": "被要求过秤以后，后来真怎样接住这次停靠",
+          "text": "只回想本人货运途中真收到进入称重站要求、并实际驶到该站停靠的一次；当时自己的车、货和后续交付还在，并有已有提示可看。之后真实把注意给什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_WEIGH",
+            "AT27_STORE",
+            "AT27_REST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先照当时实际提示把检查流程走完，再沿当前仍可行路线完成原货单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把这次停靠后的补给、实际需要休息和交付先后重排，再照改后的安排开下去",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对这次称重站已有操作说明，再按当时可做入口继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "为自己确到过的称重站与这次实际开过的车补位置和车辆记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "ATS普通weightinspection，收到要求才进入，不沿旧700罚款/ViaTOLL错名或所有车必超重；不把遵守规则/被罚推现实性格，非P教结果再问未知。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2709.ALT2",
+          "scene": "学院看过回放以后，下一段继续看、练，还是去跑货",
+          "text": "只回想本人真跑过一项原生学院机动、用该模块回放亲眼看见过车尾轨迹的一次；当时这段回放还能再打开，该情境也能重试，外面的普通快速任务仍可接。后来真实投入哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_ACADEMY",
+            "AT27_PARK",
+            "AT27_JOB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "再次打开当时已可用的这段回放，亲手播放，查看自己刚才实际开出的车尾轨迹",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "若本人已明白路线但输入仍做不稳，就回到自己真实不稳的转向衔接专项练它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "若当时另有本人真正惦记而未取得、当前能继续做条件的学院奖励缺项，就实际转去推进它所需的已开放情境",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "退出这一段学院，把当时这会儿投入自己已选的普通快速任务收入目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "实质替掉与04倒车方向P/GO/REF/T同四动作组：已看回放后的继续查看/本人专项练习/实际追别项奖励/去跑货争时间，播放回放0非F/P，不凭回放已教结果又称未知推理。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2710",
+      "number": 10,
+      "variants": [
+        {
+          "id": "AT2710.V1",
+          "scene": "那次货物受损扣款，下一张单真选了什么",
+          "text": "回想本人普通快速任务真交过一批有新增货损的货、在结算看见报酬被影响的一次；后来列表中真有当前能接的普通货单与已开放的易碎货单，自己还能继续开。实际选过哪件？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_JOB",
+            "AT27_SKILL",
+            "AT27_ACADEMY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接当时实际可做的普通货单，把下一轮用于自己已选的收入目标，暂不换易碎货",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "仍接那张自己当时更想完成的已开放易碎货单，接受这轮仍须承担当前货物保护与交付要求",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人当时仍没掌握进场窄口的车尾轨迹，就转去当前已开放的学院机动专项练它，再回货运",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对当时结算已列的货损与报酬、下一张单已列的交付条件，再决定承接",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "实质替掉与06Photo行动仅过去时复制的整题；货物损伤扣报酬不是车况维修，不能修车消除已交货损。普通/易碎只当时真有且已开，T个人未熟；两接单目标诚实0，不造风险偏好人格。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2710.ALT1",
+          "scene": "地图边上的新路，后来是否真的开进去",
+          "text": "只回想本人当前正式版本真在自己可达地图上发现一段此前未到的路口线索的一次；当时车能开到那一段，原货单或另一已选行程也能继续。后来实际把时间给什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_PATCH",
+            "AT27_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若那段区域当时对本人确实还未知，就亲自开进去看看，为新发现改变原去向",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先继续原已选的货运或行程，把那段路留到以后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时地图已显示的入口与现有路线，再决定这次往哪里开",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "若本人确实一直惦记自己地图上这一段尚未走过的缺项，就实际开到并核对它是否补上，不把仅路过附近当必已走全",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "1.61Proximity可选，秘密道路仅首段提示其余实际走；C个人明确缺项并实追与W未知不同，不保证100%全图/所有DLC，不借1.62付费旅游板。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2710.ALT2",
+          "scene": "重做后的亚利桑那，自己真经过了伦敦桥",
+          "text": "只回想本人在当前可用亚利桑那地图真到Lake Havasu City、亲自经过游戏中London Bridge的一次；当时自己的车还可继续去已选目的地。后来做过什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_WORLD",
+            "AT27_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己真经过的桥、城市和这趟实际开过的车补旅行记录，把已到经历留下",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "先继续自己当时已选的下一站行程，不为这个地点再改路",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若当时桥边还有本人未到且真可驶入的区域，就亲自过去看看那一侧",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "若当时有愿回应的真实同好，就交流自己第一次实际开到这里的见闻和感受",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "1.58正式LakeHavasu/LondonBridge可过，Arizona免费已核，不造必须跑到付费NewMexico/全Route66；地点记忆0不是S/R，真人O局部。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2711",
+      "number": 11,
+      "variants": [
+        {
+          "id": "AT2711.V1",
+          "scene": "完成一单后，下一趟还想用这辆雇主车吗",
+          "text": "回想本人真交完普通快速任务、随后还能从现有Quick Jobs选择下一单的一次；当时列表里确有自己刚开过型号的车，也有另一种当前可接的车型。后来实际想继续哪一段？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_JOB",
+            "AT27_MANUAL",
+            "AT27_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选回这款实际熟悉的车继续亲手开，主要喜欢方向、制动、镜面与车身反馈连续接上的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "换用当时实际可接的另一种雇主车，亲手体验驾驶配置的不同",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先接当时已经选定、用于存钱目标的那张可做货单，不为车型多加安排",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若当时精力足且别的目标也可做，仍选熟悉车与熟线按自己节奏跑一趟，享受自主从容",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "普通借车完成后再接单入口，不要求自有车或公司；同车型当前确有单才可选，F真持续手动，H精力与别目标局部；与01初接陌生驾驶室不同动机回顾。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2711.ALT1",
+          "scene": "同一位司机的技能长起来以后，还继续培养吗",
+          "text": "只回想本人用同一司机档案实际跑过多轮普通货运、亲见等级或技能增长，后来仍能通过当前任务继续积累的一次；当时还有另一项可做活动。后来把时间给哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_SKILL",
+            "AT27_PATCH",
+            "AT27_ACADEMY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续接当前能做、符合自己培养路线的任务，把后续经验与真实技能点留给原档案，想接着看这段积累成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "转去当时已经选好的另一项任务或已开放学院情境，把这条成长安排留后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看当时技能当前等级与已列下一步效果，再决定下一轮去向",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "若当时本人另有真正惦记而未取得、当前确能做条件的学院奖励缺项，就实际转去争取补上它",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "G同档案既有多轮成长且仍可继续，非一次买车/货物消费；C未有实追仅D；与07技能点行动保留有限培养动机交叉，回顾组不都换时态。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2711.ALT2",
+          "scene": "老员工一次空车返程以后，公司怎么接着跑",
+          "text": "只回想本人真实经营公司、有已分配车与车位的雇佣司机，且看到过一次没有回程货、返程产生成本的记录；当时自己还有可接普通货单。后来实际怎样安排？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_FLEET",
+            "AT27_FINANCE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把员工技能方向、现有车位与车辆成本接回实际收支循环，亲自经历后续多轮再按盈亏调整，不把一次空返当永远如此",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "若这位员工是本人已多轮培养、亲见技能成长且仍可继续的对象，就实际选下一训练方向，继续留给他车跑货看成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先亲自去跑当时已选的普通货单，把这一轮收入用于自己选定的公司现金目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前这次雇佣、车位和车辆处理已列条件与费用，再决定本轮是否增员",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "原生AI员工可能空返且需成本；Y实际多轮运行/改配置才成立，G同对象成长；NPC员工不Q/O，非玩家能给每人指定每张货单或保证训练立刻赚钱。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "AT2712",
+      "number": 12,
+      "variants": [
+        {
+          "id": "AT2712.V1",
+          "scene": "Game Radio就在手边，这单货后来怎样开下去",
+          "text": "回想本人原生Game Radio已可用时的一次ATS本体普通货运：当时自己能继续亲手驾驶，也能选择电台，原货单还没送完；自己未必打开过电台，只按那次真做过的事来想。后来把这一段给了什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_RADIO",
+            "AT27_MANUAL",
+            "AT27_JOB"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若当时自己听着Rust FM或Roadio、已经会这段驾驶，仍想让油门、转向和车身反馈接着音乐连续发生，就亲手继续开，享受输入与声音衔接",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "实际换到当时另一家当前可选电台，亲手用一次切台功能，体验这段路配上另一组声音，再继续这单",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先不调电台，继续自己当时已经定下来的交付安排，把这段时间给送完货单",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若当时真有愿回应的同好，就交流这单实际开车或听电台的亲历，重在一起分享，而不是只让音乐自己播放",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "实质整替12V1泛熟悉路H/G/W/O菜单。1.60正式GameRadio五台中RustFM/Roadio真实，已听特定台仅F项局部；普通送货者可保持不开台实际交付，不把全槽锁在用过电台/Frankie/贷款三种专门经历。F仅本人持续手动与反馈，非被动听歌或自动巡航；V实际切台，O真实愿回应者。原生当前功能非第三方网台/MOD，未承诺streamsafe/当前任意账号连网。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2712.ALT1",
+          "scene": "双挂章节拿到玩偶后，先布置还是继续货运",
+          "text": "只回想本人真完成原生学院双挂车章节、当前档案实际取得Frankie狗玩偶奖励的一次；后来自己能在兼容卡车里真实使用它，也有普通货单可跑。后来做过哪件？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_ACADEMY",
+            "AT27_WORLD",
+            "AT27_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这件已取得、当前真可装的玩偶实际放进兼容驾驶室，围绕它安排自己想呈现的车内样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把本人真正取得的这件物品和实际完成的章节补进自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "先开去完成当时已经选定的普通货单，没有为布置再加时间",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若当时另有本人真惦记且未取得、当前能继续完成条件的学院奖励，就实际转去争取补它",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "奖品已得才能记录/装饰，兼容真实当场；不把预设玩偶拥有即A或奖励柜自动G，不造特定卡车/付费CabinAccessories人人必须有。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        },
+        {
+          "id": "AT2712.ALT2",
+          "scene": "贷款已经还过几期，那笔余钱后来先给了什么",
+          "text": "只回想本人真借过游戏内贷款、已有实际分期记录的一次；当时银行面板确允许一次还清这笔余额，手中也确有足够现金，但还清后留给补给或已选购车的资金会变少。后来实际怎样处理？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "AT27_FINANCE",
+            "AT27_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当时面板允许的数额实际还清这笔贷款，把这轮资金先用于自己选定的清债目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "暂不提前还清，保留当时真实可用现金用于已经选定的补给或车辆目标，继续承担当时已列分期",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当时这笔贷款剩余应还、实际分期和一次还清条件，再决定本次付款",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "先把这次还款、补给与下一张当时可做货单的先后按真实余量排清，再照本轮安排执行",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "实质替掉与11空返后的车队Y/G循环近壳，改真实分期后提前全还与现金保留冲突；不造自由部分还本金/固定还款时刻和利率，不把偿债或单次预算当G/Y。",
+          "interpretation_boundary": "只按本人原生PC American Truck Simulator已实际经历、当前可用地图/卡车/货物/设置作答；不默认付费地图、Special Transport、Road Trip汽车、MOD、World of Trucks或Convoy。Quick Job可用雇主车辆，不把每位玩家锁自有车。休息系统和界面按正式1.60/1.61，不用1.62测试功能或旧固定睡眠；特定卡车功能/自有资产/员工只真实条件替代。未知P、个人未熟T/未访W/真缺C、同对象已有多轮投入与成长G只限制相应选项；H需本人精力足且有别的可做目标。NPC司机、交通车与游戏公司不是现实人；O只真实愿回应的人，单人NPC不计社交/合作/真人较量。F只本人持续驾驶输入，不把自动巡航、自动泊车、回放或照片镜头当F。配置/价格/服务以当场实际可选为准，不保证任意中途换车、瞬移或恢复；拖回道路不等修好车/保证保留所有外部合同。有限3情境不是全历史覆盖，未体验继续换已核专属，不跳过。12专属加原4共题共16，最多2补问。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+0567b0023aca"
+}

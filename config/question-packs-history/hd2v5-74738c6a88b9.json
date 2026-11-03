@@ -1,0 +1,929 @@
+{
+  "id": "hd2v5",
+  "title": "绝地潜兵2",
+  "game_ids": [
+    "steam-553850"
+  ],
+  "scope": "普通任务、支援整备与撤离；真人小队另有单人替代",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "单人也是联网任务；不要求银河战争现时节点或高级支援。",
+    "样本带出后共享并支持持久模块成长；主目标成功与撤离分开，不据此判断能力。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "普通任务、支援整备与撤离；真人小队另有单人替代",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "HD2V501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "和熟人准备执行一张都已熟悉的普通任务，主目标、附带地点和撤离可以有不同安排。落地前你先提什么？",
+          "scene": "舰上选择这趟的重心",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_faq"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "问清各自这次想做什么，再一起约定目标顺序和集合点",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "和这几个人一起出发就很有意思，先聊聊上趟趣事再挑大家愿意去的地方",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "在大家同意的范围里，选一处从未亲自看过的附带地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把补给、支援冷却和返程顺路接好，给出一条具体行程",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "共同目标协调与陪伴只对真实玩家计分；不由队长身份或服从建议推断人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V501.V1"
+        },
+        {
+          "text": "这次独自执行已经能应付的普通任务，地图上有主目标和几处附带地点。你先怎样选落点和第一段路线？",
+          "scene": "舰上选择这趟的重心的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_faq"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把主目标、补给和撤离方向串成一条能接续的行程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "选靠近自己尚未探过的地点，落地后看看那里有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照地形与目标入口，先推哪种接近关系可利用",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "从熟悉入口开始，给自己留一段练支援信标投放位置的遭遇",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "共同目标协调与陪伴只对真实玩家计分；不由队长身份或服从建议推断人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "准备面对熟悉的普通敌群，几项已经解锁的支援都能完成这趟任务。你先怎样安排有限槽位？",
+          "scene": "支援槽位怎么用",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留用惯的工具，这趟专练一次投放与接敌的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "换进一项平时少带的已解锁支援，认真改变作战办法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "按冷却、弹药和补给的先后安排，减少流程互相打断",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "让主武器、支援武器与轨道或飞鹰效果各补一段用途",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只比较已解锁支援；不要求最新武器、付费债券或攻略认可的配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V502.V1"
+        },
+        {
+          "text": "还只有最初的机枪与精确轨道打击可用，准备再打一张熟悉任务。你先给它们什么用法？",
+          "scene": "支援槽位怎么用的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定这几件工具，专门练从找到投放点到接回武器的一段操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "同样工具换一个过去没用过的接敌与投放次序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "把呼叫、等待冷却、补弹和继续行进排成清楚步骤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "让机枪、主武器与轨道打击针对不同距离和局面互相补上",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只比较已解锁支援；不要求最新武器、付费债券或攻略认可的配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "单人任务里刚完成一处主目标，离结束尚有余量；能看见普通样本，也能转去一处没探过的地点。现有弹药够继续，你先做什么？",
+          "scene": "路口的样本与未知地点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已选的舰船模块继续攒样本，并确保这一趟带着它们撤离",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先对照坡地、掩体和目标方向，判断哪条通路能把两处接起来",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "绕去未知地点，不先为它许诺收获，想知道地表还藏着什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把样本回收与后面撤离连成路线，避免来回折返",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "样本是撤离后保留的模块资源，养成指持续模块投入；不把捡资源自动视为收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V503.V1"
+        },
+        {
+          "text": "最早的一张普通任务里，只在近处见到少量常见样本和一条未走过的小路，时间与补给都够。你先做什么？",
+          "scene": "路口的样本与未知地点的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已看中的最早舰船模块继续积累样本，把它作为之后几趟保留的成长方向",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "观察两处地点的地形连接，自己推一条能往返的走法",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "从那条陌生小路探一段，再决定后续方向",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先把拾取样本、主目标和返回排到同一次经过里",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "样本是撤离后保留的模块资源，养成指持续模块投入；不把捡资源自动视为收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "独自任务中重新部署后，自己的支援武器和样本容器留在已标明的位置；附近战况已平静，时间仍够。你先围绕什么安排接下来？",
+          "scene": "重新部署后的遗落物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接上附近还没走过的支路，回收留在随后经过的行程里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把回收、补给与下一目标连成一次来回，先排步骤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "观察容器周围的掩体和视线，验证一条与之前不同的接近路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "回收样本，为一直投入的舰船模块保住这次积累，再安排撤离",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "只用自己的遗落物；不把冒险回收、死亡次数或样本数量变成品德与能力判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V504.V1"
+        },
+        {
+          "text": "没经历过重新部署：你刚在熟悉的撤离点附近发现少量常见样本，还没拾取，远处也有主目标可做。你先怎样安排？",
+          "scene": "重新部署后的遗落物的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "顺路看看撤离点旁尚未亲自走过的一片地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把拾取、完成主目标与最终撤离的先后写进当前路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "比较附近高低差与通路，先弄清从哪边回来更容易接上",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把这些样本作为已选舰船模块的后续投入，给最终带走它们留明确一步",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "只用自己的遗落物；不把冒险回收、死亡次数或样本数量变成品德与能力判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "正要接近一种已经熟悉的小型虫群，手上武器和支援都够用，也没有必须追求的清场时间。眼前这一段你先怎样行动？",
+          "scene": "普通虫群的又一次接敌",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留配置，专门练一次扑倒后起身与重新瞄准的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "仍用最合手的枪，想把移动、开火和命中反馈连续打出来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "调整主武器与支援武器的分工，检验一段具体配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "选一条平时不走的绕行与投放思路，认真试另一种遭遇过程",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "区分自身练习与即时反馈，不按击杀、难度、队伍伤害或竞速记录判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V505.V1"
+        },
+        {
+          "text": "只熟悉最早一片敌群，现在又到同类普通任务的接近位置，手上基础武器可用。眼前这一段你先做什么？",
+          "scene": "普通虫群的又一次接敌的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把一次自己总仓促的撤步、扑倒和再出手练清楚",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "继续那把最顺手的初始枪，体会瞄准与命中接上的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "让现有枪械与精确轨道打击在不同局面里彼此补上",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "有意改掉惯常接近顺序，用现有工具认真试一次新走法",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "区分自身练习与即时反馈，不按击杀、难度、队伍伤害或竞速记录判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "回舰后，资源够支持几项当前开放的支援解锁或模块升级，现有配置仍够打普通任务。你先为哪件事作决定？",
+          "scene": "舰船终端上的资源去处",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "读候选效果，选能与常用支援和主武器形成配合的一项",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "按自己列的支援收藏清单，补一项已经开放却还没有的工具",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "把申请币与各类样本的需求分开安排，排清几趟任务的投入顺序",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "沿自己已经开始的舰船模块路线继续投入，让后续任务保留成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "收藏为自列明确缺项，养成为保留模块效果，运营为不同资源的连续安排。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V506.V1"
+        },
+        {
+          "text": "只看最早开放的支援与舰船模块，现有资源能升级一项初期模块，也够解锁一项早期支援，但只能优先一种投入。你先做什么？",
+          "scene": "舰船终端上的资源去处的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照初始机枪、轨道打击和主武器，解锁一项会补上组合空缺的开放支援",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "按自己写的初期支援收藏清单，取得一件已开放缺项，留在支援列表里",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "核对现有申请币与样本，把这次花费、保留与后续投入的先后排清",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "把当前样本与申请币投向已选的最早模块，留下这一项升级，后续再沿这条路线投入",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "收藏为自列明确缺项，养成为保留模块效果，运营为不同资源的连续安排。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已经有几件自己取得的头盔、防具与披风可选，普通任务不催你出发。先花一点时间，你更愿意做什么？",
+          "scene": "穿成怎样的绝地潜兵",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把自己这名潜兵设成侦察员，按这个身份选装备，并把观察路线列在接敌前",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "换一件自己常忽略的已有防具，认真体验不同的行进与接敌办法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "主动挑颜色与轮廓相配的几件，穿成自己想表达的队员形象",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "比较已有防具被动与常用武器、支援的搭配作用",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "外观是主动搭配，身份须驱动装备和行动；不由轻甲重甲、军装主题或购买情况推断现实身份。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V507.V1"
+        },
+        {
+          "text": "只有最初装备，暂时不作外观搭配。面对一张熟悉的普通任务，整备时你先做什么？",
+          "scene": "穿成怎样的绝地潜兵的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把呼叫支援、补弹与推进目标的步骤接清楚",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "不添新工具，只改变自己惯用的投放与接敌顺序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "用原装备再练一段信标投放与移动的衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "让初始机枪、轨道打击和主武器各承担一种用处",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "外观是主动搭配，身份须驱动装备和行动；不由轻甲重甲、军装主题或购买情况推断现实身份。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "熟人小队已完成主目标，任务仍有余量，大家都同意可再做一小段后撤离。你先提出什么？",
+          "scene": "主目标完成后的余量",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample",
+            "hd2v5_faq"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先和大家说明想试一项少用支援，再在同意的附带目标上检验新办法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "问清谁还想做哪处目标，约好范围与统一离开的节点",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "继续陪这几个人走一段，想把刚才共同经历接成一趟完整旅程",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "去回收能为自己一直培养的舰船模块继续投入的普通样本，和大家一起带走",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "不把等待、承担危险或听从谁视为人格优劣；样本撤离共享，不写争抢个人份额。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V508.V1"
+        },
+        {
+          "text": "只单人执行任务，主目标已完成，时间足够回收附近样本或走一处附带地点再撤离。你先做什么？",
+          "scene": "主目标完成后的余量的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample",
+            "hd2v5_faq"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用一项已带入、平时少用的支援，认真试另一种处理附带地点的办法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把样本位置、补给和撤离方向排成这趟最后一段行程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "选一处未亲自看过的附带地点，走到那里认识一下",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "在已熟悉的小规模遭遇里，专练自己总仓促的一次投放时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "不把等待、承担危险或听从谁视为人格优劣；样本撤离共享，不写争抢个人份额。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想自己实际打过的一次普通遭遇，哪类片刻最让你记住这套战斗？",
+          "scene": "一次支援真正接上了",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "信标落下、支援到达和自己继续开火连成一段痛快反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "反复练过的投放距离与移动时机，这次能主动掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "主武器、支援武器和打击效果在不同局面里互相补上",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "少用工具换了接敌思路，真的打出另一种过程",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "回顾已发生的操作动机，不以队伍伤害、敌人数或任务星级评分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V509.V1"
+        },
+        {
+          "text": "只回想最早用初始武器和支援打过的一场遭遇，最有感的是什么？",
+          "scene": "一次支援真正接上了的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "枪声、命中和打击到达时，操作反馈连续发生",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "一次原先仓促的扑倒或投放，经过练习后变得能主动选择",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "有限枪械与轨道打击也开始有互相支持的用途",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己改了一段接近和出手次序，发现还能这样打",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "回顾已发生的操作动机，不以队伍伤害、敌人数或任务星级评分。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想几次回舰与整备，哪一种自己实际做过的积累最有吸引力？",
+          "scene": "几趟任务留下的东西",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为常用枪械选支援，几项工具逐渐形成了合意配置",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "按自列支援清单取得一件明确缺项，工具收藏补上了一格",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "自己挑选头盔、防具与披风，穿出原先想表现的形象",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "样本一次次投入已选舰船模块，给后来的任务持续留下效果",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "持续成长、配置、补全和主动表达分别取证；不根据解锁多少或资源花费判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V510.V1"
+        },
+        {
+          "text": "只有前期几趟任务，还没搭过外观。回想已经做过的准备，最愿意记哪点？",
+          "scene": "几趟任务留下的东西的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_sample"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "初始武器与已解锁支援开始有各自位置并能配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自列的初期支援收藏缺项，被自己通过任务解锁了",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "几趟任务的样本、申请币和下一项投入，被自己安排得逐渐衔接",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "为最早一个模块持续带回样本，后来确实留下了舰船成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "持续成长、配置、补全和主动表达分别取证；不根据解锁多少或资源花费判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想和熟人实际完成的一次任务，最留住你的共同经历是什么？",
+          "scene": "和同伴共同走完一趟",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_faq"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "小队几套武器与支援在不同局面里互相补上",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "跟着同伴绕进陌生附带地点，看见了自己没去过的地表",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "几个人一路说起的意外与笑话，让这张任务有了共同记忆",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "出发时约好的目标和集合安排，过程中被大家商量着接续下去",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "只回顾真实同游，单人替代独立给出四种非社交信号。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V511.V1"
+        },
+        {
+          "text": "没有与熟人同游，只回想独自走完的一张普通任务，哪段最值得记住？",
+          "scene": "和同伴共同走完一趟的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "hd2v5_cadet",
+            "hd2v5_faq"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在熟悉敌群前专门练的一次瞄准与移动，后来能主动掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "没有预定收获地走进一片陌生地点，发现它与主路另一侧相连",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "补给、主目标、回收样本和撤离被自己连成了顺路过程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "自己查过地形与通道，验证了一条原先不清楚的接近路线",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只回顾真实同游，单人替代独立给出四种非社交信号。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "HD2V512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想实际落地并走过的一张地图，不看战功和全队成绩，你最愿意留下哪类记录？",
+          "scene": "普通任务地图的记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把补给、样本回收和撤离路线逐步排顺的过程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "从未知地点拐进去，发现之前没见过的地表与设施",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照坡地、掩体和通路，自己推想后验证的接近办法",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "按自己事先记的清图清单，补完最后一处明确缺项的附带目标",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "第12题回顾过去；清图动机为明确补缺，不把完成主目标当真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V512.V1"
+        },
+        {
+          "text": "只回想第一批普通任务中的一小段路线，哪件实际发生的事最留在记忆里？",
+          "scene": "普通任务地图的记忆的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "hd2v5_cadet"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "呼叫补给、经过目标与回撤终于接成自己能重复的流程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "随一条没走过的小路发现新的地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "从地形和目标入口的关系里弄懂一种走法",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己给这张任务列过附带目标清单，后来补上了一个还空着的项目",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "第12题回顾过去；清图动机为明确补缺，不把完成主目标当真人协调。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "HD2V512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+74738c6a88b9"
+}

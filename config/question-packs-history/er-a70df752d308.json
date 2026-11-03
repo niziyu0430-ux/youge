@@ -1,0 +1,932 @@
+{
+  "id": "er",
+  "title": "艾尔登法环",
+  "game_ids": [
+    "steam-1245620"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按自己熟悉的体验回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "ER01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "ER01.V1",
+          "text": "宁姆格福的赐福外，引导指向远方大城，旁边又有没去过的洞口。这段时间先只走一条路，你怎样选？",
+          "scene": "赐福外的岔路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_START",
+            "ER_STORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去洞口，看看没被指明的路通向什么地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿引导前进，把城中人物与事件的后续接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "回熟悉敌人附近，把刚试的武器动作练顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "骑托雷特在熟悉地方走一段，暂时不给自己加目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "把开放世界的路线选择放在赐福、引导与灵马的真实结构里。",
+          "interpretation_boundary": "跟不跟赐福引导不是探索能力或勇气的高低。"
+        },
+        {
+          "id": "ER01.CORE",
+          "text": "从已经熟悉的一处赐福出发，眼前有主路与一条少走的岔路。这段时间先怎么走？",
+          "scene": "赐福后的路线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_START",
+            "ER_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走岔路，看看还有哪些地方没发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿原本惦记的去向前进，把人物与事件的后续接上",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "回到熟悉敌人附近，把一个武器动作练顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "在已经走过的区域慢慢看看，暂时不加新目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "ER02.V1",
+          "text": "已经用自己接受的方式赢过一名强敌，再回去面对它时，哪种目标最能让你主动留下？",
+          "scene": "已经能赢的强敌",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用熟悉武器继续练几种招式的闪避和反击时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "换战灰、护符或法术配合，看看同一战斗能怎样改变",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "给自己设一个平时不用的装备限制，试另一条解法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "再体验一次那种攻击、硬直和声音连起来的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "排除是否打得过的门槛，区分精进、构筑、实验与反馈。",
+          "interpretation_boundary": "使用骨灰、联机或不同难度策略均不作道德与能力排序。"
+        },
+        {
+          "id": "ER02.CORE",
+          "text": "不要求打过Boss，只回想熟悉敌人的一次交手，哪种变化最让你愿意记住？",
+          "scene": "熟悉敌人的交手",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "原先处理不顺的闪避或出手，这次终于亲手做稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "武器与已有能力接起来，试出了一套实际配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "换了一种少用的做法，让同一敌人有了不同解法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "攻击、硬直与声音连起来，战斗反馈特别畅快",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "ER03.V1",
+          "text": "拿到一件属性要求已满足的新武器，想用这一小段时间了解它。先做什么？",
+          "scene": "一件满足要求的新武器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_START",
+            "ER_STORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手挥动出招，再找几次交火试它的动作与节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "带上已有装备，比较战技与属性能接出什么构筑",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "围绕武器的形象和背景，给褪色者换一套身份与装束",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "整理进一直想收齐的那一类兵器，补上一份收藏记录",
+              "signal": "collector"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "同样的获得装备行为可以是手感、构筑、代入或收集。",
+          "interpretation_boundary": "属性要求是前提，不让玩家因为暂时不能用被迫选收藏。"
+        },
+        {
+          "id": "ER03.CORE",
+          "text": "只用已经能装备的兵器，不需要再找新武器。出发前先做什么？",
+          "scene": "已有兵器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_START",
+            "ER_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿起来出几次招，亲手感受动作与交火节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "比较已有兵器与能力，先试一套能接上的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "按褪色者的身份与装束，选一把愿意带上路的",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "整理已经找到的兵器，把惦记的一类收藏记清",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "ER04.V1",
+          "text": "史东薇尔城里新开的通道把两片区域连起来，回程已经清楚，还有时间再做一件事。你先去哪一边？",
+          "scene": "史东薇尔城的连通处",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_STORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿尚未看过的岔路继续走，找城里还藏着什么空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把两边走过的楼层重新串起来，理清这座城的结构",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "去追一件已听说但还没拿到的装备，补上一个缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "留意建筑、敌人与遗留痕迹，把这片地方的往事连起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "区分新空间、结构理解、奖励补全与环境叙事。",
+          "interpretation_boundary": "不考捷径位置，不要求玩家记住具体路线名称。"
+        },
+        {
+          "id": "ER04.CORE",
+          "text": "还没进大城，只在走过的一处废墟附近发现新岔路，回程也清楚。先做哪件事？",
+          "scene": "废墟的岔路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿没看过的方向继续走，找废墟后还藏着什么地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把几条已走过的路线串起来，弄清这里怎样相连",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "追一件已经惦记的物品，把当前能补的缺项补上",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "留意建筑和沿途痕迹，整理这片地方曾发生过什么",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "ER05.V1",
+          "text": "带着一批还没花的卢恩倒下了，回去的路大致知道。你先怎样安排？",
+          "scene": "掉落卢恩之后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按熟悉路线去取卢恩，先处理这件事再去别处",
+              "signal": "runes_retrieve_first"
+            },
+            {
+              "id": "B",
+              "label": "调整装备与路线，再回去处理刚才那段风险",
+              "signal": "runes_prepare_return"
+            },
+            {
+              "id": "C",
+              "label": "先做另一件惦记的事，之后再决定是否取回",
+              "signal": "runes_return_later"
+            },
+            {
+              "id": "D",
+              "label": "先停在这里，下次打开游戏再决定要不要回去",
+              "signal": "runes_pause"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "具体询问失败后的安排，只记录这一情境的行为。",
+          "interpretation_boundary": "四项都不直接记人格信号；不由是否捡魂推断勇敢、责任感或毅力。"
+        },
+        {
+          "id": "ER05.CORE",
+          "text": "身上没有重要卢恩负担，刚才一段交手没有顺利完成。接下来先怎么做？",
+          "scene": "受挫后的安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再回去试一次，把刚才想处理的那一段接着做",
+              "signal": "runes_retrieve_first"
+            },
+            {
+              "id": "B",
+              "label": "先调整手头装备和路线，再回去试同一段内容",
+              "signal": "runes_prepare_return"
+            },
+            {
+              "id": "C",
+              "label": "先去另一个惦记的地方，之后再考虑回来",
+              "signal": "runes_return_later"
+            },
+            {
+              "id": "D",
+              "label": "先停在这里，下次再决定如何接着走",
+              "signal": "runes_pause"
+            }
+          ],
+          "design_purpose": "这里只记录受挫后的安排，不声称玩家取回了卢恩。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "ER06.V1",
+          "text": "准备从赐福再去一片已经见过的危险区域，允许自己先做一轮准备。先处理什么？",
+          "scene": "赐福前的准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "重新配一次武器、战灰、护符与法术，试它们的衔接",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "确定刚才反复出错的动作，给这次留一个练习点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把路上要去的地方与补给顺序排好，少做来回折返",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "按褪色者当前的身份与打算，换上自己愿意带上路的装备",
+              "signal": "role_player"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "准备并不只等于优化战力，也可能来自精进、组织或代入。",
+          "interpretation_boundary": "不考红蓝瓶最优分配，不奖励攻略中的标准配装。"
+        },
+        {
+          "id": "ER06.CORE",
+          "text": "当前已有装备可以继续上路，不需要学会所有系统。这轮出发前先处理哪件事？",
+          "scene": "出发前的准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把现有兵器与已会的能力重新组合，试一套能用的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "定一个上次没做顺的动作，亲手再练一段",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把想去的位置与回到赐福的路线接好，少做折返",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "按自己心里褪色者的来历，挑一套愿意带上路的装束",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "ER07.V1",
+          "text": "在允许召唤骨灰的区域准备再打一场，几种已有骨灰都试过。接下来怎样安排这次战斗？",
+          "scene": "骨灰的不同用法",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_COOP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑一种能接上自己武器或法术的骨灰，实际验证配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "换成平时少用的一种，让自己按另一套办法应对",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "继续带上一直培养的那个召唤对象，把它的成长接下去",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按褪色者此刻的身份与旅途，选一个自己愿意同行的身影",
+              "signal": "role_player"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "把使用骨灰写成可有多种动机的正常玩法。",
+          "interpretation_boundary": "不暗示独自作战更纯粹，不假定可在任意地点或多人状态下召唤。"
+        },
+        {
+          "id": "ER07.CORE",
+          "text": "不使用骨灰，只用已经掌握的兵器与能力再打一段。先怎样安排？",
+          "scene": "不使用骨灰的作战",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "组合现有兵器和能力，验证一套自己想试的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "给自己定一个平时不用的办法，试同一敌人的另一种解法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "继续使用一直投入的那套装备，把培养接着推进",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按褪色者这段旅途的身份，选择自己愿意采用的作战方式",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "ER08.V1",
+          "text": "回到圆桌厅堂，发现一位此前交谈过的人说法或处境有了变化。你更想接着做什么？",
+          "scene": "圆桌厅堂的人物",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_STORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续听他的经历，想知道这条人物线会走向哪里",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把他前后说的话与沿途线索对照，理清发生了什么",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按自己给褪色者设定的立场，决定与他保持怎样的关系",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "整理他可能关联的物品或任务，补上不想错过的内容",
+              "signal": "collector"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以碎片化NPC线区分叙事、求解、角色立场和补全。",
+          "interpretation_boundary": "NPC互动不代表现实社交；立场选择不推断现实善恶。"
+        },
+        {
+          "id": "ER08.CORE",
+          "text": "还没走到某条特定人物支线，只回想已经交谈过的人，哪部分最让你惦记？",
+          "scene": "已交谈过的人",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "他之后会怎样生活，这条人物经历还会发生什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "前后几句话留下的疑问，怎样和沿途信息接起来",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己作为这名褪色者，愿意以什么立场和他相处",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "他提到的物品或去向，还有哪些自己不想错过",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "ER09.V1",
+          "text": "追一条人物支线，下一站没有直接写在清单上。你准备先怎样继续？",
+          "scene": "支线的去向",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_STORY",
+            "ER_START"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照人物留下的话和走过的地方，先连起几条线索",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "沿提到的方向亲自骑过去，让途中发现来接这条线",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "查清下一个地点，先保证不漏掉自己想经历的内容",
+              "signal": "guide_completion"
+            },
+            {
+              "id": "D",
+              "label": "先留着这件事，等旅途中再次遇到线索时再接着走",
+              "signal": "pace_flexible"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "区分求解与探索，并单独记录补遗漏和自由节奏。",
+          "interpretation_boundary": "攻略与暂缓选项不自动记低分，不能把不查攻略定义为更聪明。"
+        },
+        {
+          "id": "ER09.CORE",
+          "text": "没有正在追的复杂支线，只惦记一处还没弄明白的去向。先怎样继续？",
+          "scene": "一处惦记的去向",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_STORY",
+            "ER_START"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照已经记下的话和地图，把几条线索先接起来",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "沿大致方向亲自走，看看途中会出现什么新发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "查清路线和遗漏内容，先保证想经历的部分不落下",
+              "signal": "guide_completion"
+            },
+            {
+              "id": "D",
+              "label": "先去做别的，等走到附近或再遇线索时继续",
+              "signal": "pace_flexible"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "ER10.V1",
+          "text": "已经与另一位褪色者约好协助一段熟悉的Boss战，开战前还有时间准备。你先想做什么？",
+          "scene": "留下金色召唤记号",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_COOP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "问问对方先前的打法，想把这次共同经历与他接起来",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "说清各自准备怎样出手，把分工与跟进约好",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "给自己的操作留一个练习点，在新场面里继续磨稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "调整武器与法术，让自己的配置能接上对方的能力",
+              "signal": "build_alchemist"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "同一种协助行为区分关系、协调、精进和构筑。",
+          "interpretation_boundary": "参与协助不直接等于利他或善良；单人玩家需换题。"
+        },
+        {
+          "id": "ER10.CORE",
+          "text": "一直以单人方式游玩，也不使用召唤协助。这次先给自己怎样的安排？",
+          "scene": "单人旅途",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿一条少走的路继续探索，看看交界地还有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把去向、补给和回到赐福的路线接顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "回到熟悉敌人前，亲手磨一个还没做稳的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "调整现有兵器与能力，试一套新的实际配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "ER11.V1",
+          "text": "有几套自己能接受其性能与负重的护甲时，你更想怎样决定这次穿什么？",
+          "scene": "盔甲与褪色者形象",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_START"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "搭出颜色、轮廓和武器相互呼应的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "让衣着符合自己心里这名褪色者的来历和经历",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "围绕护甲与其他装备的作用，试一种整体安排",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "把一直想凑齐的一组装备穿完整，留下一份记录",
+              "signal": "collector"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "先控制可用性，再问审美、代入、构筑与补全。",
+          "interpretation_boundary": "不把轻甲重甲、装备稀有度或收集数量当性格特征。"
+        },
+        {
+          "id": "ER11.CORE",
+          "text": "只回想已有的装备，不要求凑齐整套盔甲，哪部分最让你愿意留下记录？",
+          "scene": "已有装备的意义",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_START"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "颜色、轮廓与武器呈现出了自己想要的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "这套装束符合自己给褪色者安排的来历与经历",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "装备与其他能力接起来，形成实际能用的一种配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "一直惦记的某类物品，终于补上一个具体缺项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "ER12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "ER12.V1",
+          "text": "已经完成这段时间给自己定的目标，什么最容易让你继续留在这个存档里？",
+          "scene": "还想留在交界地的理由",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_START"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "还想把一场熟悉的战斗，用更顺的出手亲自处理一次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "还有一组战灰、法术与装备的配合想实际试出来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "地图上还有几个没去过的洞口和远景，一直让我惦记",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "一位人物的去向还没弄清，想把他的故事接下去",
+              "signal": "story_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以完成目标之后的自愿投入核对前面几类动机。",
+          "interpretation_boundary": "不默认已通关或进入二周目；不把继续游玩当作沉迷证据。"
+        },
+        {
+          "id": "ER12.CORE",
+          "text": "只回想已经走过的一小段交界地，哪部分最能让你愿意继续？",
+          "scene": "已走过的交界地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_START"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一次原来不顺的交手，能够亲手处理得更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "现有装备与能力之间，还有想实际验证的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "地图上还看到没去过的路口和远景",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "曾交谈过的人还有去向与经历，让自己惦记后续",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "基础玩法中的替代情境，不将未体验作为计分答案。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+a70df752d308"
+}

@@ -1,0 +1,1516 @@
+{
+  "id": "ets10",
+  "title": "欧洲卡车模拟2：货运、驾驶与自己的行旅",
+  "game_ids": [
+    "steam-227300"
+  ],
+  "scope": "仅ETS2原生PC已发布货运生涯、原生Convoy与驾驶学院；题面限制当前已装地图/已有车辆/开放操作，不借ATS、TruckersMP、MOD、测试版或未发售客车内容。",
+  "status": "private_editorial_candidate",
+  "author_review": "pending_independent_review",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "一套12专属槽各3情境，前8槽行动、后4槽真实经历回顾；外围4共题与最多2补问由现行全局保留，不增加主问。",
+    "没体验继续换其他已核专属情境，无跳过，不要求编回忆；每槽至少有普通单人生涯情境，不保证任何进度都能答完。",
+    "自有车与雇主快速任务、货运市场与自有挂车货物市场分清；NPC雇员不计真人关系，疲劳模拟不默认开启。",
+    "截图、涂装编辑、持续操车、本人技能成长、员工培养、经营循环和中性检查分别解释，不按人格配额造机制。",
+    "按当前原生界面实际开放功能与本人资金/等级限定，不写固定最优配置、利润、价格、地图数量或所有历史版本恒定。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本人实际体验的驾驶与货运",
+      "initial_variants": {
+        "ETS1001": "ETS1001.V1",
+        "ETS1002": "ETS1002.V1",
+        "ETS1003": "ETS1003.V1",
+        "ETS1004": "ETS1004.V1",
+        "ETS1005": "ETS1005.V1",
+        "ETS1006": "ETS1006.V1",
+        "ETS1007": "ETS1007.V1",
+        "ETS1008": "ETS1008.V1",
+        "ETS1009": "ETS1009.V1",
+        "ETS1010": "ETS1010.V1",
+        "ETS1011": "ETS1011.V1",
+        "ETS1012": "ETS1012.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "ETS1001",
+      "number": 1,
+      "variants": [
+        {
+          "id": "ETS1001.V1",
+          "scene": "雇主车的第一批工作选择",
+          "text": "你还主要开快速任务的雇主车。当前列表里既有终点城市自己没到过的工作，也有走熟路线、车辆不同的普通货运；都符合已解锁条件。你这一轮更想接哪件事？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接去没到过城市的那单，亲自看看陌生街路，不等确定沿途有收藏奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "接熟路那单，主要想亲手体验这辆当前雇主车的驾驶配置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "选自己此前变道总压不稳的熟路工作，以改善这次变道控制为重点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先接自己选定的短途单，实际攒下购买第一辆车还差的那部分钱",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "applicability": "本人用过快速任务；当前两单/不同车确实可选，T有过去同类变道未稳。",
+          "design_purpose": "快速任务无需假设自有车；未知城市、现成车试用、本人具体驾驶未稳与自选攒车目标竞争。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1001.ALT1",
+          "scene": "加来附近的跨海选择",
+          "text": "你开自己的车到了加来一带，暂时没挂着工作；原生地图中当前能走到渡轮或海峡隧道的出发点，余额够支付选中的过海费用。英国这一侧你还没开过，先把这一段给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_crossing",
+            "ets10_manual",
+            "ets10_about"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择当前可用的过海连接并亲自开上英国道路，主要想看看此前没走过的那一侧",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先按自己这趟要去英国某座已开放城市的目标，开到相应出发点并实际办理过海",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先打开已有世界地图，核对过海出发点、目的地和当前可走连接，再决定这次从哪里过去",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "精力和车况都足，也有过海可做，仍先回自己熟悉的法国短线从容跑一段",
+              "signal": "cozy_resident"
+            }
+          ],
+          "applicability": "本人可用的原生地图有两类连接，车已得且空载/资金足；H并非困倦。",
+          "design_purpose": "过海是选单转运而非本人驾驶船；当前目的地核对绑定导航信息，不把短航程保证满休息。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1001.ALT2",
+          "scene": "空车时的公路缺口",
+          "text": "你刚交货，自己的车可继续开，附近既有自己已走熟的公路，也有当前地图显示但本人没开过的支路。其中一小段是你早已记下想补走的个人道路缺口。下一段怎样安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_route",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门驶过自己记下且确实没走过的那一小段，实际尝试补上个人道路记录的缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "不按补图目标走，挑另一条还没体验的可达路，看看会经过什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "沿熟路驶往自己刚选定的下一家可接货公司，把下一趟收入目标实际接起来",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先打开已有世界地图，核对当前位置、可走连接与自己这一段的导航路线",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "applicability": "本人已交货且有自有可驾驶车；只用当前客户端真实可达公路/原生航点，不问全地图100%。",
+          "design_purpose": "C真实个人已知缺项才实开，W无需补清单；不把菜单看一眼算道路收集完成。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1002",
+      "number": 2,
+      "variants": [
+        {
+          "id": "ETS1002.V1",
+          "scene": "交货门口的卸货选择",
+          "text": "你已把普通单挂运到收货公司，当前原生卸货选单确实给了需要倒车的车位和较省事的完成方式。这一单余时足够尝试，先选什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_parking",
+            "ets10_manual"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选倒车车位，持续亲手转向、回正和慢慢给车速，主要喜欢镜里挂车随操作一点点入位的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "采用当前可用的省事完成方式，先把已经运到的这单实际交付",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "你早给这一趟定了只靠座舱镜完成的司机身份；即使自己此刻更想用外视角赶快交单，也按这身份继续倒入，不为奖励",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "选倒车车位，针对自己上回总把挂车折得太大的那一段反复前拉再倒，想比上回更掌握",
+              "signal": "practice_seeker"
+            }
+          ],
+          "applicability": "本人到普通单挂卸货，原生选项确实可选；T有具体旧未稳；R此前自选身份且现实可换外视角，有自己更想快交的代价。",
+          "design_purpose": "卸货T/F动机分开，R来自先前自选代入与真实替代代价，不从安全驾驶或得分推人格。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1002.ALT1",
+          "scene": "雨中靠近一座已知城市",
+          "text": "你正在普通工作里开向自己到过的城市，当前下雨；这段道路车流和余时仍允许你正常驾驶，刮水器、灯光与导航均能用。此刻更想把注意放在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_convoy",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "以货物当前已列出的目的地为重点，沿可走线路继续，把眼前运输推进到收货地",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先在可停位置核对现有导航显示的剩余路线与目的地入口，再决定是否改线",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "到可用停车处停稳后用照片模式自己安排雨天车灯与车身的画面，留下喜欢的氛围",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "继续亲手控制方向和油门刹车，让雨刷节奏、轮胎声与每次输入连起来，这段手感本身就想多体验",
+              "signal": "feedback_engine"
+            }
+          ],
+          "applicability": "本人实际雨天运输，操作本人持续控制；拍照只在游戏中可停稳时，不能边行驶边摆相机。",
+          "design_purpose": "雨天真实操车F与交货/导航0、主动构图A竞争；不是看雨天自动画面或电台听歌就算F。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1002.ALT2",
+          "scene": "车外的镜面角度",
+          "text": "你停稳自己的车，已到过的一个收货院落就在附近。你知道自己上次倒入时在后视镜里总丢失挂车尾部，现在原生镜面调整可用，也能暂时不开那种倒车工作。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_mirrors",
+            "ets10_parking",
+            "ets10_manual"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按原生可调范围挪一面后视镜，亲自从座舱看调整后的视野怎样，不先承诺练到更好",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先接眼前可用、无需这个倒车位置的运输，推进自己想攒下一笔车款的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "空车开去当前能到但自己没走过的街区，新的城市路口更吸引这段",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把这次给调整后的镜面视野，实际再进那个可用倒车位置反复操车，想改善本人上回丢尾的难点",
+              "signal": "practice_seeker"
+            }
+          ],
+          "applicability": "本人自有车能调镜，附近倒车位置当前可用；T过去真实难点，可接工作有实际替代。",
+          "design_purpose": "原生后视镜调整和本人反复驾驶分清，单调一项视角不用B；不假镜面调整自动保证倒库成功。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1003",
+      "number": 3,
+      "variants": [
+        {
+          "id": "ETS1003.V1",
+          "scene": "二手车的永久磨损",
+          "text": "你已经买过一辆有里程的二手车，现在停在可用维修点，界面同时列着普通损伤和永久磨损；余额够做一次普通维修，也够继续跑当前可接的工作。你先愿意做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_used",
+            "ets10_manual",
+            "ets10_upgrade"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先转到当前可用的改装页，比较已解锁且与这辆车兼容的发动机、变速箱升级方案，再决定后续怎样配置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "暂缓继续翻修，开上当前可通行但本人没去过的公路，看看下一处城镇",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "你还猜普通维修也会清掉永久磨损；先保留原数值记录，只做普通维修再核对永久磨损那一栏，若没消失就放下自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先把这次确实能修的普通损伤修好，亲自完成眼前这项已开放保养",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "applicability": "本人已买二手车/有两类真实显示损伤、维修条件满足；P自己的解释未证而非读答案确认，W车仍可行驶。",
+          "design_purpose": "三类损伤有原生区别，P只对本人未证解释做真操作可失败；不从欠保养推现实习惯，不把修复当成长G。配置比较0严格指改装升级件，不拿维修费用泛套装备比较copy。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1003.ALT1",
+          "scene": "为同一趟货配动力与齿比",
+          "text": "你的同一辆自有车在维修改装点，当前有等级和资金能装上的两套发动机/变速箱方案；它们分别改变输出与起步、巡航齿比。之后有本人能接的普通货可实际拉一段。先投入哪件事？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_about",
+            "ets10_upgrade",
+            "ets10_manager"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用眼前已经装好的配置接那单货，亲手体验这套现成配置的驾驶",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先把钱留着，去办理自己刚选定的那笔已开放车库扩张，推进公司的下一处落脚点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "把发动机输出和变速箱齿比这两个不同功能怎样配合放在一起考虑，选原生兼容组合后真拉货试起步与巡航，看搭配是否合自己习惯",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "不动动力，按自己想呈现的车队形象调整当前可用车漆与外饰，让外观符合自己的主题",
+              "signal": "style_director"
+            }
+          ],
+          "applicability": "仅用当前原生兼容/等级资金满足的动力件；真有可接普通货和可买车库，B实际试行，不假任意齿比自由编辑。",
+          "design_purpose": "B比较输出与传动不同功能并实测组合，不只换一件看马力；外饰A不算性能或车型价值评判。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1003.ALT2",
+          "scene": "第一辆自己的车还差哪一步",
+          "text": "你攒的钱已经够买当前可选的一辆标准牵引车，也能继续做雇主提供车辆的快速任务。你一直想建立自己的货运生涯，但列表里也有一款还没亲手开过的雇主车。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_about",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂缓购车，再做一笔自己选好的短途工作，把为后续油费维修预留的钱实际攒起来",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若当前待售标准车正是本人列下、仍未拥有的那一型号，就实际购买，把自己惦记的车型缺项补上",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "去完成这辆当前可买车的购买，让自己下一单能够开自己的车去取货",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先接那辆本人没开过的雇主车对应快速任务，亲手体验它现在提供的驾驶配置",
+              "signal": "try_available_setup"
+            }
+          ],
+          "applicability": "本人确有资金购当前开放标准车；C另须真实个人车型缺项，不是所有第一次买车都算收藏。",
+          "design_purpose": "买自有车与借雇主车试驾的真实门槛；两个钱目标0分别购车和预留运营款，不把首次购车直接贴G。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1004",
+      "number": 4,
+      "variants": [
+        {
+          "id": "ETS1004.V1",
+          "scene": "公司扩大后怎样让几趟接起来",
+          "text": "你已雇了司机并给他们配置了车，自己的货也能继续拉；现在公司现金够进行一项已开放调整。你近几轮已看到司机收入、工资与用车成本在变。下一段最想投在哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manager",
+            "ets10_training",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂缓公司调整，去自己当前能开到但还没看过的城市，看看那里的道路和货场",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把雇员训练、现有车库车位/车辆和自己货运现金放一起安排，接着跑几轮并按实际成本收入再调，想让这套运输持续接得上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先开自己的车完成当前那份已有货运，眼前这单交付比扩张更牵动这次",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先查看现行司机和公司面板，核对他们当前工作、收益与车库占用，再决定怎么调",
+              "signal": "management_status_review"
+            }
+          ],
+          "applicability": "本人已雇司机且分配可用车；多轮看过成本，不保证利润正，Y后续持续多轮运行不是单次点雇用。",
+          "design_purpose": "经营Y要训练/车库车辆/现金多轮相依，NPC既非真人队友O也非要照顾其情绪Q。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1004.ALT1",
+          "scene": "已有投入的那位雇员",
+          "text": "你雇的一位司机已经在自己的公司工作过几轮，你此前为他设过训练方向，也亲眼看过技能增长；如今他仍有可继续学习的原生技能。自己也能马上去跑一趟货。先给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_training",
+            "ets10_manager",
+            "ets10_manual"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "精力足且有新单和经营可做，仍开自己的车沿熟悉短线从容转一段，这种日常本身就想待着",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "继续为同一位已经培养过的司机安排仍可成长的训练方向，让他后续接单积累，想延续这位司机已有的培养",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先处理自己当前已经接下的工作，把这一笔货实际送到",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先比较眼前已开放的车库与招聘方案，决定这一笔可用资金该投哪项",
+              "signal": "compare_management_options"
+            }
+          ],
+          "applicability": "G必须同一已雇/已投训练/本人看过成长且未满技能司机；自己当前有货；H空闲另段可行且不因疲劳停工。",
+          "design_purpose": "真实NPC技能持续成长才G，不把雇人数量/普通车库扩建贴G；常见纯单人其他两替代可选。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1004.ALT2",
+          "scene": "升级时手里这一点经验",
+          "text": "你在同一个生涯里已经用过几次技能点，这次又升级得到一点；可选技能里仍有本人未点满的方向。目前快速任务列表既有熟路工作，也有终点自己没到过、当前技能允许接的工作。先把这一段给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_about",
+            "ets10_skills",
+            "ets10_manual"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接终点是本人没到过城市的那份可接快速任务，亲自开去看看新街路，不等确定收藏奖励",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿着自己此前已投入的同一司机角色，把这点继续投到当前能提升的技能，想看已有培养继续累积",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可选技能各自已经写明的开放条件，再决定这一点怎样分配",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先用已有技能去实际接眼前那单可接货，把自己这轮收入目标推进",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "applicability": "本人同一生涯有真实先前培养/新点/可提高项；快速任务中所指两类工作当时确可接，不要求已有自有车或新点立刻刷新指定货。",
+          "design_purpose": "同一玩家角色此前成长续点G与比较0/接单0/探索W；纯快速任务者可答技能分支。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1005",
+      "number": 5,
+      "variants": [
+        {
+          "id": "ETS1005.V1",
+          "scene": "紧急货和沿途休息",
+          "text": "你用自己的车接了一份当前已解锁的紧急工作，疲劳模拟确实开启。沿途有可用加油、休息点，界面有截止与剩余可驾时长，接下来还想继续接货。先把精力投哪件事？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_rest",
+            "ets10_manual",
+            "ets10_skills",
+            "ets10_cargo",
+            "ets10_fuel"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这单的油量、休息推进的时间、卸货与后续可接工作衔接起来，实际开几段、补给休息后再按变动续调，想让不止一趟的流程运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先按界面现有目的地开完眼前可行的这一段，把这份已接工作推进",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先停稳核对已有导航的路程与沿途标记，再决定这一段先去哪里",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "先到当前可用的休息点实际办理休息，处理这一轮自己选定的休息安排",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "applicability": "疲劳已开且当前剩余时长容许驶到所选点；Y真实愿意多段多趟续调，不用固定几小时/保证不迟到。",
+          "design_purpose": "油/休息时间/截止与后续工作多次相依才Y；单次睡眠不是H，导航不冒生存状态身体copy。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1005.ALT1",
+          "scene": "已经选过的司机身份",
+          "text": "你此前主动给这个生涯定了只在自己承诺的交付节奏内接普通货的司机身份。现在有一份自己其实更想尝试、条件也已解锁的紧急单，另有报酬较低但符合原身份安排的普通单。你先接哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_skills",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "仍接普通单，愿意放下此刻更想试的紧急货，把自己先前选的司机身份贯彻到下一趟",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "接自己此刻更想尝试的紧急工作，先实际推进这项新的自选运输目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前两个工作在原生列表已显示的目的地、报酬与期限，再决定接哪一单",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "精力足又有两类新货可做，仍选自己走熟的普通短线，主要想从容重温这一段驾驶",
+              "signal": "cozy_resident"
+            }
+          ],
+          "applicability": "本人确有先前自选身份与相反真偏好，两工作当前可接；H不因时间少或疲倦才低压，不判现实守时。",
+          "design_purpose": "R不是普通单比紧急单高尚，必须自选身份改变优先且放弃更想玩的有效目标；无假剧情惩罚。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1005.ALT2",
+          "scene": "装货后先用哪种行进方式",
+          "text": "你已在公司挂上这趟普通货，地图上同一目的地有两条当前能走的原生连接，都在自己已体验过的区域。没有必须立刻休息的条件，先怎么开？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_route",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从另一条已可达但这趟尚未走的连接经过，亲手体验换一个行进方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "B",
+              "label": "沿自己选好的直达路推进这一单，把当前已列出的交货目标摆在前面",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "连续亲手控车过已熟悉的弯，享受每次方向、油门与车身回应接上的感觉，不是自动巡航旁观",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先查看已有地图显示的航点和路线，核对当前连接后再决定这次改不改",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "applicability": "原生客户端当前航点/道路可用，两连接皆已体验非陌生探索；F是本人持续输入，不预设方向盘外设。",
+          "design_purpose": "已知路线换向0不强贴W，F亲手持续，交付0与导航0准确但不是同一微操作的四种说法。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1006",
+      "number": 6,
+      "variants": [
+        {
+          "id": "ETS1006.V1",
+          "scene": "地图上的摄影奖杯缺项",
+          "text": "你正在开本轮雇主提供的快速任务车，沿途一处原生摄影奖杯还没拍到，这是本人早先就想补的缺项；当前已装地图中确实能开到它，订单余时也容许这次可行绕行。你也能直接去交货，先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_gallery",
+            "ets10_convoy",
+            "ets10_manual"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "不以奖杯登记为重点，自己安排车身、道路和光线，让照片呈现想要的旅行风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先沿当前可行路线把这单雇主货送到，实际完成已经列出的交付",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "选另一条当前可达而自己未体验的道路，看看没见过的沿途而非追登记",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "开到那处当前可达地标，进入原生照片模式对准并实际拍摄，尝试补上本人缺着的摄影奖杯",
+              "signal": "collector"
+            }
+          ],
+          "applicability": "本人当前快速任务有可驾驶雇主车；所指奖杯未得/已装可达，余时允许，另条未知道路可通；不要求自有车或免费开雇主车脱离任务。",
+          "design_purpose": "真实雇主车沿途摄影C/A、未知绕行W与交货0，让只玩快速任务的普通单人也有本槽适用情境；不要求DLC指定地标。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1006.ALT1",
+          "scene": "维修点里的外观主题",
+          "text": "你停在可用改装点，手里这辆自有车可安装几种已解锁标准外饰并调整可用车漆；资金足够做选中的那一项。你已给自己想要的车队风格定过一个主题，先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_about",
+            "ets10_manual",
+            "ets10_upgrade"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂不编辑外观，先换上自己已拥有且兼容的一套现成配置，亲手开一段体验它",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可装外饰与升级方案，确认自己这轮实际可选什么后再定",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先离开改装点，开去自己刚选定的下一处可接货公司，推进这轮运输收入目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "围绕自己定的车队主题调整配色、外饰和车身呈现，让最后开出去的样子符合个人风格",
+              "signal": "style_director"
+            }
+          ],
+          "applicability": "当前原生标准外饰/配色已解锁且可付，不假某付费涂装人人拥有；试配本人已得兼容。",
+          "design_purpose": "多项外观共同个人主题A，普通目录比较0；不把装灯/换喇叭自动判B或G。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1006.ALT2",
+          "scene": "原生车队里两人要一起走",
+          "text": "你与一位真人朋友正在原生Convoy，双方当前都有同一份可接工作，地图和内容条件兼容。朋友想边开边说今天路上的事，你也有自己可独自跑的货。先把这段给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_convoy",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先和朋友约定同一趟的集合点、谁先确认路线、错过出口后在哪里会合，再照共同安排推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "向朋友说明自己先跑另一单，把本人此刻选定的运输目标实际做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "停稳后用原生相机安排两辆车的距离、角度和画面，留下自己喜欢的合影风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "接同一单并和朋友一起走，主要想边开边聊，把这趟路变成共同经历",
+              "signal": "social_spark"
+            }
+          ],
+          "applicability": "仅本人真实原生Convoy真人同伴/同单可用；A朋友可配合停稳，非NPC雇员/TruckersMP；同槽两单人替代。",
+          "design_purpose": "真人共同目标安排与分工绑定Q，真实陪伴/共同经历绑定O；个人目标0和主动合照A不同。没有原生自动共享公司/资金。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1007",
+      "number": 7,
+      "variants": [
+        {
+          "id": "ETS1007.V1",
+          "scene": "擦碰后的货和车",
+          "text": "你开自己的车运货时有过擦碰，现在停在维修点，牵引车损伤和货物损伤在界面中分开显示；这单仍能继续送，资金够一次普通修车。先把这一段给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_cargo",
+            "ets10_used",
+            "ets10_manual",
+            "ets10_convoy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前原生服务手续完成一次可支付的普通修车，先把这项已开放保养实际做下去",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先把当前仍有效且能完成的货送到收货公司，把这单已列出的交付实际推进",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "停稳后用原生相机自己安排车头、服务站和道路背景，留下一张符合个人旅程风格的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先打开已有地图，核对当前维修点到收货公司的实际路线，再决定这一段怎么走",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "applicability": "本人有分开的车/货损且当前可修、订单仍有效能送；A手续本人操作而非亲手拆修，拍照停稳且不假定车身可见损伤。",
+          "design_purpose": "车损/货损的真实处境中，当前保养0、完成货运0、主动构图A与地图0竞争；移除与03普通维修解释同构的P，不为补信号重复造猜想。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1007.ALT1",
+          "scene": "自己的挂车这次接什么",
+          "text": "你已有一辆当前可用的普通自有挂车，并能看到与它匹配的原生货物市场；也可以暂不使用这辆挂车，接当前其他可用运输。改装界面有你能支付的挂车车漆。先投哪件事？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_trailer",
+            "ets10_about",
+            "ets10_manual"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕自己车头已经定好的个人主题改挂车配色，让两者呈现自己想要的整体样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已开放且与这辆挂车相容的配置，再决定下一趟保留还是换用什么",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "用这辆已有挂车去接眼前真实可接的货物市场工作，亲手把这一趟运输推进",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先把这辆当前可供雇员使用的共享挂车留在公司挂车池，自己不占用它，转去做当前已可接的雇主快速任务，让公司已有运输资源留给符合条件的司机",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "applicability": "本人有原生自有标准共享挂车和已雇司机可用，Cargo Market与雇主快速任务都可接；车漆能付，挂车配置只比较原生相容项。",
+          "design_purpose": "自有挂车自己运货、留给雇员后改开雇主车、个人主题A与相容配置0真竞争；不凭市场刷新把改漆写成货类因果试验。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1007.ALT2",
+          "scene": "已经准备好的一次夜间出发",
+          "text": "你停稳在道路旁可用停车处，准备继续已接的夜间普通工作。客户端原生自动车灯选项已开放，眼前车辆实际能用；你尚没亲手试过这次自动照明，也能按原有手动灯继续开。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_used",
+            "ets10_manual",
+            "ets10_convoy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按原先手动灯光方式继续这单，先推进已出现的交货目的地",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "停稳进入相机，自己安排夜间灯光、车身与道路的画面，留出想要的光影风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "你还猜启用自动近光后远光也一定会一起常亮；保持这辆车不换，按原生设置开启相应选项、在当前夜间条件亲自观察切灯，若情况不符就修正解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先用自己当前可选的自动灯光配置继续开一段，亲手体验这套现成辅助怎样发挥",
+              "signal": "try_available_setup"
+            }
+          ],
+          "applicability": "当前原生自动照明确实已发布可设，测试在本人可观察条件完成且不承诺路上无车；P不懂便查答案不算，未知则换题。",
+          "design_purpose": "自动灯光的近/远光与开关有真实原生区别；P检验本人解释，不以自动辅助使用推操作能力。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1008",
+      "number": 8,
+      "variants": [
+        {
+          "id": "ETS1008.V1",
+          "scene": "驾驶学院的停车情境",
+          "text": "你实际进过原生驾驶学院，当前已有一项可重新尝试的停车情境，也能返回普通货运生涯。你上一次在这里回正太晚，挂车尾总是超过目标。下一段更想做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_academy",
+            "ets10_manual"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "精力足、学院可继续挑战也有新货可接，仍回自己的熟悉短线从容开一段，想重温这种日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "重新开这一项，针对本人上回回正太晚的地方反复尝试，想亲手掌握得比上次稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "用学院当前已开放的回放工具实际播放自己刚才这次尝试，亲手体验这一项原生回放操作怎样使用",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "返回普通生涯去完成自己选好的下一单运输，把这一段投入收入目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "applicability": "本人学院真做过且当前情境可重试/回放；不假生涯车辆带入；H熟线当前有车可走并非疲劳。",
+          "design_purpose": "学院本人旧未稳T、当前原生回放工具实际操作0与生涯目标0/H；不把学院回看强套经营模拟运行copy。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1008.ALT1",
+          "scene": "收货公司门前还没交掉的雇主货",
+          "text": "你开本轮快速任务的雇主车到了收货公司附近，已列出的交货还没办完，余时容许可行的短段行驶；附近还有一条本人没开过、当前可通的街道。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先不驶入卸货位置，在余时容许的熟悉市内短段从容开一阵；精力足且能探索，仍喜欢按自己的节奏重温这一段",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "驶入当前原生可用卸货位置并办理交付，把这单已运到的雇主货真正完成",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先去那条未走过的街道看看，未知街景比眼前订单更牵动这段",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先查看已有地图里此地与收货入口的真实连接，再决定这一段怎样驶入",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "applicability": "本人快速任务雇主车仍在当前有效订单中，临近真实收货公司且余时足；新街道与熟悉短段可走，H精力足；不让已交车后凭空继续开雇主车。",
+          "design_purpose": "快速任务在终点门前仍有真实可驾驶车；实际交付0、未知街道W、地图0与主动熟悉H，覆盖未买车也未玩学院的单人。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1008.ALT2",
+          "scene": "给下一趟留够油的停靠",
+          "text": "你已经有自己的车，空车驶到一个当前原生可用加油点；油量足以继续开到附近目的地，也可以现在补。另一份自己想接的普通货就在附近公司，先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_about",
+            "ets10_fuel"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "精力和油都足，也有货可接，仍沿已熟悉公路开一小段，主要想从容重温驾驶本身",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "现在按原生加油操作给这辆车补油，先把自己选好的下一趟出发准备实际做好",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "暂缓补满，去公司实际接当前那份能接的工作，把这一趟收入目标先开起来",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先查看现有地图显示的公司位置和可走路线，再决定这一段先去哪边",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "applicability": "本人已到可用加油触发点且能支付，油非耗尽；H不由生存压力或疲劳触发；不指定加油默认键/单价。",
+          "design_purpose": "普通补油原生操作0不用采集84或装置供能copy兜；附近现成货/地图/H不同真实目标。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1009",
+      "number": 9,
+      "variants": [
+        {
+          "id": "ETS1009.V1",
+          "scene": "第一次从大陆开进英国之后",
+          "text": "回想你第一次真的把车从大陆开进英国、开始适应左侧通行的那段经历。你已经离开过海点，可以继续运输或停稳再安排；当时最让你愿意接着投入的是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_crossing",
+            "ets10_about",
+            "ets10_manual",
+            "ets10_convoy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己此前在左行路口总是下意识靠错一侧，于是有意识地再跑几个当前可走路口，想比自己上一次处理得稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲自开进还没体验过的英国街路，看看不同路口和城镇会是什么样子，不要求先列收藏目标",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先把当时已接下、仍有效的那份货运送到，把跨海后的交付实际做完",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "在当时可用停车处停稳，自己安排英国道路背景与车身角度，留下一张符合个人旅程风格的照片",
+              "signal": "style_director"
+            }
+          ],
+          "applicability": "本人真实开车跨海并进入英国；交付选项另需当时确有有效工作，T确有自己的左行未稳；没有经历换同槽其他专属情境。",
+          "design_purpose": "新回顾抓首次左右交通过渡后的本人难点，而非把01过海菜单选择改过去式；旅程截图必须本人构图。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1009.ALT1",
+          "scene": "带着货损完成的那张结算",
+          "text": "回想你有一单确实带着货物损伤送到了收货地，原生结算已把扣减显示出来；订单已经结束，不能再修那单货。那次之后，什么最能解释你实际继续做的事？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_cargo",
+            "ets10_parking",
+            "ets10_manual"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在下一份当前可接的普通货里，针对自己此前转弯时总擦到挂车的难点反复调整入弯和回正，想比自己上次更掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "承认这张已发生的结算，继续实际接下一笔可做工作，把自己当时为买车预留运营钱的目标接下去",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "为本人这次已经开到的收货城市与已经到过的货场补上自己的地点记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "精力足、另有新目的地和新货可选，仍选择当时能接的熟路短单再开一趟，从容重温自己喜欢的驾驶日常",
+              "signal": "cozy_resident"
+            }
+          ],
+          "applicability": "本人真实有货损结算/有效后续；T是本人曾转弯擦碰未稳非责备事故；H有精力和其他可做目标。",
+          "design_purpose": "新回顾是货损结算后本人如何续玩：转弯练习T/攒运营钱0/已到城市货场记录0/另有选择仍熟路H；不把运输结算或维修步骤偷渡为game_recording物品。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1009.ALT2",
+          "scene": "朋友错过出口的那趟车队",
+          "text": "回想你与真人朋友开原生Convoy时，对方真的错过了出口，你们两人的工作当时仍能完成，原生通信也可用。你当时实际更愿意接着做的是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_convoy",
+            "ets10_manual"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先和朋友共同确认下一处可到的会合点、由谁核对新路线，以及这一趟怎么继续，再按说好的节奏走",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "货运时序可行时先保持联系，边各自开边聊这次错口的经历，让这趟共同出游继续热闹起来",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "说明自己先沿眼前可行路线交付仍有效的货，把这份已有工作实际完成",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "停稳后先核对自己已有地图的当前位置与出口连接，再决定本人接下来怎样走",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "applicability": "本人真实原生Convoy真人错出口；只有可行会合/通信；不是假设NPC员工在路上可见，更不预设时限无限。",
+          "design_purpose": "新回顾是真实分离事件后的共同协调Q、共同经历O与个人目标0/导航0，不是06出发约单的过去复刻。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1010",
+      "number": 10,
+      "variants": [
+        {
+          "id": "ETS1010.V1",
+          "scene": "终于够提前还清那笔贷款",
+          "text": "回想你同一生涯里，跑过几趟货以后第一次攒到足以提前还清某笔剩余贷款的钱。银行当时确实提供整笔偿还，自己也还有买车或继续运输的可行目标。你当时最在意接着做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_bank",
+            "ets10_manual",
+            "ets10_manager"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "不急着提前还，把钱用于当时已经开放且自己选中的购车目标，实际推进下一辆可买车的取得",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前银行已显示的剩余金额与分期情况，确认自己这次实际能做哪些经营安排",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "精力足、买车和还款都有可做选择，仍先开熟悉的短途货，从容待在日常驾驶里",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "实际把那笔当前能还清的贷款整笔偿还，先完成自己为这一轮定下的清账目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "applicability": "本人真有该贷款、赚过钱、余额足整笔偿还；不假可以任选部分本金；两资金选项为真实互斥目标。",
+          "design_purpose": "新回顾针对亲自挣来的钱在提前还款/购车/继续驾驶间的真实取舍，不把经济选择贴现实财务人格或Y。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1010.ALT1",
+          "scene": "首次有资格接危险品之后",
+          "text": "回想你真正点开过一类ADR技能后，市场里首次出现了当时自己有资格接的一份对应危险品运输；同时还有自己走熟的普通货。原生技能仍能继续成长，吸引你继续玩的实际重点是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_skills",
+            "ets10_manual",
+            "ets10_about",
+            "ets10_parking"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若这类危险品确实在本人事先列下、还没亲自完成的货类清单里，就实际接并运输，尝试补上自己的个人缺项，不冒充系统成就",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "选择当时可接且会经过熟悉窄门的那份普通工作，针对本人以前转弯总擦挂车的地方再开几趟，想比上回更掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "继续用自己此前已培养并点过ADR的同一司机角色接货积累经验，再把后续真实获得的点数投到仍可成长的技能，想延续这位司机的培养",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把眼前可接、收益与路程符合自己这轮攒钱目标的普通工作实际跑起来，先为已经选定的购车目标挣下一笔",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "applicability": "本人真解该ADR类别且工作已出现；C个人清单真实且缺项，T另单确可接且有本人窄门旧未稳，G同一先前培养角色仍有可成长项；不许诺一单必升级。",
+          "design_purpose": "实质去掉与05紧急货身份题四项同构；首次危险品资格落地后，个人货类实运补项C、普通货窄门自练T、同一角色续成长G与购车款0竞争。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1010.ALT2",
+          "scene": "第一张照片收到真人回应之后",
+          "text": "回想你把一张自己拍的ETS2照片分享在可选World of Trucks后，确实收到过同好真人的回应。照片已经发布，不要求赢评选或点赞达到数值。当时更让你愿意继续投入的是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_store",
+            "ets10_convoy",
+            "ets10_gallery"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕自己想呈现的旅程风格，重新选择下一张照片的取景、光线与车身位置，让下一次作品更合自己心意",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先回生涯把当时已选定且可接的下一份普通货实际跑起来，继续自己的运输目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "为自己已经拍到的地物、已经开过的地点与那张已得照片补上个人记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "和这些真人同好继续聊自己那趟路上发生的事，共同分享这段旅程的感觉本身就值得留下来",
+              "signal": "social_spark"
+            }
+          ],
+          "applicability": "本人真用过可选WoT分享且收到真人回应；A下次地点可停稳拍，非观景自动片/预设图库；同槽贷款和ADR为单人替代。",
+          "design_purpose": "真人相互分享与共同经历绑定O，不将NPC或单纯点赞计为真人关系/竞争；不要求现实发帖行动，本题只问已发生游玩经历。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1011",
+      "number": 11,
+      "variants": [
+        {
+          "id": "ETS1011.V1",
+          "scene": "卸货后忽然没有下一单催着走",
+          "text": "回想你开自己的车完成过一次较长运输，已经卸掉货且没有活跃订单催促，车况、油量和精力也都足以接着玩；当时还有可接新工作和未去过的路。什么最能解释你实际留下来的那一段？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_store",
+            "ets10_convoy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "停稳后用原生相机自己安排这次到达地与货车的画面，留下个人想要的旅行样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "马上去接当时确实可接、自己已经选定的下一单，把为买车库攒钱的目标继续做下去",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "仍在自己已经熟悉的城市周边从容开一会儿，不急着加新目标，喜欢这种能够自己掌握节奏的停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "开向当时真正能到但本人没走过的道路，想看看离开收货地以后还有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "applicability": "本人已完成较长运程、有自有空车/精力足/后续可做事；不是因工作未做完或只剩疲惫才从容。",
+          "design_purpose": "普通单人生涯回顾可适用，不要求学院/WoT/雇员；H主动熟悉、W未知、A构图与自选目标真竞争。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1011.ALT1",
+          "scene": "熟悉的歌开始播放时",
+          "text": "回想你开快速任务的雇主车时，在原生播放器里真正播起过自己熟悉的一组本地曲目或当时可收听电台；车已停稳，订单仍有效且余时允许可行绕行。那次你实际更愿意接着做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_radio",
+            "ets10_manual",
+            "ets10_route"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "不以熟悉曲目停留为重点，开向自己当时没体验过的可达城镇，看看新地方会是什么样",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先在已有地图上核对当时的位置、目的地与可走路线，再决定接下来开哪边",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "精力足且当前有新路可走、交货可完成，仍开上自己走熟的公路，随熟悉曲目按自己的节奏待一段，这种熟悉感本身就值得",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "先沿当时可行的线路把这单雇主货送到，实际完成那次已列出的交付",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "applicability": "本人快速任务雇主车尚在有效订单里且余时足；原生本地音乐或电台当时确实可播放，熟路/新城镇当前可达；H精力足，不要求已买车。",
+          "design_purpose": "新回顾是雇主车仍可驾驶时原生音乐与自由驾驶的个人熟悉停留；歌曲非输入反馈F，不假交掉快速任务后雇主车仍归本人。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1011.ALT2",
+          "scene": "自己真跑过的小型路线玩法",
+          "text": "回想你用原生世界地图给空车设了一条自己选的可走路线，另给自己定过“按选定次序经过几个路口、错过就手动回到起点重来”的小玩法；你确实玩过一轮，也有普通工作可以接。什么让你愿意再投一轮？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_route",
+            "ets10_manual",
+            "ets10_store"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "结束自订路线，去接当时已经可用的普通工作，先推进这次运输收入目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "改走另一条当时已知可达连接，亲手体验换一个行进方向，不再按刚才那套顺序玩",
+              "signal": "route_variant"
+            },
+            {
+              "id": "C",
+              "label": "继续自己定的这套经过顺序玩法，亲自开、判断有没有错过，失败就手动再来，想看看这套自订规则还能玩出什么",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "把这一轮给当时自己总错过的同一个路口，主要想比上次更掌握转向和出口判断",
+              "signal": "practice_seeker"
+            }
+          ],
+          "applicability": "本人真实自设并玩过，原生当前可设航点且路线可走；非官方自动挑战/计时/失败判定，人工判断和手动重来。",
+          "design_purpose": "新回顾保留真自创规则/玩/失败重来才I，与练本人特定错口T区别；非把阅读路线说明当玩法实验。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    },
+    {
+      "id": "ETS1012",
+      "number": 12,
+      "variants": [
+        {
+          "id": "ETS1012.V1",
+          "scene": "改过输入设置后再开回道路",
+          "text": "回想你真的在ETS2原生设置里改过自己能够使用的按键绑定或控制方式，然后已经亲手开过一段。当时有一份仍有效的已接工作能继续，接着吸引你投入的重点是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_used"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前原生键位列表里已经显示的操车动作和自己设置的绑定，确认这次怎样操作，再亲手继续试这套输入",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "继续亲手转向、给油和刹车，主要喜欢输入与车身即时回应接在一起的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "针对改后自己总把某次换挡或转向衔接乱的地方反复试，想比自己上一次更掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "保留当前能用的输入设置，先把当时已接且仍有效的那单货送到，实际推进已经列出的交付",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "applicability": "本人真在原生设置改输入并已驾驶，键鼠/手柄任一受支持方式即可，当时有有效工作；T真有本人未稳，现成键位列表可核对，不要求H挡外设。",
+          "design_purpose": "新回顾以已改输入后手感F、本人具体衔接自练T、已有键位说明0与当前交付0竞争；不将输入绑定强套装备组件比较copy。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1012.ALT1",
+          "scene": "把旧车真正翻修完之后",
+          "text": "回想你在原生维修服务里确实给自己开过许多趟的一辆旧车做完总翻修；那时车可以继续用，也有余额完成自己已经选中的另一个当前可买车目标。翻修之后让你接着投入的实际重点是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_used",
+            "ets10_manual",
+            "ets10_about",
+            "ets10_convoy"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为本人已经拥有的旧车与已经到过的几处城市补上个人记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "把旧车开去接当时真正可接的下一份货，先完成自己这轮已选好的运输目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "停稳后亲手安排旧车和自己这次到达的城市景物，拍出符合个人旅程主题的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "若另一辆当时可买车正是本人一直缺的车型，就实际购买，尝试补上自己惦记的车型缺项",
+              "signal": "collector"
+            }
+          ],
+          "applicability": "本人真做完Total Restoration而非普通维修；另车真可买/有钱，C另需个人未拥有车型缺项；不以翻修自称车升级成长。",
+          "design_purpose": "新回顾是原生总翻修后保留旧物与后续目标，区别03普通维修因果试验；记录限已得车/已到城不冒维修步骤copy。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        },
+        {
+          "id": "ETS1012.ALT2",
+          "scene": "继续旧生涯还是另开档",
+          "text": "回想你已有一个实际跑过多趟货的生涯存档，原生又允许另建个人档案；你确实认真选择过继续旧生涯，或从另一座当前可选城市重新开始。那次让你愿意继续的是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ets10_manual",
+            "ets10_about",
+            "ets10_skills"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先给旧档里自己已经取得的车辆和已经体验的城市补上个人记录，再决定是否另开",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "旧生涯同一司机角色还有可成长技能且自己已有持续投入，于是继续跑货获取经验再加点，想让这个已有培养的角色接着成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "你此前已为新档选了从另一城起步、只做雇主车司机的身份；即使当时更想在旧档开自己的好车，也新建并按这个身份接起工作",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "精力足、旧档新路和新档都可选，仍回旧档熟悉的城市短线从容开一阵，不急着再加目标",
+              "signal": "cozy_resident"
+            }
+          ],
+          "applicability": "本人真有旧生涯/原生另建档可用；G同一已投入角色未满且愿意实际续成长，R有预先自选身份和更想开旧车的代价；不删旧档。",
+          "design_purpose": "新回顾在多档长期经历的连续性与角色起点之间，G不是普通车库扩建，R不按公司老板/雇员现实身份推断。",
+          "interpretation_boundary": "只解释本人这次游玩投入，不以遵规/事故/负债/收益推现实道德、职业能力或财务习惯。未体验继续其他已核专属情境，无跳过，不补假经历。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+bbe77d10adaa"
+}

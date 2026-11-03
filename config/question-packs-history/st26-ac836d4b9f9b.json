@@ -1,0 +1,1436 @@
+{
+  "id": "st26",
+  "title": "盗贼之海（Sea of Thieves: 2026 Edition）",
+  "game_ids": [
+    "steam-1172620"
+  ],
+  "scope": "原生PC普通航海一套换题，单人船基础；HighSeas真人/联盟、可选传说/教程/货物仅本人真实条件替代",
+  "status": "private_author_self_read_pending_independent_review",
+  "author_review": "all_36_whole_objects_and_current_bindings_actually_read",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12槽各三情境，前8行动后4真实回顾；保留共享4和最多2补问，未体验继续换已核专属无skip。",
+    "不强求全部16画像；普通单人也有每槽入口，某些选项才需要本人未熟/未知/个人缺项或愿回应真人。",
+    "普通航海不借CustomSeas生成、FreeCamera/QuickSail；不把旧Arena、过期限时活动、旧Dive/Raid按钮作默认，Safer当前100%/25须按真实上限。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "普通航海（按本人真实出航与航程换题）",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "ST2601",
+      "number": 1,
+      "variants": [
+        {
+          "id": "ST2601.V1",
+          "scene": "单桅帆船已经接近岛岸，先减速还是多绕一点",
+          "text": "自己正驾驶一艘单桅帆船（Sloop）接近已经选定的岛，船仍在往前走；眼前能操作帆长和舵，也能用船锚，附近另有自己已经看清、能走的较宽进岛路线。现在先怎样靠过去？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_MODES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先收短帆、转舵，按自己这次准备从已选岸边上岛的目标靠近，不急着把船锚放下",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先在眼前实际可停的水域落锚，把这次先稳住船、再上岸处理任务放在前面，接受稍后要重新起锚",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己仍掌握不好帆长变化后的靠岸距离，就绕当前真实能走的较宽路线，再练这一段减速与转向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若这一趟真有愿回应的同伴，就先约清谁控帆、谁控舵和何时上岸，再按共同安排实际靠近",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "单人Sloop普通入口；船仍有前行动量、落锚后重起耗时是实际取舍，不保证收帆立停/某距离绝对不撞。真人只有D局部，非要求全题有队友。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2601.ALT1",
+          "scene": "原定航线前是一片风暴，先绕还是继续穿",
+          "text": "自己有一趟已经定下来的岛间航行，原路前方能看见风暴；手上船仍能航行，也有自己在海图上确认能绕行的路线。现在先把这一段给哪种安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_NAV",
+            "ST26_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿确认过的绕行路线走，把当前这趟船和已有货物带到目的地，不为缩短路程进入风暴",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先沿原定路线继续，亲自处理自己实际遇到的舵、海浪和船体变化，把这次穿过去的目标做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不清楚罗盘失准是否只来自自己手持时的动作，就先明确这个猜想；实际在同一场风暴中对照手持罗盘与船舵旁罗盘，再在真实驶离后核对，若与猜想不符就修正",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "若本人仍不熟悉风暴中的掌舵，就围绕这次真实出现的偏转练修正，重在自己逐渐稳住航向",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "风暴航行实际路线代价，P本人未知且两罗盘/风暴内外有真实对照，不从一次事件推全部风暴参数。不许诺安全穿越、自动修复或精确速度排名。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2601.ALT2",
+          "scene": "另一艘玩家船就在后方，还要继续回原港吗",
+          "text": "只按本人真在High Seas驾驶有货的船、后方也真有正在追近的其他玩家船来想；眼前还有可走海路，也能继续自己原定的交货方向。这一段更愿投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_MODES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按现有海路把货带向自己已经选定的交付点，不为这次追逐停下来争胜负",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若自己此刻确想和这艘真实对手船较量，就转入当下真实能进行的追逐与交火，把胜负作为这一段目标",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "若本人仍没掌握受追时的船帆与舵衔接，就把这段实际压力用于练自己没处理好的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若船上有真愿回应的同伴，就先说清接下来保货、控帆和维修的分工，再照共同目标行动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "HighSeas真实玩家追逐条件替代，不放Safer/不把骷髅船算K，竞争意图只B本人真实想较量；不保证某种旗免战或对手一定回应。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2602",
+      "number": 2,
+      "variants": [
+        {
+          "id": "ST2602.V1",
+          "scene": "藏宝图还有一个叉，船上已挖到的要先卖吗",
+          "text": "自己已经拿着一张真正可做的淘金者藏宝图，图上还有一个自己没挖出的叉；船上也已装着本趟真实取得的宝箱，能航向自己已知可交付的贸易站。剩下这段时间先给哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TREASURE",
+            "ST26_NAV"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去按这张图挖最后那处，推进自己这次完成当前寻宝目标的安排，再考虑回港",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把船上已有宝箱带回实际可收货的淘金者处，把这趟已经拿到的收获交出去",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若藏宝岛上一条当前能进入的洞口本人尚未去过，就先去认识那片地方，不先要求里面有宝",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前这张图已有的目标标记与这次自己已完成的寻宝部分，再决定继续哪一步",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "具体X图未完vs已有宝箱回港，同一航程时间竞争；不把普通赚钱箱子自动C、不承诺宝箱全能自己开。PROG是当前任务标记，不编自动导航。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2602.ALT1",
+          "scene": "谜语已经读到数步那句，要自己量还是先换目标",
+          "text": "只按本人正在做的一张原生谜语图来想：自己已经找到当前诗句所指的地标，下一句真要求按方位走若干步再挖；手中罗盘能用，也还有已经取得、可回船运走的宝物。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_NAV",
+            "ST26_TREASURE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人仍没掌握举着罗盘量步的走法，就在这个真实地标练方位和步数，重在自己能把定位做准",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先依自己这轮解谜的安排排清地标、朝向、量步和下铲先后，再亲手按这个步骤求解",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先把已经取得的宝物带回船，推进自己先保住现有交付成果的目标，谜语留后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若本人还不清楚举罗盘量步与自己估的跑步步数是否等价，就先猜两者会落在同一处；从同一地标按同方向实际各走一遍，核对落点，若不同便修正",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "原生谜语方位/步数明确后可操作；P候选是两种量法等价，题干不预教快跑与量步实际结果。缺地标/没有数步句可换同槽其他题，不强说所有谜语都数步。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2602.ALT2",
+          "scene": "喜鹊号航海日志已拿到，先追落海的古箱吗",
+          "text": "只按本人已开始《破雾号》（The Shroudbreaker）、从Magpie’s Wing沉船真取到航海日志来想：新增页写着起点、转向与岛屿描述，自己能按船上海图继续追古箱，也还有原定的其他可走行程。先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TALE",
+            "ST26_SHIP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把日志里自己已经读到的追逐和弃箱事件接起来，关注Ramsey那趟航程为什么会走到沉船这一步",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先按这本日志与现有海图排清自己这一轮要比对的起点和转向，再实际航行去核对应的岛边",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先走自己原定的另一段行程，暂不把这一轮全部给古箱线索",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若沿途一座本人没到过、当前又真能登岸的岛引起兴趣，就先去认识它，重在未知地方本身",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "具名首TallTale日志/岛屿描述/落海古箱，不把随机日志路线写固定终点；S关注已读人物事件，PLAN解决实际路径谜题，非把读日志就贴P。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2603",
+      "number": 3,
+      "variants": [
+        {
+          "id": "ST2603.V1",
+          "scene": "船舱进水了，先堵洞还是先把水舀出去",
+          "text": "自己船上一处真实破洞还在进水，船也还没沉；手边有够修这处洞的木板，桶也能用，眼下还得决定怎样接回原定航行。现在先把动作给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_TOOLS",
+            "ST26_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用现有木板修这处眼前可修的洞，把这轮阻住继续进水的目标做完，再接着处理积水",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先亲手把眼前积水舀出去，为这次稳住船争出时间，暂时接受破洞仍没修完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己仍会把桶水泼回船舱，就围绕当下实际能做的舀水和向外倒水练动作，重在把这个操作做稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若同船真有愿回应的伙伴，就先约清谁舀水、谁补洞、谁接舵，再照这个共同救船安排行动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "木板堵洞与桶排现有水不同功能/真实先后代价，不虚构一块板清掉全部水。T只实际未熟，D真人局部，旧bucket sprint取消漏洞已被3.9.1修复不采用。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2603.ALT1",
+          "scene": "炉上的鱼焦了，甲板也起了火",
+          "text": "只按本人真把鱼留在船炉上过久、后来已经看见船上起火来想：火还没蔓延到让这次操作无法继续的地步，自己手中有可取水的桶，也还有没交出去的宝物需要这艘船运走。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_FISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拿水处理当前真能浇到的火，把这次保住运货船作为当下目标，宝物暂留原处",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若船当时真已近岸、确能把身边一件宝物搬到岸上，就先把它转到当前可放置的岸边，推进自己先转移这件收获的安排，再回来处理船",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己已经会这段取水、抬桶、倒水，仍愿亲手连续处理火点，就把自己反复输入与即时熄火反馈当作这段投入的吸引力",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "若有真愿回应的同伴，就先说清各自处理的火点和搬运对象，再按共同的保船/保货顺序实际行动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "炉子久置食物引火原生，B仅船已经近岸且当前真能合法放宝物时，不能临海凭空卸到岸上；不保证灭火期间不会继续受损，不把自动火焰演出算F。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2603.ALT2",
+          "scene": "商盟植物缺水，旁边还有不能淋湿的布料",
+          "text": "只按本人当前确在运送原生商盟货物来想：一箱植物已经显得缺水，旁边还有自己尚未弄湿的布料箱；船上有桶和可取的水，交付地点与期限也已写在自己这趟真实货物上。先怎样处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_CARGO",
+            "ST26_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把植物移到当前真能单独浇水的位置再补水，让自己这次先维护植物状态的目标推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把布料移到眼前真正干燥、不在这次泼水范围的位置，再安排照料植物，优先保住这批布料",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先按这批货物已经显示的收货人与期限安排继续航行，把这趟到达目标放在眼前，暂不追加停船整理",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若有真愿回应的同船伙伴，就先分清谁照料植物、谁挪布料、谁负责航向，再按共同交货目标执行",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "当前真有CargoRuns植物/布料才替代，不能把所有箱子统一浇水；不同真实保货目标，不强把普通货物照料当G或Y。不以旧攻略动物委托/固定时限保证当前全员有这类航程。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2604",
+      "number": 4,
+      "variants": [
+        {
+          "id": "ST2604.V1",
+          "scene": "宝箱提在手里，回船途中还要先处理什么",
+          "text": "自己刚真正挖出一个可拿走的宝箱，现在正提着它走在已确认能回船的岛上路段；前面有真实仍在的普通骷髅，自己能暂放箱子拿武器，也能继续搬运去原定船边。先怎样接这段？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TOOLS",
+            "ST26_TREASURE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这只已得宝箱带回眼前可走到的船边，推进自己先把收获装船的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先在当前能放的位置放下箱子、拿武器处理眼前这只骷髅，把清理这一段作为当下目标，再回来搬",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不清楚冲刺受阻原因，并猜只是刚才没按好、与拿箱无关，就在同一段地面和相同状态下实际对照拿箱与放箱后的冲刺；若差别不符便修正，两边都做不成就保留不确定",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "若本人仍没掌握带箱回船时的跳跃或上船衔接，就在这次实际可走路段练自己卡住的那一段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "手持不能收进背包的宝箱与武器/冲刺限制具体，P只未知真实拿/放对照，不教答案再推理；不承诺放地物品免偷或免消失。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2604.ALT1",
+          "scene": "船炮空着，要把自己打到岛边还是继续运货",
+          "text": "自己把船停在一座当前能靠近的岛外，已有可上船操作的空炮，能按原生提示把自己装进去发射；船上另有本趟已得宝物，原定交售海路也仍可走。先把这段给哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自进入这门空炮、按实际可用提示发射自己，体验自己实际飞出后的落点与移动，不把它当成搬运宝箱的办法",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先留在船上，把已有宝物沿原定海路运去交售，不为这次发射自己停留",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若眼前这座岛本人尚未登过、当前又真能游过去上岸，就先去认识它，把发现岛上空间作为这段的目的",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "若有真愿回应的同船伙伴，就先约好谁留船照看航向与货物、谁先去岛边，再按共同探路安排行动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "实质替原鱼叉取货/控航向G/G/T/Q，与01靠岸及03堵洞同四目标方法结构过密。采用Ed244原生船炮可发射玩家、本人船已停与原定宝物交售真实竞争；V是本人当前合法亲用，不造自动精准送达、无伤落地、炮台相机或携带宝箱一起发射。W未知只C局部，并须现有水路真能上岛；Q真实愿回应同船人局部，不拿骷髅船/自动船当真人。发射落点与风险不保证，后续回船沿原生实际途径，不借CustomSeas免费传送。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2604.ALT2",
+          "scene": "小艇能装走这一批，主船却停在另一边",
+          "text": "只按本人真在岛边找到并已靠上的可划小艇来想：岸上有这趟已经取得的几件宝物，主船停在自己已知、现有海路能到的另一侧。先怎样运这一批？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_MAIDEN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前能拿的宝物放上小艇，亲自划回主船并按可用提示靠接，把这轮运输目标做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先只把眼前一件宝物沿自己已确认能走的岸路搬回船，把其余留待之后再取，不为整批先划小艇",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己仍没掌握这艘小艇的划动和靠接，就以眼前真实可行的短程练这些操作，重在把小艇用熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若沿岸一处当前真能靠近、本人尚未去过的洞口引起兴趣，就先去认识那片地方，暂不把小艇全用来运货",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "小艇可载物/回船靠接，岸路另行实际已确认可搬；不用美人鱼带宝物传送、不保证小艇任何风浪都安全，不冒称教程UI位置当前完全相同。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2605",
+      "number": 5,
+      "variants": [
+        {
+          "id": "ST2605.V1",
+          "scene": "岛上骷髅还在，枪里这一发要现在打还是先回船",
+          "text": "自己在普通岛上遇到一只仍可交手的骷髅；当前已装备火枪还有可用弹药，弯刀也能切回，眼前另有自己已确认能走的回船路，船上还有本趟原定的后续事情。先怎样用这一轮？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_COMBAT",
+            "ST26_TREASURE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把现有这发投给眼前骷髅，推进自己这轮先处理这次遭遇的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先不把弹药和时间继续投给这次交手，沿当前可走的路回船，去接本趟原定的下一件事",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己的火枪在目标移动时还总打偏，就围绕眼前这次真实交手练瞄准与出手，重在改进自己",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先比较自己当前实际能换的两把武器、已有弹药与用途，再决定这一段怎样配",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "普通岛上骷髅入口，不要求接秘社赏金；出手处理vs返回原定行程真实竞争，不以NPC胜负算K；不写旧全枪5发/Blunder一枪满血击杀或固定伤害，不承诺船长必掉某新版本高阶奖励。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2605.ALT1",
+          "scene": "夜里的影子骷髅，灯和武器要怎样接起来",
+          "text": "只按本人真在夜间遇过Shadow Skeleton来想：现在仍有这类敌人可交手，自己有可举的灯与能用的弯刀，也有当前能退回船边的路。先愿意怎样投入？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_COMBAT",
+            "ST26_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若自己已分别试过只举灯和只出刀，就实际举灯后再切回武器交手，对照这次能否命中和单用时的差别，检验灯与武器两种功能怎样配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先沿当前确能退的路回船，把这轮保住已有收获和回航的目标放在前面",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己已会这段举灯、换武器、接近出刀，仍想亲手把这套输入连着做，就继续享受即时命中与动作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己已经有的影子骷髅与提灯操作说明，再回来继续实际尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "不同原生功能B：灯使夜影可被伤害、武器真正造成伤害；本人单用基线/实际合用，不是一般枪加走位。未知不强贴P，提灯短时效果不保证永久/全部骷髅通用；本槽5V1普通敌入口。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2605.ALT2",
+          "scene": "金属骷髅堵着路，先取水还是用手头装备",
+          "text": "只按本人真遇到金色骷髅来想：眼前还有这种敌人，自己有可用桶、附近也真能取到水，身上现有武器还可用；另有一条当前能走的撤回路线。此刻先做哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_COMBAT",
+            "ST26_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按自己这轮处理眼前敌人的安排去取水、实际泼向它，再用已有武器继续这场交手",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先沿已确认的路撤回，为原定下一段保留眼前状态和弹药，暂不在这里继续打",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不清楚手桶泼水是否也会让这种敌人改变，就先猜只有站到海水里才会；实际向当前仍在的金色骷髅泼水，跟看它可见的状态与行动，若变化不符便修正",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先比较自己已有的武器、桶与携带物资条件，决定这一次实际怎样搭配出手",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "具名金色骷髅与水的实际功能，P本人未知的仅浸海候选可被桶水状态反馈否证，不假HP条/精确伤害统计，不用小样本捕获推几率。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2606",
+      "number": 6,
+      "variants": [
+        {
+          "id": "ST2606.V1",
+          "scene": "出港前的补给，先搜桶还是花钱买一箱",
+          "text": "自己准备从贸易站继续一趟已经能做的短航程，船上木板与食物都不多，眼前已发现有当前确有可取补给的桶，原定短航程也仍能用现有存量继续。先把这一轮给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SUPPLY",
+            "ST26_TREASURE",
+            "ST26_SHIP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先亲自去取这些已经看见、现在确实可拿的桶内补给，暂把黄金留给自己的其他用途",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若商盟当前确向自己开放一项可支付的补给箱，就先买下并带上船，让原定航行尽快开始",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己这次想连续跑几趟、也真有当前能用的返港补给途径，就实际把短航耗材、卖出已得宝物、用所得再补货接成循环；每跑完一趟核对实际消耗和余款，再调整下一趟，亲自连续运行下去",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "若当前店内有已显示的补给交易，就先核对这次要支付的黄金和会拿到的补给，和自己现有资源对照，再决定是否购买",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "普通已知有物桶入口，不把已经能买补给箱设整题门槛；付费省准备时间仅B真可买才买，不硬写箱价或无限连买。Y只有亲自多轮耗材/交货收入/返补真实依赖与调整，不是一张出港清单。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2606.ALT1",
+          "scene": "整条熟鱼还没吃，拿来恢复还是留着卖",
+          "text": "自己真有一条完整、已经烹熟且还没吃过的鱼；生命已经受损，船上另有当前能吃的水果，也有自己已知能收这条鱼的猎人召唤代表可去。下一段先怎样用它？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_FISH",
+            "ST26_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先吃这条完整熟鱼的一口，把当前状态恢复与真实可获得的储备恢复留给接下来的路，接受这条已吃过的鱼不能再整条交售",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先吃现有水果应付这次状态，把完整熟鱼保留下来带去真实可收货处，优先完成这次交售",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不清楚熟鱼留下的储备会不会在刚受伤时立刻补，就先猜会；在自己真有储备、实际受伤的一次跟看生命和储备变化，若不是立刻补便修正，并核对是否仍在持续受伤",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先看自己当前实际生命、储备状态和携带食物，核对这段航行还受哪些状态限制，再作选择",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "熟鱼吃/卖真实互斥、已吃半条不能卖；P未知立即恢复候选与后续真实状态观察可不符，不写8–10或5秒旧分歧精确保证，不要求故意受击。猎人召唤现可在Outposts与Seaposts，不写只海上小站。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2606.ALT2",
+          "scene": "池塘就在眼前，惦记的Pondie还没钓到",
+          "text": "只按本人已到过Devil’s Ridge瀑布前淡水池、当前确能下竿来想：自己有钓竿和携带食物的空位，也能返回船继续原定行程。先把这一段给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_FISH",
+            "ST26_BAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若Bright Pondie仍是本人确实没取得、一直惦记的一种，就在这片已知适合Pondies的淡水里实际抛钓，追这一项个人缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先收竿回船，把时间留给原定路线，不在这会儿继续等目标鱼",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己仍没掌握鱼挣扎时反向拉竿、松下来再收线的衔接，就在这次真实咬钩时练这些动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "若自己已会拉竿与收线，仍想亲手接住鱼的转向、线的变化和声音反馈，就继续这一段操作本身",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "明确淡水Pondie地点/个人Bright缺项C，不借免费目录或普通赚钱鱼普遍C；没有保证稀有必咬/固定抛数，F不是挂机等鱼，T个人未熟局部。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2607",
+      "number": 7,
+      "variants": [
+        {
+          "id": "ST2607.V1",
+          "scene": "沉船已经在眼前，先下水还是带现有收获回港",
+          "text": "自己沿普通海路走到一处真正看见的沉船旁，船还能停在当前能操作的水面；船上已有这趟取得的宝物，原定回港路线也能继续。眼前先投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_TOOLS",
+            "ST26_FISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若沉船内部本人尚未进去过，就亲自下水看那片当前真能进入的空间，重在认识它",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先带已有宝物沿原定路回港，把这一趟实际交售目标做完，暂不追加下潜",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己还不熟悉下潜、找回船身和回水面的衔接，就用这次实际可走的短段练这些操作，不先追最深处",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己当前实际生命与携带食物，确认这段探索还受哪些状态限制，再决定这一轮是否下水",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "当前确实看见沉船不把所有海鸟都当沉船保证；W本人未访可进入空间，不称HUD有并不存在的氧气数值条/无敌下潜。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2607.ALT1",
+          "scene": "宝库钥匙已经拿到，交给淘金者还是自己开库",
+          "text": "只按本人真完成过一段Golden Wayfinder寻钥、现在已拿到一把可用宝库钥匙来想：自己已经确认这把钥匙对应哪座当前能到的宝库，也能带它去淘金者处交售。先把钥匙给哪件事？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TREASURE",
+            "ST26_SHIP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把钥匙带去当前能收它的淘金者处，推进自己这次把已得物品变成交付成果的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先到实际匹配这把钥匙的宝库开门，把这轮行程给自己选定的入库搜寻，不把钥匙拿去卖",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若那座宝库内部本人从没进去过，就实际用钥匙进入，重在第一次认识那片空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先到当前已能查看的宝库入口核对现场与真实交互提示，再决定这次是否开门",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "原生GoldHoarders钥匙可售或开库，不与Shroudbreaker图腾混名/互用；不写尚未取到奖励已收齐、不承诺开库无时限/退路永久安全。普通7V1沉船入口不需要钥匙。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2607.ALT2",
+          "scene": "破雾号祭坛还没点火，要现在开始机关吗",
+          "text": "只按本人已经用正确图腾打开《破雾号》的一座Ancient Vault来想：祭坛四角还没全点亮，自己手中书页当前这一版有三行、每行四个符号，至少一行含不止一种图案；船上另有已得、可交售的普通宝物，眼下仍能走回船。先怎样定？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按这页已经呈现的线索排清自己这一轮转柱与确认的次序，再亲手点亮祭坛、照安排求解",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "先返回船把已得普通宝物交出去，把那次时间先给已定的交售目标，机关暂不启动",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若本人还不清楚这一版是否只看图案种类、不看摆放位置，就先提出这个猜想；真正启动后，选一行把同样图案调成不同位置并确认，核对是否通过，不符便修正",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "若同场真有愿回应的伙伴，就先约好谁读当前行、谁转哪些柱和谁确认，再按共同求解安排启动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "具体首TallTale四柱非计数版，开始前可选择实际其他目标；P本人未知总类与位置候选能失败，题干不教答案/不保证测试后一定来得及。排旧guide失败必全章节重来/无checkpoint说法，不把真人设全题门槛。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2608",
+      "number": 8,
+      "variants": [
+        {
+          "id": "ST2608.V1",
+          "scene": "衣装箱已能保存整套，出海前还要改这身吗",
+          "text": "自己在当前可用的衣装箱前，已有几件真的能穿戴的衣物；原定航程也能开始，眼前可以先搭配这一身，再决定何时离开贸易站。更愿把这会儿给什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_CURRENT",
+            "ST26_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手改这次已有衣物的组合与细节，让接下来穿出去的样子符合自己想要的海盗风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先离开衣装箱上船，把时间投入自己已经选定的航程，外观留后",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己当前确已有保存的整套方案，就实际重命名这份已有方案，再继续自己的穿搭",
+              "signal": "creative_preset_organize"
+            },
+            {
+              "id": "D",
+              "label": "若有真愿回应的同好，就拿这次自己实际搭出的装扮一起聊，重在共享海盗形象与出航经历",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "3.9.1当前统一ClothingChest/OutfitSaving，VanityChest已移除；PRESET仅真已保存者，A实际改组合，不要求付费服装，不把纯换衣数值当战力成长。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2608.ALT1",
+          "scene": "码头边的曲子还能接着奏，航程也能走了",
+          "text": "自己已经在熟悉的贸易站码头拿起过乐器，当前仍有可用的班卓琴或手风琴等原生乐器；自己精力还足，下一段已定航程也真能继续。这一会儿愿意给哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TOOLS",
+            "ST26_MODES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续按自己的节奏留在熟悉码头奏一会儿，把自主停留本身当作这次想做的事",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先收起乐器上船，把时间留给已经选好的下一段航行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若有真愿回应、也想一起奏的同伴，就实际一起接上这首原生曲子，重在两人共同留下的这一段",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "先换到自己已经拥有的另一种乐器，亲手试它在这首原生曲子中怎样响起",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "普通单人乐器/熟悉码头入口；原生自动旋律不是玩家主动逐音F，不虚构自由编曲或手机专属节奏模式；H有余力和其他实际航程，O真人局部。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2608.ALT2",
+          "scene": "两艘玩家船愿意谈联盟，先约目标还是先同游",
+          "text": "只按本人真在High Seas遇到另一艘愿回应、已表示愿意谈合作的玩家船来想：两边当前都能用船上旗箱的联盟功能，也各有实际能走的下一段海路。先愿意怎样接这次相遇？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_MODES",
+            "ST26_SHIP",
+            "ST26_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先谈清要共同去的地点、谁运哪批已得宝物和何时会合，再按双方同意的联盟安排实际航行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先一起在当前都能到的船边或岛岸走一段、奏曲聊见闻，把共同经历本身放在前面",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "先按自己原定的独自行程离开，把这趟时间继续给自己的既定目的地",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先补记自己已经到过的会合岛岸与船边位置，留下这段真实到访信息后再决定去向",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "HighSeas愿回应真人合作替代，普通8V1/ALT1单人可答；不保证抬旗对方自动友善、不强写收益比例/敌方船名永可见。记录只本人已经到访的地点信息，不扩到联盟操作过程log。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2609",
+      "number": 9,
+      "variants": [
+        {
+          "id": "ST2609.V1",
+          "scene": "第一批宝箱卖过了，下一次出海前怎么安排",
+          "text": "回想自己真把一批普通宝箱交给淘金者、拿到黄金与声望的一次；当时自己还有已选的下一趟目标，也能到商店用当前已得黄金。后来实际先做过哪件？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TREASURE",
+            "ST26_MODES",
+            "ST26_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按自己这次已经选定的下一趟目标备船出海，把这次已得收获接到新的航行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先买下当时确已开放、自己真付得起的一件服饰，再实际穿搭这套已有物品，让这次收获留下自己的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "只在当时还不知道继承规则、旧船真留有未售箱且后来确独自新开航行时，先猜黄金和未售箱都会带过去；实际前后核对已记黄金与箱子，不符便修正，并排除消费和误回旧航行",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "补记本人这趟真正拿到过的宝箱和已到过的交售地点，不把尚未挖到的物品先列成实得",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "真实交售/重开航行后果回顾，黄金声望持久与未售船上货不同；P只本人当时未知、真有前后对照，不把重连旧船误作新开，不要求为测试扔贵重物。B真实支付可用服饰后实际搭，不由钱多推现实品格。 独审把新开航行和旧船未售箱的实际前提只留P选项，普通交售回顾不要求所有人已经退出重开；其他人可在同一次真实交售后选择普通继续航程/实际穿搭/实得信息。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2609.ALT1",
+          "scene": "淘金者声望又涨了，这次继续养这条进度吗",
+          "text": "只回想本人已用同一个海盗持续跑过数趟淘金者航程、亲见自己声望升级，后来一次交售又增加过这条进度的经历；当时仍有自己真能做、也还能增加声望的下一趟航程，另有可玩的其他目标。后来更愿怎样投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TREASURE",
+            "ST26_MODES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续培养这个同一海盗已经投入过的淘金者声望，实际再跑当前能增加它的航程，想看自己此前的积累继续留下成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把那次时间给自己另外已经选好的探索或故事目标，不为再升声望继续跑同一类航程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若当时已知道一处本人尚未去过、当前真能登上的岛，就改去认识那片空间，不先要求它再给淘金者经验",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "若有真愿回应的同好，就一起聊自己这几趟实际跑过的路和晋升经历，重在共同回顾",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "G为同一个玩家海盗持久公司声望，已持续投入/亲见升级且本次真可继续；不说NPC成长、武器皮肤增伤。Safer若已达当前25上限，不适用这题继续加声望前提；无固定最高等级断言。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2609.ALT2",
+          "scene": "老水手钥匙打开了暗舱，离岛前再看哪一处",
+          "text": "只回想本人在Maiden Voyage的Old Sailor’s Isle真正找到Old Sailor’s Key、开过Pirate Lord秘密暗舱的一次；当时还没离开教程岛，岛上也仍有自己实际能走的地方。后来更愿把离岛前这一段给什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_MAIDEN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读自己当时已经接触到的Ramsey航海文字，把这处旧船与他讲过的入海往事接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "若本人惦记一本尚未读过、当前真能去到的教程岛日记，就亲自去找并读到它，补自己想要的这一项记录缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先回海滩向Ramsey接上真实可继续的离岛流程，把这次穿过迷雾出航的目标做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若有真愿回应的同好，就一起聊自己实际找到钥匙和暗舱的经历，重在共享这段发现",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "单人教程原生钥匙/暗舱/日记与Ramsey，不假教程里有联机同伴。B个人惦记、已知未读且可达；不把重复教程25000/200奖励当无限可刷，不把暗舱过程log用REC。 独审C对应原题离岛中性目标，收藏绑定只在B，不将单纯被提示可读新日记自动判收集动机。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2610",
+      "number": 10,
+      "variants": [
+        {
+          "id": "ST2610.V1",
+          "scene": "真正补过船洞之后，下一段还会怎样看船",
+          "text": "回想本人真用木板补过一处船舱破洞、舀过积水，后来继续航行并亲历后续船体状况的一次；当时自己还可继续已定路线，也能把注意力留给真实出现的船体问题。后来更愿怎样接着处理？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先继续当时已经选定的下一处目的地，让这次已经做过的维修服务本趟航行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "若当时仍有新的可修洞口、而本人还没掌握补洞与倒水衔接，就围绕这一处真实问题练修正，重在自己把操作接稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "若本人当时还不清楚补过的位置以后是否永不再破，就先提出这个猜想；在后来同一位置实际又受击的一次查看原处状态，若再见漏水就修正，不把没再次受击当验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "为本人已经实际补过的部件、舀水步骤和当时见过的结果补记维修过程，留下这轮亲手处理的记录",
+              "signal": "work_task_process_recording"
+            }
+          ],
+          "design_purpose": "原生木板维修实际回顾，P之前未知、必须同处真再受击后的状态可不符，题干不先告诉重漏水。维修过程用严格亲手维修copy，不借game_recording扩动作日志；与3V1当场堵/排优先有有限交叉，但不是同四项过去式。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2610.ALT1",
+          "scene": "破雾号交出去了，通往黄金海岸的事却还没完",
+          "text": "只回想本人真把Shroudbreaker交回神秘陌生人、听到它还缺重要石头并被指向Olivia的一次；当时自己已经得到这次故事的收尾，也有能继续的其他航程。后来更愿把下一段给什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TALE",
+            "ST26_CURRENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续把自己刚听到的缺石与Ramsey想抵达黄金海岸的线索接起来，关注下一段人物与故事怎样展开",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "若这次真实取得的Pirate Lord帽子已经在自己衣装中，就实际换上并调整已有衣物，让这段冒险留下自己喜欢的形象",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先离开这条故事线，回到自己当时已经选定的其他航程，把时间给那个目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "若有真愿回应、也愿听这段剧情的同好，就一起聊自己亲历的机关、撤离和交付，重在共享这个故事",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "具名首TallTale交付后缺四石/去Olivia，与7ALT2机关启动不同真实后果；帽子必须已经取得再换。NPC不Q，O只愿回应真人且愿听剧情。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2610.ALT2",
+          "scene": "喝过格罗格以后，脚下的摇晃还跟着自己",
+          "text": "回想本人真在船上喝过格罗格酒、随后亲手经历角色摇晃的一次；当时船边有自己实际能走上的岛岸或码头，也有可放物品的位置和已经拥有的乐器。后来更愿先做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人当时还以为所有摇晃都只来自船，就先保留这个解释，实际走到当时能到的岸地，查看角色是否还摇晃；若仍有不符就修正，也核对自己没在这之间继续喝",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先把这次手头能放的东西放到当前真实可用的位置，推进自己当时先收整物品的目标，再接其他活动",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先拿自己已有的一种乐器实际奏一段，亲手体验这次摇晃状态下它怎样响起",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "若有真愿回应的同伴，就一起聊或看这次自己实际发生的狼狈场面，重在两人共享这个小插曲",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "原生grog摇晃与醉奏，不虚构现实饮酒效果/鼓励现实饮酒；P本人未知的仅船解释能被岸地继续摇晃否证，不预教答案，音乐自动旋律只OP不F。普通可选饮酒经历，不是所有人默认喝过。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2611",
+      "number": 11,
+      "variants": [
+        {
+          "id": "ST2611.V1",
+          "scene": "图上的叉终于挖到了，回想刚才怎样认这座岛",
+          "text": "回想本人真拿一张X图上岛、自己找过参照并挖到宝箱的一次；当时仍有能继续的路线，也已经实际走过一些寻宝位置。后来更愿把接下来的注意力给什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TREASURE",
+            "ST26_NAV",
+            "ST26_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人当时还猜纸图上沿会随着自己面向改变，就在同一个实际地点转身前后重新看同一张图，和罗盘、眼前海岸参照对照；若与猜想不符便修正",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "若附近另一个当前真能进入的洞口本人尚未去过，就亲自去认识它，不为重复刚挖过的位置停留",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先把已经取得的这只箱子带回船，推进自己当时把本次收获装船的目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "补记自己为这张图已经实际试过的参照位置、下铲处与真实反馈，留下这段解谜过程",
+              "signal": "puzzle_process_recording"
+            }
+          ],
+          "design_purpose": "普通X图已挖出一箱的早期回顾；P当时未知图向与朝向候选可被同地转身观测否证，不教答案；PROC仅本次实际解谜尝试，不拿未去位置充记录。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2611.ALT1",
+          "scene": "破雾号第一枚勋章交回后，祭坛影像换了一处",
+          "text": "只回想本人已做完Shroudbreaker转柱部分、还真按祭坛影像挖回并交过第一枚Vault Medallion的一次；当时影像已经换成另一处，自己仍能继续岛上搜索，也能暂回船处理已有事。后来更愿怎样接这一轮？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按自己当时选定的继续机关目标，带着新影像再去岛上找下一枚真实需要的勋章",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把新影像的地形与自己已经走过的岛上参照排一个实际搜索顺序，再亲手照这个解谜安排去找",
+              "signal": "puzzle_action_plan"
+            },
+            {
+              "id": "C",
+              "label": "先回看自己当时已取得的传说书页与已读人物线索，关注这些勋章与古代遗物怎样连到Ramsey的旅程",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "若当时有真愿回应的同伴，就先分清谁对照影像、谁去哪些已可达区域、何时带回，再按共同搜索安排行动",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "具名第一枚交回触发新影像，是前段柱谜之后不同依赖目标，不把三次勋章流程硬当Y；不保证用旧固定坐标解决所有变体，不要求真人才全题能答。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2611.ALT2",
+          "scene": "美人鱼送自己回了船，岸边小艇后来怎样了",
+          "text": "回想本人真离船一段距离、与已经出现的美人鱼交互后回到自己当时船上的一次；那次自己此前还亲自用过一艘小艇，并把它留在岸边，也仍有当前能继续的原定航路。后来更愿先做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人当时还猜这次交互会把那艘小艇一并带回主船，就先保留猜想，再实际查看船尾并返回原岸边核对那艘艇；若它仍在原处、船后也没靠接，就修正，查不清便保留不确定",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先接回当时已经选好的航路，把这次回船机会用于继续目的地目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先到当时真实可用的军械库比较自己已有、当前可装备的武器，再决定下一段怎样带",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "只在精力充足、原定航路等其他事情也能做时，仍想在已熟悉的船上按自己的节奏取放资源、走走看看",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "原生美人鱼返回玩家/小艇需亲划靠接，不虚构拿箱免费传送；P须本人原艇可实查、途中未被别人挪动的真实范围，单凭没见不算验证。不是NPC协调或自动导航服务Q。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    },
+    {
+      "id": "ST2612",
+      "number": 12,
+      "variants": [
+        {
+          "id": "ST2612.V1",
+          "scene": "自己定的不看海图返港规则，刚才已经违规了",
+          "text": "只回想本人真自加过“从这座已知小岛只靠罗盘和岛形返回原港，不查看海图”的规则，实际航行过、却因打开海图而自己判失败的一次；当时船仍能驾驶，现有海路也能回到自己选定的起点。后来更愿怎样接着玩？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_SHIP",
+            "ST26_NAV",
+            "ST26_TOOLS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续玩自己这条额外规则，亲自驶回实际起点；这次先辨清岛形、用罗盘对齐再出发，重新跑同一条可走航路，再开海图仍按先定规则判失败",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先放下额外限制，用原生海图继续自己那次已经选好的目的地，不再为这条规则返航",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "若自己当时真正没掌握的是看岛形、罗盘与航向衔接，就单独练那个难点，重在练会而不必保持整条自订玩法",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己当时已有的海图与罗盘操作说明，再决定是否重跑这段实际航路",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "I是本人真自加规则、运行、违规失败、实际驶回手动重试；不是原生预设模式/自动重置世界，不假装已经看过的地图知识会被抹掉。本槽12ALT2普通回港入口。 独审明确结束失败一轮、真返起点后改起航准备再实跑，非只宣称喜欢自订规则或一键抹除原地图知识。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2612.ALT1",
+          "scene": "一条鱼已经交出去了，猎人召唤的缺项还记着",
+          "text": "回想本人真把一条完整鱼交给猎人召唤代表、实际看见过自己相关交鱼进度变化的一次；当时仍能回已知钓点，也能继续原定其他航程。后来更愿给哪件事时间？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_FISH",
+            "ST26_BAIT",
+            "ST26_MODES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "若本人还惦记一项自己未完成的Bright Pondie交售，就去自己已经知道、当前可到的Pondie淡水钓点实际抛钓，真钓到后留完整再交，追这一项缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先接回自己当时已经选定的其他航程，不为这一项交鱼进度延后本来的目的地",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "只在自己精力足、其他航程也可做时，仍更愿回已经熟悉的水边按自己的节奏钓一会儿，让熟悉过程本身值得停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "补记本人这次真正取得过的鱼种与已经到过的交售地点，留下这次实得与到访信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "鱼已交出、个人交鱼缺项牵动下一趟C，不是6ALT2即时咬钩T/F改过去式。钓到不保证、只有完整鱼才留交，H非因为难度低/没活动可做，REC不记虚构未钓到鱼。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        },
+        {
+          "id": "ST2612.ALT2",
+          "scene": "一趟路走完回到贸易站，还要立刻再出海吗",
+          "text": "回想自己已经完成过一趟普通出航、回到自己熟悉贸易站的一次；当时精力还足，下一趟已定航程也可继续，站内还有自己当时真能交谈的人物与能进的商店。后来愿把这一小会儿给哪里？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ST26_CORE",
+            "ST26_TREASURE",
+            "ST26_MODES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "仍想在熟悉贸易站按自己的节奏走走停停，让自主停留本身成为那会儿想做的事",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先上船接下一趟已经选定的航程，把余下时间继续给到达或交付目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先听当时能交谈的人物已经提供的海上传说与处境，把自己亲历的这趟路和这些故事接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "若自己此前一直在补一套服饰、当前店里正有本人最后还缺且真付得起的一件，就实际去买到它，补这一处已知缺项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "12槽普通早期回港入口，不要求自订挑战/鱼/限时活动；H余力与真实其他航程明确，S只当前真提供的已知人物信息，C真实旧套装个人末缺/实际购买，不把所有逛店一律C。",
+          "interpretation_boundary": "仅原生PC Sea of Thieves当前普通航海/航程，一套按本人真实经历换题。基本航海与已开航程为入口，不默认有自购船、使者、传奇海盗资格、限时活动、CustomSeas或付费外观。HighSeas其他人类船/联盟/对抗仅相应真实前提；SaferSeas无其他玩家船队，不把旧30%奖励/40声望或旧Arena写成现行。工具、进度、材料、地图、个人缺项、未知与未熟按本人实际；真人合作/分享/胜负仅愿回应或真实参赛者，NPC/骷髅不是真人。有限三替代不保证所有历史，没体验继续换已核专属，不跳过；12专属+4共享共16，最多2补问。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+ac836d4b9f9b"
+}

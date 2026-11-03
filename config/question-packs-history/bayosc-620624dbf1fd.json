@@ -1,0 +1,938 @@
+{
+  "id": "bayosc",
+  "title": "猎天使魔女",
+  "game_ids": [
+    "steam-460790"
+  ],
+  "scope": "初代PC本体；只有已体验的难度与武器，Alfheim可换早期普通遭遇",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "仅初代PC机制；武器兼容、Torture提示、Witch Time敌人与难度均在题干限定。",
+    "没有Alfheim或未取得后续武器的玩家可用早期普通遭遇替代；不强迫纯白金。",
+    "9—12及替代均为已发生体验；没有NPC真人化，也没有用固定剧情推断现实道德。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "初代PC本体；只有已体验的难度与武器，Alfheim可换早期普通遭遇",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "BAYOSC01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "当前是普通能触发Witch Time的敌人与难度，你已经看过它的起手；闪避后短暂慢下来的窗口可用来接攻击。几轮交手先给什么重点？",
+          "scene": "Witch Time刚出现的那一轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门练接近命中前闪避、再出手的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "连续体验闪避、慢动作与手脚攻击的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "对照敌人动作、闪避与窗口长短，解释这一轮能接到哪里",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "主动换一个平常没用的进场与出招次序，试慢动作中的新接法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "明确目标和难度能触发Witch Time；不要求无限高潮，不声称所有敌人都给慢动作。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC01.V1"
+        },
+        {
+          "text": "还没研究Witch Time，只用过最初手脚攻击与闪避；眼前是可重试的普通遭遇。先给什么重点？",
+          "scene": "Witch Time刚出现的那一轮的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练一次闪避后接第一段攻击的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "连续体验手脚命中与闪避的回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "观察敌人出手和自己的距离，解释可接近的窗口",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "有意改一次拳脚与闪避的旧次序试新玩法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "明确目标和难度能触发Witch Time；不要求无限高潮，不声称所有敌人都给慢动作。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "已经取得不止一种武器，装备界面允许把实际兼容的武器放到手、脚并准备两套配置。只先试一组组合，你先做什么？",
+          "scene": "手与脚分开的两套武器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_DEV",
+            "BAYOSC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "针对其中一套的具体连段衔接反复练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "刻意混入自己平常不用的兼容组合，试新打法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "直接打一轮，感受拳脚、枪击与切换连续回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "比较手脚武器的距离、节奏与终结动作，让两套互补",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只取实际拥有且兼容手脚的武器，不声称每件武器都能装脚。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC02.V1"
+        },
+        {
+          "text": "只有起步的Scarborough Fair四支枪，已经会手脚基础动作。几轮普通敌人先做什么？",
+          "scene": "手与脚分开的两套武器的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_DEV",
+            "BAYOSC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "专练一段手脚连招的具体衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "给自己定一条不同于旧习惯的手脚次序试新玩法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "让踢击、拳击和枪声接出直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "比较手部连击、脚部动作与延伸枪击怎样互补",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "只取实际拥有且兼容手脚的武器，不声称每件武器都能装脚。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已知道Dodge Offset可以在按住攻击时闪避，再继续原来的连段；当前有可重试的普通敌人。只留几次尝试，你先做什么？",
+          "scene": "闪避以后连段没有重来",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_OFFSET",
+            "BAYOSC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续感受闪避、续段与Wicked Weave重击的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "故意改一个平常不用的闪避插入点，试原连段的新走法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "反复练按住、闪避、继续下一段的具体节拍",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "比较连段位置、敌人起手与闪避后的间距，解释为何接得上",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "题干已说明操作关系，不考术语或要求固定高阶连招。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC03.V1"
+        },
+        {
+          "text": "还不会Dodge Offset，只会基础拳脚连段和普通闪避。给一轮熟悉遭遇什么注意？",
+          "scene": "闪避以后连段没有重来的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_OFFSET",
+            "BAYOSC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让闪避与拳脚命中连续回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "换一个未用过的拳脚起手与闪避方向试试",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "练闪避结束后重新起手的具体节拍",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "观察敌人收招与自己的落点，解释能接近的时机",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "题干已说明操作关系，不考术语或要求固定高阶连招。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前魔力已足够，面前的普通敌人也已出现Torture Attack可用提示；其余敌人与自己的武器都看得清。先给这一轮什么重点？",
+          "scene": "魔力够一次拷问攻击",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "有意改变以往的消耗时点与进场次序，试另一种打法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "把攻击积累、是否消耗魔力与下一轮补充排成能重复运转的节奏",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "C",
+              "label": "比较武器牵制、拷问移除一只与后续攻击怎样互相接手",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "针对接近敌人、触发拷问再恢复走位的衔接练几次",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只对实际可触发的普通敌人，魔力是战斗资源；没有二代Umbran Climax。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC04.V1"
+        },
+        {
+          "text": "尚未接触拷问攻击，只会基础连段；普通遭遇可重试，魔力会随攻击积累。先给什么重点？",
+          "scene": "魔力够一次拷问攻击的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一次已会拳脚动作与闪避的先后，亲手体验熟悉遭遇里不同的动作衔接",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "持续整理攻击、闪避、积累魔力和下一轮起手的循环",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "C",
+              "label": "比较拳脚不同起手与枪击延伸的互补",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "练一段连段结束后闪避回身的具体时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只对实际可触发的普通敌人，魔力是战斗资源；没有二代Umbran Climax。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "在Gates of Hell，当前Halos够先买一项已开放技巧或可支付的永久体力、魔力上限提升，暂时不能全包。先按什么目标选？",
+          "scene": "Rodin店里的Halos",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把累积投入留成魔女长期保留的能力或上限增长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "补一种能与现有武器互补的已开放技巧",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "买一项陌生技巧，给熟悉天使遭遇试新接法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "给自己正在练的一段动作取得明确需要的技巧",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只问已开放且可支付的商品，不考价格，也不把游戏货币推断成现实花费。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC05.V1"
+        },
+        {
+          "text": "刚能进Rodin的店，Halos只够先买一项当前开放技巧。你先按什么理由选？",
+          "scene": "Rodin店里的Halos的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这次积累变成魔女长期可用的新能力",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "给现有拳脚和枪击补上一种互补动作",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "选一项没试过的技巧，实际改一轮熟悉打法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "围绕正在练的衔接买到所需动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只问已开放且可支付的商品，不考价格，也不把游戏货币推断成现实花费。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "当前章节仍能回头，手里一张黄金唱片还缺一片；你已有那片的明确线索，旁边也有未知侧路和拿到的Antonio笔记。先给什么时间？",
+          "scene": "唱片还缺的一片",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_DEV",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自去没看过的街角或遗迹侧路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "比较已见建筑、碎片线索与道路，自己解释可达关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "读已有Antonio笔记，接清魔女、贤者与此地的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "补回已知的唱片片段，让这一张完整",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "唱片可交Rodin换取对应武器；不规定完整数量，不承诺所有章节都有缺片。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC06.V1"
+        },
+        {
+          "text": "尚未收过分片唱片，最早章节仍能回头：有已发现的遗漏宝藏、陌生侧路和已拿到的笔记。先给哪项时间？",
+          "scene": "唱片还缺的一片的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_DEV",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自走近没看过的街道角落",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "对照建筑高差与可走通路，自己解释连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "读已经拿到的Antonio笔记，接上人物与世界的来处",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "补拿已发现的宝藏，填上这个收集缺口",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "唱片可交Rodin换取对应武器；不规定完整数量，不承诺所有章节都有缺片。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "当前难度确实有Alfheim，你已发现入口并读到这处挑战规则，允许重试或离开，首次完成能拿到成长碎片。只给一段尝试时间，先做什么？",
+          "scene": "已发现的一处Alfheim",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_GUIDE",
+            "BAYOSC_MANUAL",
+            "BAYOSC_SHARED_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "以补上这处未拿的心脏或月珠碎片作为目标",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "在这处既有挑战允许的动作内，换一次已会攻击与闪避的先后，亲手体验不同衔接",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "先按限制、敌人和场地推清能满足条件的办法",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "针对规则要求的一段闪避或连段具体练习",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Very Easy/Easy不强迫回答不存在的Alfheim；不用精确解法或纯白金门槛。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC07.V1"
+        },
+        {
+          "text": "当前未遇到Alfheim，只能重试早期普通遭遇，旁边有已见且可达的遗漏收集物。先把空档花在哪？",
+          "scene": "已发现的一处Alfheim的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_GUIDE",
+            "BAYOSC_MANUAL",
+            "BAYOSC_SHARED_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先补拿已经看见的那件收集物",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "若正装备自动连击饰品，先取下它；再规定这段禁用全部拳部攻击，只准已有脚部攻击与闪避，亲自按新限制试一段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "对照敌人出手与地形，自己解释可接近的路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "专练一次闪避接第一段攻击的节拍",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Very Easy/Easy不强迫回答不存在的Alfheim；不用精确解法或纯白金门槛。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "已经拿到Antonio笔记，也看过Bayonetta的一段记忆；当前处在熟悉安全位置，前路可以继续。先留什么重点？",
+          "scene": "笔记与已见记忆之间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_STORE",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "精力充足也有章节可推进，仍愿意在熟悉安全处低紧迫慢待一阵",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "把已有笔记和人物片段读看完整，接清已经出现的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "对照笔记说法与已见遗迹，自己解释证据之间的联系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先步行到当前可达的两侧，查看墙面与通路，再到出口继续",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只问已出现记忆，不要求结局；步行查看两侧只记录当次现场行为，不把从容猎魔者称号当角色身份依据。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC08.V1"
+        },
+        {
+          "text": "只看过开头片段和最早一页笔记，现在熟悉的安全处能停一会。先做什么？",
+          "scene": "笔记与已见记忆之间的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BAYOSC_STORE",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "还有精力和主路可走，也愿意在这里自主慢待一阵",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "把已经出现的记忆与讲述再接完整",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "对照笔记与眼前符号，自己解释两者的关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先到熟悉街道两侧当前能去的位置查看，再回来接上主路",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只问已出现记忆，不要求结局；步行查看两侧只记录当次现场行为，不把从容猎魔者称号当角色身份依据。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想实际玩过的一次普通战斗，哪种已经发生的体验更有分量？",
+          "scene": "闪避接回攻击的那一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAYOSC_OFFSET",
+            "BAYOSC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "闪避、慢动作或手脚命中连起来的直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己专练的一段闪避续段或重新起手，后来比开始更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己比较过手脚武器与技巧，实际形成了互补的用法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己改过一次闪避插入与拳脚动作的先后，亲手体验了不同接法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "不要求已经掌握Dodge Offset或必定触发Witch Time。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC09.V1"
+        },
+        {
+          "text": "只回想最早实际用Scarborough Fair打过的一轮，哪部分当时更鲜明？",
+          "scene": "闪避接回攻击的那一段的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAYOSC_OFFSET",
+            "BAYOSC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拳脚、枪声与闪避接上的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己练过的一段闪避后起手比开始更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "手部连击、脚部动作与延伸枪击被自己配成了互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己换过一次已会拳脚与闪避的先后，亲手体验了不同动作次序",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "不要求已经掌握Dodge Offset或必定触发Witch Time。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想实际在Rodin处购买并使用过的一项长期可用技巧或装备，哪种已经发生的过程更有分量？",
+          "scene": "店里买来的能力已经留下",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "买来的技巧或装备与原有武器形成了互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己专练过与这项购买有关的一段动作，后来更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己用陌生技巧或装备主动改变过熟悉遭遇的打法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "自己积累的Halos最终留下了长期可用的技巧或装备增长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "不把临时回复道具当永久成长；只选择实际买过且使用过的项目。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC10.V1"
+        },
+        {
+          "text": "尚未买过能力，只回想开头实际经历过的战斗和片段，哪部分更鲜明？",
+          "scene": "店里买来的能力已经留下的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把拳脚和枪击配成了互补的一套",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己练过一次闪避接攻击，后来更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己主动改过出手次序，试了一种少用的打法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "Bayonetta已经显露的记忆与人物经历连成了故事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "不把临时回复道具当永久成长；只选择实际买过且使用过的项目。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想实际在一段街道或遗迹中停留过的过程，哪种已经发生的经历更有分量？",
+          "scene": "唱片与Antonio的页码",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把建筑符号、记载与道路联系推成了一段解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己亲自走进一处原先不知道的侧路或空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "唱片、笔记或已记住的碎片缺口被自己实际补上",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "一页Antonio笔记与人物片段接成了具体故事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "收集完成、故事阅读、证据解释与未知发现分别记录；不考资料内容。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC11.V1"
+        },
+        {
+          "text": "只回想最早实际走过的街道与拿到的笔记，哪种过程更有分量？",
+          "scene": "唱片与Antonio的页码的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己把墙面符号与能走的路线关系想清楚",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己偏离原路线，亲自走近了陌生角落",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "自己已记住的一件遗漏物后来被补回",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "最早的笔记让已经出现的人物与世界有了来处",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "收集完成、故事阅读、证据解释与未知发现分别记录；不考资料内容。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "BAYOSC12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一章已经结束、奖牌已经出现的经历，哪种当时的体验更鲜明？",
+          "scene": "章节奖牌出现以后",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己针对一处续段或闪避时机做过练习，并在这章里变得更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己追过事先定的个人章节纪录，并实际比较过新旧评价",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "拳脚、枪击、闪避与重击连续回应的畅快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "自己在这章里曾先走到当前可达的两侧，查看场地与出口，再继续接敌",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只回顾实际章节；个人纪录与练习分开，普通场地查看不加身份分，也不由奖牌推断实力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC12.V1"
+        },
+        {
+          "text": "只回想最早一章已经结算的经历，哪部分当时更有分量？",
+          "scene": "章节奖牌出现以后的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BAYOSC_MANUAL",
+            "BAYOSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己练过的一次闪避后起手在实战里变得更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己曾给这章定评价目标，并实际对照了这次与旧记录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "手脚攻击、枪声和闪避直接接上的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "自己曾在最早这章先查看当前能到的街道两侧，再回来继续前进",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "只回顾实际章节；个人纪录与练习分开，普通场地查看不加身份分，也不由奖牌推断实力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "BAYOSC12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+620624dbf1fd"
+}

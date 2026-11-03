@@ -1,0 +1,946 @@
+{
+  "id": "returnal",
+  "title": "死亡回归 Returnal",
+  "game_ids": [
+    "steam-1649240"
+  ],
+  "scope": "本体单人循环与早期弹幕战斗；不要求高塔、合作或结局",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "本体循环、肾上腺素、当次武器熟练度、可保留的特性解锁进度分别处理；不强制高塔DLC、合作或结局。",
+    "寄生物、制造器、钥匙、首领和过载均有早期普通房间的手写替代；剧情可提，但不要求完整理解。",
+    "当次成长与永久保留的知识、工具、特性明确区分；题目不推断现实抗挫、自控或心理健康。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体单人循环与早期弹幕战斗；不要求高塔、合作或结局",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "RETURNAL01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "又一次从坠毁处出发，同一区域的房间连接已经变了；眼前既能沿主目标推进，也能进侧门。当前循环只先给自己定一件事，你先做什么？",
+          "scene": "再次从坠毁处出发",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_PREVIEW",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入一扇没见过的侧门，看看这次重新组合出了什么空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先把已知补给、制造器与前进方向接成一程，给这次循环排清资源使用",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "留意侦察日志与信号，接上塞勒涅这次循环留下的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先走几间熟悉房间，专练一种上次没处理稳的弹幕时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "循环内探索、资源流程、叙事与动作练习分开，不把熟练度当永久养成。",
+          "interpretation_boundary": "只解释当次循环的目标；熟练度、武器和完整度变化不全都跨循环保留，不能混作永久养成。",
+          "id": "RETURNAL01.V1"
+        },
+        {
+          "text": "只经历过最早几次醒来，还没去过其他区域；这次离开坠毁处，先把下一段留给什么？",
+          "scene": "再次从坠毁处出发的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_PREVIEW",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看一条这次出现、上次没走过的房间连接",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把已见到的治疗位置、消耗品和下一段交火排成一条流程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "听一段已找到的日志，把陌生信号与自己的经历接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "认真在熟悉房里练一次看清弹幕再躲开的时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "循环内探索、资源流程、叙事与动作练习分开，不把熟练度当永久养成。",
+          "interpretation_boundary": "只解释当次循环的目标；熟练度、武器和完整度变化不全都跨循环保留，不能混作永久养成。",
+          "id": "RETURNAL01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "清房后出现另一把武器，明确带有一项未解锁特性；它的副攻击与当前这把也有不同。当前武器已顺手，携枪只能留一把。你先怎样决定是否换过去？",
+          "scene": "地上的另一把武器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_PREVIEW",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留熟悉武器，把一个还不稳的过载或出手时机继续练清楚",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "挑带有未解锁特性的武器，投入这一趟积累可跨循环保留的特性进度",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "换成自己少用的武器或副攻击，认真试一段不同的战斗方式",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "看新特性与当前遗物或战斗方式能否互相触发，形成一套配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "单把武器取舍明确区分当次熟练度与可保留的特性解锁。",
+          "interpretation_boundary": "V1的未解锁特性在解锁前不能当作已生效，永久特性进度与当次熟练度分开；ALT1独立记录机制推理，不要求未解锁特性掉落，也不声称等值。",
+          "id": "RETURNAL02.V1"
+        },
+        {
+          "text": "还没解锁多少武器特性，只在普通手枪和另一把已见武器之间选；下一段你更想先做什么？",
+          "scene": "地上的另一把武器的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_PREVIEW",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续熟悉武器，专练一次提示到按下过载的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "比较两把枪的弹道与过载窗口，检验它们在同一场地会留下哪些出手空隙",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "带上较少用的那把，看看它会让自己的移动和距离怎样改变",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "看看主射击与副攻击能否和当前物品互相补位",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "单把武器取舍明确区分当次熟练度与可保留的特性解锁。",
+          "interpretation_boundary": "V1的未解锁特性在解锁前不能当作已生效，永久特性进度与当次熟练度分开；ALT1独立记录机制推理，不要求未解锁特性掉落，也不声称等值。",
+          "id": "RETURNAL02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "这场战斗已积累一些肾上腺素，场上仍有敌人与弹幕，掉落的欧波粒又不会一直等着你。自己能继续处理场面时，先把注意留给什么？",
+          "scene": "肾上腺素和将消失的拾取物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让冲刺、开火与拾取尽量连续，保持动作不断给回应的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先读清弹幕空隙和可退位置，再决定从哪边进入掉落区域",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把收集欧波粒、脱离和之后制造器的花费接成一段安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "盯住一类熟悉弹幕，练一次避开受击后再靠近的时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "短暂掉落、受击重置肾上腺素和空间压力共同构成取舍，不要求无伤。",
+          "interpretation_boundary": "肾上腺素由战斗维持，受击会重置；不是人物心理状态或永久熟练度，也不按是否追拾取评价勇敢。",
+          "id": "RETURNAL03.V1"
+        },
+        {
+          "text": "肾上腺素刚被受击清掉，还在最早熟悉的房间交火；下一段只留一个关注点，你选什么？",
+          "scene": "肾上腺素和将消失的拾取物的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续把移动、开火与命中接在同一个节奏里",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先观察墙角和弹道，找一片自己能来回移动的空间",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把场上可取资源与下一处补给的用途排清楚",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "只练一种弹幕前躲开再还击的时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "短暂掉落、受击重置肾上腺素和空间压力共同构成取舍，不要求无伤。",
+          "interpretation_boundary": "肾上腺素由战斗维持，受击会重置；不是人物心理状态或永久熟练度，也不按是否追拾取评价勇敢。",
+          "id": "RETURNAL03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "眼前寄生物同时写着收益与副作用，你也有一套已经能继续的武器和物品。可以接上，也可以留在地上；先围绕什么做这个决定？",
+          "scene": "寄生物显示两面的效果",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这趟治疗、消耗品与后续购买的余量，决定是否把资源留给别的调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "看收益能否与当前遗物、武器特性接成一套，副作用是否会打断这套配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "对照副作用涉及的动作与眼前地形，弄清接上后哪些原有做法需要改变",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把它当一次改变规则的实验，给自己少用的收益与限制完整试一段",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "读取已显示的利弊，不预设寄生物好坏，也不把接或不接等同冒险人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL04.V1"
+        },
+        {
+          "text": "还没接触寄生物，只拿到过会改变战斗的一件消耗品；准备下一次使用时，你先想什么？",
+          "scene": "寄生物显示两面的效果的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把使用时机与之后的治疗、资源和制造器安排衔接",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "它和当前主副攻击或遗物效果能不能接成配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "它的触发与作用范围会改变自己哪些走位",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在熟悉房间试一个平时没用过的时点，看打法能怎样改变",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "读取已显示的利弊，不预设寄生物好坏，也不把接或不接等同冒险人格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "这趟手头只有一把普通钥匙，附近既有锁住的侧门，也有锁箱；主路仍然可以继续。没有明确必须开的目标时，你先把机会给哪里？",
+          "scene": "一把钥匙与两处锁",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "打开侧门，想亲自看看门后会有怎样的房间与岔路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "打开锁箱，检视实际开出的物品，再判断它能否与现有武器或遗物互相补位",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先保留钥匙，把这次开锁机会接到后面沿路遇到的资源安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先不追加开锁内容，去熟悉交火里专练一种仍不稳的弹幕应对",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通钥匙的支路、遗物机会、保留用途与练习时间分开，不混成剧情专用钥匙规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL05.V1"
+        },
+        {
+          "text": "还没遇到过锁门锁箱，只在普通房间外看到可绕开的侧门，主路也已知道；先选一段做什么？",
+          "scene": "一把钥匙与两处锁的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进侧门看看这次循环还有什么没见过的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "检查旁边可获得的物品，想让它和当前武器互相补位",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先记住可回来的拾取位置，把补给留到下一段需要时再接",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "带一个明确练习点继续走，见到熟悉敌人就专练一次躲开时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通钥匙的支路、遗物机会、保留用途与练习时间分开，不混成剧情专用钥匙规则。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "房间已经安静下来，发现一段侦察日志，旁边还有异星文字与建筑细节，下一扇门也已打开。只留一小段安静时间，你先做什么？",
+          "scene": "清房后的侦察日志",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把日志、重复出现的文字与见过的环境对照，尝试自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "回到已记着的位置补一枚未收下的密文，让收集记录少一项缺口",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "带着一个想练稳的弹幕时机，从已开的门接下一段战斗",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "听完日志，接上塞勒涅不同时刻的经历",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "日志叙事、证据解释、密文补全与练习分开，不把剧情推测编成知识考试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL06.V1"
+        },
+        {
+          "text": "只听过开头一段录音，还不能读异星文字；再经过已清静的早期房间，你先把时间给什么？",
+          "scene": "清房后的侦察日志的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照录音和眼前坠毁、尸体或重复场景，想它们怎样相连",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "在已经清静的熟悉房间慢慢停留，暂不追加下一项目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "带一个躲避练习点往前走，下场交火再验证一次时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "重听那段录音，把塞勒涅醒来后的遭遇接清楚",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "日志叙事、证据解释、密文补全与练习分开，不把剧情推测编成知识考试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "到了制造器，欧波粒只够优先做一次有分量的购买，眼前几项都能帮助继续这一趟。你先围绕什么选？",
+          "scene": "制造器前的当次资源",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读清一项不明白的触发条件，买来在熟悉房间验证自己推断的作用",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "拿一项自己通常不买的效果，试着把这一趟变成不同打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "把这次购买与之后治疗、消耗品和路线的需要排成一套安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "选能接上现有遗物与武器特性的效果，让它们真正互相配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "当次货币流程、组合效用、机制求解及实验区分，不当现实消费或长期养成测试。",
+          "interpretation_boundary": "欧波粒与当次最大完整度不视为跨循环永久储蓄；保留与使用都是可行取舍。",
+          "id": "RETURNAL07.V1"
+        },
+        {
+          "text": "还没在制造器购买过，只拿到一件可以暂留或现在使用的消耗品；下一段先用什么理由决定？",
+          "scene": "制造器前的当次资源的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "读清触发条件和起效范围，进下一间熟悉房验证自己理解",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "在熟悉房间用一个平时不选的时点，试出它带来的新打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "把这次使用与沿路治疗、资源和之后的战斗接起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "找能与当前射击、副攻击或已有遗物共同生效的时机",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "当次货币流程、组合效用、机制求解及实验区分，不当现实消费或长期养成测试。",
+          "interpretation_boundary": "欧波粒与当次最大完整度不视为跨循环永久储蓄；保留与使用都是可行取舍。",
+          "id": "RETURNAL07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "这趟已知道怎样去一位见过的首领，旁边还有可选房间；当前状态足以再做一段事。只先给这一趟定一个重点，你先往哪边？",
+          "scene": "首领方向与尚未走完的房间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_DEV",
+            "RETSC_PREVIEW",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回去找一段还没听清的日志，让这次循环的故事接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "直接去见过的首领，专练一组仍没处理稳的弹幕时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "去可选房找能补上当前遗物与武器关系的物品，检验这套配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "进没走过的侧房，想看这次重新组合的区域还有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "去首领、找组合、探索与叙事是不同投入目标，不把暂时堆高状态算长期养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL08.V1"
+        },
+        {
+          "text": "还没见过首领，只知道一个上次让自己倒下的普通房间与几扇侧门；这次先给时间哪项？",
+          "scene": "首领方向与尚未走完的房间的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_DEV",
+            "RETSC_PREVIEW",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "听完已找到的一段录音，接上塞勒涅之前留下的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "回那间熟悉房，专练一次总躲不好的弹幕",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "看看可获得的物品怎样与当前主射击和副攻击互相补位",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "进入一扇没看过的侧门，认识这次不同的房间组合",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "去首领、找组合、探索与叙事是不同投入目标，不把暂时堆高状态算长期养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想实际结束一次循环后又醒来，眼前武器和当次状态已经变了。哪种确实留下过的变化对你更有分量？",
+          "scene": "循环结束后留下了什么",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "使用武器投入的特性解锁进度跨循环保留，让自己看见了持续养成的痕迹",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己记住的一种弹幕时机，在之后实际遭遇里变得更能主动掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "日志与反复相遇的场景已经接起来，让塞勒涅的经历变得具体",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "房间虽然重组，自己仍借地标与结构关系推清了可走方向",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只把特性进度与知识叙事作为保留对象，避免宣称武器熟练度永久保存。",
+          "interpretation_boundary": "ALT1以早期侧门探索替代尚未体验的特性成长，独立记录wanderer而非growth_keeper；不声称动机或测量等值。",
+          "id": "RETURNAL09.V1"
+        },
+        {
+          "text": "还没解锁特性，只回顾实际经历过的开头几次重来，哪种已经发生的变化更有分量？",
+          "scene": "循环结束后留下了什么的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾在新循环走进一扇原来没进的侧门，亲眼发现了新的房间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "一种普通敌人的提示经过自己反复尝试，逐渐变得能看清和应对",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "一段录音与再次醒来的场景接起来，让这次循环有了持续的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "房间变化后，门、平台与来路的关系仍被自己观察并解释清楚",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只把特性进度与知识叙事作为保留对象，避免宣称武器熟练度永久保存。",
+          "interpretation_boundary": "ALT1以早期侧门探索替代尚未体验的特性成长，独立记录wanderer而非growth_keeper；不声称动机或测量等值。",
+          "id": "RETURNAL09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想实际射击后抓住过载窗口，又继续移动应对弹幕的一场。哪部分在当时更有分量？",
+          "scene": "过载接上之后的弹幕战斗",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_PREVIEW",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一个原本总按早或按晚的时机，经过练习变得可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己看懂了弹幕空隙，知道重新开火时能站在哪里",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "主射击、副攻击与已有遗物的作用接在一起，形成了这一场的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "提示、按下、火力恢复和命中连成一串即时回应",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "使用本体共同的过载与空间体验，不依赖自适应扳机或平台按键。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL10.V1"
+        },
+        {
+          "text": "还没掌握过载，只回想最早实际边移动边开枪的一场，哪种当时发生的体验更鲜明？",
+          "scene": "过载接上之后的弹幕战斗的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_PREVIEW",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一次看见弹幕后躲开再还击的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "找到弹幕之间能穿过去的路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "主射击与副攻击分别接住不同距离的那段配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "冲刺、枪声和命中连续发生的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "使用本体共同的过载与空间体验，不依赖自适应扳机或平台按键。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想实际接上一次寄生物后，收益和副作用都影响过战斗。哪种当时发生的过程更有分量？",
+          "scene": "收益与限制真的改变了这一趟",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己主动借它改掉旧习惯，真正试出了一种原先少用的打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "自己为它重新安排过治疗、消耗品与购买，让整趟资源接住了这次变化",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "它与现有遗物或武器特性一起运转，真的撑起了这一趟的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "副作用改变了可用动作，新的规则关系后来被自己理解清楚",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "寄生物影响按实际体验回顾，不把承受限制视为更勇敢或更能忍。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL11.V1"
+        },
+        {
+          "text": "没接过寄生物，只回想实际拿过的一件遗物或消耗品，哪种已经发生的变化更鲜明？",
+          "scene": "收益与限制真的改变了这一趟的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RETSC_DEV",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己主动试过一个少用的时点，原来房间真的出现了另一种处理次序",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "它让这趟的治疗与资源安排有了一段新的衔接",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "它与主副攻击配合后，原来分散的效果接起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己弄明白了触发条件，解释了哪些动作在当时真正让它起效",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "寄生物影响按实际体验回顾，不把承受限制视为更勇敢或更能忍。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "RETURNAL12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想实际见过塞勒涅的房屋、旧录音或重复场景，随后又走回异星区域的一次经历。哪部分在当时更有分量？",
+          "scene": "塞勒涅又回到熟悉又陌生的地方",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾走出重复场景，亲眼发现了一片原来没见过的异星空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "房屋与录音已经接起来，让她的经历变成了越来越具体的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己维持了孤身调查者的身份，实际优先循信号找出路，没有为多刷资源折返",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力也有路可走，自己仍在已清静的熟悉坠毁处附近慢待过一阵",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "叙事、按角色身份行动、自主舒缓与探索分开，不强制房屋后期段落或高塔故事。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL12.V1"
+        },
+        {
+          "text": "只玩过坠毁处与最早录音也可回想；在实际经历的开头那一趟里，哪种片段更有分量？",
+          "scene": "塞勒涅又回到熟悉又陌生的地方的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RETSC_STORE",
+            "RETSC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾推开一扇陌生门，亲眼发现了主路之外的房间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "自己听清过已出现的录音，让反复醒来的经历接成了一段故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己维持了认定的调查者做事方式，实际优先沿信号方向寻找出路",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "当时还能继续前进，也主动在已清静的熟悉开头区域慢待过一阵，没有加新进度",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "叙事、按角色身份行动、自主舒缓与探索分开，不强制房屋后期段落或高塔故事。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "RETURNAL12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+7e9311b66ed5"
+}

@@ -1,0 +1,151 @@
+{
+  "version": "0.4.0",
+  "advice": {
+    "failure": {
+      "title": "受挫之后",
+      "failure_retry": "你通常愿意接着尝试，留意刚才没有处理好的地方。同游时，可以先确认大家愿意继续到什么时候。",
+      "failure_adjust": "你通常愿意先换一处配置或做法，再回来尝试。同游时，可以先留出调整的时间。",
+      "failure_switch": "你通常会先体验其他内容。同游时，可以准备一个大家都接受的替代安排。",
+      "failure_pause": "你通常会先暂停，下次再继续。同游时，可以约好停在哪里、下次从哪里接着来。"
+    },
+    "approach": {
+      "title": "新机制",
+      "try_first": "你通常先自己试几种用法。一起玩时，可以先给彼此留一点尝试空间。",
+      "rules_first": "你通常先找规则说明。开始新内容前，先把基本规则说清楚会更合适。",
+      "build_first": "你通常先参考成熟方案。可以先约好这次要照方案体验，还是边玩边改。",
+      "ask_first": "你通常先向玩过的人提问。可以请对方先确认你想听到哪种程度的提示。"
+    },
+    "guide": {
+      "title": "攻略",
+      "guide_mechanics": "你主要查机制、规则或操作资料。分享攻略时，优先找讲用法的部分。",
+      "guide_completion": "你主要查遗漏和收集位置。一起探索前，先说好是否按清单补齐。",
+      "guide_hint": "你希望拿到提示后回来自己继续。别人可以先给提示，再问是否需要完整答案。",
+      "guide_independent": "你通常愿意先自己尝试。提供攻略前，先确认你这次是否想要。"
+    },
+    "spoiler": {
+      "title": "提前告知",
+      "spoiler_hint": "先给一点提示，保留结果和完整解法。",
+      "spoiler_rules": "可以讲通用规则，具体内容留给你自己体验。",
+      "spoiler_open": "你接受提前讲清内容或解法。同游时仍需单独确认对方的边界。",
+      "spoiler_ask": "每次先确认你体验到哪里、这次愿意听多少。"
+    },
+    "replay": {
+      "title": "重玩",
+      "replay_willing": "你通常愿意重温已有内容，或换一种玩法再体验。可以具体约一次重玩的目标。",
+      "replay_time_limited": "你有重玩兴趣，但当前时间受限。约重玩时，先确认需要投入的时间和节奏。",
+      "replay_new_first": "你通常更想体验新作品。安排同游时，先谈新内容，而不是默认重玩旧流程。",
+      "replay_not_yet": "你还没到考虑重玩的阶段，暂时不能据此判断二刷偏好。"
+    },
+    "mod": {
+      "title": "Mod",
+      "mod_use": "你选择有条件时会使用Mod。一起玩前，另行确认用途、版本和双方是否都能使用。",
+      "mod_original": "你更想保留原版体验。约好统一的内容与版本即可。",
+      "mod_limited": "你的平台、版本或安装条件限制了Mod使用。先确认可行性；这不计入人格分。",
+      "mod_unknown": "你还未接触这方面。有人推荐时，可以先介绍用途和使用条件。"
+    },
+    "pace": {
+      "title": "推进节奏",
+      "pace_planned": "你通常接着已排好的目标推进。同行前，可以先约定这次要完成的内容。",
+      "pace_flexible": "你愿意跟随眼前兴趣调整安排。同行前，可以为临时探索留出空间。",
+      "pace_deep": "你会围绕一件惦记的内容继续深入。可以约好何时停下来、何时再推进。",
+      "pace_shared": "你会先和同好约好体验或交流进度。先确认彼此的时间与进度会更合适。"
+    },
+    "coop": {
+      "title": "一起玩的安排",
+      "A": "你更期待一起体验与聊天，让进度跟着大家的兴趣走。",
+      "B": "你更期待先约定目标和分工，再共同推进。",
+      "C": "你接受各自保留节奏，之后分享经历。",
+      "D": "你期待通过角色身份，共同经历故事。"
+    }
+  },
+  "rule_specs": [
+    {
+      "id": "P_PRIMARY",
+      "when": {
+        "winner_is": "persona_id",
+        "minimum_supporting_questions": 2
+      },
+      "copy_source": "persona_details",
+      "evidence": "up to first 3 supporting answers",
+      "fallback": "single scenario only"
+    },
+    {
+      "id": "P_SECOND_DETAIL",
+      "when": {
+        "highest_other_persona_points_gt": 0
+      },
+      "copy_source": "persona_details",
+      "evidence": "up to first 2 supporting answers",
+      "fallback": "single scenario only"
+    },
+    {
+      "id": "H_DETAIL",
+      "when": {
+        "replay_time_limited": "use replay copy",
+        "otherwise": "use guide copy"
+      },
+      "evidence": "G09 or G07"
+    },
+    {
+      "id": "GAME_ATTRACTION",
+      "when": {
+        "selected_question_id_in": [
+          "G01",
+          "G02",
+          "G03",
+          "G04"
+        ]
+      },
+      "copy_source": "selected option report",
+      "evidence": "corresponding actual selected answer"
+    },
+    {
+      "id": "CROSS_ECHO",
+      "when": {
+        "same_persona_positive_weight_in": [
+          "game attraction answer",
+          "X13-X16 answer"
+        ]
+      },
+      "maximum": 2,
+      "evidence": "one anchor and one cross-game answer"
+    },
+    {
+      "id": "ADVICE_*",
+      "when": {
+        "explicit_habit_selected": true
+      },
+      "copy_source": "advice[topic][habit]",
+      "evidence": "corresponding habit question; coop uses X14"
+    },
+    {
+      "id": "D_SPOILER",
+      "when": {
+        "G08": [
+          "A",
+          "B"
+        ]
+      },
+      "evidence": "G08"
+    },
+    {
+      "id": "D_REPLAY",
+      "when": {
+        "G09": "C"
+      },
+      "evidence": "G09"
+    },
+    {
+      "id": "TAG_*",
+      "when": {
+        "explicit_habit_selected": true
+      },
+      "maximum": 3,
+      "evidence": [
+        "G07",
+        "G09",
+        "G10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2843 @@
+{
+  "id": "fore109k",
+  "title": "森林 The Forest 原作",
+  "game_ids": [
+    "steam-242760"
+  ],
+  "scope": "PC原作：共有资源生存与原生Creative建造探索分开",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "资源组按当前可用材料、工具、光照与路线问动作，不统一敌情、死亡返回、白天或生存日数。",
+    "Creative是原作正常结局后可选的原生模式；不要求控制台或模组，仅建筑免料不等于所有背包工具已经拥有。",
+    "原作自定义地基、屋顶和门窗由蓝图预览决定；不混续作逐根切墙、Kelvin、GPS或新装备。",
+    "地图指南针、玩具、弓、雪橇、小筏和自定义部件均有当前基础工具/首处蓝图的独立早期替代。",
+    "真人合作题以实际同局和现有条件为前提，单人替代独立信号；记录未实际人测。"
+  ],
+  "modes": [
+    {
+      "id": "resource_survival",
+      "label": "资源生存：普通／和平等当前风险设置",
+      "initial_variants": {
+        "FORE109K01": "FORE109K01.RESOURCE_SURVIVAL.V1",
+        "FORE109K02": "FORE109K02.RESOURCE_SURVIVAL.V1",
+        "FORE109K03": "FORE109K03.RESOURCE_SURVIVAL.V1",
+        "FORE109K04": "FORE109K04.RESOURCE_SURVIVAL.V1",
+        "FORE109K05": "FORE109K05.RESOURCE_SURVIVAL.V1",
+        "FORE109K06": "FORE109K06.RESOURCE_SURVIVAL.V1",
+        "FORE109K07": "FORE109K07.RESOURCE_SURVIVAL.V1",
+        "FORE109K08": "FORE109K08.RESOURCE_SURVIVAL.V1",
+        "FORE109K09": "FORE109K09.RESOURCE_SURVIVAL.V1",
+        "FORE109K10": "FORE109K10.RESOURCE_SURVIVAL.V1",
+        "FORE109K11": "FORE109K11.RESOURCE_SURVIVAL.V1",
+        "FORE109K12": "FORE109K12.RESOURCE_SURVIVAL.V1"
+      }
+    },
+    {
+      "id": "creative",
+      "label": "Creative：无需建筑材料的建造探索",
+      "initial_variants": {
+        "FORE109K01": "FORE109K01.CREATIVE.V1",
+        "FORE109K02": "FORE109K02.CREATIVE.V1",
+        "FORE109K03": "FORE109K03.CREATIVE.V1",
+        "FORE109K04": "FORE109K04.CREATIVE.V1",
+        "FORE109K05": "FORE109K05.CREATIVE.V1",
+        "FORE109K06": "FORE109K06.CREATIVE.V1",
+        "FORE109K07": "FORE109K07.CREATIVE.V1",
+        "FORE109K08": "FORE109K08.CREATIVE.V1",
+        "FORE109K09": "FORE109K09.CREATIVE.V1",
+        "FORE109K10": "FORE109K10.CREATIVE.V1",
+        "FORE109K11": "FORE109K11.CREATIVE.V1",
+        "FORE109K12": "FORE109K12.CREATIVE.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "FORE109K01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "原作The Forest里，你用斧头刚处理过营边树木；附近有现成木料、能用的木架和雪橇，体力与补给充足，没有正在逼近的敌人，林缘另一角也可达。先做哪件？",
+          "scene": "木头倒下后先把什么放前面",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_BUILD",
+            "FORE109K_CURRENT_ITEMS"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着挥斧砍当前近树，反复享受落斧、木屑和树干回应紧跟操作的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先查看眼前木料及木架里当前实际已知的存量，再决定这轮搬多少",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "C",
+              "label": "排好这一轮拾木、装现有雪橇、推到架旁再收整的亲手次序，实际做一趟",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "去林缘当前能到但自己没看过的一角，想发现环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "现场木架存量用精确0分，不借身体状态或种植生产解释；砍树手感与运料先后不是同一动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K01.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "还没做木架和雪橇：你刚在失事飞机附近，有已取得的飞机斧、现成可拾树枝和石块；状态与光照够，附近没有紧迫敌情。先做什么？",
+          "scene": "木头倒下后先把什么放前面的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_BUILD",
+            "FORE109K_CURRENT_ITEMS"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用现有斧头砍近旁细树或灌木，投入落斧和木屑应声出现的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先查看地面实际可见的树枝、石块与自己当前已知材料，再决定这一轮",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "C",
+              "label": "直接拾起眼前可取的一根树枝，体验这次具体操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "去当前能到但自己没看过的飞机旁另一侧，想发现环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "现场木架存量用精确0分，不借身体状态或种植生产解释；砍树手感与运料先后不是同一动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K01.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "原作Creative里，你能从生存手册放自定义地基，当前有几处合法空位，无须为建筑采集材料。先做什么？",
+          "scene": "画出的底边不是逐根切墙",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想呈现的林间木屋主题，实际定下地基底边、朝向与高度并建出一小段",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先改变一张合法地基预览的位置或朝向，亲手看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可选的预设木屋与自定义部件外观，再决定采用哪个",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "先排清这轮画底边、定高度、确认蓝图与建造的编辑步骤，再亲手做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "保持原作蓝图与锚点机制，不能套续作拿斧头从实体墙上逐根切窗；Creative仅建筑免料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K01.CREATIVE.V1"
+        },
+        {
+          "text": "还没画过自定义地基也可换：你刚在Creative翻开生存手册，能放最基础庇护所，眼前有合法预览位置。先选什么？",
+          "scene": "画出的底边不是逐根切墙的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把预览转向或换一个合法位置，亲手看这次编辑变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "直接确认当前蓝图并用Creative建造操作搭出，体验这次已可做操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先读已有手册的基础放置说明，再继续亲手试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "为了自己的营地入口方向，定好位置并实际建下这处庇护所",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "保持原作蓝图与锚点机制，不能套续作拿斧头从实体墙上逐根切窗；Creative仅建筑免料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K01.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K01.RESOURCE_SURVIVAL.ALT2",
+          "text": "原作当前另一段：你已建有可接近的木棍标记Stick Marker，眼前旗色可按原生提示切换，当前有几种可用颜色；不必砍树或搬木。先选什么？",
+          "scene": "现有木棍标记的旗色",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_MARKER"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的营地视觉主题，实际把这处标记改成选定旗色，让留下的样子符合自己的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前可选旗色的外观方案，再决定这次用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "直接按当前提示把这处标记换一个可用旗色，体验普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有木棍标记改色说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "已移除涂料整题重写为仍有的原作木棍标记旗色；实际选色呈现才a，查看方案和普通切色0，不把标记当自动绘制地图或身份扮演。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K01.CREATIVE.ALT2",
+          "text": "原作Creative里你当前能建武器架和小桌，已有可放上对应架的自制弓，墙面与地面有合法位置；没用过地基草案或基础庇护所也可换。先做什么？",
+          "scene": "小屋里的工具展示角",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_MODES",
+            "FORE109K_CURRENT_ITEMS"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的林间工具角主题实际建下架子与小桌，再放入现有自制弓，呈现想要的空间",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "实际把一张合法架子预览换个位置或朝向，亲手看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前可选架子与小桌的外观方案，再决定采用哪个",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "先排清本轮选架位、定桌位、确认与搭建的编辑步骤，再亲手做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "第三前提是实际可用原作陈设，不要求结构搭建；已有工具展示不算新藏品。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你当前已有可用且有装载空位的运木雪橇、眼前可取整木和一段走通的平地搬运路，也能徒手搬木；物品栏合成垫里有现成材料，至少两项基础配方当前都够料；对应的现有储物架可用，手头与架上都有当前可存取的物品。此刻先选什么？",
+          "scene": "合成垫、雪橇和已有物品",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_BUILD"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手在合成垫做出一件当前能做的基础物品，体验这轮操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清拾取现成原木、装入雪橇、沿已通平路推送和卸下的一轮亲手次序，再照安排实际试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "把现有可存放物放入已有对应架，再取出本轮打算带的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前够料的基础配方和材料条件，不急着合成",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "原作普通合成、对应架存取、配方比较与一轮雪橇实体动作先后均为精确0；徒手搬运不因自设不用雪橇计发明。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K02.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "没用过雪橇也可换：你在最早营地，合成垫可用，木矛与另一项基础配方都已开放且现料够做；飞机斧在物品栏可换用，手里正拿现有树枝，眼前也有可砍灌木。先做什么？",
+          "scene": "合成垫、雪橇和已有物品的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_BUILD"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前已开放且够料的木矛与其他基础配方，再决定这轮",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "直接亲手做出这根当前够料的木矛，体验制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "实际换用已有飞机斧，处理眼前可砍灌木，体验这件现成工具",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "核对当前已显示的合成提示与操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "原作普通合成、对应架存取、配方比较与一轮雪橇实体动作先后均为精确0；徒手搬运不因自设不用雪橇计发明。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K02.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "你在原作Creative已有一段可接的自定义地基，当前可用墙、门洞墙与窗墙预览；几个合法位置都能建。此刻先选哪件？",
+          "scene": "门窗在蓝图阶段决定",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在合法预览里切换一种当前可用门窗墙样式，亲手看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前几种墙与门窗的可选外观，暂不动工",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "先排清本轮选墙、切换门窗样式和确认建造的编辑顺序，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按自己小屋的朝向与节奏，实际选定哪些墙带窗、哪里留门并建下，呈现自己的布局",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "门窗预览变化不自动是玩法发明；不强迫建筑摧毁设置、斧头拆墙或资源压力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K02.CREATIVE.V1"
+        },
+        {
+          "text": "还没用自定义墙也可换：你只在Creative试放基础火堆与庇护所蓝图，眼前都能合法摆放。先做什么？",
+          "scene": "门窗在蓝图阶段决定的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想要的营地样子选定火堆与庇护所位置，并实际建下",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前基础火堆、庇护所的外观方案",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "直接建下当前合法的基础火堆，亲手体验这一轮操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "亲手把基础火堆预览换一个合法位置，看看这次布局变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "门窗预览变化不自动是玩法发明；不强迫建筑摧毁设置、斧头拆墙或资源压力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K02.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K02.RESOURCE_SURVIVAL.ALT2",
+          "text": "你在原作已经有可用皮架，手上现成皮料与架上物件当前都能实际存取，状态平稳；没有雪橇或木矛经历也可换。先做什么？",
+          "scene": "已有皮架上的存取",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看眼前可见皮料和架上当前已知存量，再决定这一轮",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "B",
+              "label": "先读已有皮架存取操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "排好这一轮取下所需皮料、收存余料与继续手头操作的亲手次序，再实际做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "亲手把一件现有皮料存入皮架，再取出这次想带的那件",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "第三前提是原作实际储物，不把现有皮料叫新藏品或只看架子强计运营。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K02.CREATIVE.ALT2",
+          "text": "你在原作Creative有一段平整空地，生存手册的石径当前能放、合法预览可调整；没有搭门窗墙或火堆的经历也可换。先选什么？",
+          "scene": "纯装饰石径的当前线条",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手改变当前石径合法预览的位置或走向，查看这次编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清本轮选起点、定走向、确认预览与建造的编辑步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先读已有石径放置操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "按自己的营地步道主题，实际定好石径走向并建一小段，重视布局呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "原作石径是装饰，不宣称改NPC寻路或省脚力；普通路线编辑不冒充自定玩法规则。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你在原作自定义地基的空地试放，没有投入材料；两次草案显示需求不同，原因还没核清。当前能取消未投料草案、重放同一底边范围并调整高度，手边另有够搭一小段的现成木料。先做什么？",
+          "scene": "地基的木料数为什么不同",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先调整这一张合法地基预览的位置，亲手查看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对眼前现成木料与自己当前已知材料存量，再决定本轮要搭多少",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "C",
+              "label": "自己先提出高度可能影响需求的解释，先取消上一张未投料草案，保持底边范围、位置及其他未完建筑不变，只改高度；每次单独确认这一张、实际读需求后取消，再换另一高度核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "按自己想呈现的林间小屋轮廓，实际选好地基范围和朝向，并用现成木料搭一小段",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "p题干不预告因果，取消未投料草案后单改高度；a有个人主题和真实施工，不只看风景。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K03.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "还没自定义地基也可换：你只试过生存手册的第一处基础庇护所，当前有几个合法空位，现成材料够投入一部分。先选什么？",
+          "scene": "地基的木料数为什么不同的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想呈现的营地入口方向定好位置，并实际投入现成材料搭一段",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "直接给当前已放蓝图投入手边所需材料，体验这次建造操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "实际把庇护所预览转向或换一个合法位置，看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先读已有手册的基础建造操作说明，再继续亲手放置",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "p题干不预告因果，取消未投料草案后单改高度；a有个人主题和真实施工，不只看风景。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K03.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "Creative里你当前已有能独自操作的小筏，停靠岸边这段水域宽阔，另有自己没看过的可达湖岸。先做哪件？",
+          "scene": "小筏真正划出去的一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看当前小筏、停靠处与可上岸位置的现场，再决定这段怎样动",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "把小筏划向当前能到、自己没看过的湖岸，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "划小筏连续推进和转向，反复享受划动、船身与水面移动接上的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "为了自己更熟悉推进、回转与靠岸，专门在同一小段反复练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "是原作单人小筏，不强迫需要两人操作的大筏或续作交通工具，不要求划得快或靠岸成功。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K03.CREATIVE.V1"
+        },
+        {
+          "text": "还没造小筏也可换：你在Creative最早林地，已有飞机斧和可砍树木，当前也可返回飞机舱入口，身边有熟悉营边与没去过的林缘。先做什么？",
+          "scene": "小筏真正划出去的一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_MODES",
+            "FORE109K_CURRENT_ITEMS"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看手里已有飞机斧与当前可达飞机舱入口的实际现场，再继续这一段",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "去当前可达但自己没见过的林缘，想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "接着用斧头砍近树，反复投入落斧、木屑和树干回应的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "为自己掌握树干前的挥斧站距，专门反复试挥砍、退开与再靠近",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "是原作单人小筏，不强迫需要两人操作的大筏或续作交通工具，不要求划得快或靠岸成功。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K03.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K03.RESOURCE_SURVIVAL.ALT2",
+          "text": "原作当前你有能用的修复工具和一处可修的受损庇护所，所需现成条件都满足；人物站在可达操作处，附近没有紧迫敌情。先选哪件？",
+          "scene": "已受损庇护所前的修复工具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_BUILD",
+            "FORE109K_REPAIR_CURRENT"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有修复工具操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "排清取工具、接近当前损坏部位、尝试修理与收整的亲手次序，再做一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前已显示的损坏部位与修复提示，再决定这一轮怎样动手",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "D",
+              "label": "直接用现有修复工具尝试处理这处可修部位，体验操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "修理情境不要求地基成本实验或摆第一张蓝图，尝试即可，不将修成作为门槛。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K03.CREATIVE.ALT2",
+          "text": "Creative里你已拥有可展示的Timmy画作，手册当前可建相框，合法墙面可放；没有小筏或砍树经历也可换。先选什么？",
+          "scene": "已有画作的一只相框",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_CLUES",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接建下当前合法相框、放入已有可展示画作，体验普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前可选相框的外观方案，再决定用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "按自己小屋展示主题，实际定相框位置并放入现有画作，让空间呈现想要的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "细看已取得画作，想联系孩子经历与此前发现的故事线索",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "展示已有画作不算补收藏，真实个人空间安排才a；不要求改写固定剧情。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你和另一名真人已在同一局，约好完成眼前一张原作木屋蓝图；材料、工具和可达搬运路都够，当前有可用运木雪橇，没有紧迫敌情。此刻先选哪件？",
+          "scene": "真的和另一个人搭同一处",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_BUILD"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着挥已有斧头砍近树，主要享受落斧、木屑与树干回应的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "与对方讲清谁砍哪边、谁用现有雪橇搬料、先补蓝图哪部分，再实际按共同安排推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "先和真人朋友一起在营边取木、聊这趟经历，主要享受共同待着的过程",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "自己拿起现成木料，直接补到当前蓝图里，亲手体验这一轮操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "原作可向同一建设蓝图投入材料；q/o须真人现场互动，不把无NPC同伴的原作写成Kelvin劳动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K04.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "一直独玩也可换：你眼前只有最早基础庇护所蓝图，材料已在手边，斧头能用，状态稳定。先做什么？",
+          "scene": "真的和另一个人搭同一处的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_BUILD"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用已有斧头砍眼前可砍灌木，反复投入落斧和碎屑的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "排好拾取所需材料、投入蓝图与收整剩料的亲手次序，再实际做一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前眼前材料和已知存量，再决定这一轮",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "D",
+              "label": "直接把现成材料加进当前可操作蓝图，体验这次建造",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "原作可向同一建设蓝图投入材料；q/o须真人现场互动，不把无NPC同伴的原作写成Kelvin劳动。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K04.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "你和另一名真人当前同处原作Creative营地，已经约好搭一处小屋，眼前地基与一段墙是你们已亲手搭下的；其余墙门窗、桌子与长凳都可建，不需要采料。此刻先做什么？",
+          "scene": "两个人真的在同一张布局里",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_BUILD",
+            "FORE109K_DECOR",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已搭的地基与墙段连接，补记真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "和真人同伴约清这轮谁定入口、谁布置家具、先后怎样接，再实际按共同安排搭一段",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "和真人朋友一起慢慢摆基础家具、聊彼此刚注意到的东西，主要想共享这段经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "自己按已选小屋主题，在选定位置实际建下桌凳与一段带窗墙，让空间呈现想要的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "免费建造仍可真人协调和陪伴，单人ALT不借NPC，不承诺跨机器存档或客机永久进度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K04.CREATIVE.V1"
+        },
+        {
+          "text": "只独玩、也没建小屋时：Creative里当前已有一处可用营火，基础长凳可建，营火旁有合法空位。先选什么？",
+          "scene": "两个人真的在同一张布局里的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_BUILD",
+            "FORE109K_DECOR",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看已有营火及当前长凳放置处的实际现场，再继续",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "B",
+              "label": "先排好这轮选空位、定凳子朝向与确认建造的编辑步骤，再亲手做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "按自己的休息角主题，把长凳朝向已有营火并在选定空位实际建下，呈现自己的布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "直接建下一张当前合法的长凳，再坐上试一次，体验操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "免费建造仍可真人协调和陪伴，单人ALT不借NPC，不承诺跨机器存档或客机永久进度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K04.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K04.RESOURCE_SURVIVAL.ALT2",
+          "text": "你独自玩原作，当前已有能自己操作的小筏，近岸水域宽阔、体力与补给够，停靠点已走通过；不需要建木屋。先做什么？",
+          "scene": "没有真人的单人小筏",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_STORE"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前身体状态和携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "B",
+              "label": "亲手划筏连续推进转向，反复享受划动与船身移动接上的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "为自己熟悉转弯和靠近岸边，专门在同一短段反复练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前小筏、停靠位置与可上岸入口的现场，再决定怎样动",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "第三前提明确单人小筏，不借NPC或两人才能操纵的大筏；不问速度或航行成功。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K04.CREATIVE.ALT2",
+          "text": "你独玩原作Creative，当前已拥有可看的地图和指南针，熟悉近路与没去过但可达的林角都在眼前；不需要和人布置家具。先做什么？",
+          "scene": "独自查看已有地图和指南针",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_MAP",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已到过的停留处或已取得导航工具，补上自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "先核对地图当前已画区域与指南针方向，再决定这一段",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "去自己没看过而当前可达的林角，想发现现场",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "从另一条已走通的近路经过，体验不同走向",
+              "signal": "route_variant"
+            }
+          ],
+          "design_purpose": "第三前提无真人和长凳，不把地图自动画出全岛或套续作GPS。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你在原作已经取得部分Timmy机器人部件，确认还有缺项；一块尚未拿过的对应部件就在当前可到的洞穴停留点，照明、补给和退路都够。你也已拥有相关画作与地图。先做什么？",
+          "scene": "玩具还缺一块时看见的线索",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CLUES",
+            "FORE109K_MAP"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为补上自己确认还缺的机器人部件，先实际走到眼前停留点尝试拾取，不要求这次集齐",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "查看已经取得的Timmy画作，想联系孩子经历与此前发现的线索",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先查看已有地图当前实际画出的区域与位置，再决定这段方向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "D",
+              "label": "不先补清单，去当前可达而自己没看过的另一条短支路看看现场",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "六部件真集合缺口才c，剧情看已有线索也可；不要求故意被抓、死后返回或通关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K05.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "还没有进洞或找玩具也可换：你在飞机旁已拿到Timmy照片，飞机斧与合成垫可用，现料够做至少两项已开放的基础配方，状态够。先做什么？",
+          "scene": "玩具还缺一块时看见的线索的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CLUES",
+            "FORE109K_MAP"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看物品栏中已经取得的Timmy照片，想把孩子的处境与失事前后联系起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "读当前已显示的基础合成说明，再亲手试用合成垫",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "比较当前现成材料够做的几个基础物品，再决定这一轮",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "去飞机旁当前可达但自己没看过的一侧，想发现环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "六部件真集合缺口才c，剧情看已有线索也可；不要求故意被抓、死后返回或通关。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K05.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "你在Creative已有可推雪橇、可用飞机斧、当前可砍近树、可拾原木和一段平整已走通的短路；建筑本身无需这些原木。现在先选哪件？",
+          "scene": "木头不用交建筑也可亲手玩一趟",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把现有原木装进雪橇，亲手推过这条短路，直接体验这一轮运送操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "为自己控制雪橇转弯与停位更熟，专门在同一小段反复练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "接着挥已有斧头砍近树，享受木屑与树干应声回应的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前现有原木与雪橇当前已装木料，再决定这一轮处理哪些",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "Creative仍有实体木料操作，但不借资源匮乏制造必选，也不把推运自动说成长期运营。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K05.CREATIVE.V1"
+        },
+        {
+          "text": "没有雪橇或木架时可换：原作Creative里你已有足量布片和木棍，绳索与布裹木棍的配方当前都可做，合成垫能用；建筑免料不等于合成材料无限。先选什么？",
+          "scene": "现有布片先留给绳索还是布裹木棍",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_MODES",
+            "FORE109K_POUCH_CURRENT",
+            "FORE109K_CRAFT"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手把已有布片合成一根当前可做的绳索，直接体验这次制作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前都够料的绳索与布裹木棍配方，再决定这轮把布用在哪",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "排好取布、放到合成垫、合绳与收起成品的亲手次序，再实际试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先读已有合成垫制作操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "早期真实布料合成取舍不再重复砍树挥斧；Creative建筑免料不等于普通制作原料无限，已知配方制作与单次动作先后均0，不强计构筑或成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K05.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K05.RESOURCE_SURVIVAL.ALT2",
+          "text": "原作里你已有水袋和可用雨水收集器，当前收集器确有可取干净水、水袋也能装入；人物状态不急迫，准备停留一小段。先选什么？",
+          "scene": "有现成干净水的收集器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_WATER",
+            "FORE109K_CRAFT"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接给现有水袋装入当前可取雨水，亲手体验这个普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前身体、已有水袋装量和携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先读已有水袋取水操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "排清取水袋、到眼前收集器装水与收起的亲手次序，再做一次",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "第三前提是当前已存的干净水，不要求玩具/画作/地图；不把未来下雨当既有供水。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K05.CREATIVE.ALT2",
+          "text": "Creative里你当前能建头骨灯，眼前墙边与地面有合法位置，灯的预览可放；没有推雪橇或拾木经历也可换。先选什么？",
+          "scene": "无需捡木的头骨灯预览",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的小屋照明主题实际定好头骨灯位置并建下，重视空间呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "亲手把灯的合法预览换个位置或朝向，查看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "直接建下当前可放的一盏头骨灯，体验普通建造操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有灯具放置说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "原作头骨灯可造不等于它供热；第三前提是原生陈设，不拿一次点建当即时反馈或构筑。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已有可用自制弓、普通箭、木矛与飞机斧，营边有可作目标的树干和安全回收处，体力、补给与照明够，没有正在交手的敌人。先做哪件？",
+          "scene": "弓的手感和专门的练习",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_STORE"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "对当前树干连续拉弓放箭，享受绷弦、松手与箭落下紧接发生的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先比较已有弓、木矛和飞机斧的当前使用条件，再决定采用哪个",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先排好取箭、试射与回收现有箭的亲手次序，再实际做一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "为自己更熟悉拉弓、松弦和落点，专门对同一目标反复练，不要求射得准",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "练习和操作反馈是两个目的，不按命中、狩猎成功或生存纪录判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K06.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "没有弓也可换：你当前已有飞机斧、基础木矛与近处可砍灌木，另有可试投并回收木矛的近树干，状态和光照够。先选什么？",
+          "scene": "弓的手感和专门的练习的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_STORE",
+            "FORE109K_CURRENT_ITEMS"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用斧头连续处理可砍灌木，反复投入落斧与碎屑应声出现的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先比较已有斧头与木矛的用途，暂不换用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "亲手从斧头换到已有木矛，向近树干试投一次并尝试捡回，体验这件现成工具",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "为自己掌握靠近树干的挥斧站距，专门在同一棵可砍树前反复试挥砍、退开与再靠近",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "练习和操作反馈是两个目的，不按命中、狩猎成功或生存纪录判断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K06.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "你在原作Creative已收过部分Timmy机器人部件，确认仍缺一件，眼前当前可到的停留点就有尚未拿的对应部件；另有已拥有画作和可放相框。先做什么？",
+          "scene": "已有画作与尚缺的玩具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CLUES",
+            "FORE109K_DECOR",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "细看已取得的Timmy画作，想理解孩子经历与先前发现的联系",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自己的小屋展示主题，实际放好相框并摆入现有可展示画作，重视空间呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "为已经拿到的部件与已经到过的停留点，补上自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "为补自己的机器人集合空缺，先实际尝试取那块未得部件，不要求这次集齐",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "Creative建筑免费不等于自动拥有故事收藏；主项明确当前真缺、物件真可取，挂已有画作不记c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K06.CREATIVE.V1"
+        },
+        {
+          "text": "没收过玩具或画作也可换：原作Creative里你只试过营地石墙，当前手册可放石墙预览，空地上两段不同走向都合法，尚未确认这轮草案。先选什么？",
+          "scene": "没收故事物也可摆一段石墙",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CLUES",
+            "FORE109K_DECOR",
+            "FORE109K_MODES",
+            "FORE109K_ROCK_BUILD"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有石墙预览和确认操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "实际把这段石墙预览换到另一合法走向，查看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清选起点、定走向、确认草案与建造的本轮步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按自己的营地围边主题，选定石墙走向并实际建一小段，呈现想要的轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "替代是实际石墙草案的走向编辑，不跨槽再借第一次庇护所；只用当前合法蓝图，既有物品记录copy不扩成建设记录。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K06.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K06.RESOURCE_SURVIVAL.ALT2",
+          "text": "你在原作已有当前可用手电，现有电量够，人在可达洞口外或营边装置旁；还没练过弓或挥斧后退。先做什么？",
+          "scene": "一支现有可用手电",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_STORE"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有手电操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已有手电与打火机的照明用法和携带条件，暂不换用",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前身体、照明工具状态与携带补给，再决定这段行动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "直接打开手里当前可用手电、照看眼前装置，体验这个工具操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "单次开灯不假计畅快反馈、构筑或因果实验；第三前提不要求射击与战斗。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K06.CREATIVE.ALT2",
+          "text": "原作Creative里你当前已有可用自制弓、普通箭和木矛，近处树干可作练习目标，周围没有紧迫目标；没找玩具、没搭庇护所也能答。先选什么？",
+          "scene": "没有收藏但已有弓箭",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复拉弓放箭，主要享受绷弦、松手和箭落点紧接发生的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已有弓与木矛的用途和携带条件，再决定采用哪个",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先读已有弓箭操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "为自己更熟悉拉弓、松弦与落点，专门对同一目标反复练，不要求命中",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "第三前提为Creative实际工具体验，不需要敌人、收藏成功或装备升级。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你的原作营地已实际运转多轮：把现有食材上晾架、把收集器已有干净水补进水袋，带粮水外出消耗后，归营再补食材、晾架与水袋，收整储物并接下一轮。当前各环节都有现成条件，身体与补给稳定。先怎样投入？",
+          "scene": "晾架、饮水和外出已经接过多轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_FOOD",
+            "FORE109K_CRAFT",
+            "FORE109K_BUILD",
+            "FORE109K_WATER"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已搭建的晾架、储物与庇护所补记真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "有精力、新支路也可去，仍在熟悉营边慢慢收整现成物品，喜欢安定自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "继续接取食材晾晒、取现存干净水补水袋、带出消耗与归营补充的下一轮，让已经运转过的粮水供给持续接上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前晾架、手头材料和可见成品状态，再决定这一轮处理什么",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "y要求多轮粮水、外出消耗与补充，不把第一张晾架或一次填水算长期运营。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K07.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "只有最早营火、没有晾架也可换：你手里有可烤的现成肉和续火材料，人物状态够，当前火堆可用。先做什么？",
+          "scene": "晾架、饮水和外出已经接过多轮的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_FOOD",
+            "FORE109K_CRAFT",
+            "FORE109K_BUILD"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把一份现成肉放上当前能用的火堆，直接体验操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "有精力、也能探新路，仍慢慢在熟悉火边处理现有食物，喜欢安稳自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先排取食物、放上火、取回成品和收起材料的亲手次序，再做这一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "核对当前可见食物、制作材料和处理状态，再决定下一步",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "y要求多轮粮水、外出消耗与补充，不把第一张晾架或一次填水算长期运营。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K07.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "原作Creative里，你有一段独立、未承托其他物件的已建自定义地板；当前孔洞切割工具可用、预览能合法放在这段地板，人物在外侧可达位置。先做什么？",
+          "scene": "只动一处没有用到的地板",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读已有手册关于孔洞工具的操作说明，再继续亲手试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "为这段自己已搭建的地板，补记真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "直接用当前可用孔洞工具在这段独立地板确认一次合法切口，亲手体验操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先调整这次合法孔洞预览的位置，看看编辑结果，暂不确认",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "这是原作已有孔洞工具，不是续作实体锯墙；不用承重崩塌、成功通行或未知假说凑p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K07.CREATIVE.V1"
+        },
+        {
+          "text": "没有做过地板和孔洞也可换：原作Creative里，你当前能建木架，架子的两个摆放空位都合法，附近有现成可拾原木；还没用过庇护所或自定义地板。先选什么？",
+          "scene": "无需孔洞工具的第一张木架草案",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清选架子、定朝向、确认与建架的本轮编辑先后，再亲手做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "直接建下当前合法木架并放入一根现有原木，体验这轮普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "亲手把木架预览换到另一合法空位或朝向，查看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前可见原木与当前已知存量，再决定这轮搬多少",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "替代为基础木架的真实预览和存木，不再重复第一次庇护所；查看现场原木精确74，编辑步骤与普通放物仍0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K07.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K07.RESOURCE_SURVIVAL.ALT2",
+          "text": "还没做过营地循环或火上处理时可换：原作你已有可用浆果袋，眼前有当前可采的已识别果子，拿袋采集时它会进入人物物品栏，状态和照明够。先选什么？",
+          "scene": "拿袋采集到物品栏的现有果子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_FOOD",
+            "FORE109K_POUCH_CURRENT"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清拿袋、采一小批现有果子、核对物品栏数量与收起工具的动作先后，再亲手试一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "有精力、新林角也可去，仍慢慢沿熟悉丛边采现有果子，喜欢安稳自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "亲手用现有袋取眼前当前可采果子，体验这个普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前果子与现有食材状态，再决定这一轮",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "原作袋子改变实际采存方式，已识别果子不逼试毒；普通一次采集不算养成或系统运营。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K07.CREATIVE.ALT2",
+          "text": "原作Creative当前手册可放树上平台与树屋，眼前一棵合适树上两者确有合法预览；不需要用孔洞工具或基础庇护所。此刻先做什么？",
+          "scene": "树上的基础平台草案",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_MODES",
+            "FORE109K_ELEVATED"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有树上平台放置操作说明，再亲手试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "直接建下当前已合法放置的平台蓝图，体验这次普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "在当前两种合法树上建筑中选敞开平台，实际建下，呈现自己的林间眺望角",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前可选树上平台与树屋的外观方案，再决定这次采用哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "只问确有合法树与当前可用预览，不保证任意树能放或敌人永不破坏；平台不是收集品。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你和另一名真人都已在当前洞口外，手头照明、补给和必要工具足够走一小段；没有要求立刻通洞，已有地图可看，旁边也有可达地表支路。先做哪件？",
+          "scene": "洞口外已经约好的一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_MAP"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走向当前可达而自己没看过的地表支路，主要想发现现场",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "与真人同伴约清本段去向、谁先查看哪处、在哪里会合，再按共同安排实际走",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "和真人朋友一起慢慢走洞口附近、聊刚才发现的东西，主要重视共同经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "先看自己已有地图当前实际显示的位置与区域，再决定这一段",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "只问真人同步协商，不保证地图自动共享、客机库存保存或每人同样解锁。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K08.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "独玩、也没进过洞时：最早营地旁有可用斧头、手边现成材料和两条走通过的短路，新林缘也可达，状态与照明够。先选什么？",
+          "scene": "洞口外已经约好的一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_MAP"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精神、新林缘也能去，仍慢慢沿熟悉营地近路收现成树枝，喜欢安定自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先查看眼前实际木料与已知库存，再决定这轮取多少",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "C",
+              "label": "从另一条已走通的短路回到营边，体验不同经过方向",
+              "signal": "route_variant"
+            },
+            {
+              "id": "D",
+              "label": "去当前可达但自己没见过的林缘，主要想发现环境",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只问真人同步协商，不保证地图自动共享、客机库存保存或每人同样解锁。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K08.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "Creative里你已亲手搭起一处熟悉木屋与可坐的长凳，当前也能去没见过的林缘；自己精神足，不需要为了体力恢复而坐下。现在先做什么？",
+          "scene": "体力无忧时的熟悉长凳",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已搭的木屋与家具，补记真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "仍慢慢坐一会熟悉长凳、再沿木屋旁走一小圈，喜欢安稳且自主的停留过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "按自己的休息角主题，在合法空位实际加放桌子或长凳，呈现想要的布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "去当前可达但自己没看过的林缘，主要想发现现场",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h明确不是补体力、疲劳或时间压力；没有把NPC建设等待当即时反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K08.CREATIVE.V1"
+        },
+        {
+          "text": "还没造木屋与长凳也可换：你只在Creative第一处营地活动，已有基础营火与庇护所，手册可放基础长凳，旁边熟悉近路和新林缘都能去；精神足。先选什么？",
+          "scene": "体力无忧时的熟悉长凳的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去没见过而当前可达的林缘，主要想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "慢慢重走熟悉营边一圈，喜欢安稳自主的过程，即使新林缘也能去",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "直接建下一张当前合法的基础长凳，并亲手坐上试一次",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看已有营火、庇护所和近处入口现场，再继续这一段",
+              "signal": "scene_inspection"
+            }
+          ],
+          "design_purpose": "h明确不是补体力、疲劳或时间压力；没有把NPC建设等待当即时反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K08.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K08.RESOURCE_SURVIVAL.ALT2",
+          "text": "没有真人洞穴或采木经历时：你在原作独玩，已有能接的基础地面，手册能放自定义门窗墙，现成材料够搭一段。先做什么？",
+          "scene": "独自试门窗墙的这一轮",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清选墙、定门窗、确认与投入材料的编辑步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "按自己的木屋主题实际选好门窗墙的位置并搭一段，呈现想要的布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先在合法墙预览里切换当前可用门窗样式，亲手看变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看当前可选墙、门与窗的外观，决定采用哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "第三前提给独自建造者，不借真人目标，不混续作从实体墙切窗或用一轮编辑硬记运营。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K08.CREATIVE.ALT2",
+          "text": "原作Creative里，你当前已拥有至少两套能从物品栏更换的服装，这次只看已取得的穿着，不要求捡新衣、建长凳或改工具。先选什么？",
+          "scene": "已有两套服装的一次换穿",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORE109K_OUTFITS",
+            "FORE109K_MODES",
+            "FORE109K_RELEASE"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经取得的服装，补上自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "为自己想呈现的林间穿着风格，实际换上已拥有的一套，让外观符合自己的选择",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前已拥有服装的外观素材，再决定这次采用哪套",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "直接换成当前另一套已有服装，亲手体验这次现有配置操作",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "已移除的涂料整题替换为v1.0已有服装更换；只用当前确有穿着，不以性别、身体、职业或所谓保暖潜行属性推人格，也不把普通换穿与已有衣服当新收藏。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你原作The Forest实际玩过的一段，不要求见过实验室或结局。哪件当时做过的事最有分量？",
+          "scene": "失事线索里真正停留过什么",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_CLUES",
+            "FORE109K_MAP",
+            "FORE109K_STORE"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为理解Timmy和失事前后，真实看过已取得画作、照片或其他相关人物线索，并联系过前后发现",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "为机器人部件集合里自己确认仍缺的一项，实际尝试到过可达位置寻找拾取",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "为发现而走过当时可达但自己此前没看过的洞穴或林地",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对过已有地图实际画出的区域和位置，再决定去向",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "回顾真实故事停留和未得部件追求，不设收齐、活了多久或结局成功门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K09.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "只玩过最早飞机与营边也可回想，哪件当时真正发生？",
+          "scene": "失事线索里真正停留过什么的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_CLUES",
+            "FORE109K_MAP",
+            "FORE109K_STORE"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "看过已经取得的Timmy相关人物资料，想弄清失事前后",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "走去过当时可达但自己此前没看过的飞机旁另一侧",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为已经取得的工具或已经到过的营地地点，补上过自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "核对过当时身体状态和携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            }
+          ],
+          "design_purpose": "回顾真实故事停留和未得部件追求，不设收齐、活了多久或结局成功门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K09.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "回顾原作Creative真实搭建过的一段，不要求造完整或规模大。哪件当时最有分量？",
+          "scene": "实际搭过的门窗与屋顶",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想呈现的小屋主题，实际建过地基、门窗墙与屋顶的布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "亲手调整过合法蓝图预览的高度、位置或朝向，实际看过变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排过一轮自定义锚点、定高度与确认施工的编辑步骤，并亲手做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "为已经实际搭下的部件和连接，补记过建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "只问已发生，原作是手册与自定义蓝图，不虚构逐根切门或自由拉伸成品。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K09.CREATIVE.V1"
+        },
+        {
+          "text": "只试过Creative最早基础部件也可回想，哪件当时真正做过？",
+          "scene": "实际搭过的门窗与屋顶的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换过一张基础庇护所合法预览的位置或朝向，查看结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先读过已有手册基础建造操作，再继续亲手试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "为了自己的营地入口方向，选定位置并实际建下过一个基础部件",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "直接用Creative建造操作搭过当前已合法放下的蓝图，体验操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "只问已发生，原作是手册与自定义蓝图，不虚构逐根切门或自由拉伸成品。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K09.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K09.RESOURCE_SURVIVAL.ALT2",
+          "text": "没有故事、玩具或探索回顾，也可想一段原作真实用过浆果袋的经历。哪件当时确实做过？",
+          "scene": "曾真的用袋取过果子",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_FOOD",
+            "FORE109K_POUCH_CURRENT"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手用当时可用袋子取过眼前能采的已识别果子，主要体验操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对过当时可见果子和食材状态，再决定这一轮",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "有精力、新地形也能去时，仍慢慢沿熟悉丛边采过果子，喜欢安定自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经取得的浆果袋或已到过的丛边地点，补上过记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "过去实际采存而非以后想收齐，不逼吃未知植物，也不把普通食物当藏品。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K09.CREATIVE.ALT2",
+          "text": "没有搭门窗或放庇护所时，可回顾Creative里你实际用过一处材料架。哪件当时确实发生？",
+          "scene": "曾真的存取过架上材料",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手把已有皮料、树枝或原木存进当时对应可用架，再取出过需要的东西",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "先核对过架上实际物料与已知存量，再决定这一轮",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "C",
+              "label": "排过取一份材料、装入对应架与收整手头物的亲手次序，并实际做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "直接把当时一件现成物料放入对应架，体验这个普通操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "第三回顾是实际储物动作，不将无需建筑材料的Creative伪写成补给困境。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想原作自定义搭建里你实际做过的事，不要求解释成立或建好。哪件最有分量？",
+          "scene": "原作蓝图里真做过的对照",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的小屋主题，实际选过地基、墙门窗的布局并搭过一段",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先读过已有手册的自定义部件操作说明，再继续亲手试放",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "为已经亲手搭下的建筑和连接位置，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "先自己提出过地基需求变化的解释，先取消上一张未投料草案，保持同一底边、位置和其他未完建筑不变，只改过高度；每次单独确认、读需求后取消，再换另一高度实际比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "p是本人解释后单变量实际核对，不把普通调整预览自动计实验；原作不按续作逐根切墙施工。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K10.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "没试自定义地基也能回想最早基础庇护所，哪件真实发生？",
+          "scene": "原作蓝图里真做过的对照的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对过已有手册基础建造操作，再继续试放",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "把当时现成材料加进过已放下的基础蓝图，体验这次建造",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "为自己已搭下的庇护所或火堆，补记过建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "实际换过合法蓝图预览的位置或朝向，亲手看编辑结果",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "p是本人解释后单变量实际核对，不把普通调整预览自动计实验；原作不按续作逐根切墙施工。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K10.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "回想你原作Creative里实际做过的移动操作，不看速度或路程。哪件当时最有分量？",
+          "scene": "真的划过而非只造好小筏",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "划小筏反复推进转向，主要享受划动与船身移动接上的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "为发现现场，把可用小筏划去过当时可达而自己没见过的湖岸",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为自己已实际到过的小筏停靠点与岸边地点，补上过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "为了自己更熟悉小筏推进、转弯和靠岸，专门在同一小段反复练过",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "原作小筏单人能操作；不以绕岛、对手或生存成绩制造k，也不要求真人陪同。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K10.CREATIVE.V1"
+        },
+        {
+          "text": "没有小筏也可回想最早林地的真实经历，哪件当时发生？",
+          "scene": "真的划过而非只造好小筏的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_MODES",
+            "FORE109K_CURRENT_ITEMS"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用已有斧头反复砍过近树，主要享受落斧、木屑与树干反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "走去过当时可达、自己此前没看过的林缘，主要想发现环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为已经取得的飞机斧或已到过的营边地点，补上过自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "为自己掌握树干前的挥斧站距，专门反复试过挥砍、退开与再靠近",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "原作小筏单人能操作；不以绕岛、对手或生存成绩制造k，也不要求真人陪同。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K10.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K10.RESOURCE_SURVIVAL.ALT2",
+          "text": "没做过自定义地基或基础放置时，可回想原作自己用修复工具尝试过的一处庇护所，不要求修成。哪件当时最有分量？",
+          "scene": "亲手修过的庇护所",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_BUILD",
+            "FORE109K_REPAIR_CURRENT"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看过当时已显示的损坏部位与修复提示，再决定怎样动手",
+              "signal": "work_task_state_review"
+            },
+            {
+              "id": "B",
+              "label": "读过已有修复工具操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "直接用当时可用工具处理过可修部位，亲手体验普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "为自己实际尝试的修复步骤、处理过的部位和结果，补记过工作过程",
+              "signal": "work_task_process_recording"
+            }
+          ],
+          "design_purpose": "工作记录精确指自己已修过或试过的内容，不拿修成成功或NPC工作当答题条件。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K10.CREATIVE.ALT2",
+          "text": "没有划筏或斧头练习时，可回想原作Creative真实陈设过的相框。哪件当时做过的事最有分量？",
+          "scene": "真的把已有画作放进相框",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_CLUES",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "细看过已取得的Timmy画作，想理解孩子与前后发现的联系",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "直接建下过当时合法相框并放入已有画作，体验普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先看过当时可选相框外观，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "按自己的小屋展示主题实际放过相框并放入已有画作，重视空间呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "只是已有物件展示不计c；真实过去的表达、叙事与普通操作分开。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回顾原作里真实投入过的一段，不按成就或天数比较。哪件当时确实做过的事最有分量？",
+          "scene": "已经继续过的营地和实际练习",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_FOOD",
+            "FORE109K_CRAFT",
+            "FORE109K_STORE",
+            "FORE109K_WATER"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精力、也能去新支路时，仍慢慢整理过熟悉营地现成物品，喜欢自主安稳的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "与真正同局的朋友商量过木屋建造分工，并实际按共同安排推进过",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "已经多轮把晾晒、随身粮水、外出消耗和归营补充接起来后，又实际继续过营地供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "为了自己更熟悉拉弓、松弦与落点，专门对同一目标反复练过",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "多轮供给、练习、主动熟悉和真人协调分开；不把无真人的独玩答卷判协作不足。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K11.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "一直独玩、还没有稳定供给或弓时也可回想最早营边，哪件真正发生？",
+          "scene": "已经继续过的营地和实际练习的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_BUILD",
+            "FORE109K_FOOD",
+            "FORE109K_CRAFT",
+            "FORE109K_STORE"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看过当时眼前木料及已知存量，再决定这一轮",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "B",
+              "label": "有精力、新林缘也可去时，仍慢慢沿熟悉营边收过树枝，喜欢安定自主的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为自己掌握靠近树干的挥斧站距，专门反复试过挥砍、退开与再靠近",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "排过一轮取木、投入基础蓝图与收整的亲手次序，并实际做过",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "多轮供给、练习、主动熟悉和真人协调分开；不把无真人的独玩答卷判协作不足。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K11.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "回想原作Creative的一段真实建造，不要求完成整间小屋。哪件当时最有分量？",
+          "scene": "自定义地基和共同搭过的一轮",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM",
+            "FORE109K_DECOR"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "与同局真人商量过各自布置哪部分，再实际按共同安排搭过",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "为自己已经搭下的部件与连接，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "先排过选地基锚点、再沿合法接口接墙与屋顶的一轮编辑步骤，并亲手实际试过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按自己的空间主题，实际选过并建下门窗墙、桌凳或相框布局",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "预排自定义部件编辑、真人共同目标、本人建设补记与真实布局呈现分开；普通自定义建造不因不用预设屋计发明。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K11.CREATIVE.V1"
+        },
+        {
+          "text": "独玩、没有自定义地基或禁用预设经历时，可回想原作Creative里你亲手立过、也改过旗色的一处木棍标记。哪件当时确实做过？",
+          "scene": "曾独自立下并改色的木棍标记",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_STORE",
+            "FORE109K_BUILD",
+            "FORE109K_CUSTOM",
+            "FORE109K_DECOR",
+            "FORE109K_MARKER"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看过当时已有几种旗色的外观方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "为自己亲手立下的那处标记，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "亲手改变过木棍标记当时可选的旗色，查看编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "按自己的营地视觉主题实际选过旗色，让留下的标记呈现自己的风格",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "独玩回顾原作标记旗色实改与本人建设；没有真人或额外禁令，不把普通改色计i，过去已拥有标记不是收藏缺项。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K11.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K11.RESOURCE_SURVIVAL.ALT2",
+          "text": "原作另一种真实回顾：你确实自己立过一处木棍标记，并试过当时可用的旗色切换，不要求长期营地、真人或弓箭经历。哪件当时最有分量？",
+          "scene": "曾亲手立过并改色的木棍标记",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_MARKER"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接按原生提示把已有标记换过一种可用旗色，体验普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "为自己亲手立下的这处木棍标记，补记过真实建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "为自己的营地视觉主题，真实把已建标记改过选定旗色，重视自己的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先看过当时可选旗色的外观方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "第三回顾只写当前原作仍有的标记建设与旗色实改，全部过去时；建设记录不借取得物品copy，普通改旗色不自动计a。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K11.CREATIVE.ALT2",
+          "text": "独玩、也没做过自定义规则时，可回顾Creative里你确实试过的弓箭。哪件当时最有分量？",
+          "scene": "真正对树干试过弓",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "读过已有弓箭操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "实际换用过自己已有弓箭配置，体验它在当前目标旁怎样使用",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "为自己熟悉拉弓、松弦与落点，专门对同一目标反复练过",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "反复拉弓放箭，主要享受绷弦、松手与箭落点连续回应的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "不要求对手、命中或最高纪录，也不要求禁用原本可建的木屋；普通换用用0。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    },
+    {
+      "id": "FORE109K12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想原作真正做过的经历，不由最后成果判断。哪件当时最有分量？",
+          "scene": "运木、标记旗色和未得玩具部件",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_CLUES",
+            "FORE109K_BUILD",
+            "FORE109K_MARKER"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有精神、新地点也可去时，仍慢慢在熟悉营边处理过现成食物或储物，喜欢安定自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "亲手把现成原木装上当时能用的运木雪橇，沿已走通平地推送过，再卸下，体验原作的普通运料",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "为自己的营地视觉主题，实际给已建木棍标记换过选定旗色，让留下的样子符合自己的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "为补机器人集合里自己确认还缺的部件，实际去过已知可达位置尝试寻找",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "过去普通雪橇运木是0，原作仍有的木棍标记真实选色呈现才a，真实未得玩具部件追求才c；不含已移除涂料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K12.RESOURCE_SURVIVAL.V1"
+        },
+        {
+          "text": "没有雪橇或标记改色经历也可回顾早期营地，哪件当时确实发生？",
+          "scene": "运木、标记旗色和未得玩具部件的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_CRAFT",
+            "FORE109K_CLUES",
+            "FORE109K_BUILD"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时有精力、新林缘也能去，仍慢慢重走过熟悉营边，喜欢安稳自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "亲手换用过当时已有的木矛或飞机斧，体验它在相应对象上怎样使用",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "用斧头反复处理过可砍灌木，主要享受落斧与碎屑立即回应的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "为已经取得的工具或已经到过的飞机旁地点，补上过自己的记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "过去普通雪橇运木是0，原作仍有的木棍标记真实选色呈现才a，真实未得玩具部件追求才c；不含已移除涂料。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K12.RESOURCE_SURVIVAL.ALT1"
+        },
+        {
+          "text": "回顾原作Creative真正玩过的经历，不按存活天数或建筑数量判断。哪件当时最有分量？",
+          "scene": "已有故事物件和安稳的停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_CLUES",
+            "FORE109K_DECOR",
+            "FORE109K_STORE",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "与真实同局朋友一起搭过或闲走过，主要重视共同发生的经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "为机器人集合里自己确认还缺的部件，实际去过当时已知可达位置尝试寻找拾取",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "细看过已经取得的Timmy画作，主要想理解孩子与先前线索的联系",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "当时有精力、新地点也可去，仍在熟悉长凳与木屋近旁慢慢停留，喜欢安稳自主的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "主项有条件才答，普通建筑未摆齐不算收藏；独玩早期替代不要求这些故事物或真人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K12.CREATIVE.V1"
+        },
+        {
+          "text": "只独玩过Creative最早营边也可回顾，哪件当时真实发生？",
+          "scene": "已有故事物件和安稳的停留的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_CLUES",
+            "FORE109K_DECOR",
+            "FORE109K_STORE",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已经取得的基础工具或已到过的营边地点，写下过自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "有精神、也能去新林缘时，仍慢慢重走过熟悉营边，喜欢安定自主的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "为发现而走去过当时可达、自己此前没见过的林地一角",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对过生存手册已有基础建造操作，再继续亲手试放",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "主项有条件才答，普通建筑未摆齐不算收藏；独玩早期替代不要求这些故事物或真人。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FORE109K12.CREATIVE.ALT1"
+        },
+        {
+          "id": "FORE109K12.RESOURCE_SURVIVAL.ALT2",
+          "text": "没有规则、配色、玩具或采木经历时，可回想原作用水袋从当时已有干净水处装水。哪件当时确实发生？",
+          "scene": "真实装过的干净水",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_WATER",
+            "FORE109K_CRAFT"
+          ],
+          "modes": [
+            "resource_survival"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排过取袋、接近当前收集器、装水和收起的亲手次序，并照着做过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "直接给已有水袋装过当时收集器里现有的干净水，体验普通操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时身体、水袋装量与携带补给，再决定这一轮",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "D",
+              "label": "读过已有水袋取水操作说明，再亲手继续试",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "只回顾真实现成水源，不要求等雨、喝脏水或取到最大容量；个人生存数字不计竞争。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        },
+        {
+          "id": "FORE109K12.CREATIVE.ALT2",
+          "text": "没有故事物件或探索回顾，也可回想原作Creative你实际放过的头骨灯。哪件当时确实做过？",
+          "scene": "曾真正放下的头骨灯",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORE109K_DECOR",
+            "FORE109K_MODES"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经搭出的灯与基础部件，补记过建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "按自己小屋主题实际选过灯的位置并建下，重视空间呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "亲手改变过一张灯具合法预览的位置或朝向，查看结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "直接建下过当时可放的一盏头骨灯，体验普通操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "第三回顾不借真人、长凳或收藏缺项，普通点建不算即时手感或角色成长。",
+          "interpretation_boundary": "只解释这次确实体验的场景与选择；未体验继续换其他专属情境，不从效率、结果或进度推断能力与现实人格。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+1a2232c4a65d"
+}

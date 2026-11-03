@@ -1,0 +1,1975 @@
+{
+  "id": "fnd09f",
+  "title": "奠基 Foundation",
+  "game_ids": [
+    "steam-690830"
+  ],
+  "scope": "PC 当前正式本体；按资源经营或已启用免施工的原生 Creative 选择",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "正式库标题奠基；2026-10-31 官方简体中文商店现名为基石 Foundation，均指 steam-690830。",
+    "当前1.12正式本体；Harvest Festival付费生产、外观与活动不强制。Cosmetic Construction可对部分或全部阶段免材料；仅问当前确已允许的编辑阶段，其他需求、生产、全解锁各以实际设置为准。",
+    "未体验军队、修院、巡逻或后期编辑可换早期题；NPC不代表真人。没有真人验证或替代等值声明。"
+  ],
+  "modes": [
+    {
+      "id": "management",
+      "label": "普通资源与居民经营",
+      "initial_variants": {
+        "FND09F01": "FND09F01.MANAGEMENT.V1",
+        "FND09F02": "FND09F02.MANAGEMENT.V1",
+        "FND09F03": "FND09F03.MANAGEMENT.V1",
+        "FND09F04": "FND09F04.MANAGEMENT.V1",
+        "FND09F05": "FND09F05.MANAGEMENT.V1",
+        "FND09F06": "FND09F06.MANAGEMENT.V1",
+        "FND09F07": "FND09F07.MANAGEMENT.V1",
+        "FND09F08": "FND09F08.MANAGEMENT.V1",
+        "FND09F09": "FND09F09.MANAGEMENT.V1",
+        "FND09F10": "FND09F10.MANAGEMENT.V1",
+        "FND09F11": "FND09F11.MANAGEMENT.V1",
+        "FND09F12": "FND09F12.MANAGEMENT.V1"
+      }
+    },
+    {
+      "id": "creative",
+      "label": "Creative／当前可免材料阶段的创作",
+      "initial_variants": {
+        "FND09F01": "FND09F01.CREATIVE.V1",
+        "FND09F02": "FND09F02.CREATIVE.V1",
+        "FND09F03": "FND09F03.CREATIVE.V1",
+        "FND09F04": "FND09F04.CREATIVE.V1",
+        "FND09F05": "FND09F05.CREATIVE.V1",
+        "FND09F06": "FND09F06.CREATIVE.V1",
+        "FND09F07": "FND09F07.CREATIVE.V1",
+        "FND09F08": "FND09F08.CREATIVE.V1",
+        "FND09F09": "FND09F09.CREATIVE.V1",
+        "FND09F10": "FND09F10.CREATIVE.V1",
+        "FND09F11": "FND09F11.CREATIVE.V1",
+        "FND09F12": "FND09F12.CREATIVE.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "FND09F01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你已立好村心，伐木、采石和浆果采集都能派工，第一座食物摊也在营业。近处平地可留住宅或添工作场所，眼下没有缺粮危机。这一轮你愿把注意力放在哪里？",
+          "scene": "分区与自然通勤",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_STORE",
+            "FND9F_START",
+            "FND9F_CURRENT",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿一条自己还没仔细看过的溪谷查看地形，再决定是否把新区伸过去",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把木石供料、浆果入库和摊位补货连着照看几个周期，依居民消耗与库存再调派工和住宅分区",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "给聚落定“沿林缘生长”的外观主题，按树林轮廓画住宅区",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先比较现有采集点到住宅候选地的距离，再选这轮落点",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "区分发现地形、持续人口物料循环、空间主题和当前方案比较。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F01.MANAGEMENT.V1"
+        },
+        {
+          "text": "你刚能放早期工作场所，已有建造材料和可分配村民。第一座食物摊也可建，几个位置都走得通；这次先做哪件事？",
+          "scene": "分区与自然通勤的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_STORE",
+            "FND9F_START",
+            "FND9F_CURRENT",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先给建造工坊留人、选定这次食物摊工地，再安排浆果采集岗位，按这个次序实际开工",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "把食物摊朝向和村心的空地摆成自己想要的小集市",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "另去看一处未观察过的坡脚，暂不为奖励或产量作保证",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先核对游戏里关于采集区与市场的说明，再开始安排",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "区分发现地形、持续人口物料循环、空间主题和当前方案比较。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F01.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "在原生 Creative 的当前规则下，这座临水修院当前要编辑的阶段确已免施工材料。它已有几个子建筑可编辑，修院整体可移动，部件也能单独调整；你先怎样投入？",
+          "scene": "免施工后的取景与布局",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_COINS",
+            "FND9F_COSMETIC",
+            "FND9F_RULES",
+            "FND9F_QOL",
+            "FND9F_CURRENT"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己设想的“临水修院”主题调整建筑正面与水岸之间的留白",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先排整座移动、局部旋转和细调入口的顺序，再照着编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "反复练几次整座选择、移动与撤销，重点是练熟编辑操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先看当前可用的部件与外观方案，决定这轮采用什么",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "创意规则只免当前明确开启的施工约束，不推导居民需求、生产或所有内容自动开放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F01.CREATIVE.V1"
+        },
+        {
+          "text": "你刚开 Creative，无限钱已启用，早期食物摊已可无材料即时完成。已有村心，还没有修院或城堡，这一轮只摆小集市，你先怎么做？",
+          "scene": "免施工后的取景与布局的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_COINS",
+            "FND9F_COSMETIC",
+            "FND9F_RULES",
+            "FND9F_QOL",
+            "FND9F_CURRENT"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先画出自己想要的弧形集市轮廓，用食物摊朝向表达它",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先排这轮放摊位、留入口和回头挪位置的步骤，再实际编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "反复试几次当前食物摊的选择和移动，练熟手上的摆放",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先核对游戏已有的市场部件操作说明，再继续试摆",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "创意规则只免当前明确开启的施工约束，不推导居民需求、生产或所有内容自动开放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F01.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "仓里有浆果，部分居民却仍显示食物需求未满足，原因尚未核对。已有食物摊可以编辑移位，当前列出的另一座食物摊建设目标也有材料和人手可做。这轮你会先投入哪里？",
+          "scene": "存量与摊位供给",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_START",
+            "FND9F_VILLAGERS",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把采集、仓储搬运、市场岗位和居民往返一起安排，接下来连续看几个供给周期",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先看居民需求、摊位和仓库当前各自显示什么，暂不决定原因",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先建当前目标已经列出的另一座食物摊，把这项目标推进下去",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "自己猜摊位离供货处太远，只移这一个摊位到当前可用的近处，保持岗位与食物种类不动，对照补货和取食过程",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "未知供给表象下，可自己提出距离解释并单移摊位检验，也可看状态、照看多轮供需或推进已列建设；不预告实际原因。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F02.MANAGEMENT.V1"
+        },
+        {
+          "text": "第一座食物摊已营业，浆果采集也在进行；你已看到摊上库存时有时无，但没核对原因。这个摊位可移，现有木石和人手也够再开一个食物摊。这轮先做什么？",
+          "scene": "存量与摊位供给的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_START",
+            "FND9F_VILLAGERS",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己猜供货往返太远，只把这一个摊位移近现有供货处，岗位不动，再跟看补货间隔",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "比较补浆果采集人手与再开一个食物摊这两种当前可做的供给方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "把这次已观察到的浆果送货过程补记下来",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "先跟看一次采集者交货和居民取食的实际过程",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "未知供给表象下，可自己提出距离解释并单移摊位检验，也可看状态、照看多轮供需或推进已列建设；不预告实际原因。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F02.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "你当前已能放门、木墙、石墙和栅栏，门墙吸附可用。本次墙门阶段已可免材料完成；这轮只够认真处理一段边界，你愿怎样投入？",
+          "scene": "门与墙的吸附",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_COSMETIC",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前木墙预览旋转到另一个可用朝向，先看这一小段的外观变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "反复练门靠近墙时的吸附、翻面和撤销，想练熟这个工具",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先看现有门、墙和栅栏可用样式，再决定这一段采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "按自己的庭院主题，用门的位置与墙线形成有意的转折",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "墙门吸附、翻面、个人庭院表达与一次外观试改分开；选择木墙不用石墙只是当前素材选择，不硬计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F02.CREATIVE.V1"
+        },
+        {
+          "text": "当前只用早期市场的食物摊和已可放的帐篷，不依赖门墙解锁。你能再添摊位，怎样安排这一轮？",
+          "scene": "门与墙的吸附的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_COSMETIC",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用摊位间的距离和朝向排成自己想要的开敞广场",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先排放新增摊位、挪原摊位和留通道的编辑次序，再实际试",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先查看食物摊和帐篷各自已有的可选方案",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "实际只挪一个食物摊的位置，先看这次空地关系的变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "墙门吸附、翻面、个人庭院表达与一次外观试改分开；选择木墙不用石墙只是当前素材选择，不硬计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F02.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你有同一批出征过、已有军事经验的战斗人员；目前一项他们可参加的任务要求与风险可查，补给也够。营地有可编辑外观，另一个已列出的城堡建设目标也能开工。这次更想怎样安排？",
+          "scene": "同一队伍的经验",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_VILLAGERS",
+            "FND9F_ED_LUMBER",
+            "FND9F_START"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把营地与旗帜周边布置成自己设想的边地驻军样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先推进已列出的另一项城堡建设目标，不把这次出征当重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "继续培养同一批已有出征经验的人员，安排补给和后续任务，关注他们留下的成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先读这次任务的要求、可能回报和出征条件，再决定是否派出",
+              "signal": "mission_briefing_review"
+            }
+          ],
+          "design_purpose": "成长只指同一已有经验的队伍继续培养；不把购买武器或点晋升按钮本身计养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F03.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没用过军队时，村里已有一个初期伐木营在供木，当前也可再建伐木营或石料采集点，材料和村民够先做一处。这轮你愿先做什么？",
+          "scene": "同一队伍的经验的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_VILLAGERS",
+            "FND9F_ED_LUMBER",
+            "FND9F_START"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己的林缘作业点主题调整新伐木营主体的预览朝向，留出想要的村口视线",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "比较另建伐木营与另建石料采集点当前的材料、人员和用地条件",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "先留出建造工坊人手，再选一处当前工地开工，之后安排该工作场所岗位",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "跟看现有伐木营这轮出木、搬离和入库的实际过程",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "成长只指同一已有经验的队伍继续培养；不把购买武器或点晋升按钮本身计养成。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F03.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "你已有三座实际建好的工作场所或纪念建筑，它们当前的瓦顶都可编辑颜色。当前阶段免施工材料，原有样子仍在，想先投入一轮，你做什么？",
+          "scene": "瓦屋顶的配色",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_MARKET",
+            "FND9F_RELEASE",
+            "FND9F_START"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先浏览当前可用屋顶颜色，不急着修改",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "把这三座已经搭好的建筑外形与摆位补记下来",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "选一组自己的配色主题，实际给这三座可编辑瓦顶分别调出想要的颜色",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "只改一处屋顶颜色，看它与原有墙面搭在一起的实际外观",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "只用当前确有颜色设置的瓦屋顶；普通试色与有主题表达分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F03.CREATIVE.V1"
+        },
+        {
+          "text": "你还没用瓦屋顶，已打开原生纹章编辑器，当前有可选颜色与图形。第一份村落纹章还可修改，这轮先做什么？",
+          "scene": "瓦屋顶的配色的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_MARKET",
+            "FND9F_RELEASE",
+            "FND9F_START"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先浏览现有图形与配色方案，暂不选定",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "先核对纹章编辑的已有操作说明，再动手",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "围绕自己设想的村落象征，调整颜色与图形的搭配来表达它",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "直接换一次当前纹章可用的颜色或图案，亲手看这次更改",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "只用当前确有颜色设置的瓦屋顶；普通试色与有主题表达分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F03.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "大堂已经可用，你能晋升一名当前满足条件的居民，也能暂缓。晋升后的新需求在界面可查，现有粮食仍够。这次你愿先投入哪一块？",
+          "scene": "晋升前后的需求",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_VILLAGERS",
+            "FND9F_START",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这名居民的工作、住处和实际已满足的需求补记成一段聚落经历",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "把晋升后的食物与服务供给、岗位和收入连着运行几轮，依实际需求和库存回看再安排下一批晋升",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先看这名居民当前的等级、工作和需求面板，再核对已有供给状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "直接花当前可支付的资源办这一次已开放晋升",
+              "signal": "purchase_available_upgrade"
+            }
+          ],
+          "design_purpose": "立即晋升是中性购入；只有需求、劳力和收入的持续联动才计运营。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F04.MANAGEMENT.V1"
+        },
+        {
+          "text": "还未开放晋升时，早期住宅已有居民住下，村里正可再建井或食物摊。工人和材料只够先推进一处，这轮你会怎么选？",
+          "scene": "晋升前后的需求的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_VILLAGERS",
+            "FND9F_START",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把当前可建井的预览移到另一处合法位置，亲手看这次选址变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对居民和现有设施面板，再决定缺的服务是否值得先建",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "按手头木石给建造工坊留人，选井或食物摊中的一处工地实际开工",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "在预览里按“小井旁的集市”主题调整这次设施的朝向与留白，给另一处留出自己想要的位置",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "立即晋升是中性购入；只有需求、劳力和收入的持续联动才计运营。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F04.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "当前纪念建筑已有两个子建筑与一段独立装饰，多选能跨子建筑进行。上次移位后有一处间隙与你预期不同，你还未核对选中范围和各部件位置；这轮能再编辑一处，你先怎样用工具？",
+          "scene": "跨子建筑移动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_LUMBER",
+            "FND9F_START"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想要的偏轴入口主题，实际重排两侧建筑轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先排选择哪些部分、整体挪动与最后微调的步骤，再照顺序编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "提出“可能有部件未随选中部分移动”的解释，撤回同一起点后只换选中范围，重做相同位移看间隙",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "反复练跨子建筑多选和撤销，重点是练熟而不赶成品",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "p 由玩家解释编辑现象并单改选中范围，题干不先指出漏选了哪个对象。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F04.CREATIVE.V1"
+        },
+        {
+          "text": "还没用过多子建筑时，最初可放的伐木营主体与石料采集点都已可预览；当前规则让这次主体阶段免施工，不要求任何扩展改善解锁。这轮先怎样投入？",
+          "scene": "跨子建筑移动的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_LUMBER",
+            "FND9F_START"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想要的林缘作业点样子，调伐木营主体的预览朝向和周边留白",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先看看当前伐木营主体与石料采集点的可用外观和布景方案",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "只把一个伐木营主体预览移到另一处合法空地，查看这次位置变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有的选中与移动工具说明，再亲手摆这一个主体",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "p 由玩家解释编辑现象并单改选中范围，题干不先指出漏选了哪个对象。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F04.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已经有巡逻工作场所，当前可改它自己的巡逻分区。两片住宅的安全表现不同，原因尚未核实；人员暂不紧缺，也可暂缓扩密度。这次更想先做什么？",
+          "scene": "巡逻是逐步经过",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_RELEASE",
+            "FND9F_START",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己猜这组巡逻较少经过低安全住区，只把这一组的分区延到该处，再跟看经过和安全变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把巡逻占用劳力、浆果采集补摊和住户消耗连续照看几轮，依据安全与食物库存的实际反馈再调岗位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先看巡逻覆盖与住房相关图层，核对当前信息",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "以城门内外形成不同街区的主题，先调整已可用墙门的布局",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不把画巡逻区当瞬间安全；也不预先断言范围差异就是唯一病因。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F05.MANAGEMENT.V1"
+        },
+        {
+          "text": "尚无巡逻时，你只能画早期住宅区并安排材料施工。区边一块可建设空地还没出现房屋，你尚未检查住房和施工状态。这次会先怎样做？",
+          "scene": "巡逻是逐步经过的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_RELEASE",
+            "FND9F_START",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看住房与工作场所显示的当前状态，不先认定为什么没房",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "自己猜现有住宅分区太窄，只扩开这一处边界，保持木料、建造工与其他需求安排不动，观察有没有新房起基",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按已有木石给建造工坊留人，先处理这次工作场所施工，再补画需要的住宅区",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "把住宅区收成自己想要的弯曲林缘，留下一块开阔的村心视线",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不把画巡逻区当瞬间安全；也不预先断言范围差异就是唯一病因。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F05.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "当前同类部件替换工具可用，已有两种能替换同一墙段的样式。你可以保留这座建筑的功能并继续改外观，编辑时间只够先改一面。你先做什么？",
+          "scene": "同类替换与原有功能",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己定的内外立面统一主题，从这两款同类墙中选一款替换这一面，再调整可改墙段使外观相衬",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较这两种当前可替换部件的外观和功能说明",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "只实际替换一个同类部件，查看这次编辑出现的结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先读已有替换工具说明，再亲手继续修改",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "已有可替换同类部件前提；不虚构任意类别互换或额外功能增益。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F05.CREATIVE.V1"
+        },
+        {
+          "text": "初期小市场已有两处食物摊，当前可选的朴素和几款彩色帐篷都可用于它们；本轮相关阶段免施工。这轮先怎样投入？",
+          "scene": "同类替换与原有功能的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己的朴素村集主题，把这处食物摊的帐篷与邻近摊位外观搭成一致",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已经可选的几款帐篷外观，再决定用哪款",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "直接给这处食物摊试换一款当前可用帐篷，先看一次实际变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有部件替换说明，再继续自己的修改",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "已有可替换同类部件前提；不虚构任意类别互换或额外功能增益。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F05.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已有一座仍在使用的纪念建筑，可支付一轮修改。同类部件替换工具已经可用，替换后的功能会保留；另有一处真正需要材料的扩建。你把这轮编辑时间给谁？",
+          "scene": "同类部件替换",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在当前未提交施工的编辑预览里反复练多选、同类替换和撤销，重点是熟悉这些操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前同类部件的外观和功能说明，再决定换哪一种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "把扩建的材料运送与工人施工排清，先照这个顺序推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "为同一套“朴素石墙、低屋顶”主题替换合适部件，并检查整座建筑的轮廓",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "替换与跨子建筑编辑采用现行工具；练习不以后来进步或完成作品为条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F06.MANAGEMENT.V1"
+        },
+        {
+          "text": "你只建过早期市场，当前食物摊和帐篷都已可用，能再添一个摊位。还不需要扩产，你愿怎样用这一轮时间？",
+          "scene": "同类部件替换的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排放摊位、挪帐篷、留入口的编辑次序，再照着试摆",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "反复练选择与移动当前摊位，想练熟摆放，而非赶目标",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先看已有摊位和帐篷的可用方案，暂不施工",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "用摊位朝向围出自己想要的路边集市样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "替换与跨子建筑编辑采用现行工具；练习不以后来进步或完成作品为条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F06.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "你当前已可编辑一座修院，本次部件已能免材料完成；存档里也已有居民实际经过这处入口。你可改外观或继续跟看，时间只够先做一边，这轮投入哪里？",
+          "scene": "功能场景或纯轮廓",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_VILLAGERS",
+            "FND9F_START"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕“层层院落”的个人主题重排门廊与墙段",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "实际只挪一处门廊或墙段，先看这次入口空间变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先把准备改的部位及移动先后排清，再照着编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先跟看一次居民实际经过入口的过程，再决定要不要调整",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "跟看模拟是中性；不用“流畅/回应”把 NPC 行走包装成即时操作手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F06.CREATIVE.V1"
+        },
+        {
+          "text": "初期住宅分区里已有居民住下，当前确能看到他们出入；旁边还有可补画的合法空地。你能补画住宅分区，也能看住房占用图层。这轮先做什么？",
+          "scene": "功能场景或纯轮廓的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_VILLAGERS",
+            "FND9F_START"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的沿林小村主题实际补画住宅区的边界，给村口留出想要的轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "只在当前空地补画一小块住宅分区，先看这次边界变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前住房占用图层与已有房屋的状态，再决定怎样补画",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "跟看当前确已出现的居民离家、往返工作场所或取食的过程",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "跟看模拟是中性；不用“流畅/回应”把 NPC 行走包装成即时操作手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F06.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已有运行的贸易线路，当前列着一项可做的工具供给建设目标；进口工具与本地产工具也都已开放。仓储、钱与工人可安排，眼前供给不急。这轮先做什么？",
+          "scene": "按存量进出口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_VILLAGERS",
+            "FND9F_START",
+            "FND9F_ED_MARKET",
+            "FND9F_ED_TRADE",
+            "FND9F_ED_BLACKSMITH"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看一次商人实际访问仓储和买卖的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "按已列出建设目标的工具条件，实际安排购入并推进这批建设，把完成目标作为当前重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "连续几个贸易周期照看生产、进出口标记和仓储目标量，依工具消耗与货物余缺再调供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前可买工具与本地已开放生产方案的条件，再选这次投入",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "普通买工具/继续建设不算养成；y 必须是持续贸易、生产、消耗的资源循环。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F07.MANAGEMENT.V1"
+        },
+        {
+          "text": "还没开放贸易时，村里已有浆果采集与食物摊，当前列出的一处基础设施目标也能建，木石和工人暂够。这一轮怎样投入？",
+          "scene": "按存量进出口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_VILLAGERS",
+            "FND9F_START",
+            "FND9F_ED_MARKET",
+            "FND9F_ED_TRADE",
+            "FND9F_ED_BLACKSMITH"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "跟看目前工人去取料和回工地的实际往返",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "先核对已出现的建设目标，实际推进其中当前能做的一项",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "按手头木石留出建造工坊人手，先选这次工地开工，再安排新设施岗位",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "连续几轮照看浆果采集、摊位补货与居民消耗，按实际库存和需求再调岗位与住宅分区",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "普通买工具/继续建设不算养成；y 必须是持续贸易、生产、消耗的资源循环。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F07.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "当前可切换环境时间并用原生拍照模式。建筑已经搭成，仍有可改的屋顶和墙门；这轮只够仔细处理一个视角，你愿怎样投入？",
+          "scene": "建筑与环境的呈现",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_QOL",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已经开放的时刻设置选项，再决定这一轮是否切换",
+              "signal": "environment_setting_options_review"
+            },
+            {
+              "id": "B",
+              "label": "给自己已经实际搭好并摆定的建筑部分补上建设和布景记录",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "按自己想表达的暮色主题，在原生拍照模式里调取景方向、画面构图并保存一张图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "实际只挪一处可移动部件的位置，在同一视角看看这次空间变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "环境时间是外观控制，不改变生产季节；普通试选项不自动计风格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F07.CREATIVE.V1"
+        },
+        {
+          "text": "只搭过村心与食物摊时，你也能切环境时间和拍照。还有下一处可摆的摊位，但这一轮准备先处理已有小景，做什么？",
+          "scene": "建筑与环境的呈现的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_QOL",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已经开放的时刻设置选项，再决定这一轮是否切换",
+              "signal": "environment_setting_options_review"
+            },
+            {
+              "id": "B",
+              "label": "把自己已经搭好的小集市及其当前摆位补记下来",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "按自己的清晨村集主题，在拍照模式里安排取景与构图，再保存一张图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "实际只改一个摊位的位置，在同一视角看看这次小景变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "环境时间是外观控制，不改变生产季节；普通试选项不自动计风格。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F07.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已有一处在用修院，当前能扩一处宿舍；城堡也有可开工部件，两边可并存，资源只够先推进一处。城里采集和贸易供给也已能安排。这轮先投入哪里？",
+          "scene": "阶层方向仍可并行",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_VILLAGERS",
+            "FND9F_ED_MONASTERY",
+            "FND9F_START",
+            "FND9F_ED_LUMBER",
+            "FND9F_ED_TRADE"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕修院生活需要，把外部采集与贸易供给、入院人数和功能空间连续照看几轮，按库存与收支再调外部供应和扩建",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把自己代入修院执事，为维持这个自定身份先扩当前可建的宿舍，即使城堡也能开工",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先按现有材料给建造工坊留人，再选当前能开的城堡部件工地实际推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "把两边当前可建项目与资源条件摊开比较，暂不先定长线身份",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "修士岗位由系统分派，y只用玩家可控外部供给、入院人数与建筑空间反馈；r由自定执事身份驱动实际扩宿舍，一次只做可负担一处。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F08.MANAGEMENT.V1"
+        },
+        {
+          "text": "只到早期聚落时，你已有小市场，当前也能再建一个初期伐木营，木石和人手都够先做一处。这轮怎样投入？",
+          "scene": "阶层方向仍可并行的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_VILLAGERS",
+            "FND9F_ED_MONASTERY",
+            "FND9F_START",
+            "FND9F_ED_LUMBER",
+            "FND9F_ED_TRADE"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按工人与材料排好当前选择的搬运施工顺序，再推进",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际只挪原市场的一处摊位，先看看入口空地出现的变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "在当前可用预览里实际调摊位朝向和间距，让村口转角符合自己想要的视线与留白",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "比较另建初期伐木营与增开食物摊当前的用途和材料条件，再作选择",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "修士岗位由系统分派，y只用玩家可控外部供给、入院人数与建筑空间反馈；r由自定执事身份驱动实际扩宿舍，一次只做可负担一处。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F08.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "你拥有的可建设地里确有一段河岸和一块陌生坡地，一座已有建筑能移动到合法位置；当前要编辑的阶段免材料。可以先摆景或看地形，这轮怎样投入？",
+          "scene": "新地形与现有作品",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_STORE",
+            "FND9F_QOL"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排整座移位、入口调整和局部回挪的步骤，再照着编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先去看那片尚未仔细观察的坡地，暂不为新建筑位置或奖励作保证",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "按“俯瞰河道”的作品主题，把现有建筑实际移到合适的可建处并调视角",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先看当前建筑在两处可建位置的可用布景方案，暂不动手",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "探索、主题表达和普通比较分开；不假定所有地形都可买或所有悬崖都可放建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F08.CREATIVE.V1"
+        },
+        {
+          "text": "你刚在第一片土地放好市场，只能使用当前已有地块和早期部件。这轮有时间看一看周边，也能继续编辑，先做什么？",
+          "scene": "新地形与现有作品的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FND9F_STORE",
+            "FND9F_QOL"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排新增与移动摊位的编辑顺序，再实际试摆",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "把视角移到未仔细看过的一段林边，只为看看那里是什么样",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "把小市场摆成自己想要的村心边景，与树林留出有意的空隙",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先浏览当前已有摊位与帐篷方案，再决定采用哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "探索、主题表达和普通比较分开；不假定所有地形都可买或所有悬崖都可放建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F08.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回看你已遇过仓中有浆果、食物摊却断续补货的那一段，哪种当时确实做过的投入更有分量？不要求最后解决供给。",
+          "scene": "实际遇到过的需求变化",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_VILLAGERS",
+            "FND9F_START",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我自己猜过供货距离影响补货，只移过同一个食物摊、保持岗位不变，并跟看过前后取货过程",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我把采集、仓储、市场岗位和居民消耗连续几轮一起调过，依据实际库存与需求再安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "我把实际发生的缺货、补货或居民往返记了下来",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我核对过已经列出的建设目标，并实际把投入放到推进它上面",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "四项都是已经做过的行动；检验、运营和目标投入不要求问题最终解决。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F09.MANAGEMENT.V1"
+        },
+        {
+          "text": "回想第一次从浆果采集走到市场供给那一段，哪种实际经历对你更有分量？不要求当时供给顺利。",
+          "scene": "实际遇到过的需求变化的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_VILLAGERS",
+            "FND9F_START",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主动跟看过村民把浆果送入和从摊位取走的过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "我猜过早期食物摊离供货处太远，只改过这一个摊位的位置，并实际对照过补货过程",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我先给建造工坊留人、选过一处食物摊工地，再安排采集岗位，并照这个次序实际推进过",
+              "signal": "construction_action_plan"
+            },
+            {
+              "id": "D",
+              "label": "我曾把早期采集和取食的实际过程补记下来",
+              "signal": "simulation_process_recording"
+            }
+          ],
+          "design_purpose": "四项都是已经做过的行动；检验、运营和目标投入不要求问题最终解决。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F09.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "回顾你在 Creative 中实际搭好过至少部分建筑、也用过编辑工具的一段，哪种当时确实做过的投入更有分量？整座建筑未完工也可答。",
+          "scene": "实际做过的模块编辑",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为了自己的建筑主题，实际调整过门墙、屋顶或部件组合的外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我反复练过跨子建筑选择、移动与撤销，当时重点是熟悉工具",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我先排过整座与局部修改的步骤，并照着实际编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我为自己已经实际搭好的部件或铺好的连接，补记过当时的建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "回顾实际编辑与练习，不把计划、保存或成品优劣当经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F09.CREATIVE.V1"
+        },
+        {
+          "text": "回想第一次在 Creative 摆早期食物摊的经历，哪种实际做过的事更贴近你？",
+          "scene": "实际做过的模块编辑的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为了自己想要的小集市外观，改过摊位朝向和间隔",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我主动重复练过选择、移动和撤销摊位",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我先排好放置与移动次序，再照着摆过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我把实际搭过的小市场和编辑过程补记了下来",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "回顾实际编辑与练习，不把计划、保存或成品优劣当经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F09.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "你已经玩过军队或纪念建筑进展的一段。回看实际做过的事，哪一种最能说明你当时愿意把时间留给什么？",
+          "scene": "同一对象留下的投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_VILLAGERS",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我围绕一个自己喜欢的建筑主题，实际改过墙门、屋顶或营地布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我练过多选、整座移动或撤销重做，反复尝试是为了练熟编辑",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我比较过当时已可选的建设与供给方案，再作过实际取舍",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "我持续培养过同一批已经出征的战斗人员，关注他们留下的军事经验，并继续安排后续任务",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "仅同一军队的经验积累计成长；建筑编辑、比较与练操作分别解释。没玩军队可以换早期题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F10.MANAGEMENT.V1"
+        },
+        {
+          "text": "回看你已经摆过的第一处村心或小市场，哪种实际投入最接近你的经历？",
+          "scene": "同一对象留下的投入的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_VILLAGERS",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为了自己设想的集市外观，实际调整过摊位朝向和入口空地",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先排过这轮放置和移动的步骤，并照着编辑过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "我把已经搭建的小市场及调整过程补记下来",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我反复练过选择和移动摊位，当时重点是熟悉操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "仅同一军队的经验积累计成长；建筑编辑、比较与练操作分别解释。没玩军队可以换早期题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F10.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "回看你在 Creative 已实际建好部分纪念建筑、也试过同类部件替换的一段，哪种当时做过的事更有分量？",
+          "scene": "已建外观与真实编辑经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_RELEASE",
+            "FND9F_START"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我因自己的外观主题，改过一组已经可用的部件",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我只试改过一处位置或样式，先看这次编辑的实际结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "我先看过已有工具说明，再亲手继续过编辑",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我给已经实际搭好的建筑部分及这次同类替换补记过建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "回顾实际主题表达、一次同类编辑、工具核对与已建过程补记；普通素材禁用或不用整座移动不硬计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F10.CREATIVE.V1"
+        },
+        {
+          "text": "还没做过纪念建筑替换时，回想你已经编辑过开局纹章的一段，哪件实际做过的事更有分量？",
+          "scene": "已建外观与真实编辑经历的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_RELEASE",
+            "FND9F_START"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的村落象征，实际搭配过纹章的可选颜色和图案",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先看过当时已可选的纹章外观方案，再作选择",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "我核对过已有纹章编辑说明，再亲手改过",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我排过先试可选颜色、再调整图案的步骤，并照着实际编辑过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "回顾实际主题表达、一次同类编辑、工具核对与已建过程补记；普通素材禁用或不用整座移动不硬计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F10.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你已开放贸易、当时也有可用本地供给设施的一段，哪件实际做过的事更有分量？自加限制不必坚持或供给成功。",
+          "scene": "自己加过的限制",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_QOL",
+            "FND9F_ED_TRADE",
+            "FND9F_START",
+            "FND9F_ED_LUMBER"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先比较过当前已开的贸易、供给和扩建方案，再作决定",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "B",
+              "label": "我跟看过一段已运行的巡逻或物料运输，想看清实际过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "C",
+              "label": "我给连续几个贸易周期加过不进口也不出口任何货物的规则，逐种关闭进出口标记，真试靠现有本地供给继续",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "我因没看过的坡地或河湾改变过观察路线，即使那里未必有新奖励",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "跨贸易周期主动关闭本可用的全部进出口才是实质自定规则；普通先建某类楼、记录或阶段次序不计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F11.MANAGEMENT.V1"
+        },
+        {
+          "text": "回顾你只用早期木石、食物摊与工作营地时的一段尝试，哪种已发生的事更像你的投入？",
+          "scene": "自己加过的限制的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_QOL",
+            "FND9F_ED_TRADE",
+            "FND9F_START",
+            "FND9F_ED_LUMBER"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我核对过已有玩法说明，再继续分区或搭建",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "我把已经发生的搬料与村民取食过程补记下来",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "我比较过当时可做的另建初期伐木营与新开石料采集点方案，再作过选择",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "我为了看看尚未观察的地形，暂缓过原本的建设",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "跨贸易周期主动关闭本可用的全部进出口才是实质自定规则；普通先建某类楼、记录或阶段次序不计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F11.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "回顾你已经呈现过的 Creative 城镇片段，以下哪件实际发生的事最接近你当时愿意投入的部分？",
+          "scene": "视角与实际观察",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_VILLAGERS",
+            "FND9F_QOL"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我跟看过居民实际穿行或生产的过程，再决定怎么继续改",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "我把已经搭建的轮廓与修改过程补记了下来",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的光线或空间主题，实际调过建筑、视角和环境呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我离开原有取景处，看过一片尚未观察的地形，而非找必得奖励",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "不把模拟观察当即时反馈，也不把已拍/已记地点当未拥有收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F11.CREATIVE.V1"
+        },
+        {
+          "text": "回想只建村心与早期市场时已经做过的观察或修改，哪件事更有分量？",
+          "scene": "视角与实际观察的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_RELEASE",
+            "FND9F_VILLAGERS",
+            "FND9F_QOL"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先看过当时已有摊位与帐篷的布景方案，再决定怎么摆",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "我把已经搭过的小景及改动过程补记了下来",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "我为自己的小村主题调过摊位与树林之间的画面关系",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我为了看看陌生林边而移过观察位置，不是为清任务",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "不把模拟观察当即时反馈，也不把已拍/已记地点当未拥有收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F11.CREATIVE.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "FND09F12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想贸易已开放、你有精力仍可开新工程，眼前又没有紧急需求的一段，哪种当时真实做过的选择更有分量？",
+          "scene": "熟悉的聚落过程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_STORE",
+            "FND9F_QOL",
+            "FND9F_ED_MARKET",
+            "FND9F_ED_TRADE",
+            "FND9F_ED_BLACKSMITH"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的村镇配色主题改过已可编辑工作场所或纪念建筑的瓦顶颜色，让它与住区周边相衬",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我主动留在熟悉的住区，照看日常供给和往返，因为喜欢从容重复这段过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我把木料到木板的供给、木板出口、工具进口和居民消耗连续几个贸易周期一起调过，按仓储余缺再改目标量",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我绕去看过未观察的地图角落，不是为了清单或确定收益",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "自主舒缓以当时有精力、能继续进展且主动喜欢熟悉过程为前提，不以疲劳、挂机或低难度推断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F12.MANAGEMENT.V1"
+        },
+        {
+          "text": "回想早期小村仍能继续扩建、你也有精力的一段。哪种当时确实做过的事更能代表那次游玩？",
+          "scene": "熟悉的聚落过程的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_STORE",
+            "FND9F_QOL",
+            "FND9F_ED_MARKET",
+            "FND9F_ED_TRADE",
+            "FND9F_ED_BLACKSMITH"
+          ],
+          "modes": [
+            "management"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时可做的建设目标核对条件，并实际推进过它",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我主动回到熟悉的村心，跟着日常采浆果与取食的节奏停留，因为喜欢这份从容",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我为自己想要的小村样子调整过食物摊、井和住宅分区的关系",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我跟看过一次施工或运输的实际过程，再决定后续怎么安排",
+              "signal": "simulation_process_observation"
+            }
+          ],
+          "design_purpose": "自主舒缓以当时有精力、能继续进展且主动喜欢熟悉过程为前提，不以疲劳、挂机或低难度推断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F12.MANAGEMENT.ALT1"
+        },
+        {
+          "text": "回想你有精力、仍有新建筑可继续，而且没有紧急经营问题的一次 Creative 游玩。哪种当时做过的选择最有分量？",
+          "scene": "有余力时的熟悉创作",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_COSMETIC",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排好过当前几个布局部位的编辑先后，并照这个安排实际改过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我主动留在熟悉的庭院或市场，做从容的小调整，因为喜欢再走一遍这段熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我继续为原本的外观主题调整部件与视角",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我反复练过多选或移动操作，当时重在练熟工具",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "h 保留精力、可继续与主动熟悉体验；不因免费建造或难度低推定舒缓。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F12.CREATIVE.V1"
+        },
+        {
+          "text": "回想你只有早期市场、仍能继续加摊位且有精力的一次 Creative 游玩，哪种实际选择更有分量？",
+          "scene": "有余力时的熟悉创作的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FND9F_QOL",
+            "FND9F_COSMETIC",
+            "FND9F_ED_MARKET"
+          ],
+          "modes": [
+            "creative"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过这一轮放置与移动的顺序，并实际照着编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我主动在熟悉的村心做小幅摆放，因为喜欢从容重复这段经历",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我为了自己想要的小集市样子调过朝向与间距",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我主动反复练过摊位选择、移动和撤销",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "h 保留精力、可继续与主动熟悉体验；不因免费建造或难度低推定舒缓。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "FND09F12.CREATIVE.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+3d16546d8ddc"
+}

@@ -1,0 +1,1431 @@
+{
+  "id": "f410",
+  "title": "辐射4",
+  "game_ids": [
+    "steam-377160"
+  ],
+  "scope": "原生PC本体；单套题与有限已核替代情境",
+  "status": "private_authoring_pending_independent_review",
+  "author_review": "author_sources_and_full_bound_copy_self_review_complete_pending_independent_review",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "无DLC/CreationClub/MOD必要前提；不采用生存难度特有规则为全体默认",
+    "四共题独立，12专属槽各三情境；未体验继续其他已核专属情境，不提供跳过",
+    "NPC不作真人Q/O；不以虚构任务选择推现实善恶；不宣称有限池全进度覆盖"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC本体",
+      "initial_variants": {
+        "F41001": "F41001.V1",
+        "F41002": "F41002.V1",
+        "F41003": "F41003.V1",
+        "F41004": "F41004.V1",
+        "F41005": "F41005.V1",
+        "F41006": "F41006.V1",
+        "F41007": "F41007.V1",
+        "F41008": "F41008.V1",
+        "F41009": "F41009.V1",
+        "F41010": "F41010.V1",
+        "F41011": "F41011.V1",
+        "F41012": "F41012.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "F41001",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "Sturges要床，旧家也能重新布置",
+          "text": "Concord的幸存者已经来到庇护山丘。Sturges刚请你安排床铺，Workshop已能用，木材、钢和床都够做；你也想把一间旧屋布成自己的家，主线另已给出去钻石城的方向。这一轮先花时间在哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先摆好够用的床并回报Sturges，落实自己这轮选定的安置目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把床、桌椅和现有墙面按自己的战后小屋主题重新安排",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先向还没到过的钻石城方向出发，想看看远处城市",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先查Workshop眼前已有木材、钢和床的实际存量，再决定如何处理",
+              "signal": "material_stock_review"
+            }
+          ],
+          "source_ids": [
+            "F410_SANCTUARY",
+            "F410_OFFICIAL"
+          ],
+          "design_purpose": "原生返乡建设与可延续旅程间的真实时间分配，当前目标、个人作品、未知发现与准确存量核对分开。",
+          "interpretation_boundary": "只当前已有Workshop和主线方向；不说床布置得美就提高幸福，不替所有玩家预设已解锁钻石城快速旅行。",
+          "id": "F41001.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "两处聚落，一位可用居民",
+          "text": "你已拥有庇护山丘和另一处聚落，Local Leader的供给线选项也确实可用；一位能分配的Settler尚无任务。新聚落缺建造组件，旧聚落还有自己想做的房间外观。先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把供给线、两地已有材料和下一步施工顺序一起理顺，让后续建设持续运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先在旧屋安排家具和墙面，完成个人房间风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先去新聚落没走过的一角看看，想发现那里的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先查看PipBoy已经开放的线路地图与两处聚落位置，再决定这一轮往哪里去",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "source_ids": [
+            "F410_SUPPLY",
+            "F410_SANCTUARY"
+          ],
+          "design_purpose": "真实LocalLeader人力分配与跨聚落流程，不将NPC指派说成真人协调。",
+          "interpretation_boundary": "必须当前有两聚落/资格/可分配Settler；共享制作资源不等于所有成品可在远端取出，查看地图不等同已建线路。",
+          "id": "F41001.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "这批作物先成为胶还是留下再种",
+          "text": "你在家准备出发，已经去过且当前可达的灰色花园确有可取用的玉米、塔托和变种果；家里有纯水、烹饪站与已开放的蔬菜淀粉配方。自己已选的改件除胶外材料都够，这批能采的菜可先做胶，也可留一部分安排农作物供给。先怎样投入？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把种植、居民耕作、纯水与淀粉制作的前后衔接安排好，减少以后改枪反复缺胶",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "用这批材料先做自己已决定的那次武器改造，把当前目标真正做完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先前往自己已发现的灰色花园，亲手采当前确有且允许取用的这批作物，再继续安排",
+              "signal": "known_gathering_site_action"
+            },
+            {
+              "id": "D",
+              "label": "沿花园外尚未走过的方向探一段，想知道附近还有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "F410_FARM",
+            "F410_UPGRADE"
+          ],
+          "design_purpose": "同批作物的运营留种与当前制作投入竞争，采已知资源不自动算探索/收藏。",
+          "interpretation_boundary": "只当前真的有作物与配方材料；不许诺立即或无限刷新，先留种只是玩家选择，不把添田判G。",
+          "id": "F41001.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        }
+      ]
+    },
+    {
+      "id": "F41002",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "Concord街上的机枪和死亡爪",
+          "text": "你已在自由博物馆屋顶穿上有核心的T45、取下有弹药的机枪，Concord街上仍在交战。你能操控移动与射击，也能用VATS且当前AP有余量，自己还不熟死亡爪逼近时的应对。此刻最想投入哪种行动？",
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手连续走位、压枪和开火，享受机枪响应与目标反馈接续的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "按自己设定的临时守卫身份去顶住街上的威胁，让行动符合这次扮演",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "先安排本轮VATS攻击、AP消耗与恢复的先后，再照这个循环接回交火",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "D",
+              "label": "反复练控制点射和拉开距离的时机，想亲手掌握这一场交火",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "F410_CONCORD",
+            "F410_VATS"
+          ],
+          "design_purpose": "同场交火区分个人练会、持续本人手感和角色身份，不以用重武器推能力或现实好斗。 撤回将交火弹药/核心查看绑定收集搬运建造物料解释，改准确的交手能量消耗恢复循环。",
+          "interpretation_boundary": "只实际取得装甲/核心/机枪且正在可操作交火；不保证安全、无伤或可以无限重刷死亡爪。",
+          "id": "F41002.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "VATS这一轮瞄哪里",
+          "text": "你正和一名会逼近的敌人交战，当前VATS确实能选到其腿和躯干，已有AP和两支装着不同合法改件的现有枪，两支都有弹药。你尚未练熟部位选择与接下来走位，也已有自己想推进的这场交战目标。先把注意力投入哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前武器改件与VATS部位策略配起来，比较实际交火后哪套组合合用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "手动连续瞄准、走位开火，喜欢输入与命中反馈连起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先完成自己已决定的这段交战目标，把当前可用资源投入推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "练自己未熟的选部位、执行后换位，让个人操作逐渐稳定",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "F410_VATS",
+            "F410_UPGRADE"
+          ],
+          "design_purpose": "部位与已有配件策略的组合B不同于单点一个部位，T只本人练会，F持续手动。",
+          "interpretation_boundary": "仅当前可见部位/合法改件；B比较须实际使用不同方案，不从一次看百分比推出。腿受损效果不对全部敌人保证相同。",
+          "id": "F41002.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "已满的暴击槽，这段交火想投入什么",
+          "text": "当前交火中你的VATS暴击槽已经填满、现有AP可用，手头两支已拥有且装着不同合法改件的枪都能使用。自己想尝试暴击时点与武器搭配，也还没练熟手动追踪移动目标。此刻更愿投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先专门练自己未熟的手动跟枪与走位，想把个人操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "手动持续瞄准、移动和开火，想继续体验连续输入的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前已拥有的枪和可选配置，再决定如何接这轮交火",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "比较现有武器与使用暴击时点的搭配，实际试出这一段合用的方案",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "F410_CRIT",
+            "F410_VATS"
+          ],
+          "design_purpose": "主动暴击与不同本人投入，不把VATS自动镜头当F、不把查看配置当机制比较已完成。",
+          "interpretation_boundary": "只已满单个暴击槽，不要求CriticalBanker，不承诺必中或任何距离无阻挡。",
+          "id": "F41002.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        }
+      ]
+    },
+    {
+      "id": "F41003",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "Walden礼品店的锁门与排水管",
+          "text": "你在Walden Pond礼品店见到通地下室的高难锁门，自己的开锁条件还不够；墙边便条已指出另一条排水管入口，你尚没走过那条路，也想补自己收藏清单里这一带的杂志。先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "扮演不硬闯门的潜入者，按这个身份选择绕道进入",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先核对已看到的便条和现有地图位置，再决定怎样走",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "先走那条没体验过的排水管，想看看它通向的地下空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "沿已知线索去寻找自己清单尚缺的那本杂志，重心是补全收藏",
+              "signal": "collector"
+            }
+          ],
+          "source_ids": [
+            "F410_WALDEN"
+          ],
+          "design_purpose": "绕行是已给出的原生旁路，不把照便条当本人推理P；未知空间和明确收藏缺口动机分开。",
+          "interpretation_boundary": "管道仍有掠夺者，不保证安全或无战斗；收藏仅玩家实际自设缺口，不宣称全体已有杂志清单界面。",
+          "id": "F41003.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "Hubris Comics任务服与柜台杂志",
+          "text": "你已接Kent取服装的委托，亲自到达Hubris Comics，当前清过的柜台旁有尚未取的Unstoppables杂志，你已经走到过片场看过道具，但任务服装还没带回；楼里另有自己没进过的可达房间。你有时间再做一项，先投入哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在当前已能查看的片场与服装道具前停留，想联系这家漫画店原来的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先向还没踏过的可达房间走一段，想发现店内别的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "取走这本自己收藏缺口里的杂志，想让已有系列再补上一册",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先上楼取任务服装再回Kent处，推进自己已选的这项委托",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "source_ids": [
+            "F410_SHROUD"
+          ],
+          "design_purpose": "同一地点可取藏品、任务目标、叙事现场与尚未进入的房间竞争，不把一切搜刮都判C。",
+          "interpretation_boundary": "仅柜台已可达且杂志未取；楼上可能有尸鬼，不说清了柜台等于全楼安全，不造任意服装试穿拍照功能。",
+          "id": "F41003.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "Fort Hagen回程遗漏的娃娃",
+          "text": "你已经完成过Fort Hagen这段主线并打开相应离开门，当前能返回指挥区；能量武器摇头娃娃还未取到，自己知道它在厨房一带，也有几间尚未实际走过的可达房间。先安排哪件事？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把这段已体验地点与已经获得的物品补进自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "先查当前已开放的地图入口与标记，确认本轮从哪里回去",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "C",
+              "label": "专门回去取这只自己藏品清单缺少的娃娃，重心是补全这一格",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先看看自己没进去的房间，想知道那里留下了什么",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "F410_BOBBLE"
+          ],
+          "design_purpose": "原生本体明确遗漏物和已开放返程；C只自选清单，不把道具属性收益等同收藏兴趣。",
+          "interpretation_boundary": "当前门仍可用才适用，未开门者继续换其他已核专属情境；不保证无新敌人、快速旅行适用所有难度或需要DLC展架。",
+          "id": "F41003.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        }
+      ]
+    },
+    {
+      "id": "F41004",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "一支枪的枪管、枪托与瞄具",
+          "text": "你在武器工作台前，同一支枪确有两组自己能装的枪管、枪托与瞄具，材料和所需条件够用；一组偏手动中近距，另一组偏远距VATS，实际效果还没比较。先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前工作台真实开放、已有材料能做的部件，再决定做哪组",
+              "signal": "crafting_option_review"
+            },
+            {
+              "id": "B",
+              "label": "分别装上两组并实际交火比较，再按射程、后坐与AP使用配合调整",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "把现在已经决定的那套改件装好，先完成自己这轮目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先带现有枪离开工作台，在实际交火专练自己尚未熟的手动跟枪，让个人操作更稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "F410_VATS",
+            "F410_UPGRADE"
+          ],
+          "design_purpose": "组合效用、当前目标、本人练习与准确可做选项查看，撤四个改枪方法共用同一动机。",
+          "interpretation_boundary": "两组须同枪当前合法，不采固定AP公式/伤害排名，B实际试过才解释组合兴趣，不保证某套最优。",
+          "id": "F41004.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "河边净水器与屋内灯",
+          "text": "庇护山丘里你已能建发电机、河中净水器和本体灯具，当前有足够组件。你想让已有供水持续运转，也另想做一条个人风格的夜间小街；电线仍需亲手接。先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先看当前界面已显示的供能与连接状态，再决定如何改",
+              "signal": "device_status_review"
+            },
+            {
+              "id": "B",
+              "label": "把发电、净水器连接与已有供水需求一并安排，先让这套供给稳定工作",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "用灯具、墙面和家具布出自己想要的夜间街道气氛",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先完成自己这轮已选的那台净水器接线，把时间材料投入它",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "source_ids": [
+            "F410_SANCTUARY",
+            "F410_OFFICIAL",
+            "F410_SETPOWER"
+          ],
+          "design_purpose": "原生供水/接线与个人布景目标，Y需流程运营而不只装单机，A不以幸福数值作回报。",
+          "interpretation_boundary": "只有当前能建物件，不使用DLC穿墙管线/自动工厂；总电量不自动意味着净水器已连上，装饰不保证幸福提升。",
+          "id": "F41004.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "把已有动力甲继续用下去",
+          "text": "你在可用的动力甲工作台旁，自己长期使用的框架与部件仍在；当前有可修部位、够用材料和已经开放的改造选项。你另有自己的普通枪械改造计划。先怎样投入？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对眼前实际部件和材料存量，再决定处理哪件",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "B",
+              "label": "继续维护这套自己一直投入的装甲部件，并安排后续逐步升级，想看同一套装备的积累留下来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "比较目前已开放模块与自己交火方式的配合，实际使用后再改方案",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先做自己已选的普通枪械改造，把本轮材料时间投入当前项目",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "source_ids": [
+            "F410_POWER",
+            "F410_UPGRADE"
+          ],
+          "design_purpose": "G必须同套装备已有长期维护与后续成长路径，普通摆出新框架不G；B是模块效用。",
+          "interpretation_boundary": "不预设高级Science模块、无限核心或所有NPC可强制退甲；G解释这次持续养成兴趣，不推沉迷。",
+          "id": "F41004.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        }
+      ]
+    },
+    {
+      "id": "F41005",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "首次见到Sturges时，博物馆备忘终端仍未破解",
+          "text": "你刚在自由博物馆见到Preston和Sturges，已听过用屋顶动力甲支援的计划，地下室聚变核心还未取。Sturges身旁的Novice终端已让你操作，你已进入猜词界面并试过两个词，正确密码本人仍不知道；楼里还有没看过的可达展区。这一轮先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "据自己两次尝试的同位字母反馈提出候选，再真正输入检验，想亲自弄清密码",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先去未看过的可达展区，想知道博物馆里还有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先到已知地下室取得聚变核心，再上屋顶装入动力甲，推进自己选定的支援目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "为自己在博物馆已体验的地点与已听过的人物信息补上记录",
+              "signal": "game_recording"
+            }
+          ],
+          "source_ids": [
+            "F410_HACK",
+            "F410_CONCORD"
+          ],
+          "design_purpose": "纠正未经证实的战后再黑时点，改来源明确的首次会面阶段。本人未知词与同位反馈实际验证P、未走展区W、当前支援目标与已见记录竞争。",
+          "interpretation_boundary": "仅首次见到Sturges、确已让开且本人当前能猜词；此台是上层博物馆备忘终端，不是地下室开聚变核心门的另一台。不说战后仍能重置破解；密码可失败，不虚构固定词、Novice专长要求或区域全部无敌。",
+          "id": "F41005.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "失踪商队冷藏箱还没打开",
+          "text": "你已接Honest Dan的失踪商队调查，在Covenant拿过Deezer特供柠檬水，现在来到已经标出的商队现场；眼前有未搜的冷藏箱，商队是否到过村里本人还未确认。你也选过回村问店主的方向。先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先提出商队可能到过村里的解释，亲自搜现场容器，看是否有能支持或推翻它的物证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "回村继续问Dan合成人究竟是什么，想了解村民恐惧背后的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先回村按当前能问的选项找店主，推进自己已经选定的调查方向",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "为自己已到的村庄、商队现场和已拿到的物品补记记录",
+              "signal": "game_recording"
+            }
+          ],
+          "source_ids": [
+            "F410_HUMAN"
+          ],
+          "design_purpose": "具体原生柠檬水物证只支持商队到访线索，不等于直接证明谁作案；S问人物背景而非多人关系。",
+          "interpretation_boundary": "本人未核实且冷藏箱未搜才适用；不在题干直接揭示物证，不保证每次对话检定成功或提前发现未接任务也生成线索。",
+          "id": "F41005.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "Nick给出的录音带与下一处警局",
+          "text": "Nick已亲口委托你寻找Eddie Winter录音带，你手里已有几卷和他的案件笔记；下一处警局位置已经由终端标出，附近也有未走过的可达地方。这一轮先投入哪件事？",
+          "options": [
+            {
+              "id": "A",
+              "label": "听已有录音、读案件笔记并联系Nick讲过的过去，想懂这件案子为什么牵动他",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "沿同一位Nick的关系路线继续做这项个人委托、回应谈话，想让此前长期积累走到新阶段",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先到已标出的下一处取带地点，把自己决定推进的任务做下去",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "向警局旁没走过的可达方向探一段，想知道那边有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "F410_NICK"
+          ],
+          "design_purpose": "必交任务带不自动C；S人物过去、G同一NPC已持续关系、当前任务与未知发现分开。",
+          "interpretation_boundary": "只任务已触发且已有带/笔记；NPC不是真人O/Q，不许诺任意行为必涨好感或有默认好感数值界面。 G只此前同一位同伴的关系积累与本次个人任务的新阶段，不假定满关系后还可无限长好感。",
+          "id": "F41005.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        }
+      ]
+    },
+    {
+      "id": "F41006",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "穿上银衣怪客后如何接这段委托",
+          "text": "你已把Hubris Comics的服装交给Kent并同意继续，当前能穿银衣怪客服装、听到下一目标广播；手里也有能用的其他衣帽与武器。你先把这段游玩投入在哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "停下来听Kent和广播已经开放的内容，想联系这场模仿电台英雄的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "用当前确能穿的衣帽组合自己的废土形象，想留下个人造型",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先核对任务栏当前已显示的目标，再继续这一段",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "D",
+              "label": "按自己选定的银衣怪客身份穿服装、采用怪客台词并执行这段委托，想让行为符合角色",
+              "signal": "role_player"
+            }
+          ],
+          "source_ids": [
+            "F410_SHROUD"
+          ],
+          "design_purpose": "扮演台词和身份R不同于听人物故事S，衣着A为个人呈现，任务检查0仅已有目标。",
+          "interpretation_boundary": "服装/广播必须当前已开放，衣帽组合限装备界面允许；不把所有NPC对话都说有怪客台词，不据惩罚罪犯推现实正义感。",
+          "id": "F41006.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "宪法号舰内维修还是上岸",
+          "text": "你已见过宪法号机器人船员，当前既可处理船内电缆，也已知道Deb能卖替换线圈；相关维修选项与材料确实够用。你没去过Bunker Hill，自己另选过先办导航芯片的任务。先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先上岸去还没到过的Bunker Hill，想亲眼看看那个聚落",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先办自己已选的导航芯片，把时间投入当前任务",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对手头实际电缆、线圈与现有材料，再决定修哪处",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "D",
+              "label": "以自己设定的舰上工程兵身份优先修复舰内供电，想按这次角色立场行动",
+              "signal": "role_player"
+            }
+          ],
+          "source_ids": [
+            "F410_SHIP"
+          ],
+          "design_purpose": "原生舰内与岸上并行事项，不用机器人船员冒充真人协调；身份、未知地点和已选任务真正竞争。",
+          "interpretation_boundary": "只当前已给相应任务、选项可用；Deb售货不保证固定价格或必有一切材料，非所有检定都默认通过。",
+          "id": "F41006.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "Chambers开始说明实验",
+          "text": "在Human Error中，你已进入Compound，Chambers正解释自己为何坚持合成人测试，关键选择还没作出。她把Amelia留下来作为条件，拒绝可能引发冲突。此时你更愿意投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先听完她正在讲的过去与理由，想理解这套实验为什么在这里发生",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先落实自己已选的把Amelia带离此地的任务目标，实际处理阻碍",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对任务栏已经显示的目标和当前进度，再接这一段",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "D",
+              "label": "沿自己此前一直扮演的解救者身份拒绝留下Amelia，并承担接下来的交战与村庄态度变化",
+              "signal": "role_player"
+            }
+          ],
+          "source_ids": [
+            "F410_HUMAN"
+          ],
+          "design_purpose": "R身份一致、S人物因果、X自选任务不同；选择救人和不救人都不据此判断现实善恶。",
+          "interpretation_boundary": "只陈述尚在进行且未承诺最终分支；不是许诺四个独立结局，拒绝可能导致Compound及Covenant敌对，不预告和平带走。",
+          "id": "F41006.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        }
+      ]
+    },
+    {
+      "id": "F41007",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "招募信标开着，已有居民还要安顿",
+          "text": "你管理的聚落已有通电且开启的招募信标，已到居民的床铺和作物岗位还待安排，现在没有袭击警报。Nick是当下同行同伴、已有可谈旧案；你的现有枪也确有两组能在本地工作台装的合法部件。这轮先花时间在哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在工作台装用两组合法部件并实际交火比较，看看哪组和自己的作战方式合用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先查看当前已显示的发电供给与信标电线连接，核对供能后再决定本轮怎样安排",
+              "signal": "device_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先关闭招募信标，把已到居民的床、作物岗位与现有供水接起来，安排好再恢复招募，让人口与供给持续配合",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先听Nick当前已开放的旧案谈话，联系他之前讲过的往事，想了解这个人物",
+              "signal": "story_keeper"
+            }
+          ],
+          "source_ids": [
+            "F410_SETPOWER",
+            "F410_NICK",
+            "F410_UPGRADE",
+            "F410_VATS"
+          ],
+          "design_purpose": "撤跨槽反复Y/A/自选造屋/库存的近壳；原生信标招募与既有人口供给、同行NPC当下人物线、真实改枪组合、准确供能核对是不同具体投入。",
+          "interpretation_boundary": "当前真有通电开启信标、可分配普通居民、Nick已开放谈话及合法部件才适用；关信标不保证立刻没有任何路上来人，不把NPC岗位或Nick当真人Q/O，不用DLC人口终端。",
+          "id": "F41007.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "与Nick同行中逐步开放的谈话",
+          "text": "你已经与Nick同行过一段，他会在旅途中谈起自己的经历，但这段关系还未走完。眼前有你确能操作的终端，旁边未探过的可达通路仍在，自己还没熟练掌握终端筛词。先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "反复亲自处理自己还没掌握的筛词过程，专门练会终端操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先走没体验过的那段通路，想发现里面的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "继续带同一个Nick同行、回应逐渐出现的谈话并积累关系，想看这份长期投入继续发展",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "认真听他当前已出现的往事，想了解旧Nick与现在这个人的联系",
+              "signal": "story_keeper"
+            }
+          ],
+          "source_ids": [
+            "F410_NICK",
+            "F410_HACK"
+          ],
+          "design_purpose": "同一NPC持续关系G、叙事S、个人熟练T与新内容W不同，不把NPC陪伴计真人O。",
+          "interpretation_boundary": "只当前真实同行与已出现谈话，不保证每次黑终端都刷新好感；T不是照现成密码，不推智力或社交能力。",
+          "id": "F41007.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "改造缺螺丝后是否改变补料方式",
+          "text": "你在工作台确认本次改件缺螺丝，已能用Tag for Search；目前只有少量自己确认含该组件的垃圾，仍不够这一项，也有已经开放且材料够用的另一组配件。这轮先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先做自己已经选定、当前材料够的那组改件，把这一轮目标完成",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先在组件视图核对自己实际已有的螺丝与可分解垃圾存量，再决定怎么用",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "C",
+              "label": "把标记缺料、拾取筛选与回台制作消耗组件的顺序理好，让往后补料更顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "比较材料已够的几组配件与实际交火方式，装上试用后再改组合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "F410_MATERIAL",
+            "F410_UPGRADE"
+          ],
+          "design_purpose": "Tag本身不是机制构筑；Y是持续补料流程，B是可用组合实际效果，0仅已有物料。",
+          "interpretation_boundary": "不把武器护甲当随制作自动拆解，不保证一切垃圾都含螺丝或Tag自动给完整世界高亮。",
+          "id": "F41007.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        }
+      ]
+    },
+    {
+      "id": "F41008",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "连得上却拿不到远端原物",
+          "text": "你已用Local Leader连好两处聚落。新聚落制作界面能用到远端组件，但你在这里找不到旧聚落箱中的那件原物，原因本人还没确认；当前也有一件配方开放且材料够的本地小件可做，本轮另已选好一处施工。先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看PipBoy当前已显示的线路连接，核对实际状态再决定怎样走",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "提出线路共享制作资源而非原物取货的解释，保持线路不变，亲自往返核对两地原物，再只制作一次小件观察组件变化，实际检验它",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把往后两地补料、制作和取回成品的先后安排理顺，让这张供给网更好用",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先做自己已选的本地施工，把这一轮时间材料投入它",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "source_ids": [
+            "F410_SUPPLY"
+          ],
+          "design_purpose": "共享边界是本人未知问题须实测，运营另有长流程；查图不当P。",
+          "interpretation_boundary": "只已经连线且本人不知道解释；不在题干宣布正确答案，不保证所有物件共享，不将两地已开放取物界面等同任何难度可瞬移。 核对前保留原库存，试制只用一件当前确可做物件，不把单纯看线路菜单当因果检验。",
+          "id": "F41008.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "返乡这一轮，先改枪还是先把家做完",
+          "text": "你回到庇护山丘，现有钢、木与胶等材料及已开放选项，既支持现有枪的一组合法改件，也支持自己选好的一段木屋布置；这一轮时间只留给一项投入。河边还留着本人此前熟悉的收菜与补纯水过程，眼下精力足且无警报。先投入什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先把自己已选的木屋那一段真正做完，把本轮材料时间投入当前目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "比较枪上原有方案与这次合法枪管、瞄具组合的实际交火效果，再按效用调整搭配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "实际把木墙、床和家具布成个人主题房间",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "虽有新项目和余力，仍从容重做自己熟悉的收菜补水过程，喜欢这个自主节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "source_ids": [
+            "F410_UPGRADE",
+            "F410_SANCTUARY",
+            "F410_FARM"
+          ],
+          "design_purpose": "有限时间下真实横向目标竞争；H只熟悉且有余力，A风格动机不同于X推进已选作品。",
+          "interpretation_boundary": "只配件与木屋都确可做，不编材料共用的固定配方数量或强制资源锁；无警报不代表以后不会袭击。",
+          "id": "F41008.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        },
+        {
+          "scene": "Mandy的导航芯片还没拿到",
+          "text": "你已接宪法号导航芯片请求，来到Mandy附近，尚未使拾荒者敌对；当前确能接近放芯片的建筑与柜子，自己也能选择回船处理未完维修，而且此刻确有可读的事前存档。先投入哪种实际行动？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看任务栏已有的芯片与维修目标，核对这一轮已做到哪步",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "B",
+              "label": "给自己定只潜入取芯片、不对任何人开火，暴露或开火就结束本次、读回该事前存档重试的规则，并真按它去潜入",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "依自己一直设定的机器人舰员盟友身份处理芯片，不为Mandy破坏船只",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "先回船完成自己已选的那项维修，把当前目标推进",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "source_ids": [
+            "F410_SHIP"
+          ],
+          "design_purpose": "实际可偷芯片的原生场景支持自定成功/失败边界并真玩I，不把换条路或选阵营本身当I。",
+          "interpretation_boundary": "芯片当前可达，不说偷窃不会被发现；自定规则靠本人执行，结束尝试不是原生自动重置，NPC不Q/O，不推现实立场。 只有实际存在可读的事前存档才可按自定规则重试，不把自由存档当生存难度默认。",
+          "id": "F41008.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action"
+        }
+      ]
+    },
+    {
+      "id": "F41009",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "Curie从机器人身体走向新阶段",
+          "text": "回想你与同一个Curie长期同行，她提出希望改变身体后，你确实带她找过Amari、与当时实际遇到的照护者谈过、见证转移后再与她交谈的一段。哪种实际投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "让同一位Curie从此前同行与关系积累走到身体转变的新阶段，并继续她的同伴路线，想看长期培养留下成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "听她为何想改变身体、再看转移后的反应，想理解她作为人物的变化",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "沿自己设定的废土医者身份找专家并协助这个过程，想让行动符合一直扮演的角色",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "先核对过任务栏当时已列的带人、等待或交谈步骤，再亲自继续",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "source_ids": [
+            "F410_CURIE",
+            "F410_MEMORY"
+          ],
+          "design_purpose": "撤与04V1改枪主要换时态的初稿，独立原生Curie同伴转移经历：同对象已积累成长G、人物因果S、角色身份R与准确已列任务步骤0不同。",
+          "interpretation_boundary": "仅Curie本人任务已触发且转移真实完成；NPC不Q/O，不造玩家亲自编辑意识/任选身体能力，不说必须照护者Glory或必须恋爱。G不是看一次外观变化就成立。",
+          "id": "F41009.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        },
+        {
+          "scene": "从Walden地下室带出的Big Jim",
+          "text": "回想你清过Walden礼品店地下室、取到Big Jim独特扳手并亲自拿它交手的一段：你还没掌握近战距离，自己也有收集本体独特武器的清单。哪种真正做过的投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "为了补自己的独特武器清单，专门取过并留下Big Jim，想把这一项收藏补齐",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "亲手连续接近、格挡与挥击，喜欢近战输入和眼前反馈接续的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "反复练过自己未熟的出手距离与格挡时机，专门练会近战操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经取得的扳手和已体验的地下室补上记录",
+              "signal": "game_recording"
+            }
+          ],
+          "source_ids": [
+            "F410_WALDEN",
+            "F410_OFFICIAL",
+            "F410_CONTROLS"
+          ],
+          "design_purpose": "收藏独特武器的主动缺口C不是捡武器即C；真实扳手近战与机枪手感不同，记录不被硬塞人格。",
+          "interpretation_boundary": "必须实际用过且有自选藏品缺口；不采用跛脚概率保证、不承诺每击控制或无限敌人刷新；格挡/挥击是本体可操作输入。",
+          "id": "F41009.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        },
+        {
+          "scene": "ArcJet里找发射器与可选引擎试验",
+          "text": "回想你确实与Danse进入ArcJet、恢复辅助电源并找到深程发射器的一段；途中谈过受损机器人与任务，也见到可选的引擎点火。哪种实际投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "沿自己设定的临时技术兵身份恢复供电、找到发射器，让行动连成这次角色经历",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "认真问过Danse当时还能问的机器人和任务背景，想知道他怎样理解这座设施与合成人",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "反复练过自己未掌握的探出掩体瞄准与换位，重心是个人操作变稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "当时确实选择并触发过引擎点火这个已开放的可选目标，先把它完成",
+              "signal": "optional_objective"
+            }
+          ],
+          "source_ids": [
+            "F410_ARCJET"
+          ],
+          "design_purpose": "撤与Concord同RFT交火近壳，改独立原作ArcJet任务：身份R、人物叙事S、个人未熟T与准确原生可选目标0。一次发动引擎及自动火焰不F。",
+          "interpretation_boundary": "只实际到过该阶段并具备真实选项；T须实际练过不据任务完成推能力，可选目标不推人格，NPC不作真人协调，不保证点火无代价或无限生成敌人。",
+          "id": "F41009.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        }
+      ]
+    },
+    {
+      "id": "F41010",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "从Kellogg记忆中离开",
+          "text": "回想你在记忆保管库经Amari和Nick进入Kellogg记忆、最后通过电视离开并得知Virgil方向的一段。此前的片段都真实体验过。哪种实际投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己一直扮演的寻子父母立场，把Virgil线索转成下一步追寻，不愿脱离这个身份",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先推进自己当时已决定的寻找Virgil目标，实际投入下一段行程",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "为自己已经体验的记忆片段和听到的人物信息补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "认真看过Kellogg的经历，再联系他后来对你所做的事，想理解这个人物如何走到这里",
+              "signal": "story_keeper"
+            }
+          ],
+          "source_ids": [
+            "F410_MEMORY"
+          ],
+          "design_purpose": "必经演出本身不P，S主动联系人物经历与R寻子身份不同，0记录仅已见信息。",
+          "interpretation_boundary": "不是可改写过去或任意回放剧情的编辑器；不把理解Kellogg动机当赞同其行为，更不推现实家庭观。",
+          "id": "F41010.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        },
+        {
+          "scene": "Eddie之后Nick的独白",
+          "text": "回想你集齐任务带、与Nick到Andrew Station见过Eddie，并在交战后跟他离开听过独白的一段。你此前已与同一个Nick同行很久。哪种真正做过的投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "完成自己当时已选的Andrew Station见Eddie与收尾目标，实际把这一段推进完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "沿自己设定的侦探搭档身份完成对质与收尾，重心是角色一贯怎样行动",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "为自己已取得的任务带和已听过的案情补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "听完Nick的独白并联系旧案与他的身份，想把这段人物故事理解完整",
+              "signal": "story_keeper"
+            }
+          ],
+          "source_ids": [
+            "F410_NICK"
+          ],
+          "design_purpose": "末段人物收束与前段找带不同；S人物完整因果、R侦探搭档身份、本人既选目标与准确已见信息记录分开，撤回任务后继续同行就G的过强解释。",
+          "interpretation_boundary": "不是随便说一句就把关系刷满，不保证任务bug不存在；记录仅已见内容，不在测试中强制玩家判Nick现实善恶。",
+          "id": "F41010.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        },
+        {
+          "scene": "Human Error结果已出现后",
+          "text": "回想你已在Human Error作出关于Amelia的决定、见到随后的冲突或Covenant态度变化的一段；当时确有能读取的事前存档，可以选择再试，也可以沿当前结果继续。哪种实际投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己事先设定的角色立场作决定，即使它带来不方便的后果也维持这次扮演",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "让已经发生的结果进入这趟旅程，先看事情继续发展",
+              "signal": "accept_story_outcome"
+            },
+            {
+              "id": "C",
+              "label": "确实读取过可用事前存档，再尝试自己更想走的分支",
+              "signal": "reload_preferred_branch"
+            },
+            {
+              "id": "D",
+              "label": "把Chambers的过去、测试和村庄反应联系着理解，想弄清这段故事怎样形成",
+              "signal": "story_keeper"
+            }
+          ],
+          "source_ids": [
+            "F410_HUMAN"
+          ],
+          "design_purpose": "S人物因果与R身份不同；接受/再读档是当前行为解释，不硬判人格，也不判断现实道德。",
+          "interpretation_boundary": "仅实际已有可读事前存档者，不把任意时刻快速存档当生存难度默认；不保证可不战而救、分支可逆或Covenant永远中立。",
+          "id": "F41010.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        }
+      ]
+    },
+    {
+      "id": "F41011",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "Cambridge Polymer Labs里自己的试剂解释",
+          "text": "回想你在Cambridge Polymer Labs被封锁后，真收过样本并操作过涂层机的一段：当时两个试剂槽已有材料，手中有U238但还未装入，胸甲没产出，原因本人当时还未核清；实验室还有可读终端与未进过的可达房间。哪种实际投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先去本人没进过的可达实验间，想发现里面空间和留下的东西",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先核对终端当时已经给出的试剂扫描输出和本轮制造运行状态，再决定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "当时真提出过未产出可能缺了同位素，保留两种试剂，只补装U238，再回终端实际尝试制造并观察产出，检验可能失败的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "停下来读当时已开放的研究终端消息，联系这座研究设施封锁后的经历，想了解这里发生的事",
+              "signal": "story_keeper"
+            }
+          ],
+          "source_ids": [
+            "F410_LABS"
+          ],
+          "design_purpose": "撤旧家农务与07V1近壳回顾，采用独立本体样本/同位素/制造机关；P本人未知且单变量实际运行可失败，S设施叙事、W新实验间与准确解谜当前状态0不同。",
+          "interpretation_boundary": "两个试剂未声明必正确，所以加同位素不保证成功；只本人真操作过和当时原生可达房间，未选B，固定任务配方不是自由化学构筑，不造任意编辑、风险免疫或瞬移。",
+          "id": "F41011.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        },
+        {
+          "scene": "Vault81拿到一剂药之后",
+          "text": "回想你在Hole in the Wall进入过秘密区、从Curie拿到唯一一剂药再回Forsythe诊所的一段：自己当时确已染病，也知道Austin需要药；Curie房间的Medicine娃娃曾可取，鼠群交火也由本人操作过。哪种实际投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在秘密区反复练过自己未熟的发现鼠钻出、拉开距离与及时开火，重心是个人操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "在安排药物前，先核对过自己当时已显示的身体状态、辐射和已知感染，再继续行动",
+              "signal": "survival_status_review"
+            },
+            {
+              "id": "C",
+              "label": "沿自己一直设定的救助者身份把药交给Austin，即使自己的染病代价留下，也想维持这次扮演",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "为补自己摇头娃娃清单的缺项，专门取过那只Medicine娃娃，重心是藏品补全",
+              "signal": "collector"
+            }
+          ],
+          "source_ids": [
+            "F410_VAULT81",
+            "F410_RED"
+          ],
+          "design_purpose": "撤与03ALT2只换一项的娃娃回访壳，改为实际染病/单剂药代价的秘密区经历：R角色取舍、C主动收藏、T本人未熟与准确身体状态0不同。",
+          "interpretation_boundary": "只有本人当时已染病且药物冲突真实存在才适用；未感染换其他已核专属情境。此病不是生存难度专属，不把治病/给药当现实善恶，不用同时治好双方漏洞，不许诺不被本人咬就绝不会染病。",
+          "id": "F41011.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        },
+        {
+          "scene": "宪法号飞走之后还去不去找它",
+          "text": "回想你帮助宪法号未破坏地起航、看见它去向，还真到过新船址的一段；过程中领取过Broadsider，也与船长继续交谈。哪种实际投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "为了自己收集本体独特武器的清单，专门把修船推进到取得Broadsider",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "始终以自己设定的舰员盟友身份帮修、守船并回去报到，想维持这次角色",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "明明原任务已到起航，仍去亲眼寻找船落到的新地方，想发现后面的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "继续听船长的后续并联系这趟荒诞航程，想知道机器人这段故事怎样收尾",
+              "signal": "story_keeper"
+            }
+          ],
+          "source_ids": [
+            "F410_SHIP"
+          ],
+          "design_purpose": "航行之后主动新地点、叙事收尾、自选独特武器收集与角色身份不同，不只是维修题改过去式。",
+          "interpretation_boundary": "只真的走过未破坏/成功起航与新船址经历；收藏C须先有自选缺口，不是领任务奖励就C，不推真实政治或军人身份。",
+          "id": "F41011.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        }
+      ]
+    },
+    {
+      "id": "F41012",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "把Red Menace真正玩了一段",
+          "text": "回想你已在Vault111取出游戏带，并在本体终端或PipBoy里亲自玩过Red Menace的一段：你实际爬过梯子、跳过障碍，已有熟悉路段，也还没掌握其中一段起跳时机；当时精力足且另有废土任务可以继续。哪种实际投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经取得的游戏带和实际体验过的Vault111补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "亲手连续移动、爬梯和起跳，喜欢按下操作与画面反馈接续的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "反复练过自己未熟的起跳与避让时机，专门把这一段操作练会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "有余力和别的任务时仍自愿再玩熟悉路段，喜欢自己从容掌握的小段过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "source_ids": [
+            "F410_RED"
+          ],
+          "design_purpose": "撤Concord限制战斗与02槽近壳回顾，改原生holotape小游戏不同活动；F持续本人输入、T未熟时机、H自主熟悉过程与准确已得带/地点记录0。没有为I配额虚构重开菜单。",
+          "interpretation_boundary": "仅本体内实际玩过，不是另装手机APP；未看媒体不造具体障碍分数、排行榜/无敌时长、DLC街机或重开方式。H不由疲劳或只有小游戏可玩推断。",
+          "id": "F41012.V1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        },
+        {
+          "scene": "Covenant门口那次SAFE测试",
+          "text": "回想你还没进入Covenant时，在Swanson面前答过SAFE测试、最终走进村庄的一段；你当时既可以问他当前开放的测试背景，也有自己设定的废土身份。哪种真实投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "为自己已经听到的村民信息和实际到过的村庄补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "按自己设定的角色来回答与行动，想让初到陌生村庄的表现符合这个身份",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "认真追问当时能问的测试与被排斥者背景，想了解整洁村落为什么设这道门槛",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主要想看看未到过的村庄，因此亲自完成进门过程后往里面探索",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "F410_HUMAN",
+            "F410_COVENANT_ENTRY"
+          ],
+          "design_purpose": "原生SAFE进门过程不同于后段Compound抉择，R由本人身份动机而非具体答案计分；S追人物背景，W发现。",
+          "interpretation_boundary": "不把SAFE答案当本工具人格证据，不保证属性对话检定通过；只当时真实开放并选择过的选项，入村不保证之后一直中立。",
+          "id": "F41012.ALT1",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        },
+        {
+          "scene": "Sinjin面前与Kent结果之后",
+          "text": "回想你已到过Milton医院面对Sinjin和被挟持的Kent、采取行动并看到结果的一段。你当时穿有怪客服装，也实际用过现有武器；此处既有角色台词又会进入交战。哪种投入最想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "让当次实际出现的人质结果成为当前故事的一部分，先继续后面的旅程",
+              "signal": "accept_story_outcome"
+            },
+            {
+              "id": "B",
+              "label": "即使面临实际风险，也沿自己一路扮演的银衣怪客身份选台词并行动",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "事后继续向Hancock报告、联系之前广播与绑架经过，想看这场英雄扮演怎样收尾",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "反复练过自己尚未掌握的目标选择与开火时机，重心是把本人营救操作练会",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "F410_SHROUD",
+            "F410_VATS"
+          ],
+          "design_purpose": "后段营救情境有实际风险，不与前段穿服装接委托只改时态；不把结果成功等同人格或善良。",
+          "interpretation_boundary": "Kent可死，怪客台词/VATS都不保证营救成功；T仅本人当时真有可重试条件并实际练过，不默认生存难度能随时读档，也不把NPC算真人O/Q。",
+          "id": "F41012.ALT2",
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+2d53cb4c8975"
+}

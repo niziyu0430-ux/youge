@@ -1,0 +1,945 @@
+{
+  "id": "gd6",
+  "title": "几何冲刺",
+  "game_ids": [
+    "steam-322170"
+  ],
+  "scope": "PC完整版经典横向关卡、练习与本地编辑器；平台模式专属检查点不作基础前提",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "经典关的手动练习检查点与平台模式固定检查点不混用；练习硬币、进度和正常记录分开。",
+    "编辑器只问本地已有基础对象与可用音乐，不要求发布、Mod、付费资源或高难关卡。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC完整版经典横向关卡、练习与本地编辑器；平台模式专属检查点不作基础前提",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "GD601",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你在一首已经认识的经典关卡里，方块前面是熟悉平台与尖刺，当前这段可以重新尝试。先把这一轮给什么？",
+          "scene": "方块跳过连续尖刺",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一处起跳，专门让自己放开与再次按下的时机更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把落地、起跳与音乐连续接上，享受操作和画面的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "对照移动速度、平台长度与尖刺位置，解释落点为何会改变",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先停下核对方块按下起跳、松开再按的基础操作示意，再回这一段继续",
+              "signal": "rhythm_reference_first"
+            }
+          ],
+          "design_purpose": "分开专练、连续反馈、解释落点与先核对操作说明再继续，不以进度或失败推断能力。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD601.V1"
+        },
+        {
+          "text": "只玩过开头方块与普通尖刺，现在又从熟悉开头开始。眼前先怎样经过？",
+          "scene": "方块跳过连续尖刺的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "专练一次从落地到下一次按下的交接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让跳跃和音乐一路接上，体会输入得到回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "观察两处平台和尖刺之间的距离，验证一处落点判断",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先查看最早方块跳跃的基础操作说明，再回开头实际试一次",
+              "signal": "rhythm_reference_first"
+            }
+          ],
+          "design_purpose": "分开专练、连续反馈、解释落点与先核对操作说明再继续，不以进度或失败推断能力。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD601.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD602",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你正在经典关的练习模式，已经会手动放置或撤去检查点，眼前有一段总接不稳的连跳。当前不产生正常模式完成记录，你先怎样试？",
+          "scene": "练习检查点放在哪里",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照检查点位置、进入下一跳时的状态与落点，解释从这里开始为什么会影响后面的衔接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "将分段练、撤点连过与再验证排成一套反复修整的练习流程",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "沿已经能接上的平台连跳，体会落下与再次起跳持续回应的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "把检查点放在要练动作之前，专练这一处衔接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "练习点位置由玩家选择；练习完成不等于正常通关，也不领取关内硬币。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD602.V1"
+        },
+        {
+          "text": "还没用过练习检查点，当前只从正常模式开头重来一小段。眼前先做什么？",
+          "scene": "练习检查点放在哪里的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照平台和尖刺位置，验证自己对落点的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "排好先练第一处、再连第二处、最后完整经过的循环，并实际开始",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "让已经顺手的跳跃和落地接成一段，享受每次输入立刻得到回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "固定开头同一次跳跃，认真练稳按下与放开的交接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "练习点位置由玩家选择；练习完成不等于正常通关，也不领取关内硬币。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD602.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD603",
+      "number": 3,
+      "variants": [
+        {
+          "text": "已经见过飞船段：按住和松开会改变上升下降，当前练习模式能重来这段窄通道。只先试几轮，你怎样用？",
+          "scene": "飞船进入窄通道",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续控制起伏并听音乐回应，享受穿过通道的即时手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先核对飞船按住与松开的基础说明，再回练习通道尝试",
+              "signal": "rhythm_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "专练一次短按、松开与接回上升的具体交接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "观察通道高低、飞船趋势与输入长度，解释哪段会接近边缘",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只在已经历飞船段时适用，不把飞船按住动作套到方块或平台模式。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD603.V1"
+        },
+        {
+          "text": "还没玩到飞船，只有早期方块跳跃与平台。当前熟悉的一段可以重来，你先做什么？",
+          "scene": "飞船进入窄通道的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让跳跃、落地和音乐反馈连起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先查看方块连续起跳的基础示意，再回已认识的平台继续",
+              "signal": "rhythm_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "专练一次落地后再按下的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "比较平台间隔与方块前进，解释何时能落在下一块",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只在已经历飞船段时适用，不把飞船按住动作套到方块或平台模式。 核对操作说明后继续是独立情境行为，不给persona点；观察顺序变化不直接当玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD603.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD604",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已经过会翻转重力的门，知道门后要沿另一面继续；眼前练习段可重试，也有正常模式旧进度记录。当前先怎样尝试？",
+          "scene": "重力门之后的同一处障碍",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回正常模式，从开头争取高于个人旧进度的明确纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "对照门的位置、翻转后的落脚面与障碍，验证空间关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "固定一次过门后出手，专门把时机练清楚",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿自己顺手的过门动作接上音乐，享受翻转与继续经过的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "成绩目标要回正常模式执行；练习检查点进度不当正常纪录。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD604.V1"
+        },
+        {
+          "text": "还没到重力门，只在早期正常关卡有自己记下的最远进度，当前可以再开始。先做什么？",
+          "scene": "重力门之后的同一处障碍的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "明确以超过自己已记的最远进度为目标，实际开始这一轮",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "看平台与落脚处，验证一条自己原先没解释清的跳跃关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "只练一个开头最不稳定的起跳时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿熟悉节奏跳下去，享受连续输入和音乐回应",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "成绩目标要回正常模式执行；练习检查点进度不当正常纪录。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD604.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD605",
+      "number": 5,
+      "variants": [
+        {
+          "text": "图标菜单里有已解锁的形状与颜色，也有一项条件已看懂、当前能做的未解锁收藏；熟悉正常关有个人旧进度，默认形状也能继续。开始前先做什么？",
+          "scene": "图标和颜色都已拥有",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_ACHIEVEMENTS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动搭配轮廓与两种已有颜色，做一套自己想呈现的方块形象",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "对照图标或颜色实际列出的解锁条件，专为补齐一项尚锁定且当前能做的收藏去完成对应条件",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "保留原外观，进入熟悉一关专练一个起跳交接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "为熟悉正常关设明确超过个人旧进度的目标，保持现有外观开始一轮",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "外观没有性能成长或配装收益；只用已拥有资源，不要求高级稀有图标。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD605.V1"
+        },
+        {
+          "text": "只有少量初始图标和颜色，熟悉正常关有个人旧进度，还有一项条件已看懂的早期正常通关成就未解锁。当前可选已有配色、进入最早关卡，先做什么？",
+          "scene": "图标和颜色都已拥有的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_ACHIEVEMENTS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用现有轮廓和颜色配出自己的视觉主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "按自己正在补齐的官方通关成就列表，去做一项明确未解锁的早期正常关成就",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "固定同一外观，只练一个自己常仓促的跳跃时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "对照自己这首正常关的旧进度，带着明确超过它的目标开始一轮",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "外观没有性能成长或配装收益；只用已拥有资源，不要求高级稀有图标。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD605.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD606",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已在一首经典关里看见一枚未收的秘密硬币，也知道可走支路；当前能从正常模式开头再次进入。先为这一轮定什么重点？",
+          "scene": "金币支路已经找到",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE",
+            "GD6_RATING",
+            "GD6_ACHIEVEMENTS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去练习模式单独练支路的一次跳跃，不把这轮当正式取币",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "对照支路入口和落脚处，自己验证为什么能从那里返回主路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "不走硬币支路，在正常模式明确争取超过个人旧进度的纪录，再实际跑这一轮",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "沿已知支路取得这枚硬币并完成该关，补上收藏中的缺口",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "秘密硬币须正常经过并完成关卡才记取得；练习模式只是练路线。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD606.V1"
+        },
+        {
+          "text": "还没有硬币支路经历。你在最早官方关留下过正常模式最远进度，也知道该关的正常通关成就尚未解锁。现在能从头再进入，先做什么？",
+          "scene": "金币支路已经找到的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE",
+            "GD6_RATING",
+            "GD6_ACHIEVEMENTS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只专练开头同一次起跳，不另追进度目标",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看尖刺与平台距离，验证一处可落脚关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把超过自己已记最远进度定为这轮目标，再开始正式尝试",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "专为补上成就列表里这一项未解锁的正常通关成就，从头开始完成该关",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "秘密硬币须正常经过并完成关卡才记取得；练习模式只是练路线。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD606.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD607",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已打开自己的本地经典关布局，手边只有普通方块、尖刺与已可预览的音乐，想先做一小段可测试内容。当前先改哪部分？",
+          "scene": "本地编辑器里的三次跳跃",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_EDITOR",
+            "GD6_STORE",
+            "GD6_RATING"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自定一条三跳循环或节奏反转规则，做成一段自己没玩过的新经过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把摆放、从头测试、标出问题与再修改排成持续迭代流程",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "安排颜色、形状与音乐起伏，让这一段表现自己选定的视觉主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先比较方块间距与跳跃落点，验证布局怎样才走得通",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "本地创作不用上传；美术编排、理解通路、自定玩法和制作流程分别取证。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD607.V1"
+        },
+        {
+          "text": "还没进入编辑器，只用已有配色玩过最早经典关，现在可调现有图标，也能再玩熟悉开头。先做什么？",
+          "scene": "本地编辑器里的三次跳跃的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_EDITOR",
+            "GD6_STORE",
+            "GD6_RATING"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定开头同一次落地接起跳，专门让按下与放开的交接更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "排好单练一处、连两处、再从头验证的循环，实际开始",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把已有颜色与图标轮廓搭成自己选定的主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "对照平台长度与落脚面，验证一处跳跃关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "本地创作不用上传；美术编排、理解通路、自定玩法和制作流程分别取证。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD607.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD608",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你精力充足，已有未完成内容可以推进，也能进入当前可用的陌生玩家关卡与熟悉官方关卡。眼前先选什么？",
+          "scene": "熟悉一关和未知玩家关卡",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只为自己仍不稳的一次起跳留针对性练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "进入自己没亲自玩过的可用关卡，看看作者怎样安排音乐与障碍",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "回熟悉一关，不追分数与新进度，重温自己已经安稳的跳跃节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "为熟悉一关设明确高于个人旧进度的目标，再开始正常模式",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "未知关卡不要求联网发布或获评；舒缓有精力与新进度可做，不能由卡关退出推断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD608.V1"
+        },
+        {
+          "text": "没有玩过玩家关卡，只在已开放官方关卡间选择；你精神很好，也有新段落可做。现在先去哪？",
+          "scene": "熟悉一关和未知玩家关卡的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只练一个自己常仓促的落地接起跳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "去已开放但未亲自经历的新关卡或下一段",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "重温熟悉开头，不另追目标，想待在合意的跳跃节奏里",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "带着超过个人旧进度的明确目标再跑一轮正常模式",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "未知关卡不要求联网发布或获评；舒缓有精力与新进度可做，不能由卡关退出推断。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD608.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD609",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想实际用练习模式重来过的一段经典关，哪件已经发生的事更有分量？",
+          "scene": "检查点前后的动作已接上",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GD6_PRACTICE",
+            "GD6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一处起跳或飞船短按经过专练，后来更能主动掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "平台、速度与输入关系被自己验证，原先不懂的落点变清楚",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自己把分段、撤点连过与再验证做成一套迭代流程",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己在已熟悉的小段连续跳过或控制飞船，输入与画面不断接上的手感很鲜明",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "回顾实际练习，不把练习通关等同正常完成，不以检查点数量判断能力。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD609.V1"
+        },
+        {
+          "text": "没有用过练习模式，只回想正常关从头重来的一小段，哪件实际变化更鲜明？",
+          "scene": "检查点前后的动作已接上的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GD6_PRACTICE",
+            "GD6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己专练的一次跳跃后来比开始稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己看懂了平台、尖刺与落脚面的联系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先练第一处、再接第二处的流程被自己逐次修整清楚",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己沿熟悉开头连续跳跃，落地和再次起跳的直接反馈让人投入",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "回顾实际练习，不把练习通关等同正常完成，不以检查点数量判断能力。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD609.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD610",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想实际编辑并测试过的一小段本地经典关，哪种已经发生的事更有分量？",
+          "scene": "本地关卡有了自己的样子",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GD6_EDITOR",
+            "GD6_RATING",
+            "GD6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己理解了间距与输入，解决了一段原先走不通的连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己把一条新经过规则做出来并实际玩过，体验到自定玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "摆放、测试、记录问题与修改，逐渐变成自己能持续推进的创作流程",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己挑颜色、形状和音乐对应，布局呈现了想表达的主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不要求发布、获评、他人点赞或Creator Points，编辑器创作不是技能配装。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD610.V1"
+        },
+        {
+          "text": "没有编辑器经历，只回想实际调整过外观并玩过的早期关卡，哪部分更鲜明？",
+          "scene": "本地关卡有了自己的样子的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GD6_EDITOR",
+            "GD6_RATING",
+            "GD6_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "平台和尖刺的关系被自己解释清楚",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己带着选好的外观连跳过熟悉一段，音乐与落地起跳的反馈接在一起",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "单练一处、连过两处与从头验证，被自己安排成可反复调整的流程",
+              "signal": "rhythm_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己用已有图标和颜色配出想呈现的轮廓与色调",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "不要求发布、获评、他人点赞或Creator Points，编辑器创作不是技能配装。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD610.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD611",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想一轮真正用正常模式开始并完成或推进的经典关，哪件已经发生的事更有分量？",
+          "scene": "这一轮正常模式留下的纪录",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE",
+            "GD6_ACHIEVEMENTS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "起跳、落地与音乐连续接上，反馈本身让人投入",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己针对一处动作练过，后来正常经过时更能掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己事先设过个人最远进度或完成目标，并实际对照了这次与旧纪录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "自己想补齐的秘密硬币中一枚原本未收，后来在正常模式取得并完成该关，实际填上收藏缺口",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "纪录是事先明确的结果目标；收币需在正常模式符合取得条件，不把游戏进度当角色养成。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD611.V1"
+        },
+        {
+          "text": "只回想最早正常关的一轮，哪件实际发生的事更鲜明？",
+          "scene": "这一轮正常模式留下的纪录的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_PRACTICE",
+            "GD6_ACHIEVEMENTS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "方块起落和音乐回应连续接上的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "专门练的一次落地后起跳，比刚开始更稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "自己曾给这轮设超过旧进度的目标，并看过纪录差别",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾专为补齐官方关卡通关成就重玩过，后来实际解锁了一项原本未有的早期正常关成就",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "纪录是事先明确的结果目标；收币需在正常模式符合取得条件，不把游戏进度当角色养成。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD611.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "GD612",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾实际玩过的几何冲刺，哪件已经发生的选择更有分量？",
+          "scene": "还记得自己怎样选择下一关",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_EDITOR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己在熟悉关卡针对一处起跳或飞船短按做过练习，之后输入比开始更能掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己进入过陌生作者或官方关卡，亲自见到新的音乐与障碍编排",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "还有精力和未完成内容时，仍选择熟悉一关重温安稳节奏，不加新纪录目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "自己为图标轮廓和配色作过主动搭配，呈现了想要的个人形象",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "只回顾本人可执行选择，不把默认图标、关卡星数或是否发作品当偏好高低。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD612.V1"
+        },
+        {
+          "text": "只回顾最早玩过的几段与初始外观，哪件事当时更鲜明？",
+          "scene": "还记得自己怎样选择下一关的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GD6_STORE",
+            "GD6_EDITOR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己针对熟悉开头的一次落地接起跳练过，后来比起初更能控制",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己亲自进入过尚未见过的开放关卡或下一段",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "精神好且能继续推进时，仍主动重温熟悉开头，享受舒服的节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "自己用少量已有颜色和轮廓做过一套个人主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "只回顾本人可执行选择，不把默认图标、关卡星数或是否发作品当偏好高低。 修改选择的实际动机与行为；收集须指向真实游戏内解锁或已知缺标，普通重读谱面不算玩法创新。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "GD612.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+65c6e23f6e78"
+}

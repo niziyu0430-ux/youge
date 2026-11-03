@@ -1,0 +1,1956 @@
+{
+  "id": "tech09b",
+  "title": "星核工厂 Techtonica",
+  "game_ids": [
+    "steam-1457320"
+  ],
+  "scope": "PC本体1.0：标准进度／自定义沙盒分开；每题只用自己已到达楼层和已开放工具",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "1—8问眼前动作，9—12只回顾实际经历；未到楼层、未开放工具或未经历可换题。",
+    "标准路径不强制合作、后期沙海或Core Boost；沙盒路径不问终端研究积累、必扫物或固定剧情。",
+    "每条模式路径均为12专属槽的8项当前行动与4项真实过去回顾；未到进度或未有经历可换题，跨游戏题由主流程另加。"
+  ],
+  "modes": [
+    {
+      "id": "standard",
+      "label": "1.0标准进度（含仅调难度、仍有研究/任务的存档）",
+      "initial_variants": {}
+    },
+    {
+      "id": "sandbox",
+      "label": "自定义沙盒：已关闭手工制造材料要求并开放所问科技；按当前耗能设置与实际可达楼层",
+      "initial_variants": {
+        "TECH09B01": "TECH09B01.SANDBOX.V1",
+        "TECH09B02": "TECH09B02.SANDBOX.V1",
+        "TECH09B03": "TECH09B03.SANDBOX.V1",
+        "TECH09B04": "TECH09B04.SANDBOX.V1",
+        "TECH09B05": "TECH09B05.SANDBOX.V1",
+        "TECH09B06": "TECH09B06.SANDBOX.V1",
+        "TECH09B07": "TECH09B07.SANDBOX.V1",
+        "TECH09B08": "TECH09B08.SANDBOX.V1",
+        "TECH09B09": "TECH09B09.SANDBOX.V1",
+        "TECH09B10": "TECH09B10.SANDBOX.V1",
+        "TECH09B11": "TECH09B11.SANDBOX.V1",
+        "TECH09B12": "TECH09B12.SANDBOX.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "TECH09B01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "在标准进度的Lima，你已有钻机、熔炉、插入器和传送带，准备让一小批矿石变成可用锭。材料足以做下面任一小改动，你现在更想先做哪件？",
+          "scene": "Lima矿带旁的第一段供料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接上钻矿、燃料与出锭的几段供给，让它跑几轮再按缺料与积压调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把已有钻机和熔炉相邻摆好，给两机补上现有燃料，只用一处已有插入器直送矿石，亲手试这种当前可用布置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先比一下直送与绕带两种已有布置所占的位置，再选一个",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先按手边材料排好本人放机器、补燃料与接带的先后，再亲手照次序搭完",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "多轮矿料燃料出锭反馈才y；普通直送布置实用、当前方案比较与本人实体工具步骤分别0，不以普通多机器串接计b或借NPC施工copy。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B01.V1"
+        },
+        {
+          "text": "还没做自动线时，回到你已能使用镐子、采集植物和手工制造的起步阶段，缺的是下一批基础零件。你现在更愿意怎样开始？",
+          "scene": "Lima手工采料做第一批零件",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按手边镐子和材料排好采矿、制料的先后，再亲手做出这批零件",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "先比较菜单中当前能做的两种基础物件，各要留哪些材料",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "按眼前任务栏核对所缺材料，实际推进那项初期交付",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对自己已看过的采集与制造提示，再动手做一批",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "多轮矿料燃料出锭反馈才y；普通直送布置实用、当前方案比较与本人实体工具步骤分别0，不以普通多机器串接计b或借NPC施工copy。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B01.ALT1"
+        },
+        {
+          "text": "你在当前自定义沙盒把手工制造设成免费，基础机器已开放；眼前可达的Lima矿带有原料，已有燃料或对应耗能设为0，能运行钻机、熔炉、插入器和带。眼下先做什么？",
+          "scene": "沙盒的第一组插入器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-release",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把钻采、燃料送入与出锭去向接齐，连跑几轮按堵塞和供料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把现有钻机与熔炉相邻摆好，用已有插入器直送，并给需燃料的机器补足手头燃料，实际试这种普通可用布局",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先比较一字排开和相向放置两种当前能搭的方案",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "按自己想要的矿口工坊主题，实际搭出平台和灯光框架",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "免费手工制造不等于机器输入无限；真实多轮矿燃料供需y、普通相邻直送实试0、当前方案比较0与主题造型a分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B01.SANDBOX.V1"
+        },
+        {
+          "text": "刚进沙盒、还没让机器工作时，你已取到一台熔炉、箱子和几块平台，面前有空地。现在更想先做什么？",
+          "scene": "沙盒刚取出的熔炉和平台",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-release",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排好平台、熔炉、箱子的放置次序并照着搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先试放手头熔炉和箱子的位置，再亲手查看它们与平台边缘的距离",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先比较已有平台的外观和尺寸，再决定用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "把这处起步角落做成自己选的低矮矿站样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "免费手工制造不等于机器输入无限；真实多轮矿燃料供需y、普通相邻直送实试0、当前方案比较0与主题造型a分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B01.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已在Victor摆下并用过水轮、曲柄、储电装置与用电工坊，当前原料和可用部件够。机器偶尔停转，原因尚未确定，眼下能补一小段供电平台连接。先做什么？",
+          "scene": "Victor电力忽高忽低",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把供电、储电和工坊原料进出连续跑几轮，再依电量、缺料与积压一起调开机规模和供料",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "打开现有电力和机器状态页，先核对哪几台在工作、哪几台停着",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先比较已可造的发电或储电部件，再决定本轮补哪一种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "提出“这组机器可能没真正接入同一供电平台”的解释，只补这一段连接，前后看同组机器能否工作",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "把未诊断的停机留给假说单测，普通查状态不记p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B02.V1"
+        },
+        {
+          "text": "如果还没接水轮，起步时你刚给一台燃料机器补过料，输出没有如你预想。原因尚未查清，你眼下会先做什么？",
+          "scene": "起步燃料机的一次未明停产",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开机器已有状态和配方栏，核对现在显示什么",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "排好采料、补燃料、取出产物的这一轮顺序，照着做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先核对燃料机的已有提示，再亲手继续试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "猜测是输出端堵住，保持原料和燃料不变，只腾空输出位置后比较",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "把未诊断的停机留给假说单测，普通查状态不记p。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B02.ALT1"
+        },
+        {
+          "text": "你的沙盒保留非零机器耗电，水轮、曲柄、储电与用电机器当前都能用，机器配方原料也在手。几台机器间歇停转，原因还没查明，当前能补平台连接。先怎样处理？",
+          "scene": "沙盒中的用电连接",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-release",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把供电、储电、机器负载与原料进出一起跑多轮，再按电量、缺料和积压调开机规模及供料",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先打开已有电力与机器面板，核对当前消耗和状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "C",
+              "label": "先比已经可用的发电与储电部件，再决定这轮用哪组",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "猜测是平台之间的电力连接断开，只补那一个连接，再比较原机器运行",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "有限耗电主项核电料反馈；关闭耗能ALT改合法地面曲柄储电布置，移除干地水轮，不把沙盒当任意无条件摆放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B02.SANDBOX.V1"
+        },
+        {
+          "text": "如果当前沙盒已把机器耗能关掉，刚进Lima也可用手头曲柄、储电装置和平台布置一小角；眼前干燥空地能合法放置这些部件。你先做什么？",
+          "scene": "关闭耗能后的曲柄与储电角",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-release",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际试放曲柄和储电装置的位置，查看两者在平台上的间距与朝向",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前曲柄、储电装置与平台的已有说明，再亲手摆一组",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "用自己的小轮机房主题，实际安排平台边缘与曲柄、储电装置的朝向造型",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "照自己排的铺平台、放曲柄、摆储电装置的顺序，把这一角搭起来",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "有限耗电主项核电料反馈；关闭耗能ALT改合法地面曲柄储电布置，移除干地水轮，不把沙盒当任意无条件摆放。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B02.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已打开两个楼层，正把一个楼层生产的零件送到另一个楼层使用，电梯与过滤插入器都已可用。今天有时间做一段调整，你想先投入哪处？",
+          "scene": "电梯口的跨层物资",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "只把当前过滤插入器设成所需零件，接到已有出料带后实际运行，看这一项筛料设置的效果",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先比较把工厂留在两层还是把一小段搬到同层，再决定",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "把送入楼层、接收库存、筛出零件和下游消耗接起来，连续运行后按两边库存调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先核对向电梯送入的插入器所选楼层，再看当前楼层库存池和出料口实际有哪些零件",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "电梯送入可选层但机器出料只取当前层库存；跨层供需多轮y，普通单筛料布置实试0，不以筛选器加带的串接冒充b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B03.V1"
+        },
+        {
+          "text": "还没跨层运输时，你在Lima已有装矿石和零件的箱子，准备给旁边熔炉接第一条带。下一步更想做什么？",
+          "scene": "单层箱子接上第一条带",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换一个已有插入器朝向，把箱子接到熔炉后试用",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先比箱子靠矿带与靠熔炉两种可做的位置安排",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "按手头箱子、插入器和材料，排清本人出料、接带、收锭的搭建先后，再照序做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "打开箱子和机器面板核对这批物料当前放在哪里",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "电梯送入可选层但机器出料只取当前层库存；跨层供需多轮y，普通单筛料布置实试0，不以筛选器加带的串接冒充b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B03.ALT1"
+        },
+        {
+          "text": "当前沙盒已开放种植器、脱粒机、组装机和相关植物配方，已有可种种子与所需输入；工作区能供电，或这些设备的耗能已设为0。准备试植物线，先做什么？",
+          "scene": "沙盒种植带",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前种子可做的两种燃料或材料用途",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "给种植器周围实际搭有主题的温室外壳和步行过道",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把种子回送、植物处理与燃料产出去向接起来，连续收几轮再按库存调",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "照当前已会的相邻种植器、脱粒机和插入器布置搭一组，放入手头种子，实际试这套已有供料方式",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "回种子、植物处理、燃料去向多轮依库存调才y；普通种植脱粒串接实试0，不为保b虚构额外组件能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B03.SANDBOX.V1"
+        },
+        {
+          "text": "刚进沙盒还没接循环，你已取出种植器与一种可种种子；当前有可供电平台，或已把种植器耗能设为0。眼前两处空位都能摆它，第一次试种先做什么？",
+          "scene": "沙盒第一次试种一株植物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在空地实际换一种种植器朝向和位置，看摆放结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先比较把种植器朝向现有通道还是背向洞壁的两处可行位置，再决定放在哪里",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "按放置、加种和查看收获的次序试一轮",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先核对种植器和该种子的已有说明，再亲手试种",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "回种子、植物处理、燃料去向多轮依库存调才y；普通种植脱粒串接实试0，不为保b虚构额外组件能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B03.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已在标准进度开放种植器、脱粒机和相关燃料配方，两类当前可种植物的种子都有；基础平台等手头部件也能摆。准备回Victor扩植物区，眼下材料和空间足，先做什么？",
+          "scene": "种植到燃料的闭环",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按手边种子和机器排好本人取放、摆机和投料先后，再亲手搭第一小组",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "接起播种、收获、脱粒、种子回送与燃料去向，连跑几轮再处理哪边积压",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "把种植区按自己选的温室主题排出过道与成组布景，实际搭一小片",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "比较当前两种植物各能供哪些已开放配方，再选这轮要种的",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "系统选项必须包括回送与反馈，外观选项实际编辑主题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B04.V1"
+        },
+        {
+          "text": "还没有种植器，你刚在Lima附近采到可当燃料的植物，已有最早燃料钻机与熔炉；当前终端有一项能推进的基础交付，附近矿料可继续采。先做什么？",
+          "scene": "未种植时先采洞口植物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前终端已经列出的基础交付核对所需物料，实际采制并投入这次要求的一批",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "去一条自己还没走过但已可达的发光植物洞道看看，沿途再采些植物",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先比较把手头植物补给现有钻机还是熔炉作燃料，两处现在都能用，暂不投料",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "照自己排的采集、制料、补炉顺序，把这批植物用完",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "系统选项必须包括回送与反馈，外观选项实际编辑主题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B04.ALT1"
+        },
+        {
+          "text": "在沙盒已可达的一个洞室里，你能取用普通带、竖向带和插入器，正把地面产物送上自己搭的平台。试接后有物料停在平台前，原因还没查清。现在想先做什么？",
+          "scene": "空地上的竖向运输",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按手边部件排清本人放平台、接竖向带、摆缓冲箱和下游机器的先后，再亲手照顺序搭",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "把地面供料、竖向段、平台缓冲箱和下游机器接好，跑多轮再按积压调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "提出“停在平台前是交接方向不对”的解释，只换交接处朝向前后对照",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先比沿墙抬升与绕到平台边缘两种当前布置",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "假说仍属玩家提出；题干未先说明真实停料原因。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B04.SANDBOX.V1"
+        },
+        {
+          "text": "还没搭高台，你已有普通带、装着当前配方原料的箱子与插入器；旁边的机器当前能运行，面前有可放的空位。准备把箱内物料接给它，先做什么？",
+          "scene": "还没有高台的第一段带",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际换一次箱子和传送带的位置，查看现场布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "按手边箱子、带和插入器排清本人放箱、定带向与放插入器的先后，再亲手搭一小段",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有插入器的交接说明，再亲手试放",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先查看箱内原料与机器当前实际库存，核对已有面板后决定接哪一口",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "假说仍属玩家提出；题干未先说明真实停料原因。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B04.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已取得M.O.L.E.，地图轮廓与眼前岩壁的对应还没弄清；近处有个方向你没进去过，现有冷却条件够挖一小段。你现在最想怎样花这段时间？",
+          "scene": "M.O.L.E.挖洞通向旁室",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "朝那个陌生方向挖一段，亲自探进去看看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先提出“这面墙后通向同层相邻空腔”的解释，只沿该方向挖一段核对连通情况",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把洞口修成自己选的拱门轮廓，再从步行视角取景留图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把眼前同一小片岩面分几次瞄准消去，反复感受输入后地形立即变化的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "探索、空间解释实测、实际造型、即时工具反馈分开；不以挖得快判断能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B05.V1"
+        },
+        {
+          "text": "尚未取得M.O.L.E.时，Lima附近有一条普通步行就能到的岔道，你还未走进去。现在更愿意做哪件？",
+          "scene": "还没有M.O.L.E.的可走岔道",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "顺着陌生岔道走到自己还没见过的洞室",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先停在这处已经可达的岔道口，查看入口的现场形状，再继续这段行走",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "C",
+              "label": "先为这趟采集备好镐子，排清要带回的材料、可走目的地与折返步骤，再实际走这一趟",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "为自己的洞道画面换一次站位与视角，让发光植物作前景、洞壁线条接进画面，再实际普通截图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "探索、空间解释实测、实际造型、即时工具反馈分开；不以挖得快判断能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B05.ALT1"
+        },
+        {
+          "text": "当前沙盒的可达洞室里，你已能用M.O.L.E.，并取到灯、平台和墙件；工具冷却余量够眼前一小片操作。附近洞壁可以修改，先做什么？",
+          "scene": "给洞室做一个入口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-custom",
+            "tech09b-release",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己选的弧形门洞轮廓开挖，再用灯和墙件把入口造型搭出来",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "沿着地图上邻近的未知空间方向实际试挖，只为看看自己还没认识的洞道",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "把眼前同一小片岩面分几次瞄准消去，反复体验输入后地形立即变化的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先把挖洞、铺地和摆灯的这轮次序排好，再照着完成",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "自定义沙盒不等于所有楼层可达；只问本层工具真实可做动作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B05.SANDBOX.V1"
+        },
+        {
+          "text": "刚进沙盒、还没开始挖墙时，眼前已有一片普通可走的洞穴空地。灯和平台现在都能取用，你更想先做什么？",
+          "scene": "沙盒尚未开挖的洞口空地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-custom",
+            "tech09b-release",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的洞口小站主题铺平台和摆灯，实际做出外观",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "到一条已可走但自己没去过的岔道探一段",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先比当前可取的灯具外观，再选一种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "照自己排的铺平台与布灯次序，把这一小角搭好",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "自定义沙盒不等于所有楼层可达；只问本层工具真实可做动作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B05.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已能用Echosketch，附近有一处已发现但尚未取用的物料箱标记；当前路线可达，也能正常打开取物。同时眼前终端有可推进的交付。先做什么？",
+          "scene": "地图上的未开箱标记",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去一个地图轮廓陌生的邻近区域，看看那里还有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "留在终端前按已列要求制作并交付下一批物料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先核对自己已看过的Echosketch操作说明，再按图中这处箱标实际去试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "前往这处已发现、当前可到的物料箱，打开并取出其中现有可用物料，再继续自己的安排",
+              "signal": "known_resource_cache_retrieval"
+            }
+          ],
+          "design_purpose": "独立资料只核到普通建材、机器和燃料缓存，不据未开箱自动计收藏；已发现可达可取物料用精确0，当前终端目标与未知空间另问。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B06.V1"
+        },
+        {
+          "text": "还没用熟地图，Lima起步区域有一个眼前已看见、尚未取用的普通物料箱，当前能正常打开取物；旁边有可采矿面，终端也有可推进的基础交付。先做什么？",
+          "scene": "起步区域眼前未开的箱子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿矿面后自己没走过的可达洞道探一段",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按终端目前所列目标，采好并交出一批基础材料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看眼前箱子和邻近装置的可互动提示，再继续",
+              "signal": "scene_inspection"
+            },
+            {
+              "id": "D",
+              "label": "先走到眼前已发现且可到的箱子旁，取出其中现有可用的普通物料",
+              "signal": "known_resource_cache_retrieval"
+            }
+          ],
+          "design_purpose": "独立资料只核到普通建材、机器和燃料缓存，不据未开箱自动计收藏；已发现可达可取物料用精确0，当前终端目标与未知空间另问。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B06.ALT1"
+        },
+        {
+          "text": "你在沙盒已取到普通带、组装机、箱子与插入器，空间能摆相邻小组。当前配方的原料在手，机器有电或对应耗能设为0，准备实际试产一批，先做什么？",
+          "scene": "不靠长带的局部工坊",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按正常做法把供料、组装与零件收集接起来，跑几轮再调节",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比已有配方各需要的材料，再决定这次生产哪批",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "把已有插入器放到组装机与箱子之间，选当前配方并放入现有原料，实际体验这种现成相邻交接布置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "给这组额外定规则：不用传送带，只靠箱子与相邻插入，实际搭一版并开机",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i主动排除沙盒中当前可用的传送带；不把普通换布局计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B06.SANDBOX.V1"
+        },
+        {
+          "text": "还没取组装机时，你手里已有两种平台、灯和栏杆，准备给空地做一小段可走廊道。你先做哪件？",
+          "scene": "沙盒第一小段平台廊道",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较两种平台的已有外观，再选这段用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "B",
+              "label": "实际调一次栏杆的位置，看这次编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "按自己选的采矿步道主题配灯与栏杆，做一段有意的造型",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "按现有物件排清铺地和装栏杆的次序并搭起来",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "i主动排除沙盒中当前可用的传送带；不把普通换布局计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B06.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你已实际完成过若干研究，同一存档保留了这些解锁。眼下既有下一项可供研究的升级，也有一段现成产线可改，你现在会先做什么？",
+          "scene": "核心研究的一条支线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "回到正在运转的核心产线，连看原料、组装和核心去向的几轮供给再调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按眼前明确的终端交付条件做下一批所需物料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "沿自己已经培养的研究方向继续供核心，想让这份存档的解锁积累接着长起来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "比较当前已开放的机器升级和现有部件，再决定本轮选哪项",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "g明确已有持久研究和持续培养，单次菜单比较不算成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B07.V1"
+        },
+        {
+          "text": "还没做研究，Lima终端刚列出一项基础交付；当前制造菜单至少有两种已开放、手头材料足够做的基础机器。先怎样继续？",
+          "scene": "未研究时的终端交付",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好采矿、制造、交付的本轮步骤并实际完成",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "先核对自己已看过的终端说明，再继续这次尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "按终端所列条件补齐并交出这次材料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "比较制造菜单里当前能做的两种机器各用什么材料",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "g明确已有持久研究和持续培养，单次菜单比较不算成长。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B07.ALT1"
+        },
+        {
+          "text": "你已经搭好一段“箱子—插入器—机器—收料箱”，物料偶尔没有送到机器，原因仍不明。这次只想动一个小地方，你愿意先做什么？",
+          "scene": "沙盒里的停料实验",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看这一段真实运送一轮，跟着物料停在哪里观察过程",
+              "signal": "simulation_process_observation"
+            },
+            {
+              "id": "B",
+              "label": "先核对插入器已有说明，再继续自己的实际试放",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜测接料端无空位，其他设置不动，只清出那个接料位再比较",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先核对箱子、插入器与机器现有面板各显示什么",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "不把单次观察强记系统或即时反馈；提供低进度独立状态题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B07.SANDBOX.V1"
+        },
+        {
+          "text": "还没连自动线时，你刚把箱子和机器放在平台上；当前菜单有两项已开放、手边材料足的可做配方，也有插入器可放。先怎样继续？",
+          "scene": "还没连线的箱子与机器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按手边机件和材料排好本人摆机、放箱、接插入器的先后，再亲手搭一小组",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "先把手头箱子试放在机器另一边，亲手查看这次布局距离",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先查看机器当前配方栏和箱内物料，核对已有状态",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "D",
+              "label": "比一比当前两种可用配方的材料去向，再决定",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "不把单次观察强记系统或即时反馈；提供低进度独立状态题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B07.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "标准进度的工厂旁，当前有钻机、熔炉、插入器和传送带，空间足以正常铺带；手头燃料够，也能本人补机。这个小组还没定案，先做什么？",
+          "scene": "无传送带的一小组试验",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这一小组的地台、栏杆和机器朝向做成自己选的整齐工坊主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "临时给自己加一条规则：这小组不用任何传送带，只用相邻机器与插入器，实际试搭并运行",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "用当前已会的钻机、熔炉和插入器摆一组相邻直送布置，补上手头燃料后亲手试这一种现有方案",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先比直接相邻和绕带两种已有方案的占地，再选一个",
+              "signal": "compare_management_options"
+            }
+          ],
+          "design_purpose": "带本可用却新定禁带并实际试搭才i，手工燃料保证该小组可试；普通相邻直送方案0、只比较0、真实主题布局a，不以多机器串接计b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B08.V1"
+        },
+        {
+          "text": "还没建自动组，你已在Lima制造出能摆的基础熔炉与箱子，眼前有两处当前可放的小空地。先做什么？",
+          "scene": "第一处熔炉与箱子工作区",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际安排基础熔炉与箱子的朝向、间距和洞壁关系，做出自己想要的矿口小站布局",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "按手边模块和材料排好本人腾位置、摆炉、放箱子的先后，再亲手搭起",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先比较靠矿面或靠终端两处目前可用的位置",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先试放手头箱子和熔炉的位置，再站到取放处亲手查看这一次距离",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "带本可用却新定禁带并实际试搭才i，手工燃料保证该小组可试；普通相邻直送方案0、只比较0、真实主题布局a，不以多机器串接计b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B08.ALT1"
+        },
+        {
+          "text": "一小段沙盒工厂已经运转，你还有灯、墙件和平台可用。眼下想给它留个画面或再改一处，你先愿意做哪件？",
+          "scene": "沙盒工厂的观看角度",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按手边物件排好本人扩平台、试放箱子和接带的先后，再亲手照这轮顺序调整",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "选“旧洞穴里的新工坊”这个主题，实际挪灯或墙件并用普通截图构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "继续调整供料、缓存和下游去向，运行多轮后再按库存反馈改",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先核对各机器和供料箱的当前状态，再决定改什么",
+              "signal": "management_status_review"
+            }
+          ],
+          "design_purpose": "a需要有意取景或实际布景；没有虚构拍照模式。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B08.SANDBOX.V1"
+        },
+        {
+          "text": "只有刚摆好的第一处平台和熔炉也可选：周围还是原始洞壁，但当前灯和墙件已可取用。想给这个小角落做一次编辑，你先做什么？",
+          "scene": "沙盒起步角落的取景",
+          "question_type": "situational_action",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按已有物件排好布置步骤，并把这一小角搭起来",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "给这处小角落选一个主题，摆灯后用普通截图试构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可取的墙件和灯，再决定采用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "D",
+              "label": "先试放手头熔炉或平台的位置，再亲手查看这次编辑的距离与朝向",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "a需要有意取景或实际布景；没有虚构拍照模式。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B08.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想自己真正打开过新楼层并使用电梯的一段经历，哪件已经做过的事更有分量？未经历可换题。",
+          "scene": "回想一次电梯扩层",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾连续多轮接两层的收料与消耗，并按两边库存实际调整过这条跨层线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为了认识刚开放层的陌生洞室，沿未知方向实际走去查看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "自己曾围绕电梯口实际搭过主题门厅的一部分，让空间呈现个人构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按当时已列的楼层交付，实际生产并投入所需物料，把推进这项目标作为当时重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "回顾已有跨层经历，各项均要求真实曾做；不能把未来愿望当过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B09.V1"
+        },
+        {
+          "text": "只玩过Lima也可回想：从矿口到生产终端的真实经历里，哪件已经做过的事更有分量？",
+          "scene": "回想Lima矿口到终端",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为了认识未知地方，绕向一条没走过的小洞道实际查看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "自己曾按终端已列的交付要求，实际采制并投入一批基础材料",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为已经到过的矿口画下位置笔记，记录实际走过的地点",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为个人矿口画面选前景与视角，让发光植物、矿面和机器形成构图，再实际截图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "回顾已有跨层经历，各项均要求真实曾做；不能把未来愿望当过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B09.ALT1"
+        },
+        {
+          "text": "回想自己确实在沙盒搭并运行过的一段自动线，哪件已经做过的事更有分量？没有运行经历可换题。",
+          "scene": "回想沙盒第一段自动线",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾连续几轮观察供料、处理、缓存与去向，并依缺料或积压实际调过流程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "自己曾把已有两种机器与插入器相邻摆好，投入现有物料，实际试过这一种普通供料布置",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为选定的工坊主题实际调整灯和平台，让那段空间呈现个人造型",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为已经搭好的机器和连线补记建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "不把沙盒自动全解锁视作g；各项有真实建设过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B09.SANDBOX.V1"
+        },
+        {
+          "text": "只摆过第一台机器和第一块平台也可回想：这段真实经历中，哪件已经做过的事更有分量？",
+          "scene": "回想沙盒第一次摆机",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先排平台、机器与箱子的编辑次序，再照着搭起一小角",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "自己曾把手头机器试放在不同位置，亲手查看它与平台边缘的距离",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "自己曾按个人矿站主题实际配过当时能用的灯与墙件",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾为已经搭好的这一角补记建设过程",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "不把沙盒自动全解锁视作g；各项有真实建设过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B09.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想标准进度里自己实际听过的同伴对话，以及后来真正到过的相关设施，哪件已经发生的事更有分量？不必知道后续剧情。",
+          "scene": "回想同伴线索",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-release"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾在已听对话之后实际走向陌生支洞，只为认识新的地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "自己曾选择站位与视角，把旧设施和自己的新工厂关系构成一张画面，再实际截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "自己曾按当时已列的设施任务，实际采制所需材料来推进它",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "自己曾停留理解已听对话，把设施里真实出现的信息接起来，想明白同伴动机与故事前后",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "只问已听已见叙事，不给固定故事编造可改结局；NPC对话不计o。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B10.V1"
+        },
+        {
+          "text": "只听过开头同伴交谈也可回想：第一次接触它和Lima起步设施时，哪件真实做过的事更有分量？",
+          "scene": "回想开头同伴交谈",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-release"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为了认识新的角落，实际走向设施周围还没走过的可达入口",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "自己曾按最初终端已经列出的材料要求，实际投入过这次交付",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "自己曾给已经到过的起步房间补上位置笔记，记录这处地点",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "自己曾停下来留意同伴已经说过的话，并用自己的话理清为何这样说、与当时设施有什么关联",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "只问已听已见叙事，不给固定故事编造可改结局；NPC对话不计o。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B10.ALT1"
+        },
+        {
+          "text": "回想自己在沙盒确实用M.O.L.E.改过地形的一段，哪件已经做过的事更有分量？尚未使用可换题。",
+          "scene": "回想沙盒洞穴造型",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-custom",
+            "tech09b-release",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾专门重复短距离开挖，目的就是体验输入后地形立即消去的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为了认识邻近的陌生空间，沿旁室方向实际试挖并查看新出现的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "自己曾排好开挖、铺地和摆灯的先后，亲手按这轮顺序搭过一小区",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按心里设想的拱洞或壁龛轮廓，实际挖出个人洞室造型的一部分",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "回顾实际地形行为；f只即时工具操作，不是等待机器产出。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B10.SANDBOX.V1"
+        },
+        {
+          "text": "没挖过地形，也可回想自己在沙盒确实铺平台和摆灯的第一处地方，哪件已经发生的事更有分量？",
+          "scene": "回想没开挖时铺地摆灯",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-custom",
+            "tech09b-release",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先走进一条还不认识的可达岔道，认识新地方后再挑建造点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "自己曾先比较当时已有灯和平台的外观，再决定取用哪种",
+              "signal": "creative_option_review"
+            },
+            {
+              "id": "C",
+              "label": "自己曾排好铺地与布灯的编辑顺序，再亲手照着搭过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "自己曾选择前景与灯位，让这一角呈现个人构图，再实际普通截图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "回顾实际地形行为；f只即时工具操作，不是等待机器产出。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B10.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想同一标准存档里自己实际投入过的研究与机器更替，哪件已经发生的事更有分量？没有研究经历可换题。",
+          "scene": "回想长起来的研究存档",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾把已有钻机、熔炉与插入器相邻摆好并补燃料，实际试过这一种可用直送布局",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经建好的机器和真正投入过的研究补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾在已有保留解锁的同一研究方向持续供核心，让这份存档的培养接着积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己曾把新旧机器的供电与供料跑过多轮，依缺料、积压和用电反馈反复调节",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "过去已有保留研究的持续投入g、多轮电料反馈y、普通已可用直送方案实试0与已建工程记录0分开，不用泛兼容机器串接冒充b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B11.V1"
+        },
+        {
+          "text": "尚未研究也可回想最早熔炉与箱子已经用过的一段，哪件真实做过的事更有分量？",
+          "scene": "回想最早熔炉或箱子",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-release",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经搭好的机器和连线补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "自己曾用基础熔炉与箱子的朝向、间距，实际做出个人矿口小站样貌",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "自己曾按手边模块和材料，排清本人摆炉、放箱和取料先后，再亲手搭起第一处工作区",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先比较当时已开放且材料足的两项基础配方，再决定做哪一批",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "过去已有保留研究的持续投入g、多轮电料反馈y、普通已可用直送方案实试0与已建工程记录0分开，不用泛兼容机器串接冒充b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B11.ALT1"
+        },
+        {
+          "text": "回想自己真正遇到并动手处理过的一次沙盒停料，哪件已经做过的事更有分量？无需已经找到正确原因。",
+          "scene": "回想沙盒中的一次查停料",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先核对机器已有面板和库存显示，再决定下一步动作",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为那次已经改过的连接补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾提出一个停料原因，保持其余设置不变，只改一处并实际运行前后对照",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己曾连续看上下游库存多轮，并依缺料或积压反复调过供料",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "p必须真实曾自提解释并控制改动，查面板留0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B11.SANDBOX.V1"
+        },
+        {
+          "text": "还没遇到停料，也可回想自己在沙盒实际摆过的一次机器，哪件已经发生的事更有分量？",
+          "scene": "回想未停料前的机器放置",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-custom",
+            "tech09b-tips",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾试放手头机器的另一个位置，亲手查看这次编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "自己曾为已经摆下的机器与平台补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "自己曾先核对已有机器说明，再亲手摆放它",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己曾按手边机件与材料排好本人放机器、摆箱子的先后，再亲手照次序搭过",
+              "signal": "physical_tool_action_sequence"
+            }
+          ],
+          "design_purpose": "p必须真实曾自提解释并控制改动，查面板留0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B11.SANDBOX.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "TECH09B12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想自己在已熟悉楼层活动过的一段，哪件确实发生的选择更有分量？",
+          "scene": "回想一次闲逛或挖洞",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾按选定的前景、站位和照明关系构图，实际留下一张个人洞道画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足，也有新交付或新区域可推进，自己仍慢走熟悉发光洞道、采些植物，因为喜欢认得的安稳节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己曾反复用M.O.L.E.挖近处短槽，目的就是体验输入后的即时消土反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "自己曾绕去已经发现且可到达的物料箱，实际取出里面现有可用的普通物料",
+              "signal": "known_resource_cache_retrieval"
+            }
+          ],
+          "design_purpose": "h为主动熟悉环境舒缓，不以累了或低进度为前提；f仅工具即时反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B12.V1"
+        },
+        {
+          "text": "还没有M.O.L.E.或地图也可回想最早Lima矿口的一段，哪件真实发生的选择更有分量？",
+          "scene": "回想起步矿口的小活动",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-tips"
+          ],
+          "modes": [
+            "standard"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为个人矿口画面改变站位，让发光植物作前景、洞壁线条接入构图，再实际截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足，终端还有新交付能推进，自己仍在熟悉矿口慢采植物，因为喜欢这段认得的安稳过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为了认识未知环境，顺着一条还没走过的可达岔道实际去看",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己曾走到当时已发现、可到达又尚未取用的箱子旁，实际取出其中现有普通物料",
+              "signal": "known_resource_cache_retrieval"
+            }
+          ],
+          "design_purpose": "h为主动熟悉环境舒缓，不以累了或低进度为前提；f仅工具即时反馈。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B12.ALT1"
+        },
+        {
+          "text": "回想一次自己在沙盒已熟悉洞室里的真实活动，哪件已经发生的选择更有分量？",
+          "scene": "回想沙盒里自己选的闲时活动",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-custom",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾为已经造好的平台与机器补记建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足，新工坊或可达新区域都能继续，自己仍慢走熟悉发光洞室、摆些灯，因为喜欢认得的安稳节奏",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为了认识新环境，实际走进一条还没去过的可达洞道",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "自己曾围绕个人矿站主题实际布景，选定站位与前景后留下一张普通截图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "沙盒舒缓来自玩家主动选择熟悉活动，不以无限资源或无目标自动计h。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B12.SANDBOX.V1"
+        },
+        {
+          "text": "只在第一片空地摆过几件物品，也可回想这段真实经历中已经发生的选择；哪件更有分量？",
+          "scene": "回想刚进沙盒的小空地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "tech09b-store",
+            "tech09b-custom",
+            "tech09b-ed-handcraft",
+            "tech09b-ed-settings"
+          ],
+          "modes": [
+            "sandbox"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾先排手头几件物品的编辑顺序，再亲手照着搭一小段",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "当时精力充足，也有陌生地方可去，自己仍慢慢摆已经用熟的灯和平台，因为喜欢这个熟悉安稳的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "自己曾为自己的矿口小站画面选定前景和视角，实际给第一台机器留下一张个人构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自己曾先比较手边两种平台的外观，再决定采用其中一种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "沙盒舒缓来自玩家主动选择熟悉活动，不以无限资源或无目标自动计h。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "TECH09B12.SANDBOX.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+b3798aa265df"
+}

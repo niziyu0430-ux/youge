@@ -1,0 +1,943 @@
+{
+  "id": "warfrv5",
+  "title": "星际战甲",
+  "game_ids": [
+    "steam-230410"
+  ],
+  "scope": "初期星图、基础MOD、移动与飞船整备；不要求高级系统",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "所有题都有基础战甲、普通任务或初期飞船系统可答路径。",
+    "不由氪金、白金加速、交易、装备数值或高级系统进度判断偏好。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "初期星图、基础MOD、移动与飞船整备；不要求高级系统",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "WARFRV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "已能从轨道飞行器自由选择初期任务，有未走节点、已知材料来源和能继续的早期剧情；手头Endo与现金也够给一张常用基础MOD再升一级。你先做什么？",
+          "scene": "导航台前的下一步",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_mod",
+            "warfrv5_foundry"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去一个没亲自玩过的普通节点，看看这次沿路会出现什么地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按手头图纸缺口，把材料来源与任务先后排成一段流程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "接着玩已经开始的早期剧情，想知道熟悉人物的后续",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先把现有Endo和现金投进一张常用基础MOD，沿已选路线留下持久成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "01图纸缺料与任务先后不是经营，y降mission_preparation_plan；未知普通节点w、剧情s及Endo/现金投入常用MOD持久等级g真实。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV501.V1"
+        },
+        {
+          "text": "刚能在飞船里选最早几项普通任务，当前装备够用，也能查看基础MOD；已取得的Endo与现金够给一张基础卡再升一级。你先把这一段给什么？",
+          "scene": "导航台前的下一步的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_mod",
+            "warfrv5_foundry"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选自己还没亲自走过的已开放节点，看看沿途空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "核对最早图纸或制作物的材料需求，把能做的任务排个先后",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "继续已经接到的新手剧情，听清莲与飞船同伴接下来说什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "用已取得的Endo和现金继续升级常用基础MOD，让投入保留到后面的任务",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "01图纸缺料与任务先后不是经营，y降mission_preparation_plan；未知普通节点w、剧情s及Endo/现金投入常用MOD持久等级g真实。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV501.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "一把现有武器上已有增强攻击与缩短装填的基础MOD等候选，容量放不下所有想要的效果；Endo和现金够适当升级，几种配置都能打普通任务。你先怎样调？",
+          "scene": "容量够放哪些MOD",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_mod"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照效果、容量消耗和极性，先解释为什么这几种排法会不同",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把现在升级与之后可用容量的需求排清，决定本次投入和保留什么",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "沿已选的一张常用基础MOD继续融合升级，为后续武器配置保留成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "用增强常用攻击的已持卡接输出，再配缩短装填的已持卡补火力空档，按容量检验两者互补",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "02V1自由MOD容量配置是真构筑，补已有攻击卡与装填卡、明确输出和空档互补；单次Endo/容量安排不是y。ALT未有明确互补只试可用卡，b降try_available_setup，g保留卡等级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV502.V1"
+        },
+        {
+          "text": "只有最早几张已取得的基础MOD，容量和手头Endo、现金允许少量调整，仍够应付早期任务。你先做什么？",
+          "scene": "容量够放哪些MOD的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_mod"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照卡片消耗与槽位，弄懂为何有的组合能装、有的装不下",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次花多少Endo和现金、下次还准备留多少",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "C",
+              "label": "继续给自己已经在培养的一张基础MOD投入，保留以后还能用的等级",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "在当前容量内换上几张已持、平时少用的基础卡，实际打一张早期任务体验",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "02V1自由MOD容量配置是真构筑，补已有攻击卡与装填卡、明确输出和空档互补；单次Endo/容量安排不是y。ALT未有明确互补只试可用卡，b降try_available_setup，g保留卡等级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV502.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "普通任务里有一段已经认识、暂时没有紧迫敌情的走廊和高台。弹跳、滑行与空中瞄准都可用，你先做什么？",
+          "scene": "熟悉走廊还能怎样经过",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "观察墙面、落差与落点，自己推一条此前没走通的连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "故意换一种少用的移动与出手顺序，试一次不同的经过方法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "反复练一次滑行接弹跳再落地的时机，目标是自己更能掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "把最合手的移动接连做出来，享受穿过空间时不断接续的操作反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "03滑行/弹跳/出手换序没有新增规则，两个i降try_action_variant；具体移动专练t、手动反馈f与空间预测p成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV503.V1"
+        },
+        {
+          "text": "只会初始战甲的基础跳跃与滑行，眼前是一段已熟悉的房间连接。你先试什么？",
+          "scene": "熟悉走廊还能怎样经过的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看平台和墙面的关系，判断另一处可行落点",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "不用新装备，只把过去惯用的滑行、跳跃与攻击次序换一遍",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "把一个总撞到台阶或仓促落地的位置重复练清楚",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "沿自己最顺手的移动方式连走一段，体会它的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "03滑行/弹跳/出手换序没有新增规则，两个i降try_action_variant；具体移动专练t、手动反馈f与空间预测p成立。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV503.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "铸造厂里有几件当前可制造的普通装备，材料与现金够优先一件，领取槽位也够；现有武器仍能继续。你先怎样处理？",
+          "scene": "图纸材料已经凑齐",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_foundry",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续用尚未满级的常用战甲或武器打普通任务，让装备等级与后续可用MOD容量保留成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自己列出的武器或战甲收藏清单，制作一件明确缺项并留存",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "选一件能补现有武器或能力不便处理距离的可造装备，让不同工具分别接一段用途",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "给已有图纸分配材料和现金，先开一件自然制作，等待期补下一件缺料，领取后再调整后续生产",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "04V1真实铸造厂可有资源/自然制作/下一件缺料/领取后生产接续，写实后保y；g只说装备等级与MOD容量，不虚构武器随等级直接加伤害。ALT没有生产，只当次准备；真实未有MOD取得目标c保，泛配合降试已有配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV504.V1"
+        },
+        {
+          "text": "还没准备新装备图纸，已经能使用MOD界面和普通任务，初始装备尚未满级。现在你先做什么？",
+          "scene": "图纸材料已经凑齐的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_foundry",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续带在培养的初始装备出任务，把装备等级与后续可用MOD容量的提升保留下来",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "专为取得MOD列表里尚未有、当前普通任务仍可能掉落的一张已知基础卡，去对应任务实际尝试",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "在现有容量内换一套已经可用、平时少用的基础卡配置，再实际出任务体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "核对眼下可做物品的材料，把接下来几项普通任务串成收集与返回流程",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "04V1真实铸造厂可有资源/自然制作/下一件缺料/领取后生产接续，写实后保y；g只说装备等级与MOD容量，不虚构武器随等级直接加伤害。ALT没有生产，只当次准备；真实未有MOD取得目标c保，泛配合降试已有配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV504.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "单人普通间谍任务中，数据室入口附近能看见巡逻与激光，尚未触发警报，也有已辨认的另一条可通路线。你先做什么？",
+          "scene": "普通数据室的入口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_spy",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "观察巡逻、激光和控制台的联系，提出一条走法再验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "沿已认识的路线再走，专练一次穿过空隙与接近控制台的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先看看自己没亲自走过的那条通道，会怎样进入这片空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把已会的滑行、跳跃、停步与接近控制台换个先后，实际体验这段潜入",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "05普通间谍激光巡逻与控制台存在，p有路线预测验证、w未知通道、t具体操作；普通移动先后i降try_action_variant，ALT不强迫间谍经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV505.V1"
+        },
+        {
+          "text": "还没接触间谍，只在普通任务的一间熟悉房间里，看见高台、门口和能经过的侧路。你先怎么继续？",
+          "scene": "普通数据室的入口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_spy",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照墙面与落差，自己判断侧路怎样接到目标方向",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "沿熟路专练一个跳跃落地后再出手的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "去那条未亲自走过的侧路，看看房间另一面",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "换一种基础移动与接敌的先后，试与过去不同的经过方法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "05普通间谍激光巡逻与控制台存在，p有路线预测验证、w未知通道、t具体操作；普通移动先后i降try_action_variant，ALT不强迫间谍经历。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV505.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "和熟人打普通防御，到了能选择撤离或继续的结算；大家状态允许，两边都能接受，也有未满级装备在培养。你先提什么？",
+          "scene": "防御结算时的小队选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "还想陪这几个人多打一段，继续创造彼此会提起的共同经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "继续带已经投入的未满级装备积累经验，让等级和容量成长保留",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "让当前可用控制能力留下出手机会，装有输出MOD的枪械接火力，继续实际检验两套工具互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "问清每个人还想玩多久、需要哪段进度，再一起决定这次是否继续",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "06真人防御继续/撤离q/o与未满级装备g真实；V1控制能力给输出MOD枪械空档的互补b写明。单人歼灭ALT泛配装和动作次序降独立行为，任务步骤去y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV506.V1"
+        },
+        {
+          "text": "没有联机，也没玩过防御：准备独自再打一张能应付的普通歼灭，当前基础装备够用。你先做什么？",
+          "scene": "防御结算时的小队选择的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在现有容量里换一套已经可用、平时少用的基础MOD配置，实际打一趟歼灭体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "保留配置，专练一次自己总仓促的移动接出手",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "只用已经会的工具，把移动、近战与开枪换个先后，在这趟任务实际体验交接",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "D",
+              "label": "把这趟目标、所需材料与回舰整理的步骤接好",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "06真人防御继续/撤离q/o与未满级装备g真实；V1控制能力给输出MOD枪械空档的互补b写明。单人歼灭ALT泛配装和动作次序降独立行为，任务步骤去y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV506.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你精力充足，已有普通任务和一项普通防御可以推进；军械库也有可用颜色与已有装备能调整。此刻先做什么？",
+          "scene": "在军械库多待一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_quick",
+            "warfrv5_start"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "即使还能继续任务，也想在熟悉飞船按自己的日常路线慢待，不追加成长与制作目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "换一组平时少用的已有武器与基础MOD，去普通任务试一种新办法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "主动给战甲和武器安排配色细节，表现自己想要的天诺主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把这名天诺自定为近身护卫，带现有近战去已开放防御，守目标而不追远敌，优先拦靠近目标者",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "07少用已有枪/MOD仅try_available_setup；V1r不只是谨慎称号，明确自赋近身护卫、已开放普通防御守目标不追远敌且优先近战，是真身份驱动行动。ALT无防御/角色门槛，h精力与进度齐，泛配装只试配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV507.V1"
+        },
+        {
+          "text": "暂时没有配色或自定角色习惯，只用初始装备；你精力仍好，也能继续普通任务。下一段先做什么？",
+          "scene": "在军械库多待一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_quick",
+            "warfrv5_start"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把材料缺口、出发任务和回舰整理排成清楚循环",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "即使还有新任务，也愿意在熟悉飞船慢慢走一段，先不追制作与数值",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "到普通任务里练一个基础移动与攻击的明确衔接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "在现有容量里换一套当前可用、平时少用的MOD配置，亲自打一趟普通任务体验",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "07少用已有枪/MOD仅try_available_setup；V1r不只是谨慎称号，明确自赋近身护卫、已开放普通防御守目标不追远敌且优先近战，是真身份驱动行动。ALT无防御/角色门槛，h精力与进度齐，泛配装只试配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV507.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "一次初期普通任务刚结束，结算显示自己拿到一张新的基础MOD，现在已回飞船，也能再次出发。你先做什么？",
+          "scene": "任务结算带回一张卡",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_mod",
+            "warfrv5_foundry"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这次材料与Endo收获放入后续升级和制作流程，再安排下一趟",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "核对已持MOD，把这张已经取得却还没补记的新卡写入自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "读清它的常驻或触发条件及容量消耗，先解释会怎样改变当前装备，再用可用配置实际对照验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在当前容量内把这张已取得新卡装入一个可用配置，亲自去普通任务体验它",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "08新MOD已自动取得，个人登记不再计c，两个B改game_recording；当次收获/材料安排去y。基础MOD不必都有触发条件，p改常驻或触发均适用；普通装新卡或换已持卡不是b，降试配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV508.V1"
+        },
+        {
+          "text": "没拿到陌生卡，只在飞船里整理几张已持基础MOD，装备也够继续任务。你先做什么？",
+          "scene": "任务结算带回一张卡的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_mod",
+            "warfrv5_foundry"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有Endo、现金和材料需求分开，排清先升级还是先准备制作",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "核对几张已持基础MOD，把其中已经取得但个人记录漏记的一张补上",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "对照两张已持卡的常驻或触发条件与容量，提出效果差异的解释再实际核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在现有容量内换上几张平时少用的已持卡，亲自打一张普通任务体验",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "08新MOD已自动取得，个人登记不再计c，两个B改game_recording；当次收获/材料安排去y。基础MOD不必都有触发条件，p改常驻或触发均适用；普通装新卡或换已持卡不是b，降试配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV508.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想自己实际玩过的早期剧情与任务空间，最留住哪一段经历？",
+          "scene": "早期任务让世界有了来历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "几次传讯与人物遭遇接上，开始理解他们为何要自己做这些事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己把天诺自定为近身护卫，在普通防御守着目标、不追远敌，按这个身份用近战优先拦住靠近者",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "零散任务信息与环境细节，被自己拼成了能解释的一种关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "剧情经过的地方有自己没走过的岔路，曾让这一趟转去另一片空间",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "09V1r补普通防御里守目标、不追远敌、优先近战的身份承诺；最早苏醒ALT不强迫防御，薄弱护卫称号实义改已发生动作反馈f。s/p/w均是过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV509.V1"
+        },
+        {
+          "text": "只回想开头苏醒与最早几项任务，哪件实际做过的事最想记住？",
+          "scene": "早期任务让世界有了来历的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "听清了熟悉声音和飞船同伴前后的说法，开始在意他们的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己把初始跳跃、滑行与近战命中连续接上，动作反馈本身很鲜明",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "把任务里的几条提示与眼前环境互相对照，弄清了一件原先不明白的事",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "从目标旁一条尚未走过的小路，发现了这个设施另一面",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "09V1r补普通防御里守目标、不追远敌、优先近战的身份承诺；最早苏醒ALT不强迫防御，薄弱护卫称号实义改已发生动作反馈f。s/p/w均是过去。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV509.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想精力充足、也有普通任务能推进时，自己在飞船实际投入过的一段时间。哪类经历最值得记？",
+          "scene": "飞船里的一段日常",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_quick",
+            "warfrv5_mod"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已选基础MOD或装备路线几次投入，后来的出发仍保留这些成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己当时仍在熟悉舱内按没有进度要求的节奏慢走过一阵，享受自在停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "读听已开始任务的相关信息，把自己惦记的人物经历又接上一段",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "亲自挑颜色并调整战甲、武器细节，做出了想表达的一组主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "10两h均精力足且能去新任务却主动无进度待熟悉飞船，g为持久MOD/容量，s为已见剧情，a为主动主题；ALT几趟材料准备y降当次计划。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV510.V1"
+        },
+        {
+          "text": "还没有调整过外观，只回想精力仍好、也能继续任务时的一次回舰。最有感的是什么？",
+          "scene": "飞船里的一段日常的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "warfrv5_start",
+            "warfrv5_quick",
+            "warfrv5_mod"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给常用基础MOD或初始装备留下了之后仍能用的成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "自己当时仍在熟悉飞船按无收获要求的节奏待过一阵，享受那段可自主掌握的日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "接着看听最早任务里已经出现的人物信息，想理解他们前后的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把当前材料、Endo和下一次准备排清，使几趟任务衔接起来",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "10两h均精力足且能去新任务却主动无进度待熟悉飞船，g为持久MOD/容量，s为已见剧情，a为主动主题；ALT几趟材料准备y降当次计划。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV510.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想实际经过的一段普通任务，哪类片刻最让你记住战甲的操作？",
+          "scene": "移动和战斗连起来的时候",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "warfrv5_quick",
+            "warfrv5_mod"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "武器已装输出MOD接主攻、战甲可用防护MOD补近身风险，能力又接住装备不便处理的局面，实际感到互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己用少用的移动与攻击次序，真的走出了另一种任务过程",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "滑行、弹跳、空中瞄准与命中连成连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "反复练过的一次落地后出手，这次能由自己主动选择时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "11V1自由输出/防护MOD与能力互补是真配装并写明，普通动作换序非i。ALT只有固定初始工具，b不强配，实义改能力反应预测验证p；B仅try_action_variant。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV511.V1"
+        },
+        {
+          "text": "只回想初始战甲最早的一次普通遭遇，哪点最有感？",
+          "scene": "移动和战斗连起来的时候的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "warfrv5_quick",
+            "warfrv5_mod"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾预测初始能力会怎样改变眼前敌人的位置或动作，再对照施放后的实际反应验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "自己换过初始滑行、跳跃与出手的先后，实际体验了同一房间的不同动作交接",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "基础移动和打中敌人的反馈连续接上",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "一段原先仓促的跳跃或出手，经练习后开始更稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "11V1自由输出/防护MOD与能力互补是真配装并写明，普通动作换序非i。ALT只有固定初始工具，b不强配，实义改能力反应预测验证p；B仅try_action_variant。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV511.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "WARFRV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想几次实际制造过普通装备，也做过强化和配装的经历，哪件自己做过的事最有吸引力？",
+          "scene": "资源真的留在了装备上",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "warfrv5_mod",
+            "warfrv5_foundry",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己给已有图纸分配过材料和现金，制作等待时补过下一件缺料，领取后再排下一轮，让生产持续接续",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "常用基础MOD的等级，或未满级装备升级带来的容量，经过投入后持续留给后面的任务",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己用输出卡配常用武器、防护卡配战甲，能力接住工具不便处理的局面，实际体验过互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己专为补齐军械库存里尚未有的装备或基础MOD，实际制作或取得过那项并留存",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "12V1实际做过多轮普通制造，材料分配/等待补下一件缺料/领取再排生产是真y，MOD等级容量g、实际装备/MOD缺项取得c成立；ALT未制造，不强配运营或构筑，分别降当次计划和试已持配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV512.V1"
+        },
+        {
+          "text": "只回想早期几次出发和回舰，还没制造新战甲，哪件已经发生的变化最值得记？",
+          "scene": "资源真的留在了装备上的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "warfrv5_mod",
+            "warfrv5_foundry",
+            "warfrv5_quick"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从材料缺口到普通任务再到回舰整理，形成了自己能重复的步骤",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "初始装备或常用基础MOD逐渐有了后续仍能使用的等级成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己换用过当时已持、平时少用的一套基础卡配置，并亲手出任务体验",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "自己为补齐MOD列表中事先已知未有的一张基础卡，实际取得并保留过它",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "12V1实际做过多轮普通制造，材料分配/等待补下一件缺料/领取再排生产是真y，MOD等级容量g、实际装备/MOD缺项取得c成立；ALT未制造，不强配运营或构筑，分别降当次计划和试已持配置。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "WARFRV512.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+7d6022f0a383"
+}

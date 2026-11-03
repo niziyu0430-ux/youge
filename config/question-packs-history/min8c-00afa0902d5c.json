@@ -1,0 +1,1925 @@
+{
+  "id": "min8c",
+  "title": "像素工厂：两颗星球的资源、防守与不同供能",
+  "game_ids": [
+    "steam-1127400"
+  ],
+  "scope": "PC已发布基础单人战役；Serpulo / Erekir分别12主项及12真实本星球早期替代",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "两星球独立手写：Serpulo地面铜铅、砂煤制硅、煤水蒸汽与普通节点；Erekir铍石墨墙矿、砂石墨电弧硅、通风口水电和BeamNode正交。",
+    "ErekirDuctRouter背面进料且可筛选，电解两种气体定向输出；氧化室工作产物与热、导热和热配方按当前已开放状态，不使用旧社区v7数值表。",
+    "默认单人，玩家可独自回答所选星球的全部24变体；指挥单位和货运无人机不产生真人q/o。不存在虚构单人合作替身或真人前提落在ALT。",
+    "b须真实对地/防空、铜墙/炮塔互补防线或副产热与热配方运行；y为持续资源生产供能防守，单次施工与物品比较0分。g仅延续已投入研究分支并实际保留使用进展。",
+    "i仅Serpulo当前桥已可用而自加禁止且安全绕行可行；基础带改弯、换节点位置、保存蓝图均0分。f的手动开采必须以连续反馈本身为目的。",
+    "不要求PvP、Mod、服务器或后期气体热系统。战役扇区布局和发射台近版有改动，本包不用固定扇区编号、旧发射物流规则或未发行master；9—12全部为真实过去。"
+  ],
+  "modes": [
+    {
+      "id": "serpulo",
+      "label": "Serpulo单人战役：铜铅地矿与煤系生产",
+      "initial_variants": {
+        "MIN8C01": "MIN8C01.SERPULO.V1",
+        "MIN8C02": "MIN8C02.SERPULO.V1",
+        "MIN8C03": "MIN8C03.SERPULO.V1",
+        "MIN8C04": "MIN8C04.SERPULO.V1",
+        "MIN8C05": "MIN8C05.SERPULO.V1",
+        "MIN8C06": "MIN8C06.SERPULO.V1",
+        "MIN8C07": "MIN8C07.SERPULO.V1",
+        "MIN8C08": "MIN8C08.SERPULO.V1",
+        "MIN8C09": "MIN8C09.SERPULO.V1",
+        "MIN8C10": "MIN8C10.SERPULO.V1",
+        "MIN8C11": "MIN8C11.SERPULO.V1",
+        "MIN8C12": "MIN8C12.SERPULO.V1"
+      }
+    },
+    {
+      "id": "erekir",
+      "label": "Erekir单人战役：铍石墨墙矿与气体热系统",
+      "initial_variants": {
+        "MIN8C01": "MIN8C01.EREKIR.V1",
+        "MIN8C02": "MIN8C02.EREKIR.V1",
+        "MIN8C03": "MIN8C03.EREKIR.V1",
+        "MIN8C04": "MIN8C04.EREKIR.V1",
+        "MIN8C05": "MIN8C05.EREKIR.V1",
+        "MIN8C06": "MIN8C06.EREKIR.V1",
+        "MIN8C07": "MIN8C07.EREKIR.V1",
+        "MIN8C08": "MIN8C08.EREKIR.V1",
+        "MIN8C09": "MIN8C09.EREKIR.V1",
+        "MIN8C10": "MIN8C10.EREKIR.V1",
+        "MIN8C11": "MIN8C11.EREKIR.V1",
+        "MIN8C12": "MIN8C12.EREKIR.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "MIN8C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "Serpulo单人：机械钻的铜带分给核心和Duo，一座Duo刚出现缺弹；当前没有敌人压到基地，矿和铜还在流，路由件可改，建筑材料也够。先怎样投入？",
+          "scene": "铜要送核心还是炮塔",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_STORE",
+            "MIN8C_RELEASE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜缺弹来自这一处Router把铜分走，只改该处接出的一个分支，再看炮塔存弹与去向核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把采铜、弹药、核心施工料与后面几波后的补给一起维持，再随库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次留住供弹、拆哪段旧带与接回核心的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前Duo弹药与Router说明，再回这条自己的铜线",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "具体铜的弹药/施工双用途；p只改一路，y跨后续补给生产与防守需求。单人不把自动炮塔当真人分工。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C01.SERPULO.V1"
+        },
+        {
+          "text": "只到最初机械钻也能答：铜地面矿、机械钻和基础带已能用，当前有空地把一股铜接回核心，不需要已造炮塔。先做什么？",
+          "scene": "铜要送核心还是炮塔的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_RELEASE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜核心前这一格反向是否让铜停住，只转该格再看真实物料与核心库存核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次留钻机、回收断头带与接核心的施工顺序",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "把现有短带换成另一种当前能通的弯，亲手看布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对机械钻覆盖地面矿与基础带说明，再回来实际铺这段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "具体铜的弹药/施工双用途；p只改一路，y跨后续补给生产与防守需求。单人不把自动炮塔当真人分工。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C01.SERPULO.ALT1"
+        },
+        {
+          "text": "Erekir单人：基础PlasmaBore已有电，前方确是可采铍墙矿，刚在矿机前方放过一件建筑，射线命中与这段地格可查看；当前没有敌人压到这里，材料与出料Duct都够。先做什么？",
+          "scene": "射向墙矿的等离子钻",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_STORE",
+            "MIN8C_RELEASE"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜是刚放的这一块挡住了采矿射线，只移开它，再看矿机命中与真实出料核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把墙矿、供电、铍入核心与炮塔施工用料维持几轮，再跟各处库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次保留出料Duct、挪挡路建筑与重新接通的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对基础PlasmaBore的墙矿、遮挡与供电说明，再回这台自己的矿机",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "主情境基础钻面对墙矿且耗电，氢非初始必需；只给新放建筑和可查射线，不宣告该物已挡射线。p自己解释并只移一件核对，y多环节持续供给；ALT核心机采铍交回享即时反馈f，不混Serpulo地面铜钻。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C01.EREKIR.V1"
+        },
+        {
+          "text": "只接触最早铍墙矿也可答：你能用核心机采铍并交回核心，当前安全，也已有基础Duct和矿机的教学可查看。先选什么？",
+          "scene": "射向墙矿的等离子钻的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM",
+            "MIN8C_RELEASE"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对墙矿开采与交回核心的现有说明，再回来实际采这片铍",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "再亲手采一小段铍并交入核心，重心是享受采到与交入的连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次带回的铍、要留的施工料与回核心先后，再行动",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "D",
+              "label": "沿安全可达方向去看看另一段未亲自看过的墙边地形，不先查有什么矿",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "主情境基础钻面对墙矿且耗电，氢非初始必需；只给新放建筑和可查射线，不宣告该物已挡射线。p自己解释并只移一件核对，y多环节持续供给；ALT核心机采铍交回享即时反馈f，不混Serpulo地面铜钻。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C01.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "Serpulo一台SiliconSmelter已有电，砂和煤两种输入都有来源，下游已有能消耗硅的单位工厂，但当前机器时停时开；你能看输入库存，另有空地改接一小段。现在先给什么时间？",
+          "scene": "硅炉等的不是石墨",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_SILICON"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把砂煤开采、制硅、供电与后续建筑单位用硅维持几轮，再随缺料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已能做的加工配方各需要哪些现有材料，再决定这次先产什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先核对Serpulo这台炉的砂煤与用电说明，再回自己的设备",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜停顿是否只来自煤没有到这台炉，只改这一股接入，再看煤库存与真实产硅核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "明确本星球砂煤制硅，绝不借Erekir砂石墨配方。p只补一股核结果，y跨加工电网与持续用途。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C02.SERPULO.V1"
+        },
+        {
+          "text": "还没有硅炉：当前只有地面铜矿、已放的机械钻和带，钻旁另一格仍在矿上，材料够挪一次。先选什么？",
+          "scene": "硅炉等的不是石墨的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把钻机换到另一处当前能放的矿格，亲手看这轮带口布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次挪钻、回收旧带和接新出口的施工步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "自己再用核心机采一小段现成铜并交回核心，享受采到和交入连着发生的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先猜钻机换这一格后覆盖矿格会怎样，只移动这台再核对覆盖与实际出料",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "明确本星球砂煤制硅，绝不借Erekir砂石墨配方。p只补一股核结果，y跨加工电网与持续用途。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C02.SERPULO.ALT1"
+        },
+        {
+          "text": "Erekir一条混合Duct上有铍和石墨，前方设备暂缺铍、侧路能收石墨，当前DuctRouter筛选设置可查看；背面进料正常，两侧都有去路。先怎样继续？",
+          "scene": "DuctRouter前方该走铍",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_DUCT"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把两种墙矿、管道分流、核心库存与下游需求维持几轮，再随缺料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次保留背面进料、挪侧路与接回前方的施工步骤，再做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对DuctRouter背面进料与筛选说明，再回来改自己的这一件",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜前方缺铍与这只筛选设定有关，只把该件选项改为铍，再看前方与侧路实际物料核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境不是Serpulo四向Router，当前确有两类物料与能收的两侧；只给前方暂缺铍及可查筛选，不预先给石墨错误设置。p自己提出筛选解释再单改核物料；ALT普通Duct末端朝向测试不要求知道后期筛选。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C02.EREKIR.V1"
+        },
+        {
+          "text": "还没DuctRouter：最早PlasmaBore已有电并对准铍墙矿，一段Duct要接核心，末端有一格反向。先做什么？",
+          "scene": "DuctRouter前方该走铍的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这段Duct换一个当前能通的弯，亲手看布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次留矿口、回收断头管与接回核心的施工顺序",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前Duct前进方向说明，再回来接自己的这一段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜这一格让铍停在前面，只转该格再看真实去向和核心库存核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境不是Serpulo四向Router，当前确有两类物料与能收的两侧；只给前方暂缺铍及可查筛选，不预先给石墨错误设置。p自己提出筛选解释再单改核物料；ALT普通Duct末端朝向测试不要求知道后期筛选。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C02.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "Serpulo当前SteamGenerator能用煤和水发电，矿料还能供应；一处水管刚改过，电网有时不足，现有蓄电池与节点状态也能看，制硅设备和Arc防线均已能用。现在先做什么？",
+          "scene": "煤水蒸汽与电网负荷",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_CODE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次保留发电、回收旧管与接回节点的施工步骤，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前SteamGenerator与电池节点说明，再回来处理自己的电网",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜电力停顿来自这段新水管没有接上，只改这一段水路，再看发电机水量与电网反馈核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把煤、水供应、发电储电与制硅防线的持续耗电维持几轮，再跟余量调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不考发电比率，不把当前充电当成长；Serpulo煤水供能不混Erekir通风口。p只改一段水路。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C03.SERPULO.V1"
+        },
+        {
+          "text": "从没铺电网：机械钻铜带已经能运行，核心库存可看，当前一处末端停料但前面仍有铜。先选什么？",
+          "scene": "煤水蒸汽与电网负荷的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在备用空地反复搭同一种已会的钻机到带连接，专门练熟自己的朝向操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前机械钻和基础带说明，再回来处理自己的这段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜停料来自末端方向，只转这格再看核心库存与去向核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次拆断头带和接回核心的施工顺序",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "不考发电比率，不把当前充电当成长；Serpulo煤水供能不混Erekir通风口。p只改一段水路。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C03.SERPULO.ALT1"
+        },
+        {
+          "text": "ErekirTurbineCondenser正在通风口发电；一台PlasmaBore缺电，现有BeamNode与它的相对位置及连线可查看，当前范围内有可移到的正交空格，制硅与后续生产也都已能用。先把这段时间给什么？",
+          "scene": "BeamNode要在同一横竖线上",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次保留发电与出矿、回收旧节点和接新节点的施工步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对BeamNode的正交传电说明，再回这组当前节点",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜正交位置决定了这次没连上，只把这一只节点移到同横或同竖且仍接发电侧的位置，再看设备供电核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把通风口供电、墙矿、制硅与后续生产负荷维持几轮，再跟电网余量调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "主情境给缺电、可查现有节点相对位置及范围内有效空格，不直接给错位结论；p自提正交解释只移一只核对。ALT同样只动一只看实际设备状态；不考距离，不借Serpulo任意角度PowerNode或后期BeamLink。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C03.EREKIR.V1"
+        },
+        {
+          "text": "刚有第一台涡轮和矿机：通风口发电正常，基础BeamNode可移动，已有一处可接回矿机的空格，Duct还可继续铺。先选什么？",
+          "scene": "BeamNode要在同一横竖线上的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在旁边反复搭一种已会的正交节点连接，专门练熟自己的放置操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先猜节点换这格后能否给矿机送电，只动这一只再看设备状态核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先核对最早涡轮、节点和矿机的已有说明，再回来实际接这组",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次挪节点与接出料Duct的施工先后，再做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "主情境给缺电、可查现有节点相对位置及范围内有效空格，不直接给错位结论；p自提正交解释只移一只核对。ALT同样只动一只看实际设备状态；不考距离，不借Serpulo任意角度PowerNode或后期BeamLink。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C03.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "Serpulo你已能造Hail和Scatter，石墨、铅及各自供料都有；这里已见过地面和空中敌人，当前防线可调整，没有敌人正在拆基地。先怎样投入？",
+          "scene": "对地炮与防空炮的互补",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_CODE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对Hail与Scatter已有说明，再回自己的当前防线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "实际把吃石墨的Hail对地与吃铅的Scatter防空布在能覆盖各自来向的位置，接好补给并看后续交战中的互补效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "把石墨、铅开采加工、两类弹药与后续维修施工材料维持几轮，再随消耗调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已能用炮塔的目标类型、弹药与放置条件，再决定这轮选择",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "b需两类已知目标、真实炮塔与补给配合并观察，不是看武器菜单或最优塔考试。无防空经历有最初Duo与铜墙的独立情境。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C04.SERPULO.V1"
+        },
+        {
+          "text": "没用过防空塔：当前Duo、铜墙和铜弹供应都已可用，附近已见过地面敌人来向；这会儿没有敌人正在打基地，有材料调整且能手动控制这座炮塔。先给什么时间？",
+          "scene": "对地炮与防空炮的互补的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前Duo铜弹与铜墙的已有说明，再回来处理自己这处防线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "实际让铜墙挡住来向的射击，Duo在能打到该路的位置接铜开火，看看下一次交战里两者怎样互相配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "先比较眼前已开放Duo和铜墙的放置、目标与材料条件，再决定本轮布置",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "在安全空档反复进出自己这座Duo的手动控制，专门练熟接管与交回操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "b需两类已知目标、真实炮塔与补给配合并观察，不是看武器菜单或最优塔考试。无防空经历有最初Duo与铜墙的独立情境。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C04.SERPULO.ALT1"
+        },
+        {
+          "text": "ErekirSiliconArcFurnace已有电和砂，石墨墙矿也能出料，但炉子暂未产硅，石墨Duct与炉内库存可查看；当前已有能消耗硅的单位工厂，也没有敌袭急事，材料够改接。先怎样投入？",
+          "scene": "砂石墨送给电弧炉",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_CODE"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对本星球电弧炉的砂石墨输入说明，再回来接自己的这一股",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先猜不产硅是这股石墨没进炉，只接上这一段，再看石墨库存与实际产硅核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把墙矿石墨、CliffCrusher产砂、炉子供电与后续单位建筑用硅维持几轮，再随缺料调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前已开放生产配方的真实输入与现有材料，再决定这次先产哪种",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "主情境Erekir硅用砂石墨而非Serpulo砂煤；砂由当前可用CliffCrusher取。只给未产硅与可查石墨连接，不直接告诉断口。p自己解释再单处改接核对；ALT普通Duct非实心与射线solid判定交叉推理，可只加一格实测，不外推其他建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C04.EREKIR.V1"
+        },
+        {
+          "text": "还没电弧炉：一台已供电基础PlasmaBore正面对能采的铍墙矿，射线前目前没有实心挡物；手上有Duct，矿机与墙之间有一格能铺，原有供电与出口都能保持。先做什么？",
+          "scene": "砂石墨送给电弧炉的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM",
+            "MIN8C_BEAM_CODE",
+            "MIN8C_DUCT_CODE"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前基础矿机射线与Duct的已有说明，再回来实际接自己的出口",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先猜Duct铺在射线经过处是否也会挡矿，只在这格加一段Duct，保持矿机供电与其他出口不变，再看射线与实际出铍核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把已有出口Duct换到另一处仍能接核心的位置，亲手看本轮布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排清这一轮保留墙矿射线、回收旧弯与接新Duct的编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "主情境Erekir硅用砂石墨而非Serpulo砂煤；砂由当前可用CliffCrusher取。只给未产硅与可查石墨连接，不直接告诉断口。p自己解释再单处改接核对；ALT普通Duct非实心与射线solid判定交叉推理，可只加一格实测，不外推其他建筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C04.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "Serpulo当前BridgeConveyor已经可用；新铜支路要穿过旧线，旁边一条安全空走廊也能绕回核心，材料够两种方案，旧线边已有一对正在试接、目标端可改的桥，原防线仍能供弹。先做什么？",
+          "scene": "本来可跨带的桥",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_STORE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给这次新支路新增禁用BridgeConveyor的规则，明确不用原本可用的跨越工具，实际沿安全空廊试接普通带",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先猜这处桥端点是否指向了自己想要的终点，只改一个链接目标，再看铜抵达核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把现有短带换成当前可通的另一种弯，亲手看本轮布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次保留旧供弹、拆桥端与接新支路的施工顺序，再实际做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "主情境i为真禁用原可用桥并沿安全空廊实际试接，不要求绕接成功；原防线供弹和绕行前提保证可尝试。普通路线变化0，不用桥距数或背诵链接操作；ALT未有桥不计自定禁用。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C05.SERPULO.V1"
+        },
+        {
+          "text": "还没桥：当前只有机械钻和基础带，铜可从另一侧空地接回核心，不必跨别的生产线。先选什么？",
+          "scene": "本来可跨带的桥的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接把短带改一个能通的弯，亲手体验这次布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先猜这个末端接法会送到哪一侧，只改一格再看真实去向核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次回收旧弯与接回核心的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前基础带连接说明，再回来接自己的这条铜线",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "主情境i为真禁用原可用桥并沿安全空廊实际试接，不要求绕接成功；原防线供弹和绕行前提保证可尝试。普通路线变化0，不用桥距数或背诵链接操作；ALT未有桥不计自定禁用。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C05.SERPULO.ALT1"
+        },
+        {
+          "text": "ErekirElectrolyzer已有稳定水电，两种气体各有畅通可用去路；一条预留给臭氧设备的空强化管目前尚未接气源，两侧标记可看，管起点能重接。先选什么？",
+          "scene": "电解器相反两侧的气体",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_GAS",
+            "MIN8C_CODE"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜哪侧才会送出这条支路要的臭氧，保持水电不变、只把空管接到自己判断的那一侧，再看管内种类与下游工作核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把通风口水电、电解、氢的矿机增效与臭氧加工需求维持几轮，再随余量调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次保留水输入、接两种气体与接回各自用途的施工顺序，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对电解器两侧定向输出和强化管说明，再回来处理自己的这组",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "空管前提避免混气清空被省略；只问端口实物反馈，不考记颜色，不把双气体叫成DSP炼油品或默认氢必需初始矿机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C05.EREKIR.V1"
+        },
+        {
+          "text": "尚未用电解器：基础CliffCrusher已开放并有电，附近两处可达岩墙的当前产砂预览不同；同一台能移过去，两处都能保持原有供电并接Duct，手头材料够改接。先做什么？",
+          "scene": "电解器相反两侧的气体的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜产砂差别是否来自墙面类型，只把同一台基础CliffCrusher移到另一类当前有效岩墙前，保持供电与取砂连接可用，再核对显示和实际砂输出",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先比较眼前两种可用岩墙的产砂条件与这次所需砂，再决定用哪处",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "亲手换一段现有出砂Duct的位置，看看当前能接通的另一种布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排清这一轮保留供电、挪基础取砂机与接回Duct的编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "空管前提避免混气清空被省略；只问端口实物反馈，不考记颜色，不把双气体叫成DSP炼油品或默认氢必需初始矿机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C05.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "SerpuloGroundFactory当前能选Dagger，也有另一种你已开放的地面单位；当前已选Dagger但尚未出产，工厂已有电和铅，旁边硅线的连接与工厂输入库存可查看，材料够改接。现在先选什么？",
+          "scene": "地面工厂的单位材料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_CODE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把制硅、其他单位用料、工厂供电和防线补给维持几轮，再跟各处库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前已开放两种单位的实际材料与用途，再决定这一轮生产",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前工厂所选单位的输入说明，再回自己的供料线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜Dagger没生产是否因为这股硅没进厂，只接好这一段，再看材料库存与实际生产核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境不让未开单位当可选，Dagger材料按已发布定义；只给未产出和可查硅线与库存，不直接告诉没接好，p自己解释后单改核对。单位生产非持续等级养成，指挥机器不计真人q；ALT手采交料的即时反馈f与练工具t分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C06.SERPULO.V1"
+        },
+        {
+          "text": "还没单位工厂：核心附近的铜钻与基础带已能用，核心机能临时携带一批铜，当前有时间继续小建设。先做什么？",
+          "scene": "地面工厂的单位材料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次手里留多少铜、放哪台钻与接哪段带的步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "在备用连接重复做一种已会的拖带与改朝向，专门练熟自己的工具操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前核心机采矿与交入库存说明，再回来实际操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "用自己的核心机采一小段现成铜再交回核心，享受采到与交入接连发生的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "主情境不让未开单位当可选，Dagger材料按已发布定义；只给未产出和可查硅线与库存，不直接告诉没接好，p自己解释后单改核对。单位生产非持续等级养成，指挥机器不计真人q；ALT手采交料的即时反馈f与练工具t分开。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C06.SERPULO.ALT1"
+        },
+        {
+          "text": "Erekir氧化室已有铍、臭氧与电，氧化物出口畅通；HeatRedirector与原料齐全的CarbideCrucible已能用，坩埚原有供热能保持。这股额外热已试接却未到预想位置，导热方向可改，其余供料正常。先怎样继续？",
+          "scene": "氧化物生产还带来热",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_CODE",
+            "MIN8C_HEAT"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜坩埚没收到这一股热是否是导热器朝向，只改这一只方向，再看热状态与实际生产核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把铍臭氧、氧化物去路、热流、坩埚原料与用电维持几轮，再随各处停顿调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前氧化室副产热与导热器方向说明，再回自己的这组机器",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际让氧化室在产氧化物时把副产热经导热器送到坩埚，与坩埚现有原料和供热一起运行，查看这组机制怎样配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "b是真实副产物与热配方互补利用，不是看菜单。p只改一件导热方向，y跨物料气体热电持续供给；不把旧Wiki热阈值或反应堆热条套入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C06.EREKIR.V1"
+        },
+        {
+          "text": "没用过热系统：基础PlasmaBore已有电、射线通畅，Duct里还有铍且末端刚有积料，当前能调整接回核心的一小段。先选什么？",
+          "scene": "氧化物生产还带来热的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这次保留矿机和电节点、回收断头Duct与接核心的步骤",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "反复搭一种已经会的矿机到Duct连接，专门练熟朝向操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前基础矿机和Duct说明，再回来动手",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜末端一格反向让铍停住，只转该格再看核心库存核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b是真实副产物与热配方互补利用，不是看菜单。p只改一件导热方向，y跨物料气体热电持续供给；不把旧Wiki热阈值或反应堆热条套入。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C06.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "Serpulo战役你已经给一条生产研究分支做过几次解锁，眼前下一项前提已满足、已有材料能继续投入，也有当前基地能改。先怎样花这段时间？",
+          "scene": "已经投入过的一条研究分支",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_SAVE",
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把研究需要的材料开采、加工、核心库存与防线供料维持几轮，再随消耗调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次为新技术留材料与改基地哪些地方的施工先后，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "继续给这条已开始的分支投入现有材料，解锁下一项后在基地实际使用，想看多次投入留下的技术成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前两项已开放研究的真实材料与前提，再决定这一次投入",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "g是延续已有分支、真实投入并使用保留技术，非只打开树或买当前一件装备。两星球研究树分开，不考扇区固定顺序。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C07.SERPULO.V1"
+        },
+        {
+          "text": "刚解锁机械钻与带：铜线能持续入核心，当前目标还可推进，附近同一片矿有可放钻的格子。先选什么？",
+          "scene": "已经投入过的一条研究分支的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前钻机和基础带说明，再回来动手",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "把一段已有短带移成另一条能通的弯，亲手看这轮布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次新增钻机、接出带与接核心的施工顺序，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先猜这台钻移一格后是否仍覆盖铜矿，只动这台再核对实际出料",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "g是延续已有分支、真实投入并使用保留技术，非只打开树或买当前一件装备。两星球研究树分开，不考扇区固定顺序。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C07.SERPULO.ALT1"
+        },
+        {
+          "text": "Erekir当前UnitCargoLoader已有能出动的货运无人机与铍供应，供电正常；目标UnloadPoint暂未收到铍，筛选设置可查看，旁边下游能接铍。先做什么？",
+          "scene": "货运无人机认卸点筛选",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_DUCT"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前可用运输组件各自的输入、筛选与连接条件，再决定这一轮用法",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先排清这次保留加载站、放卸点与接下游Duct的施工步骤，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先猜没送来是否因卸点筛选不匹配，只把这一卸点设为铍，再看无人机卸货与库存核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把墙矿、货运供料、无人机建造补充、用电与下游消耗维持几轮，再随库存调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "主情境货运无人机是自动单位，无真人q/o；不把普通筛选当b或成长。只给卸点未收到铍与可查设置，不先宣告错滤项；p自提不匹配再改单卸点核真实货。ALT当前明确供弹目标0，缺弹原因须自己解释后只补一格并核对。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C07.EREKIR.V1"
+        },
+        {
+          "text": "还没有货运机：早期Breach已经放好，现有铍矿与Duct能给它送弹；眼前已列出给该炮塔供铍的目标，当前没有敌人正在拆基地，材料够接这段。先怎样投入？",
+          "scene": "货运无人机认卸点筛选的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这一轮保留矿机与供电、回收旧弯和接Breach入口的编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前Breach弹药与Duct连接的已有说明，再回来真实接自己的这一段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "按眼前已列目标把现有铍真正送进Breach，重点是推进这次明确的供弹目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先猜这座塔没装入铍是否只差末端一格Duct，只补这一格，保持供料与塔不变，再核对塔内弹药",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境货运无人机是自动单位，无真人q/o；不把普通筛选当b或成长。只给卸点未收到铍与可查设置，不先宣告错滤项；p自提不匹配再改单卸点核真实货。ALT当前明确供弹目标0，缺弹原因须自己解释后只补一格并核对。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C07.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "单人Serpulo当前没有敌袭，现有供弹与资源线能工作；你有精神，也有材料继续新建设，当前地图允许蓝图且保存工具已能用，附近还有一段安全可达但没亲自看的地形。此刻先投入什么？",
+          "scene": "暂时安稳的Serpulo基地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_STORE",
+            "MIN8C_S_TEXT",
+            "MIN8C_SAVE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清本次新建设要保留的供弹与改接步骤，再施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "沿熟悉矿机、带和炮塔慢走一圈，喜欢认得的基地运转带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看看那段尚未亲自看到的地形，不先查会有什么资源",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把自己当前已能保存的自制供料模块存成本机蓝图，保留这次编辑",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "h是精力足且能推进时主动喜欢熟悉过程，不由战后疲劳或等波触发；蓝图只在当前地图允许时保存。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C08.SERPULO.V1"
+        },
+        {
+          "text": "只到最初铜钻也可答：当前区域安全，你有精神，铜还能继续入核心，手头有材料再铺短带。先做什么？",
+          "scene": "暂时安稳的Serpulo基地的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在备用空地重复搭一种已会的钻机到带连接，专门练熟朝向操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿熟悉铜矿到核心走一趟，享受认识的采出与交入过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看看那片安全可达却没亲自看过的矿脉边缘",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次新增钻机与接回核心的施工顺序，再动手",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h是精力足且能推进时主动喜欢熟悉过程，不由战后疲劳或等波触发；蓝图只在当前地图允许时保存。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C08.SERPULO.ALT1"
+        },
+        {
+          "text": "单人Erekir当前这一带没有敌袭，供电和矿机能继续工作；你有精神，现有材料能推进新建设，当前地图允许蓝图且保存工具已能用，另有一段安全可达却没亲自看的墙边地形。先选什么？",
+          "scene": "通风口旁的熟悉基地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_STORE",
+            "MIN8C_E_TEXT",
+            "MIN8C_SAVE"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清本次新建设保留哪些节点和矿带、从哪里接入，再实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍沿熟悉通风口、节点与矿带走一圈，喜欢认得的基地运转带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看看那段没亲自看过的墙边，不先查那里能采什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把自己当前已能保存的基础供料模块存成本机蓝图，保留这次编辑",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "h须本人精力足且可以推进，不把敌袭后的被迫等候计偏好；蓝图只当前地图允许和工具可用时。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C08.EREKIR.V1"
+        },
+        {
+          "text": "只到第一台涡轮矿机也可以：当前安全，你有精神、核心有材料继续铺Duct，另一处墙边尚未亲自看过。先做什么？",
+          "scene": "通风口旁的熟悉基地的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在备用空地重复接一种已会的节点或Duct，重心是让自己操作更熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿熟悉通风口与铍矿走一趟，享受认得的发电和出矿过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看看那段安全可达但没亲自到过的墙边，不先查资源",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次新增Duct与接核心的施工先后，再动手",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h须本人精力足且可以推进，不把敌袭后的被迫等候计偏好；蓝图只当前地图允许和工具可用时。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C08.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想Serpulo里你真正给Duo送过铜、也给核心留过施工料的一段。哪项已发生过程更有分量？",
+          "scene": "回看铜弹药与施工料",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_STORE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过缺弹与某处分流的关系，只改一个分支后看存弹与去向核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把铜矿、炮塔弹药、核心材料与后续波次补给维持过几轮，并随消耗调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "排清过那次保留供弹与改接核心的施工先后，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "核对过当时Duo和路由件说明，随后回来真实接过自己的线",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "四项真实过去，产量或存活波数不当竞技/能力分；没造Duo有完整早期回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C09.SERPULO.V1"
+        },
+        {
+          "text": "只回想第一台机械钻与铜带：哪项真的发生过？",
+          "scene": "回看铜弹药与施工料的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过核心前一格反向导致停料，只转这格后核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "排过那次留钻机与接核心入口的施工步骤，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "亲手挪过一段已有铜带，观察过另一种能通的布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "为练熟操作，反复搭过同一种已会的机械钻到短带连接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "四项真实过去，产量或存活波数不当竞技/能力分；没造Duo有完整早期回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C09.SERPULO.ALT1"
+        },
+        {
+          "text": "回想Erekir里你实际用过PlasmaBore、BeamNode与Duct的一段。哪种已发生过程更有分量？",
+          "scene": "回看墙矿和正交供电",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释过停采与射线遮挡或节点位置的关系，只改其中一件后看真实出料核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把通风口供电、墙矿、核心库存与下游生产维持过几轮，并随缺料调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "排清过那次保留矿机、挪节点与接新Duct的施工步骤，并实施过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "核对过当时基础墙矿机和节点说明，随后回来动手过",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "全为真实过去，Erekir墙矿与正交节点；不把Serpulo地面钻经历代入。未有完整链有最早采矿回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C09.EREKIR.V1"
+        },
+        {
+          "text": "只回想最早核心机采铍：哪项确实发生过？",
+          "scene": "回看墙矿和正交供电的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手采过现成墙矿并交回核心，重心是享受采到与交入接连发生的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "按当次施工需要排过留料、取铍与回核心的先后，并照着做过",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时墙矿采集与入核心说明，随后回来实际操作过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "去看过当时安全可达却没亲自到过的墙边，想发现地形",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "全为真实过去，Erekir墙矿与正交节点；不把Serpulo地面钻经历代入。未有完整链有最早采矿回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C09.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想Serpulo中你实际做过砂煤制硅，也用过煤水蒸汽供电的一段；未体验这组系统可换铜矿情境。哪种已发生过程更贴近？",
+          "scene": "回看砂煤和煤水的两条线",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_SILICON",
+            "MIN8C_CODE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把砂煤制硅、煤水供电、储能与建筑单位需求维持过多轮，并按余量调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "比较过当时已开放的真实加工输入条件，再决定那次先产哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "排清过那次回收旧管带与接回设备的施工步骤，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先解释过停机是否来自一股砂煤或一段水路，只改其中一处后看库存与设备反馈核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只Serpulo真实砂煤制硅与煤水蒸汽，不混Erekir配方；过去单次布线不计y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C10.SERPULO.V1"
+        },
+        {
+          "text": "没用过电力加工：只回想铜矿到核心的一次实际操作，哪项更像？",
+          "scene": "回看砂煤和煤水的两条线的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过钻移一格会怎样改变覆盖，只动该钻后核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "排过那次移动钻机和接新出口的施工顺序，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时基础钻带说明，随后回来动手过",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "自己采过一小段现成铜并交回核心，重心是享受连续采到与交入的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只Serpulo真实砂煤制硅与煤水蒸汽，不混Erekir配方；过去单次布线不计y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C10.SERPULO.ALT1"
+        },
+        {
+          "text": "回想Erekir里你真实做过砂石墨制硅，也实际用过电解与气体用途的一段；未体验这组系统可换涡轮矿机。哪项已发生过程更贴近？",
+          "scene": "回看砂石墨和两种气体",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_GAS",
+            "MIN8C_CODE"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把砂石墨、制硅、通风口水电、电解与气体用途维持过多轮，再按余量调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "比较过当时已开放加工的真实输入条件，再决定那次采用哪种生产",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "排清过那次保留水电与改接管路的施工先后，并实际做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先解释过缺料与一条Duct或一侧气体端口的关系，只改一处后看机器实物与库存核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只计真正经历，砂石墨不混砂煤；电解水产生两种相反方向气体，不考固定比例与产速。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C10.EREKIR.V1"
+        },
+        {
+          "text": "还没用制硅或气体设备：回顾第一台涡轮矿机的建设，哪项真做过？",
+          "scene": "回看砂石墨和两种气体的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练过一种已会的正交节点与矿机连接，专门让自己用熟放置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "排过那次留住发电、移节点与接出矿的施工步骤，并实施过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时基础涡轮与矿机说明，随后回来接过自己的线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先猜过节点位置让矿机没电，只移一只节点后看实际状态核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只计真正经历，砂石墨不混砂煤；电解水产生两种相反方向气体，不考固定比例与产速。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C10.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想Serpulo里你确实用Hail对地、Scatter防空的一段，两类敌人当时都出现过。哪种已发生投入更有分量？",
+          "scene": "回看真实搭过的互补防线",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_S_TEXT",
+            "MIN8C_CODE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较过当时已开放炮塔的目标类型与弹药条件，再决定那次采用哪种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "核对过当时炮塔说明，回来实际布置过自己的防线",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "给Hail石墨与Scatter铅接好供料并实际交战过，查看过两类目标中的互补效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "把石墨铅来源、两类弹药与维修施工料维持过几轮，并随交战消耗调整过",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "b需确有两类目标与真实组合运行，不把单看菜单计构筑；没有防空经历可换独立铜钻回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C11.SERPULO.V1"
+        },
+        {
+          "text": "没有这些炮塔经历：只回想最初铜钻与短带，哪项真实发生过？",
+          "scene": "回看真实搭过的互补防线的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清过那次保留钻机与接回铜带的施工顺序，并实际执行过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "去看过当时安全可达但没亲自到过的一处矿脉边缘，想发现地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "反复练过一种已会的拖带、转弯与接核心，专门让自己用熟工具",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先猜过末端一格为何影响进入核心，只改这一格并核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b需确有两类目标与真实组合运行，不把单看菜单计构筑；没有防空经历可换独立铜钻回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C11.SERPULO.ALT1"
+        },
+        {
+          "text": "回想Erekir里你真正让氧化室和导热系统工作过的一段，哪项已发生投入更有分量？",
+          "scene": "回看副产热真正用在哪里",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_CODE",
+            "MIN8C_HEAT"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把铍臭氧、氧化物去路、热流、坩埚原料与电力维持过几轮，并随停顿调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "核对过当时已开放热设备的方向说明，回来实际接过自己的这组",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "实际把氧化室产物之外的热经导热器接给热配方，与其原料及现有供热一起跑过，查看过组合效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先解释过没收到热是否因一只导热器方向，只改该件后看热状态与产物核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b为真副产热和热配方互补，非单次看热数；p改单项。热未开者有独立无热早期回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C11.EREKIR.V1"
+        },
+        {
+          "text": "没用过热系统：只回想最早铍矿Duct到核心的一次，哪项确实发生过？",
+          "scene": "回看副产热真正用在哪里的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复搭过一种已会的矿机到Duct连接，专门练熟自己的朝向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手挪过一段已有Duct到另一条可行弯路，看过那轮布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先猜过末端方向影响核心入库，只转这一格后看真实物料核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "排清过那次保留矿机与重接Duct的施工步骤，并照着做过",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "b为真副产热和热配方互补，非单次看热数；p改单项。热未开者有独立无热早期回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C11.EREKIR.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "MIN8C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次单人Serpulo当时没有敌袭，你有精神、材料和工具还能继续建设。哪种已发生过程更有分量？",
+          "scene": "回看自己愿意待着的基地",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_SAVE",
+            "MIN8C_S_TEXT",
+            "MIN8C_STORE"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把自己当时满足保存条件的供料模块存成过本机蓝图，保留那次设计",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "B",
+              "label": "仍沿熟悉矿机和防线走过一圈，喜欢认识的基地运转带来的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看过当时安全可达但未亲自看的地形，想发现资源位置",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "沿已投入多次的研究分支继续解锁并实际用过新技术，重心是看积累留下来",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "真实过去；研究g须多次延续投入并实际留用，不由补炮塔血量或存蓝图计成长，h不由疲劳。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C12.SERPULO.V1"
+        },
+        {
+          "text": "只玩到铜矿也可回顾：当时区域安全，你有精神和材料继续铺带。哪项确实发生过？",
+          "scene": "回看自己愿意待着的基地的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_S_TEXT"
+          ],
+          "modes": [
+            "serpulo"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清过那一次移动钻机和接核心的施工顺序，并照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "沿熟悉铜钻与核心走过一趟，喜欢认得的运转过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看过当时安全可达却没亲自到过的矿边地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "亲手把一段已有短带换过可行转弯，看过那次布局",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "真实过去；研究g须多次延续投入并实际留用，不由补炮塔血量或存蓝图计成长，h不由疲劳。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C12.SERPULO.ALT1"
+        },
+        {
+          "text": "回想一次单人Erekir当时这一带没有敌袭，你有精神、已有材料和工具还能推进新建设。哪项已发生过程更有分量？",
+          "scene": "回看在Erekir主动停留的过程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_STORE",
+            "MIN8C_E_TEXT",
+            "MIN8C_SAVE"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手挪过一处现有Duct或基础节点，观察过那一次可行布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "仍沿熟悉通风口与矿带走过一圈，喜欢认得的基地运转与从容过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看过当时安全可达却没亲自查看的一段墙边地形，想发现资源",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把自己当时满足保存条件的供料模块存成过本机蓝图，保留那次编辑",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "全为过去；不把当前维修、充电和存蓝图当成长，不把NPC货运或指挥单位当真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C12.EREKIR.V1"
+        },
+        {
+          "text": "只到最早涡轮和矿机也可回顾：当时区域安全，你有精神、材料够继续接回核心。哪项确实发生过？",
+          "scene": "回看在Erekir主动停留的过程的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MIN8C_E_TEXT",
+            "MIN8C_PLASMA",
+            "MIN8C_BEAM"
+          ],
+          "modes": [
+            "erekir"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排过那一次保留供电和接回核心的施工步骤，并真的执行过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "沿熟悉通风口与铍矿走过一趟，享受认得的发电出矿过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看过当时安全可达却没亲自到过的墙边，不先查有什么矿",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "亲手把一段已有Duct换过可行转弯，看过那次布局",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "全为过去；不把当前维修、充电和存蓝图当成长，不把NPC货运或指挥单位当真人社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "MIN8C12.EREKIR.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+00afa0902d5c"
+}

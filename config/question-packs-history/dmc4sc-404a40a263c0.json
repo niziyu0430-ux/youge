@@ -1,0 +1,938 @@
+{
+  "id": "dmc4sc",
+  "title": "鬼泣4 特别版",
+  "game_ids": [
+    "steam-329050"
+  ],
+  "scope": "原Nero与Dante故事路径；不要求新增角色流程",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "只要求特别版原Nero/Dante路径；Dante段落都有早期Nero替代，不强迫新增角色。",
+    "常驻Devil Bringer、可退回Proud Souls与Dante实时四风格分别核对；不借用5代机械臂库存。",
+    "秘密任务明确当前角色可完成；9—12与替代均为实际经历回顾。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "原Nero与Dante故事路径；不要求新增角色流程",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DMC4SC01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "刚结算得到新的Proud Souls，在技能菜单既能新增能力，也能退回已投的技能重新分配。只先试一套配置，你怎样花这次准备时间？",
+          "scene": "可以退回重配的Proud Souls",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_REFUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重配现有剑、枪与恶魔右腕能力，让它们在一套打法里互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把新积累的Proud Souls投入尚未购买的已开放能力，扩展长期可用的范围",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "围绕自己正在练的一段动作保留和购买所需技能",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "退回一部分旧选择，主动试一套自己没用过的能力组合",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "Proud Souls用于技能且可退回；不混同红魔石物品或5代购买体系。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC01.V1"
+        },
+        {
+          "text": "刚接触早期Nero技能菜单，已经有新取得、能购买一项能力的Proud Souls。先按什么理由选？",
+          "scene": "可以退回重配的Proud Souls的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_REFUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "补上红后剑、蓝玫瑰与右腕之间缺的一种配合",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "把新积累变成一项长期可用的新能力",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "买到自己正在练的一段衔接所需动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "选一项没试过的动作，换一种方法打熟悉敌人",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "Proud Souls用于技能且可退回；不混同红魔石物品或5代购买体系。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "Nero面对可被Snatch拉近、也能在近处用Buster抓投的小型敌人；右腕不会像5代机械臂那样用掉库存。只给这一轮什么重点？",
+          "scene": "恶魔右腕抓住之后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把红后剑、蓝玫瑰与抓投分工配成一种打法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "连续接上拉近、斩击与抓投，感受当下回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "针对拉近后接一段剑招再抓投的时机反复练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "观察对手状态与周围距离，解释什么时候能抓、会落在哪里",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "明确适合抓投的目标；不把Buster说成所有敌人随时可用。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC02.V1"
+        },
+        {
+          "text": "只遇到最早的普通小型敌人，Snatch与Buster已能使用。你先给几次尝试什么重点？",
+          "scene": "恶魔右腕抓住之后的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较枪击牵制、剑招与右腕怎样互相接手",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "让拉近、出刀和抓投连出直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "练同一段拉近后接刀的节拍",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "看清敌人出手与接近距离，解释可抓窗口",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "明确适合抓投的目标；不把Buster说成所有敌人随时可用。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "红后剑能预先补充Exceed，你也已经学会当前可用的补充方式；前面有一场可以重试的Scarecrow遭遇。几轮交手先做哪项？",
+          "scene": "Exceed和下一次冲入",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续打出蓄力刀、挑起与落地斩的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自定一次不同的起手与蓄力次序，试熟悉敌人的新接法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "练蓄力、起手与下一次补充之间的具体节拍",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "比较敌人起手、自己的收招和蓄力窗口，自己解释关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只以已学会的补充方式为前提，不强迫MAX-Act；右腕仍是常驻工具。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC03.V1"
+        },
+        {
+          "text": "尚未研究战斗中补充Exceed，只会开局给红后剑蓄力。先给一场普通敌人遭遇什么重点？",
+          "scene": "Exceed和下一次冲入的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "体验蓄力刀与命中接上的直接手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把枪先手、蓄力剑与抓投排成一次不同于旧习惯的试验",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "练蓄力后冲入与第一刀之间的节拍",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "观察敌人出手和自己的接近距离，解释起手窗口",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只以已学会的补充方式为前提，不强迫MAX-Act；右腕仍是常驻工具。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "Nero已经能够抓取眼前蓝色Grim Grip，附近平台与一块已发现的蓝魔石碎片仍可达。只有一点绕行时间，先做什么？",
+          "scene": "蓝色Grim Grip对面的平台",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "针对一次抓取后接跳跃的时机认真练几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "对照抓取距离、平台高差与落点，自己推清通路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "沿抓点去亲眼看一处原来没到过的高处",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把这块已经发现的碎片补进收集",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "只问实际已激活可用的抓点与仍可达物品，不考全地图解法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC04.V1"
+        },
+        {
+          "text": "还没到Grim Grip，只在早期有普通跳台，已见一件可达遗漏物。空档先给什么？",
+          "scene": "蓝色Grim Grip对面的平台的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练一段普通起跳落脚的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看清跳台与墙边的关系，解释可走路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "走到自己还没亲眼看过的上层角落",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "补拿已经发现的那件收集物",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "只问实际已激活可用的抓点与仍可达物品，不考全地图解法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已使用Dante，现有武器与Trickster、Swordmaster、Gunslinger、Royalguard都可使用。只专注一场熟悉战斗，先做什么？",
+          "scene": "Dante回到实时换风格的战斗",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_DEV",
+            "DMC4SC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较现有武器在不同风格下能怎样互补",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "先解释敌人出手、自己的距离与各风格接招窗口",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "专练一段位移后出刀或Royalguard接招的具体时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "换一套自己没用过的风格转换次序，试熟悉敌人的新打法",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "Nero不拥有Dante风格；未到后半程可用早期Nero替代。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC05.V1"
+        },
+        {
+          "text": "尚未使用Dante，Nero当前只有红后剑、蓝玫瑰和恶魔右腕。熟悉遭遇先做哪项？",
+          "scene": "Dante回到实时换风格的战斗的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_DEV",
+            "DMC4SC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较剑枪与抓投的互补关系",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "观察敌人硬直和拉近距离，解释接刀窗口",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "专练同一段拉近后接刀的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "主动改变枪击、剑招和抓投的旧次序试一次",
+              "signal": "try_action_variant"
+            }
+          ],
+          "design_purpose": "Nero不拥有Dante风格；未到后半程可用早期Nero替代。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。 本轮仅比较可选方案或一次购入而未说明具体互动作用的选项，只记录相应行为，不强计构筑或成长动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "Dante已经取得Gilgamesh，Rebellion与现有枪械也都可切换；你可以打几轮熟悉敌人。先给什么注意？",
+          "scene": "Gilgamesh接回Rebellion",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_DEV",
+            "DMC4SC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练从一段Gilgamesh动作切回剑招的具体时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用一次自己没试过的拳脚、枪械和风格次序改写熟悉打法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "让拳脚重击、剑击与枪声接成鲜明反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "比较拳脚、剑与枪的不同距离和风格动作，配成互补衔接",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只用实际取得的4代武器；没有Cavaliere、Balrog或必须预设有限装备栏。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC06.V1"
+        },
+        {
+          "text": "没取得Gilgamesh，也尚未用Dante，只能用早期Nero。几轮熟悉敌人先给什么注意？",
+          "scene": "Gilgamesh接回Rebellion的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_DEV",
+            "DMC4SC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练剑招后接Buster的具体时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "主动改一次剑枪与抓投顺序，试没用过的接法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "让剑枪与抓投连续回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "把红后剑、蓝玫瑰和右腕的作用配成互补",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只用实际取得的4代武器；没有Cavaliere、Balrog或必须预设有限装备栏。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "Nero已经学会启动、击转并用右腕推动回旋刃，这里的门机关也会打开；当前仍有可操纵的回旋刃与普通小敌人。再留几次尝试，先做什么？",
+          "scene": "已经会用的回旋刃",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_REFUND",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让回旋刃撞击、自己的剑击与命中接出直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己改一个可行的推出位置，试不同于开门路线的玩法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "观察旋转、推动方向与碰撞，解释它会怎样经过场地",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "练启动、击转到推出的连续节拍",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通开门解法不自动记为发明玩法；题目已进入可自由试验的已知机关。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC07.V1"
+        },
+        {
+          "text": "还没接触回旋刃，只面对可抓投的早期小敌人，旧打法已经熟悉。再留几次尝试做什么？",
+          "scene": "已经会用的回旋刃的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_REFUND",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "连续感受拉近、剑击和抓投的回应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "规定这场禁用红后剑和蓝玫瑰，只准恶魔右腕抓投与移动，按自己新增的限制处理这些可抓小敌人",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "看清抓投落点与另一只敌人的距离，解释场地关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "练出刀后抓投再接枪击的节拍",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "普通开门解法不自动记为发明玩法；题目已进入可自由试验的已知机关。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "已发现一个当前角色确实能完成的秘密任务，规则已显示，成功可得蓝魔石碎片，也允许重试或离开。先把一点时间放在哪？",
+          "scene": "能用当前角色完成的秘密任务",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_REFUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先离开去一处本章仍可到、自己未看过的侧路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按规则与场地关系，先自己推清满足条件的方式",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "围绕规则要求的一段具体动作反复练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "把取回这块已知碎片、填上收集缺口作为目标",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "排除Nero无法完成的Royalguard秘密任务，不设背答案或最优攻略题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC08.V1"
+        },
+        {
+          "text": "还没发现秘密任务，在早期安全跳台旁有一块已见且可达碎片，还有一条陌生侧路。先把空档给什么？",
+          "scene": "能用当前角色完成的秘密任务的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_REFUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自沿陌生侧路看进去",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "推清平台与落点之间能走通的关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "练一次接近碎片所需的跳跃时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "补拿这块自己已经发现的碎片",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "排除Nero无法完成的Royalguard秘密任务，不设背答案或最优攻略题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想实际用Nero打过的一场，哪种已经发生的体验更有分量？",
+          "scene": "右腕和红后剑已经接过的一轮",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拉近、剑击和Buster连续回应的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己专门练过一段Exceed或抓投衔接，后来更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "敌人状态、距离与可抓窗口被自己理解清楚",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己把蓝玫瑰、红后剑与右腕配成了互补的一套",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只回顾实际用过的动作，不要求高阶蓄力、无伤或后期Boss。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC09.V1"
+        },
+        {
+          "text": "只回想最早实际打过的一轮普通小敌人，哪部分更鲜明？",
+          "scene": "右腕和红后剑已经接过的一轮的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_NERO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "出刀、枪响与拉近连续接上的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "自己练过的一段拉近接刀时机比开始更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "小敌人的出手与拉近后距离被自己看明白",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "枪击牵制与右腕、剑招被自己实际配成了互补",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只回顾实际用过的动作，不要求高阶蓄力、无伤或后期Boss。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一次实际获得Proud Souls、配置并使用技能的过程，哪部分已经发生的经历更有分量？",
+          "scene": "Proud Souls已经重新落位",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_REFUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "退回重配后的技能与原有工具形成了互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己主动换过一套旧配置，真的试出了不同打法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "每关结算、技能重配与进关验证，被自己逐次修整成稳定流程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "新积累最终变成了角色长期可用的能力增长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "允许未退过技能者换题；g指新积累扩展能力，不把同一池反复分配冒充永久增长。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC10.V1"
+        },
+        {
+          "text": "只用过最早一项购买能力，没有退回重配，回顾当时哪部分更有分量？",
+          "scene": "Proud Souls已经重新落位的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DMC4SC_MANUAL",
+            "DMC4SC_REFUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "这项动作被自己接入原有剑枪右腕，形成了互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己买下没试过的动作，并实际改变过熟悉打法",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "自己把结算、购买和进关使用安排成了顺手流程",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "D",
+              "label": "新得到的Proud Souls确实为角色添了一项长期能力",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "允许未退过技能者换题；g指新积累扩展能力，不把同一池反复分配冒充永久增长。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想实际使用Dante打过的一场，只看当时已有的武器与风格。哪种已经发生的过程更鲜明？",
+          "scene": "换成Dante之后的一场",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DMC4SC_DEV",
+            "DMC4SC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一段位移、接招或切换时机经过练习更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己主动换过武器与风格次序，试出一条新接法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "剑、枪、拳脚或风格转换连起来的直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "自己把武器动作与不同风格配成了互补用法",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只有实际玩过Dante才回答本题；不强制新增Vergil、Lady或Trish。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC11.V1"
+        },
+        {
+          "text": "尚未用Dante，只回想实际用过的Nero早期一场，哪部分更鲜明？",
+          "scene": "换成Dante之后的一场的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DMC4SC_DEV",
+            "DMC4SC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一段拉近接刀的具体时机经过练习更可控",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己主动改变过出手次序，实际试了另一种打法",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "C",
+              "label": "剑枪与恶魔右腕接上的直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "自己把枪击牵制、剑招和抓投配成了互补",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只有实际玩过Dante才回答本题；不强制新增Vergil、Lady或Trish。 普通换路、换配置和已会动作换序只记当次行为；只有具体新增的限制才支持自创玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "DMC4SC12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回顾实际玩过的Nero与Dante故事路径，哪种已经发生的经历更有分量？",
+          "scene": "佛图那的一段已经走过",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DMC4SC_DEV",
+            "DMC4SC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己设过个人关卡评价目标，并实际对照过新旧记录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "Nero、姬莉叶与教团的已见片段接成了一段人物故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己把正在操作的角色设成持剑迎敌的恶魔猎人，在可自由用枪处仍坚持先近身、以剑起手再接其他动作",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "自己亲自走进一处原来未知的城堡、森林或支路",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只调用已见剧情；不以教团立场、爱情选择或评价高低推断现实道德与能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC12.V1"
+        },
+        {
+          "text": "只回顾开头实际玩过的Nero段落，哪种已经发生的过程更有分量？",
+          "scene": "佛图那的一段已经走过的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DMC4SC_DEV",
+            "DMC4SC_MANUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己曾给一关设评价目标，并实际比较过这次与上次记录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "开场人物的处境让自己接上了这次追踪的来由",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "自己给Nero定了持剑迎敌的猎人身份，在可用枪牵制时仍按这个身份先近身、以红后剑起手再接动作",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "自己亲自走到主路旁一处原来陌生的建筑角落",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只调用已见剧情；不以教团立场、爱情选择或评价高低推断现实道德与能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "DMC4SC12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+404a40a263c0"
+}

@@ -1,0 +1,1476 @@
+{
+  "id": "ot09i",
+  "title": "牧场物语 橄榄镇与希望的大地",
+  "game_ids": [
+    "steam-1392960"
+  ],
+  "scope": "PC 正式本体；普通与Seedling共同的开拓、加工、野生动物摄影与小镇生活",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "本体镇民与付费追加地区、婚恋对象分开；无客户端试玩或人测等值结论。",
+    "不是重聚矿石镇：本作工具改造无单件工具EXP前提，动物产物不用另配挤奶器剪刀，相机野生动物馆藏不等于虫网捕虫。",
+    "PC没有Switch玩家头像和分享照片功能；NPC精灵、镇务不计真人社交。所有较后期场景均给基础工具或近处镇路替代。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "橄榄镇本人已经开放的农场内容",
+      "initial_variants": {
+        "OT09I01": "OT09I01.DEFAULT.V1",
+        "OT09I02": "OT09I02.DEFAULT.V1",
+        "OT09I03": "OT09I03.DEFAULT.V1",
+        "OT09I04": "OT09I04.DEFAULT.V1",
+        "OT09I05": "OT09I05.DEFAULT.V1",
+        "OT09I06": "OT09I06.DEFAULT.V1",
+        "OT09I07": "OT09I07.DEFAULT.V1",
+        "OT09I08": "OT09I08.DEFAULT.V1",
+        "OT09I09": "OT09I09.DEFAULT.V1",
+        "OT09I10": "OT09I10.DEFAULT.V1",
+        "OT09I11": "OT09I11.DEFAULT.V1",
+        "OT09I12": "OT09I12.DEFAULT.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "OT09I01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你已走到一处待修旧桥，当前面板的修复条件已能满足；原区域的加工器、田地也能继续做事，还有可放的已有道路和装饰。没有紧迫交期，这轮先做什么？",
+          "scene": "旧桥前的材料与已能运行的农场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_STORE",
+            "OT9I_CRAFT",
+            "OT9I_CROP",
+            "OT9I_OFFICIAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前面板实际修复这座桥，把打开这条已列出的开拓目标作为重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "继续让现有农作收成、加工原料、出货所得和后续建设用料连着跑几轮，再按缺料与库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前可执行的修复、供料和已有建设方案，再决定下一步",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "按自己想表达的林间农庄主题，实际调整已有路面、装饰和可动加工器的布局",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "修桥条件以当前面板为准，不考最省材料。y为几轮经营依赖，不把单修桥当系统；a有实际主题布局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I01.DEFAULT.V1"
+        },
+        {
+          "text": "尚未修桥时，你拿着早期斧、锤和镰刀，营地旁有能清的小树、石块和野草，镇路也已可走。这轮先做什么？",
+          "scene": "旧桥前的材料与已能运行的农场的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_STORE",
+            "OT9I_CRAFT",
+            "OT9I_CROP",
+            "OT9I_OFFICIAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按手边工具排好砍树、敲石、割草和收起工具的先后，再亲手尝试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "直接用当前工具清掉一处条件满足的枝石，试这次动作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先去自己能走却没逛过的镇路，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "核对手头材料、可处理的杂物和地面状态，再安排",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "修桥条件以当前面板为准，不考最省材料。y为几轮经营依赖，不把单修桥当系统；a有实际主题布局。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I01.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已有两种当前可种的果树苗，农场有清出的合法空地，当前间距条件能满足；种后不必锄地或每日浇水。没有急修桥请求，这轮先做什么？",
+          "scene": "果树苗不走每日浇水",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_CROP",
+            "OT9I_OFFICIAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较现有两种果树苗与当前合法种植条件，再决定这轮选哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "亲手把一株已有树苗种在当前合法位置，试这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "按自己的林间果园主题，实际选择合法位置种已有树苗，改出想表达的疏密轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有树苗与当前合法空地的状态，再决定怎样处理",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "果树不套普通作物锄地浇水；一次栽苗或等待长大不硬g。a是实际位置表达，当前合法间距由界面条件保证。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I01.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你已做出并放好不止一类当前能用的木材、锭或纺织加工器，手头有各自能收的原料；农场建设还要留料，出货也能带来之后的开支。这轮先做什么？",
+          "scene": "木材、锭与布料的周转",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_CRAFT",
+            "OT9I_TOOLS",
+            "OT9I_TOWN_GUIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较当前已有配方能接哪些材料、能产出什么，再选这一轮做哪批",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "核对手头各类适配原料和已在加工的批次状态，再作安排",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "实际给一台当前能用的加工器加入一批合适现有原料，亲手试这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "把采料、不同加工器的周转、建设预留和出货收入接着运行几轮，再按实际缺料与积压调下一批",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "必需串接不硬b；y须多流多轮反馈，单台投料0，后台动画不f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I02.DEFAULT.V1"
+        },
+        {
+          "text": "只有第一台当前可用木材加工器时，你手里有它能处理的原木和其他已有制作材料，旁边也有已放好的可用储物箱。这轮先做什么？",
+          "scene": "木材、锭与布料的周转的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_CRAFT",
+            "OT9I_TOOLS",
+            "OT9I_TOWN_GUIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对现有原木、当前已投加工原料与已产出材料的状态",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "比较当前已开放且材料够的制作配方，再决定本轮做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "把已有材料实际存进可用储物处或取出本轮所需，调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "实际投入一批符合条件的原木，亲手试这次加工操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "必需串接不硬b；y须多流多轮反馈，单台投料0，后台动画不f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I02.DEFAULT.ALT1"
+        },
+        {
+          "text": "你在农场已有一背包木石等材料和几件农具，物品栏吃紧，但工具袋还可收回不用的工具；手头材料够两项当前已开放基础配方。没有急务，先做什么？",
+          "scene": "满背包里还能收回工具",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有原木、石料和现成制作材料数量，再决定这批怎样处理",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前材料够的两项基础配方，再决定这一轮做哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "为自己已经取得的材料和已经逛过的农场地点补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "把暂不用的已有工具实际放回工具袋，腾出物品栏后再取本轮要用的东西",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "工具袋只收工具，不虚构可把木石塞进去；0分携带、查看、比较与已得信息记录不同，不把整理背包当y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I02.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已修好相应畜舍，并照料过同一只牛、羊或鸡一段时间；它的友好度仍有提升空间，今天尚可喂养抚摸，已有饲料也有当前可收的产物。这轮先做什么？",
+          "scene": "已经驯养的同一只动物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_ANIMAL",
+            "OT9I_TOOLS",
+            "OT9I_CRAFT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接亲手收取当前能拿的一份产物，试这次已经满足条件的操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "从已有存放处取出本轮饲料、存回不用的物资，实际调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "继续亲自喂养抚摸这只已有积累的动物，愿意之后也接着投入，让同个体已有的友好继续成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "先核对这只动物的现有状态、饲料和当前产物，再决定怎么处理",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "同个体未满空间且持续投入才g；新代产物上限不是原个体无限成长，普通收奶不虚构必需挤奶器。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I03.DEFAULT.V1"
+        },
+        {
+          "text": "还没有牲畜时，你已看到第一座破旧鸡舍，能查看当前修理需求，身边有基础工具、可清杂物和够当前基础配方用的材料。这轮先做什么？",
+          "scene": "已经驯养的同一只动物的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_ANIMAL",
+            "OT9I_TOOLS",
+            "OT9I_CRAFT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对手头材料和农场可处理地面状态，再决定如何安排",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "比较当前可做的基础制作配方与材料条件，再选这次做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "先核对这座已显示修复目标的材料要求，看看手头还缺什么",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "直接用当前工具清一处满足条件的野草或小石，试这次动作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "同个体未满空间且持续投入才g；新代产物上限不是原个体无限成长，普通收奶不虚构必需挤奶器。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I03.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已修好当前可用畜舍且有空位，眼前有一只当前允许驯养的野生牲畜；箱里有已有饲料和材料，今天不必马上办镇务。先做什么？",
+          "scene": "有空畜舍时面对野生牲畜",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_ANIMAL",
+            "OT9I_CRAFT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从自己的箱子取出现有饲料、存回不用的物资，实际调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "给自己已经见过的牲畜和已到过的农场区域补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "实际邀请这只当前符合空位条件的野生牲畜到已有畜舍，亲手试这次驯养操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先核对眼前动物、已有饲料和手头材料的现状，再决定安排",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "畜舍先修且真有空位，不编免费无限收养；初次邀请0，不把新得动物自动算持续g或未得品种收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I03.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已有水桶，排水技能也已投入且还能积累；当前池塘可舀，身边有储物箱、待鉴定已有物及恢复食物，Reina现可鉴定。时间体力够，这轮先做什么？",
+          "scene": "桶、池塘与还没鉴定的东西",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_WATER",
+            "OT9I_TOOLS",
+            "OT9I_MUSEUM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排好舀水消耗体力、用随身食物恢复与回营地的路线，再照着继续",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "继续在池塘亲手排水，想沿同一角色已经投入的排水技能留下后续进展",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "直接把手里已有的待鉴定对象带去Reina处鉴定，亲手试这次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "把本轮不用的已有材料存回现有箱子，取出并留好要带的待鉴定物，实际调整携带",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "池塘湖泊可能宝箱，普通水洼只写黏土；已有未鉴定物不自动c。排水技能是同角色既有投入，不是看桶操作动画f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I04.DEFAULT.V1"
+        },
+        {
+          "text": "还没排过池塘时，你在雨后已拿到水桶，农场近处有几处当前能舀的浅水洼，手头也有基础材料；体力够用。这轮先做什么？",
+          "scene": "桶、池塘与还没鉴定的东西的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_WATER",
+            "OT9I_TOOLS",
+            "OT9I_MUSEUM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对眼前浅水洼、手头已有材料与可处理地面状态，再决定处理哪处",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "直接用已有桶舀一处当前可处理的浅水洼，亲手试这次排水",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "按手边桶排好取出、舀水、收整所得黏土和收回工具的先后，再亲手做",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "在当前还能舀的浅水洼反复练对准地面和舀水输入，重点是练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "池塘湖泊可能宝箱，普通水洼只写黏土；已有未鉴定物不自动c。排水技能是同角色既有投入，不是看桶操作动画f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I04.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已升级到可养宠物的小屋，有一只此前照料过、友好仍有空间的宠物；今天尚可抚摸给现有零食，牵绳也可用，当前有可合法带它走的路。先做什么？",
+          "scene": "已有宠物与现有牵绳",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_ANIMAL",
+            "OT9I_TOOLS",
+            "OT9I_ED_HOME"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已经认识的宠物与已经去过的散步地点补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "继续给这只已有积累的宠物做今天尚可做的抚摸与零食照料，愿意跨日把同个体友好继续养下去",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "换用自己已有牵绳，实际带这只当前允许出门的宠物走一小段，试这次可用手段",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "带它去一段当前允许到达而自己没看过的田边路，想发现那边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "g来自同一已照料宠物的实际后续投入，不声称单纯散步一定加心；不把宠物当真人同伴，也不要求坐骑产物。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I04.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已从Gloria拿到相机，相册有空位，附近有能拍的野生动物；馆藏中有一种你确实还没取得照片、当前条件也可能遇到的动物。这轮最想怎样拍？",
+          "scene": "博物馆相机能拍什么",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_MUSEUM",
+            "OT9I_CAMERA",
+            "OT9I_TOWN_GUIDE",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "带相机去它当前可出现且可达的地方实际寻找，想取得自己真正缺少的那张物种照片",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "按自己的林间观察主题，实际选角度、缩放和画面时机，拍出个人构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "对当前已有目标主动重复练镜头对准与缩放，重点是练熟照相输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "直接对准当前能拍的动物拍一张，亲手试这次操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "照片缺项是真未取得且实际追求，可没遇见；不是已拍未捐。a实际取景；本作不捏虫网捕虫或PC共享照片。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I05.DEFAULT.V1"
+        },
+        {
+          "text": "还没进馆拿相机时，你已能到镇上，也有没逛过的可达镇路与自己的营地画面。这轮更愿意做什么？",
+          "scene": "博物馆相机能拍什么的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_MUSEUM",
+            "OT9I_CAMERA",
+            "OT9I_TOWN_GUIDE",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去自己尚未进去过的博物馆或镇路，发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为自己的初居林地主题移动角色选站位和时机，用普通PC截图取景",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "为此前已经取得的材料或去过的地方补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "从工具袋实际取出本轮要用的工具、收回不用的工具，调整携带",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "照片缺项是真未取得且实际追求，可没遇见；不是已拍未捐。a实际取景；本作不捏虫网捕虫或PC共享照片。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I05.DEFAULT.ALT1"
+        },
+        {
+          "text": "博物馆当前开放，Gloria可收你已拿到但这类尚未捐的一条鱼；Reina也能鉴定手头一件已有待鉴定物。今天来回时间够，农场箱子可用，先做什么？",
+          "scene": "拿着现成鱼和待鉴定物进馆",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_MUSEUM",
+            "OT9I_WATER"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这条已有且当前可捐的鱼交给Gloria，亲手试一次捐赠操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "把手头已有待鉴定物交给Reina处理一次，亲手试这项当前服务",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "把暂不交的已有物带回自己箱子存好，调整携带再继续",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经拿到的鱼与已参观过的馆内地点补记信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "已有未捐鱼不算从未拥有的收藏缺项；两种实际NPC服务都0，不保证鉴出新物，不把原玩家复刻品售货人混作本题必需。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I05.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已有钓竿、可用体力与随身恢复食物，在当前能钓的水边，知道钓鱼时要看鱼图标颜色与耐久；旁边另有没去过的可达水岸。这轮更想做什么？",
+          "scene": "鱼图标颜色与钓竿耐久",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_WATER"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续钓几轮，主要想反复体验自己收放按键与鱼图标即时回应的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先换去那段自己没看过的可达水岸，发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "排好走哪些水边、何时下竿耗体力和用随身食物恢复，再照着继续",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "D",
+              "label": "留在这里主动多次练咬钩后按住与松开的输入，重点是熟悉颜色变化时的操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "实际是耐久消耗和鱼颜色，不套珊瑚岛张力条回落或太阳港光标。t/f均不要求钓上或后来进步。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I06.DEFAULT.V1"
+        },
+        {
+          "text": "刚去Marcos家拿到钓竿时，你在附近能下竿的水面，有当前体力与恢复物，也有未逛过的水岸。这轮先做什么？",
+          "scene": "鱼图标颜色与钓竿耐久的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_WATER"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在这里主动重复练抛竿、咬钩与收放，重点是练熟输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先去自己尚未到过的可达水岸，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "排好去水岸、下竿耗体力、用现有食物恢复及回农场的路线，再照着做",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "D",
+              "label": "直接抛竿试一次当前钓鱼操作，亲手看看这次怎样发生",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "实际是耐久消耗和鱼颜色，不套珊瑚岛张力条回落或太阳港光标。t/f均不要求钓上或后来进步。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I06.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已能进当前矿洞，带着锤、锄和恢复食物；眼前有可处理的矿点、闪光地与仍可锤击的地鼠目标，角色体力够，另有没见过但已有下梯可到的矿层。先做什么？",
+          "scene": "矿里的地鼠与闪光地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_MINE",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手连续敲当前能处理的矿点或地鼠，想体验命中与碎裂回应接上的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "排清锤敲矿点、锄闪光地、消耗体力后用现有食物恢复与出矿路线，再照着走",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "沿当前可用下梯去看自己没见过的下一层，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "在仍有目标时主动练看地面动静、转向和锤击地鼠的输入，重点是练熟，不要求每次命中",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "本作可见下梯与地鼠、闪光地分别处理，不套矿石镇到处锄地找梯；稀有掉落和练习成功均不必有。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I06.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你在农场准备出门，Olive Hall当前开放；Victor已列建设请求有几种材料路线，你能备好其中一种，镇上另有当前可触发而尚未进入的人物事件。这轮先做什么？",
+          "scene": "Olive Hall 公告板上的几种材料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_TOWN",
+            "OT9I_TOWN_GUIDE",
+            "OT9I_DLC",
+            "OT9I_CRAFT",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排好取现有材料、去公告板交付和再回农场的目的地顺序，再照着行动",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先去触发并读这段现有人物事件，想把这位镇民的经历接到之前的对话",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "先去Olive Hall查看已列不同材料与奖励条件，核对已有物资再决定交哪路",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "实际准备并交出当前符合条件的一路材料，把推进这项已列镇务作为重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "不同已给材料路线是普通目标选择，不是发明i；NPC镇务不q/o，准备项确在出门前。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I07.DEFAULT.V1"
+        },
+        {
+          "text": "尚未收到镇长建设请求时，你已经能看见一座破旧鸡舍的修复面板，也有已见过镇民可交谈；初始工具在身边，农场还有它们能清的一处枝石。眼下先做什么？",
+          "scene": "Olive Hall 公告板上的几种材料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_TOWN",
+            "OT9I_TOWN_GUIDE",
+            "OT9I_DLC",
+            "OT9I_CRAFT",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用现有工具清一处能处理的枝石，直接试当前动作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "为自己此前已经见过的镇民和逛过的地方补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "核对鸡舍当前显示的修复材料要求，先看看已有条件",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "D",
+              "label": "和这位当前可交谈的镇民实际说一次话，亲手试这次互动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "不同已给材料路线是普通目标选择，不是发明i；NPC镇务不q/o，准备项确在出门前。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I07.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已修好蜂箱，当前可投入手里一朵适配鲜花；蜂蜜加工器也已能处理现有蜂巢，手里还有当季可播花种与可留给后续种植的资金。田里能接着种花，这轮先做什么？",
+          "scene": "蜂箱和蜂蜜加工器都已在场",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_ED_MUSHBEE",
+            "OT9I_MINE",
+            "OT9I_CROP"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把种花备花、蜂巢采收、蜂蜜加工与售出回款连续照看几轮，按实际存量再调下一轮供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有鲜花、蜂巢与蜂蜜加工器的现状，再作决定",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "比较当前蜂箱可用鲜花和现有蜂巢加工条件，再决定这轮先投入哪批",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "把一朵当前可用的已有鲜花投入蜂箱，亲手试一次操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "花→蜂巢→蜂蜜的必需关系不单凭此b；y要几轮种植输入、加工、资金回补和库存反馈，机器后台等待不算f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I07.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "Navi已经能带你去精灵村，你此前实际分派并领取过至少一轮领头精灵物资；现在仍有能分派的追随小精灵、可领取的物资和一些已有精灵币，Boss商店也开放。更愿意先做什么？",
+          "scene": "小精灵村的分派与领取",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_SPRITE",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为此前实际分派追随者、次日领取领头精灵物资的供给过程补记记录",
+              "signal": "simulation_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "实际通过Manager把现有追随者分给当前可选的领头精灵，亲手试这一轮分派",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先比较目前不同领头精灵可提供的供给与Boss的可选交换，再决定安排",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "先查看Boss当前一项交换显示的精灵币要求和物品，核对已有币再决定",
+              "signal": "objective_requirement_review"
+            }
+          ],
+          "design_purpose": "各项是实际NPC管理/供给行为0，不硬b/q/o；不把等次日礼品当h。派出者已有，不默认无限Follower。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I08.DEFAULT.V1"
+        },
+        {
+          "text": "还没开放精灵村时，你在早期农场已清到一些材料，手边有基础工具与当前能做的配方。这轮先做什么？",
+          "scene": "小精灵村的分派与领取的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_SPRITE",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从工具袋取出这轮所需工具，收回不用的工具，实际调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "直接用现有工具处理一处可做杂物，亲手试当前动作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "比较已经开放且手头材料够的制作配方，再选这轮做哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "核对已有原木、石料、草和可处理地面状态，再安排",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "各项是实际NPC管理/供给行为0，不硬b/q/o；不把等次日礼品当h。派出者已有，不默认无限Follower。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I08.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已修好一根菌木，它当前还可放菌种；手里有两种当前界面接受的已有蘑菇菌种（spores），自己的箱子也可用。这轮先做什么？",
+          "scene": "已经修好的菌木",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OT9I_ED_MUSHBEE",
+            "OT9I_ED_SPORES",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己已经取得的菌种和已到过的菌木位置补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "把一份当前符合条件的已有蘑菇菌种放上菌木，亲手试这次栽培操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两种当前可用菌种的栽培条件，再决定这一轮先放哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有菌种和这根菌木当前的栽培状态，再决定怎样安排",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "菌木要先修好，放种后不用浇水；普通栽培设置和已有信息补记0，不把等成熟硬计角色成长或本人手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I08.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回顾自己已经用过加工器、修过设施或开过农场的一段，哪种真实投入更有分量？",
+          "scene": "实际跑过的加工与建设",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_CRAFT",
+            "OT9I_TOWN_GUIDE",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把采料、不同加工器、建设留料与出货所得接着运行过几轮，并按缺料和积压改过安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我按当时已显示的修桥或旧设施目标实际交过材料，重点是推进那项目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "我为当时已经实际修好的桥、搭好的设施补记过自己的建设过程",
+              "signal": "construction_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我核对过当时已有原料、加工批次与产物状态，再作安排",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "y为几轮真实反馈；建设记录必须已经搭修过，不是未来计划，普通投料不b/f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I09.DEFAULT.V1"
+        },
+        {
+          "text": "还没用过加工器或修设施时，回想初期清地与基础农务的一段，哪件真实做过的事更有分量？",
+          "scene": "实际跑过的加工与建设的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_CRAFT",
+            "OT9I_TOWN_GUIDE",
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时手边工具排过砍树、敲石、割草与收整的先后，并亲手尝试过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "B",
+              "label": "我直接用过基础工具处理一处可做杂物，试过当时那次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "我核对过当时已有材料和地面状态，再决定如何处理",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "我主动重复练过工具对准与切换，当时重点是练熟输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "y为几轮真实反馈；建设记录必须已经搭修过，不是未来计划，普通投料不b/f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I09.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你在合法空地亲手种过果树、安排过树苗的一段，哪件实际投入更有分量？不要求树已挂果。",
+          "scene": "真正栽过的果树",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_CROP"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我比较过当时已有树苗与合法地块的种植条件，再决定那轮用哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "我实际把一株当时已有树苗种在合法位置，亲手试过那次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的林间果园主题，实际选合法位置栽过树苗，改出个人想表达的轮廓",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我核对过当时已有树苗、地块与现成产物状态，再作安排",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "全部真过去，不要求最终产果或最优间距；不把果树无须每日浇水的被动生长当玩家持续g。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I09.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想同一存档里你已经积累过技能或探索矿山的一段，哪件真实投入更有分量？不要求当轮升级或找到稀有物。",
+          "scene": "同一农夫已有的技能",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_TOOLS",
+            "OT9I_MINE",
+            "OT9I_WATER"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我去过当时已可达却自己没看过的一段矿层，想发现那一层",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我花当时已有材料和钱购入过一项已经开放的工具升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "我为当时已经取得的矿石、鉴定物或到过的地点补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "我沿同一角色已投入的伐木、排水或农务方向继续活动，愿意把保留的技能与后续制作进展继续培养",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "技能是同一人物活动经验，不是矿石镇单件工具EXP；一笔工具升级0，未伪造只用工具达到门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I10.DEFAULT.V1"
+        },
+        {
+          "text": "还没形成持续技能投入或下矿时，回顾最初几天的清地与镇路，哪件真实做过的事更有分量？",
+          "scene": "同一农夫已有的技能的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_TOOLS",
+            "OT9I_MINE",
+            "OT9I_WATER"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我直接处理过一处当时工具能清的杂物，亲手试过那次动作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "我走过当时可达却没看过的镇路，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我从工具袋收取过已有工具，实际调整过携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "我主动重复练过斧、锤或镰刀的对准输入，当时重点是练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "技能是同一人物活动经验，不是矿石镇单件工具EXP；一笔工具升级0，未伪造只用工具达到门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I10.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你为当时一轮制作准备材料，农场物品栏吃紧、实际用过工具袋调整携带的一段，哪件真实做过的事更有分量？",
+          "scene": "工具袋腾出空间以后",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_TOOLS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我核对过当时已有原木、石料与现成制作材料的数量，再决定处理哪批",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我按当时手边工具排过收回不用农具、取出当轮工具、处理可做枝石与收整的动作先后，并亲手尝试过",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "我为自己已经取得的材料和已逛农场位置补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "我把不用的已有工具收回工具袋、取出本轮要用的工具，实际调过物品栏",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "真过去具体携带与动作顺序，不把木石存进只能放工具的工具袋，不把个人整理步骤套成多系统经营y。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I10.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想已经拍过照片、见过人物事件或布置过农场的一段，哪件真实做过的事更有分量？",
+          "scene": "照片和镇民已经发生的经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_MUSEUM",
+            "OT9I_CAMERA",
+            "OT9I_TOWN",
+            "OT9I_TOWN_GUIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我接着读过当时已触发的人物故事，想把这一段接到此前的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我为当时已经取得的照片所记物种、鉴定物或逛过的地点补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "我为自己真正未取得过的物种照片，去过符合当时条件的地方并实际寻找拍摄",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的林间观察或农庄主题，实际选角度缩放拍过构图，或改过已有路面装饰布局",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "过去真实行动且可未找到；a需实际拍/改，不只是欣赏；NPC故事不解释为真人社交，照片不要求PC联网上传。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I11.DEFAULT.V1"
+        },
+        {
+          "text": "只有初期营地和镇民介绍经历时，回想实际发生过的一段，哪件更有分量？",
+          "scene": "照片和镇民已经发生的经历的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_MUSEUM",
+            "OT9I_CAMERA",
+            "OT9I_TOWN",
+            "OT9I_TOWN_GUIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为当时已经见过的人、得到的材料或走过的镇路补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我实际取放过已有工具或材料，调整过自己的携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "我和当时可交谈的镇民实际说过话，亲手试过那次互动",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的初居林地主题实际移动角色选画面时机，用普通PC截图取景",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "过去真实行动且可未找到；a需实际拍/改，不只是欣赏；NPC故事不解释为真人社交，照片不要求PC联网上传。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I11.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你已升级小屋、养过宠物并使用过牵绳的一段，哪件实际投入更有分量？",
+          "scene": "自己的宠物与牵绳经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_ANIMAL",
+            "OT9I_TOOLS",
+            "OT9I_ED_HOME"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我带它去过当时允许到达但自己没看过的田边路，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我为自己已经认识的宠物和已经去过的散步地点补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "我继续照料过同一只此前已经投入、友好仍有空间的宠物，跨日抚摸或给已有零食，愿意保留这份后续成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我实际换用过已有牵绳，带当时允许散步的宠物走过一段，亲手试过这种手段",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "不要求好感升满或宠物学会新动作；g是同只先前投入后的持续照料，牵绳走路本身0，动物不是现实社交。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I11.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "OT09I12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你本人有精力、角色体力够，且没有紧迫交期，还有未开拓目标或新地点可做的一段，哪种真实选择更有分量？",
+          "scene": "不赶新开拓时的熟悉农场",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_OFFICIAL",
+            "OT9I_TOOLS",
+            "OT9I_CROP",
+            "OT9I_ANIMAL",
+            "OT9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我去过当时可达而自己没看过的一段林地或矿层，想先发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我主动重复熟悉的浇地、照料或去老水岸钓几轮，喜欢不赶进度的日常而暂缓新目标",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我让种收、饲料产物、不同加工器与建设留料接着跑过几轮，随实际库存反馈改安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我沿同一角色已经投入的技能方向继续活动，愿意把这份已保留成长接着养下去",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "h来自有余力仍主动喜欢熟悉过程，不是角色缺体力、本人疲劳或必须等机器；y/g各有实际持续对象。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I12.DEFAULT.V1"
+        },
+        {
+          "text": "回想初期清地浇种已熟悉、你有精力且角色状态够，还能逛新路或做新内容的一段，哪种真实选择更有分量？",
+          "scene": "不赶新开拓时的熟悉农场的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_OFFICIAL",
+            "OT9I_TOOLS",
+            "OT9I_CROP",
+            "OT9I_ANIMAL",
+            "OT9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为自己的初居林地主题实际选角色站位与时机，用普通PC截图取景",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我主动回熟悉地块慢慢浇种整理，喜欢从容重复而暂缓新内容",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我先走过当时能到却自己没逛过的镇路，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我主动重复练过基础工具对准与切换，重点是练熟输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "h来自有余力仍主动喜欢熟悉过程，不是角色缺体力、本人疲劳或必须等机器；y/g各有实际持续对象。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I12.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你已有带浴室的小木屋和能放在合法桌面的现成摆设，本人有精力、角色体力够，仍有新开拓或镇务可做的一段，哪种真实选择更有分量？",
+          "scene": "有余力时回熟悉小木屋",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OT9I_ED_HOME",
+            "OT9I_OFFICIAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我直接用过当时已有且可用的浴室，亲手试过那次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "我主动回熟悉小屋泡澡、慢慢待一会，喜欢这段从容日常，所以暂缓新目标，而非为了补不足的体力",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的林间小居主题实际选择已有桌面摆设的合法位置，留下过想表达的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我为自己已经得到的家中物件或已认识宠物信息补记过记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "h有真实余力和进度可做，不是迫于恢复、等机器或无内容；浴室需要已升级小屋，摆设只用指定合法点，不虚构自由编辑房间尺寸。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "OT09I12.DEFAULT.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+fce4d7336718"
+}

@@ -1,0 +1,1466 @@
+{
+  "id": "ci09i",
+  "title": "珊瑚岛",
+  "game_ids": [
+    "steam-1158160"
+  ],
+  "scope": "PC 正式1.3本体；单人与合作皆可本人完成的种植、潜水、收集与人物内容",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "1.3已发布鱼缸、昆虫展箱和撕页日志可问；未来1.4儿童学校、青少年、浮标和新触觉不提前算现有。",
+    "本题包中的岛民人物均指NPC，不解释为真人社交；不要求联机专属同步或单人专属手动保存。",
+    "海底太阳球已有规则不伪装未知解谜；每槽较早替代可用基础农场或近处镇路，未体验可换。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本人已经开放的农场与海岛生活",
+      "initial_variants": {
+        "CI09I01": "CI09I01.DEFAULT.V1",
+        "CI09I02": "CI09I02.DEFAULT.V1",
+        "CI09I03": "CI09I03.DEFAULT.V1",
+        "CI09I04": "CI09I04.DEFAULT.V1",
+        "CI09I05": "CI09I05.DEFAULT.V1",
+        "CI09I06": "CI09I06.DEFAULT.V1",
+        "CI09I07": "CI09I07.DEFAULT.V1",
+        "CI09I08": "CI09I08.DEFAULT.V1",
+        "CI09I09": "CI09I09.DEFAULT.V1",
+        "CI09I10": "CI09I10.DEFAULT.V1",
+        "CI09I11": "CI09I11.DEFAULT.V1",
+        "CI09I12": "CI09I12.DEFAULT.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "CI09I01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你已有能工作的罐装机等农产品加工器，一些作物成熟、另一些还在长；仓里有原料和当前可播的当季种子，之后还要留种植开支，另有能移动的田边路面和已有装饰。眼下没有紧急交期，这轮先做什么？",
+          "scene": "田里收成接上已有加工",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_STORE",
+            "CI9I_PROCESS",
+            "CI9I_CURRENT",
+            "CI9I_ARTISAN",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续把种收、留作加工的原料、机器周转与售出所得连着跑几轮，再按库存积压和下批需求调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前能种的作物与现有加工器能收的原料，再选本轮种做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "核对成熟地块、仓里原料和各台机器现有产出，再作安排",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "按自己想表达的岛屿菜园主题，实际重排可动的田边路面和已有装饰",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "y须多轮种收加工资金反馈；只看配方/状态0。a要求实际主题编辑，不把生长动画算f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I01.DEFAULT.V1"
+        },
+        {
+          "text": "还没有加工器时，你带着初始工具、不止一种当季已有种子和水壶站在自家可种的空地，旁边有取水处。这轮先做什么？",
+          "scene": "田里收成接上已有加工的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_STORE",
+            "CI9I_PROCESS",
+            "CI9I_CURRENT",
+            "CI9I_ARTISAN",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对眼前空地和已有种子的种类数量，再决定这一轮处理哪里",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "B",
+              "label": "排好去水边装水、回田锄地播种、耗水浇新地块及再补水的路线，然后照着做",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "直接在一格可用地上锄地、播一颗已有种子，亲手试当前操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "比较现有且当季能种的种子，再决定这一轮用哪种",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "y须多轮种收加工资金反馈；只看配方/状态0。a要求实际主题编辑，不把生长动画算f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I01.DEFAULT.ALT1"
+        },
+        {
+          "text": "你背包有一件铁匠当前能处理的未开晶球或宝箱，Sanchez兄弟店现在营业，费用也付得起；自己的储物箱能回去存物。你还没决定这次开不开，先做什么？",
+          "scene": "已在手的晶球或宝箱",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_ED_SMITH",
+            "CI9I_MUSEUM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这件已有物交给当前铁匠处理一次，亲手试这次已满足条件的服务，不要求开出新物",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前服务显示的费用和可处理对象，再决定本轮开不开",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "把暂不打开的已有晶球或宝箱存回自己的箱子，实际调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "为自己已经拿到的晶球、宝箱外观说明和去过的店铺补记信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "未知内容不保证新藏品，不把已有未开壳本身当缺项；NPC打开动作不当本人操作反馈f，服务费用按当前界面。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I01.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "潜水已经开放，你在当前可达的海底清出了太阳球，知道怎样激活，修复线附近仍有垃圾，修复任务也仍有可做部分；你带着恢复食物，旁边另有已通但未细看的岔路。这轮更想做什么？",
+          "scene": "海底已经找到的太阳球",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_DIVE",
+            "CI9I_STORE",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "转进那条当前已通的陌生岔路，想先发现那边有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先排清沿垃圾带挥镰、消耗体力、用随身食物恢复和回锚点的先后，再照着行动",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "选几堆当前能清的垃圾，主动重复对准和挥镰输入，重点练熟这套操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "激活球并沿修复线清掉当前可处理的阻塞，把已经列出的海底修复目标往前推",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "激活/清阻塞是已知规则不计p；w是真可达陌生处。练习不要求已变熟练，也不规定当轮能完成修复。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I02.DEFAULT.V1"
+        },
+        {
+          "text": "还没下过海时，你在早期农场有镰刀和能清的小片草、垃圾，工具和体力够用，镇上也有当前能去却没看过的小路。这轮先做什么？",
+          "scene": "海底已经找到的太阳球的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_DIVE",
+            "CI9I_STORE",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接挥镰处理一处现成可清杂物，亲手试这次动作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "挑一小片草主动反复对准与挥镰，重点是练熟输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先按手边工具排好清杂物、拾取和收回工具的动作先后，再照着尝试",
+              "signal": "physical_tool_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先去那条已可达而未走过的镇路，想发现那一边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "激活/清阻塞是已知规则不计p；w是真可达陌生处。练习不要求已变熟练，也不规定当轮能完成修复。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I02.DEFAULT.ALT1"
+        },
+        {
+          "text": "还没潜水时，你带着基础锄头经过岛上陆地，眼前有几处当前可挖四叶草点；角色体力够、身上有恢复食物，旁边另有没逛过的可达小路。先做什么？",
+          "scene": "陆地上当前可挖的四叶草点",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_ED_TOOL",
+            "CI9I_PAGES"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在仍有目标时主动重复练对准四叶草点与下锄的时机，重点熟悉输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "排清沿路下锄消耗体力、用现有食物恢复与回农场的路线，再照着做",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先走那段自己没逛过的可达路，发现那边，不为挖掘奖励作保证",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "亲手在眼前一处可挖四叶草点用锄头，先试这次操作，不要求挖出稀有物",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "四叶草陆地锄挖不同于海底挥镰；已知随机出物不伪装p，练习和发现不要求稀有掉落。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I02.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你已用过虫网，也看过自己的捐赠记录：有一种当前条件能出现、自己却从未抓到的虫或海底生物。已有工具够用，附近也有可尝试的普通虫或海底生物，但缺项可能仍找不到；今天更想把时间放在哪里？",
+          "scene": "馆藏里真正未取得的一项",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_MUSEUM",
+            "CI9I_DIVE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留在已有目标出现的近处，主动重复练靠近与下网时机，重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "为自己已经捕到并了解的物种和去过的地点补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "去它当前可出现且自己能到的区域实际寻找并下网，想补自己真正未得的那一项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "去一段当前开放却没细看过的林地或海底，只想先发现那边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "c为从未得且实际追求，不要求抓到；已有未捐不是c。海底生物按当前季节时段地区核，不套陆地天气。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I03.DEFAULT.V1"
+        },
+        {
+          "text": "刚拿到基础虫网、尚未看过馆藏时，近处有几只当前能尝试捕捉的普通虫，另有没逛过的可达镇路。这轮更想做什么？",
+          "scene": "馆藏里真正未取得的一项的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_MUSEUM",
+            "CI9I_DIVE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走那段自己没逛过的镇路，看看那里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为自己已经捕到过的虫或已去过的地方补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "先亲手靠近并下网试一次当前捕虫操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "在还有可试目标时重复练靠近与挥网，重点熟悉手势和时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "c为从未得且实际追求，不要求抓到；已有未捐不是c。海底生物按当前季节时段地区核，不套陆地天气。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I03.DEFAULT.ALT1"
+        },
+        {
+          "text": "铁匠当前营业，你的一把现有锄头符合已开放改造条件，钱和材料够；交付后会暂时拿不回它。眼下农场没有必须马上锄的地，这轮先做什么？",
+          "scene": "交走农具以前的改造决定",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_ED_SMITH",
+            "CI9I_ED_TOOL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对铁匠当前服务显示的材料、费用和之后领取条件，再决定交不交",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "先核对为本轮改造准备的已有矿物、木料与金属锭数量，再作安排",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "花已有资源把这把锄头交去做当前可付改造，完成这次购买",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "D",
+              "label": "先比较这次可付的锄头改造与自己现有锄头条件，再决定这轮是否交去处理",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "暂交工具是真时间取舍，一次购买0不g；不假定虫网/钓竿也在同一铁匠办理，材料以当前界面为准。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I03.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已查看一份当前开放的农作物或加工品供品，现在农场准备去湖庙；背包已有部分合格材料，剩余也有当前能种或能做的来源。没有紧迫事，先做什么？",
+          "scene": "湖庙已开的一份供品",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_TEMPLE",
+            "CI9I_START",
+            "CI9I_ARTISAN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前能制作或种出的剩余材料选项，再决定采用哪条准备方式",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前面板显示的材料、品质和奖励，再决定这轮交哪些",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "把已有且符合条件的材料实际交上去，推进这份已经列出的供品目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "出发前排好在农场取已有合格材料、去湖庙交已有部分、再回农场处理现成农务的先后，然后照着做",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "四项都是当前已开目标中的真实行为，不硬凑收藏、发明或真人共同目标。已有材料供奉不计c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I04.DEFAULT.V1"
+        },
+        {
+          "text": "尚未开放供奉时，你已接到早期种植任务，手头有当前要求的种子和可用地，准备在农场动手。这轮先做什么？",
+          "scene": "湖庙已开的一份供品的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_TEMPLE",
+            "CI9I_START",
+            "CI9I_ARTISAN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较现有能种的种子与当前材料条件，再决定本轮安排",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "先读任务已经显示的种植或交付条件，核对已有材料再决定",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "实际种下符合要求的已有种子，把推进这个目标作为当前重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先核对可用地和已有任务种子的现状，再决定怎样处理",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "四项都是当前已开目标中的真实行为，不硬凑收藏、发明或真人共同目标。已有材料供奉不计c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I04.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已放好熔炉，手里矿石和煤足够当前一批可做金属锭；已有箱子能存料，另有两种当前已开放且材料够的基础制作配方。先怎样用这一轮？",
+          "scene": "现有熔炉与一批矿物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_ED_EQUIP",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这轮要留给之后制作的现有矿料存入自己的箱子，调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "直接把当前适配矿石与煤投进已有熔炉，亲手试这次投料",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "比较当前能做的基础配方与手头矿料条件，再决定这批先用在哪项",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有矿石、煤和已经产出的金属锭数量，再决定安排",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "是已放熔炉的普通单批操作，后台出锭不计f，一次矿石煤投入不凑b/y。无需下过海或买过实验室升级。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I04.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已开放提取器和实验室的作物品质升级，手里资源足够购入当前一项升级；窑炉、回收与提取器也都有原料能继续处理。这轮先做什么？",
+          "scene": "海藻精华与一笔实验室升级",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_PROCESS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "购入这一项已开放且付得起的品质升级，亲手完成当前购买",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "继续安排木料或石料进窑、垃圾回收、玻璃与海藻进提取器，并随几轮库存和用量调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前机器能处理的原料与现有精华需求，再决定本轮做哪批",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "核对现有木石、垃圾、玻璃、海藻和机器产出状态，再作决定",
+              "signal": "production_state_review"
+            }
+          ],
+          "design_purpose": "买一次是0不g；多轮多源供料与反馈才y，不把窑炉加提取器必需原料关系硬b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I05.DEFAULT.V1"
+        },
+        {
+          "text": "还没有提取器或实验室升级时，你已放好第一台能接当前垃圾的回收机，手里有垃圾和基础材料，旁边有可用储物箱。这轮先做什么？",
+          "scene": "海藻精华与一笔实验室升级的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_PROCESS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有材料实际存进箱里或取出这轮要用的东西，调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "B",
+              "label": "核对手头垃圾、基础材料和回收机当前队列产出，再安排",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "比较当前已开放且材料够的基础制作配方，再选这次做什么",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "D",
+              "label": "把手头一批当前适配的垃圾投进已有回收机，亲手试这次操作",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "买一次是0不g；多轮多源供料与反馈才y，不把窑炉加提取器必需原料关系硬b。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I05.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已有一头照料过的成年牛，友好度仍有空间，今天尚可抚摸且当前有奶能收；挤奶桶已在手，自己的箱子还有已有饲料可取。这轮先做什么？",
+          "scene": "亲手用现有挤奶桶",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_ED_RANCH",
+            "CI9I_ED_TOOL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用现有挤奶桶实际收这份当前可收的牛奶，亲手试一次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对这头牛当前显示的状态、饲料和现有奶产物，再决定处理顺序",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "继续给这头已有积累的牛做今天尚可做的照料，并愿意跨日接着投入，关注同个体友好度",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "从已有箱子取出本轮饲料、存回不用的物资，实际调整携带",
+              "signal": "item_handling_action"
+            }
+          ],
+          "design_purpose": "本作奶需要挤奶桶，不套橄榄镇免工具；g仅同头已照看且未满友好，普通收奶/取物0，不用产量成功作条件。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I05.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已有能用的钓竿，站在当前可钓的水边，知道收线时要兼顾张力；体力与时间够，随身有恢复食物，附近另有自己没去过的可达水岸。这轮更愿意怎样投入？",
+          "scene": "水面上的收线与放松",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_FISH",
+            "CI9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "再钓几轮，主要想反复体验亲手按住、松开与鱼线即时回应的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "换去那段已可达但自己没到过的水岸，先发现那里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "排好本轮走哪些水岸、何时耗体力下竿和用现有食物恢复，再照着行动",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "D",
+              "label": "留在这里主动多次抛竿，练习鱼挣扎时收放的输入时机，练习可以断线",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "t目标是练熟，f是本人收放即时手感，不要求钓获或后来进步；不写未来1.4新浮标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I06.DEFAULT.V1"
+        },
+        {
+          "text": "刚拿到基础钓竿时，你站在能用竿的近处水面，有当前体力和随身恢复食物；旁边另有自己没逛过的可达水岸。这轮更愿意先做哪件？",
+          "scene": "水面上的收线与放松的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_FISH",
+            "CI9I_CURRENT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留在这处主动重复抛竿和收放，重点练熟输入",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "去旁边自己没逛过的可达水岸，先看看那里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先排好走到水岸、下竿耗体力、用随身食物恢复及回程，再照着做",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "D",
+              "label": "直接抛竿试一次当前钓鱼操作，不预设必须钓到",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "t目标是练熟，f是本人收放即时手感，不要求钓获或后来进步；不写未来1.4新浮标。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I06.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已放好一只当前可用堆肥箱，手中有适配垃圾与一些已做好的堆肥；基础肥料和另一种配方现都已开放、材料够，自己的储物箱可用。眼下先做什么？",
+          "scene": "先用垃圾做堆肥",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_ED_EQUIP",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较当前基础肥料与另一种可做配方的材料占用，再决定这轮做哪种",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "把这轮想留用的已有堆肥实际存回箱子，取出要带的材料",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有垃圾与堆肥的数量，再决定这批怎样用",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "D",
+              "label": "把一批当前适配垃圾投入已有堆肥箱，亲手试这次处理",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "堆肥箱与垃圾回收成废料不是同一产物，不虚构精确工时；一批处理/材料比较均0，后台等待不计手感。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I06.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你拾到一张尚未读、记着瓦伦蒂娜家人日常的撕页，知道阅读会消耗它并把内容加入日志；同时有已经触发、当前能继续的岛民任务对话，也有一段可达而未逛的镇街。眼下最想做什么？",
+          "scene": "撕页还在手里",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_13",
+            "CI9I_STORE",
+            "CI9I_PAGES",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走那段自己尚未逛过的镇街，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "为自己此前已经读过的日志、见过的人物信息补上记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "实际读掉这张撕页，接着读日志中她观察妈妈与姨妈的记事，想理解这些家人日常",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "继续当前已经触发的人物任务对话，想把这一段经历接到之前读过的故事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "1.3撕页是库存消耗后入日志，不捏自动读完；两条叙事投入路径真实可做，NPC不计o/q。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I07.DEFAULT.V1"
+        },
+        {
+          "text": "还没拾到撕页时，你尚未开始这次可发生的岛民介绍交谈，初期Starting out种植任务仍有可做部分，另有可达但未逛的街路。这轮先做什么？",
+          "scene": "撕页还在手里的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_13",
+            "CI9I_STORE",
+            "CI9I_PAGES",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为已经见过的人与去过的地点补记信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有Starting out种植任务的要求与奖励，再决定这次是否推进",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "实际和这位岛民进行一次当前可发生的介绍交谈，亲手试这次互动",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先走那条未逛过的街路，发现那一边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "1.3撕页是库存消耗后入日志，不捏自动读完；两条叙事投入路径真实可做，NPC不计o/q。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I07.DEFAULT.ALT1"
+        },
+        {
+          "text": "Giants Village与工具附魔任务都已开放，祭坛当前允许处理你已有的锄头或镐；手头可投入宝石等物品的点数足够一次，现有工具属性与成本能查看。先做什么？",
+          "scene": "已开放祭坛的一次附魔",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_ED_ENCHANT",
+            "CI9I_ED_TOOL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对祭坛当前这项处理显示的材料点数条件，再决定是否投入",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "B",
+              "label": "为自己已经获得的宝石、化石或古物说明补记信息，暂缓这次消耗",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "先比较这两件已有工具的现有属性和当前允许的处理条件，再决定这次选哪件",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "选定一件当前确可处理的工具，实际做一次已满足条件的附魔，不要求得到特定新属性",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "普通附魔不硬b/g/p；随机新增属性不写成可任意点选，既有目标与成本可看。只用当前可处理锄/镐，不把虫网鱼竿装入不存在的槽。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I07.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已在家具店买到可用鱼缸或昆虫展箱，手中有能放进去的既有鱼虫，屋里也有能移动的已有家具。这里不要求捕新物种，这轮先做什么？",
+          "scene": "已有鱼虫的室内展示",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_13",
+            "CI9I_STORE",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好先挪现有家具、留观察空间再安放容器的编辑步骤，并照着改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "按自己想表达的海岸或林地主题挑已有鱼虫入箱，并实际调整展示和家具构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "直接把一只当前符合条件的已有鱼虫放进容器，亲手试这次展示操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "先看手头已有容器与家具的外观选择，再决定本轮用哪种",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "展示物都已得，不计c/g；a必须实际个人主题与构图，不只是看鱼游动。新容器是本体1.3已发布。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I08.DEFAULT.V1"
+        },
+        {
+          "text": "还没买展示容器时，你的小屋已有能移动的基础家具，田边也有手头已有的可放装饰。眼下想先做什么？",
+          "scene": "已有鱼虫的室内展示的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_13",
+            "CI9I_STORE",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排好挪现有家具、留过道和摆回装饰的编辑顺序，再动手改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "按自己的岛屿小居主题，实际安排已有家具或田边装饰的构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "直接移动一件当前可动的已有家具，亲手看这次编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先查看手头已有家具与装饰外观，再决定用哪样",
+              "signal": "creative_option_review"
+            }
+          ],
+          "design_purpose": "展示物都已得，不计c/g；a必须实际个人主题与构图，不只是看鱼游动。新容器是本体1.3已发布。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I08.DEFAULT.ALT1"
+        },
+        {
+          "text": "你已做出一块当前可放的太阳能板，知道它要在室外才产电池；农场有合法室外空地、已有可摆路面和一件已放好且当前可挪的装饰，储物箱可用。没有急交期，这轮先做什么？",
+          "scene": "已做出的太阳能板放哪里",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CI9I_ED_EQUIP",
+            "CI9I_STORE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清这一轮先挪已有装饰、留出合法落点再放板的编辑步骤，并照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "直接把现有太阳能板放到一处合法室外位置，亲手试这次放置",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "C",
+              "label": "把暂不放的现有太阳能板实际存回箱子，先调整携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "按自己的日照工坊角落主题，实际安排这块板和已有路面装饰的构图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "题干已讲室外规则，不拿复述计p；放置或主题编辑是真动作，等电池产出不是f/g。无固定日照工时或收益计算题。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I08.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你已经下海清过垃圾、处理过太阳球的一段，哪件真实做过的事更有分量？尝试不必完成整片修复。",
+          "scene": "已经清过的海底",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_DIVE",
+            "CI9I_STORE",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我沿已激活球的修复线实际清过阻塞，把推进当时列出的海底目标作为重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我去过一段当时已开放但自己没细看过的海底，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我在有目标可清时主动重复练过镰刀对准与挥动，重点练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我为当时已取得的海藻、海底生物或已去过的海域补记过信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "真实过去行动，不把修复结果作为选择门槛；已得信息补记0，清理不自动是y/f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I09.DEFAULT.V1"
+        },
+        {
+          "text": "尚未下海时，回顾早期清农场或逛镇路的经历，哪件确实做过的事更有分量？",
+          "scene": "已经清过的海底的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_DIVE",
+            "CI9I_STORE",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我用当时的工具实际清过当时能处理的一处杂物，亲手试过那次动作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "我主动重复练过锄地或挥镰的对准输入，重点是练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我去过一段当时可达而自己没逛过的镇路，想发现那里",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我为已经取得的材料或去过的镇路补记过信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "真实过去行动，不把修复结果作为选择门槛；已得信息补记0，清理不自动是y/f。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I09.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你捡到晶球或宝箱、去铁匠处理或暂存过的一段，哪件实际做过的事更有分量？可以没有开出新藏品。",
+          "scene": "已经送去开过的已有物",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_ED_SMITH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把当时已有且可处理的一件晶球或宝箱交去开过，亲手试过那次服务",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "我核对过当时服务显示的费用和处理对象，再决定那次开不开",
+              "signal": "objective_requirement_review"
+            },
+            {
+              "id": "C",
+              "label": "我实际存取过自己已有的晶球或宝箱，调整过携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "我为自己已经拿到的外壳物件或已逛店铺补记过信息",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "全部真过去；随机内容是否新物不作门槛，不把NPC服务动画当本人爽感，也不把已有未开包硬算缺失收藏。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I09.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回顾同一角色已经积累过精通经验或寻找馆藏的一段，哪种真实投入更有分量？不要求后来升级或抓到目标。",
+          "scene": "同一农夫保留下来的精通",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_MASTERY",
+            "CI9I_MUSEUM",
+            "CI9I_PROCESS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为自己当时确实没获得的鱼虫或矿物，去过符合当时条件的地点并实际寻找",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "我花当时已有资源购入过一项已开放且付得起的工具或品质升级",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "C",
+              "label": "我为当时已经取得的鱼虫、矿物或去过的地点补记过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "我沿这个角色已经投入的农务、潜水或捕捉方向继续活动，也投入后来可用的技能点，想留住后续成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "g为同角色已投入后继续，不把买升级或菜单查看当成长；c不包含已得未捐。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I10.DEFAULT.V1"
+        },
+        {
+          "text": "还没形成长期精通投入时，回想初始种植与拿到虫网的一段，哪件真实做过的事更有分量？",
+          "scene": "同一农夫保留下来的精通的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_MASTERY",
+            "CI9I_MUSEUM",
+            "CI9I_PROCESS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我直接试过一次当时可做的播种或挥网，亲手体验那次操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "我核对过当时的种子、地块或已有材料，再决定怎么处理",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我为当时已经得到的物品或去过的镇路补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "我主动重复练过水壶对地或虫网挥动的输入，当时重点是练熟",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "g为同角色已投入后继续，不把买升级或菜单查看当成长；c不包含已得未捐。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I10.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你有过畜舍和挤奶桶、亲自照料过牛的一段，哪种真实投入更有分量？不要求产量或品质达到标准。",
+          "scene": "同一头牛与现成产物",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_ED_RANCH",
+            "CI9I_ED_TOOL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我用当时已有挤奶桶收过当时可收的一份牛奶，亲手试过那个操作",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "我核对过当时动物状态、已有饲料与奶产物，再决定怎样处理",
+              "signal": "production_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我从已有箱子实际取放过饲料与现有产物，调整过携带",
+              "signal": "item_handling_action"
+            },
+            {
+              "id": "D",
+              "label": "我持续照料过同一头此前已有投入且友好仍有空间的牛，关注它保留下来的友好成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "真过去同个体保留投入才g；不要求生出大奶或升级成功，不能由照顾NPC动物推现实照护能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I10.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你已经读过日志、人物故事或安排过展示的一段，哪件实际发生过的事更有分量？",
+          "scene": "已发生的日记与家中展示",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_13",
+            "CI9I_TEMPLE",
+            "CI9I_PAGES",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为当时已经读到的人物信息、得到的展品或去过的地点补记过记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我按当时已列出的湖庙或人物任务条件实际交过材料，把推进它作为那次重点",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "我读过已得撕页里家人的人物记事，或接着看过当时已触发人物故事，想把这些经历串起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我为自己的海岸或林地主题，实际摆过已有展示容器和鱼虫，或改过家中构图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "所有为真实过去；a有实际表达，未将固定NPC经历改为玩家可改结局。已有物交付0不c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I11.DEFAULT.V1"
+        },
+        {
+          "text": "只有早期介绍与基础小屋经历时，回想实际发生过的一段，哪件更有分量？",
+          "scene": "已发生的日记与家中展示的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_13",
+            "CI9I_TEMPLE",
+            "CI9I_PAGES",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为已经见过的人、去过的镇街或取得的物品补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我实际种过或交过当时初期任务所要求的东西，重点是推进目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "我实际和初期岛民进行过当时可发生的介绍交谈，亲手试过那次互动",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的岛屿小居主题，实际安排过已有家具或田边装饰",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "所有为真实过去；a有实际表达，未将固定NPC经历改为玩家可改结局。已有物交付0不c。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I11.DEFAULT.ALT1"
+        },
+        {
+          "text": "只在陆地活动也能回想：你曾在当时工具够用的四叶草点下过锄，哪件实际投入更有分量？不要求稀有掉落。",
+          "scene": "亲手挖过四叶草的一段",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_ED_TOOL",
+            "CI9I_PAGES"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过沿路挖点耗体力、用手头食物恢复和回农场的路线，并照着做过",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "我为当时已经得到的材料和到过的陆地地点补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "我在当时可挖点直接下过锄，亲手试过那一次挖掘",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "D",
+              "label": "我主动在当时仍有目标时重复练过对准和下锄，重点是练熟输入",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "四项真实过去，不要求潜水、人物剧情或房屋装饰经验；练习可以没变熟练，挖掘不保证出文物。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I11.DEFAULT.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "CI09I12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你本人有精力、角色体力够，且有新矿层、任务或海域能推进、没有紧迫交期的一段，哪种真实选择更有分量？",
+          "scene": "仍能推进时留下的日常",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_STORE",
+            "CI9I_PROCESS",
+            "CI9I_MASTERY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我沿同一已投入角色的精通方向继续活动，想让这份成长留在之后",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我主动回熟悉农场浇水收菜或去熟悉水岸钓几轮，喜欢从容重复这段而暂缓新内容",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我继续经营过种收、加工、留料与卖出所得，随几轮供需反馈调整下一批",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "我去过当时已开放而自己没看过的一段矿层或海域，想发现那边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "h需本人和角色有余力且能继续，不是等机器、恢复疲劳或无事可做。y/g各自需真多轮与已投入持久对象。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I12.DEFAULT.V1"
+        },
+        {
+          "text": "回想初始农场日常已经熟悉、你有精力且角色体力够，还有新任务可做的一段，哪种真实选择更有分量？",
+          "scene": "仍能推进时留下的日常的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_STORE",
+            "CI9I_PROCESS",
+            "CI9I_MASTERY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的小岛菜园主题实际调整过已有田边装饰或小屋家具",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我主动再装水浇地、收拾熟悉田块，喜欢不赶进度的日常而先放下新任务",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我去了当时能到却没逛过的一段镇路，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我按当时已经出现的种植任务实际做过可做部分，把推进目标作为重点",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "h需本人和角色有余力且能继续，不是等机器、恢复疲劳或无事可做。y/g各自需真多轮与已投入持久对象。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I12.DEFAULT.ALT1"
+        },
+        {
+          "text": "回想你本人有精力、角色体力够，还有新任务或可达新地区能推进，且熟悉海岸仍可散步采集的一段，哪种真实投入更有分量？",
+          "scene": "有余力时的熟悉海岸散步",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CI9I_STORE",
+            "CI9I_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为自己已经取得的海岸采集物和到过的位置补记过信息",
+              "signal": "game_recording"
+            },
+            {
+              "id": "B",
+              "label": "我主动再沿熟悉海岸慢慢走、拾当时可取的常见物，喜欢这份从容日常而暂缓新进度",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我转去过当时可达但自己没看过的一段岸路，想发现那边",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的海岸初居主题实际选角色站位和时机，用PC截图留下过个人构图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "h有余力、可继续而正向选择熟悉；普通海岸采集物不冒充馆藏缺项。a是实际取景，不是把看风景就算创作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "CI09I12.DEFAULT.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+f6b140b5c339"
+}

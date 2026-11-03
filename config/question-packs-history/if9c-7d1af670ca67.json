@@ -1,0 +1,958 @@
+{
+  "id": "if9c",
+  "title": "Infinifactory（建造及自动化模拟）",
+  "game_ids": [
+    "steam-300570"
+  ],
+  "scope": "PC正式本体关卡；所有替代限最初输送工具",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "不是自由殖民地，不虚构研究费、持续城镇成长或真人协调。",
+    "未结算不必答已有BEST；替代不要求通过最初关卡，未看Workshop与编辑器也可答。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC正式本体关卡；所有替代限最初输送工具",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "IF9C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "眼前关卡已经给出输入与目标产品，你搭的小线运行时送到输出附近却未被接受；目标形状、物块位置与移动过程都可看，原因未定。先怎么继续？",
+          "scene": "送到输出前的一次错位",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_STORE",
+            "IF9C_MECH",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己提出一处形状或到达姿态的解释，只改对应一处后再跑同一段检查",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先绕着现有产品和输出查看，核对当前真正差在哪些可见位置",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先排这轮移动平台、改带路与重跑的编辑步骤，再照顺序做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "按当前关卡已列产品要求实际继续搭，把这次交付目标往前推",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "p自提且单改，题干不提供原因；查看0、单轮编辑0、交付目标0。ALT只Training Routine1传送带与平台。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C01.V1"
+        },
+        {
+          "text": "只做过第一课也能选：当前输入、固定输出和普通传送带已给，一小段试跑后物块没到指定出口；路线和朝向可查看。先做什么？",
+          "scene": "送到输出前的一次错位的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_STORE",
+            "IF9C_MECH",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看输入到出口这一段实际怎样移动，核对眼前状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "提出一个拐点是否造成偏移的解释，只转这一处传送带再试跑",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先排本轮放平台、转带与接输出的编辑顺序，再亲手改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前传送带移动的已有示范，再继续自己的小线",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "p自提且单改，题干不提供原因；查看0、单轮编辑0、交付目标0。ALT只Training Routine1传送带与平台。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C01.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "当前关卡已经开放焊接，目标要求把两部分接在一起；两股料试跑时没接成所需形状，原因未定，接触位置与到达节奏可调。先给哪件时间？",
+          "scene": "两股料到焊接处",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_EARLY",
+            "IF9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "提出一个它们为何错过接合的解释，只改一条送料的长度或方向，再试同一接合点",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先查看目标相接的面、现有焊接位置和两股料当前到达状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先排这轮改承托、移焊接块与重跑的编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "实际让先到的一股料在承托处停靠，再让另一股从侧面送到焊接位置，试停靠、到达次序和接合怎样配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "b具体到先到一股停靠与另一股侧送、焊接时序的实际联动，非任意三块串接；p只改一条且原因未知。ALT普通落差接料配置0，不要求焊接。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C02.V1"
+        },
+        {
+          "text": "还没用焊接：第一课里现有物块可以靠普通传送带转向并借高低差送到输出，平台和路径都能编辑。先做什么？",
+          "scene": "两股料到焊接处的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_EARLY",
+            "IF9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先提出一处落点会怎样影响去向的解释，只挪一块接料带后试跑",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先查看眼前源口、落点和输出的相对位置",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先核对已有传送带与落料示范，再亲手搭这一小段",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "实际换用当前可搭的落差接料配置，让物块从上层落到下层带，跑一段看看",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "b具体到先到一股停靠与另一股侧送、焊接时序的实际联动，非任意三块串接；p只改一条且原因未知。ALT普通落差接料配置0，不要求焊接。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C02.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "一段结构在编辑状态保持原处，运行后却有物块移动或落下；当前接触关系、各块位置与运行起点都可看，原因还没弄清。先怎么做？",
+          "scene": "跑起来才落下的东西",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这轮拆移、补平台与重跑的步骤，再照顺序编辑",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对已有平台与运行物理说明，再继续自己的尝试",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "自己提出哪种接触可能决定它是否固定的解释，只增删一处连接再跑检查",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先看编辑状态和运行状态下各块的位置，核对实际发生了什么",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "题干只观察移动，不明说缺支撑答案；p自提单变可失败，不需要高阶移动逻辑。ALT仅第一课平台和传送带。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C03.V1"
+        },
+        {
+          "text": "最早关卡也能答：一段普通带路在编辑时看似连着，运行后物块从侧面掉走；当前方向与落点可看，原因未定。先做什么？",
+          "scene": "跑起来才落下的东西的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_EARLY",
+            "IF9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮平台、带段与出口摆放的编辑次序，再照着改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前关卡提供的基础输送示范，再动手继续",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先看物块实际经过哪块带、从哪里离开，核对现状",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "猜一个带段方向是否相关，只转这一块再试跑",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "题干只观察移动，不明说缺支撑答案；p自提单变可失败，不需要高阶移动逻辑。ALT仅第一课平台和传送带。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C03.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前小线会把一些产品送到输出，入口一段偶有积料，原因未定；输入速率能调，也能停机编辑再重跑，暂不追求通关或纪录。先投入哪项？",
+          "scene": "可以调整的输入节奏",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给这轮加上不得改变当前可用输入速率的限制，保留这个设置实际改带路来尝试",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先提出输入间隔是否和当前拥堵相关的解释，只调这一项后看同一处接续",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "实际换一个当前可选的输入速率，亲自看这套既有配置怎样运行",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "先查看现有料流到达、等待与输出状态，再决定下一轮怎么改",
+              "signal": "puzzle_state_review"
+            }
+          ],
+          "design_purpose": "普通换速率0；p自提对照；i禁可用调速且路径仍可改，不要求通关、最佳节奏或成功。ALT同样初关可用调速。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C04.V1"
+        },
+        {
+          "text": "第一课短线：输入间隔能调，现有带路可编辑，物块有时在入口附近等着。先做什么？",
+          "scene": "可以调整的输入节奏的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_EARLY",
+            "IF9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮改入口与接料带的编辑步骤，再照着动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先猜输入间隔是否造成当前等待，只调这一项后看同一入口",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前输入、带段方向与入口空位的实际状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先看游戏已有输入速率说明，再实际调一次观察",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "普通换速率0；p自提对照；i禁可用调速且路径仍可改，不要求通关、最佳节奏或成功。ALT同样初关可用调速。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C04.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "当前关卡已开放传感器、连接管线与推杆，试跑有一次没有送到预想侧路，原因未定；检测与动作状态可查，侧送空间够。先花时间在哪？",
+          "scene": "传感器接到推杆以后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把检测位置、连接信号与侧推路径配合，试感知和执行怎样共同送走物块",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己提出一次漏推或早推的解释，只改检测位置再跑同一段",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先查看物块经过、信号出现与推杆动作的当前先后",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有传感器与推杆的说明，再亲手接这条控制线",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实检测/执行互补b，p单变检验；普通看先后不是p。ALT仅最初输送，不虚构早期开传感器。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C05.V1"
+        },
+        {
+          "text": "没见过传感器：当前只有第一课输入、平台、传送带和输出，可在两种普通带路中选择，都有空间可搭。先做什么？",
+          "scene": "传感器接到推杆以后的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_STORE",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮铺平台、放带与接输出的编辑步骤，再照着搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "实际换成当前可搭的另一种普通带路，看看物块怎样走",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "先看目标位置和眼前物块当前走到哪里，再决定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对已有传送带操作示范，再继续这段尝试",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实检测/执行互补b，p单变检验；普通看先后不是p。ALT仅最初输送，不虚构早期开传感器。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C05.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你重开已能用基础传送带和平台处理的Training Routine1；当前更复杂工具也可用，原本的一层高路线放得下，编辑空间足够。现在先做什么？",
+          "scene": "旧关卡的额外一层限制",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_EARLY",
+            "IF9C_MECH",
+            "IF9C_STORE",
+            "IF9C_FLAT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先提出一处转向会怎样改变出口到达的判断，只转一个带段后试跑",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先看眼前输入、输出和已有路线的当前状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "先排这轮拆旧段、重放平台和带路的编辑顺序，再照着改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "给这轮额外定下所有新放部件只能一层高的限制，明明能向上搭，仍实际尝试这条受限路线",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "真实原作一层高挑战关系有游戏成就交叉，不以达成成就为门槛；可用向上搭被禁，不是普通换路装发明。ALT未通关也有真实尝试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C06.V1"
+        },
+        {
+          "text": "还没重返旧关：第一课眼前有直送和借落差接送两种可搭法，只有平台与普通带，不要求已有解。先做什么？",
+          "scene": "旧关卡的额外一层限制的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_EARLY",
+            "IF9C_MECH",
+            "IF9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把一处平台移到新位置，查看新带路的形状",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先排本轮输入接带、转向与出口的编辑次序，再照着搭",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对眼前目标位置与当前物块运行状态，再决定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前平台与传送带已有的用法说明，再决定这一轮怎样摆放",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "真实原作一层高挑战关系有游戏成就交叉，不以达成成就为门槛；可用向上搭被禁，不是普通换路装发明。ALT未通关也有真实尝试。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C06.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "这关你已有一次正式结算留下的BEST，也有可另存构造的解槽；当前工具可继续试，不要求下一版通过。先把这轮时间给什么？",
+          "scene": "已有BEST与另一个解槽",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_SCORE",
+            "IF9C_MECH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮另开解槽、复制并改动构造的编辑次序，再照步骤做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前已显示的目标、解槽和运行状态，再决定这一轮改什么",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "围绕已有Cycles、Footprint或Blocks中的一个个人纪录实际改解，想看看能否超过这条旧记录",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "提出把一段路径移到另一高度是否改变水平扫过范围的预测，只移这一段后运行核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "k仅已有真实正式BEST且实际围绕纪录改，不从练习运行虚造成绩。ALT首次未结算可答。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C07.V1"
+        },
+        {
+          "text": "从未结算也可以：第一关现有输入和输出能看，平台与短带可随时改，眼前构造还在试。先做什么？",
+          "scene": "已有BEST与另一个解槽的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_SCORE",
+            "IF9C_MECH",
+            "IF9C_STORE",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排这一轮放平台、改带路和重跑的编辑顺序，再照着做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "按关卡已经列出的送达目标，实际继续搭眼前这段",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "C",
+              "label": "先查看当前物块怎样走、目标在哪里，核对眼前状态",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "自己提出一处方向或落点的解释，只改那一处再试跑",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "k仅已有真实正式BEST且实际围绕纪录改，不从练习运行虚造成绩。ALT首次未结算可答。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C07.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你有精神，也有新的关卡或改解可继续；眼前一关的输入、输出与构造已经很熟，能暂停慢慢编辑。先选什么？",
+          "scene": "熟悉的试跑空间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_STORE",
+            "IF9C_MECH",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看已有工具说明，再回到自己的构造继续修改",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "暂不追新关，回到认得的构造慢慢查看和试跑，喜欢这段熟悉而可控的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "主动重复搭一小段自己还不熟的转向与接料，想练熟编辑和检查动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先排本轮拆移、接料与重跑的编辑步骤，再照安排做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h余力足且仍有可推进内容；t玩家主动重复编辑练习，不是自动机练等级。模拟试跑观看不计f。ALT第一课即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C08.V1"
+        },
+        {
+          "text": "只做过第一课：你有精神，仍有送达目标可尝试，也已经熟悉眼前源口与输出。先做什么？",
+          "scene": "熟悉的试跑空间的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "IF9C_STORE",
+            "IF9C_MECH",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对游戏已有的基础带路示范，再继续自己搭",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "仍在认得的这小段从容搭带试跑，喜欢熟悉的操作过程，暂不急着推进下一步",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "有意重复放置、旋转和检查一小段带路，想让自己更熟练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先排这轮平台、转向和出口接入的编辑次序，再照着做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h余力足且仍有可推进内容；t玩家主动重复编辑练习，不是自动机练等级。模拟试跑观看不计f。ALT第一课即可。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C08.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你实际跑过并改过一段Infinifactory构造，不要求交付成功。哪种真实过程更贴近？",
+          "scene": "那次真正排查过的构造",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出过一处形状、方向或到达节奏的解释，只改对应一项后重新运行看结果",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先查看目标和当时物块怎样移动，再决定该编辑哪里",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "C",
+              "label": "我实际配合过检测、推杆与侧送通路，想看这些部件如何共同搬动物块",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "我排过那一轮拆移和重接的编辑步骤，并照顺序改了构造",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "全为真实过去；成功非门槛；高级检测b有初期ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C09.V1"
+        },
+        {
+          "text": "只回想第一课的一次短带试跑，不要求后来送达。哪件事真实发生过？",
+          "scene": "那次真正排查过的构造的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_STORE",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先看了输入、带路与出口的位置，再决定下一处怎么搭",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我猜一个拐点是否相关，只转那块带后实际重跑了",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我按顺序安排过平台与带段的编辑，并照着动手了",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "我看过已有传送带示范，再重新搭了自己那一小段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "全为真实过去；成功非门槛；高级检测b有初期ALT。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C09.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想一次你实际重搭关卡的经历，不要求降低分数或通过。哪种已经发生的过程更贴近？",
+          "scene": "那次真正加过的限制",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_EARLY",
+            "IF9C_FLAT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我实际让先到的一股料在承托处停靠，再侧送另一股到焊接处，试过停靠与到达次序怎样共同影响接合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "我主要是换了一种当时可搭的普通带路来试运行",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "C",
+              "label": "我先核对过当时已有工具用法，随后继续了自己的编辑",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我明确禁用过当时可向上搭的做法，在确有平面路线空间的关卡实际尝试了只搭一层的限制",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "i真额外一层限制且选可行关卡；普通换带路0。ALT没高级工具/旧解也可回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C10.V1"
+        },
+        {
+          "text": "回想最初一关的一次真实编辑，不要求用过焊接、推杆或额外挑战。哪件事确实发生？",
+          "scene": "那次真正加过的限制的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "IF9C_MECH",
+            "IF9C_EARLY",
+            "IF9C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我排过那轮平台、转向和接出口的编辑步骤，并照着做了",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "我提出过一个落点去向的猜想，只挪一个接料位置后试跑了",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我核对过已有操作说明，随后亲手重搭了一小段",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "我实际换过另一种当时可搭的普通带路，看物块怎样通过",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "i真额外一层限制且选可行关卡；普通换带路0。ALT没高级工具/旧解也可回顾。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C10.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你已有正式结算后继续改这一关的一次经历，不要求新解通过或刷新记录。哪段真实过程更贴近？",
+          "scene": "那次看过的正式成绩",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "IF9C_SCORE",
+            "IF9C_MECH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先查看过当时已有目标、构造与运行状态，再决定下一处编辑",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "B",
+              "label": "我有意重复编辑和检查同类短段，想让自己的搭建操作更熟练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我确实围绕已有BEST的一项纪录改过构造，把能否超过旧记录当作这次重点",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "我为解释Footprint随移动物变大提出过判断，只改一处路线并运行核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "有正式旧记录才k；无正式成绩ALT完整可答；不要求过关。p不把Footprint现象本身当推理能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C11.V1"
+        },
+        {
+          "text": "没有正式成绩也能回想：最早关卡里你实际搭过并试跑了一小段，哪件事已经发生？",
+          "scene": "那次看过的正式成绩的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "IF9C_SCORE",
+            "IF9C_MECH",
+            "IF9C_STORE",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我提出一处方向是否相关的解释，只改那一块并试跑过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我按这轮编辑步骤排过平台与传送带的先后，并亲手照做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "我先看过目标位置和物块实际走向，再定下一步",
+              "signal": "puzzle_state_review"
+            },
+            {
+              "id": "D",
+              "label": "我有意重复过放置、转向与检查这类动作，想让自己更熟练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "有正式旧记录才k；无正式成绩ALT完整可答；不要求过关。p不把Footprint现象本身当推理能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C11.ALT1"
+        }
+      ]
+    },
+    {
+      "id": "IF9C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你已经经历过的一段搭建与试跑时光，不要求打完任何章节。哪种真实投入更贴近？",
+          "scene": "那次自己愿意再待一会儿",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "IF9C_STORE",
+            "IF9C_MECH",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按当时关卡已经列出的产品要求继续搭过，主要是推进那一次交付",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我有精力、也能继续新关或新改解，仍喜欢回到认得的构造从容试跑和查看",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我主动重复搭过自己还不熟的转向或接料段，当时的重点是练熟编辑与检查",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我先核对过已有工具说明，接着亲手修改了构造",
+              "signal": "tool_reference_first"
+            }
+          ],
+          "design_purpose": "真实过去h主动熟悉，t自练；不以交付成功作门槛，无经济/科研/永久角色成长。ALT最早关卡。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C12.V1"
+        },
+        {
+          "text": "只回想最早的源口、短带与出口那一段，哪件事真实发生过？",
+          "scene": "那次自己愿意再待一会儿的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "IF9C_STORE",
+            "IF9C_MECH",
+            "IF9C_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我照当时已经列出的送达条件实际继续编辑过，不要求后来成功",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我有精神且目标仍可继续，仍喜欢在认得的小线从容搭带试跑",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "我有意重复放置旋转和检查，想让自己操作更熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "我先看过当时已有基础示范，再继续搭了自己的那段",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "真实过去h主动熟悉，t自练；不以交付成功作门槛，无经济/科研/永久角色成长。ALT最早关卡。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "IF9C12.ALT1"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+7d1af670ca67"
+}
