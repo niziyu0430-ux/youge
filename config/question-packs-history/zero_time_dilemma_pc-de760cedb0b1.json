@@ -1,0 +1,1087 @@
+{
+  "id": "zero_time_dilemma_pc",
+  "title": "极限脱出3：零时困境",
+  "game_ids": [
+    "steam-311240"
+  ],
+  "scope": "Steam PC Zero Escape: Zero Time Dilemma，App 311240 公共 Build 1257965，单人本体。",
+  "author_review": "核查本体构筑、三队流程、PC 逐段实玩及房间操作。",
+  "player_trial": "not_performed",
+  "status": "private_candidate_pending_independent_release_review",
+  "modes": [
+    {
+      "id": "default",
+      "label": "三队碎片与 Decision Game"
+    }
+  ],
+  "slots": [
+    {
+      "id": "ZTDPC01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "ZTDPC01.V1",
+          "scene": "首次选队查看投票",
+          "text": "返回 Team Select，C 队和 D 队的 Execution 碎片都已开放。你先去看哪一段？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_UI",
+            "ZTDPC_VOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看 C 队，想听 Carlos 他们会不会听从三队事先商量好的安排",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先看 D 队，把他们提到的投票规则听清楚，再去 C 队核对两边是不是按同一个办法理解",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC01.V2",
+          "scene": "一队已投，另两队尚未看完",
+          "text": "你已完成 C 队的 Execution，Q、D 的投票碎片都还能选。你先打开哪个？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_UI",
+            "ZTDPC_VOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去 D 队，先朝能补全当前三队投票的信息再推进一段",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去 Q 队，看他们对分队投票会作怎样的反应，想弄清谈话里他们最信谁",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC01.V3",
+          "scene": "新碎片与全局流程图",
+          "text": "选队页有标 NEW 的碎片，你也已经在全局图上留下 Execution 的结果。现在你更愿意怎么走？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_UI",
+            "ZTDPC_VOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接点开新碎片，看看刚开放的场景和它的线索",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先看全局图，沿一条已有结果的投票分支核对它和后续碎片可能怎么接起来",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "ZTDPC02.V1",
+          "scene": "替 C 队投出一票",
+          "text": "C 队第一次投票，Carlos 已让 Gab 把分票方案传给另外两队。轮到你给 Carlos 选，他可以投 D，也可以投 Q。你会怎样选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_VOTE",
+            "ZTDPC_NOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "投给 Q。我想看看 C 改投时，原本预计的票形和结果会怎样偏离",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "投给 D。我愿意站在 Carlos 的立场，执行他刚传出去的分票方案",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC02.V2",
+          "scene": "替 Q 队投出一票",
+          "text": "你已看过按协议投票的结果，流程图也能回到 Q 队投票。你先试哪条路？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_VOTE",
+            "ZTDPC_NOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留在原票形里让 Q 投 C，接着看这一组人依照先前约定的后续",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "只把 Q 的票从 C 改投 D，先看它在另外两张旧票仍保留时会造成什么变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC02.V3",
+          "scene": "替 D 队投出一票",
+          "text": "C 最近投 D，Q 最近投 C，轮到 D 队。你更想试哪种取舍？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_VOTE",
+            "ZTDPC_NOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选 C，另两队已经投出，我想实际验证 D 改掉最后一票会使哪队陷入危险",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "选 Q。我会代入 Diana，采纳传来的循环分票方案",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "ZTDPC03.V1",
+          "scene": "C 队冷柜旁的第一个工具",
+          "text": "初进 C 队食品储藏室，装马铃薯的箱子和下层滑棚都没查过。你先从哪边开始？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_PAN",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查装马铃薯的纸盒，看看指向左右门的标记能不能解释冷柜为什么有两个面板",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先翻下层滑棚取碘液，把手边可用的道具找到再查记号",
+              "signal": "material_stock_review"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC03.V2",
+          "scene": "Q 队实验室两处摆放物",
+          "text": "刚进 Q 队生物实验室，通风柜的有色烧杯、水槽里的刀都还没拿。你先做哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_BIO",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看通风柜，想找找两只颜色鲜明的烧杯旁还有什么可以查",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先到水槽拿刀，看看能不能用它打开看起来装着东西的猪形枕头",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC03.V3",
+          "scene": "D 队疗愈室最先查哪边",
+          "text": "D 队进疗愈室，古钢琴的白键和海报旁桌子的便笺都能调查。你先动哪一处？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_HEAL",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看桌上的便笺，想推断画里的眼睛、杯子和星形是怎样配合的",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先到古钢琴把白键逐个取下来，我喜欢看这架琴会让我直接动哪些部件",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "ZTDPC04.V1",
+          "scene": "娱乐室的牌桌运算",
+          "text": "C 队已拿到日历，也能在牌桌看到牌，先确认牌指哪些月份，还是先找房里的词与数字？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_REC",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿吧台、桌面和老虎机看看哪些标记带数字，下次查等式时带着这些信息回来",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先用日历逐张对应手上的牌，试着推出桌上等式的三个词",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC04.V2",
+          "scene": "书房的蓝图与零件",
+          "text": "Q 队已收齐书房各零件，也拿到组合蓝图。两个步骤都还没做，你会怎么开始？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_STUDY",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先对照蓝图，把三组哪些部件应先合起来、怎样再合成完整钥匙理清楚",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先在物品栏按图合一对能拼的部件，喜欢看形状实际扣合后怎样变化",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC04.V3",
+          "scene": "相机能拍到的两张图案",
+          "text": "D 队在疗愈室拿到数码相机，黑白格和森林布景都能拨出来。两处线索都未处理，你先拍哪个？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_HEAL",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先转到森林布景，到红色圆筒前看布景变换后冒出来的图案，再用相机拍它",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先在黑白格布景查椅子旁那块不对齐的墙面，检验它是不是控制台要的形状",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "ZTDPC05.V1",
+          "scene": "D 队从疗愈室逃出后的按钮",
+          "text": "D 队已解开疗愈室的谜题，按按钮的倒计时开始了。你先走哪条路？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_HEAL",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动按下，想知道这时替 D 队做出这个干预，会让现场的人怎样反应",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "让倒计时走完。我想代入 Diana 当时掌握的信息，看看自己愿不愿意承担按下去的风险",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC05.V2",
+          "scene": "Q 队书房外的三方对峙",
+          "text": "Q 队逃出书房后三人对峙，要你给出答案。你已经看过输入一个名字的后续，又回到了提问画面。接下来怎么选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_STUDY",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把答案换成另一个当事人的名字，先把当前还有空白的对峙分支补上",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先输入没人，想看看三人不直接互相下手时，他们的关系会如何继续",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC05.V3",
+          "scene": "三队都活下来后的另一个按钮",
+          "text": "你已打开没人被处决的路线，进入 Q 队的 First Come, First Saved。现在面前是限时选择，你先怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_PC",
+            "ZTDPC_VOTE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按下按钮。我想看 Q 队抢先动手后，眼前的人怎样理解彼此的决定",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "让倒计时走完。我会以这队当时知道的情况来考虑，把不抢先定下来",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "ZTDPC06.V1",
+          "scene": "流程图两种视图",
+          "text": "你已点开过某个 Execution 分支，全局图仍有折叠节点。准备决定下一段时，你怎样用图？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_UI",
+            "ZTDPC_VOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先切详细图定位已见过的选票和紧接它的事件，把造成该段结果的先后关系对上",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先用简略图看目前还有哪些方向是空白，把想追的分支标在自己心里",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC06.V2",
+          "scene": "娱乐室掷骰的另一结果",
+          "text": "C 队逃出娱乐室后，你已经看过一次掷骰，图上还有另一条未亮的掷骰分支，也有别的队伍碎片能看。你先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_REC",
+            "ZTDPC_UI",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "回到掷骰的决定节点再掷，想把这处两种结果都点亮",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先切去另一段已开放的队伍碎片，我想知道骰局以外发生过什么，再决定何时回看",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC06.V3",
+          "scene": "回去重选 D 队按不按",
+          "text": "你已玩过疗愈室的按钮决定，也有别的碎片等着。你下一步先怎么走？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_HEAL",
+            "ZTDPC_UI",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开另一段 D 队已有的碎片，想跟着 Diana 和其他队员在不同事件里的变化",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "回那个已解锁的决定节点，改成先前没走的按法或等到超时，补齐这一对结果",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "ZTDPC07.V1",
+          "scene": "食品储藏室的两个数字",
+          "text": "娃娃加热后显出数字，左臂也已翻下，冷柜门上的公式能回看。你准备怎样解门边数字锁？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_PAN",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "回冷柜再对一遍公式，把倒置的左臂数字和娃娃数字分别确认后，自己推出总和",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我已看懂两处数字和相加规则，直接把算好的结果输到门边面板推进",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC07.V2",
+          "scene": "C 队的 Force Quit 启动词",
+          "text": "C 队的 Force Quit 碎片和《Apocalypse》都已看过，红盒现在等输入。你更想从哪里着手？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_PC",
+            "ZTDPC_PASS",
+            "ZTDPC_UI"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我记得那句开盒词，先在 C 队红盒输入它，继续这段三队各自要做的行动",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "回看 Zero 提到潘多拉魔盒的那段，核对哪一句确实可以当开盒词",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC07.V3",
+          "scene": "Q 队已经把红盒送到量子计算机",
+          "text": "C 队已打开红盒，Q 队已到了量子计算机旁；你以前也看过给出两组数字的碎片。你先怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_PC",
+            "ZTDPC_PASS",
+            "ZTDPC_UI"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把两段里各自给密码的对象对一遍，判断哪组开计算机外盖、哪组给 Sean",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "两组数字和先后我都认得，先按装置要的顺序执行，看看 Sean 下一步要做什么",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "ZTDPC08.V1",
+          "scene": "先拿医务室哪个储物柜的物件",
+          "text": "C 队照出储柜的密码，中间柜的机关方块和最右柜的提示卡都可以先取。你先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_MED",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开最右柜把提示卡收下来，先把正在眼前能取得的资料准备好",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "B",
+              "label": "先拿中间柜的方块，想根据孔位推断每面该怎样转到合适的位置",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC08.V2",
+          "scene": "Q 队彩色细胞和储柜按钮",
+          "text": "Q 队已经读过离心机说明书，完成样品分离并用显微镜看到了几种细胞。按储柜颜色按钮前，你先怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_BIO",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先选两种颜色重看显微镜，确认对应的是每组细胞数，才把同一规律用到其他颜色",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我已确定每种颜色要按的次数，沿着按钮顺序输入，再按 CHECK 看到开锁反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC08.V3",
+          "scene": "D 队回放疗愈室的旋律",
+          "text": "D 队疗愈室控制台已经播过旋律、白键弹回来了。你还没在古钢琴正式输入这串音，会先怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_HEAL",
+            "ZTDPC_PC",
+            "ZTDPC_UI"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从已经记下的先后关系理清哪一段容易把两个同名的音混掉，再去还原",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "回控制台专门再听一遍，在容易混淆的高低音位置练到能跟上",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "ZTDPC09.V1",
+          "scene": "回想 Coincide 的第二条路",
+          "text": "回想你使用流程图重回开场红蓝硬币的决定、看过另一种结果时。什么最促使你回去？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_OPEN",
+            "ZTDPC_UI",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想看看同一群人在另一种结果下会走向什么处境，以及 Zero 为什么给他们这一赌",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我想把这个明显示出另一个结果的节点补上，确认开场两条线都已经走过",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC09.V2",
+          "scene": "第一次看见三队共同投票",
+          "text": "回想你第一次提交三队 Execution 选票、看见哪一队受影响时。哪个部分更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_VOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我会回头推三张票怎样合成结果，想知道换掉哪张票会改变哪一条线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我会回想各队是谁主张信任约定，谁在担心另一边会反悔",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC09.V3",
+          "scene": "流程图中的三种视角",
+          "text": "回想某一队的 Execution 演出结束，你回选队页，从新的一队看见同一投票局面。你更在意什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_UI",
+            "ZTDPC_VOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想听刚切到这一队的人怎样解读对方，让三队之间的信任变化连得上",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我想沿三队的碎片和共同结果整理出其他还没亲眼见到的投票结果",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "ZTDPC10.V1",
+          "scene": "刚解完加热娃娃和手臂",
+          "text": "回想 C 队食品储藏室结尾，你确实加热过娃娃和右臂，也看到了冷柜提示。什么体验更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_PAN",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "找到暖炉里的娃娃确实变色、最后温热的手能够启动面板时，那些连续的物件反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "猜透一件东西会在哪个设备下改变，再把相加提示和倒置数字合出一个能用的答案",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC10.V2",
+          "scene": "显微镜之后的红蓝 X 拼板",
+          "text": "回想你在 Q 队生物实验室解过带红蓝 X 的拼板。重新玩一次最有兴致的部分是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_BIO",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在脑里推每片转完会盖到哪些 X，找到能各盖一次的排法",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "在物品和拼板视图间切换、亲手旋转看到图案一点点对上的过程",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC10.V3",
+          "scene": "疗愈室的相机改变了什么",
+          "text": "回想你确实用 D 队相机拍过椅背与远处图案重合的那一幕。哪部分最让你记得？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_HEAL",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "转视角等两部分终于叠上，再拍下它、亲眼看对应的键槽被打开",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "从不相干的椅背和远处形状推到它们其实能从某一个角度拼成一把键",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "ZTDPC11.V1",
+          "scene": "三队投票后的空节点",
+          "text": "回想你已经提交三队 Execution 的票，并在全局图看到结果与旁边的分支位置。这个画面最让你产生什么想法？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_VOTE",
+            "ZTDPC_UI",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想根据这一轮三队实际投出的对象推算，只改一张会怎样影响结果",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我想沿全局图把其他空着的投票结果逐个点亮，看看自己最终能补全几条",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC11.V2",
+          "scene": "Q 队三方对峙里看过不同输入",
+          "text": "回想你确实重回过 Q 队的书房对峙，试过输入一个人名和输入没人。什么更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_STUDY",
+            "ZTDPC_UI",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想沿流程图把能确认的对峙结局逐一补起来，清楚知道自己还漏了哪条",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "我想知道 Eric 和 Mira 会因为选择不同怎样反应，对峙会给三人的关系带来什么变化",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC11.V3",
+          "scene": "D 队按钮两边的演出",
+          "text": "回想你确实看过疗愈室按下按钮和等到时间用完的两种结果。哪一部分更能解释你为什么回去？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_HEAL",
+            "ZTDPC_UI",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想从 Diana 当时看到的局面出发，对照这两种选择哪一种更符合我会替她作出的决定",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "我想看这两个结局里的队员反应怎样不同，了解他们事后如何面对这个选择",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    },
+    {
+      "id": "ZTDPC12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "ZTDPC12.V1",
+          "scene": "C 队回想第一次协议",
+          "text": "回想你已经在 C 队看过 Execution 投票前的谈话，并实际选择过投谁。哪一部分让你更投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_VOTE",
+            "ZTDPC_NOTE",
+            "ZTDPC_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我会把自己放到 Carlos 得投票的位置，回想假如只掌握那时的信息，我会怎么兑现先前的选择",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "我想理解 Carlos 当时为什么能信任另外两队，或者什么会让他怀疑那份约定",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC12.V2",
+          "scene": "D 队纪念物解开终局提示",
+          "text": "回想你玩到 Force Quit: D，在里面用到了 Diana 在传送剧情里留给孩子的纪念物。什么更让你记得？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_PC",
+            "ZTDPC_PASS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "关心 Diana 为什么要留下这些东西，以及后来认出它们的人会怎样理解那段告别",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "看到提示后把两件纪念物与更早的传送片段对起来，发现旧片段藏着能完成眼前装置的信息",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        },
+        {
+          "id": "ZTDPC12.V3",
+          "scene": "从三队关闭游戏到最后一道选择",
+          "text": "回想你实际进入过红盒启动之后的最后一个 SHIFT 抉择。什么更像你在意的重点？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "ZTDPC_PC",
+            "ZTDPC_OPEN"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想看终局选择怎样回扣开场的投币事件，以及同一批人的命运还有哪些走法",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我想把自己放到角色当时的位置，想清楚接受或放弃转移的代价该由谁承担",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录选择已开放碎片、实际分岔和解谜操作时的偏好。",
+          "interpretation_boundary": "以前提所列已看见的流程节点、物件和碎片为准。未经历可保持槽位换题。"
+        }
+      ]
+    }
+  ],
+  "editorial_notes": [
+    "执行投票以每队最近保存的选项为准。冷柜、拼板和零件题以调查顺序或方法表述。",
+    "三队可见碎片和已记录的分支随存档而变。需要进入过相应逃脱房间才能回答部分槽位，Force Quit 的 C→Q→D 执行顺序固定。",
+    "剧情题涉及剧透。适用情境未抵达可持续换题，尚未进行 PC 实机用户试玩与正式入口验收。"
+  ],
+  "version": "0.5.0+de760cedb0b1"
+}

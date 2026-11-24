@@ -1,0 +1,998 @@
+{
+  "id": "deltarunepcsteamv5",
+  "title": "三角符文",
+  "game_ids": [
+    "steam-1671210"
+  ],
+  "scope": "tobyfox《三角符文》Steam Windows 正式版第1–5章。",
+  "status": "private_candidate_source_checked",
+  "author_review": "official_and_public_walkthrough_checked",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按你实际玩过的章节和路线回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DRUNEPC01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "DRUNEPC01.V1",
+          "scene": "鲁丁先劝退还是先提醒",
+          "text": "第1章原野，苏西还会自行攻击，克里斯和拉尔塞已与鲁丁交战。鲁丁这回合还没挨打，拉尔塞可以配合使用 Warning。你打算先下什么指令？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_RUD",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让克里斯和拉尔塞先提醒敌人避开苏西，把接下来劝退的机会保住。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "让克里斯立刻说服这只鲁丁，让拉尔塞同回合饶恕它。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "战斗开局通过劝退、队友行动或攻击处理对手",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC01.ALT1",
+          "scene": "女王宅邸里的粗电线怪",
+          "text": "第2章女王宅邸，三人都能行动，眼前是拦路的 Werewerewire。克里斯可以邀请拉尔塞配合，也可以带苏西先增加一点饶恕进度。你先怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_WW",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让苏西配合 BeTough，先看到敌人这一回合的饶恕进度提升。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "让拉尔塞配合 BeSweet，先提高后面每次行动的效果。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "战斗开局通过劝退、队友行动或攻击处理对手",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC01.ALT2",
+          "scene": "悬崖上的叶片怪",
+          "text": "第5章花之国的悬崖上，三人遇见尚未招募的 Leafling。吹散叶片的行动可用，三人也有能正常攻击的武器。你优先怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_LEAF",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用 BlowAway 推进饶恕，争取把这个种类登记进招募名单。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "让队伍用普通攻击，练好这几次停在判定线上的时机。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "战斗开局通过劝退、队友行动或攻击处理对手",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "DRUNEPC02.V1",
+          "scene": "小丑房先蓄力还是花掉现有TP",
+          "text": "第1章纸牌城堡地牢里，杰维尔（Jevil）还没疲倦。全员能动，你的 TP 够用 Pirouette，还不够让三人一起用 Hypnosis。你这回合怎么排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_JEV",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把三人的行动用于防御积 TP，让下一轮能安排合力催眠。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先让克里斯用 Pirouette，看看这一回合旋转带来什么变化。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "按当前 TP、护盾和队友状态分配这一回合",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC02.ALT1",
+          "scene": "酸盾里的下一回合",
+          "text": "第2章女王与伯德利共斗时，女王的酸液护盾刚升起。三人都站着，队伍既能举杯，也有可用的普通攻击。你先怎么破盾？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_QUE",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让三人一起用 GroupToast，让女王喝酸液来削掉一截护盾。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "直接打护盾，按自己练过的三人攻击时机削这一轮盾。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "按当前 TP、护盾和队友状态分配这一回合",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC02.ALT2",
+          "scene": "进黑暗区时保人还是蓄力",
+          "text": "第4章 Jackenstein 战里，黑暗让常规 TP 涨得很慢。克里斯还醒着但受伤，TP 尚不足以用 Unleash，包里有治疗品。你先怎么分这一回合？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_JACK",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用其中一人的回合给克里斯治疗，其他角色继续防御。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "让三人防御，和下一轮在迷宫里收的宝物一起攒到可用 Unleash 的量。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "按当前 TP、护盾和队友状态分配这一回合",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "DRUNEPC03.V1",
+          "scene": "圆棋王的王冠",
+          "text": "第1章大棋盘尽头，K. Round 的王冠仍戴着。克里斯和拉尔塞都能行动，苏西暂时不听指挥。你想怎样把王冠晃下来？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_ROUND",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用 DeepBow，请拉尔塞跟克里斯一起深鞠躬。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先用克里斯自己的 Bow，接着专心练躲棋子的弹幕。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "用持久收益或即时操作解同一个具名遭遇",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC03.ALT1",
+          "scene": "镁光灯下拍照",
+          "text": "第3章岛屿棋盘第一次碰上 Shuttah。已经过完拍照教学，苏西站着，TP 够用 PowerPhoto，ToughPhoto 也能点。接下来怎么拍？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_SHUT",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "花 TP 请苏西配合 PowerPhoto，让接下来成功的照片提高更多饶恕进度。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "用不消耗 TP 的 ToughPhoto，练习在较短的取景时间里抓到目标。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "用持久收益或即时操作解同一个具名遭遇",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC03.ALT2",
+          "scene": "赛斯把忍者的进度往回拉",
+          "text": "第5章城堡顶部，赛斯（Seth）每回合都会降低忍者甲虫 Shinobeetle 的饶恕进度。这回合的 Mercy 可以够到 100%，队里三人能动；如果打低血量，拉尔塞也有 TP 用 Pacify。你先采用哪种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_SHINO",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "分配好行动与饶恕，等进度刚到 100% 就让另一个人同回合放行。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先设法把甲虫打到疲倦，再试着让拉尔塞在下一回合施展 Pacify。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "用持久收益或即时操作解同一个具名遭遇",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "DRUNEPC04.V1",
+          "scene": "原野蛋糕旁要不要回头",
+          "text": "第1章原野，兰瑟打坏的蛋糕还有一块能捡，往前的路也开着。你还没走到森林铁匠那里。你会怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_FIELD",
+            "DRUNEPC_CAKE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿开着的路继续往前，不让这一站拖住找黑暗喷泉的路。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先取碎蛋糕，留着试试后面能不能有人修。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "在两个实际通行的可走方向中安排探索顺序",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC04.ALT1",
+          "scene": "图书馆两头的钢琴谱",
+          "text": "第4章第一处黑暗圣域，图书馆岔路一边是黑暗迷宫，另一边有书架推移谜题；两边各有一段钢琴提示。你先走哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_SANC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进左翼，沿能短暂点亮的迷宫探到挂毯那里。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先推右翼的书架，先记下后半段音符，再折返补前半段。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "在两个实际通行的可走方向中安排探索顺序",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC04.ALT2",
+          "scene": "浇出来的两条路",
+          "text": "第5章花之国，你拿着洒水壶让岔路的植物长起来。通往黄色花盆的路和继续穿过剪刀地带的路都已可走，你先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_D5ALL",
+            "DRUNEPC_D5DES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去往前的通道，把穿过花园的路线接上。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先往黄色花盆那一侧看看，检查浇水后出现的图案。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "在两个实际通行的可走方向中安排探索顺序",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "DRUNEPC05.V1",
+          "scene": "修好的蛋糕留还是还",
+          "text": "第1章，铁匠玛利乌斯（Malius）已经把碎蛋糕修好，你还能走回原野找到厨师 Top Chef。修好的 Top Cake 现在要怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_CAKE",
+            "DRUNEPC_BAK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先留在背包，等遇到全队都需要治疗的战斗再用。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把原来的蛋糕交还给厨师，接受他回赠的 SpinCake。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "为后续战斗决定当下要保留的物资或难度",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC05.ALT1",
+          "scene": "格森桌上的第一件物资",
+          "text": "第4章格森（Gerson）的书房里，桌上有可买的优质药品 Scarlixir 和围巾 ScarfMark。现有的钱够买任一件，却不够一起买。你先选什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_GER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先买 ScarfMark 给拉尔塞试试，调整接下来的队伍配装。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先买 Scarlixir，给下一次队友受到重击留一个补血手段。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "为后续战斗决定当下要保留的物资或难度",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC05.ALT2",
+          "scene": "粉色炸弹的重试选项",
+          "text": "第5章你已找到隐藏对手 Pink，并在当前 Steam 正式版这场决斗输过一次。房间里出现一颗可互动的粉色炸弹。下次进场你选什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_PINK",
+            "DRUNEPC_PINKD",
+            "DRUNEPC_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选 Nicer bombs，跟着小炸弹新增的爆炸范围提示练躲避，它们也会晚一点爆炸。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "保留 Default，继续在之前的节奏里练自己的走位。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "为后续战斗决定当下要保留的物资或难度",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "DRUNEPC06.V1",
+          "scene": "诺艾尔要不要绕回垃圾区",
+          "text": "第2章诺艾尔刚加入，克里斯和她能往前去赛博城，也能折回垃圾区。你还没做锁死路线的选择。先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_WEIRD2",
+            "DRUNEPC_CH2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续带她朝正常目的地走，先经历她在赛博城的同行剧情。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "带她折回垃圾区，试着用她的 IceShock 冻住回头遇到的敌人。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "在章节主线与具名可选活动之间决定下一步",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC06.ALT1",
+          "scene": "电视后台的额外节目",
+          "text": "第3章节目中场，你拿过至少 A 评级，绿房的游戏厅已经开放。戴墨镜的皮皮斯（Pippins）在里面，你有足够的 POINTs，也尚未继续下一块棋盘。你会怎么用这次休息？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_GREEN",
+            "DRUNEPC_TVW"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "花积分解锁 Monster Movie，试试苏西砸模型的玩法。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "留着积分，先回正赛继续下一块棋盘。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "在章节主线与具名可选活动之间决定下一步",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC06.ALT2",
+          "scene": "节日摊位与舞台",
+          "text": "第5章常规路线，来到节日场地的分岔口，左边舞台在表演，右边已经能去投节日王与王后的票。你先做哪件事？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_D5DES",
+            "DRUNEPC_D5ALL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去投票摊，选一组最符合自己这一趟扮演感的节日搭档。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先去左侧听完这段喜剧表演，再折回来逛场地。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "在章节主线与具名可选活动之间决定下一步",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "DRUNEPC07.V1",
+          "scene": "拉尔塞教不教这一课",
+          "text": "第1章第一次从城堡镇出去之前，拉尔塞在训练区用假人教克里斯怎么战斗。拉尔塞刚问你要不要练习，还没去大门。会怎么答？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_CAST",
+            "DRUNEPC_CH1"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接受练习，在假人面前先试一遍这个世界的回合操作。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "谢过他后先去大门，等遇到第一拨敌人再学。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "在城堡镇实际遇到的人物和活动中决定怎样参与",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC07.ALT1",
+          "scene": "把暗世界居民带回来之后",
+          "text": "第2章诺艾尔和伯德利离开电脑室，你把东西移到储物间后回到城堡镇。这一局既已出现新来的居民，也能去团体道场。你会先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_CAST",
+            "DRUNEPC_CH2",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去团体道场找一个已经开放的挑战，试试队伍最近学的动作。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先到广场和住进来的暗之民交谈，看看哪些人聚到一起。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "在城堡镇实际遇到的人物和活动中决定怎样参与",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC07.ALT2",
+          "scene": "给苏西选装扮",
+          "text": "第5章常规路线，苏西准备出门见诺艾尔，兰瑟邀克里斯帮她挑装扮。菜单中有你觉得适合她的组合，也还有其他搭配。你会先怎么挑？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_D5DES",
+            "DRUNEPC_D5ALL",
+            "DRUNEPC_CAST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先定出一套我想让她穿去赴约的搭配，再选与整体风格相合的细节。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先把菜单里的鸭子配件拼进衣装，看看不按日常穿法能搭出什么。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "在城堡镇实际遇到的人物和活动中决定怎样参与",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "DRUNEPC08.V1",
+          "scene": "三个舞伴都能动",
+          "text": "第2章 Sweet Cap'n Cakes 一战，苏西与拉尔塞已学会自己跳舞。场上还有两名没开始跳的对手，你的三人都能行动，但是一名队友受伤，包里有药。你这回合怎么排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_CAKES",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让一人先给受伤队友用药，克里斯邀一个舞伴，剩下那位留到下一回合。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "让克里斯和苏西各邀一名还没跳的对手，拉尔塞防御，争取这回合结束。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "使用队伍配合或单独行动处理战斗阶段的优先项",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC08.ALT1",
+          "scene": "和泰纳用分数拉开差距",
+          "text": "第3章与泰纳（Tenna）正式开打，分数还没到最后一幕，三名队员都能动，TP 足以让三人一起选 Minigame。你更想怎么争这轮分？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_TEN",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "花少量 TP 启动一个随机小游戏，换一种计分方式。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "用 ILoveTV 和两人的 S-Action、R-Action 一起拿分，顺便积累后续的话术收益。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "使用队伍配合或单独行动处理战斗阶段的优先项",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC08.ALT2",
+          "scene": "泰坦还没失去护盾",
+          "text": "第4章泰坦还有护盾，你攒到足够 TP 使用 Unleash，苏西和拉尔塞都能参加行动。弹幕刚变得难应付。你优先选哪一项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DRUNEPC_TIT",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让全队用 Brighten，借更大的亮光熟悉这一轮的勇气拾取路线。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让克里斯施展 Unleash，打开一个能伤到泰坦的进攻窗口。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "使用队伍配合或单独行动处理战斗阶段的优先项",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "DRUNEPC09.V1",
+          "scene": "森林里和三颗头聊天",
+          "text": "回想第1章第一次碰见三叶（Clover），你试过和三颗头搭话。哪一种实际操作更让你想重来一回？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_CLO",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从运动或者树聊起，看三颗头各自怎样接话。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "用不同话题轮流积累饶恕进度，找出能在同回合搭上饶恕指令的组合。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "回顾用实际选择推进饶恕、招募或故事路线",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC09.ALT1",
+          "scene": "雪墓线里要不要让伯德利走",
+          "text": "回想第2章奇异路线快成形的存档，诺艾尔已经戴上荆棘戒指，画面显示她能用 SnowGrave，克里斯也仍能和伯德利交战。哪一次测试更贴合你想体验的走向？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_WEIRD2",
+            "DRUNEPC_CH2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "停止命令诺艾尔冻结伯德利，用普通战斗打完这一战，让这条路线中止。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "读下去并坚持让诺艾尔使用 SnowGrave，想看这条路线怎样改写结尾。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "回顾用实际选择推进饶恕、招募或故事路线",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC09.ALT2",
+          "scene": "花咖啡馆的访客",
+          "text": "回想第5章花之国，花咖啡馆已经开放。你曾在悬崖遇到能招募的叶片怪，也遇到过赛斯身边的忍者甲虫。对于自己处理过的这些战斗，哪件事更想再做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_LEAF",
+            "DRUNEPC_SHINO",
+            "DRUNEPC_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "多找几次同种遭遇，凑齐饶恕数，看看新的居民会不会来休息。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "观察赛斯怎样改动饶恕进度，在他来得及回退前换成同回合饶恕。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "回顾用实际选择推进饶恕、招募或故事路线",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "DRUNEPC10.V1",
+          "scene": "穿过纸牌森林那些门",
+          "text": "回想第1章纸牌森林，你已经沿路开过能回到旧区域的门。其中哪部分更愿意再体验？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_DOOR",
+            "DRUNEPC_FOREST",
+            "DRUNEPC_CH1"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留意门和存档点的位置，把传送路线用作回补给再继续的安排。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "用传送门折回已经走过的原野，看一眼当初略过的岔路。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "回顾迷宫或小游戏里愿意重来的一件事",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC10.ALT1",
+          "scene": "在岛屿棋盘用过相机",
+          "text": "回想第3章的岛屿棋盘。你用过相机，也在 Shuttah 战里试过拍摄任务。哪段更让你愿意回来？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_LEGEND",
+            "DRUNEPC_SHUT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "带着相机穿过棋盘，看看不同取景对象能给哪些反馈。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "在相机战里等好笑容或伸舌的那一瞬，反复练按快门的时机。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "回顾迷宫或小游戏里愿意重来的一件事",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC10.ALT2",
+          "scene": "瀑布后的茶桌",
+          "text": "回想第4章第一处黑暗圣域，你进过投钱打开的瀑布暗室，跟踪敌人后遇到格森在里头招呼喝茶。当时哪种处理更想重做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_SANC",
+            "DRUNEPC_GER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "谢绝喝茶后离开暗室，先回去把教堂里还没办完的事继续做。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "接下邀请，坐下来听格森与苏西实际说了什么。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "回顾迷宫或小游戏里愿意重来的一件事",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "DRUNEPC11.V1",
+          "scene": "把攒到的饶恕带回小镇",
+          "text": "回想第2章赛博世界。你确实为了招募暗之民动过饶恕进度，也后来回到过城堡镇。那一轮进程最值得保留哪部分？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_CAST",
+            "DRUNEPC_RECRUIT",
+            "DRUNEPC_CH2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "跟踪招募表，回头补够还缺几只的种类。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "回镇找刚加入的居民，看看它们见到别的暗之民会聊什么。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "回顾同伴、招募和资源互动带来的具体体验",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC11.ALT1",
+          "scene": "中场留积分的理由",
+          "text": "回想第3章电视中场，带着积分回到绿房，而且当时的售货机和副小游戏都能用。哪件事更值得在重玩时做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_GREEN",
+            "DRUNEPC_TVW"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用节目得来的积分准备几份补给，把资源留给继续播出的部分。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "回到已经开放的做饭或摇滚小游戏，练习上回错掉的片段。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "回顾同伴、招募和资源互动带来的具体体验",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC11.ALT2",
+          "scene": "葵单挑时怎么跟她玩",
+          "text": "回想第5章 Aqua 的单独遭遇，场上只有克里斯，苏西和拉尔塞不能下指令。你用过几种不同的 ACT，也坚持到了她放出的最后一段飞刀。哪部分更想再做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_AQUA",
+            "DRUNEPC_D5ALL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "轮换她还没见过的互动，例如跳舞和摆姿势，看她怎样接招。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把飞刀阵的合拢与旋转练熟，靠走位撑过最后一段。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "回顾同伴、招募和资源互动带来的具体体验",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    },
+    {
+      "id": "DRUNEPC12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "DRUNEPC12.V1",
+          "scene": "纸牌王之前没打完的事",
+          "text": "回想第1章地牢深处，你见过杰维尔关着的门，也知道另一边的楼层通往纸牌王。之后最让你想重玩的是什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_JEV",
+            "DRUNEPC_CH1"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿纸牌城堡的路线去见王，把兰瑟和苏西的故事继续看下去。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "去打听破钥匙，收完零件修好，回来打开杰维尔的门。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回顾选择保留的支线或剧情分支经历",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC12.ALT1",
+          "scene": "在城堡镇检查空房之后",
+          "text": "回想第4章，你先看过拉尔塞在城堡里的空房，后来又在黑暗圣域右侧找到沙发。跟苏西商量时，哪件事更符合你想留下的这趟经历？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_SANC",
+            "DRUNEPC_CAST",
+            "DRUNEPC_CH4"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "赞同拿一个靠垫，为拉尔塞的房间带一件能坐靠的东西。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先问拉尔塞、请他坐一会，随后让靠垫留在原地。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "回顾选择保留的支线或剧情分支经历",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        },
+        {
+          "id": "DRUNEPC12.ALT2",
+          "scene": "节日尾声的湖边",
+          "text": "回想第5章沿奇异路线来到湖边。你从第4章延续了这条路线，并亲自遇到两人入水后必须接着确认的画面。哪次尝试更让你想回去经历？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DRUNEPC_WEIRD5",
+            "DRUNEPC_CH5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "到限时段放开操作，让倒计时走完，回到苏西与诺艾尔的剧情。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "等到画面快被白光盖住也继续按下 Proceed，追到那次不同的章节结尾。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "回顾选择保留的支线或剧情分支经历",
+          "interpretation_boundary": "按已经玩过的正式章节、故事路线、在场队友和已解锁动作作答。没经历过可换题。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+f19d349ff9d1"
+}

@@ -1,0 +1,1232 @@
+{
+  "id": "stsv5",
+  "title": "杀戮尖塔",
+  "game_ids": [
+    "steam-646570"
+  ],
+  "scope": "一代单人爬塔与已解锁角色",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "一代单人爬塔与已解锁角色",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "STSV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "第一幕打完一场普通战斗，可选牌里既有眼前够用的牌，也有很想尝试的方向，跳过也可行。你先围绕什么考虑？",
+          "scene": "第一幕的一次选牌",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "它能否和当前牌组与遗物接成一个明确配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "想拿自己不常用的牌，让这局出现新打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "比较下一段可能遇到的战斗，判断眼前最缺什么",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先保留已经顺手的循环，不急着加牌",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不把某张牌设为标准答案，问选牌的思考入口。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV501.V1"
+        },
+        {
+          "text": "离开战斗奖励前，现有牌组仍能继续前进。哪种念头最容易让你决定拿牌或跳过？",
+          "scene": "第一幕的一次选牌的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "想把刚出现的遗物和一张牌的效果连起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "想让这局偏离自己平常的那条构筑路",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先推一下当前防御或输出缺口会在哪暴露",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "让已有牌组的抽到顺序保持清楚",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "不把某张牌设为标准答案，问选牌的思考入口。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV501.ALT1"
+        },
+        {
+          "id": "STSV501.THIRD",
+          "scene": "铁甲战士的战斗奖励",
+          "text": "铁甲战士打完第一幕的一场普通战斗，奖励里同时出现耸肩无视和顺劈斩。接下来还有多目标战斗，但你也缺能格挡并抽牌的牌。这次准备拿哪张？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS1PLUS_CORE",
+            "STS1PLUS_IRON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿耸肩无视，给后面防守回合留一个还能抽牌的出手方式。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "拿顺劈斩，给这一副牌补上目前欠缺的范围攻击。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录「铁甲战士的战斗奖励」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "地图上两条路线都可以继续，一条有精英与更多不确定性，另一条更平稳。当前没有必须完成的挑战目标，你先想什么？",
+          "scene": "安全路与精英路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "想把敌人意图和出牌判断练得更稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看看地图哪一侧的房间与事件是自己更少见的",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "把后续休整、商店与战斗接成自己能接受的节奏",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "这副牌与遗物正好成形，想验证它们能承受什么",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "风险路线不等于勇敢，稳妥路线也不等于保守。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV502.V1"
+        },
+        {
+          "text": "一条路战斗较密，另一条有更多问号房。两条都走得通，你更容易怎样定路线？",
+          "scene": "安全路与精英路的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑能反复练战斗判断的路",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "挑自己少见的事件与地图分支",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先把补给与后续房间安排成舒服的行程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "挑能检验现有牌组配合的路",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "风险路线不等于勇敢，稳妥路线也不等于保守。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV502.ALT1"
+        },
+        {
+          "id": "STSV502.THIRD",
+          "scene": "地图上的燃烧精英与篝火",
+          "text": "你已经解锁一代的三把钥匙。第一幕当前岔路上，一边有标着火焰的精英，另一边走几格能进篝火。血量和药水够你走两边，今天你想往哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS1PLUS_CORE",
+            "STS1PLUS_KEYS",
+            "STS1PLUS_MAP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "朝能去篝火的路线走，留出升级或休息的机会。",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "朝燃烧精英走，先试着拿这局的绿钥匙。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录「地图上的燃烧精英与篝火」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "面对一种已经见过的敌人，手牌有几种可行出法。你愿意先花思考时间做什么？",
+          "scene": "熟悉敌人的回合",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练习少漏看一个状态或意图，形成稳定检查习惯",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "试一种平常不用的出牌顺序，看看能否有新展开",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "把敌人意图、手牌与下一轮可能抽到的牌一起推一遍",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "找出牌和遗物之间能连锁触发的次序",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "不要求算出具体伤害，区分推演、协同、练习与实验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV503.V1"
+        },
+        {
+          "text": "同一回合有几种都能接受的出牌顺序，你先愿意研究哪一层？",
+          "scene": "熟悉敌人的回合的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己最容易漏掉的状态怎样在出牌前检查",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用另一种次序能不能打开一个没试过的打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "现在与下一回合各会留下什么选择",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "哪张牌先出能把遗物效果接起来",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "不要求算出具体伤害，区分推演、协同、练习与实验。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV503.ALT1"
+        },
+        {
+          "id": "STSV503.THIRD",
+          "scene": "睡着的乐加维林",
+          "text": "进入第一幕精英乐加维林的战斗，你遇到它仍在睡觉的回合。你可以花掉当前能量打出恶魔形态，也有能突破它格挡、打到生命值的进攻手牌。你先选哪一种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS1PLUS_LAGA",
+            "STS1PLUS_POWERS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打恶魔形态，让后续回合有持续提高的力量。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用这回合高伤手牌打进生命值，把睡着的这段用来开打。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录「睡着的乐加维林」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "来到商店，钱只能优先做一部分事，移除牌、买牌、买遗物都可能有用。你最想围绕哪个目标花？",
+          "scene": "商店里的预算",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先分析下一段的困难，再补眼前最需要的功能",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "补一件能和整副牌产生关系的遗物或卡牌",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "精简当前不想抽到的牌，让循环更可控",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "买一件会改变这局玩法的东西，认真试一次",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "不把移除或购买固定为最优操作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV504.V1"
+        },
+        {
+          "text": "如果没有足够金币购买很多东西，只能保留一项商店安排，你先想什么？",
+          "scene": "商店里的预算的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接下来可能卡在哪一类战斗上，先补什么",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "怎样让当前牌与遗物之间的配合成立",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "怎样让抽到手的牌更接近想要的循环",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "哪项购买能让自己玩一套不同的套路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "不把移除或购买固定为最优操作。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV504.ALT1"
+        },
+        {
+          "id": "STSV504.THIRD",
+          "scene": "商人橱窗里的冰淇淋",
+          "text": "商人那里摆着冰淇淋，移除卡牌服务也还可用。你的金币够付任意一项，但付完其中一项就买不起另一项。你先把钱放在哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS1PLUS_CORE",
+            "STS1PLUS_SHOP",
+            "STS1PLUS_ICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用移除服务删掉一张选中的初始牌，提高以后抽到核心牌的机会。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "买冰淇淋，把这局没花完的能量留给接下来有用的一回合。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录「商人橱窗里的冰淇淋」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已用另一名已解锁角色开局，当前进入一场已见过的普通敌人战斗，手牌与起始遗物都能查看。现在先做什么？",
+          "scene": "第一次玩另一名角色",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "多尝试自己没用过的牌，看看角色能展开哪些玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "围绕这个角色特有的牌与起始遗物找关系",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "选一个常见敌人，练清楚新角色怎样处理它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "先看每场战斗里手牌如何变化，推它与旧角色的区别",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "无需解锁全部角色；不能混入二代新机制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV505.V1"
+        },
+        {
+          "text": "你已用熟悉角色开始新局，当前打开一次选牌奖励，起始遗物、牌组与地图都可看。拿牌或跳过都能继续，先做什么？",
+          "scene": "第一次玩另一名角色的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一张当前可用却平时总跳过的牌，给这局试一条新构筑路",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "围绕当前起始遗物与已有卡牌的配合选一张奖励",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "保留熟悉牌组，按已选的检查与出牌习惯进入下一场当作练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "对照当前牌组和地图，推每种奖励对后续回合会留下哪些选择",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "无需解锁全部角色；不能混入二代新机制。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV505.ALT1"
+        },
+        {
+          "id": "STSV505.THIRD",
+          "scene": "蛇之戒指抽到的两张不同用途的牌",
+          "text": "静默猎手首回合，蛇之戒指已经让你多抽了牌。你用过零费中和后还剩一点能量，手里既有生存者，也有一张一费攻击牌，敌人这一轮还打不倒你。你把能量花在哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS1PLUS_CORE",
+            "STS1PLUS_START",
+            "STS1PLUS_SILENT",
+            "STS1PLUS_SURV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用生存者先挡伤害，从手里丢掉一张这轮用不上的牌。",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "把余下能量给攻击，趁手牌多的这个首回合先削更多血。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录「蛇之戒指抽到的两张不同用途的牌」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "一个问号房事件给了几种交换或离开的选择，代价都看得清。你先怎样决定？",
+          "scene": "事件给出的代价",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看收益能否和当前牌组形成特别的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "选一个自己很少选的分支，体验另一种结果",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "按当前整局安排决定要不要在这里改变节奏",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "推算它会怎样影响眼前资源与之后的战斗",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "游戏风险与损失不映射现实冒险或道德。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV506.V1"
+        },
+        {
+          "text": "眼前事件没有唯一想选的奖励，你更愿意先想哪件事？",
+          "scene": "事件给出的代价的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "它能不能让现有遗物与牌多出一种联动",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "有没有值得看一次的陌生分支",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "这件事会不会打乱已经安排好的后续路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "这次交换之后，接下来几步还剩哪些应对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "游戏风险与损失不映射现实冒险或道德。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV506.ALT1"
+        },
+        {
+          "id": "STSV506.THIRD",
+          "scene": "活墙壁的遗忘和成长",
+          "text": "静默猎手在第一幕问号房遇到三张脸的活墙壁。你还留着一张不常用的初始打击，也有未升级的中和，你想先用这里的哪个选项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS1PLUS_WALL",
+            "STS1PLUS_START"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选成长升级中和，保留整副牌并提高自己常打的一张。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选遗忘移除一张初始打击，让这副牌以后少抽一张闲牌。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录「活墙壁的遗忘和成长」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "上一局结束后，你已开始新局，正在一场熟悉敌人的首回合；手牌与意图都已显示，几种顺序都可行。当前先做什么？",
+          "scene": "新局已经来到熟悉敌人前",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较手牌与起始遗物怎样接上，先执行一组互补效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "给这一轮换一条自己平时不用的出牌顺序规则，实际试一次新接法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "对照当前意图、手牌与可能的下轮抽牌，推清各出法会留下什么",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "照自己选定的检查顺序逐项看意图与状态，练稳出牌前少漏一项的习惯",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "复盘不等于后悔，换方向不等于放弃。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV507.V1"
+        },
+        {
+          "text": "你已开始新一局，并打开最早一次选牌奖励；现有牌组、起始遗物与当前地图都可看，拿牌或跳过都能继续。现在先做什么？",
+          "scene": "新局已经来到熟悉敌人前的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一张能与已有牌或起始遗物形成配合的奖励",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "拿一张自己平时会跳过的可用牌，给本局试一条不同构筑路",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "对照当前牌组与下一段可能遭遇，推每种选择会留下哪些应对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "按固定次序核对费用、抽牌与防御，练自己不再漏看一个条件的选牌习惯",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "复盘不等于后悔，换方向不等于放弃。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV507.ALT1"
+        },
+        {
+          "id": "STSV507.THIRD",
+          "scene": "观者换姿态前的一点取舍",
+          "text": "观者对付普通敌人，手里同时有还没升级的暴怒、警惕，以及一张可用的零费攻击。你还剩两点能量，进入愤怒后这轮也能撑住。你先打哪张？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS1PLUS_START",
+            "STS1PLUS_STANCE",
+            "STS1PLUS_WATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "打暴怒进入愤怒，再用零费攻击接上这一轮的伤害。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "打警惕获得格挡并进入平静，下一次离开这个姿态时再用额外能量。",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "记录「观者换姿态前的一点取舍」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已开始一局熟悉角色的游戏，当前停在商店，钱够进行一项可用购买或移除；现有牌组也能继续。现在先做什么？",
+          "scene": "这一局商店里的实际整备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照当前金币、店内项目与地图，排好本次消费和后续休整路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "选一张牌或遗物，把当前已经有的机制配合补上",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "不改熟悉牌组，离店沿当前可走路线继续，把下一场固定检查与出牌执行当练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "买一张自己平时跳过的可用牌，让本局实际走一条新构筑路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "无登阶、通关或每日榜单门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV508.V1"
+        },
+        {
+          "text": "还没到商店，当前已在新局一场熟悉普通战斗里，手牌、能量与敌人意图都看得见，几种出牌次序均可接受。先做什么？",
+          "scene": "这一局商店里的实际整备的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "安排眼前能量、抽牌与下轮保留的资源，让几步行动前后接上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让已有卡牌和起始遗物触发互相补位，实际打出这组配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "按自己固定的顺序检查意图与状态，再出牌，把执行习惯练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "给这回合换一次非常用起手顺序，试一个新接法",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "无登阶、通关或每日榜单门槛。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV508.ALT1"
+        },
+        {
+          "id": "STSV508.THIRD",
+          "scene": "故障机器人的霜球与电球",
+          "text": "故障机器人面前有敌人准备攻击。你只有一点能量，右侧第一个充能球是冰霜，后面还有空槽。手里的电击和双重释放都未升级。你先打哪一张？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STS1PLUS_START",
+            "STS1PLUS_ORBS",
+            "STS1PLUS_DUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "打电击把闪电布到空槽，保留冰霜，试着让两种球一起工作。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "打双重释放激发两次冰霜效果，先把这一回合的格挡准备起来。",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "记录「故障机器人的霜球与电球」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想某局牌与遗物互相配合的时刻，最留住你的是什么？",
+          "scene": "一套配合运转起来",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "多个独立效果突然接成了一个能运转的整体",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "自己先前对几个回合的推演终于得到了验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "一个原本看着古怪的点子真能玩下去",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "卡牌连续触发时，节奏与反馈让人很痛快",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "同样成功不自动归入同一动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV509.V1"
+        },
+        {
+          "text": "只回想一个自己打得满意的回合，最想记住哪一点？",
+          "scene": "一套配合运转起来的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "手上几张牌与遗物的效果彼此接上了",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "出牌前想过的后续确实发生了",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "尝试了平常不会采用的办法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "一张接一张打出去的连贯感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "同样成功不自动归入同一动机。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV509.ALT1"
+        },
+        {
+          "id": "STSV509.THIRD",
+          "scene": "那回合腐化与枯木树枝都在",
+          "text": "回想铁甲战士一局里同时拿到了腐化和枯木树枝。你打出了原来要花能量的技能，看见它消耗后手里又多了一张随机牌。哪部分最让你愿意再试？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS1PLUS_CORE",
+            "STS1PLUS_CORRUPT",
+            "STS1PLUS_BRANCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把腐化、消耗和树枝的补牌接在一起，看看这组配合能维持几轮。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "每次来一张临时牌就重排接下来的动作，试它能不能打进当前回合。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录「那回合腐化与枯木树枝都在」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想自己逐渐认识高塔里的敌人，哪种变化最有吸引力？",
+          "scene": "认识敌人的过程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复执行一种原先仓促的应对，自己后来比以前稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "比较已有牌与遗物后，实际让它们在这里形成了互补作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "亲自换过一次不常见的起手或构筑规则，让熟悉战斗有了新展开",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "根据意图与状态推过下一回合，并在实际出牌后验证了判断",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不以胜率证明思维能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV510.V1"
+        },
+        {
+          "text": "只回想早期最先熟悉的一类敌人，什么最让你想继续？",
+          "scene": "认识敌人的过程的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己越来越少漏掉本来就知道的应对",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "自己实际把几张牌与已有遗物配在一起，效果在这类战斗里形成了互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "自己主动换过一次非常用起手或构筑，真实打出了另一段过程",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "能根据它的意图开始安排后续回合",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "不以胜率证明思维能力。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV510.ALT1"
+        },
+        {
+          "id": "STSV510.THIRD",
+          "scene": "三个哨卫留下的晕眩",
+          "text": "回想第一幕碰到三个哨卫，你试过尽快打掉一个，也亲自遇到过晕眩开始挤占手牌。哪种变化最让你想重打一遍？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS1PLUS_CORE",
+            "STS1PLUS_SENTRY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "改牌组里过牌或范围攻击的配置，看看抽进晕眩后能不能少拖几轮。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "找到哪一个哨卫下一轮要攻击，想办法先让它离场。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录「三个哨卫留下的晕眩」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想一局里多次停下来查看地图的过程，你主要在享受什么？",
+          "scene": "再次打开地图",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "为看看未知事件主动走过一条少见分支，遇见了原先不知道的内容",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "推算过不同路线的资源余量，并在后续验证了当时的判断",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把战斗、休整和消费实际串成自己选择的路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "对照牌组与遗物，选过一段遭遇并真正检验了它们的配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "地图结构与未知事件不是开放世界漫游。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV511.V1"
+        },
+        {
+          "text": "只回想自己第一次认真选路线时的体验，最吸引哪一点？",
+          "scene": "再次打开地图的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走了一条不熟悉的分支，亲自遇见了新的事件或内容",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "比较房间顺序后，验证了它们会怎样改变后续可选行动",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把几个房间真正连成整局安排，后面也照着走了",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "把手里已有配合带进选定遭遇，实际看到它怎样运转",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "地图结构与未知事件不是开放世界漫游。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV511.ALT1"
+        },
+        {
+          "id": "STSV511.THIRD",
+          "scene": "在宝箱前取舍过蓝钥匙",
+          "text": "回想你准备进入第四幕的那局，眼前宝箱允许在蓝钥匙和遗物之间二选一，计划路线上还看得到后面的宝箱。哪部分最想保留下来？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS1PLUS_KEYS",
+            "STS1PLUS_MAP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照钥匙进度后先取蓝钥匙，补齐三把钥匙里缺的这一把。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "看了一眼遗物与眼下牌组的配合，决定为哪件效果把钥匙留到后面的宝箱。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录「在宝箱前取舍过蓝钥匙」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    },
+    {
+      "id": "STSV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "不比较成就或胜场，回看最近已经玩的几局，哪件自己实际做过的事最有分量？",
+          "scene": "已经走过的爬塔留下什么",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练一种意图检查或出牌执行，自己后来比原先稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "牌与遗物的作用被自己组合起来，真的形成了能运转的配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "推过一个回合的几种选择，并在后续验证了自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "主动试过一条平时不选的构筑路，熟悉遭遇有了新展开",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "全卷核对多情境偏好，不将重玩次数视为强度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV512.V1"
+        },
+        {
+          "text": "如果给最近几局只留一页笔记，你更想整理什么？",
+          "scene": "已经走过的爬塔留下什么的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS_CORE",
+            "STS_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "一个敌人的应对怎样从生疏练到稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "几件遗物与核心卡牌怎样组成一套配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "一个关键回合里本来有哪些选择",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "自己试过哪些和平时不同的套路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "全卷核对多情境偏好，不将重玩次数视为强度。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "STSV512.ALT1"
+        },
+        {
+          "id": "STSV512.THIRD",
+          "scene": "时间吞噬者数到十一",
+          "text": "回想第三幕那场时间吞噬者，它的时间计数滚到十一张，手里还有可以打的牌。哪一种实际做法更有你想再体验的感觉？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STS1PLUS_TIME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先结束回合保留计数，等下一轮抽牌后再挑愿意用来触发的那一张。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "选择一张有用的牌凑到十二，让计数清零，计划怎么过强制结束的回合。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录「时间吞噬者数到十一」的真实行动与取舍。",
+          "interpretation_boundary": "Steam Windows 一代本体；根据题面已具备的卡牌、遗物、已解锁区域或实际操作作答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+9fdb6a51e7a3"
+}

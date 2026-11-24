@@ -1,0 +1,1265 @@
+{
+  "id": "er",
+  "title": "艾尔登法环",
+  "game_ids": [
+    "steam-1245620"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按自己熟悉的体验回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "ER01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "ER01.V1",
+          "text": "当前宁姆格福赐福外，引导朝向远方城堡，旁边有从没进过的可达洞口；托雷特已可用，自己也有精力继续。先怎样走？",
+          "scene": "宁姆格福赐福外的当前去向",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_START",
+            "ER_STORY",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入未去过的洞口，发现一处尚未看过的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿已知人物提过的城堡方向走，接着了解已经开始的事件",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "回附近会重新出现的普通敌人前，亲手练一个还不顺的武器动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "主动骑托雷特重走熟悉草地与赐福小路，享受已走过环境带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当前已开放、可实际执行的探索与战斗步骤中区分动机。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER01.CORE",
+          "text": "当前从已熟悉的宁姆格福赐福出发，有主路、未去过的可达岔路与附近普通敌人，自己精力充足。先做什么？",
+          "scene": "当前宁姆格福路线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进未去过的岔路，发现一处新地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿已经听过的人物所指方向前进，继续了解已开始的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "回附近会重新出现的普通敌人前，亲手练一个还不顺的动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "主动重走熟悉草地与赐福小路，享受已走过环境带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER01.THIRD",
+          "scene": "关卡前废墟的两份东西",
+          "text": "你绕到关卡前废墟外，已经看见路边地图石碑，也找到能下到地下室的台阶。敌人暂时背对你，只想先拿一样就撤。你先摸哪边？",
+          "source_ids": [
+            "EREX_GATE"
+          ],
+          "question_type": "situational_action",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去石碑取宁姆格福西部地图碎片，拿到后把回来找箱子的路标出来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先下地下室拿箱子里的砥石小刀和战灰，把这片没查的宝箱清了",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "ER02.V1",
+          "text": "当前已休息离开赐福，面前是会重新出现的熟悉营地普通敌人，手边有可用武器、盾与已学会的能力。先怎样交手？",
+          "scene": "普通敌人前的当前交手",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑一类闪避或反击时机，亲手重复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把现有武器、盾或已会能力组成相互创造机会的配合并试用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "自定只用一类出手或只走一侧接近的规则，实际试一段不同打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "直接接一串熟悉攻击，体验动作、敌人反应与声音连起来的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当前已开放、可实际执行的探索与战斗步骤中区分动机。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER02.CORE",
+          "text": "不要求打过Boss或有其他装备。当前在宁姆格福普通敌人前，手里只有已能使用的武器，眼前可自由尝试。先做什么？",
+          "scene": "当前普通敌人交手",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一个闪避或出手时机，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "观察敌人起手、距离与遮挡，验证一次动作会从哪里碰到自己",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "自定只沿一侧接近或只用一种出手的规则，实际试这条新打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "接一串熟悉攻击，享受动作、敌人反应与声音的即时反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER02.THIRD",
+          "scene": "带盾走近关卡前士兵",
+          "text": "关卡前废墟边，一名士兵已经和你单独交手。你带着能格挡这一击的盾，精力也够，手中的普通兵器还能跳劈。你先怎么打？",
+          "source_ids": [
+            "EREX_GATE",
+            "EREX_INTRO"
+          ],
+          "question_type": "situational_action",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保持一步距离，趁士兵刚收招时用跳劈，观察出手后的硬直",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先接住容易认出的那一击，再练紧接着打防御反击",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "ER03.V1",
+          "text": "当前拿到一件自己已满足属性要求的新武器，装备菜单与附近普通敌人可用，手里也有能配合的盾或另一项能力。先做什么？",
+          "scene": "新武器到手后的当前行动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_START",
+            "ER_STORY",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "装备后亲手挥动出招，体验动作与命中的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把它与已有盾、战技或法术组成具体配合，实际试它们如何互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "按自定的巡路骑士身份装备它，再沿已知巡路先护住自己、接着还击，实行这项行动原则",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "把这件新取得兵器的名称、说明与当前外观补进自己的旅途记录",
+              "signal": "game_recording"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当前已开放、可实际执行的探索与战斗步骤中区分动机。 已有物品或经历的补记只保留行为描述，不计收藏画像分。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER03.CORE",
+          "text": "不需要新武器。当前已把一把可用兵器与已有盾拿在手上，附近普通敌人与背包可查看。先做什么？",
+          "scene": "当前已有兵器与盾",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手出几次招，体验动作、声音与命中的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "用盾的防护为兵器创造还击机会，实际试这组装备怎样互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "按自定的巡路护卫身份拿好这把兵器，沿已知巡路实行先观察、护住自己再还击的行动原则",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "把已找到但还没记下的兵器名称、说明与当前外观补进自己的旅途记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER03.THIRD",
+          "scene": "换上风暴足之后",
+          "text": "你已拿到砥石小刀，在赐福给一把能装的普通直剑换上了「风暴足」。废墟旁可以找一名单独的士兵试招，也能先挑两名会靠近的士兵。你先试哪里？",
+          "source_ids": [
+            "EREX_KNIFE",
+            "EREX_GATE",
+            "EREX_INTRO"
+          ],
+          "question_type": "situational_action",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先找落单士兵，观察风暴足在什么距离能让对方停顿",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先找会靠拢的两人，把风暴足和直剑紧接的攻击一起试",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "ER04.V1",
+          "text": "当前史东薇尔城新开的通道已把两片区域连起来，回程清楚，也知道一件尚未取回的可达装备位置；面前还可自由走动与查看已拿物品。先做什么？",
+          "scene": "史东薇尔通道前的当前选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入尚未看过的可达岔路，发现城里新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把已走过的楼层与通道作对照，画清它们如何连接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "去取得自己已见位置、但未拿到的那件可达装备，补上个人收藏缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "对照现有物品说明、建筑与遗留痕迹，把这片地方的往事联系起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当前已开放、可实际执行的探索与战斗步骤中区分动机。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER04.CORE",
+          "text": "还没进大城。当前在宁姆格福走过的一处废墟，眼前新岔路可达，附近有已看到位置但未取得的物品，回程也清楚。先做什么？",
+          "scene": "当前早期废墟岔路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入未看过的方向，发现废墟后新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把已走过的几条路画在一起，验证它们怎样相连",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "去取得眼前已见位置的物品，补自己清单里的已知缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "对照已经拿到的物品说明与建筑痕迹，联系这片地方已有的往事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER04.THIRD",
+          "scene": "葛托克能开正门时",
+          "text": "你在史东薇尔城正门旁见到葛托克。他已经给你指出侧边小路，也能按你的要求打开正门。面对这两个入口，你先走哪条？",
+          "source_ids": [
+            "EREX_STORM"
+          ],
+          "question_type": "situational_action",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "请他打开正门，试着借路上的掩体穿过弩箭火力",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "走侧边小路，从城墙外多看看还有哪些隐蔽通路",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "ER05.V1",
+          "text": "当前带着一批尚未花掉的卢恩倒下，已在熟悉赐福复活；取回路线大致知道，也能先调整装备、去别处或退出。先做什么？",
+          "scene": "复活后面对已掉落卢恩",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按已知路线回去取卢恩，先实际处理这件事",
+              "signal": "runes_retrieve_first"
+            },
+            {
+              "id": "B",
+              "label": "先调整手头装备和回去路线，再出发处理刚才那段内容",
+              "signal": "runes_prepare_return"
+            },
+            {
+              "id": "C",
+              "label": "先去另一处自己惦记的地方，把取回这件事暂时留着",
+              "signal": "runes_return_later"
+            },
+            {
+              "id": "D",
+              "label": "在当前赐福停下并退出，这次先把游戏留在这里",
+              "signal": "runes_pause"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当前已开放、可实际执行的探索与战斗步骤中区分动机。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER05.CORE",
+          "text": "不要求遇过Boss。当前在宁姆格福营地倒下后回到熟悉赐福，一小笔刚拾到的卢恩留在已知位置；有路可回，也有其他地点可去。先做什么？",
+          "scene": "当前早期受挫后的安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已知路线回去，先实际取回那笔卢恩",
+              "signal": "runes_retrieve_first"
+            },
+            {
+              "id": "B",
+              "label": "先调整当前可用装备与经过营地的路线，再回去取回",
+              "signal": "runes_prepare_return"
+            },
+            {
+              "id": "C",
+              "label": "先去另一处惦记的可达地点，把取回一事暂时留着",
+              "signal": "runes_return_later"
+            },
+            {
+              "id": "D",
+              "label": "在当前赐福停下并退出，这次先把游戏留在这里",
+              "signal": "runes_pause"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER05.THIRD",
+          "scene": "倒在学院走廊以后",
+          "text": "你从「校舍内的教室」赐福出发，在去找拉达冈的红狼之前倒在走廊。现在知道卢恩落在哪，还能先把已有的抗魔护符装上。你先做什么？",
+          "source_ids": [
+            "EREX_INTRO",
+            "EREX_REDWOLF"
+          ],
+          "question_type": "situational_action",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已经走过的走廊先去捡卢恩，拿到就考虑退回",
+              "signal": "runes_retrieve_first"
+            },
+            {
+              "id": "B",
+              "label": "先在赐福附近换好护符，再沿原路线回去取",
+              "signal": "runes_prepare_return"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "ER06.V1",
+          "text": "当前在一处赐福准备回到已经见过的危险区域，已有武器、盾与已会能力可用，菜单和地图也能查看。先做什么？",
+          "scene": "赐福前可执行的出发准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有武器与盾或已会能力重新配成能互相创造机会的一组用法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先在附近普通敌人前亲手练一次上回不顺的出手或闪避",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "在地图上排好去向、补给与返回赐福的先后，再按这条路线出发",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "按自定的持盾巡游者身份换上已有盾与武器，沿既定巡路实行先挡再还击的行动原则",
+              "signal": "role_player"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当前已开放、可实际执行的探索与战斗步骤中区分动机。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER06.CORE",
+          "text": "不要求战灰更换、法术或洗点。当前从宁姆格福赐福出发，手里有可用武器与盾，附近营地和地图均已见过。先做什么？",
+          "scene": "当前早期出发准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把盾的防护与武器还击接成一组用法，到营地实际验证它们怎样互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "到附近普通敌人前，亲手多练一次上回不顺的闪避或出手",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把去营地、取现有物资与回赐福的顺序标清，再照路线走",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "按自定的巡路护卫身份拿好已有装束与盾，实际巡查熟悉路段并遵循先挡再还击的原则",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER06.THIRD",
+          "scene": "结晶人的第一道裂纹",
+          "text": "雷亚卢卡利亚结晶坑道里，你要再试拿圆刃的结晶人。你有一把能用的打击武器，也熟悉自己原先佩盾的走法。进雾门前先怎么准备？",
+          "source_ids": [
+            "EREX_CRYSTAL",
+            "EREX_INTRO"
+          ],
+          "question_type": "situational_action",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿用熟悉的武器和盾，进门后练出能反复抓住的反击时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先换打击武器，准备在它停手的时机集中打破架势",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "ER07.V1",
+          "text": "当前在圆桌准备回到一处允许单人召唤的已开放战斗区域，已有几种可用骨灰；罗德莉卡的调灵已开放，所选骨灰也确有足够适用铃兰与卢恩可强化。先做什么？",
+          "scene": "已开放调灵时的当前准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_COOP",
+            "ER_TUNING_V5",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择能与自己现有武器或法术互相创造机会的骨灰，配好后去验证组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "选一只已有且会主动进攻的骨灰，规定自己必须等它先出手才许进攻，实际试这种限制下的配合",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "在罗德莉卡已开放的菜单里花现有材料强化常用骨灰，留下会保留的等级提升",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按自定的守望者身份选择已有骨灰与盾牌，再到可召唤区实行自己先护住同伴位置的行动原则",
+              "signal": "role_player"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当前已开放、可实际执行的探索与战斗步骤中区分动机。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER07.CORE",
+          "text": "不使用骨灰。当前在艾雷教堂铁砧前，一把现有普通武器的菜单显示可强化且现有锻造石与卢恩足够；手边也有可用盾，附近普通敌人可试。先做什么？",
+          "scene": "当前铁砧与已有武器",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这把武器与盾的防护接成相互创造机会的配合，去实际试用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "按当前已开放菜单花现有材料强化这把武器，留下会保留的装备提升",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "去附近普通敌人前，针对一次闪避或出手亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "去附近接一串熟悉攻击，体验动作、敌人反应与声音反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER07.THIRD",
+          "scene": "铁匠铺的两种材料",
+          "text": "圆桌厅堂的修古可以强化你的两把武器。一把常用普通武器要锻造石，另一把早就想试的特殊武器要失色锻造石。两样材料都已有，卢恩只够先做一把。你选？",
+          "source_ids": [
+            "EREX_HEWG",
+            "EREX_INTRO"
+          ],
+          "question_type": "situational_action",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先升级这一路常用的普通武器，让练惯的那套再往前一步",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先升有不同战技的特殊武器，想试它能不能接上自己准备的打法",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "ER08.V1",
+          "text": "当前回到圆桌，一位仍可交谈的人已有新的可听话题，自己也留有此前听过的信息与已拿物品说明。现在先做什么？",
+          "scene": "圆桌已有话题的当前行动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_STORY",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "听完当前可继续的话题，把人物经历接下去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "对照他前后说法与手中物品说明，验证自己对一处线索的理解",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按自定的传闻记录者身份，选眼前已有询问、听完后到可达地点实地走访，实行这项旅途身份",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "把当前已经听到的人物信息或已取得物品补进自己的旅途记录",
+              "signal": "game_recording"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当前已开放、可实际执行的探索与战斗步骤中区分动机。 已有物品或经历的补记只保留行为描述，不计收藏画像分。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER08.CORE",
+          "text": "未进入圆桌或特定支线。当前在宁姆格福一位已见过、仍可交谈的人前，他有眼前可选的询问，背包也有已拿物品说明。先做什么？",
+          "scene": "当前已交谈人物",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "听完当前已有话题，把已经出现的人物经历接下去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "对照他刚才说的话与手中物品说明，验证一处线索的关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "按自定的乡间传闻记录者身份选现有询问，听完后沿已经可达的方向实地走访",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "把已经听过的人物信息或已取得物品补进自己的旅途记录",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER08.THIRD",
+          "scene": "菲雅交给你的短剑",
+          "text": "你在圆桌刚从菲雅手里拿到风化短剑，D 仍在厅堂里，也有时间翻新到手的物品描述。现在先做什么？",
+          "source_ids": [
+            "EREX_FIA"
+          ],
+          "question_type": "situational_action",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开背包细看短剑的说明，想自己先把它和厅堂里的人对上",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先去把短剑递给 D，听他认出这把短剑后怎么接话",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "ER09.V1",
+          "text": "回想一次自己确实追过的人物支线，当时没有直接写明下一站。哪件真正做过的事最有分量？",
+          "scene": "真实人物支线的过去过程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_STORY",
+            "ER_START",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照人物话语与走过地方，自己连起线索并到现场验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "沿提到方向亲自走过去，在途中发现了未去过的地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "实际查过完整地点与遗漏说明，再按路线经历了想补齐的内容",
+              "signal": "guide_completion"
+            },
+            {
+              "id": "D",
+              "label": "实际先去做了别的，后来遇到新线索或重到附近才接回这件事",
+              "signal": "pace_flexible"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "回顾亲自完成的过去行为，不用未来还想继续替代经历。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER09.CORE",
+          "text": "不要求复杂支线。回想一处自己确实追过、当时尚未弄清的宁姆格福去向，哪件已经做过的事最有分量？",
+          "scene": "真实早期去向经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有话语、地图与走过地点接起来，再亲自到现场验证",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "沿大致方向亲自走过，在途中发现新的可达地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "实际查过完整路线和遗漏说明，再按路线经历了想补的内容",
+              "signal": "guide_completion"
+            },
+            {
+              "id": "D",
+              "label": "实际先做了别的，后来经过附近或再见线索才接回这件事",
+              "signal": "pace_flexible"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER09.THIRD",
+          "scene": "史东薇尔王座厅之前",
+          "text": "回想你实际推进涅斐丽和肯尼斯·海德的支线，最后在史东薇尔王座厅见到涅斐丽。一路上实际做过哪件事让你印象更深？",
+          "source_ids": [
+            "EREX_NEPHELI",
+            "EREX_PATCH"
+          ],
+          "question_type": "experience_reflection",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照海德寻找领主和涅斐丽的去向，经过几趟才把两条线接起来",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "回到葛瑞克身后的王座厅，才看到涅斐丽和海德已经在那里",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "ER10.V1",
+          "text": "回想一次自己确实与另一位真人玩家共同面对Boss的协助经历，不把NPC或骨灰算作真人。哪件当时真正做过的事最有分量？",
+          "scene": "真人协助Boss的真实回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_COOP",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "与对方聊各自经历和当时趣事，战斗后还接着提起这次同游",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "开战前共同确认目标、说清出手与跟进分工，再实际执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "挑一个仍不稳的闪避或出手时机，在那次交手里亲手练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "调整已有武器、法术或装备，让自己的能力与对方相互创造机会",
+              "signal": "build_alchemist"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "回顾亲自完成的过去行为，不用未来还想继续替代经历。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER10.CORE",
+          "text": "只回想自己确实单人玩过的一段宁姆格福，不使用真人或NPC召唤。哪件当时已经做过的事最有分量？",
+          "scene": "真实单人宁姆格福旅程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "真正走进未去过的可达支路，发现新的地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把去向、现有补给和回赐福的路线排顺，并实际完成",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "在会重新出现的普通敌人前，亲手多练一处出手或闪避时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "把已有武器与盾或另一项已会能力接成配合，亲手验证相互作用",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER10.THIRD",
+          "scene": "拉塔恩战场上的召唤记忆",
+          "text": "回想红狮子城祭典后的拉塔恩之战，你实际见过地上的 NPC 召唤记号。哪种做过的动作更值得记？",
+          "source_ids": [
+            "EREX_RADAHN"
+          ],
+          "question_type": "experience_reflection",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练会从远处躲开箭、逐步拉近到自己的攻击距离",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先奔向召唤记号再找掩体，一路把躲箭和召 NPC 的顺序排出来",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "ER11.V1",
+          "text": "回想一次自己确实在性能与负重可接受的已有装备中挑装束，哪件当时已经做过的事最有分量？",
+          "scene": "已搭配装备的真实过去",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_START",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己搭配颜色、轮廓与武器，调整普通镜头截图，做出选定的个人主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "按自定的巡路骑士身份穿好装束，并在实际巡路交手中实行先挡再还击的行动原则",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "把护甲作用与盾、武器或护符相互配合，亲手试出一套具体用法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "把当时已经取得的装备名称、说明与自己的搭配补进旅途记录",
+              "signal": "game_recording"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "回顾亲自完成的过去行为，不用未来还想继续替代经历。 已有物品或经历的补记只保留行为描述，不计收藏画像分。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER11.CORE",
+          "text": "只回想自己确实用过的早期已有装备，不要求整套盔甲。哪件已经做过的事最有分量？",
+          "scene": "真实早期装备经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己选装束、普通镜头和背景，拍出一张有个人颜色或轮廓主题的截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "按自定的巡路护卫身份使用已有装束，在实际巡查交手中遵循先护住自己再还击的原则",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "把武器与盾或另一项已有能力接成相互创造机会的配合，并亲手试用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "用当时已有的武器亲手接出一串攻击，享受动作、声音与敌人反应的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER11.THIRD",
+          "scene": "裁缝柏克能改衣服时",
+          "text": "回想你确实给过柏克缝衣针，也实际替装备看过能修改的样式。你记得更清楚的是哪次亲自做的选择？",
+          "source_ids": [
+            "EREX_BOC"
+          ],
+          "question_type": "experience_reflection",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我在柏克的菜单里对照披风等外观，选了和其他装备最相配的样式",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我换成更符合自己给褪色者设定的样子，后来实际穿着它完成了一段旅程",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    },
+    {
+      "id": "ER12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "ER12.V1",
+          "text": "回看自己已经玩过的一段本体交界地旅程，哪件实际完成的投入最接近当时重点？",
+          "scene": "已经走过的本体旅程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_START",
+            "ER_BOSS_BOUNDARY_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在会重新出现的普通敌人前多次亲手练习，逐步掌握一处出手或闪避",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用当时已有的武器、战技或法术组成配合，亲手验证相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "真正进入当时没去过的洞口或远处可达地点，发现新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "继续听完一段可进行的人物对话，并把已经发生的经历与去向联系起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "回顾亲自完成的过去行为，不用未来还想继续替代经历。",
+          "interpretation_boundary": "仅本体，不假设已击杀独有Boss能原存档复活重打；r须自定身份驱动实际行动，g须真实强化，真人召唤与骨灰/NPC明确分开。"
+        },
+        {
+          "id": "ER12.CORE",
+          "text": "只回看自己实际走过的一小段宁姆格福，不要求Boss、特殊装备或后期支线。哪项已经完成的投入最接近当时重点？",
+          "scene": "已经走过的宁姆格福",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ER_START",
+            "ER_WORLD",
+            "ER_STORY",
+            "ER_COOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在普通敌人前针对一个出手或闪避时机，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把已有武器与盾或另一项已会能力组成配合，亲手验证相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "真正进入当时没去过的支路或废墟角落，发现新的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "听完当时可进行的一段人物对话，把已有经历与去向联系起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "手写宁姆格福早期独立情境，不要求Boss击杀、骨灰、圆桌、特定支线或真人同游；装备与强化均写明已有、已开放与材料前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "ER12.THIRD",
+          "scene": "坠星之后到诺克隆恩",
+          "text": "回想你打过祭典、下到诺克隆恩，确实走过菈妮需要的猎杀指头刀那条路。哪件真正做过的事最接近当时的重点？",
+          "source_ids": [
+            "EREX_RANNI",
+            "EREX_RADAHN"
+          ],
+          "question_type": "experience_reflection",
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我从那里把指头刀带回去交给菈妮，想听她接着怎么说",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我顺着坠星留下的大坑摸进地下城，沿陌生屋顶与落脚点找路",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "以亲历的本体地点与动作区分玩家实际取舍或回顾。",
+          "interpretation_boundary": "简体中文 Steam Windows 本体。按实际任务路线、角色状态及入口作答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+ce022737fae1"
+}

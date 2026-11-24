@@ -1,0 +1,1015 @@
+{
+  "id": "scrap_mechanic_pc",
+  "title": "废品机械师",
+  "game_ids": [
+    "steam-387990"
+  ],
+  "scope": "Axolot Games Windows 正式版 1.0.7，生存前段与自造机器，另有少数挑战建造器替换情境。",
+  "status": "private_candidate_source_checked",
+  "author_review": "official_and_public_walkthrough_checked",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam Windows 本体",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "SCRAPMECH01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "SCRAPMECH01.V1",
+          "scene": "一桶水要先用在哪",
+          "text": "在正式版生存开局，池边水桶已舀满，船舱里的火还没灭完；从池边回船要走一段，而池岸还有没拿的种植用品。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_SURV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先带水回飞船灭火，能早点让修船任务进下一步",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先捡池边现成的种子和土包，再带水回去",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "给开场或首次组装决定起手",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH01.ALT1",
+          "scene": "打底还是先锁转轴",
+          "text": "在创意模式搭一台将来要移动的小车，手里的举升台还空着，车架、轴承和轮子都有。你准备从哪处开始搭？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_LIFT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在台上做一个只有一组轴承和轮的短试验，确定方向后才扩成长底盘",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先把底盘放到台上，让轴承安装时不乱转，再装车轮",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "给开场或首次组装决定起手",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH01.ALT2",
+          "scene": "先设复活点还是先造机器",
+          "text": "你已经给机械师站插上它自己的主电池；做制作机器人的材料够，旁边宿舍床也能设成复活点。出发前你先做哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_QUEST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在站内设复活点，再回去造制作机器人",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用站里已通电的设备造制作机器人，接着推进任务",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "给开场或首次组装决定起手",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "SCRAPMECH02.V1",
+          "scene": "先连转向还是先连驱动",
+          "text": "你在坠毁飞船旁的举升台上做第一辆车，驾驶座、燃油发动机、前轮转向轴承和用于驱动的车轮轴承都装好了。拿着连接工具，你先接哪组？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_LINK",
+            "SCRAPMECH_PC_BEAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从发动机接到驱动轮的轴承，把动力侧装好再接转向",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先从驾驶座接到转向轴承，独立核对左右",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "调试首次可驾车的具体步骤",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH02.ALT1",
+          "scene": "纠正方向还是再改对照",
+          "text": "小车在举升台上，座椅转向已经接好，发动机接的两只驱动轴承的箭头没按预期对应，手拿连接工具。你准备先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_LINK",
+            "SCRAPMECH_PC_BEAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用连接工具翻转方向错误的一侧，放下小车复测",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先逐一读两侧的箭头，找出是否还有座椅接错轴承，再改方向",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "调试首次可驾车的具体步骤",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH02.ALT2",
+          "scene": "先降发动机功率还是加宽轮距",
+          "text": "你在创意或自由建造里试过一台燃油小车，一拐急弯就容易侧翻；回到举升台，发动机设定可调，底盘也有部件能拉宽。你先改哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_LIFT",
+            "SCRAPMECH_PC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把轮子往两侧移、拉宽底盘，再跑老路线",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先调低发动机输出，从同一转弯再跑一遍",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "调试首次可驾车的具体步骤",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "SCRAPMECH03.V1",
+          "scene": "连船内终端还是试首车",
+          "text": "正式版生存首枚主电池已给船供电。连接工具到手，船的控制台仍断着；旁边的举升台和几块可用木块已就绪。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_QUEST",
+            "SCRAPMECH_PC_LINK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接好船内控制台，沿任务拿到航行日志",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先用手边木块在举升台拼一小块底盘，留位置给之后的车轮",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "先落实支撑装置或向前做任务",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH03.ALT1",
+          "scene": "先调起始还是先调打开的角度",
+          "text": "你在创意模式用开关、控制器和轴承搭一扇翻折门。已连线，门起始角度不合手，打开后也没抬到你想要的位置。你先动哪个设置？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_CTRL",
+            "SCRAPMECH_PC_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先调后续帧试几种开启角度，找到喜欢的幅度再校起点",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先在控制器第0帧校好合门时的起点，再设打开角度",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "先落实支撑装置或向前做任务",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH03.ALT2",
+          "scene": "试开局工具还是先搭终点路",
+          "text": "你在挑战建造器做自己的试车关卡，已经放了玩家起点，能设置是否给举升台；终点一侧的地面也能继续铺。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_CHAL",
+            "SCRAPMECH_PC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先配置起点装备并测试进入时举升台是否按设置给到",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先把起点和终点之间的路搭出基本走法，再回头改装备",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "先落实支撑装置或向前做任务",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "SCRAPMECH04.V1",
+          "scene": "先浇现有一块还是开第二块",
+          "text": "正式版生存里，池边你已经在一块土播了种，却还没浇；有满水桶，也还有土包和下一把种子。手边土地能继续铺。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_SURV",
+            "SCRAPMECH_PC_FARM",
+            "SCRAPMECH_PC_START"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把第二块铺出来也播好，回头再安排两个地块浇水",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先浇已经种好的那一块，把这一块照料到位",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "安排浇水和田间设备",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH04.ALT1",
+          "scene": "先验触发还是先调喷口",
+          "text": "创意模式里已装好能喷水的水炮，喷口可转着改摆法，开关的线还没测。你想先验证哪一部分？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_WATER",
+            "SCRAPMECH_PC_BUILD",
+            "SCRAPMECH_PC_LINK",
+            "SCRAPMECH_PC_CWATER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把开关接上，短试一次确认它真能出水",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用安装位置确定喷口朝向，再接开关试朝向是否对",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "安排浇水和田间设备",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH04.ALT2",
+          "scene": "一块块亲收还是试真空",
+          "text": "在正式版1.0.7的生存存档，种植箱里的菜已成熟，有一格空的背包空间，也有已对准种植箱、设在吸入模式的真空泵，管路连着有空位的箱子。你先怎么收？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_PATCH",
+            "SCRAPMECH_PC_FARM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先启动对准种植箱的真空泵，让装置完成收取",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "亲手收眼前的那一箱，顺带查看每箱成熟状况",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "安排浇水和田间设备",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "SCRAPMECH05.V1",
+          "scene": "先听清呼救还是整理工具",
+          "text": "机械师站有电，制作机器人已造好，生存主线的呼救目标已记到账本。余下补给能在站边整理，任务标记也可直接追。现在你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_QUEST",
+            "SCRAPMECH_PC_QUEST2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿呼救标记走，看看受困的人在哪",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先清空手边用不到的东西，把大锤和补给准备好再走",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "已有工具时执行一种准备或建设",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH05.ALT1",
+          "scene": "接回原件还是重做一块",
+          "text": "创意模式里，你的小车平台在举升台，刚脱落的整个侧边模块还在旁边并可焊。配件也够按原处重做。你先用哪种修法？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_LIFT",
+            "SCRAPMECH_PC_WELD",
+            "SCRAPMECH_PC_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留下脱落的部件作样本，在原位置重新搭一块试布局",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "用焊接工具选原件和主车的接合面，把整块接回去",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "已有工具时执行一种准备或建设",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH05.ALT2",
+          "scene": "先对照边界还是尽快开工",
+          "text": "你已在正式版生存建造委托里跟桥边的废品回收员谈过，建桥所需材料到手，游戏也标了摆放区域。你先怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_QUEST",
+            "SCRAPMECH_PC_QUEST2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿高亮区走一遍，确认首尾落点和路面宽度",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先在高亮区开始摆要求的方块，把这一段的桥做起来",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "已有工具时执行一种准备或建设",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "SCRAPMECH06.V1",
+          "scene": "先往宿舍找电还是先探周边",
+          "text": "第一趟开车到机械师站，车还有油、已停好。任务给了宿舍电池标记，站旁也有现在能检查的地方。你先怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_QUEST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看站外能安全接近的一侧，再回去取电池",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先去任务标出的中间宿舍，取机械师站的电池",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "处理关口的路线与线路",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH06.ALT1",
+          "scene": "直连试灯还是先做延迟",
+          "text": "创意试验台上有个开关、计时器和一盏可连接的灯，全装在同一块底板。你做一个延迟亮灯的小装置，先试哪种接法？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_TIMER",
+            "SCRAPMECH_PC_LINK",
+            "SCRAPMECH_PC_BUILD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开关直连灯，确认输出有反应，再接计时器",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先用开关接计时器、计时器再接灯，从完整线路设置延迟",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "处理关口的路线与线路",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH06.ALT2",
+          "scene": "先看任务材料还是先看地形",
+          "text": "在正式版生存，已经收到帮助胡伯特修瞭望塔的任务，修建点可到，日志也会列当次材料。还没有动工。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_QUEST",
+            "SCRAPMECH_PC_QUEST2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿塔基绕一圈看需要覆盖的位置，再去对照任务要求",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先查日志和界面给出的材料要求，再决定先搬哪些",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "处理关口的路线与线路",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "SCRAPMECH07.V1",
+          "scene": "先试直行还是先试转弯",
+          "text": "你的生存首车已接好座椅、发动机和轴承，发动机里有油，车放到地面。前方有一段较平的空地，能先直走或先低速转弯。你会先试什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_BEAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先轻踩前进，确认两侧驱动轮真把车往同一个方向推",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先慢慢左右转，看前轮转向是否合力，再试直走",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "路试后决定继续推进或继续调整",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH07.ALT1",
+          "scene": "先模拟按钮还是先接传感器",
+          "text": "创意里活塞门已经装到框架上，同一作品上有可接的按钮和传感器。你手里的连接工具能二选一，不打算同时接两个信号。你先试哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_BUILD",
+            "SCRAPMECH_PC_LINK",
+            "SCRAPMECH_PC_CTRL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接传感器，在它定好的探测范围内走过测试自动开合",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用按钮触发伸缩，手动反复测试是否卡框",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "路试后决定继续推进或继续调整",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH07.ALT2",
+          "scene": "先记去车站路径还是加固首车",
+          "text": "你在生存开局拿到了飞船日志，去机械师站的标记打开。首车已能开，车上还有改动轮轴和外形的空间，手头有多余部件。出发前你怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_LIFT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看日志和地标记方向，沿已能通过的路开一段再改车",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先把车上还想试的轮距和底盘位置调好，再开向车站",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "路试后决定继续推进或继续调整",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "SCRAPMECH08.V1",
+          "scene": "先留一个基准还是先改涂装",
+          "text": "创意里一辆车能开，已重新放在举升台上。你有喷漆工具，举升台蓝图菜单也可打开。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_LIFT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用喷漆工具把车身改到喜欢的配色，再保存这一版",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先用举升台存目前能开的车作为蓝图，再试新的涂装",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "决定更改之前怎样保存和试验",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH08.ALT1",
+          "scene": "继续浇水还是先加一道挡板",
+          "text": "正式版生存，露地作物已经触发袭击警告，但此刻还没开打。池水和浇水桶在手，农地有一侧还可临时加挡板，你也有材料。先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_FARM",
+            "SCRAPMECH_PC_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把未浇的那片种植地照料一下，再回头看工事",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先在空着的一侧放挡板，争取多一点反应空间",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "决定更改之前怎样保存和试验",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH08.ALT2",
+          "scene": "检验举升台还是检验连接逻辑",
+          "text": "你在自己的挑战里已设置开局给举升台和连接工具，也准备了一辆有按钮和可动作零件的试车。从起点进入测试后，计时还没开始，试车是启用的建造平台内可以抬起的作品。先核哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SCRAPMECH_PC_PLAYER",
+            "SCRAPMECH_PC_CHAL",
+            "SCRAPMECH_PC_LINK",
+            "SCRAPMECH_PC_PLATFORM",
+            "SCRAPMECH_PC_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用连接工具看按钮的线路，试按它检查车上的响应",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先用举升台把试车抬起，确认开局工具确实发了",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "决定更改之前怎样保存和试验",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "SCRAPMECH09.V1",
+          "scene": "灭掉火还是接回控制台",
+          "text": "回想正式版生存开场，你舀水灭过船里的火，也亲手把船的线路接回去。哪一段让你最想重开一个存档？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_SURV",
+            "SCRAPMECH_PC_FULL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从池边带水回船舱，看最后一处火消下去，开局开始往下走",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "看断线的终端接好后恢复工作，觉得手上的工具开始管用",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾开局阶段中的真实改造或资源获取",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH09.ALT1",
+          "scene": "悬空改架还是放下来试跑",
+          "text": "你确实用举升台固定过自造车，也把它放到地面试开过。哪一刻更像你喜欢的《废品机械师》？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_LIFT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把卡在举升台上的车释放下来，实际踩一下看它沿地面怎么动",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "车架抬起来后能看到轴承和轮子，开始逐处改布局",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "回顾开局阶段中的真实改造或资源获取",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH09.ALT2",
+          "scene": "拿电池还是顺着破箱找零件",
+          "text": "你在船外废墟拿过第一枚主电池，也确实在坠船附近查过破损物资箱。开局最想再探索哪部分？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_SURV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在废墟确认能让飞船恢复电力的电池，带回用到插槽",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "跟着零散的破箱翻找，留意有哪些材料能带回用",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回顾开局阶段中的真实改造或资源获取",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "SCRAPMECH10.V1",
+          "scene": "更喜欢自己调控制器还是看成品活动",
+          "text": "你用控制器和轴承做过能打开再闭上的门。哪部分你还想再做一遍？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_CTRL",
+            "SCRAPMECH_PC_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看门抬起来时和车架或入口合在一起的样子，再调整外形",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "调各帧的角度和方向，让它按预定顺序转过去",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾最值得重玩的可用机器体验",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH10.ALT1",
+          "scene": "记忆落在出发还是试装",
+          "text": "你用生存首车离开过举升台，并曾沿标记往机械师站开。想重玩这段你更看重什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回看驱动轮和座椅线路凑成能用的一台车",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "重走车第一次带我离开飞船、接上真实道路的一段",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "回顾最值得重玩的可用机器体验",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH10.ALT2",
+          "scene": "喜欢找错线还是把它试上路",
+          "text": "你做过四轮车，并真用连接工具翻转过一个接反的驱动轴承，修改后也有实际路试。哪部分更想回看？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_LINK",
+            "SCRAPMECH_PC_BEAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "修完去同一段地上重新开，体会问题是不是真的解决",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看连接点标的箭头，找到是哪一边让我前进时转反",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "回顾最值得重玩的可用机器体验",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "SCRAPMECH11.V1",
+          "scene": "床位安心还是制作提升",
+          "text": "你真正到了机械师站，用它当过复活点，也做过第一台正式的制作机器人。这次站稳脚跟的体验最喜欢哪部分？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_QUEST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "到站把床设好，第一次有一个想留着使用的落脚处",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "造完制作机器人后，多项零件和装置终于能接着做",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "回顾一项建造具体如何生效",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH11.ALT1",
+          "scene": "最想留住哪种调试",
+          "text": "你在创意里做过驾驶座的转向连线，也给发动机连过驱动车轮。回想小车终于能按想法走时，你最喜欢哪一块？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_BEAR",
+            "SCRAPMECH_PC_LINK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用它低速绕个弯，直观感到能同时控制转向和前进",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让座位和发动机分别管自己的轴承，第一次把两套线路分清楚",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾一项建造具体如何生效",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH11.ALT2",
+          "scene": "造完通路还是拿蓝图",
+          "text": "在生存模式，你真的做过桥边那项建造委托，把方块摆进高亮区，验收后回去找过委托人。回顾时什么更想重温？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_QUEST",
+            "SCRAPMECH_PC_QUEST2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用手上方块把指定的缺口拼成可走桥面",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "回去交任务并领到这一项相应的奖励",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回顾一项建造具体如何生效",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "SCRAPMECH12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "SCRAPMECH12.V1",
+          "scene": "想再试造型还是想再调操作",
+          "text": "你已用举升台存过自己的创意车，并在同一个存档动过车身颜色和转向设定。回忆哪个迭代更有满足感？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_LIFT",
+            "SCRAPMECH_PC_MAN",
+            "SCRAPMECH_PC_BEAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保存偏好的连线和轴承设定，下次载入能继续试",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "给车身分块喷色，一眼就看出这是我做的那台",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "回顾自己愿继续迭代的成果",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH12.ALT1",
+          "scene": "浇起来还是守下来",
+          "text": "你曾用坠船旁的水桶照顾播下的作物，之后也在正式版成功守过一次露地袭击。这段生产和防守最想重温哪一面？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_START",
+            "SCRAPMECH_PC_FARM",
+            "SCRAPMECH_PC_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从池边运水，把每块刚种的地照看到开始长",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "看到袭击提示以后，临时安排防守位置，最后保住已种的东西",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾自己愿继续迭代的成果",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        },
+        {
+          "id": "SCRAPMECH12.ALT2",
+          "scene": "想重做玩法还是先核开场条件",
+          "text": "你做过一个有玩家起点的自建挑战，并从起点测过一遍。哪部分最有动力回去继续改？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SCRAPMECH_PC_CHAL",
+            "SCRAPMECH_PC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "改起点能发的工具，并实际进入测试有没有按设定给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "重搭起点和终点之间的道路，让测试时每次有不同走法",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "回顾自己愿继续迭代的成果",
+          "interpretation_boundary": "按自己经历的生存、创意或自建挑战操作作答，可换未体验场景。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+9a9762f2efe7"
+}

@@ -52,7 +52,7 @@ def main():
     assert tested and tests.rstrip().endswith('OK')
     versions = {p['id']: p['version'] for p in bank['packs']}
     for module_name, parent_path in zip(args.module, args.parent):
-        assert re.fullmatch(r'question_batch\d{2}(?:_[a-z0-9]+)?', module_name)
+        assert re.fullmatch(r'question_batch\d{2,}(?:_[a-z0-9]+)?', module_name)
         module = importlib.import_module(module_name)
         parent = read(parent_path)
         source_sha = hashlib.sha256((ROOT / 'scripts' / (module_name + '.py')).read_bytes()).hexdigest()

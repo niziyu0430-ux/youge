@@ -1,0 +1,1075 @@
+{
+  "id": "wutheringwavescn",
+  "title": "鸣潮",
+  "game_ids": [
+    "wuthering-waves"
+  ],
+  "scope": "库洛官服 Windows《鸣潮》，以瑝珑今州早期及常驻玩法为主。",
+  "status": "private_candidate_pending_independent_review",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "库洛国服《鸣潮》PC",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "十二槽每槽三景，首题八道行动和四道回顾。角色、训练或地图功能需已开放。",
+    "协奏能量用于换人变奏和延奏，共鸣能量用于共鸣解放，二者独立。声骸只调用首位技能。"
+  ],
+  "slots": [
+    {
+      "id": "WWCN01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "WWCN01.V1",
+          "scene": "中曲台地信标与声匣",
+          "text": "在瑝珑的中曲台地，地图上有一个没开过的共鸣信标。你沿路还看到一枚能爬过去拿的声匣。时间只够先去一处，你走哪边？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先爬过去收声匣，这枚已经知道位置，顺路拿掉",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先开信标，把下次回来搜这片地的落脚点固定下来",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TRAVEL",
+            "WWCN_CHEST"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "野外第一站先开路还是顺手做事",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN01.V2",
+          "scene": "今州首次声匣交付",
+          "text": "你在今州城附近攒够一次声匣交付量，陈皮那里可以领取下一档奖励。城外也还有一枚你已经定位的声匣。你先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先去找陈皮交到下一档，把这次积累变成看得见的进度",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先取已经定位的那枚，等这一小片收齐再回城交",
+              "signal": "collector"
+            }
+          ],
+          "source_ids": [
+            "WWCN_CHEN",
+            "WWCN_CHEST"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "野外第一站先开路还是顺手做事",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN01.V3",
+          "scene": "追踪路线与未开信标",
+          "text": "你在今州从角色界面追踪一项残象掉落，地图标出的残象在通往未激活信标的岔路上。两边都能安全抵达。你先去哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先跟着地图去打标出的残象，补角色材料，再继续开信标",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先激活信标，给下次留个落脚点，再沿路折回去打标出的残象",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_FUSE",
+            "WWCN_TRAVEL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "野外第一站先开路还是顺手做事",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "WWCN02.V1",
+          "scene": "中曲台地两份野外回响",
+          "text": "路过中曲台地，你刚打完两种残象，留下两份可吸收的回响。一个补上图鉴里没收过的种类，另一个是你想刷的套装可能出的那种。只来得及先拿一份，你选？",
+          "options": [
+            {
+              "id": "A",
+              "label": "吸收图鉴没收过的种类，先登记这个新声骸",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "吸收已有但可能带目标合鸣的一份，回去看看能不能上身",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "WWCN_DROP",
+            "WWCN_ECHO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "看见残象回响后决定怎样补资料",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN02.V2",
+          "scene": "无音区和野外缺件",
+          "text": "今州一处无音清剿的奖励包含你想要的合鸣套装。你已解锁挑战，数据坞也已收录这处可以产出的目标声骸，有够领一轮的结晶波片。野外能追踪到这种残象。你先去哪？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先去野外试吸收目标残象，保留结晶波片顺便补沿途图鉴",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "去打无音清剿，领这处随机产出的声骸和培养材料",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "WWCN_DROP",
+            "WWCN_TACET",
+            "WWCN_ECHO",
+            "WWCN_UPDATE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "看见残象回响后决定怎样补资料",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN02.V3",
+          "scene": "同种残象的第二份回响",
+          "text": "今州野外一只已登记的残象又掉了可吸收的回响，前方还看到一只尚无记录的残象。来得及先做一件，你选什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先收这份回响，回到数据坞看看有没有补上这个种类更高的品质",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先过去打自己没遇过的残象，看看这块地图还有哪些种类",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "WWCN_DROP",
+            "WWCN_UPDATE",
+            "WWCN_ECHO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "看见残象回响后决定怎样补资料",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "WWCN03.V1",
+          "scene": "首位鸣钟之龟和进攻声骸",
+          "text": "你已拥有能装到同一人物首位的鸣钟之龟和一个进攻声骸，整套都有可用方案。下一场是已解锁的今州强敌，你先试哪套？",
+          "options": [
+            {
+              "id": "A",
+              "label": "用进攻声骸，把声骸技能排到自己常用的输出顺序里",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "用鸣钟之龟的减伤照顾换上来的队友，把输出交给角色自己",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TURTLE",
+            "WWCN_ECHO",
+            "WWCN_COMBAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "以COST和首位声骸分配现有素材",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN03.V2",
+          "scene": "彻空冥雷还差一件",
+          "text": "你给今州队伍里的导电输出配声骸，剩下的COST只够一枚1费。手头一枚不同种类的声骸能补出「彻空冥雷」两件效果，另一枚不属该套但主音属性更适合。你试哪种？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先凑出彻空冥雷两件，把配装围绕已有合鸣定下来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先装合适的主音属性，打一轮再决定要不要补两件效果",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "WWCN_ECHO",
+            "WWCN_DROP"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "以COST和首位声骸分配现有素材",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN03.V3",
+          "scene": "一份密音筒给谁",
+          "text": "你只有一份愿意投入的密音筒。声骸背包里，一个已装备的声骸主音属性合适，另一个没培养过但可以装上测试新的合鸣组合。先给谁？",
+          "options": [
+            {
+              "id": "A",
+              "label": "给能试新组合的那件，换上后看看触发结果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "给正在用的那件，先把当前阵容稳稳向前推一点",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TACET",
+            "WWCN_UPDATE",
+            "WWCN_ECHO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "以COST和首位声骸分配现有素材",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "WWCN04.V1",
+          "scene": "今州两名共鸣者头像亮起",
+          "text": "今州一组残象还没清完，场上角色攒满协奏，另外两名队员的头像已经亮起。怪还能被场上角色打到，你现在怎么接？",
+          "options": [
+            {
+              "id": "A",
+              "label": "按原本排好的出场顺序换人，把延奏和下一位变奏接上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用场上角色做完眼前这段安全输出，把换人的收益留给下一轮",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT",
+            "WWCN_CONCERT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "用协奏能量决定换人时点",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN04.V2",
+          "scene": "白芷交接给谁",
+          "text": "你已把白芷和两位队友编进队伍。她的协奏满了，一位队友血量偏低但仍能上场，另一位状态好且共鸣解放就绪。你把这次延奏接给谁？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先换解放就绪的队友，把支援和爆发放在同一段输出里",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "让血量偏低的队友接支援，先把这位成员拉回能持续作战的状态",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_BAIZHI",
+            "WWCN_CONCERT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "用协奏能量决定换人时点",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN04.V3",
+          "scene": "协奏还没攒满但能换",
+          "text": "你在今州遭遇战中协奏快满，眼下可安全再用一次技能，也能现在直接换到另一名共鸣者。他已有可用的共鸣解放。你怎么接？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先把快满的协奏打满，再用延奏和变奏一起交接",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "现在就换，先用这位队员已准备好的共鸣解放试着压过去",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT",
+            "WWCN_CONCERT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "用协奏能量决定换人时点",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "WWCN05.V1",
+          "scene": "无冠者的破绽光圈",
+          "text": "打今州无冠者时出现了可逆势回击的破绽光圈，你用的是能及时打到它的近战角色。下一次光圈收拢时你怎么处理？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先闪过去保住这轮，再等安全空当按自己的顺序输出",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "练这一下出刀的时点，争取逆势回击打断它并削减共振度",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "逆势回击与闪避如何选择",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN05.V2",
+          "scene": "全息无冠者试招",
+          "text": "你已开启无冠者的全息战略，上一把在一个可逆势回击的招式上连续失手。再进一把，这一招你先怎样处理？",
+          "options": [
+            {
+              "id": "A",
+              "label": "专心等那个光圈合拢，用几次尝试把反击动作练顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "这次先闪过，观察招式起手，再找自己之前出刀太早还是太晚",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT",
+            "WWCN_HOLO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "逆势回击与闪避如何选择",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN05.V3",
+          "scene": "没有破绽光圈的近身一击",
+          "text": "今州一只残象抬手要打，没有出现破绽光圈。你有耐力闪避，旁边也有能提前退到的空地。你先怎么应对？",
+          "options": [
+            {
+              "id": "A",
+              "label": "提前移到安全一侧，等动作打完再回去续伤害",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "贴着它等最后一刻闪避，成功后练接一记闪避反击",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "逆势回击与闪避如何选择",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "WWCN06.V1",
+          "scene": "今州强敌失衡后留招",
+          "text": "今州一只强敌的共振条刚打空，暂时不能行动。场上角色的共鸣解放和首位进攻声骸都可用。你打算怎么花这两项？",
+          "options": [
+            {
+              "id": "A",
+              "label": "都放在这段安全输出里，试试已有的连招顺序",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先用首位声骸，留共鸣解放给下一次可靠空当",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT",
+            "WWCN_ECHO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "把共鸣解放和声骸技能用在当前窗口",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN06.V2",
+          "scene": "白芷共鸣解放与手头治疗",
+          "text": "今州野外刚清完一波，白芷的共鸣技能和共鸣解放都可用，场上有人掉血，前面还有一波。你怎么安排？",
+          "options": [
+            {
+              "id": "A",
+              "label": "马上用共鸣解放把队伍状态拉上来，接下一波时从当前进度完整推过去",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先用共鸣技能处理眼前掉血，把解放留给下一波",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_BAIZHI",
+            "WWCN_COMBAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "把共鸣解放和声骸技能用在当前窗口",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN06.V3",
+          "scene": "鸣钟之盾的短时机会",
+          "text": "你已把鸣钟之龟装在首位，面对今州强敌时声骸技能已冷却好。你预判很快有一轮不易完全躲开的连击，也能先打一段。你怎么做？",
+          "options": [
+            {
+              "id": "A",
+              "label": "等连击将到再开鸣钟之盾，让减伤覆盖最需要的时段",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把加护和手头输出接在一起，趁它没起手压一段，然后自己闪避",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TURTLE",
+            "WWCN_COMBAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "把共鸣解放和声骸技能用在当前窗口",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "WWCN07.V1",
+          "scene": "定向融合还是留胚子",
+          "text": "数据坞已开放定向融合，目标合鸣可选，本周还有次数。你凑足五件可消耗的五星声骸，都没装备、没锁定、没强化，其中一件还能作队友的备件。你先怎么做？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先留下还能用的那件，等再有一件可消耗的五星才合",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "现在用五件定向融合，换一次拿到当前目标套装胚子的机会",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "WWCN_FUSE",
+            "WWCN_FUSEUI",
+            "WWCN_UPDATE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "看材料与装备条件选下一次投入",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN07.V2",
+          "scene": "今州养成材料追踪",
+          "text": "在今州，你准备强化手头一个角色。角色页面能追踪一批升级材料对应的残象，也能打开声骸背包比较两件没下决定的候选。现在只够做一项，你先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先追材料，把目前搁着的角色养成推过一个节点",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先试戴两件候选，确认自己下次该刷哪类主音属性",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "WWCN_FUSE",
+            "WWCN_UPDATE",
+            "WWCN_DROP"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "看材料与装备条件选下一次投入",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN07.V3",
+          "scene": "今州两种挑战的波片",
+          "text": "你已能打今州的「无音清剿」和「模拟领域」，结晶波片只够领一边。一位共鸣者缺突破用的贝币，队里刚装上的一件声骸缺密音筒。先用在哪？",
+          "options": [
+            {
+              "id": "A",
+              "label": "去「无音清剿」领声骸培养材料，先让测试中的配装能继续往上练",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "去「模拟领域」领贝币，先让已经练了一阵子的角色突破",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TACET",
+            "WWCN_SIM",
+            "WWCN_UPDATE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "看材料与装备条件选下一次投入",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "WWCN08.V1",
+          "scene": "高处滑翔落点",
+          "text": "在今州高处，你能滑翔到已看见的坡面，也能沿来路下去找一条缓坡，目标是同一枚声匣。体力足够滑到那段坡面。你先试哪条？",
+          "options": [
+            {
+              "id": "A",
+              "label": "从高处滑翔过去，借机看周围还有没有落点和岔路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿安全坡面下去，先把能复走的路线认清再收声匣",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TRAVEL",
+            "WWCN_CHEST",
+            "WWCN_GLIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "选择接近今州野外高低差的路",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN08.V2",
+          "scene": "带钩锁的中曲台地近路",
+          "text": "你在中曲台地看见可用的钩锁点，抓上去可以接近高处。坡下还有一条你已走过的路，同样能到想收声匣的地方。你会？",
+          "options": [
+            {
+              "id": "A",
+              "label": "走已知道能到的坡下路线，把这枚声匣先收进度",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "试着用钩锁到高处，再接滑翔找目标附近的落点",
+              "signal": "play_inventor"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TRAVEL",
+            "WWCN_CHEST",
+            "WWCN_GRAPPLE",
+            "WWCN_GLIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "选择接近今州野外高低差的路",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN08.V3",
+          "scene": "路边回响还是翻过山脊",
+          "text": "在今州，你从刚开的共鸣信标准备出发。山脊另一侧未走过，路边却有一只你还没登记声骸的残象。你先去哪？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先跑过山脊去看地形，从高处看看有没有下一处落脚点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先打残象，若掉回响就登记，探索前做好这一份补录",
+              "signal": "collector"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TRAVEL",
+            "WWCN_DROP",
+            "WWCN_ECHO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "选择接近今州野外高低差的路",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "WWCN09.V1",
+          "scene": "第一次压空共振",
+          "text": "回想在无冠者战里把共振条打空。哪一点更让你愿意再打一把？",
+          "options": [
+            {
+              "id": "A",
+              "label": "它停手后我能完整接出原先总被打断的一段连招",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "抓到一次逆势回击后白条明显变短，让我能确认时机按对了",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾留意到的战斗反馈",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN09.V2",
+          "scene": "闪避后接反击",
+          "text": "回想在今州野外，你躲过残象蓄起的一击又接上闪避反击。你后来更留意什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想把同一招再练几次，让闪避到回击成为手上的顺序",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "想分辨刚才是等对了抬手，还是单靠拉开距离避过",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾留意到的战斗反馈",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN09.V3",
+          "scene": "换人亮起的时刻",
+          "text": "回想你第一次留意到协奏满时队友头像闪亮，并成功把变奏接进战斗。你愿意继续练是因为？",
+          "options": [
+            {
+              "id": "A",
+              "label": "可以按自己的队伍顺序，把谁离场和谁入场串成一套",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "画面和入场技能直接告诉我这次换对了时点",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT",
+            "WWCN_CONCERT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾留意到的战斗反馈",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "WWCN10.V1",
+          "scene": "首位声骸换掉之后",
+          "text": "回想你第一次把今州探图打到的声骸装到首位，在野外按出了它的技能。后来又去收声骸，更像出于什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想找能塞进自己连招顺序的技能，回去再试另一套出手方法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "想吸收更多遇过的残象，让图鉴留下每种的实际记录",
+              "signal": "collector"
+            }
+          ],
+          "source_ids": [
+            "WWCN_ECHO",
+            "WWCN_COMBAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾声骸进度与配装动机",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN10.V2",
+          "scene": "鸣钟之龟实战以后",
+          "text": "如果你曾用鸣钟之龟减伤接过敌人的连击，后来为什么还考虑留着这只声骸？",
+          "options": [
+            {
+              "id": "A",
+              "label": "它和队里的合鸣方案能搭起来，可以继续试主音属性和轮换",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "它给我足够的容错，让我敢分神管换人、站位和技能顺序",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TURTLE",
+            "WWCN_ECHO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾声骸进度与配装动机",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN10.V3",
+          "scene": "声骸背包保留一件旧胚子",
+          "text": "回想在声骸背包按合鸣和主音属性翻出一件在今州吸收的旧声骸。你当时为什么想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "它是刚开荒时首次登记的那类，我想留着这个自己的旧物",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "主音属性加合鸣的组合可能对另一名角色有用，留个可实测的胚子",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "WWCN_DROP",
+            "WWCN_UPDATE",
+            "WWCN_ECHO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾声骸进度与配装动机",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "WWCN11.V1",
+          "scene": "中曲台地声匣从侧面拿到",
+          "text": "回想你绕高低差取得一枚中曲台地声匣。哪一点让你想继续走下一段？",
+          "options": [
+            {
+              "id": "A",
+              "label": "绕路时发现能滑到以前没看见的地形，想沿新路继续走",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "那一枚终于进到我的收集进度，附近剩的也想找齐",
+              "signal": "collector"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TRAVEL",
+            "WWCN_CHEST"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾路线后愿意再探索什么",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN11.V2",
+          "scene": "进城把声匣交给陈皮",
+          "text": "回想第一次带着一批声匣回今州城交给陈皮。后来再出城，你更想做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "按交付的下一档设置一个小目标，把当前区域的进度再推一段",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "利用交付的机会回想刚绕过哪些岔路，挑一块从未去过的地方看一看",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "WWCN_CHEN",
+            "WWCN_CHEST"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾路线后愿意再探索什么",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN11.V3",
+          "scene": "今州信标开通后回访",
+          "text": "回想今州一个早期开通的共鸣信标。后来你再传送过去，更多是为了什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "从已经认识的这一侧出发，去看看上次没走的方向",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "让附近的残象和声匣串成一条自己记得住的短路线",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_TRAVEL",
+            "WWCN_CHEST"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾路线后愿意再探索什么",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "WWCN12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "WWCN12.V1",
+          "scene": "今州同行开篇的异常",
+          "text": "回想「万象新声·上」里秧秧和炽霞同行，而漂泊者的盘古终端无法照常吸收残象回响。后来使你想沿今州任务继续走的更像是什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想知道同行两人如何看待漂泊者，也想弄清异常和主角过去的关系",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想弄懂为什么看到了金色回响却无法用终端吸收，看看后续解释能否对上这条线索",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "source_ids": [
+            "WWCN_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾愿意再接回来的内容",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN12.V2",
+          "scene": "白芷的换人支援",
+          "text": "如果你曾让白芷攒满协奏再换给队友，过了一段时间又想用这套队伍。你更期待哪一部分？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想让手头相同的角色挑战一场之前没站稳的今州战斗",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想把治疗、延奏和队员轮换又接成可靠的一串",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WWCN_BAIZHI",
+            "WWCN_CONCERT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾愿意再接回来的内容",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        },
+        {
+          "id": "WWCN12.V3",
+          "scene": "从普通无冠者到下一次练习",
+          "text": "回想你在今州无冠者战中学会用破绽光圈判断何时出刀。再遇同类强敌，你更想验证什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "能不能把从前只按准一两次的逆势回击变成稳定动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "想看换了一只残象以后，破绽光圈会出现在怎样不同的招式里",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "WWCN_COMBAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾愿意再接回来的内容",
+          "interpretation_boundary": "库洛国服《鸣潮》Windows 端。只按亲自体验且符合题设的角色、工具和解锁条件作答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+d0bf3afb489c"
+}

@@ -1,0 +1,1047 @@
+{
+  "id": "valkyria1v5",
+  "title": "战场女武神",
+  "game_ids": [
+    "steam-294860"
+  ],
+  "scope": "初代本体 PC；不采用续作新增兵种或规则",
+  "status": "private_draft_pending_independent_review",
+  "author_review": "source_checked_structural_review",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "初代战役与遭遇战",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "行动题的共同条件均为题设，不代表所有地图都同时存在，难以确认的事件需换题。VCH07 同兵种特性和关系的可用性随角色不同，不能保证任何两人都具备指定关系。",
+    "V2：重新核对每个 build_alchemist 信号；纯战术选择改成可解释的中性行为，保留明确比较和搭配的条目。PC Steam 随版说明书直接支持基本机制和可重打遭遇战，仍未在 PC 实机验证具体任务和场面并存。",
+    "明确第三章两个部署区、第四章河岸推进、第五章林地和补给库，拆开重复的沙袋、救援、遭遇战与瓦塞尔回忆。用具名地图、机制和角色确认初代。"
+  ],
+  "slots": [
+    {
+      "id": "VCH01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "VCH01.V1",
+          "scene": "瓦塞尔第三章的部署",
+          "text": "瓦塞尔市街战开始前，西侧营地和东侧雪绒花号附近都还有空位。你只有一个最后想编入的队员，优先把谁放到哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_BRIDGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把反坦克兵放到西侧，应付可能从图书馆附近逼近的轻型坦克",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "把自己想写成搭档的侦察兵编到雪绒花号这边，让她和熟悉队员一起走东侧",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH01.V2",
+          "scene": "第四章河岸推进",
+          "text": "夺桥战中，雪绒花号能从河岸一带推进，工程兵也来得及跟上。当前指挥点允许先动其中之一，你怎么用？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_PC4"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先派工程兵沿安全一侧跟进，留在下一次能维修战车的位置",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "B",
+              "label": "先操作雪绒花号贴河岸往前开，想亲手找车体掩护步兵的角度",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH01.V3",
+          "scene": "第五章森林北路",
+          "text": "克罗登森林北路发现地雷，工程兵可以过去，另一名队员也能走一段尚未查过的侧路。你先动谁？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_CH5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先派工程兵排掉地雷，给小队沿已知北路的行动开路",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先让能安全到达的队员探索没查过的侧路，看看它通向基地的哪一边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "VCH02.V1",
+          "scene": "最后指挥点",
+          "text": "这一回合只剩一个指挥点，一名队员倒地，另一名步兵已靠近并能在本次行动接触他；我方侦察兵也能继续前进。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按指挥官不抛弃同伴的原则，派附近队员接触伤员并呼叫军医",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "让侦察兵继续靠近敌方据点，争取推进本次占领目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH02.V2",
+          "scene": "战车维修",
+          "text": "雪绒花号车体受损，工程兵能够接近并维修；你也能用步兵行动。当前剩余指挥点有限，你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让步兵向敌方据点推进，争取在本回合建立前沿阵地",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先派工程兵维修雪绒花号，把这台一路同行的战车维护好",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH02.V3",
+          "scene": "克罗登检查站前给反坦克兵补给",
+          "text": "克罗登森林的检查站前，一名反坦克兵已经打光炮弹。工程兵能接近补给，另一名有炮弹的反坦克兵也已能行动。你先调谁？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_CH5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先派工程兵补给原来那名反坦克兵，按自己设想的老搭档关系，让他们继续一起打这关",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先让已装弹的反坦克兵行动，争取解除检查站装甲的威胁",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "VCH03.V1",
+          "scene": "有限经验",
+          "text": "战斗结束后，训练场的经验只够提升一个兵种，你常使用侦察兵和突击兵。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较现有侦察兵和突击兵的能力后训练突击兵，组成自己想试的远近配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "继续训练常用的侦察兵，看这个兵种逐渐成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH03.V2",
+          "scene": "不同兵种训练",
+          "text": "回到训练场，你有经验可分配给工程兵或反坦克兵。下一场准备让两种兵配合雪绒花号，你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "持续把经验投向常用的反坦克兵，想看到这支队伍从最早几场一路变强",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先训练工程兵，作为维修战车和补给队友的配合力量",
+              "signal": "purchase_available_upgrade"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH03.V3",
+          "scene": "军备研发",
+          "text": "有一笔可用经费，研发部同时开放步兵武器和雪绒花号车体强化。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先研发步兵武器，让步兵的火力与战车配合",
+              "signal": "purchase_available_upgrade"
+            },
+            {
+              "id": "B",
+              "label": "优先强化一路使用的雪绒花号车体",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "VCH04.V1",
+          "scene": "夺桥战占领前沿营地",
+          "text": "夺桥战里河岸前沿营地的旗帜已经无人守卫，侦察兵够得到，其他人还能行动。你先怎样用指挥点？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_PC4"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让侦察兵占领营地，再准备把自己想象中总与她配合的队员调到前线",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先让其他队员清掉附近仍威胁旗帜的敌军，再去接管营地",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH04.V2",
+          "scene": "前沿营地",
+          "text": "友军已占领前沿营地；一名受伤的步兵在附近，另一名预备队员可部署。行动机会有限时，你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从营地部署预备队，试着调整前线的兵种组合",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "让受伤步兵退入营地，贯彻自己为指挥官设定的保护队员原则",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH04.V3",
+          "scene": "接近旗帜",
+          "text": "目标营地的守军已被清除，己方步兵和战车都在附近，周边仍有敌方目标，你还有足够指挥点。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "让步兵接触旗帜占领营地，再利用它安排增援",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "多次操纵战车转向和炮击，观察并改善自己的操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "VCH05.V1",
+          "scene": "命令与移动",
+          "text": "你已经学会回避提升命令，侦察兵将经过敌方迎击火力，剩余指挥点足够使用一项命令或行动其他兵种。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_ORDERS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "让突击兵靠近并射击敌人，以第七小队互相掩护的原则为侦察兵开路",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "给侦察兵下回避提升命令，让她有机会完成自己定下的穿越火线目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH05.V2",
+          "scene": "防御命令",
+          "text": "已学会防御提升命令，突击兵即将接近有敌人守卫的掩体；另一名己方步兵也在场。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_ORDERS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给突击兵下防御提升命令，配合其接近掩体",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "B",
+              "label": "让另一名步兵先射击掩体附近的敌人，贯彻自己为队伍设定的互相掩护原则",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH05.V3",
+          "scene": "节省指挥点",
+          "text": "这回合还有若干指挥点，而敌军位置不利于贸然推进；你可以结束回合保存未用点数，也可让可行动的侦察兵出动。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "让侦察兵沿可见路线推进，亲自观察前方敌军位置",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先保存部分指挥点，为下一回合集中行动做准备",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "VCH06.V1",
+          "scene": "战车和步兵",
+          "text": "雪绒花号前面有沙袋，突击兵在附近，战车炮击和步兵行动都有机会进行。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "驾驶战车碾过沙袋，享受战车冲开障碍的过程",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "派突击兵靠近沙袋投掷手榴弹，把敌兵逼离掩体",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH06.V2",
+          "scene": "瓦塞尔图书馆附近的敌坦克",
+          "text": "瓦塞尔市街战里，一辆轻型坦克已逼近西侧，第七小队的反坦克兵够得到它的后方，雪绒花号也能行动。你先派谁？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_BRIDGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开雪绒花号找炮击位置，我想亲手控制战车瞄准",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先用反坦克兵找角度打散热器，解除这辆坦克对西侧营地的威胁",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH06.V3",
+          "scene": "克罗登检查站前的固定火力",
+          "text": "克罗登森林里，你发现有固定火力覆盖雪绒花号接下来要走的公路，眼下能调步兵从侧面靠近，战车也还能行动。你先怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_CH5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿此前没查过的侧路移动步兵，想弄清固定火力点附近还有什么可去的位置",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先亲手开雪绒花号调整炮口和车体角度，观察挪动车身时能利用哪些掩护",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "VCH07.V1",
+          "scene": "成员特性",
+          "text": "编入小队前，你查看两名同兵种成员的个人潜能：一人更适合当前环境，另一人与队中熟悉的伙伴有关系。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "让熟悉的伙伴一起出战，延续自己为角色设定的搭档关系",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "比较两人的潜能和队伍配置，选择更适合当前地图的一位",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH07.V2",
+          "scene": "队伍名单",
+          "text": "出战前还有一个空位：可选一名符合本地图需求的反坦克兵，也可以选你想继续带着出战的常用队员。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续带常用队员上场，想继续了解他的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选择反坦克兵，让小队更好应对这张地图上的坦克",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH07.V3",
+          "scene": "喜欢的成员",
+          "text": "在总部选择第七小队成员时，两名候选人属于同一兵种，你已经查看他们的个人潜能和资料。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择故事或个性让自己感兴趣的人，带他进入小队",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选择与现有队员潜能更能配合的人，组成自己的队伍",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "VCH08.V1",
+          "scene": "重复演习",
+          "text": "你解锁了一场已完成的遭遇战，可以再次挑战；也有新的主线章节可推进。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_SKIRMISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "重打一遍遭遇战，比较不同兵种路线是否缩短回合数",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "阅读并进入新的主线章节，看看第七小队接下来发生什么",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH08.V2",
+          "scene": "瓦塞尔河岸遭遇战",
+          "text": "你已打过瓦塞尔河岸的遭遇战，这次打算再进这场地图，编队菜单和原来的熟悉队伍都可选。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_SKIRMISH",
+            "VC93_BRIDGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照两种兵在城街和河岸的射程差异，换一组编成来试它们的补位",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "沿用熟悉队伍，直接重打这场，享受在河边亲手移动、压进前线的过程",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH08.V3",
+          "scene": "练习再部署",
+          "text": "你已经完成一场遭遇战，训练过侦察兵和突击兵，想重新挑战并检查自己的调度。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_SKIRMISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "尝试改变两名兵种的出发位置，比较需要的行动回合",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "使用侦察兵迅速穿过战场，体验直接操控和推进的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "VCH09.V1",
+          "scene": "瓦塞尔长草里的帝国王牌",
+          "text": "回想瓦塞尔市街战里从河边长草发现帝国王牌的经历。哪件事更让你继续打这一段？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_BRIDGE",
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我会追查这名王牌能留下什么武器，想将它加入陆续收来的战利品",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "我更关注能否让小队安全穿过河边这段，继续往市政厅外旗帜推进",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH09.V2",
+          "scene": "军备成长回顾",
+          "text": "回想在总部训练不同兵种、研发武器装备时，什么更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "看到常用兵种和雪绒花号逐步变强",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "比较不同兵种与装备的组合，尝试自己想用的配置",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH09.V3",
+          "scene": "指挥点回顾",
+          "text": "回想分配指挥点、决定让哪名队员行动的经历，什么让你更投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "跟着第七小队完成每场战役，了解后续剧情",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "比较不同队员与装备的搭配，形成自己想用的配置",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "VCH10.V1",
+          "scene": "战场救援回顾",
+          "text": "回想有队员倒地后，你派友军接触并呼叫军医的经历，哪一点更打动你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己理解的第七小队指挥官行事，会刻意优先兑现带同伴一起回去的承诺",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "在敌人接近前找到行动路线并把他救走",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH10.V2",
+          "scene": "雪绒花维修回顾",
+          "text": "回想工程兵靠近雪绒花号并维修车体的经历，哪一点更让你在意？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "让工程兵和战车相互配合，维持推进能力",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "B",
+              "label": "把一直陪伴小队作战的雪绒花号维护好",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH10.V3",
+          "scene": "战地掩护回顾",
+          "text": "回想你调动突击兵攻击掩体附近的敌人，让另一名队员前进时，什么更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "不同兵种各自行动后形成配合",
+              "signal": "unit_command_sequence"
+            },
+            {
+              "id": "B",
+              "label": "亲自控制队员靠近敌人、瞄准射击的过程",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "VCH11.V1",
+          "scene": "营地占领回顾",
+          "text": "回想清除守军后让步兵接触敌方旗帜的经历，什么更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕营地选择行进路线，完成自己设定的推进目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "尝试从占领的营地部署不同兵种，并比较它们在前线的效果",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH11.V2",
+          "scene": "总部研发回顾",
+          "text": "回想在研发部选择步兵武器和战车强化时，什么更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "长期升级雪绒花号，观察它随战事成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "对比武器与现有队伍兵种，搭配所需装备",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH11.V3",
+          "scene": "命令配合回顾",
+          "text": "回想给队员下达防御或回避提升命令，再让他们行动的经历，什么更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL",
+            "VC93_ORDERS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按计划让队员通过危险区域并推进当前目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我会换不同命令和兵种组合反复试，想弄清哪些加成更符合自己的推进打法",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    },
+    {
+      "id": "VCH12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "VCH12.V1",
+          "scene": "森林补给库的增援",
+          "text": "回想克罗登森林，在部队刚进补给基地时看见敌将驾驶坦克到场。你更记得哪种体验？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_CH5",
+            "VC93_PC5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我更在意敌将突然现身后，第七小队这次突袭在故事里遇到了什么变数",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我想亲自找仓库之间自己没走过的通路，看看能从哪边绕开增援坦克",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较这一关可选的实际操作与选项中写明的动机。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH12.V2",
+          "scene": "重打遭遇战回顾",
+          "text": "回想你重打已开放的遭遇战并尝试改变部署的经历，什么让你最投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_SKIRMISH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "驾驶战车与操作步兵，在战场上亲自瞄准和移动",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "比较两次行动路线和结果，逐步改进自己的调度",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        },
+        {
+          "id": "VCH12.V3",
+          "scene": "第一次总部回顾",
+          "text": "回想首次进入总部、查看小队名单和训练场时，什么更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VC93_MANUAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "认识队员的个人资料，想知道他们各自的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "安排兵种训练，观察整个小队逐步成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "仅将选项明确表达的游戏内动机映射为探索性偏好信号。",
+          "interpretation_boundary": "需亲历对应机制；题中多个行动可用为条件，未体验可换题，不能推断现实人格或技能。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+c7b324d3bcdb"
+}

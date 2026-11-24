@@ -1,0 +1,2160 @@
+{
+  "id": "lol",
+  "title": "英雄联盟",
+  "game_ids": [
+    "league-of-legends"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "rift",
+      "label": "召唤师峡谷",
+      "initial_variants": {}
+    },
+    {
+      "id": "aram",
+      "label": "普通极地大乱斗",
+      "initial_variants": {
+        "LOL01": "LOL01.ARAM",
+        "LOL02": "LOL02.ARAM",
+        "LOL03": "LOL03.ARAM",
+        "LOL04": "LOL04.ARAM",
+        "LOL05": "LOL05.ARAM",
+        "LOL06": "LOL06.ARAM",
+        "LOL07": "LOL07.ARAM",
+        "LOL08": "LOL08.ARAM",
+        "LOL09": "LOL09.ARAM",
+        "LOL10": "LOL10.ARAM",
+        "LOL11": "LOL11.ARAM",
+        "LOL12": "LOL12.ARAM"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "LOL01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "LOL01.V1",
+          "text": "当前这场峡谷对局的兵线已推到河道附近，自己状态可继续行动，真人队友也能交流。现在先投入哪件事？",
+          "scene": "当前兵线与交火",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接一段走位与技能出手，亲手打出顺畅的命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "查看现有装备与技能的关系，实际用一次互相补足的组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "向真人队友报出想争取的推塔或野区目标，确认分工后一起行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "对照这场自己设定的胜负目标，选择眼前能争取比赛结果的对抗",
+              "signal": "rank_worker"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "以当前可执行的具体步骤区分投入动机。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL01.ARAM",
+          "text": "当前普通大乱斗的兵线已到可处理位置，你使用的是本局已经确定的英雄，真人同伴可交流。现在先做什么？",
+          "scene": "大乱斗中的当前兵线与交火",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手接一段移动与技能，体验连续命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "使用现有装备和技能互相补足的一组配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "与真人同伴先确认这波想推进还是接团，再分清出手与跟进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "以这场明确想争取的胜负为目标，选择眼前能争结果的一次对抗",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL01.CORE",
+          "text": "不要求真人同伴。当前在自己玩过的模式里，英雄已出场，眼前有可处理的敌人与兵线，现有技能和装备可用。先做什么？",
+          "scene": "当前基础英雄交火",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手接一段移动与技能，体验连续命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "使用现有技能与装备互相补足的一组配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "观察敌人位置与技能指示，验证一次范围或阻挡关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在可自由尝试的这一段，自定只许普攻和移动、不准主动技能的限制，亲自试它怎样改变这波处理",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL01.RIFT_EXTRA1",
+          "text": "你在峡谷自定义局，敌方小兵正靠近己方防御塔，附近没有敌方英雄，英雄状态允许行动。你先做什么？",
+          "scene": "塔下兵线",
+          "question_type": "situational_action",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_RIOT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "猜想防御塔攻击会如何改变小兵剩余血量，亲眼观察后验证自己的判断。",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "亲手走位并攻击小兵，感受攻击动作和命中的反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL01.ARAM_EXTRA1",
+          "text": "普通大乱斗中，本方附近有一处仍可取得的生命遗迹和一波可处理的敌方兵线；你和熟人队友均能交流、仍可行动。先做什么？",
+          "scene": "遗迹与兵线",
+          "question_type": "situational_action",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM",
+            "LOLEXTRA_20261112_RELIC",
+            "LOLEXTRA_20261112_RELIC_OLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "问熟人何时一起靠近遗迹，约好他接应、自己再行动。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先亲手处理兵线，感受本局英雄攻击与走位的反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "LOL02.V1",
+          "text": "当前已在可自由练习的峡谷场合选好一名能使用的英雄，技能说明与装备菜单都可看。现在先做什么？",
+          "scene": "可用英雄的当前试用",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑一个技能距离或衔接时机，亲手重复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "给现有技能配上可用装备，试它们能否互相补足",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "对照技能指示与目标位置，弄清范围、阻挡或触发条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "给眼前练习定只用普攻与移动、禁用主动技能的限制，试这名英雄在限制下会怎样打",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "以当前可执行的具体步骤区分投入动机。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL02.ARAM",
+          "text": "当前在可自由尝试的普通大乱斗自定义局，英雄已经确定，自己仍在出发前商店，能看技能说明并购买可负担装备。现在先做什么？",
+          "scene": "大乱斗中的可用英雄的当前试用",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "离开出生处到眼前可交火的位置，挑一个技能距离或衔接时机亲手练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "按技能与装备的关系，买下能组成一组配合的装备",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "对照技能指示与地图通路，先弄清范围、阻挡或触发条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在这段允许自由尝试的自定义大乱斗里，自定只用普攻和移动、不准主动技能的限制，实际试本局英雄",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL02.CORE",
+          "text": "不要求选新英雄。当前已使用一名熟悉英雄，在能自由尝试的场合有可攻击目标，技能说明也可查看。先做什么？",
+          "scene": "当前已有英雄的练习",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑一个仍不稳的距离或衔接时机，亲手多做几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把当前可用装备与技能连成具体配合，实际试用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "对照指示器和目标位置，弄清一次范围或触发条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "给眼前练习定每次普攻后必须先横移一次、才许下次攻击的规则，实际试它改变了哪些距离选择",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL02.RIFT_EXTRA1",
+          "text": "峡谷练习工具中，你已召唤能被当前技能影响的敌方假人，技能可用。你先做什么？",
+          "scene": "假人距离",
+          "question_type": "situational_action",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_DUMMY",
+            "LOLEXTRA_20261112_PRACTICE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复调整自己到假人的距离，练习一项仍不稳定的技能命中时机。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先猜技能指示边缘是否覆盖假人，待技能可用时在不同站位多次测试，比较命中结果来验证。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL02.ARAM_EXTRA1",
+          "text": "普通大乱斗选人阶段，系统已给你两名当前可选英雄，其中一名是你熟悉的，另一名也是你愿意使用的。你先怎么选？",
+          "scene": "两张英雄卡",
+          "question_type": "situational_action",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM",
+            "LOLEXTRA_20261112_CARDS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照两名英雄已知的技能特点和队伍已确定的英雄，选想亲自试配合的一位。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "选熟悉的英雄，准备体验自己喜欢的移动与出招手感。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "LOL03.V1",
+          "text": "你与真人熟人现在正一起回看或凭记忆梳理刚输掉的一波峡谷团战，画面与口述都够用。这次先做什么？",
+          "scene": "现在共同复盘一波交火",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "圈出自己出手不顺的一拍，并立刻到练习里亲手做几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "根据刚才技能与装备的相互作用，选出现有可用的一组互补，再到可练习场合亲手试一小段",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "问清各位当时想跟谁出手，约定共同目标与下一次分工",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "把团战前兵线、回城与到场顺序接成一张流程草图",
+              "signal": "systems_builder"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "以当前可执行的具体步骤区分投入动机。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL03.ARAM",
+          "text": "你与真人同伴现在正用可用片段或记忆梳理刚结束的普通大乱斗团战，不要求录像工具。先做什么？",
+          "scene": "大乱斗中的现在共同复盘一波交火",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "指出自己出手不顺的一拍，用手边可练习的场合亲手再做",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "从刚才技能与装备的关系中选一组现有可用配合，再到手边可练习场合亲手试它的相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "问清各位当时想接谁的技能，约定共同目标和跟进顺序",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "把补给、装备购买与几波兵线推进的前后步骤画清",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL03.CORE",
+          "text": "没有固定同伴，也不要求录像。当前刚结束一段自己参与的交火，可以停下来梳理，随后还有亲手练习的机会。先做什么？",
+          "scene": "当前单人梳理交火",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "指出自己不顺的一拍，并在可练习的场合亲手重做",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "根据当时技能与装备的关系重新选一组现有可用配合，并在随后能练习的场合亲手验证互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "画出当时自己、敌人与障碍的位置，验证哪条距离或阻挡关系起了作用",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把交火前准备、到场与离开的先后整理成步骤",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL03.RIFT_EXTRA1",
+          "text": "刚结束一场自己玩过的峡谷对局，现在可以自由做笔记或稍后进入练习；你记得自己一次塔下补刀不顺的经历。你先做什么？",
+          "scene": "赛后塔下复盘",
+          "question_type": "situational_action",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_RIOT",
+            "LOLEXTRA_20261112_DUMMY",
+            "LOLEXTRA_20261112_PRACTICE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把防御塔、小兵与自己当时的位置画下来，提出哪里影响出手的假设，再到练习中验证。",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "到可用的练习场合反复练自己不稳的补刀出手时机。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL03.ARAM_EXTRA1",
+          "text": "刚结束一局普通大乱斗，你和当时一起玩的真人熟人都愿意交流，也记得一次遗迹附近的遭遇。你先做什么？",
+          "scene": "赛后同伴回忆",
+          "question_type": "situational_action",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM",
+            "LOLEXTRA_20261112_RELIC",
+            "LOLEXTRA_20261112_RELIC_OLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和熟人讲讲彼此那次看到的情况，享受把经历变成共同话题。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "补记自己当时亲自到过的遗迹位置和附近地形。",
+              "signal": "game_recording"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "LOL04.V1",
+          "text": "当前真人熟人队正在峡谷里准备争取下一条小龙，你的位置可安全停留交流，队伍愿意比较几种准备。现在先做什么？",
+          "scene": "当前出发与协作分工",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前兵线、回城与到场先后整理成能接上的步骤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "问清每个人要争取什么，明确谁先给信息、谁接着行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "选自己要接的一段技能时机，在眼前可打的兵线或小规模交火里亲手练它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "查看队友技能与自己现有装备，选能相互补足的组合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "以当前可执行的具体步骤区分投入动机。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL04.ARAM",
+          "text": "当前普通大乱斗已回到能购买装备的出生处，真人熟人队也在商量接下来一波。你现在先做什么？",
+          "scene": "大乱斗中的当前出发与协作分工",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把购买、到场与兵线先后接成自己的出发步骤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "询问真人同伴各自想怎样出手，约清这波目标与跟进分工",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "出发到眼前兵线，亲手试自己要接的一段技能时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "对照己方当前技能与可负担装备，选能相互补足的一套",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL04.CORE",
+          "text": "没有真人同伴。当前正在已玩模式的准备位置，能查看本局英雄技能、地图和可使用装备。先做什么？",
+          "scene": "当前无真人的准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把购买机会、到场和兵线推进的先后排成具体步骤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "对照技能指示与眼前通路，弄清一处射程或阻挡条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "在当前允许练习的空档亲手重复一段技能与移动",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "比较手边可用装备和技能，组成一套互相补足的用法",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL04.RIFT_EXTRA1",
+          "text": "峡谷对局中，你已安全回到泉水、位于商店购买范围且金币足够买两件已开放的不同装备。你先做什么？",
+          "scene": "回城购买",
+          "question_type": "situational_action",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_RIOT",
+            "LOLEXTRA_20261112_SHOP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较两件装备如何分别与现有英雄技能配合，再买下自己想试的一件。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先比较两件可用装备的属性，再决定这次买什么。",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL04.ARAM_EXTRA1",
+          "text": "普通大乱斗中，你已经死亡并复活，仍在本方商店范围，有金币购买当前显示的两件不同装备。先做什么？",
+          "scene": "复活商店",
+          "question_type": "situational_action",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM",
+            "LOLEXTRA_20261112_RELIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较两件装备与本局英雄技能的不同配合，再买一件亲自试用。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先比较商店中两件可用装备的属性，再决定购买。",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "LOL05.V1",
+          "text": "当前已在峡谷可自由练习的场合用熟悉英雄出场，真人熟人也在线，自己今天没有必须达到的段位目标。先做什么？",
+          "scene": "开局前的当前投入",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入双方认真争取胜负的峡谷对局，按自己想拿到的结果准备",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "与真人熟人一起开峡谷对局，边玩边聊各自遇到的状况",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "留在眼前练习，把一个仍不稳的走位接技能动作亲手多做几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "留在当前练习里，规定每次普攻后必须先横移再攻击，亲自试自己加的新限制",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "以当前可执行的具体步骤区分投入动机。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL05.ARAM",
+          "text": "当前在真人熟人同意自由尝试的普通大乱斗自定义局，英雄已经确定，自己仍在开局准备位置，能查看说明或交流。先做什么？",
+          "scene": "大乱斗中的开局前的当前投入",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "以这场双方认真较量的胜负结果为目标，检查当前对手并完成准备",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "与真人熟人聊这次拿到的英雄和上局趣事，让同玩自然形成话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "离开开局位置到眼前兵线，选本局英雄一个技能时机亲手练它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "在这段自由尝试里规定只用普攻与移动、禁用主动技能，亲自试本局英雄在限制下的打法",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL05.CORE",
+          "text": "当前只有自己，在可自由练习的场合用一名已经能使用的英雄面对练习目标。现在先做什么？",
+          "scene": "当前单人练习目标",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一个还不稳的动作，亲手重复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把当前技能与装备组成具体配合，实际试它们的相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "接一串熟悉的动作和命中，享受即时操作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "规定这段练习每次普攻后必须先横移、不能站定连打，试自己新增限制带来的变化",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL05.RIFT_EXTRA1",
+          "text": "你和一位真人熟人已进入能共同操作的峡谷练习场合，对方同意配合，当前技能可使用。你先做什么？",
+          "scene": "和熟人练习",
+          "question_type": "situational_action",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_TEAM_PRACTICE",
+            "LOLEXTRA_20261112_PRACTICE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和对方交流各自刚试过的技能效果，把练习过程当成共同话题。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "专门反复练一段自己还不稳定的技能与移动衔接。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL05.ARAM_EXTRA1",
+          "text": "普通大乱斗选人时，你和一位真人熟人各已选好英雄，双方都愿意商量且当前界面提供彼此可用的交换选项。你会？",
+          "scene": "和队友交换英雄",
+          "question_type": "situational_action",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM",
+            "LOLEXTRA_20261112_CARDS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "与熟人聊各自刚选到的英雄及上次一起玩的趣事，再商量是否交换。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先操作可用的交换选项，尝试换成对方的英雄。",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "LOL06.V1",
+          "text": "当前峡谷一段兵线刚进入可处理的位置，自己与能交流的真人队友都能继续行动。这一段先怎样处理？",
+          "scene": "当前兵线与行动节奏",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对当前兵线、回城与到场时间，把自己的几个步骤接顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "以这场明确想争取的胜负结果为目标，选一次当前可打的对抗",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "与真人队友先约清楚谁给信号、谁推进，再按分工接上",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "先亲手接一串收兵、走位与技能，体验命中和动作的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "以当前可执行的具体步骤区分投入动机。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL06.ARAM",
+          "text": "当前普通大乱斗一波兵线已到眼前，真人同伴能交流，自己状态允许继续行动。现在先做什么？",
+          "scene": "大乱斗中的当前兵线与行动节奏",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前兵线、技能恢复与下一次可购买的时机接成步骤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "围绕自己明确想拿下这场胜负的目标，选择眼前能争结果的一次对抗",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "C",
+              "label": "先与真人同伴约清谁先控制、谁跟进，再照这项共同目标行动",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "亲手接一串移动和技能，体验出手与命中连续发生的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL06.CORE",
+          "text": "不要求真人队友或真人对手。当前在允许自由尝试的练习或自定义场合，一波兵线到眼前，自己的技能与装备可用。先做什么？",
+          "scene": "当前兵线处理",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把技能使用、收兵与继续推进的先后排顺",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "对照敌人与技能指示，验证一次范围、阻挡或触发关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "亲手接一串移动与命中，体验它们的连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "在允许自由试用的这段，规定只用普攻与移动处理兵线、不准主动技能，实际试限制后的处理",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL06.RIFT_EXTRA1",
+          "text": "峡谷一局中，小龙已出现且你与一位愿意交流的真人队友都能抵达附近；你当前有可用技能。你先做什么？",
+          "scene": "小龙前沟通",
+          "question_type": "situational_action",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_RIOT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "询问队友这次是否一起争取小龙，并约好谁先提供信息、谁跟进。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先查看小地图已经显示的队友位置和通往龙坑的路线。",
+              "signal": "navigation_information_review"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL06.ARAM_EXTRA1",
+          "text": "普通大乱斗本局地图是屠夫之桥，你刚复活并站在本方可用炮台附近，一位愿意交流的真人队友已在本次炮台可到达的位置附近。你先做什么？",
+          "scene": "屠夫之桥炮台",
+          "question_type": "situational_action",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和队友约好你先使用炮台、他在当前可达的位置接应，并按分工行动。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "亲手使用目前可用的炮台，体验英雄被发射出去的操作反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "LOL07.V1",
+          "text": "当前在真人对手也参与、大家同意自由试用的峡谷自定义局，已经回到商店，金币足够在几件熟悉装备中选择，英雄技能已了解。先怎样选并使用？",
+          "scene": "实际购买时的装备取舍",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按装备与技能的相互作用，买下能组成具体配合的一件",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "给接下来这段定每次普攻后先横移、再许下一次进攻的规则，按这限制选可负担装备并出发实际试用",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "买下更合自己出手节奏的一件，马上体验动作与命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "针对当前真人对手和自己想争取的比赛结果，完成这次装备选择",
+              "signal": "rank_worker"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "以当前可执行的具体步骤区分投入动机。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL07.ARAM",
+          "text": "当前在真人对手也参与、大家同意自由试用的普通大乱斗自定义局，刚在出生处获得购买机会，金币能买几件熟悉装备，尚未离开商店。先怎样选？",
+          "scene": "大乱斗中的实际购买时的装备取舍",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前技能与装备的相互作用，买下能组成配合的一件",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "为接下来一段定只许普攻与移动、不准主动技能的限制，按这规则选择可买装备，再出发实际试用",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "按自己喜欢的出手节奏购买，出发后体验动作与命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "针对当前真人对手与明确的胜负目标，完成这次装备准备",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL07.CORE",
+          "text": "当前在允许自由试用的练习或自定义场合，已获得本模式允许的购买机会，金币能买几件熟悉装备；不要求真人对手。先怎样选并试用？",
+          "scene": "实际购买机会中的选择",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按装备与技能的相互作用，选出并使用一组配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "为这段定每次普攻后先横移、不许站定连打的规则，按这限制选可用装备并实际试一段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "按自己喜欢的出手节奏选择，实际体验动作与命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "对照技能指示和敌人位置，选一件来验证范围或触发条件",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL07.RIFT_EXTRA1",
+          "text": "峡谷练习工具里，已经召唤可被当前英雄技能命中的敌方假人；你位于商店购买范围，金币和装备栏条件允许购买或更换两件可用装备，之后能回到假人附近。你会？",
+          "scene": "假人和装备",
+          "question_type": "situational_action",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_PRACTICE",
+            "LOLEXTRA_20261112_RIOT",
+            "LOLEXTRA_20261112_SHOP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较这两件装备各自怎样和英雄技能配合，换装后对假人实际试验。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先检查当前商店可买装备的说明和价格。",
+              "signal": "compare_available_setup"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL07.ARAM_EXTRA1",
+          "text": "普通大乱斗的屠夫之桥上，你的英雄在一株当前可攻击的力量花附近，英雄仍有技能处于冷却；另一条可以继续前进的道路也可通行。你会？",
+          "scene": "屠夫之桥花朵",
+          "question_type": "situational_action",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜攻击花朵是否会缩短当前技能冷却，再亲手攻击并核对冷却变化。",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "操作英雄沿道路继续移动，感受本局英雄的移动反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "LOL08.V1",
+          "text": "当前在与真人熟人约好的峡谷自定义练习里，你已用默认或已有外观出场，眼前暂时没有交火。现在先做什么？",
+          "scene": "练习空档的取景与交流",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动英雄并调整普通镜头，取景截图做一张自己的峡谷主题画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "到眼前可练习的位置接一次技能，体验动作、声音与命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "对照当前技能指示、墙边与目标位置，验证一次范围或阻挡关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "与真人熟人聊刚才的英雄动作或游戏趣事，让这次同玩留下共同话题",
+              "signal": "social_spark"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "以当前可执行的具体步骤区分投入动机。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL08.ARAM",
+          "text": "当前在真人熟人约好的普通大乱斗自定义练习里，已用默认或已有外观出场，眼前暂时无交火。先做什么？",
+          "scene": "大乱斗中的练习空档的取景与交流",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动英雄并调整普通镜头，把当前地图与英雄组成自己的主题截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "亲手接一次当前能用的技能，体验动作、声音与命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "对照技能指示与眼前地形，验证范围或阻挡条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "与真人熟人聊这次英雄出场和刚才的趣事，接着共享话题",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL08.CORE",
+          "text": "没有其他外观或同伴。当前用英雄默认形象进入可自由练习的场合，普通镜头可移动，眼前有可攻击目标。先做什么？",
+          "scene": "当前默认形象取景",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动英雄与普通镜头，把角色和地形取景成自己的主题截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "亲手接一次技能，体验动作、声音和命中的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "对照技能指示与目标，验证一次范围或阻挡关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "给当前练习定每次普攻后必须先横移、不能站定连打的规则，实际试这个新限制",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL08.RIFT_EXTRA1",
+          "text": "在双方同意自由试用的峡谷自定义局，你有可放置且当前可用的侦查守卫，附近草丛可以到达；一位真人熟人愿意配合。你先做什么？",
+          "scene": "视野与草丛",
+          "question_type": "situational_action",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_SIGHT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "猜测把守卫放进草丛后能看到什么，再亲手放置并核对实际视野。",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "与熟人聊刚才彼此观察到的地图情况。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL08.ARAM_EXTRA1",
+          "text": "普通大乱斗的嚎哭深渊中，你与愿意交流的真人熟人刚在泉水复活，本方传送门对应的防御塔仍然存在，眼前的传送门当前可用，暂时没有交火。你先做什么？",
+          "scene": "嚎哭深渊传送门",
+          "question_type": "situational_action",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM",
+            "LOLEXTRA_20261112_RUBBLE_OLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "与熟人交流刚才一起打出的团战，分享彼此看到的情况。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "亲手使用当前可用的传送门并操纵英雄移动到塔旁，感受移动的操作反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "LOL09.V1",
+          "text": "回想一次确实与真人熟人同玩峡谷、且当时不赶排位进度的经历。哪件真正做过的事最有分量？",
+          "scene": "真人同玩已经发生的经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "边玩边聊彼此碰到的状况，后来还会接着提起那次经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "事先共同约定一项推塔或接技能目标，分清彼此步骤并实际完成",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "在双方同意自由尝试的自定义局里，两人约好一小段都不使用主动技能，只靠普攻与移动，实际试出了新打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "用自己熟悉的英雄接出一段顺畅操作，当时就享受动作与命中反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "只按实际完成的过去行为区分动机，不计未来愿望。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL09.ARAM",
+          "text": "回想一次确实与真人熟人一起玩普通大乱斗、当时不赶其他模式目标的经历。哪件真正做过的事最有分量？",
+          "scene": "大乱斗中的真人同玩已经发生的经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "边打边聊遇到的状况，后来又一起提起那次共同经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "共同约好一次控制与跟进目标，分清彼此步骤并实际接上",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "在双方同意自由尝试的自定义大乱斗里，两人用已确定英雄约好只许普攻与移动、禁用主动技能，并实际试过一段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "亲手接出一串熟悉的移动与技能，当时就享受它的操作反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL09.CORE",
+          "text": "只回想自己确实单人进入过的一场已熟悉模式对局，不要求认识任何队友。哪件已经做过的事最有分量？",
+          "scene": "真实单人对局经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在允许自由试用的场合，给自己定每次普攻后先横移、不能站定连打的规则，并亲自试过一段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把当时装备购买、到场和推进的先后整理并实行",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "亲手使用一组技能与装备，让它们互相补足",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "接出熟悉的移动与技能，享受那段即时操作反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL09.RIFT_EXTRA1",
+          "text": "回想你与真人熟人确实在峡谷小龙附近参与过的一波行动。哪件当时做过的事更值得记住？",
+          "scene": "小龙附近的经历",
+          "question_type": "experience_reflection",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_RIOT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "事先约好谁观察、谁跟进，并实际接上了各自的行动。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "亲手移动、施放技能并命中时，感受到连贯的操作反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL09.ARAM_EXTRA1",
+          "text": "回想一局普通大乱斗中，你和愿意交流的真人同伴确实在己方兵线附近一起推进过。哪件已发生的事更值得记住？",
+          "scene": "并肩推进的经历",
+          "question_type": "experience_reflection",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先交流彼此的状态，再约好一人控制对手、另一人跟进，并实际配合。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "自己操纵英雄处理那段兵线时，留意移动和攻击的操作反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "LOL10.V1",
+          "text": "回想一波已经结束、自己确实参与的峡谷团战，其中也有能交流的真人同伴。哪件真正发生过的事最值得记住？",
+          "scene": "已发生的团战记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己躲技能后接上反击，那串移动与命中的反馈很畅快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "当时专门练过的一拍终于亲手处理好了",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "与真人同伴接上一个临时想法，事后还一起聊起这一波",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "以当时明确想赢下比赛的目标为参照，拿下了自己看重的一次关键对抗",
+              "signal": "rank_worker"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "只按实际完成的过去行为区分动机，不计未来愿望。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL10.ARAM",
+          "text": "回想普通大乱斗里一波确实参加过的团战，当时也有能交流的真人同伴。哪件真正发生过的事最值得记住？",
+          "scene": "大乱斗中的已发生的团战记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "躲技能与反击连起来，亲手操作和声音反馈很畅快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "反复练过的一拍，这次终于亲手处理好了",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "与真人同伴接上一个临时想法，事后又一起聊起这波",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "按当时明确想赢下比赛的目标，争取到自己看重的一次关键对抗结果",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL10.CORE",
+          "text": "不要求录像或真人同伴。回想自己确实经历的一段交火，哪件真正发生过的事最值得记住？",
+          "scene": "真实基础交火记忆",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动、技能和命中声音连起来，亲手操作很畅快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "对一个原先不顺的时机亲手多次尝试，逐步掌握了它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "对照位置与技能指示验证了一条范围或阻挡关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "在可自由尝试的场合规定一小段只准普攻和移动、不准主动技能，并实际试过限制下的交火",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL10.RIFT_EXTRA1",
+          "text": "回想你与愿意交流的真人熟人参加过的一场峡谷对局：你曾在一次交火中阵亡并查看过死亡回顾。哪件当时真的做过的事更让你记得？",
+          "scene": "死亡回顾与交火体验",
+          "question_type": "experience_reflection",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_DEATH",
+            "LOLEXTRA_20261112_RIOT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和熟人交流死亡回顾中看到的对方技能，把两人看到的经历接成共同话题。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "回想交火时自己亲手移动、施法并命中的动作和声音反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL10.ARAM_EXTRA1",
+          "text": "回想你确实玩过的普通大乱斗灵魂莲华主题地图，并实际使用过其中一处可用传送门。哪件做过的事更吸引你？",
+          "scene": "灵魂莲华地图传送门回顾",
+          "question_type": "experience_reflection",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜这处传送门会把自己送往哪里，亲手使用并核对抵达位置。",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "在穿过传送门与抵达后，享受自己操纵英雄移动的反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "LOL11.V1",
+          "text": "回想一次自己确实再次选用熟悉英雄的峡谷对局，当时哪件已经做过的事最能说明吸引力？",
+          "scene": "已经重用英雄的体验",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "针对一个仍不稳的时机反复尝试，让自己逐步掌握",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "实际接出熟悉的动作与声音，那种反馈本身就合心意",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "亲手试了另一套装备与技能组合，看它们如何互相补足",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "在允许自由试用的场合，给熟悉英雄定一段只许普攻与移动、禁用主动技能的规则，并亲自试出了限制后的处理",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "只按实际完成的过去行为区分动机，不计未来愿望。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL11.ARAM",
+          "text": "回想一次普通大乱斗确实再次给到熟悉英雄的对局，哪件自己真正做过的事最有吸引力？",
+          "scene": "大乱斗中的已经重用英雄的体验",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选定一个技能或移动时机，在那局里亲手反复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "实际接出熟悉的动作与声音，享受它们连起来的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "用当时买得到的装备配合技能，亲手试出相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "在允许自由尝试的自定义大乱斗里，规定这段只用普攻与移动、不用主动技能，并用当局英雄真正实行",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL11.CORE",
+          "text": "回想一次自己确实又用熟悉英雄玩过的对局，不看熟练度记录。哪件已经做过的事最有吸引力？",
+          "scene": "真实重用英雄经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑了一处操作细节，亲手重复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "实际接出熟悉动作与声音，享受即时反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "用当时可用装备配合技能，亲手试出它们的相互作用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "在允许自由试用的场合，规定每次普攻后先横移、不能站定连打，并用熟悉英雄亲自试过一段",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL11.RIFT_EXTRA1",
+          "text": "回想你确实在峡谷使用过熟悉英雄的一段时间。哪件曾做过的事更吸引你？",
+          "scene": "峡谷画面与练习",
+          "question_type": "experience_reflection",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_PRACTICE",
+            "LOLEXTRA_20261112_SHOT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "多次调整同一技能的出手距离，逐渐掌握原先不稳的时机。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "在允许自由试用的自定义局中，调整英雄与镜头，截取自己设计的峡谷主题画面。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL11.ARAM_EXTRA1",
+          "text": "回想你玩过的一局普通大乱斗，本人曾在复活商店购买过装备并使用英雄技能。哪件已发生的体验更吸引你？",
+          "scene": "本局装备与技能",
+          "question_type": "experience_reflection",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM",
+            "LOLEXTRA_20261112_RELIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在多次可购买的节点比较装备与技能的配合，并亲自试过不同组合。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "亲手打出本局英雄的技能，享受动作和命中声音带来的反馈。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    },
+    {
+      "id": "LOL12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "LOL12.V1",
+          "text": "回看已经玩过的一段峡谷时间，哪项自己实际完成的投入最接近当时的重点？",
+          "scene": "已经完成的对局投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕明确的排位或比赛目标参赛，用实际结果检验准备",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "与真人固定同伴共同定目标、分工并把行动顺序接起来",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "选定一名英雄的一处操作时机，多次亲手练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "在允许自由尝试的自定义局里，为一小段设只许普攻与移动、不准主动技能的限制，并真正试过其变化",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [
+            "rift"
+          ],
+          "design_purpose": "只按实际完成的过去行为区分动机，不计未来愿望。",
+          "interpretation_boundary": "四项都可行，不评价技术正确性、能力或消费；q/o只指题中明确的真人共同目标或交往。"
+        },
+        {
+          "id": "LOL12.ARAM",
+          "text": "回看已经玩过的一段普通大乱斗经历，哪项自己实际完成的投入最接近当时的重点？",
+          "scene": "大乱斗中的已经完成的对局投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [
+            "aram"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕明确想赢下的对局参赛，用实际胜负检验准备",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "与真人同伴共同定下目标，分工并把控制和跟进接起来",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "遇到当局英雄时选一处操作细节，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "在允许自由尝试的自定义大乱斗里，用已确定英雄实行只许普攻与移动、不准主动技能的限制，亲自试过一段",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写普通大乱斗独立路径；英雄已由当局确定，购买限实际商店机会，真人协作有明确前提。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL12.CORE",
+          "text": "只回看自己实际玩过的对局，不要求真人同伴或排位经历。哪项已经完成的投入最接近当时重点？",
+          "scene": "已经完成的基础投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LOL_CORE",
+            "LOL_MODES",
+            "LOL_ARAM_DEV_V5",
+            "LOL_ARAM_RULES_V5",
+            "LOL_CUSTOM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照技能指示与实际位置，验证过范围、阻挡或触发条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把购买机会、到场与推进的先后整理后真正实行",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "选定英雄的一处操作时机，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "在允许自由试用的场合给自己定每次普攻后先横移、不能站定连打的规则，并实际试出限制后的变化",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写独立基础替代；不要求真人同伴、真人对手、排位、其他外观或指定英雄，9—12只回顾已经完成的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "LOL12.RIFT_EXTRA1",
+          "text": "回想你确实玩过的几场峡谷对局和练习。哪项已经做过的投入更接近当时重点？",
+          "scene": "多局投入",
+          "question_type": "experience_reflection",
+          "modes": [
+            "rift"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_RIOT",
+            "LOLEXTRA_20261112_PRACTICE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "与真人熟人多次明确商量推塔目标、分工并实际行动。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "针对一个原本不稳的操作时机持续亲手练习，并在后来对局中使用。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        },
+        {
+          "id": "LOL12.ARAM_EXTRA1",
+          "text": "回想你确实玩过的几局普通大乱斗。哪项已经做过的投入更接近当时重点？",
+          "scene": "几局后的重点",
+          "question_type": "experience_reflection",
+          "modes": [
+            "aram"
+          ],
+          "source_ids": [
+            "LOLEXTRA_20261112_ARAM",
+            "LOLEXTRA_20261112_CARDS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "与愿意交流的真人同伴共同约好过推进目标、分工并实际行动。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "在不同局的可选英雄卡中，比较过英雄技能与已有队伍阵容，实际尝试多种配合。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "只按题面明确的实际经历、行动与动机解释信号。",
+          "interpretation_boundary": "仅在本模式、实际条件及真实经历符合时回答；未PC国服实机。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+ed44ad0e0949"
+}

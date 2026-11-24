@@ -1,0 +1,1000 @@
+{
+  "id": "observer_system_redux_pc",
+  "title": "观察者：系统还原",
+  "game_ids": [
+    "steam-1386900"
+  ],
+  "scope": "Bloober Team 2020 年 Steam Windows 版，涵盖丹尼尔的公寓调查、观察者神经场景和可选支线。",
+  "status": "private_candidate_source_checked",
+  "author_review": "official_and_public_walkthrough_checked",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam Windows 本体",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "OBSREDUX01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "OBSREDUX01.V1",
+          "scene": "先扫尸身还是先查服务器",
+          "text": "丹尼尔刚在007号公寓发现无头尸体。你已打开电磁视野，尸体的植入件和左边墙上的设备都还没扫，也都能走近。你先查哪一件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ROOM",
+            "OBSREDUX_PC_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用电磁视野先扫尸身的植入件，尽快搞清死者身上的线索",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "用电磁视野先扫左墙的电子设备，先排查屋里的设备",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "现场双线索的调查顺序",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX01.ALT1",
+          "scene": "先分析受控物还是读电脑",
+          "text": "从阿米尔的神经调查回到104号房，你仍能在屋里移动。尸体旁壁龛里的受控物容器还没扫，厨房电脑也可操作。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看厨房电脑有什么内容，再回去做物证扫描",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先扫描并检查受控物容器，把这条后来可问住户的线索记下来",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "现场双线索的调查顺序",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX01.ALT2",
+          "scene": "先查窗边病人卡还是降检查台",
+          "text": "你已用钥匙进到208号公寓。窗下暖气片处的病人卡还在，旁边墙上有配电箱，内屋电动检查台能在通电后降下来。你准备先怎么查？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM",
+            "OBSREDUX_PC_REDUXDATA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去窗边拿起暖气片上的病人卡，再调设备",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先给内屋设备通电，把检查台降下来，近距离看颈部装置",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "现场双线索的调查顺序",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "OBSREDUX02.V1",
+          "scene": "先搜厨房还是先开锁门系统",
+          "text": "007号房已完成必要的尸体检查，厨房吊柜还没翻，进厨房附近的隐藏面板也可开。你还没离开公寓，先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM",
+            "OBSREDUX_PC_ROOM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开墙面面板并用终端解除公寓门锁，准备继续查楼里",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先查厨房柜门，把风扇和全家福附近的数据存储单元带走",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "先找物证还是追问或推进",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX02.ALT1",
+          "scene": "先从住户问起还是作主线",
+          "text": "楼内封锁已经过了开场阶段。你走到101至104号附近，102号对讲能回应，104号公寓也已经可进。你先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先对102号按对讲，听住户自己的说法",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先进104号找阿米尔，让主线调查继续",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "先找物证还是追问或推进",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX02.ALT2",
+          "scene": "先往006储藏间还是去问014",
+          "text": "从纹身店后的路进到地下储藏区，经过这里的007号储藏间。006号门能进去，014号储藏间的对讲也能问到人。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先往014号按对讲，听回应再决定回不回006",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先进去006号，在架子旁查有没有留下的病人卡",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "先找物证还是追问或推进",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "OBSREDUX03.V1",
+          "scene": "先去门房终端还是查通风间",
+          "text": "你已查过007号公寓并从走廊出来，庭院与门房均可走。门房电脑还没打开，庭院左侧通风技术间也没进去。你先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先钻进左侧技术间，试接上服务控制台让通风维护入口能用",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先回门房查电脑，再出来看通风线路",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "调查前先找工具与环境",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX03.ALT1",
+          "scene": "先拿208门钥匙还是先下去查设备",
+          "text": "你已在纹身椅输入海伦娜留下的代码，纹身店后室打开，柜台边的208号钥匙还在，通往地下手术区域的楼梯也能走。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先下楼找能让手术室设备通电的位置，回来再拿钥匙",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先拿起208号钥匙，为回公寓那头继续调查留好入口",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "调查前先找工具与环境",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX03.ALT2",
+          "scene": "先看前台电脑还是先看帘后",
+          "text": "已进入纹身店，第一间的电脑能用，后面的帘子也能掀开。你还没对里屋的人作神经连接，要先查哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先翻前台电脑，看看这一台有没有《火与剑》的游戏关卡",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先掀帘查看海伦娜现场，优先接着追线索",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "调查前先找工具与环境",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "OBSREDUX04.V1",
+          "scene": "先扫遥控车还是先转向祭坛",
+          "text": "已过楼下通往016和017的密码门。017号门边可扫描第一辆遥控车，016号旁有能尝试供电的祭坛。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看016号旁祭坛的电缆能不能接通，再读它的终端",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先扫017门边的遥控车，把第一件收集物拿到",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "拿可选物或赶往当前事件",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX04.ALT1",
+          "scene": "先开橱柜还是先靠近窗",
+          "text": "在阿米尔的神经调查里刚走到厨房，窗边还没触发下一次变化，右侧橱柜也没翻。这时你怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先翻右侧橱柜，拿走藏在这段里的病人卡",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先向窗边走，让神经调查进入接下来的场景",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "拿可选物或赶往当前事件",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX04.ALT2",
+          "scene": "回头找卡还是追剧情",
+          "text": "海伦娜说完撑不下去后，你刚被带进一条狭走廊。左侧有短岔道能走，主通道也能继续。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿主通道赶往下一段调查",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先拐进左岔道看看尽头那张桌子",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "拿可选物或赶往当前事件",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "OBSREDUX05.V1",
+          "scene": "先查身份卡还是先扫阿米尔",
+          "text": "你刚进104号的主房间，已经看到一张未扫描的身份卡。帘后有动静，能走过去见人。你现在先查什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_REDUXDATA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先扫描并查看身份卡，了解这里住的是谁",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先掀帘同阿米尔谈，视情况扫描植入件并接进记忆",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "选择哪条有独立意义的线索",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX05.ALT1",
+          "scene": "先跟生物线索还是先翻密码电脑",
+          "text": "你在108号公寓已看见可做生物扫描的痕迹，也知道电脑的密码且还未登录。屋里还可自由走。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先进电脑看看屋里的人留下了哪些资料",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先生物扫描，把室内残留的实际痕迹记进调查",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "选择哪条有独立意义的线索",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX05.ALT2",
+          "scene": "先听录音还是先开游戏",
+          "text": "在地下储藏区，你已通过网门来到020至023号这段。前两份录音都听过，020房的录音现在可听，隔壁021房的终端也能玩。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先进020，听那份患者录音",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先在021电脑开《火与剑》挑战一下",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "选择哪条有独立意义的线索",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "OBSREDUX06.V1",
+          "scene": "先扫瓶子还是先查密码键盘",
+          "text": "你已扫描无头尸体上的植入件并解锁生物视野。007号房内，你已看到冰箱里可扫描的45F物质，并掀开厨房旁密码键盘的盖子。你先切哪种视野？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ROOM",
+            "OBSREDUX_PC_REDUXDATA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先切生物视野，扫描冰箱里那瓶被留下的受控物",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先切电磁视野，扫描刚露出来的门禁键盘",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "面对两种现场操作时怎样选择",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX06.ALT1",
+          "scene": "先拿洗衣机上的卡还是接电缆",
+          "text": "016号边祭坛已经找到了，电缆尚未接好，右边洗衣机上的病人卡也在。你准备先做哪件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接祭坛的电缆，准备把终端接通",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先从洗衣机上拿病人卡，再回来接线",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "面对两种现场操作时怎样选择",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX06.ALT2",
+          "scene": "先破译早拿的盘还是先拿卡",
+          "text": "你从007号一路带着数据存储单元来到了纹身店地下，已经打开电源。破译终端可用，进门边架子上的卡也没拿。你先选什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回入口边拿病人卡，再去看破译结果",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先把存储单元交给破译终端，看看里面的记录",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "面对两种现场操作时怎样选择",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "OBSREDUX07.V1",
+          "scene": "先问前一扇门还是先赶着查104",
+          "text": "刚进101到104这段走廊，103号对讲有回应，104号入口已打开。你先向哪个方向查去？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按103号对讲，听这位邻居能提供什么",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先进104号，从对应人物本身开始查",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "处理门后回应与周边发现",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX07.ALT1",
+          "scene": "先看电脑还是拿桌旁卡",
+          "text": "你回到门房，电脑仍可操作，门边桌面的病人卡也还在。你当时会先碰哪样？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拿桌边的病人卡，再开始读电脑",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先用电脑看有哪些记录和系统入口",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "处理门后回应与周边发现",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX07.ALT2",
+          "scene": "先沿药物线索问还是听邻屋女孩",
+          "text": "你已经从104号采了受控物线索。到了112和113号门前，112号住户与113号女孩的对讲都可用。你要先问哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先敲112，跟进104号的受控物线索",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先和113号女孩交谈，听她说起114号房",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "处理门后回应与周边发现",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "OBSREDUX08.V1",
+          "scene": "先解楼道门禁还是问还能应答的住户",
+          "text": "从007号房出来并等封锁流程结束后，附近能到008号对讲，也能走到通往016号那条楼道的数字锁。你还没打开那扇门，008号当前能应答。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先尝试破解楼道的密码门，看看锁后还有哪些门牌",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先按008号对讲，从已经够得着的住户查起",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "选择推进门口或设备时的顺序",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX08.ALT1",
+          "scene": "先看笔记本旁还是摸柜内按钮",
+          "text": "205号门已进去，靠笔记本的小桌还没看；大房间门旁的柜子也能翻。你先查哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先到小桌收下可能遗漏的病人卡",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先检查门边柜子里那枚按钮，看看它会打开什么",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "选择推进门口或设备时的顺序",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX08.ALT2",
+          "scene": "往镜边找东西还是先追无线电",
+          "text": "你接入了特奥多尔的神经调查，第一段还可以在变形后的大楼内自由走。004、005之间镜旁那条走廊还有些没检查的地方，也已经看见可关闭的一台无线电。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去关闭看见的无线电，按无线电这条线找下去",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先去镜子旁边看看收集物，再回来走主要线索",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "选择推进门口或设备时的顺序",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "OBSREDUX09.V1",
+          "scene": "先把时间给藏物还是机关",
+          "text": "回想刚查完007公寓的那一圈。你既找过厨房柜中的数据存储单元，又用过墙面终端解除门锁。哪个发现更想再体验？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM",
+            "OBSREDUX_PC_ROOM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己打开柜子，发现这枚后来还能破译的存储单元",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "找到藏在面板后的终端，把锁住的门弄开",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "回顾具体支线发现或主线早期印象",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX09.ALT1",
+          "scene": "恢复连接或清除记忆",
+          "text": "你曾结束皮耶塔的神经调查，在114号电脑看到设备菜单。回想走到那两个按钮时，哪一种选择更贴合你对这段故事的理解？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM",
+            "OBSREDUX_PC_PIETA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重启系统，接受皮耶塔记忆会被清掉的结果",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "恢复原有连接，把两人之间的关系留给他们处理",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "回顾具体支线发现或主线早期印象",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX09.ALT2",
+          "scene": "面对系统你记得哪个取舍",
+          "text": "你已经用密码进过地下028号，看到可重启与关闭的系统控制。回想这段，你更愿意重做哪项？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择重启，看自己是否愿意让房里的装置继续运作",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "选择彻底关闭，愿意对房里的装置作最终决定",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "回顾具体支线发现或主线早期印象",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "OBSREDUX10.V1",
+          "scene": "谁先让公寓楼有真实感",
+          "text": "回想刚到公寓大楼，你跟门房里的雅努斯谈过，也实际由围合庭院往007号那一边走。哪段最想重看？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_CN",
+            "OBSREDUX_PC_DEV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从庭院转入007号走廊，重新认一遍大楼内部怎么连通",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "初次和雅努斯谈话，听他怎么接待调查员",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "回顾最值得重玩的操作方式",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX10.ALT1",
+          "scene": "哪个画面更想体验一次",
+          "text": "你做过阿米尔神经调查里跟着电视找门，也走到过暗处让右边第一间淋浴格发生变化。你更喜欢哪种时刻？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看懂电视上切换的指路画面，一扇扇找对出口",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "在暗处多靠近一步，看看淋浴格消失后留在原地的东西",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回顾最值得重玩的操作方式",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX10.ALT2",
+          "scene": "更记得改时钟还是打印信息",
+          "text": "你在海伦娜神经场景确实读过打印机上的定时提示，也把厨房时钟设对拿到病人卡。你回想的重点是哪个？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "等打印机真的吐出病人卡，再把这份藏起来的资料收走",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "把办公室设备的提示与厨房时钟联系起来，自己试对时间",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "回顾最值得重玩的操作方式",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "OBSREDUX11.V1",
+          "scene": "问住户还是查楼道",
+          "text": "你在出007号房后，敲过走廊其他几扇能应答的门，也找过016号旁连着电缆的祭坛。回想在楼下继续查的第一圈，你喜欢什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挨个听002、003一带住户开口，感觉我是在和住在这里的人打交道",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "接通016号旁的设备、看原本黑着的祭坛终端怎样工作",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾楼内调查的具体做法",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX11.ALT1",
+          "scene": "收齐还是听懂为什么复现",
+          "text": "你扫过017外与二楼厨房的遥控车，并曾在庭院垃圾箱附近找到之后才显示的那一辆。这串发现哪部分更想留住？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从楼上回到纹身店旁，发现经过的庭院还值得再检查",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按三个地点找够已出现的车，确认前几处都没落下",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回顾楼内调查的具体做法",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX11.ALT2",
+          "scene": "拆开幻象的瞬间",
+          "text": "你追过210号之后的路线，已经看过电磁视野揭出假森林，也从附近三台电脑取过芯片。那一段你喜欢的是哪个环节？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "切换电磁视野后突然看清树林是设备投出来的",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "找齐三台设备，各拔一块芯片，把整个模拟关掉",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾楼内调查的具体做法",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    },
+    {
+      "id": "OBSREDUX12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "OBSREDUX12.V1",
+          "scene": "是身份线索还是门锁谜题",
+          "text": "回想丹尼尔第一次到007号，确实扫描了尸体上的植入件、也通过屋内可用终端解了门。哪一段调查体会最想跟人说起？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ROOM",
+            "OBSREDUX_PC_EARLY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先说隐藏面板明明在厨房旁，没发现时却像唯一的门把自己锁住",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先说尸体失踪的部分和植入件如何让我开始猜死者是谁",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "回顾不同阶段如何串联案件",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX12.ALT1",
+          "scene": "案件一段结束还是另起一条线",
+          "text": "你实际完成过阿米尔的神经连接，也追过104号容器指向的112或209号住户。你更喜欢回忆哪种进展？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接完当事人的神经调查，从一个主线节点进入下一步",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "多敲别的住户的门，让一罐受控物变成一段有回应的调查",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "回顾不同阶段如何串联案件",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        },
+        {
+          "id": "OBSREDUX12.ALT2",
+          "scene": "到场后的新线索或旧证物回响",
+          "text": "你把007号的数据单元带到纹身店地下破译，也在同一段调查于纹身店找到208号钥匙。哪一项让你觉得公寓楼的调查接上了？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "OBSREDUX_PC_FULL",
+            "OBSREDUX_PC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "发现钥匙后知道下一个可去的房间，回去按新线把案子接着办",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "早期从厨柜拿的证物在很远的一处变成可读、可听的亚当记录",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "回顾不同阶段如何串联案件",
+          "interpretation_boundary": "按亲历的公寓、线索阶段和神经调查作答，可换未体验场景。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+e770a0975011"
+}

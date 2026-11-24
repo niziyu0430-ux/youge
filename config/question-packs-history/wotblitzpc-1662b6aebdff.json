@@ -1,0 +1,1075 @@
+{
+  "id": "wotblitzpc",
+  "title": "坦克世界闪电战",
+  "game_ids": [
+    "steam-444200"
+  ],
+  "scope": "原生 Steam PC《坦克世界闪电战》。通常随机战、科技树、双人小队、训练房、车库与回放。",
+  "status": "private_candidate_pending_independent_review",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam PC《坦克世界闪电战》",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "12 槽各 3 景，首题 8 道行动、4 道回顾。每槽至少保留一条普通战、早期车库或键鼠可体验的替代情境。",
+    "单圈遭遇与制霸分别写题。地图改动按 Steam 已发布维护线核对，绕图题写玩家已进入地图作为前提。",
+    "避开《坦克世界》主作、独立中国大陆移动服务、触控设置及 Reforged 测试构筑。"
+  ],
+  "slots": [
+    {
+      "id": "WOTBPC01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "WOTBPC01.V1",
+          "scene": "M4 谢尔曼去矿山坡口",
+          "text": "开局驾驶 M4 谢尔曼来到矿山（Mines）。小地图上已有一辆队友朝中央上坡入口走，住房一侧的路也通，车辆可在坡脚或镇里找到硬掩体。你把第一段路线放哪儿？",
+          "options": [
+            {
+              "id": "A",
+              "label": "沿住房外侧开一段，弄清从这里能望见哪个坡口，再找退路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "跟队友上中央坡口附近，互相照看谁先探头、谁能跟一炮",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_MINES",
+            "WOTBPC_SHERMAN",
+            "WOTBPC_PC"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据已经看见的地形和车队选择开局路线",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC01.V2",
+          "scene": "黑金村洞口调头还是贴队形",
+          "text": "地图是 Black Goldville。你驾驶中坦来到改造后的洞口，出口有可用掩体。小地图显示友军还在往工厂方向走，你还有能回到队形的安全路线。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "到洞口掩体看一下新开阔的射界，顺便找另一条能撤回的路",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "回到友军工厂方向，沿他们能看得到的位置跟过去",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_MAPOCT",
+            "WOTBPC_PC"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据已经看见的地形和车队选择开局路线",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC01.V3",
+          "scene": "早期随机战先穿哪一路",
+          "text": "七人随机战开局，你驾驶一辆低级中型坦克。小地图显示两条能通的路线，队伍大半已经走向一边，另一边从下一处硬掩体还能随时掉头。你先去哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先到另一边的最近硬掩体，把可能没人看的入口暂时照住",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "跟着先进场的友军，找一个既能互相接火又能撤的车位",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_PC",
+            "WOTBPC_SPOT",
+            "WOTBPC_MINIPC"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据已经看见的地形和车队选择开局路线",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "WOTBPC02.V1",
+          "scene": "谢尔曼炮口对着木栅栏",
+          "text": "M4 谢尔曼当前炮管装着 AP，手上也有 APCR。目标露出的车体在可击破的木栅栏后，你能保持炮线，也有时间等它把一侧开到无遮挡处。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "等无遮挡处露车体再开炮，把瞄小块车体的时机练准",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用已装好的 AP 通过栅栏打一发，观察这次障碍后还能不能打穿",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_SHERMAN",
+            "WOTBPC_PEN",
+            "WOTBPC_AIM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据瞄准、弹种和障碍决定怎样开炮",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC02.V2",
+          "scene": "狙击镜里深红的炮塔",
+          "text": "随机战的狙击模式里，手上的 AP 对炮塔正面显示深红，低处偶尔露出提示较淡的车体。你车上也还有穿深较高的弹可切换，两条路线都能在掩体后做。你选？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先切穿深较高的弹，用较稳定的炮线去重新判断原本太红的瞄点",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "保留 AP，等较淡的车体再探出来，练这一下短机会",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_AIM",
+            "WOTBPC_PEN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据瞄准、弹种和障碍决定怎样开炮",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC02.V3",
+          "scene": "间隙装甲旁的出手机会",
+          "text": "你驾驶一辆能打 AP 和 HE 的坦克，敌车用履带一侧遮住大部分车体，炮塔旁还有一小片当前可见的主装甲。AP 已装好，两处都能瞄。你先打哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "优先瞄能观察到的车体主装甲，把这一发用来削血",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "瞄可击断的履带，给已经对准它车身的友军争取一轮射击",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_PEN",
+            "WOTBPC_AIM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据瞄准、弹种和障碍决定怎样开炮",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "WOTBPC03.V1",
+          "scene": "轻坦灌木后先亮还是先打",
+          "text": "你驾驶轻坦到一片能挡视线的灌木后，先在边缘点亮了对面一辆车。友军射线已对准它，你现在也有炮线，开火会让自己更容易被点亮。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "自己也打一发，然后按点亮提示和敌方反应决定要不要换位",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先留在位置上持续为友军提供目标，等他们打出第一波",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_SPOT",
+            "WOTBPC_RIBBON"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在点亮和暴露之间把握时机",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC03.V2",
+          "scene": "矿山灯塔一侧接近下一块遮挡",
+          "text": "矿山灯塔方向，你沿浅水边找到一块能挡住中央坡口炮线的石头。刚才敌车短暂点亮了你，已经退回另一块掩体。眼下没有确定的敌方视野，你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在现有硬掩体暂停，看看小地图敌人是否正在转过来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "沿石头外缘试着观察灯塔那面，确认能不能到另一个侦察位置",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_MINES",
+            "WOTBPC_SPOT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在点亮和暴露之间把握时机",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC03.V3",
+          "scene": "队友消失后守后方还是改角度",
+          "text": "随机战中一辆负责点亮的友军已被击毁，你还在坦歼的后方射击位，刚才看到的敌车图标也消失。脚下有掩体，侧面还有能安全到的第二炮位。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先转到第二炮位，摸清它能看到哪些原位置没有的角度",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先保住目前的位置，等下一次地图标出目标再决定哪边需要支援",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_SPOT",
+            "WOTBPC_MINIPC"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在点亮和暴露之间把握时机",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "WOTBPC04.V1",
+          "scene": "建筑转角外侧断履带",
+          "text": "你在随机战露出车首时被断履带，维修包已装且可用。你有炮弹，敌人刚打过一发，退回墙后需要恢复移动。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先修履带退回墙后，把下一发交火留到我能自由移动时",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "趁眼前这个瞄点仍可用先还一炮，再用维修包练一次开炮后撤",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_REPAIR",
+            "WOTBPC_PEN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "管理断履带和装填之间的时间",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC04.V2",
+          "scene": "硬掩体后两种维修用品都亮",
+          "text": "车停在完好的硬掩体后，履带受损而其余模块与乘员无损。普通维修包和多功能修理包都装着并已就绪。若要立刻修好再出掩体，你用哪一个？",
+          "options": [
+            {
+              "id": "A",
+              "label": "用现在顺手键位上的多功能修理包，马上按本轮既定进攻节奏出掩体",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "用普通维修包，把能兼顾乘员或火灾的那个留给下一次问题",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_REPAIR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "管理断履带和装填之间的时间",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC04.V3",
+          "scene": "装填时退坡还是跟队压",
+          "text": "你上一炮刚打完，装填尚未结束。一辆友军从旁边向前压，下一处硬掩体能过去，自己也可以停在原掩体等装填。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先跟到下一处掩体，争取配合它打下一轮集火",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先等这发装进炮管，再按射界决定是否跟进",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_CHARS",
+            "WOTBPC_PC"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "管理断履带和装填之间的时间",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "WOTBPC05.V1",
+          "scene": "遭遇战一辆敌车在占单圈",
+          "text": "遭遇战，对方一辆敌车正在占唯一的基地圈。它可被你当前装好的炮击中，旁边圈外也有一辆还在开火且几乎能收掉的敌车，时间和占领进度都还来得及处理。你先打谁？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先打圈外那辆，观察它退出交火后是否更容易处理圈内目标",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先打中圈内敌车并造成伤害，打断已在累积的占领进度",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_WIN",
+            "WOTBPC_PEN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "使用单圈或多据点的获胜条件",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC05.V2",
+          "scene": "制霸模式前方还有一个未占据点",
+          "text": "多据点制霸（Supremacy）开局，你离一个中立据点很近；队友已向另一个据点走，另有通向队友射界的掩体路线可用。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先进中立点，让队伍向本局靠控点累积分数的目标走",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去能照应队友的线路，和它互相掩护拿下那一边",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_DOM",
+            "WOTBPC_WIN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "使用单圈或多据点的获胜条件",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC05.V3",
+          "scene": "Black Goldville 的 A 点凹地",
+          "text": "这局在 Black Goldville 打多据点制霸，A 点附近的低处有掩护，进圈和沿外缘观察都通。附近仍可能有未亮敌车，分数暂时不急。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "沿低处接近并进圈，按之前定好的控点路线争取先拿 A",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "利用低处先观察哪条线会打进点内，再确定进圈时间",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_MAPOCT",
+            "WOTBPC_DOM",
+            "WOTBPC_SPOT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "使用单圈或多据点的获胜条件",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "WOTBPC06.V1",
+          "scene": "谢尔曼炮管和下一辆车之间",
+          "text": "科技树上的 M4 谢尔曼已经能玩，升级界面有现在可研究的替换炮管。当前自由经验也可留给科技树上后续的一辆车。你会怎样用？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先补足炮管研发，想把这辆车的炮和我的打法配到一起",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "继续开现在的谢尔曼攒车经验，把自由经验留到这条线往下一辆推时",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_RESEARCH",
+            "WOTBPC_FREE",
+            "WOTBPC_SHERMAN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在车库改善当前车辆或者推进科技树",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC06.V2",
+          "scene": "先花银币给新车还是开装备槽",
+          "text": "后续一辆车已研发，能用银币买。当前的主力车也有一个可花银币解锁的装备槽。银币只够优先处理一件。你会？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先把现在常用车还缺的装备槽补齐，让接下来每局都用得到",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先买已经研究好的下一辆车，继续走我一直在推的分支",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_RESEARCH",
+            "WOTBPC_EQUIP"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在车库改善当前车辆或者推进科技树",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC06.V3",
+          "scene": "同一装备槽里两项作用",
+          "text": "车库中一辆低级车的装备槽已经开放，里面显示两项备选且同一时间只能装一个。一个偏机动，一个偏转向，你本来准备再打几场。你先选？",
+          "options": [
+            {
+              "id": "A",
+              "label": "根据自己现在常走的线路，先装更能补上整套配装短板的那项",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先装和过去不同的那项，打几场看看车库数值变化是否真对应实战",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_EQUIP"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在车库改善当前车辆或者推进科技树",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "WOTBPC07.V1",
+          "scene": "二人小队已经就绪",
+          "text": "你和一位好友组成闪电战二人小队，等级符合普通匹配。好友能选一辆机动中坦，也能选和你同路的重坦。按你想要的配合，你建议怎么出车？",
+          "options": [
+            {
+              "id": "A",
+              "label": "各用不同车型，让它先点亮，我按自己的炮线把这组分工配合跑出来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "用同路车型先打同一边，练彼此什么时候探头和掩护",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_PARTY",
+            "WOTBPC_PC"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在开局前安排队伍与练习环境",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC07.V2",
+          "scene": "车库下一局之前碰到一个盲点",
+          "text": "随机战中碰到一处总是打不穿的装甲，回到车库后朋友有空在训练房开同一辆目标车，也可以和你继续普通匹配。今天只先做一个。你会？",
+          "options": [
+            {
+              "id": "A",
+              "label": "开训练房，在对方能配合摆角度时亲手练几种瞄点",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先组小队打普通匹配，一边开新局一边听朋友怎么协助处理厚装甲",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_ROOM",
+            "WOTBPC_AIM",
+            "WOTBPC_PARTY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在开局前安排队伍与练习环境",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC07.V3",
+          "scene": "PC 小地图要大还是多留视野",
+          "text": "在 Steam PC 客户端，小地图缩放可调整。你上局没及时看到哪一侧丢了视野，不过也很看重屏幕空间读近处的炮线。你下局怎样设？",
+          "options": [
+            {
+              "id": "A",
+              "label": "保留紧凑尺寸，做一局有意识的定时扫图，再用回放看漏了哪一步",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先调大一点，给开局判断坦克走向留下更清晰的全图信息",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_MINIPC",
+            "WOTBPC_KEYS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在开局前安排队伍与练习环境",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "WOTBPC08.V1",
+          "scene": "矿山坡口只露炮塔的敌车",
+          "text": "矿山中央坡口，对手目前只露炮塔。车体全在坡后，你的炮已好了。眼下可以随时退回石头后，也可沿能通行的另一侧小路改变角度。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在原位等下一次露头，重新练用狙击镜抓短时机会",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先沿小路换个能退回去的角度，找从侧面看得到什么",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_MINES",
+            "WOTBPC_AIM",
+            "WOTBPC_PEN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据战况在原位置和第二角度间选择",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC08.V2",
+          "scene": "工厂侧给友军补同线还是另开炮线",
+          "text": "Black Goldville 工厂附近，你在硬掩体后，一辆友军正向同一车辆开炮。中心有一个官方新增的可用于支援工厂的炮位，当前可走过去。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "转去中心新炮位看一眼，找能从不同方向打到目标的位置",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "在熟悉的近处和友军压同一目标，跟上它下一炮",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_MAPOCT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据战况在原位置和第二角度间选择",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC08.V3",
+          "scene": "倒车回墙后切瞄准视角",
+          "text": "近距离过拐角时，你当前在狙击视角，炮还需装填。车后可以倒进硬掩体；在撤回前也可以切回第三人称重新观察。你先怎样安排？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先切第三人称确认撤回路线和友军位置，再倒进去",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "沿已确认畅通的路线先倒回去，练把退车和重新进入瞄准接起来",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_AIM",
+            "WOTBPC_KEYS",
+            "WOTBPC_CHARS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据战况在原位置和第二角度间选择",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "WOTBPC09.V1",
+          "scene": "没穿和跳弹在结果上不同",
+          "text": "你回想一发 AP 打在敌车斜面发生跳弹，随后从它更正的侧向击中并穿透。什么让你想看回放？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想把自己换瞄点前后的结果并排看，下次见类似车体更快调整",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "想把两次撞到的具体角度和部件找清楚，解开为什么同一种弹结果不同",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_REPLAY",
+            "WOTBPC_PEN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾穿深、角度和瞄准结果",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC09.V2",
+          "scene": "红色高亮改变的一发",
+          "text": "回想随机战切到狙击模式时，敌车转向让装甲高亮变化，你在新角度开了一发。更想记住哪部分？",
+          "options": [
+            {
+              "id": "A",
+              "label": "那个角度开始变化时我何时移动准星，想把这段鼠标操作练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "转向前后装甲的高亮哪里变了，想弄懂车型的防护差异",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_AIM",
+            "WOTBPC_PEN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾穿深、角度和瞄准结果",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC09.V3",
+          "scene": "有一发炮弹只断履带没掉血",
+          "text": "回想随机战对敌车开一炮，只让它断履带而没扣车体血，后来队友补了伤害。你打算从这件事记住什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "记得那时队友已经有炮线，下次仍想用断履带接上他们的火力",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "重新看轨迹和履带后的主装甲，弄懂为什么炮弹没有继续打穿",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_PEN",
+            "WOTBPC_RIBBON"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾穿深、角度和瞄准结果",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "WOTBPC10.V1",
+          "scene": "第一次用小地图赶到补防",
+          "text": "回想 Steam 版把战斗小地图调到合适大小后，第一次看见友军少的一边并及时回防。后来你更想重来哪类体验？",
+          "options": [
+            {
+              "id": "A",
+              "label": "练到交火和装填间也能习惯性看一眼地图，车还能开稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看看小地图放大与此前小图时看到的提示有何差别，再调合用的尺寸",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_MINIPC",
+            "WOTBPC_PC"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾练习后能做好的操作",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC10.V2",
+          "scene": "训练房在同一墙角重复试射",
+          "text": "回想和朋友在训练房互相当目标，在同一角落练把车体藏到墙后再只开一炮。哪一项更像你还会约下一次的理由？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想用同一角度换换瞄点，逐次看哪个位置最容易被对方反打",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "想把探头、瞄准、再倒车练顺，好几次都能少露车体",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_ROOM",
+            "WOTBPC_AIM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾练习后能做好的操作",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC10.V3",
+          "scene": "把维修包留过一发以后",
+          "text": "回想一次履带坏了，你等敌人射过后才用维修包撤回掩体。什么更值得你回放时留意？",
+          "options": [
+            {
+              "id": "A",
+              "label": "用维修包恢复移动后怎么第一时间把车倒到掩体后",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "对手那一发在什么时刻打完，以及我提前用或晚点用可能带来什么变化",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_REPAIR",
+            "WOTBPC_REPLAY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾练习后能做好的操作",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "WOTBPC11.V1",
+          "scene": "科技树亮起下一辆车",
+          "text": "回想从低级车开始打，科技树里终于满足下一辆车的研发条件。哪一部分更让你想继续？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想让车库里多一辆我还没开的具体车型，把没玩过的类型慢慢补齐",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "一路攒这条线的车经验，想亲自体会同一条分支下一辆的变化",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_RESEARCH",
+            "WOTBPC_FREE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾养车、配装或收藏的动力",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC11.V2",
+          "scene": "配置谢尔曼时发现另一种打法",
+          "text": "回想在车库换过 M4 谢尔曼适用的炮管或装备，进实战后觉得射角或出手节奏有了变化。你更愿意为什么再调一次？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想把炮管、装备和走位配成自己可以反复用的战法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "想只改一个参数就打一轮，对照车库表现是否能解释刚才的改变",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_SHERMAN",
+            "WOTBPC_CHARS",
+            "WOTBPC_EQUIP"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾养车、配装或收藏的动力",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC11.V3",
+          "scene": "给低级车挑保留下来的涂装",
+          "text": "回想给一辆仍会开的低级车装上车库中已有且可用的涂装。下次愿意再去看的原因是什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想把曾获得的几种涂装都找到一辆常用车去用，不只留在列表里",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "想让常用车在不同地形里仍有自己中意的样子",
+              "signal": "style_director"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_CAMO",
+            "WOTBPC_PC"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾养车、配装或收藏的动力",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    },
+    {
+      "id": "WOTBPC12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "WOTBPC12.V1",
+          "scene": "占领被重置后等队友",
+          "text": "回想一局遭遇战，自己单独占基地时被击中重置，随后友军赶到让你能继续坚持。哪部分让你更想再开一场？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想遇到愿意互相掩护占点的队友，自己也能换个位置去帮他们",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "想练一次什么时候进圈、什么时候先离开射界，以后能多守一轮",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_WIN",
+            "WOTBPC_PARTY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾哪种局面让人愿意再进一局",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC12.V2",
+          "scene": "矿山绕灯塔找到新的炮线",
+          "text": "回想第一次在矿山从中央附近绕到灯塔一侧，从新的炮线参与一轮交火。它留下哪种念头？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想把进这条路之前要看的两处射界理清，下次有同样战况直接转过去",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "想再试一条先前没去的路线，看看地图边缘还能看到哪儿",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_MINES",
+            "WOTBPC_SPOT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾哪种局面让人愿意再进一局",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        },
+        {
+          "id": "WOTBPC12.V3",
+          "scene": "一局结算里看见协助伤害",
+          "text": "回想在闪电战结算里看到一次来自点亮或断履带的协助伤害，你自己打出的伤害不算多。你更愿意为什么再排？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想再找能照着点亮信息打的队友，自己选车为他们铺开射界",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "想重新试一两次路线，看看不同位置到底能带来多少实战协助",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "WOTBPC_RIBBON",
+            "WOTBPC_REPORT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾哪种局面让人愿意再进一局",
+          "interpretation_boundary": "Wargaming《坦克世界闪电战》Steam PC 客户端。按题面已进入的模式、地图和已装的配置作答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+1662b6aebdff"
+}

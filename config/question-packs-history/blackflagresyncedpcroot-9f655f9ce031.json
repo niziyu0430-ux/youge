@@ -1,0 +1,994 @@
+{
+  "id": "blackflagresyncedpcroot",
+  "title": "刺客信条：黑旗 记忆重置",
+  "game_ids": [
+    "steam-3751950"
+  ],
+  "scope": "Ubisoft《刺客信条：黑旗 记忆重置》Steam Windows App 3751950 public 25795103，本体 1.0.8。按重置版单人爱德华故事、照片模式、大伊纳瓜发展、船歌、机内收藏记录、已有船上外观和宠物决定。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam PC · 记忆重置本体",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "初次熟悉大伊纳瓜",
+          "text": "已跟着爱德华来过大伊纳瓜，刚到据点时只想先熟悉一处。你选哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_STORY",
+            "BLACKFLAGRESYNCEDPCROOT_HIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回到主宅附近，想把刚才有关落脚地点的对话和眼前地方对上。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "沿自己已经走过的岸边多看一段，先认出海岛轮廓。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「初次熟悉大伊纳瓜」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT01.V1"
+        },
+        {
+          "scene": "大伊纳瓜的花园和宝物商",
+          "text": "大伊纳瓜的宝物商和塔楼花园都显示已能升级，你当前只想先发展一处。你选哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_HIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先升塔楼与花园，让据点能累积更多被动收入。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先升宝物商，让据点多一项修复藏宝图的服务。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「大伊纳瓜的花园和宝物商」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT01.ALT1"
+        },
+        {
+          "scene": "看据点从海面还是从屋里",
+          "text": "你已经从寒鸦号看过大伊纳瓜，也在岛上打开过摄影模式。再来一次只先留哪一幅画面？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_HIDE",
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回到主宅前拍建筑与周围植物的颜色。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "从游戏海面重看熟悉的海岛轮廓。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「看据点从海面还是从屋里」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "寒鸦号的一首旧船歌",
+          "text": "你曾玩过旧版，已经在重置版听到旧版也有的一首船歌，选曲轮也出现以前没听过的曲子。朋友问重置后最值得听什么，你想先给他放哪首？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_NAV",
+            "BLACKFLAGRESYNCEDPCROOT_LAUNCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先放旧版也有的，让他听两次旅程共有的声音。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先放重置版这次才收进轮里的，让他听你多收了什么。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「寒鸦号的一首旧船歌」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT02.V1"
+        },
+        {
+          "scene": "自己选船歌还是让船员随机唱",
+          "text": "寒鸦号的船歌轮里已经有几首能播放的曲子。出了港，只占用一段路听船歌，你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_SOUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让游戏随机挑，听听这次船员会唱哪首。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "点一首和眼前海景最搭的歌。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「自己选船歌还是让船员随机唱」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT02.ALT1"
+        },
+        {
+          "scene": "寒鸦号先唱哪一首",
+          "text": "你在寒鸦号上已经收过熟悉的一首船歌，选曲轮里也有这一局刚收到的一首。今晚的第一首，你选哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_NAV",
+            "BLACKFLAGRESYNCEDPCROOT_SOUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先点以前听熟的那首，把最喜欢的声音留给刚出港这段。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先点刚解锁的那首，听听它搭上夜色会是什么感觉。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「寒鸦号先唱哪一首」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "再拍一张还是整理已有截图",
+          "text": "现在游戏里已能打开摄影模式，你也保留着以前给寒鸦号拍的截图。这次只做一件事，你选什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO",
+            "BLACKFLAGRESYNCEDPCROOT_SHOT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把此前留下的截图挑好，留一张自己之后还会找来看的。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "给船在新的停靠点再拍一次，想留个新角度。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「再拍一张还是整理已有截图」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT03.V1"
+        },
+        {
+          "scene": "一张游戏照片构图",
+          "text": "你在本体摄影模式打开了海边场景，镜头能看见寒鸦号也能纳入远处城市。想先保存一张会怎么构图？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO",
+            "BLACKFLAGRESYNCEDPCROOT_SITE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把颜色和建筑摆进画面，先留下自己最喜欢的城景。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "让自己选过外观的寒鸦号留在画面主要位置。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「一张游戏照片构图」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT03.ALT1"
+        },
+        {
+          "scene": "下雨的时候想怎么拍",
+          "text": "你在同一片海附近保存过晴天截图，现在停在游戏里下雨的一刻，照片模式可用。想给自己先留哪种画面？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO",
+            "BLACKFLAGRESYNCEDPCROOT_SITE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先整理以前的晴天图，想保留自己最认识的风景。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "拍当前雨天，看看色调有多不一样。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「下雨的时候想怎么拍」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "旧路线有游戏地图和引航",
+          "text": "从游戏城市再次出海时，已走过的下一站能在地图上标记，也可以在自己认识的海面随便转一圈。今天只开一段，你怎样开始？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_NAV",
+            "BLACKFLAGRESYNCEDPCROOT_SITE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先标记自己要去的地点，用游戏给的路径显示把两处对清。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "沿玩过的近海慢慢看看，想先认识没细看的海岸。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「旧路线有游戏地图和引航」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT04.V1"
+        },
+        {
+          "scene": "两处城市在一趟里优先哪一处",
+          "text": "你已经亲手到过哈瓦那和拿骚，地图也能找到这两处。今天只想回看一地的生活画面，先回哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_NAV",
+            "BLACKFLAGRESYNCEDPCROOT_LOC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回拿骚，想想以前在哪里听过这些角色说话。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "回哈瓦那，想再看屋顶和城市颜色。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「两处城市在一趟里优先哪一处」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT04.ALT1"
+        },
+        {
+          "scene": "熟悉水域的一次自动航行",
+          "text": "寒鸦号上，你已经标记回拿骚的目的地，路线显示和自动航行都可用。重走这一段时你会怎样安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_NAV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "开着路线提示，自己掌舵走完这段熟悉的路。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让游戏自动走这一段，把注意力留给船边的海面和风景。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「熟悉水域的一次自动航行」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "已得到的两种宠物外观",
+          "text": "你在本体里亲自解锁了两种可换的宠物外观，也都在寒鸦号见过。如今只留一种给今天的航程，你先怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_APPEAR",
+            "BLACKFLAGRESYNCEDPCROOT_PETS",
+            "BLACKFLAGRESYNCEDPCROOT_SHIPUI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换我以前少看的那个样子，看它在甲板上和灯光怎么配。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "留第一次设的样子，保留我熟悉的船上搭档。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「已得到的两种宠物外观」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT05.V1"
+        },
+        {
+          "scene": "小动物和船面两张照片",
+          "text": "你已经留有两张寒鸦号截图，一张主要是猫或猴，另一张主要是甲板。只选一张作为上次航行的纪念，你先留哪张？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO",
+            "BLACKFLAGRESYNCEDPCROOT_SHIPUI",
+            "BLACKFLAGRESYNCEDPCROOT_SHOT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留小动物那张，想起我是哪次开始让它常驻的。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "留甲板那张，想保留当时最喜欢的船面光线。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「小动物和船面两张照片」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT05.ALT1"
+        },
+        {
+          "scene": "寒鸦号上先带猫还是猴",
+          "text": "你已经在普通本体内得到一只猫和一只猴，寒鸦号也能选宠物。出海前这次只能选一个，你想带谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PETS",
+            "BLACKFLAGRESYNCEDPCROOT_SHIPUI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换还没陪你走过这段路的那只，想在船上看看它平时待在哪儿。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先带已经陪你去过几处港口的那只，跟熟悉的小家伙再走一趟。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「寒鸦号上先带猫还是猴」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "衣装与照片同一趟",
+          "text": "你刚试过爱德华已经拥有的一套衣装，也能从同一个存档打开不错的场景。再玩几分钟时，先怎样留下这次体验？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_LAUNCH",
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用摄影模式看换装后的颜色在这一处是什么样。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先继续看原来没接上的一小段故事，留意这一幕里爱德华怎样出现。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「衣装与照片同一趟」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT06.V1"
+        },
+        {
+          "scene": "爱德华的两套已获得衣装",
+          "text": "爱德华的衣装页有两套自己已经获得、也能切换的造型。回到熟悉港口前你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_APPEAR",
+            "BLACKFLAGRESYNCEDPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换到以前少用的那套，看看它在那个港口的颜色。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "保留原先那件，这次还想维持爱德华在我眼里的样子。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「爱德华的两套已获得衣装」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT06.ALT1"
+        },
+        {
+          "scene": "先看帆面还是船身",
+          "text": "寒鸦号的自定义里，自己已有一项帆面外观和另一项船身外观能换。只想先看一种变化，你先换哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_APPEAR",
+            "BLACKFLAGRESYNCEDPCROOT_SHIPUI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先换帆面，想从远景看最显眼的颜色有什么区别。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先换船身，让自己长期认得的船保留一个个人记号。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「先看帆面还是船身」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "据点艺术收藏怎么回顾",
+          "text": "你已经给大伊纳瓜据点加过艺术收藏，也能在建筑菜单看到还想做的项目。回去只打算先停一会儿，想看什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_HIDE",
+            "BLACKFLAGRESYNCEDPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看还没做的建筑项目，想让这片据点继续有变化。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先看已经收藏过的作品，记下哪些真的留下来了。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「据点艺术收藏怎么回顾」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT07.V1"
+        },
+        {
+          "scene": "有两处升级后先去哪边",
+          "text": "据点里你亲眼看到主宅外观和塔楼花园都有变化。回到岛上只想看一个更新结果，你先回哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_HIDE",
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看主宅，让这里留下跟自己游玩时间有关的样子。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先走进花园，想看看植物和建筑在照片里能怎么放。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「有两处升级后先去哪边」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT07.ALT1"
+        },
+        {
+          "scene": "客舍与渔人码头先回访一处",
+          "text": "据点的客舍和渔人码头都已由你建好，你也分别回去看过。这趟只回访一处，你先去哪儿？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_HIDE",
+            "BLACKFLAGRESYNCEDPCROOT_ARTPC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回渔人码头，想留意岸边和海面的景色。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先去看客舍的建筑，想把这个旧落脚点和记忆对上。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「客舍与渔人码头先回访一处」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "重置版后来认识的黑胡子",
+          "text": "你已经玩过重置版新增的黑胡子一段，也记得主线更早时看过的他。想留一句最印象深的记忆时，你先挑哪时的？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_STORY",
+            "BLACKFLAGRESYNCEDPCROOT_LAUNCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先挑扩写后见到的另一面，想讲自己后来怎么理解这个人。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先挑主线更早的那一幕，想把人物与爱德华的故事连起来。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「重置版后来认识的黑胡子」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT08.V1"
+        },
+        {
+          "scene": "黑胡子与基德的可选裂隙",
+          "text": "你已经看过重置版里分别与黑胡子、詹姆斯·基德相关的可选 Animus 裂隙。要给自己留下一条例子解释为什么喜欢这些补充故事，你先从哪个讲？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先说黑胡子那段，想把它与自己看过的主线情节接起来。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先说基德那段，想记住自己对角色的印象变化。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「黑胡子与基德的可选裂隙」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT08.ALT1"
+        },
+        {
+          "scene": "剧情续章之前先遇见谁",
+          "text": "你已经听过阿德瓦勒在大伊纳瓜向爱德华谈起露西和神父。回想这段已经看过的谈话时，最想先了解什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_STORY",
+            "BLACKFLAGRESYNCEDPCROOT_LAUNCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先想露西在这些人里的关系，看看我为什么把这个名字记住。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先回顾神父的部分，想弄清这段话后来怎样接进爱德华的旅程。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「剧情续章之前先遇见谁」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "二周目再回到据点和船上",
+          "text": "你在通关后亲自开始过 New Game+，也已再次回到能去据点和换船宠的进度。想回顾以前继承下来的一样东西，你先看哪样？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PATCH",
+            "BLACKFLAGRESYNCEDPCROOT_HIDE",
+            "BLACKFLAGRESYNCEDPCROOT_PETS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在寒鸦号给自己熟悉的那只小动物留个位置。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先回据点看看仍在的艺术收藏。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「二周目再回到据点和船上」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT09.V1"
+        },
+        {
+          "scene": "从船长室看贸易还是先回海面",
+          "text": "你已在寒鸦号船长室用过肯威舰队，当前有自己做过的游戏贸易进度。上船后只准备看一处，你会先去哪里？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_FLEET",
+            "BLACKFLAGRESYNCEDPCROOT_NAV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去船长室看舰队贸易，记住上回已经做到哪儿。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先回以前玩过的这片水域看看，想多记一段海岛轮廓。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「从船长室看贸易还是先回海面」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT09.ALT1"
+        },
+        {
+          "scene": "初登寒鸦号先给朋友看什么",
+          "text": "朋友坐在你旁边看你玩。你已经熟悉寒鸦号的游戏地图，也有一首听惯的船歌。只有一点时间，你先给他看哪样？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_NAV",
+            "BLACKFLAGRESYNCEDPCROOT_SOUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让船员唱自己常听的那首，给他听这艘船出海是什么感觉。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先把游戏地图调出来，指给他看你刚去了哪片海域。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「初登寒鸦号先给朋友看什么」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "有照片的老城区或船歌的开头",
+          "text": "自己已经保留过一张哈瓦那的图，也听熟一首寒鸦号上的本体船歌。选一个作为回忆开头时，你先用哪个？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO",
+            "BLACKFLAGRESYNCEDPCROOT_SOUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用哈瓦那的图，把最记得的建筑光色摆出来。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先说那首以前听过很多次的船歌，想靠熟悉的声音回到当时。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「有照片的老城区或船歌的开头」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT10.V1"
+        },
+        {
+          "scene": "据点和怀旧海岸的对照",
+          "text": "自己在本体见过大伊纳瓜据点的前后变化，也回访过原先的拿骚。想说明这一版留给自己的记忆时，先从哪个地方说？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_HIDE",
+            "BLACKFLAGRESYNCEDPCROOT_LOC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从拿骚的游戏地貌谈起，想留住最常重走的一处景色。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "从据点的发展谈起，想把自己手里做成的几个变化连起来。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「据点和怀旧海岸的对照」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT10.ALT1"
+        },
+        {
+          "scene": "二周目继承的衣装与收藏",
+          "text": "你用 New Game+ 重开后，已亲眼看见以前收的衣装与据点艺术品都在。这次只想重看一类，你先看什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PATCH",
+            "BLACKFLAGRESYNCEDPCROOT_ARTPC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先翻爱德华保留的衣装，看这一轮还想让他穿什么。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先重看继承的艺术收藏，想记住自己上一趟找到了哪些作品。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「二周目继承的衣装与收藏」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "黑胡子的扩写与寒鸦号画面",
+          "text": "你已看过黑胡子扩写《A World Without Gold》的一段，也有一张自己留的寒鸦号画面。只给这一回游玩留一条记录，你会写什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_STORY",
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先留截图里的船面和光色，把自己最想再看一眼的画面记下来。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先写黑胡子在那段扩写给你留下的角色印象。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「黑胡子的扩写与寒鸦号画面」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT11.V1"
+        },
+        {
+          "scene": "邦尼特的来信与大伊纳瓜照片",
+          "text": "你已读到斯蒂德·邦尼特约爱德华在神秘岛相见的来信，也保存了一张喜欢的大伊纳瓜照片。现在只整理一项游玩记录，你先整理哪项？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO",
+            "BLACKFLAGRESYNCEDPCROOT_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先给大伊纳瓜照片加个记号，留住我最记得的海岛画面。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先记下邦尼特约见的那一幕，想以后能接着回顾他的后日谈。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「邦尼特的来信与大伊纳瓜照片」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT11.ALT1"
+        },
+        {
+          "scene": "第一次把爱德华介绍给朋友",
+          "text": "你已经知道爱德华在这段加勒比海故事里的来历，也从寒鸦号看过本体城市。给初次听说的人介绍时，你先从哪里讲？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_SITE",
+            "BLACKFLAGRESYNCEDPCROOT_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从一个实际到过的城市讲起，想让他先认这片海的风景。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先说爱德华怎样来到自己一开始看见的情节。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次把爱德华介绍给朋友」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "BLACKFLAGRESYNCEDPCROOT12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "这次重置版为什么还想再回",
+          "text": "你已经体验过重置版拍照和新增船歌，照片里已经留着一张本体城市图。准备给自己最后记一项时，先从什么写起？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_PATCH",
+            "BLACKFLAGRESYNCEDPCROOT_SOUND",
+            "BLACKFLAGRESYNCEDPCROOT_PHOTO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从城市图开始，想留下这一版的人与景的颜色。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "从一首自己亲手找到的新船歌写起，想说明它在哪段游戏记忆里出现过。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「这次重置版为什么还想再回」中的实际行动与取舍。",
+          "interpretation_boundary": "限已经体验题面里两类故事、成长或收藏节点的玩家。",
+          "id": "BLACKFLAGRESYNCEDPCROOT12.V1"
+        },
+        {
+          "scene": "船歌和海声的独立音量",
+          "text": "你在寒鸦号听过船歌和海面的声音，也在本体音量页看过两项能分开调。只先动一项时，你会怎么做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_OPTIONS",
+            "BLACKFLAGRESYNCEDPCROOT_SOUND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把环境声调清楚些，这一趟想多听船边的风和浪。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把船歌调清楚些，想在这段海面听完那群船员的合唱。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「船歌和海声的独立音量」中的实际行动与取舍。",
+          "interpretation_boundary": "按重置版本体亲历且已可用的游戏入口作答。",
+          "id": "BLACKFLAGRESYNCEDPCROOT12.ALT1"
+        },
+        {
+          "scene": "据点收藏停留还是先回城",
+          "text": "本体已经有自己加过艺术品的大伊纳瓜据点，也有以前走熟的一处哈瓦那街景。想回访哪种个人体验时，你先去哪边？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "BLACKFLAGRESYNCEDPCROOT_HIDE",
+            "BLACKFLAGRESYNCEDPCROOT_LOC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看据点的已有展品，想把收藏留下的痕迹再看一眼。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先回哈瓦那走过的地方，想重新看到一处平常不会停的城景。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「据点收藏停留还是先回城」中的实际行动与取舍。",
+          "interpretation_boundary": "限已取得、已经使用或当面已见的本体记录。",
+          "id": "BLACKFLAGRESYNCEDPCROOT12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+9f655f9ce031"
+}

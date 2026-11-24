@@ -1,0 +1,1017 @@
+{
+  "id": "smt5vengeancepc",
+  "title": "真·女神转生Ⅴ Vengeance",
+  "game_ids": [
+    "steam-1875830"
+  ],
+  "scope": "Steam Windows《真·女神转生Ⅴ Vengeance》本篇，沿用两条路线共有的港区、神魔仪式与追击回合机制；少数替代题明确用于创世女神篇或复仇女神篇。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam Windows 本篇",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "SMT5VENGEANCEPC01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "东京塔试出冰弱点",
+          "text": "东京塔下，你已用冰招打出海德拉的弱点。还剩两个完整行动图标。当前仲魔有冰招可用，另一个仲魔血量偏低，排在后面的一位能治疗。下一步你怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_HYDRA",
+            "SMT5VENGEANCEPC_PORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把行动先转到能治疗的人手上，等队伍稳住再接冰招",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让当前可动的冰系仲魔再打一次弱点，争取继续行动",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「东京塔试出冰弱点」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC01.V1"
+        },
+        {
+          "scene": "港区祸冢堵路",
+          "text": "港区公路边，你看到一个还没破坏的祸冢和附近一条可走的支路。队伍能打，但是还没探清祸冢附近。你先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_MAP",
+            "SMT5VENGEANCEPC_PORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先靠近祸冢，打掉守敌，看看觉醒了哪些神意",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先拐进支路看看，找到可用道具再回来处理祸冢",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「港区祸冢堵路」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC01.ALT1"
+        },
+        {
+          "scene": "手里有个万里眼镜",
+          "text": "港区第一次遇见一种陌生的可战斗恶魔。创毘先行动，包里还有万里眼镜，手上也有未验证的属性招式。这轮你想如何找弱点？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT",
+            "SMT5VENGEANCEPC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用手上一个有把握尝试的属性招，看它的实际反应",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先用万里眼镜看耐性，再给后面的仲魔安排招式",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「手里有个万里眼镜」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "天逆每提示的祸径",
+          "text": "港区往东京塔的路上，同行的任务向导天逆每已经提示并找出一个可以走的祸径，你也看得见原先步行可达的大路。现在要继续走，你选哪条？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT",
+            "SMT5VENGEANCEPC_NAVI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "坐上刚发现的祸径，看看它通向地图哪一处",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "沿原先跑通的大路走，把已知途中的搜集点顺手清掉",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「天逆每提示的祸径」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC02.V1"
+        },
+        {
+          "scene": "当前龙穴到下一站",
+          "text": "达识港区的一处龙穴前，你有一个明确的主线标记没处理，但也已经开过附近另一处龙穴，想起那边还有一条没查的小巷。你现在要去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_BLOG",
+            "SMT5VENGEANCEPC_MAP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用龙穴回去看那条小巷，再折回主线",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "直接出发去主线标记，把下一处任务先完成",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「当前龙穴到下一站」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC02.ALT1"
+        },
+        {
+          "scene": "杀戮之兽前只留第四位",
+          "text": "你在复仇女神篇开了新档，已经到港区杀戮之兽战前。你记得两名临时同伴会占第二和第三位，第四位能留给自己安排的仲魔。手上两只备选仲魔分别能打电弱点和稳定治疗。你把谁排上？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_BEAST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让电系仲魔留在第四位，给队伍多留一个打弱点的人",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把有治疗的仲魔放第四位，让其他参战者负责抢输出",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「杀戮之兽前只留第四位」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "神意先补哪处",
+          "text": "你打掉港区祸冢回到邪教的世界，画面已经列出一项可学的仲魔储备扩容神意，也列出一项可学的技能适应度神意。御严只够优先学一项，两项都满足前置。先学什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "加想走的技能适应度，把目前阵容的一路伤害先做起来",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "扩大储备名额，接下来遇见稀有仲魔时有位置能收",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「神意先补哪处」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC03.V1"
+        },
+        {
+          "scene": "祸灵量表蓄满的交手",
+          "text": "一场港区硬仗中，你方祸灵全满，界面显示全员暴击的祸灵技能已可用。两名仲魔还能接攻击，敌人的耐性你也已经看过，但你预计本场还要打几轮。这次先怎么花动作？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_BLOG"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "现在开这招让两名仲魔接攻击，把这一轮的行动用起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先保持这轮常规打法，留着满量表等更想抢的一轮",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「祸灵量表蓄满的交手」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC03.ALT1"
+        },
+        {
+          "scene": "红黄绿结晶从哪边走",
+          "text": "港区一段可以自由跑动的路上，你的祸灵量表还差一点，常用招又快没 MP。岔口两支分别能捡到红色和黄色祸灵结晶，你只打算先走一支。选哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_MAP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去黄色一侧先恢复 MP，把平时用的招式余量补回来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "去红色一侧先加祸灵量表，让下一场开打时多一种选择",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「红黄绿结晶从哪边走」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "一句话与一次攻击",
+          "text": "港区遇见一个你已确认可以谈判的普通恶魔。没有满月等对话限制，创毘等级也够、队里有空位。本回合开始时你手上也能打出它的弱点。你想怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "开口谈，听它要什么再决定是否收作仲魔",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "当即打已知弱点，先按这一轮的战斗节奏结束交手",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「一句话与一次攻击」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC04.V1"
+        },
+        {
+          "scene": "向导找出了东西",
+          "text": "达识港区，跟着你的任务向导已经在身侧提示了一处可调查的发现点；同一岔路前方还能看见上一个没拿的黄色宝箱。附近没有追着你的敌人。先查什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拿之前看到的黄色宝箱，把已经确认的资源收入手里",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "转身去查向导的新发现，看看有什么藏在路旁",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「向导找出了东西」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC04.ALT1"
+        },
+        {
+          "scene": "听完两方再表态",
+          "text": "港区的飞天和拉南希都请你打倒对方。你已经听过两边的要求，还没替任何一边动手。飞天的冰招正好能帮你打海德拉，拉南希的说法却更合你的心意。你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_QUEST",
+            "SMT5VENGEANCEPC_FACTION",
+            "SMT5VENGEANCEPC_DEMONS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "帮飞天，争取一名能补冰系的仲魔",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "按自己认同的理由帮拉南希，接受阵容上的变化",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「听完两方再表态」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "夜之女王任务的第四颗星",
+          "text": "接下港区「司掌月亮的夜之女王」，你找到第四颗星星，满足最低要求，离满月还有路可跑。你已能回委托人那边，也能继续循着地图找。先去哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_STARS",
+            "SMT5VENGEANCEPC_QUEST",
+            "SMT5VENGEANCEPC_MOON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续找剩下的星星，想试试首次集齐的额外奖励",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "停止找星，回委托人附近，按任务流程结算这四颗",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「夜之女王任务的第四颗星」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC05.V1"
+        },
+        {
+          "scene": "饿鬼送饭以前",
+          "text": "港区「寻找踏上归途的饿鬼」里，你拿到了要带回去的食物。你这一趟知道交付后会打起来，附近龙穴已开放，队伍里有可替换的仲魔。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PRETA",
+            "SMT5VENGEANCEPC_QUEST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用现在的阵容回去交食物，先推进委托",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先去龙穴补队伍，把适合打饿鬼的一两种攻击排好再交付",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「饿鬼送饭以前」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC05.ALT1"
+        },
+        {
+          "scene": "剩一格行动对付御魂",
+          "text": "一只随机耐性的御魂还没跑，你的创毘这回合能行动，只剩一个行动图标。包里有万里眼镜，也有几种元素伤害道具，但你还不知道它弱哪种。你会先做哪一步？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "现在就选一种手头的元素道具投出去，赌这一轮就能打中弱点",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先用万里眼镜确定它怕什么，赌它留下来等下一轮出手",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「剩一格行动对付御魂」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "给创毘的第一份灵体",
+          "text": "你在邪教的世界已学会可以继承耐性的神意。手里有两个不同的灵体，一份预览能教创毘缺的元素攻击，另一份预览能替换掉下一区最危险的一个弱点。这次只想消耗一份。怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT",
+            "SMT5VENGEANCEPC_MIRACLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "学缺的元素攻击，让创毘填上队伍的输出空档",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先继承耐性，减少下一段被对方反复追击的机会",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「给创毘的第一份灵体」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC06.V1"
+        },
+        {
+          "scene": "杀戮之兽离开以后换谁",
+          "text": "复仇女神篇打过港区的杀戮之兽，寻峰洋子已在队伍里。接下来一场普通交战前能改变参战阵容，洋子能用道具，而另一个备选仲魔能打这片区域常见的弱点。你准备带谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_BEAST",
+            "SMT5VENGEANCEPC_ROUTE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "带能覆盖已知弱点的仲魔，给先手击破留余地",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "让洋子上场，给战斗留一个可以使用道具的人",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「杀戮之兽离开以后换谁」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC06.ALT1"
+        },
+        {
+          "scene": "古斯塔夫的魔货预算",
+          "text": "回港区龙穴进入骨骸的藏身处，你刚在自动售货机捡了能卖的遗物。卖掉后够优先买一组药，或优先买几件识别耐性的万里眼镜，但不能全买。你先买哪组？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT",
+            "SMT5VENGEANCEPC_ITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "买能治疗的道具，给未走完的路多留些余量",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "买万里眼镜，先把接下来陌生敌人的耐性摸清",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「古斯塔夫的魔货预算」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "美人鱼委托里的帕祖祖",
+          "text": "过了东京塔海德拉后，你去帮受诅咒的美人鱼，已经和帕祖祖交战。当轮行动的仲魔能打出冰弱点，也能防御。它血量不太满，并且怕帕祖祖用的暗属性；当前还有两个完整行动图标。你这一步怎么下？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_QUEST",
+            "SMT5VENGEANCEPC_PAZUZU",
+            "SMT5VENGEANCEPC_PAZUZU2",
+            "SMT5VENGEANCEPC_DEMONS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让它继续打冰弱点，争取给接下来的队友留动作",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先让这个仲魔按防御，把还有的攻击留给同伴",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「美人鱼委托里的帕祖祖」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC07.V1"
+        },
+        {
+          "scene": "钻进被翻转的走廊",
+          "text": "复仇女神篇的至圣所夏康中，你刚经历一次天地倒转。眼前有一段已能站稳、但还没走过去的通路，当前地点也能用小地图辨清楼层。你会先怎么推进？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_SHINJUKU",
+            "SMT5VENGEANCEPC_ROUTE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在原地对照小地图，找清翻过来后哪一侧能继续",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先走一小段眼前能落脚的通路，亲自找出口时再校正方向",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「钻进被翻转的走廊」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC07.ALT1"
+        },
+        {
+          "scene": "检索合体的两套材料",
+          "text": "在邪教的世界，你用检索合体找到了想要的仲魔。预览里有两组合规材料，你全都持有。一组会消耗已经练熟的队友并能带去常用招，另一组会留下旧队但新仲魔携带的技能不同。你选哪组？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用备选组，保留已经配合顺手的旧队员",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "用第一组，把需要的旧技能一起带进新配法",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「检索合体的两套材料」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "回龙穴先见哪位",
+          "text": "港区龙穴已同时开了恶魔的后院和邪教的世界。你背包带着可送的贡品，常用的仲魔就在后院，也有一次准备好的可行合体。离开龙穴前你只打算先做一件，先去哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_BLOG"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去后院把贡品送给常用仲魔，看看它当下的对话",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "去索菲亚那儿把已备好的合体做了，试试新仲魔",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「回龙穴先见哪位」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC08.V1"
+        },
+        {
+          "scene": "魔王城红色风柱前",
+          "text": "创世女神篇的魔王城第三层，你站到十字平台上的安全处，前面红色风机关时吹时停，东北方的平台有阶梯。打算怎么过去？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_CASTLE",
+            "SMT5VENGEANCEPC_ROUTE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "抓住眼前第一次停风就沿通路冲向东北楼梯",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先看几轮风停多久，把通过十字平台、走到东北楼梯的时机认准",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「魔王城红色风柱前」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC08.ALT1"
+        },
+        {
+          "scene": "靠近哪些恶魔再开打",
+          "text": "在港区的一处开阔地，你看见几只靠得近的恶魔以及一只距离较远的同类。能分别走近两边，当前队伍有余力却不是满 MP。你想怎样接战？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_BLOG"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去接近扎堆的恶魔开打，试试能不能接成连续遇敌",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先挑落单的一只交手，控制这趟会花多少 MP",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「靠近哪些恶魔再开打」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "港区拿到了哪种新东西",
+          "text": "回想港区一次正好拿到未满奖励、也找到了青神遗骸的探索。若按当时的进度再去一趟，更想做哪件？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_MAP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回去调查青神遗骸，拿灵体给创毘试另一套技能",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "按发现未满的位置补齐当时漏掉的几个",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「港区拿到了哪种新东西」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC09.V1"
+        },
+        {
+          "scene": "海德拉有弱点和空当",
+          "text": "回想你打东京塔海德拉时，既亲手打过冰弱点，也有过按住防御等它过一轮的时刻。再回到那场战斗，你更想复现哪一段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_HYDRA",
+            "SMT5VENGEANCEPC_PORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把一次冰击接成连续行动，趁轮还在手里往下打",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把低血队友的防御时机练准，稳住一轮后再组织攻击",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「海德拉有弱点和空当」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC09.ALT1"
+        },
+        {
+          "scene": "夏康的反方向出口",
+          "text": "如果玩过复仇女神篇的至圣所夏康，且确实用过倒转机关、看过楼层地图，哪段更想再走一遍？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_SHINJUKU"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再从倒转后能落脚的地方，找找没走过的另一侧",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "重找一次翻转前后对应的楼层和出口",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「夏康的反方向出口」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "重战模式选哪一档",
+          "text": "回想你在东京议事堂的虚拟指导员系统已经打过港区的连战，原生与挑战两种模式均可选。想再去打一轮时，你愿意怎么选？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_BLOG",
+            "SMT5VENGEANCEPC_VIRTUAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选原生模式，先验证自己能不能更顺地处理过去卡住的回合",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "选挑战模式，打强化后的敌人看能撑到哪儿",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「重战模式选哪一档」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC10.V1"
+        },
+        {
+          "scene": "祸径与自动售货机",
+          "text": "回想你在港区确实绕路捡过自动售货机的遗物，也走过新发现的祸径。哪一种发现更想留下来当你下次出门的重点？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_MAP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再找一条让自己从不同入口进到附近区域的祸径",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "再沿自己记得的售货机跑一趟，慢慢攒能换魔货的遗物",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「祸径与自动售货机」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC10.ALT1"
+        },
+        {
+          "scene": "创毘换耐性的一次尝试",
+          "text": "回想你已经通过灵体合体改变过创毘的技能，也已经学过神意并换过防御耐性。若用同一套队伍跑一段更难的区域，你更想重新验证哪种调整？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_MIRACLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "改一个进攻技能，看看魔法和仲魔原有技能怎样互补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "调整防御耐性，看看消掉一个常被针对的弱点带来几次安全回合",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「创毘换耐性的一次尝试」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "第一次有人提出招募条件",
+          "text": "回想港区一次恶魔对话，你当时真的付过魔货或道具，也有过在要求太多时放弃的情况。哪种体验你更乐意再做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "到自己的预算上限就收手，把资源留给未来的仲魔或补给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "和心仪的恶魔谈到底，看它最后愿不愿加入",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次有人提出招募条件」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC11.V1"
+        },
+        {
+          "scene": "送出去的一件贡品",
+          "text": "回想你亲自去恶魔的后院和常用仲魔说过话，也确实送过贡品。下次又从龙穴进去，你更期待哪部分？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_BLOG"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先听它在当前故事进度下会说什么，看看关系怎样变化",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把想给的贡品亲手送给它，记下它当时的回应",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「送出去的一件贡品」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC11.ALT1"
+        },
+        {
+          "scene": "打伊什塔尔前找装置",
+          "text": "如果玩过创世女神篇千代田区，见过伊什塔尔战前那些可以停掉的装置。现在回想那一段，你更想试哪种打法？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_CHIYODA",
+            "SMT5VENGEANCEPC_ROUTE",
+            "SMT5VENGEANCEPC_ISHTAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "提前进场实战，看看保留部分装置时自己能应付到哪",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "再把几处装置查得更全，尽量减少她能用的行动",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「打伊什塔尔前找装置」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SMT5VENGEANCEPC12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "回到港区第一处祸冢",
+          "text": "回想你第一次清掉港区的祸冢后，确实回龙穴看过新神意，也继续开过前方的路。再遇到那种时刻，哪部分更想留给自己？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_PORT",
+            "SMT5VENGEANCEPC_MAP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回邪教的世界看新神意，挑一个真正能变动练法的升级",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先走到祸冢后面，看原先没探过的道路接到哪里",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「回到港区第一处祸冢」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前游戏内已开放的设施和选项，或题面注明的个人亲历作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC12.V1"
+        },
+        {
+          "scene": "港区路上认识的仲魔",
+          "text": "回想港区第一次组起自己满意的小队，曾从野外对话收下皮克希，也曾在邪教的世界合出另一只常用仲魔。若重新布置阵容，在哪一种方式上你更想多花时间？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_SYS",
+            "SMT5VENGEANCEPC_QUEST",
+            "SMT5VENGEANCEPC_PORT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "多做几次检索合体，挑出技能最合自己队伍的组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "在野外再谈几次，把在打斗中遇见的有趣恶魔收进来",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「港区路上认识的仲魔」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面明确已知的敌情、参战角色、道具或技能状态作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC12.ALT1"
+        },
+        {
+          "scene": "进游戏时的那只手",
+          "text": "回想开头伸向你的少女。如果再开一个新档，两条线现在都能选。你更愿意为哪一种经历重新开始？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SMT5VENGEANCEPC_STEAM",
+            "SMT5VENGEANCEPC_ROUTE",
+            "SMT5VENGEANCEPC_OPEN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "牵手走复仇女神篇，想看寻峰洋子怎样介入后面的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "不牵手走创世女神篇，想从争夺新世界走向的立场中再作一次选择",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「进游戏时的那只手」中的实际行动与取舍。",
+          "interpretation_boundary": "按 PC 版当时的地点、任务进度和实际可用的路线作答；没经历过可换题。",
+          "id": "SMT5VENGEANCEPC12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+007cb5075792"
+}

@@ -1,0 +1,1071 @@
+{
+  "id": "volcanoprincess_118",
+  "title": "火山的女儿 专属情境",
+  "game_ids": [
+    "steam-1669980"
+  ],
+  "scope": "Steam PC App 1669980 简中本体的单人养成、日程、野马湖、遗忘森林与成年结局。",
+  "modes": [
+    {
+      "id": "default",
+      "label": "单人养成",
+      "initial_variants": {
+        "VP11811": "VP11811.V3"
+      }
+    }
+  ],
+  "status": "private_candidate_independently_revised",
+  "slots": [
+    {
+      "id": "VP11801",
+      "number": 1,
+      "variants": [
+        {
+          "id": "VP11801.V1",
+          "scene": "低心情与排课",
+          "text": "夏火年已经能自己排课程。女儿这一回合心情很低，日程里有课可排，手头也有能补心情的食物。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_START",
+            "VP118_STUDY",
+            "VP118_COOK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把眼下能上的一门课排进去，看看这次能推进多少进度",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "吃能补心情的食物再排课，以后遇到低心情回合也先留恢复手段再安排日程",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "比较日程取舍、属性调整和持续培养。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11801.V2",
+          "scene": "课程最佳属性",
+          "text": "日程安排中，音乐和绘画类课程都已可选，进度都没满。你怎么用手头的一个日程空位？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_STUDY",
+            "VP118_OFF"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照两门课标的推荐属性，把当前已练好的属性用在更搭配的课程上",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "接着安排我已经连续培养的那门课，想一点点看她在同一个方向进步",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "比较日程取舍、属性调整和持续培养。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11801.V3",
+          "scene": "在家阅读与野马湖写生",
+          "text": "家中还有书可读，野马湖还可写生，你有一门推荐想象的课程待安排。行动力只够先做一项，你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_LIFE",
+            "VP118_STUDY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留家里读书，享受这回合安静坐下来阅读的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "去湖边写生，补我给艺术课安排的想象方向，让活动和对应课程相互配合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "比较日程取舍、属性调整和持续培养。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11802",
+      "number": 2,
+      "variants": [
+        {
+          "id": "VP11802.V1",
+          "scene": "绿洲森林心灵绽放",
+          "text": "绿洲森林遇到「心灵绽放」，战斗之门和生命之门都能选。队伍有人受伤，你先走哪扇门？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_MAP",
+            "VP118_TEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选战斗之门，想用现在的低血量状态再练一次出手顺序",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "选生命之门，先按队伍的剩余生命补好这场冒险所需的状态",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "比较探索过程中迎战、恢复和发现的优先级。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11802.V2",
+          "scene": "绿洲森林里的梯子",
+          "text": "绿洲森林遇到一架梯子，能够登上或离开。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择离开，继续走这一段现在能走的森林路线",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "登上梯子，想亲眼看一看森林里这处没走过的高处是怎么回事",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较探索过程中迎战、恢复和发现的优先级。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11802.V3",
+          "scene": "花瓣温泉两种行动",
+          "text": "探险中遇到「花瓣温泉」，能摘白花也能享受温泉，同行人有消耗。你想怎么选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先摘白花，我更想弄清楚这个地方有什么特别的可探索之处",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "选享受温泉，先把这个节点用来恢复队伍状态",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "比较探索过程中迎战、恢复和发现的优先级。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11803",
+      "number": 3,
+      "variants": [
+        {
+          "id": "VP11803.V1",
+          "scene": "夏火年开学典礼选领主",
+          "text": "夏火年开学典礼要从三位领主中选一位。格温妮丝和雷贝莎都在席，你更想选谁？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_NEWS",
+            "VP118_START"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择雷贝莎，按照我为女儿设定的想成为怎样的骑士来做决定",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "选择格温妮丝，想看看女儿跟随她后会发生怎样的故事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "比较关注具体关系与选择自己认同的做法。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11803.V2",
+          "scene": "父亲回应门口的来访者",
+          "text": "一位少年登门想找女儿。你作为父亲，可以唤她出来，也可以谢绝这次见面。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "同意相见，想知道这两个人接下来的关系会怎么发展",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "谢绝这次见面，按我这周目想扮演的父亲对来访者把关的方式回答",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "比较关注具体关系与选择自己认同的做法。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11803.V3",
+          "scene": "格温妮丝第二封回信",
+          "text": "格温妮丝的「简单问候」已读到，回信按钮和几个回复都能使用。你更想怎样回？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_LETTER",
+            "VP118_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择好好收藏，按我对女儿会怎样珍惜这次问候的理解作答",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "选择问候公主，我想让这次往来继续有来有回",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "比较关注具体关系与选择自己认同的做法。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11804",
+      "number": 4,
+      "variants": [
+        {
+          "id": "VP11804.V1",
+          "scene": "家里的两种捉迷藏",
+          "text": "在家和女儿互动时，「捉小迷藏」和「捉大迷藏」都能点，行动力也够。你更想？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_MOOD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "捉小迷藏，留一小段轻松的父女相处时间",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "玩一轮捉大迷藏，看看这次互动怎样进行",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较陪伴或闲暇本身与其他真实活动目的。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11804.V2",
+          "scene": "家庭餐厅与家中阅读",
+          "text": "自由活动时，家庭餐厅的故事角还能听故事，回家也还能阅读。时间只够先做一样，你选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_LIFE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "回家阅读，补我给后续课程搭配的智力方向",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "去家庭餐厅听故事，在熟悉的小镇坐一会儿",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "比较陪伴或闲暇本身与其他真实活动目的。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11804.V3",
+          "scene": "能进马厩且家中能阅读",
+          "text": "马厩已开放，你已抓到能照顾的马。家中也还能阅读。你会先去哪里？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_PC",
+            "VP118_HORSE",
+            "VP118_START",
+            "VP118_LIFE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看一看马，享受这一回合照顾它的日常",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先在家读手头可用的书，再去看马",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较陪伴或闲暇本身与其他真实活动目的。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11805",
+      "number": 5,
+      "variants": [
+        {
+          "id": "VP11805.V1",
+          "scene": "已有连续进度的课程",
+          "text": "日程还剩一个格子。你一直给女儿上的一门课程还没完成，另一门符合她现有属性、也已开放。你先选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_STUDY",
+            "VP118_START"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "换到另一门，让这个空格使用她最近练出来的推荐属性",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "接着上原来的课，想跟着她看一个方向怎样从入门学到完成",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "比较持续培养与立刻把资源用于一个具体目标。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11805.V2",
+          "scene": "遗忘森林石碑与伙伴",
+          "text": "遗忘森林的石碑可为已邀伙伴升级。同一位旧队友还低于女儿等级，紫色精石够花；目前也能直接出发。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_TEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在石碑上继续培养一直同行的那个伙伴，想看他慢慢成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先用现有队伍去跑可进入的森林路线，把精石留在手里",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较持续培养与立刻把资源用于一个具体目标。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11805.V3",
+          "scene": "马厩与本月港口赛马",
+          "text": "已有一匹能照顾也能带去参赛的马，港口赛马场有这匹马能报名的比赛。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_PC",
+            "VP118_START",
+            "VP118_RACE",
+            "VP118_SPRINT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接选它参加这月能报的一场比赛",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "回马厩照料这匹一直养着的马，延续我对它的长期投入",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "比较持续培养与立刻把资源用于一个具体目标。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11806",
+      "number": 6,
+      "variants": [
+        {
+          "id": "VP11806.V1",
+          "scene": "野马湖的作物可催熟",
+          "text": "野马湖有一批还没成熟的作物。可用肥料，也能等下个月自然生长。你怎么安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_FARM",
+            "VP118_COOK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把成熟批次排成几回合轮换，留部分肥料给以后要集中烹饪的那一批",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先把现在能用的一份肥料给这批作物，看看能推进多少成熟度",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较单次推进与可复用的资源安排。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11806.V2",
+          "scene": "野马湖料理自用或送出",
+          "text": "女儿手上有野马湖做好的料理，能吃掉恢复行动力，也能送给当前可以送礼的居民。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_COOK",
+            "VP118_LIFE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把手边这份送给眼前可以送礼的居民",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先留给自己分批恢复行动力，给这回合和之后几回合的日常安排固定一份补给",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "比较单次推进与可复用的资源安排。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11806.V3",
+          "scene": "将金币分给课后实践还是留作储备",
+          "text": "今年的课后实践课题仍可以买，你有足够的金币，也有在后续回合参加赛马或去家庭餐厅的打算。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_START",
+            "VP118_STUDY",
+            "VP118_RACE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把课题、用餐和参赛支出列在几个回合的预算里，再决定现在是否花钱",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先买这项当前能买的课后实践课题，之后用日程开始学",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较单次推进与可复用的资源安排。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11807",
+      "number": 7,
+      "variants": [
+        {
+          "id": "VP11807.V1",
+          "scene": "探险前已邀请的人选",
+          "text": "遗忘森林出发前，已有三位成为朋友且已受邀的角色，队伍可带两位。你怎么决定？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_TEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "带上两位我想继续了解的朋友，想和他们共同经历这一趟冒险",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "看头像里的技能，配一个能恢复的同伴和一个擅长输出的同伴",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "比较有目的的配置与继续当前阵容或能力。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11807.V2",
+          "scene": "两点天赋投向生活或战斗",
+          "text": "女儿的基础属性提升，天赋点可以用于当前已开放的生活或战斗技能。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_START",
+            "VP118_STUDY",
+            "VP118_TEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这次点数用在我正在搭的战斗技能上，看看能否配合当前队伍缺的那一环",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先安排能支撑日常资源的生活技能，打算在后续回合把收获用进固定的行动预算",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "比较有目的的配置与继续当前阵容或能力。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11807.V3",
+          "scene": "伙伴新技能二选一",
+          "text": "一位探险伙伴已经升级到新技能二选一的阶段，出发前还能核对队伍已有技能。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_TEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先直接选我想亲手用的当前技能，在接下来的探险里试一下",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先确认另一个同伴的技能，再为这位伙伴补一项阵容目前没有的能力",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "比较有目的的配置与继续当前阵容或能力。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11808",
+      "number": 8,
+      "variants": [
+        {
+          "id": "VP11808.V1",
+          "scene": "绿洲森林金币河",
+          "text": "绿洲森林走到「金币河」，可以取走金币，也可以离开。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拿起能取走的金币，试试这次遭遇会给什么",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "选择离开，按我这一周目给女儿定下的不拿陌生物品的原则行动",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "比较角色扮演的持续原则与现场的具体行动。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11808.V2",
+          "scene": "冰霜峡谷鸟窝",
+          "text": "冰霜峡谷遇到「鸟窝里的蛋」，两项选择都可用。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_MAP",
+            "VP118_WOLF"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "不去动这些蛋，按我给女儿设定的尊重野外生物的方式行事",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "察看并拿走这些蛋，想看看这种少见的事件能找到什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较角色扮演的持续原则与现场的具体行动。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11808.V3",
+          "scene": "冰霜峡谷幼狼与香煎肉肠",
+          "text": "冰霜峡谷遇见幼狼，你带着香煎肉肠，界面可选喂食，也可以不理睬。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_MAP",
+            "VP118_WOLF"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选喂食，按照我一路扮演的、愿意帮助遇到的小动物的女儿去做",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "暂时不理睬幼狼，继续走眼前能走的探险路线",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较角色扮演的持续原则与现场的具体行动。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11809",
+      "number": 9,
+      "variants": [
+        {
+          "id": "VP11809.V1",
+          "scene": "第一次从童年小鸟节走到夏火年",
+          "text": "回想童年小鸟节后，女儿进入夏火年开学。什么最让你继续关心她？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_NEWS",
+            "VP118_START",
+            "VP118_OFF"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想知道开学选择领主后，她和火山国的故事会怎样分开发展",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "看到我带大的那个小孩开始走入新的学习生活，希望继续看她怎样一步步变成熟",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "回顾女儿成长、父女相处和自定培养方向。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11809.V2",
+          "scene": "格温妮丝派骑士上门",
+          "text": "回想格温妮丝请女儿去帮忙、派骑士上门的那次。你最记得哪一层？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "她们的关系开始走到家里来，我想看到这一邀请之后两人怎样相处",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "站在父亲的位置决定该不该叫女儿见客，那一刻我特别在意自己像哪一种父亲",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "回顾女儿成长、父女相处和自定培养方向。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11809.V3",
+          "scene": "成年后看到职业结局",
+          "text": "回想看见女儿长大后的职业结局，你先想起什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_OFF",
+            "VP118_END"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "之前怎么连着几回合分配课程和活动，最后怎样把这条培养路线走出来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "小时候到成年的过程里她一点点变成现在的样子",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "回顾女儿成长、父女相处和自定培养方向。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11810",
+      "number": 10,
+      "variants": [
+        {
+          "id": "VP11810.V1",
+          "scene": "文学和绘画等方向已有记录",
+          "text": "已经通关并重开过。面对仍有没见过的文学、绘画等职业结局，实际让你开始新一轮的是？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_END",
+            "VP118_NG",
+            "VP118_OFF"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "试一条从来没走过的培养方向，看看这次会出现怎样的意外结果",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "回看已见过的职业图，特意把缺的那几类结局逐步补齐",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回顾多周目发现与补齐的动机。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11810.V2",
+          "scene": "不同角色的关系结局",
+          "text": "看过一位角色的关系结局，也重开过一轮。回想你接着花时间做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_PC",
+            "VP118_OFF",
+            "VP118_NG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己挑还没看过的几位角色，试着逐周目补到他们各自的结局",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "遇到新的人就继续读实际互动，最想知道这一段关系会怎样走",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "回顾多周目发现与补齐的动机。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11810.V3",
+          "scene": "多处开放的遗忘森林路线",
+          "text": "回想绿洲森林和冰霜峡谷都去过以后，下一次打开探险界面，最吸引你的是什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_MAP",
+            "VP118_TEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去一张没走熟的地图，看看它的事件和地形跟前一张有什么不同",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "打开自己记的各图完成记录，想继续把还未走完的地图一张张补齐",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回顾多周目发现与补齐的动机。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11811",
+      "number": 11,
+      "variants": [
+        {
+          "id": "VP11811.V1",
+          "scene": "港口竞速与马厩",
+          "text": "回想马厩开放后，你照顾过一匹马，也带它参加过港口的竞速。哪段体验使你想回来？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_PC",
+            "VP118_START",
+            "VP118_RACE",
+            "VP118_SPRINT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "更喜欢在马厩慢慢照料熟悉的那匹马，可以按自己的节奏停留",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "多参加几轮竞速，练习怎样用有限的加速把自己跑顺",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "回顾能反复练习的操作或作为日常的体验。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11811.V2",
+          "scene": "两种抓马动作的警戒反馈",
+          "text": "回想在已经开放的草丛里抓马，用过不同方式降低警戒。你更记得什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_HORSE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我多试几次，让自己逐渐掌握采取哪项动作时机更稳妥",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我喜欢自己点击行动后，看警戒变化并马上调整下一步",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "回顾能反复练习的操作或作为日常的体验。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11811.V3",
+          "scene": "中央广场骰子与村民骰子",
+          "text": "回想玩中央广场的骰子游戏，以及去找村民对决拿新骰子。你最愿意为哪一件再开一局？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_DICE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去找还能取得不同骰子的村民，慢慢补全手上缺的骰子",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "在同一种玩法下反复练组合，想让临场选择越来越熟练",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "回顾能反复练习的操作或作为日常的体验。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    },
+    {
+      "id": "VP11812",
+      "number": 12,
+      "variants": [
+        {
+          "id": "VP11812.V1",
+          "scene": "重开后不给自己买课后实践",
+          "text": "回想重开新周目后，遇到课后实践课题可以买的时点，哪种日程安排更像你实际做过的？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_NG",
+            "VP118_START",
+            "VP118_STUDY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "曾给自己规定这一轮只用常规日程课程，试试不买课后实践会玩出什么成长路线",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "按女儿已经练过的属性选课后实践，把下一段日程和原课程搭起来",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "回顾可操作的自定限制与当前玩法目标。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11812.V2",
+          "scene": "在活动中暂时只给一种地点",
+          "text": "回想已经开放家中阅读和野马湖写生时，你给日常安排过什么样的玩法？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_LIFE",
+            "VP118_START"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我喜欢回野马湖安静地写生一会儿，按喜欢的节奏享受这一回合",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "我曾给一回合定下只在家阅读、不去湖边写生的限制，想看看这样怎样安排其他日常",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "回顾可操作的自定限制与当前玩法目标。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        },
+        {
+          "id": "VP11812.V3",
+          "scene": "野马湖自然生长或分批烹饪",
+          "text": "回想在野马湖已经能种地、烹饪，也拿到过肥料。哪种经历更像你的玩法？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "VP118_FARM",
+            "VP118_COOK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把不同成熟批次接到后几回合的烹饪上，按需要安排食物供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我曾给一块地加上不使用肥料和行动力催熟的规则，尝试只靠下个月的自然生长来维持这个玩法",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "回顾可操作的自定限制与当前玩法目标。",
+          "interpretation_boundary": "题面以当前 Steam PC 本体发生的回合、资源和按钮为准。选择只描述玩家当时偏好。"
+        }
+      ]
+    }
+  ],
+  "editorial_notes": [
+    "12 题位各 3 情境，前 8 行动、后 4 回顾；同一手机版资料未用于本稿。",
+    "领主、马厩、赛马和多周目按实际可用时点出题。随机事件和回信仅在两项都能选时回答。",
+    "PC 本体文本和中文攻略交叉核证，未实机或玩家试答；首轮未到对应场所可换题。"
+  ],
+  "version": "0.5.0+48b18b23fd15"
+}

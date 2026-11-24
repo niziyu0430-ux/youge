@@ -1,0 +1,1099 @@
+{
+  "id": "squadsteamv5",
+  "title": "Squad（第一人称射击）",
+  "game_ids": [
+    "steam-393380"
+  ],
+  "scope": "Offworld《战术小队》Squad，Steam 393380 Windows 基础游戏的正式 PvP，包括 AAS、RAAS 和 Invasion。",
+  "status": "private_candidate_pending_independent_review",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "战术小队步兵与后勤对局",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "题目为原版 PvP，覆盖 AAS、标准带迷雾的 RAAS、单向攻防的 Invasion，以及跨模式常规步兵。按本人曾玩过的服务器层与实际权限换题。",
+    "只有题面明确持队长装具并符合条件者可放集结点；仅队长在有权限时用指挥频道；后勤车先经本轮批准。",
+    "以 2026 年 10 月 22 日 10.6.3 后 HAB 无自带弹箱为准。常规成员的观察标记限 10.6 及以后，且仅本队指南针可见。"
+  ],
+  "slots": [
+    {
+      "id": "SQUADGR01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "SQUADGR01.V1",
+          "scene": "初见巴士拉的下一面旗",
+          "text": "巴士拉 RAAS 层里，上一面旗刚占下，小地图新显示可争的点。你和队友走得到前面的目标，旧点也有个缺人照看的道路口。你先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先留在旧点路口跟守点队友补齐射界，等他们站稳再走。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先跟前出的人朝新显示的旗点去，争取抢到进点的位置。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_V106",
+            "SQUADGR_MODES",
+            "SQUADGR_AAS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "推进旗点或保住队伍已经占据的位置",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR01.V2",
+          "scene": "叶霍里夫卡地图上的旗序",
+          "text": "叶霍里夫卡的 AAS v2 层，地图显示两侧旗序。你的小队正在占起手点，敌人还没来，后面留着够用的人。你打算去哪？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先在起手点内跟小队把这一段占点推进完。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "沿可通行的田边去下一面旗外侧看路，等它开放攻占再进。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_V106",
+            "SQUADGR_MODES",
+            "SQUADGR_AAS",
+            "SQUADGR_YEH"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "推进旗点或保住队伍已经占据的位置",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR01.V3",
+          "scene": "入侵防线退到下一处",
+          "text": "Invasion 防守方刚丢当前旗，地图上下一面可守的己方旗已标出。你能先去新防区，也能在圈外有退路的遮挡处短暂照应向后撤的队友。你选哪件？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在可撤回的位置先帮落后的队友过暴露路段，再和他们一起回到新防区。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "马上退到下一面可守旗，提前挑好不会互相挡线的位置。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_MODES",
+            "SQUADGR_AAS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "推进旗点或保住队伍已经占据的位置",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "SQUADGR02.V1",
+          "scene": "集结点和 HAB 都能部署",
+          "text": "你在一局《战术小队》里已确认没法被救，部署图显示自己小队的集结点还有时间等，另一侧友军前进基地的 HAB 也可用。你选哪个落点？",
+          "options": [
+            {
+              "id": "A",
+              "label": "等下一波，在小队集结点和同队人一起出来。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "从另一侧可用的 HAB 出发，先去地图上这轮要守的位置。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_SPAWN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "选择出生点、时机和队形",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR02.V2",
+          "scene": "集结点消失后选远一点的点",
+          "text": "原本打算用的小队集结点已经从部署图上消失。地图上还有一个能正常部署的友军 HAB，主基地也能出生，且朋友答应在基地等你一起出发。这次从哪儿回来？",
+          "options": [
+            {
+              "id": "A",
+              "label": "从主基地回来，等朋友一起向交战区走。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先从还可用的 HAB 出来，把原来的靠近路线换成它能接上的一条。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_SPAWN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "选择出生点、时机和队形",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR02.V3",
+          "scene": "为既有 HAB 留一个后路",
+          "text": "你是普通步兵小队长，带着可用的集结点，附近有同队队员，游戏确认满足部署条件。友军 HAB 还没被封，可用的隐蔽坡背和靠队员的短线都能放。先把备用点放哪？",
+          "options": [
+            {
+              "id": "A",
+              "label": "放稍远的坡背，留一条和 HAB 出口不同的返回线。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "靠小队当前正在用的有遮挡路线放，让走散的人从这边回来还能找到彼此。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_SPAWN",
+            "SQUADGR_LEAD",
+            "SQUADGR_RALLY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "选择出生点、时机和队形",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "SQUADGR03.V1",
+          "scene": "被巴士拉巷口火力压住",
+          "text": "巴士拉一局接敌时，你刚从开阔路退到能挡弹的矮墙后，仍受压制。队友正走向侧面的通道。你剩下弹药够压几梭，也有另一处能修整的遮挡。先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先退到另一处遮挡，等压制缓一缓，让瞄准稳下来再出手。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "从安全角度朝敌人火力方向打几次短点射，给队友走侧路的窗口。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_ICO",
+            "SQUADGR_ICOD",
+            "SQUADGR_V106"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "步兵交火里压制、耐力和换位的取舍",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR03.V2",
+          "scene": "跑到田埂后的第一轮",
+          "text": "你冲到叶霍里夫卡田埂下，耐力还没回，远处有人正从一段开阔地经过。队内尚没人暴露，你能先停一会，也能及时做火力压制。你先怎么做？",
+          "options": [
+            {
+              "id": "A",
+              "label": "趴稳等体力回升、枪口稳下来，再打自己练过的窗口。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "趁对手还暴露，先朝能打到的那段打短点射，观察对方是否被压停。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_ICO",
+            "SQUADGR_ICOD",
+            "SQUADGR_V106"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "步兵交火里压制、耐力和换位的取舍",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR03.V3",
+          "scene": "已经放下脚架的机枪",
+          "text": "你用配有脚架的机枪，已经架在能观察一条通路的位置。小队说有人可能从相邻方向变线，你也看见另一处可架枪的掩体。先怎么做？",
+          "options": [
+            {
+              "id": "A",
+              "label": "收脚架移动到新遮挡，重新架枪检查这次实际出现的动向。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "守住已经安排好的通路，等另一处确定缺人再收脚架。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_ICO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "步兵交火里压制、耐力和换位的取舍",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "SQUADGR04.V1",
+          "scene": "伏在墙边的人还有救",
+          "text": "你是普通步枪兵，手里还有绷带。倒地但没放弃重生的队友在缺口边，能拖到后面挡弹处；医疗兵也已在近处能接手。你先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先把人拖到墙后，用绷带把他救起来，再交给医疗兵补血。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先守住缺口并把位置清楚告诉医疗兵，让他自己从墙后接近处理。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_MEDIC",
+            "SQUADGR_DRAG",
+            "SQUADGR_SPAWN",
+            "SQUADGR_V106"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "倒地救援与绷带、医疗包的分工",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR04.V2",
+          "scene": "医疗兵分先后",
+          "text": "你是医疗兵。一名倒地队友已被拖到安全角落，另一名活着的队友因为失血受伤但已止血，也能让你治疗，两人均能等你处理。此刻先做哪件？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用医疗包补回仍在行动那人的血量，让他先接替警戒，再救另一人。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先给倒地那位用绷带，让他重新站起来。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_MEDIC",
+            "SQUADGR_MEDICCLASS",
+            "SQUADGR_V106"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "倒地救援与绷带、医疗包的分工",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR04.V3",
+          "scene": "倒地能看见救援进度",
+          "text": "你在墙后倒地，队友已经开始包扎，HUD 能看到复苏进度，仍有时间完成。这时部署菜单的放弃按钮仍可用，选择后可等部署计时完成，从可用的远端 HAB 回来。你选什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "等队友做完，在原地回到小队身边。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "放弃这次救援，到部署图已有安排的远端 HAB 回到另一侧。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_V106",
+            "SQUADGR_SPAWN",
+            "SQUADGR_HF1061"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "倒地救援与绷带、医疗包的分工",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "SQUADGR05.V1",
+          "scene": "卡车已在 FOB 范围内",
+          "text": "你是随车步枪兵，后勤卡车停在已有电台的卸货范围内，有两种物资；队长确认就地卸，近处还有一个已建弹箱。你先往 FOB 放哪种？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先卸建设物资，供队长已经打算补上的防御工事使用。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先卸弹药，让等在独立弹箱边的队友能补。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_LOGI",
+            "SQUADGR_RADIO",
+            "SQUADGR_HOTFIX"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "弹药与建设物资的调度",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR05.V2",
+          "scene": "主基地装满以前",
+          "text": "你本轮获准开小队的后勤车，已在主基地补给范围停车。车还有空间，地图上你要去的 FOB 已建 HAB，前方说快缺弹，指挥也提出想加一个工事。你怎么装？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先给预定工事留出建设物资份额，再给余下空间装弹药。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "优先装更多弹药，先给已在交火的步兵补消耗品。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_LOGI",
+            "SQUADGR_RADIO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "弹药与建设物资的调度",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR05.V3",
+          "scene": "把步枪兵的弹药包给谁",
+          "text": "你是带可用弹药包的步枪兵，建成的弹箱暂时没弹。旁边医疗兵和反装甲兵都能补，但弹药包只够先满足其中一个人的急用。你怎么放？",
+          "options": [
+            {
+              "id": "A",
+              "label": "放到反装甲兵够得着的位置，先补已经能用的反装甲弹，准备对付刚报来的车。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "放到医疗兵能使用的位置，先让他补回绷带，继续照应队友。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_LOGI",
+            "SQUADGR_SPAWN",
+            "SQUADGR_BAG",
+            "SQUADGR_HOTFIX",
+            "SQUADGR_BAGR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "弹药与建设物资的调度",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "SQUADGR06.V1",
+          "scene": "电台圈内的两张蓝图",
+          "text": "附近的 FOB 已有电台，队长已放 HAB 与独立弹箱的蓝图。建设物资够把两处都建成，基地也有可用于补给的弹药物资。你手上的铲子可以施工，两处都能接近。你先把哪个挖起来？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先把 HAB 完工，到时队伍可尝试从这里部署。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先把独立弹箱建起来，让已经在场的队员有补给，再去挖 HAB。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_RADIO",
+            "SQUADGR_LEAD",
+            "SQUADGR_HOTFIX",
+            "SQUADGR_LOGI"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "建成出生设施与临时保卫",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR06.V2",
+          "scene": "挖完前先看哪个出口",
+          "text": "队长已选好 HAB 在建的位置，一名带铲队员正施工。你没在挥铲，工地后面有一条经常有人巡过去的路，前面也有个能挡弹的出入口。你先看哪边？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先走到另一个安全出口位置试射界，为建成后的人员转移留路。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先朝要威胁施工的人那条后路警戒，让他挖完。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_RADIO",
+            "SQUADGR_LEAD",
+            "SQUADGR_ICO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "建成出生设施与临时保卫",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR06.V3",
+          "scene": "电台状态恶化的几秒",
+          "text": "你的队伍在 FOB 内，地图上本处 HAB 已禁用，电台已经被铲到需要及时救，还没完全消失。你有铲子，队友在近处能看入口，两边位置均可到达。你先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "去电台旁开始铲回状态，争取在彻底损失前救下来。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先帮近处队友看住入口，给接下来要去救电台的人留安全窗口。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_SPAWN",
+            "SQUADGR_RADIO",
+            "SQUADGR_LEAD",
+            "SQUADGR_BLEED"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "建成出生设施与临时保卫",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "SQUADGR07.V1",
+          "scene": "普通队员的观察标记",
+          "text": "在 10.6 以后的普通多人对局里，你是一般队员，从墙洞看到对手靠近。指南针观察标记已经能用，小队语音也畅通，你想怎么先提示？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用小队语音说方向和附近建筑，让正在看路的人立刻对上目标。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先用观察标记给小队指南针打一个短时方向，等人找到对应位置再讲细节。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_V106",
+            "SQUADGR_HF1061"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "报点、指挥与成员权限",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR07.V2",
+          "scene": "附近友军听得到的方向",
+          "text": "这场 AAS 拐角守点时，你看见对手过路。一个本队队员与另一小队的友军都在近距离，远处还有本队人员。你用哪种频道先报？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用近距语音，让同一处掩体边的两队友军都有机会听到。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先用小队频道，把方向和地标交给本队从远处赶来的人统一避开。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_VOICE",
+            "SQUADGR_MANUAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "报点、指挥与成员权限",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR07.V3",
+          "scene": "队长同时有本队和指挥频道",
+          "text": "你是小队长，看到敌方装甲车正接近一段道路。你本队有人已经在那里散开，另外一支队的反装甲能从后侧靠近。情况允许你先在一个频道里说清。选哪个？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先通过指挥频道把位置和行进方向报给其他队长，让适合的分队安排拦截。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用本队频道说明车头朝向，提醒眼下暴露的队员先找遮挡。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_VOICE",
+            "SQUADGR_MANUAL",
+            "SQUADGR_LEAD"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "报点、指挥与成员权限",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "SQUADGR08.V1",
+          "scene": "旗区前不追一脚",
+          "text": "AAS 里你正守仍有效的本方旗区。敌人刚撤到可追的墙外，其他守军已经告诉你当前还能覆盖点内。你既能沿墙去看，也能继续守入口。此刻先去哪？",
+          "options": [
+            {
+              "id": "A",
+              "label": "留在旗区内照计划扛住入口，把这个方向稳住。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "沿墙短距跟进，利用对手还没站稳的几秒确认他转去哪。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_MODES",
+            "SQUADGR_AAS",
+            "SQUADGR_ICO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "实际防守、转移和步兵分工",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR08.V2",
+          "scene": "反装甲弹的第一发",
+          "text": "你是本轮已拿到可用弹药的步兵反装甲手，一辆敌车刚从可打的开口经过。仍有时间挪到旁边更有遮挡的点。你先怎么处置？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先到更熟悉的遮挡位置，按自己练过的距离判断和开镜步骤等下一次机会。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "趁它还在射界里举起发射器，距离和射界满足时就打。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_ICO",
+            "SQUADGR_ICOD",
+            "SQUADGR_V106",
+            "SQUADGR_LAT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "实际防守、转移和步兵分工",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR08.V3",
+          "scene": "已被封住的 HAB 门线",
+          "text": "你现在人在还没完全丢掉的 FOB 里，近处 HAB 已无法部署。对手正在门外逼近，你和已在场的队友能守住一个入口，背面也还有可退的遮挡路线。你先选哪侧？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用交叉火线帮已在场的人守入口，给回救留时间。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "沿背后的遮挡转向更好防的位置，准备在视野更好的地方拦下一波。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_SPAWN",
+            "SQUADGR_RADIO",
+            "SQUADGR_ICO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "实际防守、转移和步兵分工",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "SQUADGR09.V1",
+          "scene": "在独立弹箱补齐再走",
+          "text": "回想一局小队从 HAB 出来后，你真的在旁边独立建成的弹箱补过。哪件做过的事让你在之后的局里愿意继续？",
+          "options": [
+            {
+              "id": "A",
+              "label": "留在弹箱附近等了队友补好，一次出发就没再走散。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先对着现有装具缺项补齐，再按已说好的路线走。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_SPAWN",
+            "SQUADGR_LOGI",
+            "SQUADGR_HOTFIX"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾哪一项准备最值得沿用",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR09.V2",
+          "scene": "第二波集结点赶回旗外",
+          "text": "回想你已经用过同队集结点，有次队伍在下一波一起回到旗外。哪件你做过的事更值得重复？",
+          "options": [
+            {
+              "id": "A",
+              "label": "等时钟到，跟同波出生的人互相看着路一起走。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先用部署地图算好这一波时间和距离，回来就直接到计划好的掩体。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_SPAWN",
+            "SQUADGR_MODES"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾哪一项准备最值得沿用",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR09.V3",
+          "scene": "后勤车第一次顺利回库",
+          "text": "回想你开过已经获准使用的后勤车，也实际在主基地补过两种物资。哪件已做过的事最想留作下一次经验？",
+          "options": [
+            {
+              "id": "A",
+              "label": "按地图把回主基地和返场排成不同路线，第二趟照着走节省了耗在原路的时间。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "第二趟后看见 FOB 的库存真的稳定起来，后来有余量再带建设物资。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_LOGI",
+            "SQUADGR_RADIO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾哪一项准备最值得沿用",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "SQUADGR10.V1",
+          "scene": "队员也能在指南针给方向",
+          "text": "回想 10.6 开始的多人对局里，你实际用过普通成员的观察标记。哪部分最让你愿意再用？",
+          "options": [
+            {
+              "id": "A",
+              "label": "队友沿标记看向同一处，几个本来分开顾不同方向的人一下对上了。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "看见对手换方向时，我立刻给小队更新了一个当时已能重新放的观察方向。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_V106",
+            "SQUADGR_HF1061"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾自己怎么理解战场与岗位",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR10.V2",
+          "scene": "倒地后重新站稳的位置",
+          "text": "回想你救过一个倒地队友，把他拖到遮挡后并包扎起来。哪部分让你还想再承担这种任务？",
+          "options": [
+            {
+              "id": "A",
+              "label": "找到贴墙拖拽、停下包扎和撤开三步的顺序，下一次还想把它做顺。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看到他回来和其他人合上队形，少了一个必须单独走的伙伴。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_MEDIC",
+            "SQUADGR_DRAG",
+            "SQUADGR_SPAWN",
+            "SQUADGR_V106"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾自己怎么理解战场与岗位",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR10.V3",
+          "scene": "两次开镜之间的变化",
+          "text": "回想在实战里，你有一回刚跑完就在掩体后开镜，也试过等耐力恢复后再开镜。哪次调整更值得保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "找出稳定下来再瞄最容易掌握的时机，之后反复按这个节奏。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "比较本轮晃动和压制效果，后来见到同样暴露的目标就换了开火时机。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_ICO",
+            "SQUADGR_ICOD",
+            "SQUADGR_V106"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾自己怎么理解战场与岗位",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "SQUADGR11.V1",
+          "scene": "后勤车没到，弹药包先到了",
+          "text": "回想正式 PvP 局里你以步枪兵身份真正用过弹药包。当时车上补给还没到队伍这边。哪件做过的事更想学着继续？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把弹药包放在小队次一段防线，留给随后明确会用到的专用弹药。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "守在好几位缺弹队友能一起补的位置，让他们不用各自撤回。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_SPAWN",
+            "SQUADGR_BAG",
+            "SQUADGR_LOGI",
+            "SQUADGR_BAGR"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾玩家给队伍留下哪种价值",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR11.V2",
+          "scene": "HAB 入口和另一条路线",
+          "text": "回想防守某个 FOB 时，你确实守过 HAB 的接近路线，也观察过它被敌人压近后变成不可部署。哪件实做过的事你更想在下局提前安排？",
+          "options": [
+            {
+              "id": "A",
+              "label": "提早把另外的出口路线在图上认清，出生点受压时还有办法换侧。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "和留在附近的队友守不同方向，入口被堵也能相互给出交火位置。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_SPAWN",
+            "SQUADGR_RADIO",
+            "SQUADGR_LEAD"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾玩家给队伍留下哪种价值",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR11.V3",
+          "scene": "副座紧急下车的那次",
+          "text": "回想到前线的车上，你从副座下车步行过最后一段。下车以后你做过两种调整，哪种下次想继续？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在下车处等后座同队的人跟上，再一起沿有遮挡的路线到旗边。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "沿一段之前车上没看清的沟边到旗区，确认那条步行线原来也能走。",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_VEHICLES",
+            "SQUADGR_MODES",
+            "SQUADGR_ICO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾玩家给队伍留下哪种价值",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "SQUADGR12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "SQUADGR12.V1",
+          "scene": "受伤待救时怎么撑住一轮",
+          "text": "回想某局旗区附近你受伤，曾先用自己的绷带止血，也到遮挡后找过医疗兵，为队伍撑到下一轮。哪件确实做过的事最值得保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把受伤后先退开、止血、再把武器拿回来的动作练顺。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "找到可接应的医疗兵，治疗后继续帮助原小队守线。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_MEDIC",
+            "SQUADGR_MANUAL",
+            "SQUADGR_ICO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾最后几个票券与前线变化",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR12.V2",
+          "scene": "RAAS 的下一旗揭开以后",
+          "text": "回想你实际打过一局带战争迷雾的 RAAS，前旗一占，地图才显示后续旗区。下面哪件已经做过的事更值得复现？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先复查自己的防御旗和可用部署位置，再决定从哪条线向新旗移动。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按新出现的有效攻击旗重新设进攻目标，推进到可争的边缘。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_MODES",
+            "SQUADGR_AAS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾最后几个票券与前线变化",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        },
+        {
+          "id": "SQUADGR12.V3",
+          "scene": "入侵守方丢旗之后",
+          "text": "回想你从 Invasion 的已失守旗撤出过，后来到下一旗继续防守。哪件真正做过的事更能让你记得这局？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在旧旗外接上撤回来的队友，和他通过还能走的掩体回防。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "按剩余防点重新安排防守位置，让下一波有人看原来的侧路。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SQUADGR_MODES",
+            "SQUADGR_AAS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾最后几个票券与前线变化",
+          "interpretation_boundary": "Offworld《战术小队》Steam Windows 本体。根据真正玩过的对局、当时角色及设施处于可用的条件作答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+4629a51e468b"
+}

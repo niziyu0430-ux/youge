@@ -176,6 +176,23 @@ def audit(checked_at):
                            'publicly_selectable':False,'has_declared_dedicated_pack':bool(dedicated_ids),
                            'legacy_answers_readable':readable,'legacy_form_inspection':finding,
                            'error':error,'status':'候选未展示，仅兼容旧答卷' if readable else '候选未展示，未接入正式题包'})
+    archived=[]
+    for game in catalog.get('legacy_archived',[]):
+        gid=game['id']; entries=[e for e in active.get('pack_history',[]) if gid in e['game_ids']]
+        checks=[];error=None
+        try:
+            v04.questionnaire(gid)
+        except Exception as exc:error=type(exc).__name__+': '+str(exc)
+        for entry in entries:
+            item={'version':entry['version'],'readable':False,'error':None}
+            try:
+                raw={'versions':dict(v05.VERSIONS),'game_id':gid,'pack_version':entry['version']}
+                item['readable']=len(v05.questions(raw=raw)['questions'])==16
+            except Exception as exc:item['error']=type(exc).__name__+': '+str(exc)
+            checks.append(item)
+        archived.append({'game_id':gid,'title':game['title'],'legacy_v04_readable':error is None,
+                         'historical_pack_versions':checks,
+                         'historical_pack_readable':bool(checks) and all(c['readable'] for c in checks),'error':error})
     counts=Counter(r['status'] for r in rows);after=input_hashes()
     return {'checked_at':checked_at,'scope':'all published records plus all candidate records',
             'criteria':{'required_dedicated':12,'allowed_shared':4,
@@ -195,6 +212,7 @@ def audit(checked_at):
             'orphan_authored_game_ids':sorted(set(claims)-all_ids),
             'inputs_sha256':before,'inputs_unchanged_during_audit':before==after,
             'generic_template_groups':sorted(generic_groups,key=lambda g:-g['count']),
+            'legacy_archive_count':len(archived),'legacy_archived':archived,
             'games':rows,'candidates':candidates}
 
 
@@ -252,7 +270,10 @@ def write_report(report):
                   '- 旧版专用题、情境覆盖与16种机制模板：config/youge.v0.4.0.json。',
                   '- 逐模式题目ID、模板命中、相同题卷分组与输入文件校验值：[机器可读检查结果](../research/question-design-v0.5/per-game-question-audit.json)。','',
                   '本轮核对题目覆盖与实际接入，不将结构通过等同于逐款攻略复核、选项设计质量或测量效果已经验证。',''])
-    path=ROOT/'exports/游格-逐游戏专属题检查清单.md'
+    lines.extend(['','## 历史兼容身份','',f'另有 {report.get("legacy_archive_count",0)} 条技术存档，不计公开游戏或真实候选。'])
+    for record in report.get('legacy_archived',[]):
+        lines.append(f'- {cell(record["title"])}（{record["game_id"]}）：旧题包可读 {record["historical_pack_readable"]}。')
+    path=ROOT/'exports/游格-逐游戏专属题检查清单.md' 
     path.write_text('\n'.join(lines),encoding='utf-8')
     return path
 

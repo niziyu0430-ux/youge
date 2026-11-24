@@ -1,0 +1,1003 @@
+{
+  "id": "rtk14steamv5",
+  "title": "三国志14",
+  "game_ids": [
+    "steam-872410"
+  ],
+  "scope": "光荣特库摩 2020 年《三国志14》Steam Windows 简中版，本体单人剧本的共同机制。",
+  "status": "private_candidate_source_checked",
+  "author_review": "official_manual_checked",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按自己熟悉的剧本体验回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "RTK14PC01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "RTK14PC01.V1",
+          "scene": "空白府的归属",
+          "text": "两个符合条件的空白府只来得及先争一个。你手上各有一位能用区域怀柔和锥形出阵的武将，邻敌还没到。哪道命令先发？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_TACTICS",
+            "RTK14PC_PLOT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "派使者怀柔后方的府，先把稳妥的地盘接起来。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让锥形先到边界的府，把地图打开再看邻敌往哪走。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「空白府的归属」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC01.ALT1",
+          "scene": "府已拿下，土地未染满",
+          "text": "你已经拿下一个府，辖区内还有大片空地。城里有空闲的高魅力武将，先头部队也还在当地。你准备怎么接手这些空地？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_TACTICS",
+            "RTK14PC_CITY",
+            "RTK14PC_ORDERS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对该府下占领命令，先让部队巡回拿地。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "任命这名区域官员，让他逐旬扩展府内的领地。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「府已拿下，土地未染满」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC01.ALT2",
+          "scene": "鹤翼长线与锥形捷径",
+          "text": "开局只打算先派一支队，城里两个武将分别能用鹤翼和锥形。一个府已有对手接近，另一处无人争、沿线空地很多。你怎么出阵？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_TACTICS",
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让鹤翼走空地多的路线，沿途占下更多土地。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "让锥形走捷径，先冲到有竞争的那座府。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「鹤翼长线与锥形捷径」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "RTK14PC02.V1",
+          "scene": "月末偏向商业还是农业",
+          "text": "这个月下旬只够改一个区域的开发方向。该府的商业和农业都还有空间，前线粮食吃得快，城中俸禄也逐月上升。你先做哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_CITY",
+            "RTK14PC_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "转开发农业，先让该府往后增加兵粮收入。",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "B",
+              "label": "转开发商业，把往后每月要付的俸禄和命令费用留出余量。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「月末偏向商业还是农业」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC02.ALT1",
+          "scene": "新府的第一位官员",
+          "text": "新占的府还有空地，当前的治安也需要人照看。手中有两位都空闲的武将，一位魅力高、一位统率高，只能任命一人。你选谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_CITY",
+            "RTK14PC_TACTICS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选魅力高的，先把口袋里的空白地逐旬变成自家土地。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "选统率高的，先在这块新地把治安管起来。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「新府的第一位官员」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC02.ALT2",
+          "scene": "借用区域官员",
+          "text": "城里最擅长开发农业的区域官员也能领兵，手下还有另一位可打仗的武将。边境需派一队增援，你怎么分人？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_CITY",
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让强将带增援，接受这段时间该府开发与维持治安的效果变差。",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "保留原官员的内政安排，派另一位将领增援。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「借用区域官员」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "RTK14PC03.V1",
+          "scene": "只打兵站还是夺关",
+          "text": "敌人一员强将从关外深入。你有一队能绕到它背后的相邻土地，也能去打守备较少的关隘。离下个进行阶段只剩这队的命令要定，你让它做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_FIELD",
+            "RTK14PC_ADVICE",
+            "RTK14PC_ORDERS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "绕到敌后占补给必经地，试着切掉强将的粮路。",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "直奔关隘，在主力游离在外时先打据点。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「只打兵站还是夺关」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC03.ALT1",
+          "scene": "正面短路和绕开敌军",
+          "text": "新编部队可以从已连通的正面走短路，也能绕己方土地上的远路避开敌队。出阵城有足够兵粮承担远路，两个方向都能到目标府。你怎么设目标？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_FIELD",
+            "RTK14PC_ORDERS",
+            "RTK14PC_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让队伍走正面短路，保持推进紧凑并准备接战。",
+              "signal": "combat_resource_cycle"
+            },
+            {
+              "id": "B",
+              "label": "设中转点绕过敌军，接受途中可能多消耗一些兵粮。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「正面短路和绕开敌军」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC03.ALT2",
+          "scene": "先占连接地还是直接出发",
+          "text": "你的队伍尚未断粮，可以直行去打府，也可以先占出阵城与前锋之间一片尚未归属的连接地。两条路线本旬都能下令。你怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_FIELD",
+            "RTK14PC_ORDERS",
+            "RTK14PC_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "设中转先占那片连接地，再推进到府。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "直接下攻府的命令，争取在对方援军到前完成眼前目标。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「先占连接地还是直接出发」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "RTK14PC04.V1",
+          "scene": "接敌设置与诱敌",
+          "text": "一队负责赶到敌后，途中可能遇上诱兵。武将的个性允许调整接敌设置，绕行部队本身也有正面作战能力。你给它什么指示？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_FIELD",
+            "RTK14PC_TACTICS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留主动攻击，让它有机会在路上打散落单敌队。",
+              "signal": "try_action_variant"
+            },
+            {
+              "id": "B",
+              "label": "关闭遇敌主动攻击，尽量按原路完成包抄。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「接敌设置与诱敌」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC04.ALT1",
+          "scene": "追击与据点方向",
+          "text": "你派一队迎击从关口外来的敌军。它能改追击设置，打退敌人后可能往远处追，也可以留在原路线附近。你怎么设？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "允许追击，打退敌人时接着压过去。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "关闭追击，把守住关口这一段路线放在前面。",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "记录玩家在「追击与据点方向」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC04.ALT2",
+          "scene": "出阵前设撤退条件",
+          "text": "一路小队负责把敌将引离主力。出阵前能设兵站中断时的撤退反应，本旬预计都有可用的撤退路径。你怎么设？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "关闭自动撤退，先按原路线继续诱敌，接受断粮后的行动受限。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "允许断粮时撤离，给队伍留出回到自家地盘的机会。",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "记录玩家在「出阵前设撤退条件」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "RTK14PC05.V1",
+          "scene": "攻城部队编成",
+          "text": "相邻敌城的耐久还高，外面也有野战部队。你能在这次编制里安排一位可用攻城兵器的武将，他也可率普通阵型。你给他哪项工作？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_FIELD",
+            "RTK14PC_TACTICS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用可选的攻城兵器阵型，提前准备削城的手段。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "用普通阵型跟野战部队交手，眼下先打散城外守军。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「攻城部队编成」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC05.ALT1",
+          "scene": "攻军和破城的自动编制",
+          "text": "同一批将领都可选进出阵名单。自动编制方案里攻军和破城都能排出可出阵的队伍，敌军就在城下。你先试哪个方案？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按破城编制，看能把多少火力放在削耐久上。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先按攻军编制，看能凑出什么队伍解决城外的人。",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "记录玩家在「攻军和破城的自动编制」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC05.ALT2",
+          "scene": "兵量与占地宽度",
+          "text": "你准备用鹤翼扫一条宽路线。界面上兵多的设定能覆盖更宽的沿途土地，也要多吃粮；兵少的设定同样能走完。你带多少人？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_FIELD",
+            "RTK14PC_TACTICS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "带足够多的兵，宁可多花粮，也想一趟扫宽这条路线。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "带较少的兵，让粮储还能支撑后续的行动。",
+              "signal": "combat_resource_cycle"
+            }
+          ],
+          "design_purpose": "记录玩家在「兵量与占地宽度」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "RTK14PC06.V1",
+          "scene": "平地上先立阵还是出迎",
+          "text": "敌军离你的城市还有一段路，己方内侧平地已经显示可建造阵，钱也够。负责的队伍可赶到工地，也能提前出战试探。你先让它去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_BUILD",
+            "RTK14PC_TACTICS",
+            "RTK14PC_ORDERS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去打靠前的一队敌兵，趁对方尚未合到一起施压。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "去能建的位置立阵，等打起来时有个能依靠的防线。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「平地上先立阵还是出迎」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC06.ALT1",
+          "scene": "障碍还是诱敌入陷阱",
+          "text": "己方平地上有可建的位置，界面上障碍物和陷阱都可选，但这支部队在敌军到前只赶得及修一种。你设哪一种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_BUILD",
+            "RTK14PC_ORDERS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "放障碍物，优先卡住敌人的移动路线。",
+              "signal": "mission_preparation_plan"
+            },
+            {
+              "id": "B",
+              "label": "布好陷阱，试着让敌人从其发动范围经过。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「障碍还是诱敌入陷阱」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC06.ALT2",
+          "scene": "修补旧工事还是新建",
+          "text": "一座已损坏的己方工事仍可修，后面另一块平地也显示能建。前敌本旬进不了这两处，你只能给这队一个任务。你让它怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_BUILD",
+            "RTK14PC_ORDERS",
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "往后方新建，把下一道防线放到我方另一条路线经过的位置。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "修补旧工事，接着用已经布好的位置。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「修补旧工事还是新建」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "RTK14PC07.V1",
+          "scene": "下旬的募兵人手",
+          "text": "月末有一位武力高的空闲将领，既可任募兵官员也能派到附近应战。你留他办什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_CITY",
+            "RTK14PC_TURN",
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先任募兵官员，等下月上旬多补些人。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "立即派他领兵增援，先应对这旬的交战。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「下旬的募兵人手」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC07.ALT1",
+          "scene": "士气不足的训练官",
+          "text": "城市刚补完人，士气还低。训练官也能领兵，眼前有一处敌军的薄弱点可以打，但短期内要准备守城。你怎么排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_CITY",
+            "RTK14PC_TURN",
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "这旬让他出阵打薄弱点，接受训练效果下降。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "把他留在训练岗，先提高城里这批部队的士气。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「士气不足的训练官」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC07.ALT2",
+          "scene": "从后方输送还是临城守军",
+          "text": "前线城的兵粮撑不了太多旬，后方城有可调的粮和负责输送的人，前线也有空闲人手与资金能任募兵官员。新的命令书只能先做一项。你先定哪件事？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_CITY",
+            "RTK14PC_BASE",
+            "RTK14PC_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让后方按输送路线运粮过去，先补眼下的消耗。",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "B",
+              "label": "先排上前线的募兵，赶在下月上旬补上伤亡。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「从后方输送还是临城守军」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "RTK14PC08.V1",
+          "scene": "把施政一栏给进攻还是内政",
+          "text": "施政里战斗和内政部署都还有位置，但剩余总成本只够上一人，政策要次旬才生效。下旬要准备迎战，你也缺钱扩军。你优先配哪位武将？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_POLICY",
+            "RTK14PC_TACTICS",
+            "RTK14PC_CITY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "启用能帮眼下内政的政策，先把长期的用钱问题往前排。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "启用能强化现有主力阵型的政策，为下一轮作战做准备。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「把施政一栏给进攻还是内政」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC08.ALT1",
+          "scene": "相同政策叠加或军事设施",
+          "text": "次旬能生效的配置里，你可以再叠一项同效果的阵型强化政策，也可以放能解锁一项军事设施的武将进支援。两个部署有位子，剩余成本只够其一。你先配置什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_POLICY",
+            "RTK14PC_TACTICS",
+            "RTK14PC_ADVICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续叠同效果，强化正打算出阵的部队。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "配出军事设施，把接下来的防守选项拓宽。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「相同政策叠加或军事设施」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC08.ALT2",
+          "scene": "用军师判断还是零成本政策",
+          "text": "换军师的界面上已有两位符合任命条件的武将。一个智力更高，另一位的政策刚好能弥补你目前缺的效果。你任命谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RTK14PC_POLICY",
+            "RTK14PC_FACTION"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选拥有需要的政策的人，利用军师位的零成本启用它。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "选高智军师，先让擢用和计略的建言更可靠。",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "记录玩家在「用军师判断还是零成本政策」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "RTK14PC09.V1",
+          "scene": "亲善争取时间或现有盟约",
+          "text": "回想一次你夹在两家邻国之间的存档：手里只够优先派一位使者，跟一家的关系能靠亲善拉起来，另一家已达到可以发出同盟邀请的门槛。当时你更乐意先做哪件事？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_FACTION",
+            "RTK14PC_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先对关系较生疏的一家亲善，给后续交涉留出空间。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先向已有交情的一家发同盟邀请，尝试让一边更稳定。",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "记录玩家在「亲善争取时间或现有盟约」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC09.ALT1",
+          "scene": "在野武将或对手的低忠将领",
+          "text": "回想一次人才菜单里已有一名合适的在野武将和一名可擢用的敌将，两人都能点，但只有一位己方武将能派出去。哪类招人经历让你更想再试？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_FACTION",
+            "RTK14PC_PLOT",
+            "RTK14PC_POLICY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去尝试擢用敌将，想把对方的弱点变成自己的机会。",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "直接去请在野武将，先把空着的官职补上。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「在野武将或对手的低忠将领」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC09.ALT2",
+          "scene": "府的怀柔或敌将离间",
+          "text": "你若玩过用计略削弱邻国的一局：同一旬一个符合条件的敌方非据点区域可以怀柔，一名敌将也可施以离间，手头只够先派一人。哪一种是你更愿意回头复盘的棋？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_PLOT",
+            "RTK14PC_FACTION",
+            "RTK14PC_POLICY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "怀柔那片地，看看能否拿下一处相邻区域。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "去离间那名敌将，为之后争取他来投的尝试做准备。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「府的怀柔或敌将离间」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "RTK14PC10.V1",
+          "scene": "裁决里的一本命令书",
+          "text": "如果你的剧本打开过裁决提案：回想有一次资金能负担多项区域官员的提案，也能负担一项其他武将的战斗提案，但只剩一本命令书。你更偏好怎样用？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_COUNCIL",
+            "RTK14PC_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "采用一项指向眼前战事的武将提案，集中做出一次动作。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "把区域官员的几项提案一起采用，用这一本改善几处内政。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「裁决里的一本命令书」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC10.ALT1",
+          "scene": "立即提案与进行段的提案",
+          "text": "回想裁决菜单里同时有两项你负担得起的提案，一项标着立即执行，另一项要到进行阶段才执行。你只能先采用一个。你喜欢哪种安排？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_COUNCIL",
+            "RTK14PC_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先处理标着立即执行的，拿到结果再定本旬余下的事。",
+              "signal": "management_status_review"
+            },
+            {
+              "id": "B",
+              "label": "采用那个随进行阶段执行的，看看它怎样和这旬的其他命令一起展开。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「立即提案与进行段的提案」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC10.ALT2",
+          "scene": "名品或一次资金奖赏",
+          "text": "回想你给一位刚招来的武将发奖励时，手里有空闲名品和可用资金，两种按钮都能用。只能先做一项时，你更愿意从什么开始？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_FACTION"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用奖赏给资金，把刚来的武将忠诚提起来。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把一件空闲名品授给他，给他在这盘里的身份留个标记。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「名品或一次资金奖赏」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "RTK14PC11.V1",
+          "scene": "同军团武将要不要一路",
+          "text": "你若曾派过同军团、关系良好的两名武将：一路可以一起行军触发合作，分兵也都能赶到两处可达的府。回想那类出阵，你更想怎么看它展开？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "两队放在相近的位置，观察能否用合作打出连带战法。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "分两路到不同的府，让此前走不到的地图各打开一片。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「同军团武将要不要一路」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC11.ALT1",
+          "scene": "战法格的选法",
+          "text": "回想你为一个非锥形、非兵器的阵型挑战法。将领可选数项，能继续用上次熟悉的搭配，也有一组没试过的可用战法。哪种乐趣更像当时留下印象的？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换进一项没试过的战法，看它在这支队上能发挥什么效果。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "沿用上次的搭配，比较这次面对不同部队时发动起来的表现。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「战法格的选法」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC11.ALT2",
+          "scene": "处理停战一个旬的伤兵",
+          "text": "回想一次激战后，你的部队带着伤兵且粮线仍通。敌军暂未追来，既能回城也能在己方土地待机。你更容易记住哪一种收尾？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_FIELD",
+            "RTK14PC_ORDERS",
+            "RTK14PC_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把部队引回自己的城，让刚打过仗的人撤离前线。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先让部队待在己方通粮的地方，再观察伤兵恢复和粮食消耗。",
+              "signal": "combat_resource_cycle"
+            }
+          ],
+          "design_purpose": "记录玩家在「处理停战一个旬的伤兵」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    },
+    {
+      "id": "RTK14PC12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "RTK14PC12.V1",
+          "scene": "季节风险下给谁做官",
+          "text": "回想你快进到换季前，一个府的治安需照看，而城里既有带占术的可任命武将，也有一位更擅长开发农业的武将。你只能先定一位。你以往更喜欢哪条路？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_CITY",
+            "RTK14PC_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留适合开发农业的人，继续把粮食增长做下去。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "换占术武将接手，先给可能的疫病、蝗虫留一手。",
+              "signal": "mission_preparation_plan"
+            }
+          ],
+          "design_purpose": "记录玩家在「季节风险下给谁做官」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC12.ALT1",
+          "scene": "月初战报后的第一个动作",
+          "text": "回想有一次上旬报告显示前线兵粮下滑、后方城市有余粮，同时前线府有可调整的区域官员。下旬前只能先交代一事，你更想怎么接着玩？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_TURN",
+            "RTK14PC_CITY",
+            "RTK14PC_BASE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从能抽粮的后方城市发输送，处理当旬见到的缺口。",
+              "signal": "material_stock_review"
+            },
+            {
+              "id": "B",
+              "label": "先调前线区域的农业开发，给往后几月做准备。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「月初战报后的第一个动作」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        },
+        {
+          "id": "RTK14PC12.ALT2",
+          "scene": "扩大城下的已占区域",
+          "text": "回想刚打下敌城的那一盘：周边还有未归属土地，附近的部队也可改命令。城里有官员可任命，但你要先决定部队转向哪个目标。哪种打法更让你愿意重开一局？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RTK14PC_TACTICS",
+            "RTK14PC_CITY",
+            "RTK14PC_FIELD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先派它去下一座自己盯上的府，把附近剩余未占土地交给区域官推进。",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把这支队用来占城边的空白区域，等边界连起来再往前。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「扩大城下的已占区域」中的行动偏好。",
+          "interpretation_boundary": "按自己玩过的本体共同机制、存档局势与可用命令作答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+c8a41b9fe969"
+}

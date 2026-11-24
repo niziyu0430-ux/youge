@@ -1,0 +1,996 @@
+{
+  "id": "marvelmidnightsunspc",
+  "title": "漫威暗夜之子",
+  "game_ids": [
+    "steam-368260"
+  ],
+  "scope": "Firaxis Games《漫威暗夜之子》Steam Windows 368260。本体战役、回合制牌战、修道院和英雄友谊。范围包括本体剧情作为敌人的毒液；卡牌和活动限于已加入角色、当局资源及明确已开放的选项。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "暗夜之子 本体战役",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "MARVELMIDNIGHTSUNSPC01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "快攻与木箱",
+          "text": "本回合还剩一次出牌。快攻能击倒挡在前面的九头蛇杂兵，旁边可用的箱子也能撞倒他。英勇点够用。你先怎么清路？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_COMBAT",
+            "MARVELMIDNIGHTSUNSPC_TACT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用箱子完成击倒，把手上的快攻留给另一名杂兵",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用快攻击倒杂兵，返还这一次出牌，再打剩下的牌",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「快攻与木箱」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC01.V1"
+        },
+        {
+          "scene": "铁匠铺的一盒线圈",
+          "text": "修道院熔炉今天还能分析一份伽马线圈，训练场也有你准备好升级的一对重复能力和相应精华。该出击前你先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_LOOP",
+            "MARVELMIDNIGHTSUNSPC_TACT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先分析线圈，看看有哪些新卡可选",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先把明确想带进队伍的那张能力升级，再去看随机的新卡",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「铁匠铺的一盒线圈」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC01.ALT1"
+        },
+        {
+          "scene": "公共休息室的一次邀约",
+          "text": "今晚刀锋战士和秘客都能选作消遣伙伴。你和刀锋已经常出任务，秘客则很少和猎人私下交谈。你邀请谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_SOCIAL",
+            "MARVELMIDNIGHTSUNSPC_FRIEND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "邀请刀锋，把已经开始培养的关系再推进一些",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "邀请秘客，借今晚和不常组队的人多聊几句",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「公共休息室的一次邀约」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "当日的训练搭档",
+          "text": "今日的训练场切磋还没用，猎人和你考虑的两名英雄都能参加。一位即将出战，另一位和你的关系还不熟。你挑谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_LOOP",
+            "MARVELMIDNIGHTSUNSPC_FRIEND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先和马上出战的那位切磋，让训练收益用于这次出击",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先和少交谈的那位切磋，给平常没带出去的队友一点时间",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「当日的训练搭档」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC02.V1"
+        },
+        {
+          "scene": "一份礼物要不要留",
+          "text": "队伍友谊够高，修道院礼品店已经开放。你手里有一份今晚的消遣伙伴也喜欢的礼物，稍后还能找机会送给更喜欢它的另一位英雄。现在怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_SOCIAL",
+            "MARVELMIDNIGHTSUNSPC_FRIEND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把礼物留给更对口的英雄，等他也有消遣邀约",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "消遣结束时送给眼前这位，回应今晚的相处",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「一份礼物要不要留」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC02.ALT1"
+        },
+        {
+          "scene": "最后一次移动",
+          "text": "训练场已经建好可推撞的人偶。还剩一次移动，你能把杂兵推撞到墙上，也能让正被瞄准的队友离开地面预警区。你怎么花这次移动？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_SHOVE",
+            "MARVELMIDNIGHTSUNSPC_TACT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "推撞杂兵，看预览确认它会倒下，提前消掉攻击者",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把危险区域里的队友移开，尽量保住队伍阵形",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「最后一次移动」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "林中未用的隐居点",
+          "text": "修道院附近发现一个从没用过的隐居点。地图上有两位本来就能邀请的英雄，其中一位很喜欢此地的活动。你怎么使用这次机会？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_FRIEND",
+            "MARVELMIDNIGHTSUNSPC_HAVEN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选最喜欢这个活动的那一位，让这次有限的机会尽量增长友谊",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "选我想多认识的那一位，将一次机会花在相处上",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「林中未用的隐居点」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC03.V1"
+        },
+        {
+          "scene": "钢铁侠的重抽",
+          "text": "钢铁侠的手里有一张可用重抽强化的牌，另一张普通牌现在用不到。还剩一次重抽，也有余裕出强化后那张牌。你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_COMBAT",
+            "MARVELMIDNIGHTSUNSPC_IRON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重抽钢铁侠这张牌，只增强它的结算效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "重抽暂时无用的普通牌，争取抽到能衔接这回合的能力",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「钢铁侠的重抽」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC03.ALT1"
+        },
+        {
+          "scene": "破解好的情报",
+          "text": "修道院指挥中心有一项你付得起的英雄行动，可选一位不在主线强制名单里的英雄。你原来也想带这位上今天的通用任务。你怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPS",
+            "MARVELMIDNIGHTSUNSPC_LOOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留他今天出击，这份英雄行动暂时搁下",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "派他做英雄行动，今天的出击改用另一位",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「破解好的情报」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "先打出第三张谁的牌",
+          "text": "惊奇队长已经在本次战斗打出两张自己的牌，手里还有能出的第三张。这时，你也能直接用刀锋战士的快攻击倒一个杂兵。你先做哪一步？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_BINARY",
+            "MARVELMIDNIGHTSUNSPC_TACT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先出惊奇队长的第三张，拿到进入双星状态的牌",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先用刀锋战士的快攻牌击倒杂兵，返还刚花掉的这次出牌",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「先打出第三张谁的牌」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC04.V1"
+        },
+        {
+          "scene": "消耗精华以前",
+          "text": "训练场前，你有两对重复能力，但相应精华只够先升级其中一张。一张增加击倒杂兵的把握，另一张对高血量敌人的用途更大。你优先升哪一张？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_LOOP",
+            "MARVELMIDNIGHTSUNSPC_ECON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "升对高血量目标更有用的那张，让关键组合能吃到收益",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "升经常用来收掉杂兵的那张，先把返还出牌做稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「消耗精华以前」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC04.ALT1"
+        },
+        {
+          "scene": "读书会开始前",
+          "text": "刀锋战士的读书会今晚要讨论《孙子兵法》。图书馆后角的电子阅读器已显示这本书，你也能直接赴会。你先怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_BOOK",
+            "MARVELMIDNIGHTSUNSPC_SOCIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查看电子书内容，带着对本次题目的想法去听",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "直接赴会，先领会其他人会怎么谈同一本书",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「读书会开始前」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "第一次用「开启」",
+          "text": "你已在阿加莎的指引下取得第一个力量咒语「开启」，还在修道院附近。一扇可用「开启」的门就在眼前，也能先沿此前走过的路回阿加莎祭坛。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPEN",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回祭坛把眼前留下的线索看一遍，再来试门",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "试着用「开启」过这扇门，看沿途能通往什么地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次用「开启」」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC05.V1"
+        },
+        {
+          "scene": "查理在修道院等着",
+          "text": "现在是晚上，你的月之印已备好，血族之门试炼可以进入。查理也还在院里，可以先互动。你准备怎样安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPEN",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回去摸摸并表扬查理，再一起出门",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先去已经找到的血族之门，用现有状态直接与查理试打一回",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「查理在修道院等着」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC05.ALT1"
+        },
+        {
+          "scene": "蜘蛛侠眼前的两个障碍",
+          "text": "蜘蛛侠已打出能让接下来两个环境攻击免英勇点的能力，附近既有可推向敌人的货物，也能选择现在出一张通常的攻击牌。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_SPIDER",
+            "MARVELMIDNIGHTSUNSPC_TACT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先出手上够伤害的牌解决当前目标，再看免费攻击能否利用",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先试用免费环境攻击，从战场布置里找能同时波及几人的角度",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「蜘蛛侠眼前的两个障碍」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "小组向你要材料",
+          "text": "你已经参加尼科发起的实验小组，秘客刚发消息列出本场要交的材料，现在能到场地去找。手头又刚有另一位英雄开放短谈。你先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPEN",
+            "MARVELMIDNIGHTSUNSPC_CLUB",
+            "MARVELMIDNIGHTSUNSPC_CLUBEVID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿修道院外能走的路找齐小组要求的材料",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先去听那位英雄想说什么，再出门采材料",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「小组向你要材料」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC06.V1"
+        },
+        {
+          "scene": "夜间的元素祭坛",
+          "text": "元素祭坛已经可调查。你身上有能放入的元素魔杖，眼前也能沿已开路继续找缺的那一根。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPEN",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "优先在开放区域找缺的那根，等凑齐再回来摆放",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "在祭坛先把手里的魔杖放进对应位置，确认仍缺哪种",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「夜间的元素祭坛」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC06.ALT1"
+        },
+        {
+          "scene": "钟声鸣响的英勇点",
+          "text": "《钟声鸣响》里，你有正够修教堂大钟的英勇点，毒液已倒地，蜘蛛侠还能行动，修钟卡现在可以打出。另一张消耗英勇点的卡也能打到余下敌人。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_BELL",
+            "MARVELMIDNIGHTSUNSPC_CN",
+            "MARVELMIDNIGHTSUNSPC_BELLSPIDER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先出修钟卡，用这批英勇点推进眼前的任务",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "赌后面还能攒回来，先用另一张牌解决正靠近的余敌",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「钟声鸣响的英勇点」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "情报任务的控制台",
+          "text": "你在有控制台的数据任务中拿到一张回收数据的牌，目标仍能操作。本回合只剩一次出牌；你也能用普通攻击解决正瞄准同伴的一名敌人。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_TASK",
+            "MARVELMIDNIGHTSUNSPC_TACT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解决正盯同伴的敌人，准备下一轮再处理控制台",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先出回收数据的牌，确保这个回合推进任务",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「情报任务的控制台」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC07.V1"
+        },
+        {
+          "scene": "拿魔法钥匙开箱",
+          "text": "修道院两只已找到的神秘宝箱都能用钥匙开启，眼下只有一把。近处一只在你熟悉的路径上，另一只就在已打通的岔道深处。你怎么用？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPEN",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "现在先打开近处这一只，登记这次拿到的物件",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先走已开岔道，保留钥匙去开更远的箱子",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「拿魔法钥匙开箱」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC07.ALT1"
+        },
+        {
+          "scene": "生日散场后的秘客",
+          "text": "秘客从生日聚会离场，你已经通过尼科开启的传送门见到她。她想安静一下，谈话进行到你可以选择留下或离开的地方。你怎么答？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_PARTY",
+            "MARVELMIDNIGHTSUNSPC_SOCIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让她独处，先回修道院，让她自己决定什么时候回去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "告诉她我们可以不急着回去，留在这里陪她听一会儿",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「生日散场后的秘客」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "猎人的熔炉挑战",
+          "text": "猎人的个人挑战已在熔炉军械库开放。你能进场试《黑暗之子》，也有另一张能力已备好提升材料的卡能去训练场升级。今天先看哪样？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_CHAL",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去挑战看水晶和可推的敌人，试着找解法",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先升级已在用的能力，提高下一场普通任务的构筑稳定性",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「猎人的熔炉挑战」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC08.V1"
+        },
+        {
+          "scene": "夜晚的两处动静",
+          "text": "今晚公共房间有人开放消遣，也能趁夜去已经开启的修道院区域采材料。你只想先做一项，再决定去哪。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPEN",
+            "MARVELMIDNIGHTSUNSPC_FRIEND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去院外看夜里哪些材料已经出现，再决定是否回来聊",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先应那个今晚的邀请，和英雄一起坐一会儿",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「夜晚的两处动静」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC08.ALT1"
+        },
+        {
+          "scene": "任务桌上的下一张卡",
+          "text": "修道院的任务桌今天可选一项通用任务，两个现有任务各自标着奖励：一项有伽马线圈，一项有情报缓存。你现在更愿意选哪一个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_TASK",
+            "MARVELMIDNIGHTSUNSPC_LOOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去拿线圈，给下一次分析多一个卡牌来源",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "去拿情报缓存，为指挥中心后续派遣存资源",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「任务桌上的下一张卡」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "在避风处聊天",
+          "text": "回想你挑好一处隐居点，邀请同伴单独活动，还有聊完送礼这一步。你更记得什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_FRIEND",
+            "MARVELMIDNIGHTSUNSPC_HAVEN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先找到隐居点和合适礼物，最后才把它们用到这个人身上",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "独处时聊到的那件事，让我和这位角色更熟",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「在避风处聊天」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC09.V1"
+        },
+        {
+          "scene": "一列敌人被撞散",
+          "text": "回想你曾让一个敌人撞上另一人，又借环境攻击清出一片位置。复盘这类战斗时，最想回看什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_COMBAT",
+            "MARVELMIDNIGHTSUNSPC_TACT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "击退角度怎么对好，把几个人的位置连成一条线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "哪些杂物本来不起眼，最后被我变成了真正能打的武器",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「一列敌人被撞散」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC09.ALT1"
+        },
+        {
+          "scene": "昨天就派出去的人",
+          "text": "回想你开过中央情报缓存、派一个人去做英雄行动，次日回来的时候能看报告与奖励。哪件事更让你想重复？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPS",
+            "MARVELMIDNIGHTSUNSPC_LOOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "读他如何在主线之外处理那起事件，认识队伍没亲眼见到的一面",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "预留足够的出战人手，再把闲下来的角色放进合适的派遣",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「昨天就派出去的人」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "进入双星以后",
+          "text": "回想你打出惊奇队长的多张牌，看她进入双星状态并获得格挡。你更乐意复盘哪部分？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_BINARY",
+            "MARVELMIDNIGHTSUNSPC_TACT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "牌序怎么把她的状态启动，最好别耽误另外两名英雄行动",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "状态起来以后把她放在哪，能吃住格挡以内的攻击又打得出去",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「进入双星以后」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC10.V1"
+        },
+        {
+          "scene": "地图上点亮的第一段路",
+          "text": "回想你第一次跟着查理去找阿加莎，再学会「开启」。你最想记住的是哪部分？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPEN",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "第一次开门后拓展出的修道院区域，让我想继续往外走",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "当初是谁把我带到这条路上，阿加莎为什么要我自己找答案",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「地图上点亮的第一段路」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC10.ALT1"
+        },
+        {
+          "scene": "大家坐在同一间图书馆",
+          "text": "回想你参加刀锋战士的读书会，在图书馆看了本期书，也听英雄聊了同一话题。你更想和人分享哪部分？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_BOOK",
+            "MARVELMIDNIGHTSUNSPC_SOCIAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "几个人对书和话题有不一样的反应，让我看到他们在出战之外的关系",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "刀锋把原本各忙各的几个人聚在一起，大家终于有时间坐下来聊",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「大家坐在同一间图书馆」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "黑暗之子的水晶",
+          "text": "回想猎人的个人挑战里，常规移动和重抽不可用，出牌次数却不受限。你最喜欢回想什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_CHAL",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从乱出牌到发现规则的过程，最后拿到猎人传奇牌那一次",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我怎么把敌人留活，再推到合适的角度，借它砸红色水晶",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「黑暗之子的水晶」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC11.V1"
+        },
+        {
+          "scene": "友谊级别带来的能力",
+          "text": "回想你与某位英雄多次消遣后，见到友谊级别带来的战斗收益。哪部分最让你想继续培养这段关系？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_SOCIAL",
+            "MARVELMIDNIGHTSUNSPC_FRIEND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回去继续和他聊以前没问过的事，看看接下来还会谈到什么",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "把已经得到的战斗收益带回队伍，用新组合验证它的用处",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「友谊级别带来的能力」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC11.ALT1"
+        },
+        {
+          "scene": "发牌后先留哪张",
+          "text": "回想你用过钢铁侠可由重抽强化的卡，也用过普通重抽来换掉当前用不上的牌。哪一类手感更能把你吸引回这套卡组？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_IRON",
+            "MARVELMIDNIGHTSUNSPC_TACT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先减少眼下的无用牌，在新抽到的手牌里继续找自己的连招",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把重抽留给钢铁侠能力，把已知的效果一层层改强",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「发牌后先留哪张」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MARVELMIDNIGHTSUNSPC12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "带上查理进试炼",
+          "text": "回想你和查理一起进过血族之门，既在修道院日常见到她，也在试炼里真正靠查理的牌作战。你最看重哪一面？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPEN",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "修道院里常去找她，直到下副本也有个亲近的搭档",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "在试炼里把查理的攻击和猎人的牌接起来，用上日常互动积累的能力",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「带上查理进试炼」中的实际行动与取舍。",
+          "interpretation_boundary": "按已加入英雄和自己实际参加过的友谊活动作答。",
+          "id": "MARVELMIDNIGHTSUNSPC12.V1"
+        },
+        {
+          "scene": "敲钟的那一轮",
+          "text": "回想《钟声鸣响》修好大钟之前，你一边打毒液一边蓄着英勇点。最好回看哪种决定？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_BELL",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看准什么时候能把毒液打倒，给修钟创造窗口",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "早点留出修钟资源，让战斗按主任务的节点走",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「敲钟的那一轮」中的实际行动与取舍。",
+          "interpretation_boundary": "按当回合的队伍、预览和资源，或确实打过的本体战斗作答。",
+          "id": "MARVELMIDNIGHTSUNSPC12.ALT1"
+        },
+        {
+          "scene": "肖的教堂之后",
+          "text": "回想你推进主线、取得解除结界所需的东西，又走过肖的教堂后方。你想回看哪种体验？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MARVELMIDNIGHTSUNSPC_OPEN",
+            "MARVELMIDNIGHTSUNSPC_CN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把教堂、结界与随后找到的女巫线索接成一段完整经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "记住原本被挡住的路，回头看结界后还有哪些地方想探索",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「肖的教堂之后」中的实际行动与取舍。",
+          "interpretation_boundary": "按当日修道院设施、调查阶段和资源作答。",
+          "id": "MARVELMIDNIGHTSUNSPC12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+a961d4741e72"
+}

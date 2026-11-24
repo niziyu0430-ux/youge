@@ -176,12 +176,15 @@ class AuthoredQuestionTests(unittest.TestCase):
 
     def test_exhausted_replacements_can_be_undone_and_resume_exact_form(self):
         form=questionnaires.questions('genshin-impact');first=form['questions'][0]['id']
-        seen={first}
+        seen={first};sequence=[first]
         while form['questions'][0]['can_replace']:
             form=v05.replace_question(form['response'],form['questions'][0]['id'])
-            self.assertNotIn(form['questions'][0]['id'],seen);seen.add(form['questions'][0]['id'])
+            self.assertNotIn(form['questions'][0]['id'],seen);seen.add(form['questions'][0]['id']);sequence.append(form['questions'][0]['id'])
         with self.assertRaises(InputError):v05.replace_question(form['response'],form['questions'][0]['id'])
-        restored=v05.replace_question(form['response'],form['questions'][0]['id'],undo=True)
+        restored=form
+        for expected in reversed(sequence[:-1]):
+            restored=v05.replace_question(restored['response'],restored['questions'][0]['id'],undo=True)
+            self.assertEqual(restored['questions'][0]['id'],expected)
         self.assertEqual(restored['questions'][0]['id'],first)
         resumed=questionnaires.questions(raw=restored['response'])
         self.assertEqual(restored,resumed)
@@ -288,6 +291,20 @@ class AuthoredHTTPTests(unittest.TestCase):
     def test_new_routes_require_login(self):
         for path in ('/api/v4/questions','/api/v4/replace-question'):
             self.assertEqual(self.request(path,{})[0],401)
+
+    def test_unfinished_game_only_reopens_its_saved_form(self):
+        game_id='genshin-impact'
+        raw={'versions':v04.config()['versions'],'game_id':game_id,'answers':{}}
+        with patch.object(v05,'pack_for',return_value=None):
+            path=f'/api/v4/questions?game_id={game_id}'
+            for query in ('','&instrument=0.4.0'):
+                status,body=self.request(path+query,authenticated=True)
+                self.assertEqual(status,409)
+                self.assertIn('暂未开放',body['error'])
+            status,form=self.request('/api/v4/questions',raw,True)
+        self.assertEqual(status,200)
+        self.assertEqual(len(form['questions']),16)
+        self.assertEqual(form['versions']['instrument'],'0.4.0')
 
     def test_real_http_replacement_resume_and_report(self):
         status,form=self.request('/api/v4/questions?game_id=genshin-impact',authenticated=True)

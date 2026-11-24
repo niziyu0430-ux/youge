@@ -1,0 +1,1021 @@
+{
+  "id": "shadowsofdoubtpc",
+  "title": "Shadows of Doubt - 凶影疑云",
+  "game_ids": [
+    "steam-986130"
+  ],
+  "scope": "Steam Windows 986130，ColePowered 正式本体常驻调查。涵盖 The Dead of Night 入门案与沙盒的实际侦查。按当局生成与玩家已确认的证据作答。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "城市侦探",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "SHADOWSOFDOUBTPC01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "人还在现场，先看什么",
+          "text": "The Dead of Night 首案，你已进案发公寓，能接触死者与一件尚未检查的、嫌疑人可能摸过的近处物件。屋里暂没人把你赶走。你先做哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_VID",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先检查死者，把身份和死亡信息立成案板的起点",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先拿扫描仪照物件，想找出有别于死者的一枚指纹",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「人还在现场，先看什么」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC01.V1"
+        },
+        {
+          "scene": "只有不认识的一张脸",
+          "text": "从大楼监控挑出和案发时间接近的一张陌生脸，也已经打开并钉好它关联的未知人物记录。你能出示这个人物去问大厅的住户，也能回电脑继续查同一台摄像头的前后时间。你先试哪种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_CIT",
+            "SHADOWSOFDOUBTPC_ASK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在对话中选这份未知人物记录出示给还在场的住户，问他们是否认识",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先看前后时间的监控画面，确认此人出现和离开的方向",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「只有不认识的一张脸」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC01.ALT1"
+        },
+        {
+          "scene": "第一处线索先跑哪儿",
+          "text": "首案的公寓里，你在收据上认出一间餐馆，也已从确实找到的雇佣资料知道死者的工作地点。两处都能在地图上找到。你接下来去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_VID",
+            "SHADOWSOFDOUBTPC_PUB"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去工作场所，查与死者往来的工作记录和邮件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先去餐馆，看看收据上的行程在监控里能不能对出来",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一处线索先跑哪儿」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "先问本人还是先核其文件",
+          "text": "你拿着案件里那枚待对照的指纹。你已找到一个具体人，对方现在能和你交谈；你也有权限打开另一处已确认存在的本人档案记录。你先怎么核对？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_CIT",
+            "SHADOWSOFDOUBTPC_GOV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先当面开口请对方提供指纹，看是否愿意配合",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先看那份个人档案，把里面的已知指纹和案板记录对照",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「先问本人还是先核其文件」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC02.V1"
+        },
+        {
+          "scene": "认识名字却还没找上门",
+          "text": "你知道嫌疑人的名和姓，但信息相似的候选不止一人，附近的名录和已经能访问的数据库电脑都可用。你还有一枚待核的指纹。先用哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_GOV",
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_DIR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打印并查看姓名对应的候选档案，看看里面的指纹是否和现场相同",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先按姓和名的首字母在城市名录圈出候选地址，准备去实地确认",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「认识名字却还没找上门」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC02.ALT1"
+        },
+        {
+          "scene": "找到名片时别把它当答案",
+          "text": "一件沙盒企业谋杀案里，遗体附近有一张带留言的商务名片，表面扫描也显示有印痕。你已经站在它面前。你会先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_SCENE",
+            "SHADOWSOFDOUBTPC_CIT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先扫描名片，请指纹帮我把同一件物品和可能的人连起来",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先读名片上的留言钉到板上，看看凶手想让发现者读到什么",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「找到名片时别把它当答案」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "检索后把资料留在哪",
+          "text": "市政厅的电脑已经登录，你找到与你查的人相符的一条政府数据库结果。你可以打印这页，也可以读完名字和门牌，用笔记本向该地址设路线。对当前这一刻你怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_GOV",
+            "SHADOWSOFDOUBTPC_FIND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先记下足够找门的地址，查路线过去核实",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先打印，再把此人的档案整页钉上案件板",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「检索后把资料留在哪」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC03.V1"
+        },
+        {
+          "scene": "两种互不相同的线索",
+          "text": "案发公寓里你已经看到了受害人的通讯录和桌上的消费收据，两件都能读。你眼下要先留哪条线？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_VID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "通讯录优先，看这人平时联络的那些人住在哪",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "收据优先，记住死者去过的店和时间再上路",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「两种互不相同的线索」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC03.ALT1"
+        },
+        {
+          "scene": "雇员抽屉与桌边电脑",
+          "text": "你进入死者的工作地点，旁边有能开的雇员档案柜，也有已经可登录的死者电脑。先查哪样？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读死者 VMail，了解死者本人和往来对象在说什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先抽几份关联员工档案，比对记录上的指纹和身份",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「雇员抽屉与桌边电脑」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "有人来了，证据还摆着",
+          "text": "在一处案发公寓，你还差一枚可扫描的表面指纹。门外隐约听到脚步，目前来路仍无阻。你怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "趁这几秒把已经显影的印痕扫出来，再评估门外",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先退出公寓保住调查机会，等能重新靠近时再补扫",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「有人来了，证据还摆着」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC04.V1"
+        },
+        {
+          "scene": "破解器与桌上的密码",
+          "text": "你在市政厅已找到装有市民数据库的电脑。锁屏还在，持有可用的破解器，而且眼前职员隔间留有对应的登录密码便条。你选怎么开？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GOV",
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_CIT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用手边的破解器开机，把这一刻留给查询",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "先照便条输入，留着破解器应付无现成密码的设备",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「破解器与桌上的密码」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC04.ALT1"
+        },
+        {
+          "scene": "管理员室的两道入口",
+          "text": "调查需要一处安保电脑。你已亲自确认门能用开锁器打开，也从图纸和近处检修口确认了通达同房的通风管，两个入口眼下都够得着。怎么进？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先钻已确认相通的通风管，从上方看安保室",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "用开锁器开近处的门，直接去操作安保电脑",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「管理员室的两道入口」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "照片上的人与时间",
+          "text": "你在安保电脑看见一张时间靠近案发、有人通过走廊的监控照片。可以先把脸钉到板上，也可以切换监控的时间段。你先做哪件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿时间前后多找几帧，看看此人在此前此后出现在哪",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先钉住这一张清楚的脸，之后拿去问别人",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「照片上的人与时间」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC05.V1"
+        },
+        {
+          "scene": "只知道号码的委托",
+          "text": "你接了个手头只有委托目标本人留下的电话号码的案子。你正在一间已确认可用电话且有接线记录箱的餐馆，带着开锁工具，刚拨了目标号码并挂掉，也记下了拨出时刻。桌面还留着任务单。你怎么推进？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去查这间餐馆接线箱的 Outgoing 拨出记录，把号码缩小到建筑",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先把委托上的零碎描述和刚才的号码放一起，再决定要不要为这条线冒险开箱",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「只知道号码的委托」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC05.ALT1"
+        },
+        {
+          "scene": "通话记录到了分岔处",
+          "text": "首案存档中你已查看受害人电话的来电记录，也读过房里的通讯录。最后来电号码确实能对上其中一个人，同一房内还有一张指向餐馆的收据。你接下来怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿收据去餐馆看那次外出，把通话地址留在板上",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先照通讯录找到来电人的地址，核查这条刚对上的关系",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「通话记录到了分岔处」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "公告板上有两件差事",
+          "text": "一处餐馆的公告板上，你看到了实际在列的两份可接工作。一份要求拍一位指定目标，另一份是有原主线索、会要求找回其被盗初版书的委托。你更愿意先接哪一件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_STORE",
+            "SHADOWSOFDOUBTPC_CASES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接拍照，通过提问或查档弄清该去拍谁",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先接找物，去找发布委托的原主了解失窃地点",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「公告板上有两件差事」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC06.V1"
+        },
+        {
+          "scene": "观察弹孔的这一步",
+          "text": "沙盒里，你在一处能直接触及的窗边看见弹孔，同时也已经知道室内死者的位置。眼下两处都可检查。你优先找什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先确认死者及死亡时段，给接下来排查周围建筑一个起点",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先检查弹孔与角度，判断这一枪是从哪里有机会打进来",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「观察弹孔的这一步」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC06.ALT1"
+        },
+        {
+          "scene": "长相有印象却没姓名",
+          "text": "一位证人刚给了你嫌疑人的部分外貌描述。再问时他仍能交谈；你也在刚才谈话里另拿到一张候选人的清楚照片，已经通过照片打开并钉好了它关联的未知人物记录。你先怎么比对？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_CIT",
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_ASK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在对话出示那份关联的人物记录，询问他是否认识这张脸",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先开案板对照照片的外观特征和自己刚记录的描述",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「长相有印象却没姓名」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "结案纸上的额外问题",
+          "text": "你已有足够把握填写嫌疑人身份和住所，提交表还问凶器。嫌疑人住所仍可以调查，你现在也已能到市政厅交表。你倾向怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_VID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先返回仍能进入的地址，把凶器线索补出来再交",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先提交已确认的答案，接受凶器部分可能没拿到奖励",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「结案纸上的额外问题」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC07.V1"
+        },
+        {
+          "scene": "拍人前查名字还是跑跟踪",
+          "text": "摄影委托给出部分外貌。你已锁定一位姓名明确的候选人，并知道其目前仍在公共场所；你也可用市政厅终端查询这个名字。你决定先去哪一边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_JOB",
+            "SHADOWSOFDOUBTPC_GOV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从档案补比对线索，提高下次碰见此人时的把握",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先到公区观察那人本人，按自己记录的外貌找得到才拍",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「拍人前查名字还是跑跟踪」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC07.ALT1"
+        },
+        {
+          "scene": "警报亮起时的撤路",
+          "text": "你查看完一间安保室的电脑，墙上的警报响起。附近回公共楼梯的门没锁，你也从进来时的路线确认一个够得着的检修口能离开同室。你会从哪走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从能接到另一段的检修口爬出去，避开刚走过的方向",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "立刻走未锁的门，趁通道空着回公共楼梯",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「警报亮起时的撤路」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "一门之隔的访问方式",
+          "text": "嫌疑人住处你已找到。门内有人能回应，附近有掩护，你也确实还有开锁器，现在尚无人因你在门口而报警。你第一步怎么试？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_CIT",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先敲门对话，看看住户愿不愿意回答我能问的问题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先等门边附近无人关注，再试开锁进入找可见证据",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「一门之隔的访问方式」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC08.V1"
+        },
+        {
+          "scene": "身上只有一个破解器",
+          "text": "你当前还有一支破解器，已见过两部确实可使用破解器的锁屏电脑。一部在市政厅可查市民档案，另一部是已定位的受害人工作电脑可查邮件。你会先把工具用在哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_GOV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开死者的工作电脑，找能解释他为何遇害的邮件",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先开数据库，把可能要查的人的资料归在一起",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「身上只有一个破解器」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC08.ALT1"
+        },
+        {
+          "scene": "一枚指纹只有代号",
+          "text": "你扫到了仅显示字母代号的一枚现场指纹。案板上能立刻钉住它；你已经注意到现场找到的一张消费收据，也还在手边。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_CIT",
+            "SHADOWSOFDOUBTPC_DEAD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先保存未识别指纹，让以后证据补全时能对得上这次发现",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先查一下收据上的店名和时间，给这堆现场证据找个下一站",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「一枚指纹只有代号」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "从约见地址走到门前",
+          "text": "回想一次你从委托单上拿到碰头地址，既用过案件板旁的侦探笔记本，也亲自穿过楼道找到那扇门。回想起来最难忘哪段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_FIND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走过楼里真实存在的房号和拐角，最后认出那一扇门",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把模糊地址变成能够导航的线，并把它留在自己的笔记里",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「从约见地址走到门前」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC09.V1"
+        },
+        {
+          "scene": "密密麻麻的案件板",
+          "text": "回想你第一次交凶案表之前，案板上既有钉好的受害人和可追线索，也已有嫌疑人的身份资料。哪种整理更让你满意？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已钉的证据按时间与人串起来，直到说得清判断过程",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "从已有档案挑出表上需要的项目，完成一次能查结果的结案",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「密密麻麻的案件板」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC09.ALT1"
+        },
+        {
+          "scene": "第一枚代号指纹终于有名字",
+          "text": "回想从现场扫出一个陌生的指纹代号，到找到它对应的市民档案。哪一幕更愿意重来？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_CIT",
+            "SHADOWSOFDOUBTPC_GOV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在文档里第一次发现同一指纹，终于让案板上的人有名字",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "手持扫描仪在物件上逐步找到完整印痕的过程",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一枚代号指纹终于有名字」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "两处案发现场可相互印证",
+          "text": "在一次实际出现第二起案件的沙盒存档里，你调查过两个现场，确实看到了同一类留言或同一枚指纹。哪段更让你记住追案的感觉？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "第二现场出现相近的痕迹，终于看出事件在接着发展",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把两处记录并在同一条证据线上，确认它不是只发生过一次",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「两处案发现场可相互印证」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC10.V1"
+        },
+        {
+          "scene": "走进办公室找到名牌",
+          "text": "回想你调查公司时用过档案柜，也从桌面名牌和雇佣合同查到过某个人的住址。哪种经历会让你愿意再去查一家公司？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_CIT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从名牌定位桌子，再用合同把疑点落实到一扇门",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "从一册册档案里把照片和指纹补全，给案板增加可比对的条目",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「走进办公室找到名牌」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC10.ALT1"
+        },
+        {
+          "scene": "把线索从监控带回街面",
+          "text": "你曾在有 CCTV 的案子里，在安保电脑翻过多帧监控，也从画面中的人打开并钉过未知人物记录，向 NPC 出示过该人。回想起来你更想重做哪段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_SCENE",
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_ASK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对监控按时段筛，挑足以拿出门的那张清楚照片",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "拿着监控关联的人物记录走出去问人，看熟悉这张脸的人会给什么线索",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「把线索从监控带回街面」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "最后一通电话与那份邮件",
+          "text": "你的首案里确实查过最后一通电话和死者的 VMail，它们各自给出了可继续追的人。哪类线索让你更想再玩一遍？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "读死者与他人的邮件，重新理解是谁进入了这段关系",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "拿号码去对通讯录，锁定真实能走到的地址",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「最后一通电话与那份邮件」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC11.V1"
+        },
+        {
+          "scene": "市政厅的字母搜索",
+          "text": "回想你在市政厅输入过姓名中至少两个连续字母来搜政府数据库，既翻过候选列表，也用打印档案核过住址。哪一环更让你享受做侦探？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_GOV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让一截不完整的名字一点点收敛到少数候选",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把身份档案真正整理到自己手里，日后有新案也能拿出来对照",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「市政厅的字母搜索」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC11.ALT1"
+        },
+        {
+          "scene": "结案以后才看到占了多少",
+          "text": "一次凶案中你已经完整交过表，看到过结案反馈。重想这一案，你更重视哪件事带来的成就感？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "现场物证能支撑最初的推断，对上嫌疑人的那一刻",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "表格多个要求都给得出答案，系统反馈能记录这次查到多少",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「结案以后才看到占了多少」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "SHADOWSOFDOUBTPC12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "在黑暗的安保室破案",
+          "text": "回想一次你用过有 CCTV 的安保房，也打通过同一调查里一条备用进出路线。你更想重新做哪一件？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_GUIDE",
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重走那条躲开常规门口的路，重新认识这栋楼怎样连起来",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把监控上的时间、相貌和手头笔记重新对到一起",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「在黑暗的安保室破案」中的实际行动与取舍。",
+          "interpretation_boundary": "全城调查路径、设备与支线委托。",
+          "id": "SHADOWSOFDOUBTPC12.V1"
+        },
+        {
+          "scene": "亲手让追踪停下来",
+          "text": "在一案中你拿着确凿关联的现场证据，实际扣过嫌疑人的手铐，也填完表交到了市政厅。现在想起收尾时，你更想回顾哪一幕？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_DEAD",
+            "SHADOWSOFDOUBTPC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "返回交表处，看到案子里各项发现分别如何被判定",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "亲手结束追踪，把我已经调查到的人拘捕下来",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「亲手让追踪停下来」中的实际行动与取舍。",
+          "interpretation_boundary": "案发现场、警方提交与取证。",
+          "id": "SHADOWSOFDOUBTPC12.ALT1"
+        },
+        {
+          "scene": "一个嫌疑人两条查证路",
+          "text": "曾有一案，你从现场线索追到某人的住址，在那里补过证据；你也在另一时段查过此人的市民档案。哪种体验让你觉得最像自己的调查习惯？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SHADOWSOFDOUBTPC_FIND",
+            "SHADOWSOFDOUBTPC_GOV",
+            "SHADOWSOFDOUBTPC_DEAD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "真正走到当事人原本生活的楼里，把人和地方对上",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "用可比较的档案字段逐条排除疑点，找到该信哪条",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「一个嫌疑人两条查证路」中的实际行动与取舍。",
+          "interpretation_boundary": "嫌疑人身份与市民、档案调查。",
+          "id": "SHADOWSOFDOUBTPC12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+e6165af9937c"
+}

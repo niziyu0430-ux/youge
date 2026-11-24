@@ -1,0 +1,993 @@
+{
+  "id": "zhengtumainlinepc",
+  "title": "征途",
+  "game_ids": [
+    "zhengtu"
+  ],
+  "scope": "巨人网络国服原生 PC《征途》正式服，涵盖日常、国家正式战争和可见家族系统。按题设服区和当前界面可用作答，区分《新征途》《征途2》、怀旧服与测试服。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "巨人网络 Windows《征途》正式服",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "ZHENGTUMAINLINEPC01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "东门栅栏前听到两路安排",
+          "text": "你参加《征途》正式服国战，按当前东门的规则，栅栏还没倒，后面的禁卫队长仍不能打。指挥要一队继续推栅栏，也要人留在东门外接回来的队友。你先去哪儿？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_WAR",
+            "ZHENGTUMAINLINEPC_REALWAR",
+            "ZHENGTUMAINLINEPC_CURRENT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回东门外接散了的队友，把人带回同一处",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "跟上正在打栅栏的人，把东门的下一步打出来",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「东门栅栏前听到两路安排」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC01.V1"
+        },
+        {
+          "scene": "队长在边境等哪项先做",
+          "text": "队长已组好人，今天《征途》里敌国刺探和太庙搬砖都显示可接。两个地方大家都去过，队里时间只够先跑一项。你先提哪一个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_TEAM",
+            "ZHENGTUMAINLINEPC_TASK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先刺探，集中跑完大家还没交的情报",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先搬砖，和上次途中被打断的队友一起走",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「队长在边境等哪项先做」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC01.ALT1"
+        },
+        {
+          "scene": "换装栏先存哪套",
+          "text": "《征途》一键换装页还剩一个你打算使用的存档位。身上穿的是国战守点的一套，背包里也有齐的一套日常赶路装。你先存哪套？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_SUIT",
+            "ZHENGTUMAINLINEPC_WAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先存常用的日常装，少做每天反复换部件的操作",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先存守点装，临时收到国战召集时可以很快换上",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「换装栏先存哪套」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "族长还没按下家族镖车的接取",
+          "text": "你已经到王城龙镖头，族长正在凑家族运镖的成员。地图上另有一件随时可以回头做的日常。你先做哪件事？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_FAMILY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留在镖头附近，在家族频道帮忙确认还有谁没到",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先做已经排好的这件日常，下次能跟完全程时再参加家族运镖",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「族长还没按下家族镖车的接取」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC02.V1"
+        },
+        {
+          "scene": "灵魂锁链和单件升星",
+          "text": "你在《征途》人气服有两项当前能做的装备调整。一项补身上已有的灵魂锁链搭配，另一项给常用武器继续升星。今天只打算用一批材料，先选哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_GEAR",
+            "ZHENGTUMAINLINEPC_CHAIN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让每次都在用的那件武器多一点成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把锁链要用的装备配合起来，看整套手感",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「灵魂锁链和单件升星」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC02.ALT1"
+        },
+        {
+          "scene": "三门都能走时的第一次分路",
+          "text": "这场《征途》国战用东、南、西三门规则。东门已经有人打栅栏，南门还没人进，你可以沿原路跟大队，也能跟愿意试南门的三两个人走。你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_REALWAR",
+            "ZHENGTUMAINLINEPC_WAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "跟东门的人合流，配合他们把手上的目标打完",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "跟小队试南门，看看另一条进城的路好不好推进",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「三门都能走时的第一次分路」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "战马解锁和老村长主线",
+          "text": "你在《征途》老区重练角色，已经做到能去完成战马任务的阶段，从清源村老村长开始的主线仍有后续可接。今晚只够先往一边走。先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_BEGIN",
+            "ZHENGTUMAINLINEPC_TASK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把已经走到这一步的主线接下去，再来找王城的战马饲养员",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把战马拿到手，让后面的长路多一个可用方式",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「战马解锁和老村长主线」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC03.V1"
+        },
+        {
+          "scene": "守方王城安全区怎么出发",
+          "text": "国战时你在本国王城安全区康复，王城导游在附近，也能直接走回东门。东门刚有人报需要人手，队友却说另一安全区出去走回东门更熟。你怎么回场？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_WAR",
+            "ZHENGTUMAINLINEPC_TIGER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用王城导游转过去，按熟悉的路回到东门",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "从当前安全区出来，趁这波呼叫还没过去直接往东门回",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「守方王城安全区怎么出发」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC03.ALT1"
+        },
+        {
+          "scene": "家族镖停了一个人没跟上",
+          "text": "你是接了家族镖的副族长，镖车停下，名单里一个名字变灰了。家族频道知道他还能回来，也能从本次名单里移除他让车继续走。你先按哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_FAMILY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "若大家时间都差不多到了，就移除本次参与状态，让车先继续",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "按提醒，请他报一下位置，留点时间一起走",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「家族镖停了一个人没跟上」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "康复后要不要原地接着打",
+          "text": "《征途》一场正式国战中，你在敌国王城重伤。界面同时给出原地和安全康复选项，队里的人还留在附近。你先怎么回场？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_WAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "原地康复，趁队伍还在，把这一轮未完的动作接上",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "安全康复，先报位置和回场的人会合再进王城",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「康复后要不要原地接着打」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC04.V1"
+        },
+        {
+          "scene": "接到家族车遇劫的救援提示",
+          "text": "你今天没接上家族运镖，正处理一件已经开的日常，家族车被打时弹来能点的救援提示。此时自己的日常还能回头继续，你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_FAMILY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把手里的日常办完，按自己的安排回去时再看家族车走到了哪",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "点救援先传过去，问族人现在需要到哪边",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「接到家族车遇劫的救援提示」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC04.ALT1"
+        },
+        {
+          "scene": "先放哪件进主包",
+          "text": "去国战前你打开一键换装，发现计划用的另一套有一件还在仓库；装备不在主包裹，换装不会把它换上。也能先编辑一套只换现有部件的备用。出门前怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_SUIT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回仓库取足原方案要用的装备，照着完整方案进场",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先保存只换现有部件的备用，试试少换一件的搭配可不可用",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「先放哪件进主包」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "龙舟转弯怎么看",
+          "text": "家族龙舟里你是船员，刚才急弯划错了一次。下一次快到转弯，你坐在需要响应的那一排。船长会发号令，你也看得到水道方向。重到同一处你怎么划？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_DRAGON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先认水道转角，再对照船长指令判断上一次哪里看错",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先等船长确认指令，等提示进来练准时机",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「龙舟转弯怎么看」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC05.V1"
+        },
+        {
+          "scene": "换装界面读取现装后怎么存",
+          "text": "你已有一套保存好的《征途》国战装，今天身上穿的是它换了几个部位的版本。一键换装可以读取身上装备，也能按部件手动设置。先用哪种方式试新套？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_SUIT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "读取现装，另存成备用套，保留原本用惯的那一套",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "从原套手动改几个部位，逐件看两套的差异再保存",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「换装界面读取现装后怎么存」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC05.ALT1"
+        },
+        {
+          "scene": "两路正式目标只来得及看一路",
+          "text": "这场是东、南、西三门规则。东门栅栏已破，东门的禁卫队长可以打；另一边南门的队长已经倒下，南门城管所现在能占。两路都有人在喊，你先跟哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_WAR",
+            "ZHENGTUMAINLINEPC_REALWAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "跟南门的人去已经解锁的城管所，帮他们先占下来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "跟东门的人继续打还没倒的禁卫队长",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「两路正式目标只来得及看一路」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "灵魂锁链更换后看哪场",
+          "text": "你动了当前装备的灵魂锁链搭配，还留着旧的一键换装方案。今天能选一次去熟悉的地方练手，也能先穿新套参与熟悉的团队活动。想先怎样试？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_CHAIN",
+            "ZHENGTUMAINLINEPC_SUIT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去惯用的地方分别试两套，先把效果归因到本次换装",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "跟认识的队伍穿新套打一场，看这套换法能不能配合大家",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「灵魂锁链更换后看哪场」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC06.V1"
+        },
+        {
+          "scene": "虎符弹出来时你在哪条路",
+          "text": "《征途》国战开始后国王发了进攻虎符，提示能到敌国白骨洞附近。你原本和一个队友走在去王城的路上，他还没回应是否接虎符。你怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_TIGER",
+            "ZHENGTUMAINLINEPC_WAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在队伍里问清他的去向，两个人确定同一条路再过去",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先接提示传过去，按当前集结点等队伍靠过来",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「虎符弹出来时你在哪条路」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC06.ALT1"
+        },
+        {
+          "scene": "队伍要不要在敌国多做一件事",
+          "text": "组队去了目标国。你已经拿到这次刺探情报，队长提议先留在图里把还可做的太庙任务也跑掉，另一人决定早点返回交任务。你怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_TEAM",
+            "ZHENGTUMAINLINEPC_TEMPLE",
+            "ZHENGTUMAINLINEPC_TASK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和队长留下，把同一次进入目标国的两件事串起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先回国交掉手上的情报，还没做的下一趟再说",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「队伍要不要在敌国多做一件事」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "国务积分的两个入口",
+          "text": "你在《征途》11月20日开的正式新区「楚河汉界」，国务积分赛里的国家车和领主之争都已开放。家族人已经说要帮国家车，领主之争这次也有一队接受补位。你今晚先去哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_SERVER",
+            "ZHENGTUMAINLINEPC_CURRENT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去领主之争，趁有队收人把以前没去过的目标走一次",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "去国车那头和家族会合，在他们要的位置帮一段",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「国务积分的两个入口」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC07.V1"
+        },
+        {
+          "scene": "自己跑镖还是等家族车",
+          "text": "你在王城郑镖头那里能接自己的镖，家族也发了去龙镖头集合的通知。今晚只能跟一趟，自己做可以马上走，家族镖还在确认人数。你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_BEGIN",
+            "ZHENGTUMAINLINEPC_FAMILY",
+            "ZHENGTUMAINLINEPC_CARAV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接自己的镖直接走，把今晚确定的一项做完",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "等家族确定出发，宁愿空一会也跟大家跑同一辆车",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「自己跑镖还是等家族车」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC07.ALT1"
+        },
+        {
+          "scene": "打孔镶嵌与套装凑齐",
+          "text": "《征途》手头有一件已能镶嵌的常用防具，也能把已经有的同套装剩下件从仓库取出来一起试。现在要准备下一场活动，先做哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_GEAR",
+            "ZHENGTUMAINLINEPC_CHAIN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先凑起那一套，试整套效果再定这次把材料放在哪",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先把常穿这件镶好，让眼前装备有确定的提升",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「打孔镶嵌与套装凑齐」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "新手主线和帮会篝火相遇",
+          "text": "今天你在《征途》把新手主线做到王城，还能继续接一段。帮会频道同时发了你已可参加的篝火集合消息，今晚只剩一小会。你先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_BEGIN",
+            "ZHENGTUMAINLINEPC_TASK",
+            "ZHENGTUMAINLINEPC_GROW",
+            "ZHENGTUMAINLINEPC_FIRE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着完成这段已经起头的主线，先记住人物怎么把你带到王城",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "到帮会篝火和认识的人坐一会儿，下次再顺着主线接上",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「新手主线和帮会篝火相遇」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC08.V1"
+        },
+        {
+          "scene": "职业技能与装备键位要先整理哪一边",
+          "text": "你在《征途》正式服换过一套职业技能摆法，也已经有可用的一键换装方案。开打前只来得及认真检查一样。你先处理哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_GEAR",
+            "ZHENGTUMAINLINEPC_SUIT",
+            "ZHENGTUMAINLINEPC_CURRENT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把需要的装备都装进主包、核对两套换装，进场换起来省事",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先把常用职业技能移到出手最顺的位置，进场少按错一次",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「职业技能与装备键位要先整理哪一边」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC08.ALT1"
+        },
+        {
+          "scene": "守大将军王还是回东侧",
+          "text": "国战里你是守方，大将军王附近自己人不少，东侧门却刚报了需要人。你有时间留在最终目标身边，也能回东门找还在组织的人。你怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_REALWAR",
+            "ZHENGTUMAINLINEPC_WAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留在大将军王旁，先把这条最后的防线守好",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "回东门和报点的人会合，帮他把已经到的人组织起来",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「守大将军王还是回东侧」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "回想一键换装做成以后",
+          "text": "想一回你真正用上一键换装的经历。更想保留的是哪种用法？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_SUIT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给熟悉的一套留空几个部位，根据这场反馈临时试配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把国战和日常方案分别命名，后来遇到同类活动马上取用",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想一键换装做成以后」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC09.V1"
+        },
+        {
+          "scene": "回想响应过的国战召集",
+          "text": "你参加过《征途》国战，既试过随虎符到白骨洞附近，也沿原路和队友去过敌国王城。哪一次的回场过程更值得复现？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_WAR",
+            "ZHENGTUMAINLINEPC_TIGER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看到虎符就迅速到了集合位，很快赶上目标节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "和队友一路交流到王城，进场前已经知道各自待哪边",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想响应过的国战召集」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC09.ALT1"
+        },
+        {
+          "scene": "回想龙舟的提示和队伍配合",
+          "text": "你划过家族龙舟，也看过名单里谁准确跟上了船长指令。回想一场发挥不错的，你最愿意再练哪一段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_DRAGON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和常一起划的人重来一次，试出整船怎样更齐地转弯",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "再练一个容易按错的弯，自己更稳定地跟上提示",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想龙舟的提示和队伍配合」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "回想东侧门和最终目标的分工",
+          "text": "在用多城门规则的一场《征途》国战里，你既试过应付门边的推进，也守过大将军王附近。回头看，哪段更像你还想接手的任务？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_WAR",
+            "ZHENGTUMAINLINEPC_REALWAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在门边不断接应返回的队友，把走散的人重新并起来",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "在最终目标一带把选好的位置守完整场，做到交接",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想东侧门和最终目标的分工」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC10.V1"
+        },
+        {
+          "scene": "在两趟家族镖之间回顾",
+          "text": "你实际跟过家族镖，也遇过队伍有人走散、车子停下的情况。哪种经历更让你第二天想继续跟车？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_FAMILY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿途目标清楚，队伍按约好的路线走到最后交镖",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "大家等人回到镖车旁，又一起把下半程跑完",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「在两趟家族镖之间回顾」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC10.ALT1"
+        },
+        {
+          "scene": "回想战马和主线的先后",
+          "text": "你从清源村老村长接过最早的主线，也从已经开放的王城战马饲养员处接过并完成战马任务。回头想那段《征途》开荒，哪件更让你愿意重跑一次？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_BEGIN",
+            "ZHENGTUMAINLINEPC_TASK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把一种新的赶路与作战方式解锁出来，再往下做任务",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "沿人物交待的事一路走过去，连起清源村这段故事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想战马和主线的先后」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "回想只做一件稳定的日常",
+          "text": "那天你在《征途》接任务前看过活跃记录，也曾直接跟家族跑已有安排。下回时间同样短，更想从哪个做起？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_GROW",
+            "ZHENGTUMAINLINEPC_TASK",
+            "ZHENGTUMAINLINEPC_BEGIN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先问家族准备做什么，找大家实际能同走的一段",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先挑能推进当前活跃的已开放任务，一趟交清楚",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想只做一件稳定的日常」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC11.V1"
+        },
+        {
+          "scene": "回想同一套装备的两种调整",
+          "text": "你既按灵魂锁链搭过整套，也曾在旧套里先养一直使用的武器。哪种结果让你更想重复投入下一轮？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_GEAR",
+            "ZHENGTUMAINLINEPC_CHAIN",
+            "ZHENGTUMAINLINEPC_SUIT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "几件装备连起来才表现好的那种整套差别",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "一件常用的武器逐次变好，能看得出每次投入带来的进度",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想同一套装备的两种调整」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC11.ALT1"
+        },
+        {
+          "scene": "两次国家任务为什么留下印象",
+          "text": "你亲自组队做过刺探和太庙搬砖。哪次更让你愿意往队伍频道再约一次？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_TEAM",
+            "ZHENGTUMAINLINEPC_TASK",
+            "ZHENGTUMAINLINEPC_TEMPLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "搬砖时组员互相报位置，临时走散了也能重新会合",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "情报拿到后按计划结伴回国交好，把整趟收干净",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「两次国家任务为什么留下印象」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "ZHENGTUMAINLINEPC12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "回想换装漏放主包的那件装备",
+          "text": "你有次开打前发现保存方案所需的装备不在主包，后来也实际用过留部分部位空的方案。下次准备时更想优先保留哪种做法？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_SUIT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "逐件核实完整方案的装备是否在身上，确认才进场",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "常留一套不用全部更换的备用，允许同一场做几次配装试验",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想换装漏放主包的那件装备」中的实际行动与取舍。",
+          "interpretation_boundary": "实际接触过题中的角色养成、装备、坐骑或交易功能，按角色已经开放的项目回答。",
+          "id": "ZHENGTUMAINLINEPC12.V1"
+        },
+        {
+          "scene": "回想哪种国战出场节奏",
+          "text": "有场《征途》国战，你参与过把王城城门打下来，也在栅栏倒后赶过去跟禁卫队长那段。回到同一场更想做哪段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_WAR",
+            "ZHENGTUMAINLINEPC_REALWAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "想等有效出手的目标出现时进场，及时抓禁卫队长的机会",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "重来时想带着小队从打栅栏起，把门这一环完成",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想哪种国战出场节奏」中的实际行动与取舍。",
+          "interpretation_boundary": "玩过正式服国战或题中指定的国家活动，按当场可见的目标、提示和权限回答。",
+          "id": "ZHENGTUMAINLINEPC12.ALT1"
+        },
+        {
+          "scene": "回想在龙镖头旁等过的人",
+          "text": "在王城，你既接过个人镖，也在龙镖头旁等族员集合过。更愿意保留哪个时间安排？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "ZHENGTUMAINLINEPC_FAMILY",
+            "ZHENGTUMAINLINEPC_BEGIN",
+            "ZHENGTUMAINLINEPC_CARAV"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留一个固定时段在王城碰面，等认识的人齐了再走",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "事情挤的时候先自己跑一趟，下一次提前留够时间给家族镖",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想在龙镖头旁等过的人」中的实际行动与取舍。",
+          "interpretation_boundary": "实际做过正式服的日常任务或组队家族活动，按游戏内开放条件回答。",
+          "id": "ZHENGTUMAINLINEPC12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+72662bd52494"
+}

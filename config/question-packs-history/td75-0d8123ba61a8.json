@@ -1,0 +1,1064 @@
+{
+  "id": "td75",
+  "title": "拆迁",
+  "game_ids": [
+    "steam-1167630"
+  ],
+  "scope": "Steam PC 首作本体战役，纳入同地图沙盒与官方合作替代；部分创作情境限单人。",
+  "status": "private_draft_pending_independent_review",
+  "author_review": "核对开发者说明、玩家任务记录和实玩文章；部分载具位置仅依据搜索摘要，须主审。",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "战役、沙盒与合作",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "8 行动、4 回顾；未包含独立沙盒及模组情境。",
+    "校正主次目标及警报，补做可在本体沙盒或官方合作中体验的具体情境。"
+  ],
+  "slots": [
+    {
+      "id": "TD7501",
+      "number": 1,
+      "variants": [
+        {
+          "id": "TD7501.V1",
+          "scene": "登录设备警报前准备",
+          "text": "李氏化工厂的三台登录设备都已找到，警报还没响。一条路能直达第一台，工厂里也有可开的捷径。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_TASKS",
+            "TD75_MISSIONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接去取离自己近的第一台设备，开始眼下这趟收集",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先把三台设备和逃离车串成一条路线，拆出需要的捷径，再走一趟确认",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7501.ALT1",
+          "scene": "合作经典汽车分工",
+          "text": "合作战役玩到经典汽车，船上的车和卡车上的车都还在，警报未触发。你和同伴可以各去准备一辆。你打算？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_TASKS",
+            "TD75_CLASSIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先跟队友商量各自想处理哪辆，在开动警报前一起试一段交接",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先按船、卡车和出口的距离排分工，把取车、出场和备选路线连起来",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7501.ALT2",
+          "scene": "沙盒厂区的装载机路线",
+          "text": "在李氏化工厂沙盒，你想把装载机从厂区一头开到另一头。路上既有现成通道，也有车能撞开的障碍。你如何准备？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_PC",
+            "TD75_FACTORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已开的通道直接开一趟，看看场上的装载机怎么转弯",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先规划转弯点和出口，开出挡路的墙口，把几个转角接成一条可反复开过的路线",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7502",
+      "number": 2,
+      "variants": [
+        {
+          "id": "TD7502.V1",
+          "scene": "“经典汽车”中，一辆目标车在船上，码头附近有桥；当时船可驾驶。你更想？",
+          "text": "“经典汽车”中，一辆目标车在船上，码头附近有桥；当时船可驾驶。你更想？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_CLASSIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "试着调整船与桥的位置，让车能从船上开向码头",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先去检查留在陆地运输车上的另一辆目标车，再回来处理船上的车",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7502.ALT1",
+          "scene": "“经典汽车”里，一辆目标车在运货卡车上，卡车实际可移动。你会？",
+          "text": "“经典汽车”里，一辆目标车在运货卡车上，卡车实际可移动。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_CLASSIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "尝试把整辆运货车移近逃离点，再处理上面的目标车",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先亲自去处理船上的另一辆目标车，暂时维持运货卡车的位置",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7502.ALT2",
+          "scene": "码头沙盒的过水方式",
+          "text": "西点码头沙盒里，你坐进一艘能开的船。前方可从水上绕到码头另一边，附近的桥也可以下船走过去。你准备？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_PC",
+            "TD75_MISSIONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先往自己没到过的另一边开，想看看这块码头之外还有些什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "给自己设个不从桥上走的限制，试能不能只靠泊位和船把这条路线走通",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7503",
+      "number": 3,
+      "variants": [
+        {
+          "id": "TD7503.V1",
+          "scene": "旧屋第一拆",
+          "text": "在旧建筑问题的院子里，装载机可开，也能用大锤砸到房屋有木头的一侧。没有触发倒计时。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_TASKS",
+            "TD75_PC",
+            "TD75_MISSIONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "上装载机，先用铲斗尝试撞开眼前的房屋边缘",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "给自己定一条只用手里的锤子先卸掉木头支撑的规则，试试还能让屋子倒下多少",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7503.ALT1",
+          "scene": "沙盒锤墙与开车",
+          "text": "在厂区沙盒，锤子够得到通路里的木墙，你也能驾驶附近的车从外侧绕过去。想先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_PC",
+            "TD75_FACTORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用锤子开一块只够自己挤过去的洞，然后试试能不能不用车就穿完这段",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先开车从外侧加速穿过，感受转向和车身撞开边缘碎片的过程",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7503.ALT2",
+          "scene": "李氏化工厂“登录设备”中，你已经用过大锤和喷漆，眼前有可拆的木墙。你会？",
+          "text": "李氏化工厂“登录设备”中，你已经用过大锤和喷漆，眼前有可拆的木墙。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_REVIEW"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按自己已定的路线去第一台设备",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先砸出通路并用喷漆标记，再亲自试跑，检验两项准备能否接起来",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7504",
+      "number": 4,
+      "variants": [
+        {
+          "id": "TD7504.V1",
+          "scene": "你已安排好“登录设备”的收集路线，但上次警报响后在转角卡住。再次尝试前你会？",
+          "text": "你已安排好“登录设备”的收集路线，但上次警报响后在转角卡住。再次尝试前你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_MISSIONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自练习经过那个转角，按每次卡住的位置调整",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先按熟悉路线直接开始这次收集",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7504.ALT1",
+          "scene": "在“经典汽车”中，驶出船上的车时你曾反复卡在船与桥之间。你现在会？",
+          "text": "在“经典汽车”中，驶出船上的车时你曾反复卡在船与桥之间。你现在会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_CLASSIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "练习对准入口与倒车时机，想把这段驾驶练顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先按自己已有把握的办法处理该目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7504.ALT2",
+          "scene": "练习装载机接近墙体",
+          "text": "回到同一张可开装载机的沙盒图，附近有一段能用来试撞的外墙，前一趟你总在转弯时碰偏。你怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一个起点，重复练转弯和把铲斗对正的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先换一面更适合直接撞的墙，享受开过去撞碎材料的过程",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7505",
+      "number": 5,
+      "variants": [
+        {
+          "id": "TD7505.V1",
+          "scene": "取画时控制火警",
+          "text": "西点码头的取画任务里，现场有火，手上的灭火器能喷到，也可以先到另一幅离火较远的画前。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_TASKS",
+            "TD75_MISSIONS",
+            "TD75_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先练一次把灭火器对准火源，想让自己熟悉怎么在警报前把火压下去",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先取眼下能安全拿到的那幅画，继续完成这轮取画",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7505.ALT1",
+          "scene": "在“旧建筑问题”中，你看见房屋支撑被撞开后开始坍塌。你更享受？",
+          "text": "在“旧建筑问题”中，你看见房屋支撑被撞开后开始坍塌。你更享受？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_REVIEW"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先处理剩下支撑旧屋的那部分，把必须拆除的房屋做完",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "继续亲手驾驶装载机撞击，感受墙体破裂和房屋倒塌的连续反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7505.ALT2",
+          "scene": "沙盒木墙的破坏",
+          "text": "在李氏化工厂沙盒有一面可锤开的木墙。右边已有入口，手里的锤子也能砸出另一条路。你怎么穿过去？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_PC",
+            "TD75_FACTORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从已有入口绕过去，先确认里面是什么样子",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "亲手连着挥锤，把挡着的木墙砸开，感受每次击中材料的破碎变化",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7506",
+      "number": 6,
+      "variants": [
+        {
+          "id": "TD7506.V1",
+          "scene": "登录设备准备阶段的第二段路线",
+          "text": "上一回跑登录设备时，在第二台设备到出口之间卡住。你这次已经回到警报前的准备阶段。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_MISSIONS",
+            "TD75_TASKS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在警报前反复试跑第二台到出口，把最容易卡住的转角练顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿已经知道的路径接近第一台，从头再尝试完成收集",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7506.ALT1",
+          "scene": "你在“经典汽车”中曾把目标车停得太远，警报后时间不够。再次准备时你会？",
+          "text": "你在“经典汽车”中曾把目标车停得太远，警报后时间不够。再次准备时你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_CLASSIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "重新摆放那辆实际可移动的车，并试跑车到逃离点的路线",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先按此前已有的布置再次尝试",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7506.ALT2",
+          "scene": "码头沙盒的船只回转",
+          "text": "在西点码头沙盒，你要开能驾驶的船通过一处需要转弯的水道，上次曾卡在内角。下一趟怎么开？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_PC",
+            "TD75_MISSIONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "再从同一处出发，多练几次减速后转向的时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "从水面较宽的一侧重新进入，享受绕出弯后重新提速的操控",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7507",
+      "number": 7,
+      "variants": [
+        {
+          "id": "TD7507.V1",
+          "scene": "在“Art Return”里，你已经找到一幅画，附近另一间码头建筑自己还没进去过。你先？",
+          "text": "在“Art Return”里，你已经找到一幅画，附近另一间码头建筑自己还没进去过。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_MISSIONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拿走眼前已定位的画，再按路去下一幅画",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "在火势和路线实际允许时，先进入陌生建筑看看",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7507.ALT1",
+          "scene": "第一次到李氏化工厂拿电脑时，院里有台自己还没用过的小挖掘机。你先？",
+          "text": "第一次到李氏化工厂拿电脑时，院里有台自己还没用过的小挖掘机。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FACTORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续在厂房里找还需要拿走的电脑",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "如果现场挖掘机可用，就连续驾驶并摆动挖臂，体验亲手操作的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7507.ALT2",
+          "scene": "厂区沙盒没看过的建筑",
+          "text": "李氏化工厂沙盒的主工厂还在，车辆能开。你也看到一座此前没进去的建筑，当前可以进去。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_PC",
+            "TD75_FACTORY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去还没进去的那座建筑，看看厂区另一头的房间怎样连接",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先开附近的小挖掘机，在空地试转和动挖臂，感受车的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7508",
+      "number": 8,
+      "variants": [
+        {
+          "id": "TD7508.V1",
+          "scene": "“经典汽车”的一件文件在建筑里，另两辆目标车分布在码头。警报前你会先？",
+          "text": "经典汽车里，一份可选文件在建筑里，两辆必做的目标车分布在码头。警报前你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_CLASSIC",
+            "TD75_TASKS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "打通文件房间到车的位置，试着让跑步和驾驶连续衔接",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先去第一辆目标车旁，确认把它开到交付处要走的直线路径",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7508.ALT1",
+          "scene": "李氏化工厂“登录设备”里，你已经看到目标与出口相距较远。警报前你会？",
+          "text": "李氏化工厂“登录设备”里，你已经看到目标与出口相距较远。警报前你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_MISSIONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "实地整理设备收集顺序、拆出通道并试跑整条路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先按自己的既定顺序开始收集",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7508.ALT2",
+          "scene": "沙盒创作和原样试撞",
+          "text": "单人沙盒里，现有一段可拆除的墙，创作菜单也已经能用。你这次也想看车辆怎么撞过同一位置。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_CREAT",
+            "TD75_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用创作工具改成自己想要的轮廓，准备看车穿过我设计的墙面是什么样",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先开车试撞原来的墙，看眼下这个场地的物件怎么反应",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7509",
+      "number": 9,
+      "variants": [
+        {
+          "id": "TD7509.V1",
+          "scene": "回想第一次拆“旧建筑问题”的房屋，现场有装载机和挖掘机。当时你怎样投入？",
+          "text": "回想第一次拆“旧建筑问题”的房屋，现场有装载机和挖掘机。当时你怎样投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_REVIEW"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用自己已选好的设备完成拆除",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "分别操作两台设备，比较它们拆墙和处理房屋的效果",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7509.ALT1",
+          "scene": "回想“经典汽车”中，你曾把船靠近桥，使船上的目标车可以开出。当时你为什么这样尝试？",
+          "text": "回想“经典汽车”中，你曾把船靠近桥，使船上的目标车可以开出。当时你为什么这样尝试？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_CLASSIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按自己已有方案处理另一目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "想试试利用船与桥的相对位置，做出一条新通路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7509.ALT2",
+          "scene": "在创作模式保存可以重用的形状",
+          "text": "回想你在单人沙盒切过创作模式，完成一座物件且试过保存或再放置。你更愿意回到这里做什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_CREAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把能重用的部件按用途存好，下次载入时把几样部件接成可以反复测试的场景",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "改体块和色彩比例，把这个可再放置的形状做得更接近自己想要的外观",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7510",
+      "number": 10,
+      "variants": [
+        {
+          "id": "TD7510.V1",
+          "scene": "回想你在“登录设备”警报后，曾在转角卡住、时间不够。下一次准备时你怎样做？",
+          "text": "回想你在“登录设备”警报后，曾在转角卡住、时间不够。下一次准备时你怎样做？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_MISSIONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复试跑那个转角，按卡住的位置调整",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先按自己已有的路线重新尝试",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7510.ALT1",
+          "scene": "回想你把“经典汽车”中的船停到桥边，却在驾驶目标车上岸时卡住。当时你如何接着做？",
+          "text": "回想你把“经典汽车”中的船停到桥边，却在驾驶目标车上岸时卡住。当时你如何接着做？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_CLASSIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "调整船位并练习对准开出，想把这段驾驶练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先按自己有把握的方案处理其他目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7510.ALT2",
+          "scene": "重复开机械拆除准备",
+          "text": "回想你在一张本体沙盒重复开过装载机或挖掘机，第一次没能对准自己想动的那块墙。哪个过程让你更愿意再开一遍？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_FAQ",
+            "TD75_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想从同一个方向重来，练到能让车头和挖臂总是落在同一处",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我更享受亲自推开已经松动的部分，看到碎块跟挖臂一起落下",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7511",
+      "number": 11,
+      "variants": [
+        {
+          "id": "TD7511.V1",
+          "scene": "回想西点码头的“经典汽车”，警报还没响时你面对分散的车辆与文件。当时先做了什么？",
+          "text": "回想西点码头的“经典汽车”，警报还没响时你面对分散的车辆与文件。当时先做了什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_CLASSIC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我主要记得先把两辆必做的车送到交付点，再看能否拿到可选文件",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "调整目标顺序并打通路，亲自试跑一整圈",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7511.ALT1",
+          "scene": "回想李氏化工厂的“登录设备”，你已找到三台设备，警报还没触发。当时你怎样准备？",
+          "text": "回想李氏化工厂的“登录设备”，你已找到三台设备，警报还没触发。当时你怎样准备？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_MISSIONS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按既定顺序直接开始收集",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "把三台设备到逃离点的路线连起来，并清理障碍",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7511.ALT2",
+          "scene": "沙盒与同伴尝试多段破坏",
+          "text": "回想你在合作沙盒和同伴一起改过一条车能走的破坏路线，至少有人开车试过。哪部分是你想再玩的原因？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_PC",
+            "TD75_FAQ"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我喜欢两个人一边试各自想到的入口，一边接住对方临时想出的主意",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "我更喜欢把各段切口、车位和最后一次试跑连起来，看它们能不能一直跑通",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    },
+    {
+      "id": "TD7512",
+      "number": 12,
+      "variants": [
+        {
+          "id": "TD7512.V1",
+          "scene": "回想“旧建筑问题”中，你开装载机撞开墙体、房屋逐渐坍塌的经历。当时哪种更接近你的感受？",
+          "text": "回想“旧建筑问题”中，你开装载机撞开墙体、房屋逐渐坍塌的经历。当时哪种更接近你的感受？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_REVIEW"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "享受自己连续驾驶、撞击和建筑破裂的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "主要想按已定办法完成拆屋目标",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "用该作破坏地形、载具与限时逃离中明确的个人动机计分。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7512.ALT1",
+          "scene": "沙盒创作自定材料玩法",
+          "text": "想起你单人开过创作模式，并在同一图尝试过自己定下的建造或破坏限制。哪种感受更愿意再试？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_PC",
+            "TD75_FAQ",
+            "TD75_CREAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我喜欢规定这一轮只用一类材料建可撞的障碍，再让车过一次验证自己的规则",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "我更记得车冲过去以后自建物件四散的过程，想再亲手撞一次",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        },
+        {
+          "id": "TD7512.ALT2",
+          "scene": "重跑画作火警任务",
+          "text": "回想西点码头画作任务里，你已经实际遇到过火势并试过不同取画顺序。哪种体验更让你愿意重跑？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "TD75_TASKS",
+            "TD75_MISSIONS",
+            "TD75_PC"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我会练着辨认从哪一处先灭火，试到自己更熟悉如何在警报前完成那段动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我会把四幅画、发现火点后可走的路线和逃离位置一起安排，再试这一趟能否串起来",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "区分题中可行的实际操作、目标与自述的做法。",
+          "interpretation_boundary": "仅 PC 本体战役；只在玩家实际到达任务、工具与载具可用时回答。任务警报、火灾和时限以当前任务为准；未体验可换题，有限替代不能保证人人适用。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+0d8123ba61a8"
+}

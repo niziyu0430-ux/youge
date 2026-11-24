@@ -1,0 +1,1016 @@
+{
+  "id": "kovaakspcresumea",
+  "title": "KovaaK's（动作）",
+  "game_ids": [
+    "steam-824270"
+  ],
+  "scope": "KovaaK's Steam Windows App 824270，公开构建26627970。采用已实装的在线目录与场景详情、Steam收藏、历史记录和结果页、官方只读排行榜目录以及菜单设置。界面词按当前中英文版本实际所见。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam PC · 目录、记录与设置",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "KOVAAKSPCRESUMEA01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "在线目录检索完整原名",
+          "text": "你从自己的笔记里找到一个已知条目的完整名字。KovaaK's 的 Online Scenarios 仍有此前的搜索结果。你想核对这个名字时先怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_PATCH12",
+            "KOVAAKSPCRESUMEA_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先留住当前知道的结果条目，再清掉旧关键词完成查找。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "直接按完整名字重新搜索，让返回的记录和笔记逐字对上。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「在线目录检索完整原名」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA01.V1"
+        },
+        {
+          "scene": "在线场景正在刷新时保留查找结果",
+          "text": "你手动刷新 Online Scenarios 时，列表已经显示了一项想核对的条目。你只想查这一项，接下来怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_PATCH12"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先结束当前刷新，使用已经找到的结果继续核对。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让刷新继续，顺便看看列表中是否还有容易认错的同名条目。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「在线场景正在刷新时保留查找结果」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA01.ALT1"
+        },
+        {
+          "scene": "旧列表在线目录入口与外部工坊",
+          "text": "自己以前记在收藏夹里的一张场景卡改过标题，你在客户端和Steam工坊都能打开该作品的目录。你先从哪里找？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_PATCH12",
+            "KOVAAKSPCRESUMEA_WORK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在 Online Scenarios 输入你已看到的新标题，核对它和旧记录是否是同一条。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先从对得上的工坊收藏继续找，确认改名后页面还是同一个。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「旧列表在线目录入口与外部工坊」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "工坊两个同名条目先看作者",
+          "text": "在 KovaaK's 工坊查到两条标题近似的作品，作者不同，详情页也都有说明。你怎么先区分它们？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_WORK",
+            "KOVAAKSPCRESUMEA_FAV",
+            "KOVAAKSPCRESUMEA_DETAILS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先记作者名，让两条在自己的收藏记录里不会混。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先读各自写的说明，想看它们把这个作品怎么介绍给玩家。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「工坊两个同名条目先看作者」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA02.V1"
+        },
+        {
+          "scene": "线上已有图与说明的当前版本",
+          "text": "一个条目的在线详情现在有新缩略图，也显示了你原来没看到的说明。没有打算打开该场景，你先核对哪项变动？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_PATCH12",
+            "KOVAAKSPCRESUMEA_DETAILS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回看标题和说明内容，想把本机记的版本和线上页面分清。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先对照图的构图与旧图，想知道哪张才是这次更新出的标识。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「线上已有图与说明的当前版本」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA02.ALT1"
+        },
+        {
+          "scene": "场景详情先读标题说明还是缩略图",
+          "text": "你打开一条已经见过的 Scenario Details，说明文字与缩略图在同一页。只想确认是不是之前看过的那条，你先核哪处？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_DETAILS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看说明和标题，把自己记得的条目文字对一遍。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先看缩略图，用我记得的画面认这张卡。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「场景详情先读标题说明还是缩略图」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "收藏中和旧笔记重复的条目",
+          "text": "你找回一个已经收藏的 KovaaK's 工坊条目，自己的笔记里也已存过同一页面。你现在怎么处理这一份？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_WORK",
+            "KOVAAKSPCRESUMEA_FAV",
+            "KOVAAKSPCRESUMEA_FAVITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在页面上取消这笔重复收藏，留下自己的笔记入口。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先保留工坊收藏，方便下次依旧从熟悉的列表找回。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「收藏中和旧笔记重复的条目」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA03.V1"
+        },
+        {
+          "scene": "Steam工坊账户的收藏还是当前页面浏览",
+          "text": "你在 KovaaK's 的 Steam 工坊打开一个确实有收藏按钮的条目。目前只想下次能找到它，不安排当场使用。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_WORK",
+            "KOVAAKSPCRESUMEA_FAV",
+            "KOVAAKSPCRESUMEA_FAVITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "加进自己的 Steam 工坊收藏，方便以后回到同一个详情页。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先把这条说明读完，确认自己记得的是为什么想留这张卡。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「Steam工坊账户的收藏还是当前页面浏览」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA03.ALT1"
+        },
+        {
+          "scene": "已收藏页面和作者主页",
+          "text": "你从 KovaaK's 工坊收藏找回一条早就存过的卡。官方目录也能打开这位作者的个人页，而且你当前已登入。你先查哪儿？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_WORK",
+            "KOVAAKSPCRESUMEA_FAV",
+            "KOVAAKSPCRESUMEA_PROFILE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看作者个人页，想确认这位创作者是否还有公开资料。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先在收藏里核对这是我原先保存的那一张。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「已收藏页面和作者主页」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "任务栏式下载提示和仍可浏览的列表",
+          "text": "KovaaK's 在线目录下角已经出现「正在下载」的通知，列表仍可以看。等待这一项时，你更愿意先留意什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_PATCH12"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留心下载提示，想看同一个项目从检查到完成怎样更新。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先浏览已经显示的其他目录标题，等提示更新了再回来看。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「任务栏式下载提示和仍可浏览的列表」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA04.V1"
+        },
+        {
+          "scene": "发现、检查更新、下载的多个提醒",
+          "text": "你刚打开的在线目录左下角有堆在一起的状态提示，也有刚才查到的标题列表。你只想弄清这一轮什么卡片已显示，会先看什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_PATCH12"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在仍可见的列表里核对自己已经找到的那条标题。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先按状态看哪条在检查更新，把它和下载中的条目分开。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「发现、检查更新、下载的多个提醒」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA04.ALT1"
+        },
+        {
+          "scene": "一次完成更新前后如何读通知",
+          "text": "你回到一张见过的卡，界面告诉你条目有变化，在线详情现在也已能打开。你先确认哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_PATCH12",
+            "KOVAAKSPCRESUMEA_DETAILS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看更新通知，先把“又下载了一份”和“发现版本有变化”分清。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "看卡片说明，想从界面文字理解作者现在怎样描述这张卡。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「一次完成更新前后如何读通知」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "本机条目的同步状态和旧名称",
+          "text": "回到 Local Scenarios，你以前提交过的一张条目现在显示上传同步状态。手上还记着这张卡的旧文字标题，你先核对什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_FAQ"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核标题文字，看这是否还是自己早先清单里的那一张。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先看本机条目的同步提示，知道当前显示它属于什么状态。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「本机条目的同步状态和旧名称」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA05.V1"
+        },
+        {
+          "scene": "自己的本地列表先看名字或继续查工坊",
+          "text": "KovaaK's 目前已经有一个你早些时候建立的本地列表，里面记录着一张想找回的卡。在线工坊还可以按作品名搜索，你先看哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_FAQ",
+            "KOVAAKSPCRESUMEA_WORK",
+            "KOVAAKSPCRESUMEA_DETAILS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开原来的本地列表，找出自己当时保留的那条标题。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先在工坊搜索手头记得的名字，看看它现在在什么页面里。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「自己的本地列表先看名字或继续查工坊」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA05.ALT1"
+        },
+        {
+          "scene": "同一名称的Local Scenarios与Online Scenarios",
+          "text": "KovaaK's 的 Local Scenarios 和 Online Scenarios 各显示一条近似名称。你只想整理已有的记录，先开哪张？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_FAQ",
+            "KOVAAKSPCRESUMEA_DETAILS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看在线详情，把名字相近的两条通过能看到的信息对开。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先开本机条目，想确认自己原来记录的是哪一版名称。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「同一名称的Local Scenarios与Online Scenarios」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "记住上次选项或固定打开最近一条",
+          "text": "结果页使用过几次后，你发现 Misc 允许「记住上次」，也可以固定每次先开最近结果。你更愿意保留哪种习惯？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_RESULT",
+            "KOVAAKSPCRESUMEA_NEWS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "记住上次，想回到自己刚刚停住的页面。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "固定开最近结果，希望每次入口都在同一位置。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「记住上次选项或固定打开最近一条」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA06.V1"
+        },
+        {
+          "scene": "完成后先看本次结果或分数历史",
+          "text": "你的 KovaaK's 结果屏已经显示刚结束的虚拟场景成绩，最近结果和 Score History 都能点。要回看记录，你先开哪页？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_RESULT",
+            "KOVAAKSPCRESUMEA_STATS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看分数历史，确认这次已经出现在以前的记录中。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先看最近一条，把刚结束的记录单独读清。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「完成后先看本次结果或分数历史」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA06.ALT1"
+        },
+        {
+          "scene": "Misc默认结果页的两种偏好",
+          "text": "你的设置里已有 Default Results Tab，本次结果和 Score History 都用过。下次打开结果屏想先看到哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_RESULT",
+            "KOVAAKSPCRESUMEA_NEWS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "设成本次结果，想直接看到刚写入的一条。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "设成分数历史，想把同一类已有纪录放在一起读。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「Misc默认结果页的两种偏好」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "结果或暂停菜单的STATS入口",
+          "text": "你在结果页看见 STATS，之前也在暂停栏用过同一入口。想回顾自己的记录，这次先用哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_STATS",
+            "KOVAAKSPCRESUMEA_RESULT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回到熟悉的暂停栏，再从那里打开 STATS。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先从结果页进 STATS，想沿刚刚显示的成绩接着看。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「结果或暂停菜单的STATS入口」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA07.V1"
+        },
+        {
+          "scene": "总览还是某次条目的详细图",
+          "text": "KovaaK's 的 STATS 里已有你的历史记录，Overview 和已完成条目的详情都可以打开。只够先看一页，你选哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_STATS",
+            "KOVAAKSPCRESUMEA_RESULT",
+            "KOVAAKSPCRESUMEA_NEWS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先翻 Overview，想知道自己的记录怎样汇到总览里。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先打开那条之前读过的详情，把这一份记录单独看清楚。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「总览还是某次条目的详细图」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA07.ALT1"
+        },
+        {
+          "scene": "结果详情里沿用筛选或切回其他已见项",
+          "text": "你在 Entry Details 看到图下的筛选仍保留着上次的选择。今天只想重读一条自己已有的数据，你会怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_RESULT",
+            "KOVAAKSPCRESUMEA_STATS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从图下改选另一个自己已用过的筛选，让这一页显示我想看的那栏。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "沿用上次留下的筛选，省得每次打开图都重新点。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「结果详情里沿用筛选或切回其他已见项」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "官网全球榜的玩家与创作者两类",
+          "text": "你打开 KovaaK's 官网公开榜单，玩家和创作者两个类别均能看。只想先读其中一类名单，你先开哪种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_LEAD",
+            "KOVAAKSPCRESUMEA_LEADNOTES",
+            "KOVAAKSPCRESUMEA_PROFILE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看玩家榜，想知道玩家资料在榜单上如何显示。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先看创作者榜，想把自己见过的发布者名字认一遍。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「官网全球榜的玩家与创作者两类」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA08.V1"
+        },
+        {
+          "scene": "从官网榜单先返回个人记录还是留在页面",
+          "text": "你已在 KovaaK's 官网打开公开榜，应用也有自己刚存的 STATS。核对今天的一段记录，你先留在哪个入口？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_LEAD",
+            "KOVAAKSPCRESUMEA_LEADNOTES",
+            "KOVAAKSPCRESUMEA_STATS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回客户端 STATS，只看自己已有的那条记录。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先留在公开榜，把头像和榜单上自己熟悉的名字认一遍。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「从官网榜单先返回个人记录还是留在页面」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA08.ALT1"
+        },
+        {
+          "scene": "刚完成的个人结果与榜单",
+          "text": "一个已完成的虚拟场景已经留下个人结果，也确实能看到该条目的排行记录。你只想先核一个地方，会打开哪一边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_RESULT",
+            "KOVAAKSPCRESUMEA_LEAD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看自己的结果，把刚刚新增的记录认清。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先看排行榜，想知道公开条目按怎样的顺序显示。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「刚完成的个人结果与榜单」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "官网档案或客户端入口先对照一处",
+          "text": "你已经在官网打开一份以前留下的 Benchmark 记录，客户端 STATS 也有能看的成绩。给自己的记录做备注时先核对哪处？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_BENCH",
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_STATS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核客户端已显示的数据，想让笔记里的本机记录来源清楚。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核网页上该档案原来的完整名称，想让旧笔记能定位到同一张。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「官网档案或客户端入口先对照一处」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA09.V1"
+        },
+        {
+          "scene": "官网Benchmark Tracker先开分数还是排名",
+          "text": "官方 Benchmark Tracker 已显示你的一个既有档案，该页有已有分数与排名。今天只是查一项记录，你先读哪里？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_BENCH",
+            "KOVAAKSPCRESUMEA_NEWS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核已保存的分数，把这个公开档案和自己的记录对一下。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先看排行位置，想知道同一份档案在这个页面怎样列出。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「官网Benchmark Tracker先开分数还是排名」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA09.ALT1"
+        },
+        {
+          "scene": "既有档案标题带赛季时核历史归属",
+          "text": "官方 Benchmark Tracker 当前确实列出你见过的一份带赛季字样的旧档，也有另一份近期查看过的档案。你只先翻一份，你选哪个？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_BENCH",
+            "KOVAAKSPCRESUMEA_NEWS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看近期用过的一份，确认网站现在显示的是哪几条记录。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先翻那个带赛季名的旧档，把旧结果实际归属哪一份档案看准确。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「既有档案标题带赛季时核历史归属」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "中文本地菜单或留英文对照说明",
+          "text": "KovaaK's 的简体中文菜单已经可用，手边收藏的旧说明用的是英文 STATS 和 Score History。下次想读记录时，你先用哪个界面习惯？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_STORE",
+            "KOVAAKSPCRESUMEA_LOCALE",
+            "KOVAAKSPCRESUMEA_NEWS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用简体中文读设置和结果入口，方便马上明白每个标签。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "保留已经用过的英文标签，让自己查旧说明时可以逐项对照。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「中文本地菜单或留英文对照说明」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA10.V1"
+        },
+        {
+          "scene": "双屏上选主屏还是旁边的记录屏",
+          "text": "你有两台显示器，KovaaK's 设置的 Display/Monitor 项也实际列出这两台。今天只用它查看已有结果，你先把应用窗口放在哪块屏？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_STATS",
+            "KOVAAKSPCRESUMEA_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先选现在经常看的主屏，照原来阅读记录的距离和方向看。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先选旁边显示器，主屏留下自己正在用的其他窗口。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「双屏上选主屏还是旁边的记录屏」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA10.ALT1"
+        },
+        {
+          "scene": "菜单颜色保留自己的旧设置或换一种",
+          "text": "你在设置里点开独立的 UI Colors 标签，想让更常用的菜单文字容易读。只改一处时，你先做哪件事？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_UIC",
+            "KOVAAKSPCRESUMEA_LOCALE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在菜单颜色里试一套自己看得舒服的配色，再确认文字有没有变化。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "保留已经看惯的颜色，先照现在的菜单布局读完记录。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「菜单颜色保留自己的旧设置或换一种」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "手中已有朋友给的链接先核对还是回收藏",
+          "text": "你手里已有一条朋友自愿给的 KovaaK's 条目链接，自己也在工坊存过一张名字相似的卡。准备确认它们是不是同一张，你先查哪里？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_URI",
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_PATCH12",
+            "KOVAAKSPCRESUMEA_WORK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从自己账号的工坊收藏找到原条目，核对我早先留过的记录。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先看朋友提供的条目标题和作者，把他分享的是哪张弄清楚。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「手中已有朋友给的链接先核对还是回收藏」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA11.V1"
+        },
+        {
+          "scene": "自己的结果与场景链接的不同记录",
+          "text": "你已经看过一张卡的资料页，刚结束的个人记录也已经存入结果历史。准备留一个以后能查到的入口，你打算保存什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_URI",
+            "KOVAAKSPCRESUMEA_RESULT",
+            "KOVAAKSPCRESUMEA_DETAILS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先留场景本身的链接，让自己以后能认回原来的公开卡片。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先把结果页显示的分数留到自己笔记，方便以后想起是哪次记录。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「自己的结果与场景链接的不同记录」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA11.ALT1"
+        },
+        {
+          "scene": "保存纯链接还是先抄标题文字",
+          "text": "KovaaK's 一个你已用过的场景菜单里显示了复制 Steam URI 的按钮，条目标题也能读到。想记下这张卡时，你先留哪种信息？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_URI",
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_DETAILS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把看的完整标题写下来，方便在现有目录里用名字查回。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先复制现有链接到自己的笔记，方便再次对到同一张卡。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「保存纯链接还是先抄标题文字」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "KOVAAKSPCRESUMEA12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "自己已关注作者还是先搜目录标题",
+          "text": "你在官方站已关注过一位创作者，也在本机看过同一件作品。现在想翻回那张条目，现有关注入口和搜索都能用，你先选哪边？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_PROFILE",
+            "KOVAAKSPCRESUMEA_DETAILS",
+            "KOVAAKSPCRESUMEA_WORK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从关注的作者个人页找，想按我已认识的人翻回作品。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先搜记得的完整标题，想核实这一条实际出现的名称。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「自己已关注作者还是先搜目录标题」中的实际行动与取舍。",
+          "interpretation_boundary": "按实际已有的本机文件、界面或公开记录作答。",
+          "id": "KOVAAKSPCRESUMEA12.V1"
+        },
+        {
+          "scene": "Misc里的Discord状态显示",
+          "text": "Misc 设置里你看到 Discord Rich Presence，也看得到 Default Results Tab。今天只想让以后打开应用的体验顺手一些，先设置哪项？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_NEWS",
+            "KOVAAKSPCRESUMEA_RESULT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先定结果屏默认从哪页打开，想让本机记录入口一致。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先决定要不要让 Discord 显示 KovaaK's 正在运行，再确认开关。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「Misc里的Discord状态显示」中的实际行动与取舍。",
+          "interpretation_boundary": "只按已经打开过的页面和现有数据显示作答。",
+          "id": "KOVAAKSPCRESUMEA12.ALT1"
+        },
+        {
+          "scene": "触发后的默认结果页或官网资料显示",
+          "text": "你已经用过本机结果页，也有官方站账号资料，账号现在能进自己的显示设置。今晚先整理哪一个地方？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "KOVAAKSPCRESUMEA_RESULT",
+            "KOVAAKSPCRESUMEA_PROFILE",
+            "KOVAAKSPCRESUMEA_LEADNOTES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先整理本机默认页，让下次一开结果就能找到自己惯看的内容。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先看官方个人资料现在显示的名字与图标，确认外观像自己想保留的样子。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「触发后的默认结果页或官网资料显示」中的实际行动与取舍。",
+          "interpretation_boundary": "题中列出的记录、标签或设备在自己的电脑上确实可用时作答。",
+          "id": "KOVAAKSPCRESUMEA12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+7b4166459a8e"
+}

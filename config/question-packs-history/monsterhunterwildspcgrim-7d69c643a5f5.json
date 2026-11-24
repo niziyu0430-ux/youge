@@ -1,0 +1,1109 @@
+{
+  "id": "monsterhunterwildspcgrim",
+  "title": "怪物猎人 荒野",
+  "game_ids": [
+    "steam-2246340"
+  ],
+  "scope": "Steam 2246340 Capcom《怪物猎人 荒野》Windows 本篇，初期下位狩猎、上位特殊环境、鹭鹰龙、装备及救难支援。",
+  "status": "private_candidate_pending_independent_review",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "怪物猎人 荒野",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "每个题位至少一条下位可用且不需真人，实际与真人或上位过程另有明示。",
+    "章节指定讨伐与可以捕获的普通狩猎分别写明；武器、副槽、可操纵环境和 NPC 支援按题设真实可见为准。",
+    "仅本篇 Windows，避开付费扩展、限时活动与历代专有动作。"
+  ],
+  "slots": [
+    {
+      "id": "MHWILDSGR01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "MHWILDSGR01.V1",
+          "scene": "天堑沙原追炎尾龙",
+          "text": "下位「狩猎炎尾龙」进行中，炎尾龙刚离开你打过的区域。天堑沙原的地图已标上它，鹭鹰龙可以自动带路。你看见一条自己能骑过去的侧路。你选哪条？",
+          "options": [
+            {
+              "id": "A",
+              "label": "改手动骑进侧路，边看地形边保持目标标记，再从能进场的一侧靠过去。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "让鹭鹰龙按标记追过去，尽快看看炎尾龙在新区哪里停。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_START",
+            "MHWILDSGR_QUEST",
+            "MHWILDSGR_PC01"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "出发先沿哪条线",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR01.V2",
+          "scene": "矿石洞窟还是地面直追",
+          "text": "天堑沙原 4 号区域矿石洞窟的简易营地已经开放可用。任务还没接，你想找一只地图上看得到的缠蛙，同时手头缺矿。你先去哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先传矿石洞窟营地，从附近走一圈找可采矿点，再追缠蛙。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先把缠蛙标出来，按它当前位置骑鹭鹰龙去接近。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_CAMP",
+            "MHWILDSGR_START",
+            "MHWILDSGR_OPT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "出发先沿哪条线",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR01.V3",
+          "scene": "投射器抓楔虫还是骑原路",
+          "text": "下位自由狩猎辟兽，目标已标记。你在一处有落差的边上，钩索投射器实际出现可抓楔虫的提示，另一条更长的地面路线鹭鹰龙也能走。你先怎么过去？",
+          "options": [
+            {
+              "id": "A",
+              "label": "让鹭鹰龙沿已经确认的地面通路把自己带至目标附近。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "用钩索投射器挂上楔虫荡过去，落地再看辟兽的位置。",
+              "signal": "play_inventor"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_START",
+            "MHWILDSGR_OPT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "出发先沿哪条线",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "MHWILDSGR02.V1",
+          "scene": "缠蛙前肢亮伤口",
+          "text": "第一次讨伐缠蛙时，你手里的近战武器能使出集中弱点攻击。集中模式已经看见靠你这侧的前肢有伤口，缠蛙刚停下，你也有位置改走侧面。你怎么抓这次空当？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先瞄亮着的伤口放集中弱点攻击，看看能不能在这次停顿打破。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先用熟悉的普通连段从侧面起手，练缠蛙再次转身时怎么退。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_START",
+            "MHWILDSGR_BASIC",
+            "MHWILDSGR_PC01"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "看见伤口时选什么攻击",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR02.V2",
+          "scene": "炎尾龙尾端还是伤口",
+          "text": "下位炎尾龙暂时收住动作。你用可切尾的近战武器，尾巴还没断，另一侧已有你在集中模式能打到的伤口。你先把哪一处当目标？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先对准看得见的伤口放集中弱点攻击，用好眼前较短的停顿。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先沿尾侧砍尾端，争取把这一战的尾部素材机会留出来。",
+              "signal": "collector"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_PC01",
+            "MHWILDSGR_WOUND",
+            "MHWILDSGR_DEV"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "看见伤口时选什么攻击",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR02.V3",
+          "scene": "支援者已经进场的伤口",
+          "text": "你和一位真人同伴正在下位自由狩猎辟兽。它才停下，集中模式看到的伤口目前在对方近处；你能绕过去出集中弱点攻击，也能在它另一侧出普通攻击。你怎么接？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先在另一侧继续打，把临近伤口的机会留给同伴。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "现在过去对准伤口抓这一击，破口后再换位置。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_OPT",
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_WOUND"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "看见伤口时选什么攻击",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "MHWILDSGR03.V1",
+          "scene": "鹭鹰龙上磨刀还是补血",
+          "text": "下位炎尾龙刚转身跑开，你的近战武器掉了锋利度，自己也少了不少生命。鹭鹰龙能叫来，砥石和回复药都在身上。坐上以后你先做哪步？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先在跑动时磨刀，等刚追出安全距离再补血。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先吃回复药，把血量稳住，再找时间磨刀。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_PC01",
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_START"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "攻势来时何时换装或恢复",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR03.V2",
+          "scene": "用副武器追沙海龙的空当",
+          "text": "狩猎中的沙海龙刚钻走。你已经在鹭鹰龙上，主武器是单手剑，副武器槽确实装了轻弩，常用弹药也有。它已在前面一片空地露头。你下马前想怎么配？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在坐骑上切轻弩，想试从它不易贴近的距离打下一段。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "留单手剑继续，想练在沙海龙下一次探出时贴近打完再撤。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_START",
+            "MHWILDSGR_DUNE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "攻势来时何时换装或恢复",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR03.V3",
+          "scene": "近战收刀之后的两条撤出路",
+          "text": "下位沙海龙退到空地边，你现在已收刀，下一波还没贴过来。鹭鹰龙到身边了，旁边有能遮挡的岩壁，你也有回复药。你先用哪种撤法？",
+          "options": [
+            {
+              "id": "A",
+              "label": "自己从岩壁边退到遮挡后停下来喝药，继续保留步行的站位。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "跳上坐骑沿空地拉开，保持移动再喝回复药。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_START",
+            "MHWILDSGR_DUNE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "攻势来时何时换装或恢复",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "MHWILDSGR04.V1",
+          "scene": "辟兽群靠近时先分还是先看",
+          "text": "天堑沙原的下位头领辟兽任务里，附近另有几只辟兽同行。你背包里有已制好的可驱散群体的投射器大异臭弹，已经装在投射器上，也有一侧高地能绕开贴近。你先怎么打这一群？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用可驱散群体的投射弹试着分开它们，再跟住头领。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先从高地侧面移动，找能只接近头领的路线，再决定是否用弹。",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_QUEST",
+            "MHWILDSGR_START",
+            "MHWILDSGR_PCCN",
+            "MHWILDSGR_PACK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "先用什么打开交战局面",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR04.V2",
+          "scene": "落石标记下的一轮",
+          "text": "在普通下位狩猎，怪物暂时待在地图显示可触发的落石范围内。你抬起投射器已经有机关互动提示，挪一小段就能在安全位置触发落石；你也能直接接近它一侧。先选什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先从侧面动手，等怪物又进入落石能打到的范围再用机关。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "用投射器拉落石，争取借地形打出下一次进攻窗口。",
+              "signal": "play_inventor"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_START",
+            "MHWILDSGR_DANGER",
+            "MHWILDSGR_WOUND"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "先用什么打开交战局面",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR04.V3",
+          "scene": "冻峰龙撑起身时的冰块",
+          "text": "本体上位冻峰龙战，它在有巨型冰块的区域准备大范围攻击。你已看到一块能拉下的冰，上一个猎人拉下的另一个冰块也还完整，两边均来得及到。你先从哪儿找掩护？",
+          "options": [
+            {
+              "id": "A",
+              "label": "用钩索投射器拉下近处新的冰块，绕到背对冻峰龙的一侧。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "直接跑向另一块已落下的冰，站到背对冻峰龙的一侧等爆发过去。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_ICE",
+            "MHWILDSGR_DANGER",
+            "MHWILDSGR_PCCN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "先用什么打开交战局面",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "MHWILDSGR05.V1",
+          "scene": "下位缠蛙收捕或继续战斗",
+          "text": "你接的是下位缠蛙自由「狩猎」任务，目标已经虚弱，身上有能用的陷阱和捕获用麻醉球。你能安全放陷阱，也可继续攻击。你怎么收尾？",
+          "options": [
+            {
+              "id": "A",
+              "label": "继续用这次练的新出手时机与它战斗，打到讨伐完成。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先让它进陷阱，再用麻醉球捕获，尽早结束。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_OPT",
+            "MHWILDSGR_CAPTURE",
+            "MHWILDSGR_TRAPS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "何时收尾一场狩猎",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR05.V2",
+          "scene": "断尾后再接捕获还是先取素材",
+          "text": "你在下位沙海龙的自由狩猎，尾巴已断落，目标已虚弱，陷阱和麻醉球都有。掉在不远处的尾巴当前还可剥取，怪物也在你能放陷阱的范围。你现在先做哪项？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先趁能接近剥取掉落尾巴，再去布陷阱。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先就近用陷阱和麻醉球结束狩猎，之后若倒计时和距离允许再去剥尾。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_DUNE",
+            "MHWILDSGR_OPT",
+            "MHWILDSGR_CAPTURE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "何时收尾一场狩猎",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR05.V3",
+          "scene": "初遇缠蛙只有讨伐目标",
+          "text": "首次缠蛙的主线目标写的是「讨伐」。缠蛙已经疲弱，前方有一块当前可打的伤口，也有保持侧向距离接普通攻击的空间。这次怎么结束？",
+          "options": [
+            {
+              "id": "A",
+              "label": "继续贴侧面，用已经试过的普通连段把最后的安全出手练完。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先把集中弱点攻击打在这块伤口，让这次进攻尽量直接。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_QUEST",
+            "MHWILDSGR_PC01",
+            "MHWILDSGR_DEV"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "何时收尾一场狩猎",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "MHWILDSGR06.V1",
+          "scene": "营地补库存还是直接去",
+          "text": "下位天堑沙原，下一趟已经选好炎尾龙目标，当前地图上能骑到，身上仍有少量药。路边另有已搭好可用的简易营地。出发前你先干什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "进简易营地帐篷先补足回复药，再按目标标记走。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "用现有物资先贴近目标位置，等第一次换区再看要不要回去补。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_QUEST",
+            "MHWILDSGR_CAP",
+            "MHWILDSGR_START",
+            "MHWILDSGR_WOUND"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "这一趟先备什么",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR06.V2",
+          "scene": "格挡武器配什么副手",
+          "text": "天堑沙原营地里，你拥有大剑、单手剑和轻弩，可在帐篷里选两把。主武器用单手剑；下一项任务打沙海龙。你给鹭鹰龙装哪把副武器？",
+          "options": [
+            {
+              "id": "A",
+              "label": "装自己练过的大剑，想等它停稳以后练一次蓄力击。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "装轻弩，想试跳开近身攻击后从更远处打。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_CAP",
+            "MHWILDSGR_DUNE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "这一趟先备什么",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR06.V3",
+          "scene": "锻造店先改武器还是护具",
+          "text": "下位已打完缠蛙，杰玛的锻造菜单亮着一把常用武器的升级和一件能做的防具。两项各自材料和钱都够，只想先花一项。你先点哪个？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先升常用武器，在下一场看看武器本身的技能和攻击变化。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先做可穿的新防具，想让学习下一只怪物的过程稳一点。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_PC01",
+            "MHWILDSGR_PCCN",
+            "MHWILDSGR_DEV"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "这一趟先备什么",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "MHWILDSGR07.V1",
+          "scene": "辟兽任务只带艾露或发信号",
+          "text": "你单人接下位自由狩猎辟兽，随从艾露在场。这一趟可发救难信号，设置已允许支援猎人，人数有空位。上一轮招式刚躲开。你怎么继续？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先发救难信号召已允许的 NPC 支援猎人，再尝试在不同方向一起打。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先维持自己和艾露的打法，想看清辟兽近身转向后怎么反打。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_OPT",
+            "MHWILDSGR_CAP",
+            "MHWILDSGR_HUNT",
+            "MHWILDSGR_SUP"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "谁来接下这段任务",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR07.V2",
+          "scene": "朋友倒地前的援护抉择",
+          "text": "你和真人队友一起打下位辟兽。队友血量危险但还能活动。你已经收刀，身上有生命粉尘，距离够让他一起恢复。辟兽刚转向，你也能安全打它一侧。你先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用粉尘帮队友回血，再让两个人重新进攻。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先从安全侧打一轮，想抓眼下怪物转头时给出的出手机会。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_CAP",
+            "MHWILDSGR_ITEMS",
+            "MHWILDSGR_OPT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "谁来接下这段任务",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR07.V3",
+          "scene": "煌雷龙倒地时同伴还没就位",
+          "text": "你和真人队友已经在下位煌雷龙的狩猎里。它短暂倒地，头附近有一道可瞄的伤，队友正在靠近可攻击角度，你也能立即开始打。怎么安排这几秒？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用自己的集中弱点攻击打这个窗口，再让两人按后续位置转火。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先在另一侧续常规攻击，把头附近这块伤口留给已往那边跑的队友。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_CN",
+            "MHWILDSGR_PCCN",
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_WOUND"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "谁来接下这段任务",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "MHWILDSGR08.V1",
+          "scene": "鹭鹰龙经过投射器采集点",
+          "text": "下位天堑沙原追目标时，近路有一个实际可用钩索投射器采到的素材点。你还在鹭鹰龙上，界面已有可采目标提示；狩猎目标也有导行标记。你先顾哪一端？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先侧过视角从可采点拿素材，尽量不必下马。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先沿标记去追目标，把材料留到战斗结束后的空当。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_START",
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_WOUND"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "行路时先收哪类可见资源",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR08.V2",
+          "scene": "先搭营地还是借岩边走",
+          "text": "天堑沙原的矿石洞窟营地位已发现且目前可建立，你任务还没接、身上够用的调查点，地图也有目标位置。你先搭营还是先追？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿脚下的岩边侧路走一趟，从地面确认进到目标附近的路径。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先在已开放位置把简易营地建好，下一趟能从附近补给。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_CAMP",
+            "MHWILDSGR_START",
+            "MHWILDSGR_CAP"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "行路时先收哪类可见资源",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR08.V3",
+          "scene": "一条支线中的网和脚下素材",
+          "text": "你在天堑沙原做野外探索，捕获网已经在道具栏。刚看到一只可用网捕捉的环境生物，还看到另一侧有能采的野外素材。手边这条路都能过去。你先动哪边？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用网抓这只环境生物，补它在环境生物图鉴里的记录。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先沿另一侧可走的路径去采已看见的素材，顺着地形看看还有什么。",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_START",
+            "MHWILDSGR_WOUND",
+            "MHWILDSGR_PCCN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "行路时先收哪类可见资源",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "MHWILDSGR09.V1",
+          "scene": "缠蛙伤口试两次",
+          "text": "回想下位缠蛙战，你用集中弱点攻击打过伤口，也有过看见亮点但先绕开的经历。再战一次，最想重练哪一种时机？",
+          "options": [
+            {
+              "id": "A",
+              "label": "留意侧走与转回正面的距离，等它招式结束再碰伤口。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "练开集中、瞄准前肢的间隔，争取在它下一次抬手前稳稳命中。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_PC01",
+            "MHWILDSGR_BASIC",
+            "MHWILDSGR_DEV"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "打完一只后最想重练哪步",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR09.V2",
+          "scene": "沙海龙出沙后你如何跟",
+          "text": "回想打沙海龙时，它有过钻进沙里再从另一边出来的经历。你试过收刀后上鹭鹰龙转向，也试过步行暂留等它锁定打点。哪种更想接着练？",
+          "options": [
+            {
+              "id": "A",
+              "label": "重练收刀和叫坐骑的时机，尽量在沙海龙重新露头前换角度。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "重练原地拉开点距离后看沙上方向，再决定从哪面贴上去。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_DUNE",
+            "MHWILDSGR_PCCN",
+            "MHWILDSGR_DEV"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "打完一只后最想重练哪步",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR09.V3",
+          "scene": "冻峰龙冰块留给哪段",
+          "text": "回想本体冻峰龙战，你拉下过冰块打向怪物，也曾躲到落下的冰块背后等攻击过去。下一趟你最想练哪一步？",
+          "options": [
+            {
+              "id": "A",
+              "label": "重练保留一块能当掩护的冰，辨认大范围攻击开始时自己的避让路线。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "重练平时把冰块落到怪物走过的位置，抓能造成伤害的时机。",
+              "signal": "play_inventor"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_ICE",
+            "MHWILDSGR_DANGER"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "打完一只后最想重练哪步",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "MHWILDSGR10.V1",
+          "scene": "营地训练场先看蓄力还是转向",
+          "text": "回想你在天堑沙原主营地旁训练场用过大剑，试过长蓄力，也试过集中模式转向练习靶。你最想回去改进哪个动作？",
+          "options": [
+            {
+              "id": "A",
+              "label": "盯练习靶熟悉蓄力的段落，在相同起点试哪一段放手最稳。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "多试几次集中模式转向，看看瞄头侧的角度会怎样改变这把武器的用法。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_TRAIN",
+            "MHWILDSGR_START",
+            "MHWILDSGR_DEV"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "下一把装备要学什么",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR10.V2",
+          "scene": "挑一项练习靶的设置",
+          "text": "回想用过天堑沙原训练场，你已经能找训练场管理猫调木桶伤口，自己两把常用武器也都带到。今天只做一件练习，你先要什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "保留熟悉的训练靶设置，只练同一把武器的近身转向和退步。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "让训练靶显示伤口，对比两把武器分别怎么打中它。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_TRAIN",
+            "MHWILDSGR_DEV"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "下一把装备要学什么",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR10.V3",
+          "scene": "做过武器也换过防具",
+          "text": "回想杰玛那里你分别做过一件带着想要技能的武器和一件增强生存的防具。手头正好够换一项已有配方，下一趟更想先试哪项？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先试可用的新武器，着重比较武器自带技能在狩猎中的作用。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先做要用的防具，让新任务的容错变大，再慢慢磨现在的武器。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_DEV",
+            "MHWILDSGR_PCCN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "下一把装备要学什么",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "MHWILDSGR11.V1",
+          "scene": "那次只有艾露和你",
+          "text": "回想一场下位单人狩猎，随从艾露实际帮你回过血，怪物转身的时候也让你有机会退到一侧。下一次最想复现哪一种配合？",
+          "options": [
+            {
+              "id": "A",
+              "label": "等怪物转开后立刻重找自己能安全接近的角度，练不打断进攻节奏。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "留意艾露真正放出能回复的支援时机，在不冲回攻击线的情况下蹭到恢复。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_CAP",
+            "MHWILDSGR_START",
+            "MHWILDSGR_HUNT"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "重看队伍怎么把这场推进",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR11.V2",
+          "scene": "真人队友和你分开看两侧",
+          "text": "回想你们真的组队打过炎尾龙，一个人吸引它朝一侧看，另一个人能从侧后靠近。下一场类似遭遇，更想怎么接？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先和队友错开，不同时进一个方向，让队友在你已经能脱开时接上。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先把自己绕到侧后、不触及尾扫的移动练熟，再尝试短连段。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_CAP",
+            "MHWILDSGR_PC01",
+            "MHWILDSGR_CN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "重看队伍怎么把这场推进",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR11.V3",
+          "scene": "跟 NPC 支援时瞄哪块伤",
+          "text": "回想一次你发 SOS 让支援猎人来了，现场曾出现过你能打到的伤口，队伍也曾从不同方向进攻。下次更认真练什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "看到当前有能打到的伤口就先用集中弱点攻击，把握眼前机会。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "等 NPC 猎人实际把怪物的视线带到一旁，选另一面再次接近。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_CAP",
+            "MHWILDSGR_HUNT",
+            "MHWILDSGR_SUP",
+            "MHWILDSGR_DEV"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "重看队伍怎么把这场推进",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    },
+    {
+      "id": "MHWILDSGR12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "MHWILDSGR12.V1",
+          "scene": "同一怪物在地图两次出现",
+          "text": "回想你曾在天堑沙原跟着地图标记到过炎尾龙，也自己找过一段较好接入它的路线。下一次先做哪项？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在能接近目标的前提下，手动骑一次没走过的路线，对照地图看支路通到哪里。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "给现有目标设标记，让鹭鹰龙把你先带到任务位置。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_PC01",
+            "MHWILDSGR_START",
+            "MHWILDSGR_DEV"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "哪项发现最想在下一趟验证",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR12.V2",
+          "scene": "从低阶素材回到相应自由任务",
+          "text": "回想你已经能向阿尔玛接下位缠蛙的自由狩猎，也在图鉴看过怪物各部位与素材。你还想找一份下位缠蛙素材，先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先接已经解锁的下位缠蛙自由狩猎，再在现场按自己常用的打法找机会。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先看大型怪物图鉴的下位素材条目，确认哪个部位或条件是自己想查的。",
+              "signal": "collector"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_OPT",
+            "MHWILDSGR_WOUND",
+            "MHWILDSGR_CN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "哪项发现最想在下一趟验证",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        },
+        {
+          "id": "MHWILDSGR12.V3",
+          "scene": "已经捕过和讨伐过一只缠蛙",
+          "text": "回想你在下位缠蛙自由狩猎里，既用陷阱和麻醉成功捕过，也打完并剥取过。同样素材还缺些，哪种经验更想回去确认？",
+          "options": [
+            {
+              "id": "A",
+              "label": "回想两种结算实际拿过的素材，看看有没有对自己有用的不同获取机会。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "重练什么时候能判断虚弱并顺利引进陷阱，把捕获动作做准。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "MHWILDSGR_OPT",
+            "MHWILDSGR_TRAPS",
+            "MHWILDSGR_CAPTURE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "哪项发现最想在下一趟验证",
+          "interpretation_boundary": "Capcom《怪物猎人 荒野》Steam Windows 本体，依题面阶位、任务、实际武器与队伍条件作答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+7d69c643a5f5"
+}

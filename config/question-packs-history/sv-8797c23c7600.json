@@ -1,0 +1,1238 @@
+{
+  "id": "sv",
+  "title": "星露谷物语",
+  "game_ids": [
+    "steam-413150"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按自己熟悉的体验回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "SV01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "SV01.V1",
+          "text": "当前雨水已浇好露天作物，自己精力充足，基础工具与鱼竿可用，矿井也已开放。今天眼前先去哪？",
+          "scene": "雨天已省下的照料时间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_MINES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "带工具走进矿井尚未看过的可达区域，看看会有何新发现",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "去当前天气和季节能钓的地点，补自己鱼类清单里已知的一个缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "去找今天还可交谈的居民，继续了解他已露出的人物经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主动留在熟悉农舍与田边，重走惯常小路，享受雨天家园带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当日已具备条件的具体行动中区分动机。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV01.CORE",
+          "text": "不需要雨天或矿井。当前眼前农田已照料完，自己精力充足，还有可达的山路、当季采集物与今天可交谈的居民。先做什么？",
+          "scene": "当前照料后的自由时间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走进自己还没看过的可达山路或林地，发现新角落",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按自己的当季物品清单，去补当前能取得的已知缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "找今天还可交谈的居民，接着了解已出现的人物经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主动留在熟悉农舍与田边，重走惯常小路，享受家园带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV01.EXTRA1",
+          "scene": "春天能摇出果实的树丛",
+          "text": "春季野外树丛上已经结了美洲大树莓。你到煤矿森林时有两条可走的路，一边沿自己熟悉的树丛，一边去此前没逛过的林地。今天先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SVEXP_01"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去没走过的那头，一边找树莓，一边看看森林还有什么新角落",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先走我已认下的树丛路线，想把今天还能摇到的莓果都收进自己的采集箱",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "围绕「春天能摇出果实的树丛」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "SV02.V1",
+          "text": "当前刚清出一块农场空地，已有可移动物件、道路材料、本季可种的现有花种与一棵果树苗，放置位置符合种植条件。先怎样使用这块地？",
+          "scene": "空地的当前实际改造",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRUIT_V5",
+            "SV_ANIMALS_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动现有物件并铺路，摆出自己选定的色块与空间主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把存放、田地和加工收取路径接起来，改顺日常取用流程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "种下现有果树苗并留好生长空间，开始一项会跨季保留的培养",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按自定的花草农夫身份，把已有花种种在这一角、采集物存入旁边箱子，再按这项生活规则照料",
+              "signal": "role_player"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当日已具备条件的具体行动中区分动机。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV02.CORE",
+          "text": "不需要动物、果树或新建筑。当前已有一片可收获的普通作物，也有能移动的箱子、现有物件、本季可种的现有花种与采集物和一角空地。先做什么？",
+          "scene": "当前已有农场空间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动现有物件与小路，摆出自己选定的画面主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把取工具、照料和存放的位置接起来，改顺日常步骤",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "亲手收获这批成熟作物，把劳动继续积累为会保留的耕种经验",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "按自定的花草农夫身份，把现有花种种在这一角、采集物存入旁边箱子，再按这项生活规则照料",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV02.EXTRA1",
+          "scene": "温室修好后的第一小片空地",
+          "text": "温室刚修好，里面有可放现有花盆和装饰的空位，也有可耕种的土。你手上有会反复结果的蓝莓种子，锄具也在。先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SVEXP_02"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在土里种蓝莓，想慢慢把这间温室养出一片隔季也能收的作物",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先放花盆和现有摆件，把门口那一小片布成自己喜欢的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "围绕「温室修好后的第一小片空地」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "SV03.V1",
+          "text": "当前快换季了，社区中心一包还有可在本季取得的缺项，已有种子与物资也能整理，居民今天还可交谈。现在先做什么？",
+          "scene": "换季前的当前取舍",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_CENTER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "取得并交上这一包当前能补的已知物品，完成自己的缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "把现有种子、工具与存放位置按下一轮实际取用先后整理",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "去听一段今天还可继续的居民对话，把人物经历接下去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己仍有精力，主动重走熟悉农场与镇边散步路线，享受已有日常的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当日已具备条件的具体行动中区分动机。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV03.CORE",
+          "text": "不需要收集包。当前快换季，仓库已有收成与种子，自己精力充足，今天还有可采集物和可交谈居民。先做什么？",
+          "scene": "当前换季安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的当季物品清单，补当前还能取得的已知缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "按实际取用先后整理现有种子、工具与箱子位置",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "去听今天还可继续的居民对话，把人物经历接下去",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主动重走熟悉的田边与镇边路线，享受季节将变时已有日常的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV03.EXTRA1",
+          "scene": "秋末雨天下午要不要去湖边",
+          "text": "秋季快结束了。今天下雨，已经过了中午，山间湖还钓得到大眼鱼（Walleye）。社区中心夜间垂钓收集包还缺这一条，家里也有明天要用的设备得收拾。先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SVEXP_03"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先带竿去山间湖试钓，我想趁这场雨把收集包的缺项补上",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "回农场把冬季会用的箱子和加工设备放到顺路的位置，先把下一季开头排好",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "围绕「秋末雨天下午要不要去湖边」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "SV04.V1",
+          "text": "当前一位自己想了解的居民就在可到达的位置，今天尚未交谈且还能收礼，背包也有已知适合他的花草。先怎样接近？",
+          "scene": "当日可交谈与送礼的居民",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_FRIEND_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先听今天能继续的对话，把他提过的经历联系起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的乡间花草农夫身份，从已有合适花草中挑一件送出，再完成问候",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "交谈并送出这份适合的礼物，让已记录的好感投入继续积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己仍有精力，主动把熟悉的见面与回家小路走一遍，享受安定的日常来往",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当日已具备条件的具体行动中区分动机。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV04.CORE",
+          "text": "不需要恋爱或特殊事件。当前一位早已见过的居民在可达位置，今天尚未交谈，自己精力足且还能自由活动。先做什么？",
+          "scene": "当前普通镇民问候",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先听今天对话，把他已经提过的经历接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的镇上见闻记录者身份，先完成这位居民的问候，再沿自己选定的镇上记录路线步行",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "完成今天仍可进行的问候，让已经记录的好感继续积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主动把熟悉的见面与回家小路走一遍，享受安定的日常来往",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV04.EXTRA1",
+          "scene": "莉亚问到木雕的纹理",
+          "text": "你进过莉亚的小屋，正在她两心事件的木雕对话里。她谈起削去表层后出现的纹理，屏幕上可以回应她说的道理，也可以直接说你更喜欢原始的木头样子。你选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SVEXP_04"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "说更喜欢原始木头的模样，我想让自己的农夫按心里的审美回应",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "说人与木头也有相似之处，想接着听她怎样看待自己的创作",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "围绕「莉亚问到木雕的纹理」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "SV05.V1",
+          "text": "当前已到熟悉水边，精力与时间都充足，手里鱼竿确能同时装鱼饵和浮标，已有配件也可用。这个下午先做什么？",
+          "scene": "兼容鱼竿下的当前垂钓",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_FISH_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "针对一种自己常跟不稳的鱼，亲手多次练拉扯节奏",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "去当前季节与天气允许的地点，补鱼类清单中已知的一条",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "把已有鱼饵与浮标装上兼容鱼竿，比较它们怎样一起改变垂钓体验",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "自己仍能继续探索，主动留在熟悉水岸重复抛竿日常，享受这个地方带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当日已具备条件的具体行动中区分动机。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV05.CORE",
+          "text": "今天不钓鱼。当前已有基础工具，田边有可清理的小草与当季采集物，精力充足，取用与存放都可安排。先做什么？",
+          "scene": "当前基础工具的一天",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一段镰刀挥动与移动时机，亲手多做几次以练顺动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "按自己的当季物品清单，去补当前能取得的已知缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "把拿工具、清理与存放材料的步骤和路径接起来，实际照着做",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "主动沿熟悉农舍和田边慢行，重复惯常照料日常，享受家园的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV05.EXTRA1",
+          "scene": "威利柜台前的训练鱼竿和玻璃纤维鱼竿",
+          "text": "钓鱼刚到 2 级，店里已能买训练鱼竿和可装鱼饵的玻璃纤维鱼竿，你的钱够买其一，背包也有鱼饵。下午要去钓普通鱼，你选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SVEXP_05"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用训练鱼竿，想趁浮漂条好控，先把追着鱼移动的手感练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "买能挂鱼饵的鱼竿，想比较加快咬钩之后我在同一段水边能怎么换节奏",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "围绕「威利柜台前的训练鱼竿和玻璃纤维鱼竿」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "SV06.V1",
+          "text": "当前已到矿井入口，食物、精力与背包都足够这一趟，电梯只通向自己实际开放过的楼层。出发先做什么？",
+          "scene": "矿井入口的当前目标",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_MINES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "从已开放入口继续找通路，进入自己还没见过的可达区域",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按现有工具或机器升级缺料，把取矿、回收与加工步骤接起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先到已开放楼层找一类熟悉敌人，针对一种走位或攻击时机亲手反复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按自己的矿物清单，找这一趟能取得的已知缺项",
+              "signal": "collector"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当日已具备条件的具体行动中区分动机。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV06.CORE",
+          "text": "当前不进矿井。手里已有基础工具，精力与背包够用，林地有能取得的木石，也有一条没走过的可达小路。先做什么？",
+          "scene": "当前矿井外取材",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入还没看过的小路或林地角落，发现新的地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按当前已学会制作的物件所缺材料，把取木石、存放和制作步骤接起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "选一种自己仍不顺的基础工具移动与出手时机，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "按自己的当季采集物清单，补这一趟能找到的已知缺项",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV06.EXTRA1",
+          "scene": "冰层矿段的铁与下一台电梯",
+          "text": "你已开到矿井 40 层的电梯，也已经在下面几层找到过铁矿。今天镐和食物都够。你打算先在熟悉的冰层采铁，还是找下一段楼梯？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SVEXP_06"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先往更深处找通路，想看看这一段之前没到过的冰层里有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先在走熟的几层挖够铁，把回农场熔锭和要做的工具配件一起安排",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "围绕「冰层矿段的铁与下一台电梯」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "SV07.V1",
+          "text": "当前社区中心与Joja路线都仍可选择，现有物品可补一项收集包，附近也有已确认可采来提交的当季物品，钱也足够让另一条路线推进一步。你仍能自由行动，先做什么？",
+          "scene": "尚未锁定路线的实际推进",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_CENTER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当前已知缺项带去收集包，先完成自己列出的这一格",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "核对收入、支出和改善先后，再按自己的经营安排推进Joja改善",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "按自定的采集型农夫身份，先实际去不同地点收取当前可交的物品，以这条生活规则推进社区路线",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "先去听今天仍可继续的居民对话，把社区变化前已有的人物经历联系起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当日已具备条件的具体行动中区分动机。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV07.CORE",
+          "text": "尚未进入社区修复分支。当前农田已可收取，手边有基础工具、箱子与本季可种的现有花种，今天还有可达采集物和可交谈居民。先做什么？",
+          "scene": "当前早期农场生活",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己已列出的当季物品清单，去补当前可取得的一项",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "把取工具、收成和存放材料排成步骤，并实际照着做",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "按自定的花草采集农夫身份，先照料已有花种，再沿选定路线采集，以这条生活规则过今天",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "去听今天还可继续的居民对话，把已经出现的人物经历联系起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV07.EXTRA1",
+          "scene": "锅炉房只差三种锭",
+          "text": "你玩的是普通收集包，锅炉房铁匠收集包要铜锭、铁锭和金锭，你现在三样都有。优质洒水器的配方和其他材料也都备齐了。手头这块金锭先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SVEXP_07"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "带三种锭去锅炉房，想把明摆在收集册里的这三个空格一次补上",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先把金锭做成洒水器，把下一批作物浇水安排好，够炉料时再补收集包",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "围绕「锅炉房只差三种锭」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "SV08.V1",
+          "text": "当前是冬季农场的一段空闲，自己精力充足，已有可移动物件、好感仍能积累的可照料动物和可交谈居民，今天都还来得及。先做什么？",
+          "scene": "冬日农场的当前行动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_ANIMALS_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动已有道路或摆设，做出自己选定的冬季空间主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "抚摸、喂养并照料已有动物，让会保留的好感和成长继续积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "去听今天还可继续的居民对话，接上已有的人物经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主动按熟悉次序巡视田边、照料与回家，享受冬日家园的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "在当日已具备条件的具体行动中区分动机。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV08.CORE",
+          "text": "还没过冬。当前已有一小片可收获的作物和可移动物件，自己精力充足，今天也有能继续交谈的居民。先做什么？",
+          "scene": "当前季节的家园行动",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动现有物件并整理田边位置，摆出自己选定的空间主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "亲手收获成熟作物，把劳动继续积累成会保留的耕种经验",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "去听今天仍可继续的居民对话，接上已出现的人物经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "主动照熟悉次序巡视田边、散步与回家，享受当前家园带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV08.EXTRA1",
+          "scene": "牛棚里过冬的第一个早晨",
+          "text": "冬天的农场外没有草可放牧，你正进普通牛棚，食槽仍有空位，筒仓还有干草，持有挤奶桶并养了可挤奶的牛。你平时怎么开始照料？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SVEXP_08"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去抚摸平时正在养好感的牛，再补饲料，想之后亲眼看到它稳定产出更好的牛奶",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先添干草，再按熟悉的顺序走过去抚摸和挤奶，喜欢冬天也能保留这套每天的早晨习惯",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "围绕「牛棚里过冬的第一个早晨」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "SV09.V1",
+          "text": "回想一段自己确实整理过已有加工区、也收取过农作物的经营经历，哪件已经完成的事最有分量？",
+          "scene": "已改动加工区的回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRUIT_V5",
+            "SV_ANIMALS_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把原料存放、投料与收取路径接起来，实际改善日常运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "亲手移动机器和现有物件，摆出自己选定的画面主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "按自定的流动农货商身份，把现有成品带去当时可交易的店铺出售，实际维持进镇换货的行事原则",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "亲手收获当时成熟的作物，让这轮劳动继续积累为会保留的耕种经验",
+              "signal": "growth_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只按曾经真实完成的经营与生活行为作回顾。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV09.CORE",
+          "text": "不需要加工机器。回想一次自己确实整理过基础工具、田地或箱子的经历，哪件已经做过的事最有分量？",
+          "scene": "真实基础农场整理",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把取工具、照料与存放的路线接顺，并按这套流程实际过了一天",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "亲手移动已有物件与小路，摆出自己选定的画面主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "按自定的花草农夫身份，留出花种与采集物角，并依这项生活规则实际照料",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "亲手收获成熟作物或采集野生物，让耕种或采集经验实际留下积累",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV09.EXTRA1",
+          "scene": "同一批蓝莓分去罐头瓶和小桶",
+          "text": "回想你把同批夏天的蓝莓分别放进罐头瓶和小桶，后来收到了果酱和果酒。这一轮最让你愿意继续尝试的是哪件事？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SVEXP_09"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想把哪一批先进罐头瓶、哪一批占小桶记下来，下轮配合收成安排收取",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "第一次收到了两种不同成品，我喜欢把果酱和果酒都留一份，之后继续补别的成品",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "围绕「同一批蓝莓分去罐头瓶和小桶」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "SV10.V1",
+          "text": "回想一次确实与真人熟人同在一座农场的游戏日，哪件当时真正做过的事最有分量？",
+          "scene": "真人共同农场的过去一天",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先共同约定一项农场升级目标，问清谁照料谁取材，再把彼此步骤接起来",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "各自活动时聊起彼此趣事，遇到有趣状况又聚到一起分享",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "共同约好这一天禁用商店买种，只用当时现有种子与可采材料，并实际试过这条新种植规则",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "自己仍有精力，主动重走熟悉的照料与归家路线，享受这座共同家园的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只按曾经真实完成的经营与生活行为作回顾。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV10.CORE",
+          "text": "只回想自己确实单人经营过的一个农场日，不要求认识其他玩家。哪件当时已经做过的事最有分量？",
+          "scene": "真实单人农场日",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把照料、取材和存放目标排成顺序，再实际接着完成",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "走进当时未看过的可达林地或镇上通路，发现新的角落",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "自定这一天不买种子、只用现有种子与可采材料的限制，并在那天真正试过它改变的安排",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，主动重走熟悉照料与归家路线，享受自己的家园日常",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV10.EXTRA1",
+          "scene": "联机时在同一段河边碰头",
+          "text": "回想你和朋友确实在同一个联机农场生活，也曾一起走去镇上的河边钓鱼。那段经历中什么更让你想之后再约一次？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SVEXP_10"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想再约一趟，先备齐竹鱼竿，然后两人都只用竹竿、不装饵，看这条自定规矩会钓出什么",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "各抛各的竿，等咬钩时能说话、互相看看钓到了什么，我记得的是一起消磨这段时间",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "围绕「联机时在同一段河边碰头」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "SV11.V1",
+          "text": "回想一次自己确实参加过星露谷展览会的经历，哪件当时已经做过的事最有分量？",
+          "scene": "已参加展览会的真实回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE",
+            "SV_FAIR"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕想争取的展品名次比较库存、提交展示，并看过实际评比结果",
+              "signal": "festival_contest_goal"
+            },
+            {
+              "id": "B",
+              "label": "对照自己早已惦记的节日奖品清单，实际换到并补上一项",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "自己挑选展品的颜色与类别主题，放进展品格并截图留下个人呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，主动按熟悉顺序逛摊位与镇场，享受每年回来的日常感",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只按曾经真实完成的经营与生活行为作回顾。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV11.CORE",
+          "text": "还没参加展览会。回想当前季节里自己确实整理过的一批收获，哪件当时已经做过的事最有分量？",
+          "scene": "真实本季收获经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按取用、收取与存放先后整理工具和箱子，并真正照着过了一天",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "对照自己的作物或采集物收藏清单，亲自取回当时尚未收齐的实物，补入自己的收藏箱",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "亲手收获作物或采集野生物，让会保留的耕种或采集经验继续积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，主动沿熟悉田边与镇路散步，享受已经形成的家园日常",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV11.EXTRA1",
+          "scene": "星币换完奖品以后",
+          "text": "回想秋季展览会里你亲手玩过小游戏或摆了展品，拿星币换了还可领取的星之果实或稀有稻草人。哪一段更想以后再来？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SVEXP_11"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "稀有稻草人的款式一直记得，我想逐个把农场还缺的款式凑齐",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "每年走一遍熟悉的摊位，看展、玩小游戏，镇上这天的热闹让我想再过一次",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "围绕「星币换完奖品以后」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    },
+    {
+      "id": "SV12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "SV12.V1",
+          "text": "回看自己确实经营过的一段农场时间，哪项已经做出的投入最接近当时重点？",
+          "scene": "已经经营过的农场投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE",
+            "SV_CENTER",
+            "SV_SKILLS_V5",
+            "SV_FRUIT_V5",
+            "SV_ANIMALS_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把种植、收取与加工排成步骤，并让这一轮实际运转起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "持续照料动物、果树或居民关系，留下会保留的好感或成长变化",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "对照已知鱼、矿物或收集包清单，实际补上惦记的缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，主动反复回到熟悉田边、农舍与镇上小路，享受已有家园的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "只按曾经真实完成的经营与生活行为作回顾。",
+          "interpretation_boundary": "不以效率、路线或居民好感评价道德与能力；舒缓是有精力时主动回到熟悉家园，成长须留下经验、好感或果树动物变化。"
+        },
+        {
+          "id": "SV12.CORE",
+          "text": "只回看自己确实过过的当前季节，不需要跨年、动物或果树。哪项已经做出的投入最接近当时重点？",
+          "scene": "已经过过的农场日常",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SV_CORE",
+            "SV_SKILLS_V5",
+            "SV_FRIEND_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把种植、取材与收取排成流程，并让这一轮实际运转起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "亲手收获作物、采集野生物或完成居民问候，让经验或已记录好感留下积累",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "对照已有作物或采集物清单，实际补上惦记的已知缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，主动反复回到熟悉农舍与田边小路，享受已有家园的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写早期独立情境；不要求动物果树、矿井、鱼竿配件、特殊居民事件、真人同游或节日。收获/采集经验可保留，h明确有精力且主动享受熟悉家园。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "SV12.EXTRA1",
+          "scene": "复活节买的草莓真正收过几次",
+          "text": "回想你在复活节买过草莓种子，栽下后确实等到过第一轮结果，也在合适条件下收到了下一轮。什么更能让你第二年再种？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SVEXP_12"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想把节日买种、空格准备和每轮收取排成计划，给下一次播种腾出更顺的路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "看着我自己种的那一小块从种子长到再结果，想来年扩大这片一直照顾的田",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "围绕「复活节买的草莓真正收过几次」记录玩家在农场、镇子或矿井中的偏好。",
+          "interpretation_boundary": "PC 1.6 本体。要求游戏实际开放相应时间、地点、资源和功能。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+8797c23c7600"
+}

@@ -1,0 +1,1081 @@
+{
+  "id": "nottonightv5",
+  "title": "今夜没门",
+  "game_ids": [
+    "steam-733790"
+  ],
+  "scope": "初代本体英国故事，不依赖 One Love 扩展或续作",
+  "status": "private_candidate_independently_revised",
+  "author_review": "independent_sources_cross_checked",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "统一题套",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "首作 PC 本体，包括规则识别和首作故事章节。One Love 与 Not Tonight 2 不入题。",
+    "当班规则和所见人物因进度而异，固定时序在资料相互冲突时以当前屏幕条件为准。",
+    "门口操作与场所计分区分。收集唱片为跨章节拿到各张，不保证它们一起保留。",
+    "未 PC 实机或玩家试答。只玩到开局或走了不同结局的玩家可能用尽后期替代。"
+  ],
+  "slots": [
+    {
+      "id": "NT01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "NT01.V1",
+          "scene": "King’s Head 的年龄界线",
+          "text": "King’s Head 门口，夹板上写着判断年龄要用的出生日期。来客把证件递给你，队伍还在排。你先怎样查？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_STORE",
+            "NT90_PCG",
+            "NT90_ID"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接过证件后把看日期、对照片和处理结果连起来，享受亲手操作的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "按自己反复练习的顺序对照出生日期与夹板，再确认照片，把这一步练稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT01.V2",
+          "scene": "生日接近当班界线",
+          "text": "这班要核对年龄，卡片上的出生年月和夹板写的界线很接近。你还没给这位客人结果。你会怎么查？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_ID"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "多留一眼，按自己在练的次序重新核对出生年份和月份，减少只看年份的失误",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "按当班要求查完生日和其他必查项，继续向当晚显示的人数目标推进",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT01.V3",
+          "scene": "两条日期规则一起出现",
+          "text": "这一班要同时核对出生日期与有效期。你刚结束上一张，下一张已经递过来。怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_ID"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接过卡后把两处日期和点击判断做成连贯操作，留意每次处理的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "这班每次都固定为先年龄、再有效期，继续练自己容易漏掉的第二个日期",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "NT02.V1",
+          "scene": "快到期的卡",
+          "text": "门口规则已经要求检查有效期，证件照片和来客大致相符，但有效期接近当前游戏日期。你会怎样继续？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_EXPIRY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "放慢这一手，按自己一直在练的顺序把到期日期再比一次，减少漏查",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "依当班的有效期要求查这一项，再继续核查其他客人，争取完成准入人数要求",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT02.V2",
+          "scene": "照片相似时先看哪边",
+          "text": "这一班必须比对本人和证件照。客人的照片整体相似，但头部一处看着有差别，证件还在手中。你先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_LAUNCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接在日期检查之后扫一遍照片与脸部的差异，享受接卡到判定的连贯感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "按自己反复练过的照片查验次序，从几处能看清的特征依次对照",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT02.V3",
+          "scene": "证件已有防伪核验要求",
+          "text": "当班规则要求核对证件上的全息标志和旗帜印刷，手上的证件两处都看得见。你想怎么查？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_ID"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "延续一个自己在几班里练过的固定顺序，刻意把这两项都检查到",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把查旗帜、看全息和处理结果连起来做，体验手里证件换到下一份的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "NT03.V1",
+          "scene": "NEO 两条队列什么时候切",
+          "text": "NEO 的班次有普通队和名单队，两边都已有人，计数器也显示还有名单奖金的缺口。你会先怎么安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_STORE",
+            "NT90_QUEUE",
+            "NT90_GUEST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去处理眼前更接近达成缺口的一队，按当班名额目标往前做",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先按两边当前人数设一轮切换顺序，然后看计数器调整下一轮，打算把这个办法贯穿整场",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT03.V2",
+          "scene": "名单上有姓名但年龄仍要查",
+          "text": "来的是名单队的客人。名字确实在表上，但今晚也要求核对年龄，证件还没确认。你先怎样处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_QUEUE",
+            "NT90_GUEST",
+            "NT90_PCG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续练「名字、年龄、结果」这个次序，避免自己看到名字就漏查年龄",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "按这班列明的两项要求查完，再考虑是否把这个人算入已准入人数",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT03.V3",
+          "scene": "独立音乐节的名单队",
+          "text": "你值过独立音乐节的名单班。眼下名单队又来了人，普通队仍可服务，本班名单奖金目标尚未到。你怎么切？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_QUEUE",
+            "NT90_GUEST",
+            "NT90_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先处理面前可以查到的名单客，喜欢不停换证、勾去姓名和按计数的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先等名单队凑几张再集中核查并划名，随后回普通队，以这个次序分配当晚时间",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "NT04.V1",
+          "scene": "King’s Head 达标后的额外奖励",
+          "text": "King’s Head 倒计时还有一段，场地显示已过底线、再放进若干名合格客人可拿更高奖金。你更想投入什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_LAUNCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己设定冲到下一档奖励的当晚目标，继续按规则核对客人争取做到",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "利用能继续工作的这段时间练自己最近不稳的有效期和照片顺序",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT04.V2",
+          "scene": "有人拿钱请你例外",
+          "text": "夜班里一位证件不符的顾客递钱，希望你放行。你还能拒绝，当前也有这笔交易可选。你会怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接下眼前这笔钱、放行，看这次游戏会如何反馈这笔交易",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "按我为112号选择的处事原则，他即使缺钱也不愿通融，按规则拒绝",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT04.V3",
+          "scene": "老板 Dave 亲自排到门口",
+          "text": "第二章回到 King's Head 值班，Dave 站在门口聊完后把本人的证件交给你。现在能给他放行或拒绝，你怎么选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_PCG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己给112号定的立场，把老板也当成不能特殊对待的来客；看到他符合本班规则才放行",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "试一次游戏里的拒绝动作，看看老板亲自被挡时当场会说什么",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "NT05.V1",
+          "scene": "Tiki Head 日班和夜班",
+          "text": "第二章 Tiki Head 还允许在两边选择，BouncR 上能看到对应日班与夜班。你先选哪种安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先挑自己更想了解的那位老板的班，想看看 Jonesy 或 Bonesy 会怎么和112号相处",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选一边以后继续在那里上班，想看同一地点的首席门卫进度逐渐积累",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT05.V2",
+          "scene": "连续回同一家原 King's Head",
+          "text": "第一章 BouncR 有 King's Head 的可接班，当前也有其他场所能选，手里有一笔眼前需要的账。你怎么选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_STORE",
+            "NT90_PCG",
+            "NT90_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选回已值过班的 King's Head，打算持续做下去，看自己何时能成首席门卫",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先选眼前报酬够覆盖账单的可接班，把当前应付项目处理掉",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT05.V3",
+          "scene": "在音乐节接下一班",
+          "text": "这一章的音乐节还有班可接，你还没成首席门卫，其他场所也有个能接的班。你先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_TALE",
+            "NT90_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接另一个已可报名的班，按这周眼下的收入需要安排工作",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "继续给同一场音乐节接下一班，想把已有的门卫进度一点点做满",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "NT06.V1",
+          "scene": "Dave 可以接回戒指",
+          "text": "你已从 Tiki Head 取到戒指，回到 King's Head 值班时 Dave 出来问了它，当前可把道具交到他手上，也可以不交。你先做哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "交出戒指，想知道找回这件东西对 Dave 有什么意义",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先继续当下门口正在做的工作，尽量完成显示的人数要求",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT06.V2",
+          "scene": "NEO 班中 Viklav 与迪斯科奖章",
+          "text": "早期已经拿到 King's Head 的迪斯科奖章，Viklav 来到 NEO 门口，当前可以交道具。你想做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按眼前门口流程完成本班工作，暂时不交奖章",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先交迪斯科奖章，想看他怎么谈起这件东西",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT06.V3",
+          "scene": "Mylarna 上门看见筹款罐",
+          "text": "你从重开的 King's Head 取得了为 Viklav 筹款的罐子。Mylarna 上门且当前有可交道具的机会。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_TALE",
+            "NT90_ACH2"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把罐交给她，想知道她会怎么继续筹钱帮 Viklav",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按我代入的112号在监管下暂时不愿牵涉更多人的做法，这次先不交",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "NT07.V1",
+          "scene": "第三章在正常班与反抗安排之间",
+          "text": "第三章出现秘密反抗酒吧的班次，BouncR 也还有另一份同日可选班。当前只能安排一个，你先怎么选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_TALE",
+            "NT90_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接常规班，继续处理目前显示的收入与账单目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "按我给112号选择要支持反抗组织的想法，接秘密酒吧的班",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT07.V2",
+          "scene": "Galahad 提醒要准备几地的材料",
+          "text": "第三章收到 Galahad 提醒，The Gammon、Angels 和 Ferriss Party 至少还有两个班可接，材料还没齐。现在你怎么排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把几个地点的首席门卫进度、后续取物和剩余日期排成工作日程，再接其中一个班",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按我设定的112号已决定帮忙的处事方式，优先去做 Galahad 眼下最急的一项",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT07.V3",
+          "scene": "抵抗组织给出当班指示",
+          "text": "你已经在剧情里收到 ResistR，眼下在一个它列了指定目标的班。门口还有按场所规则可以正常处理的队列。你优先怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先处理仍按当班入场规则可接的队伍，争取完成显示的场地人数目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先按自己为112号定下要协助反抗的立场，找符合当前那条指示的来客",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "NT08.V1",
+          "scene": "有余钱时的公寓海报",
+          "text": "ShopR 的公寓页已经开了，墙上海报可以购买，手中还留着本次到期账单要用的钱。你下一步想做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_PCG"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用现有余钱给自己一直住的房间添一张海报，打算以后有余款再继续改善",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把眼下已经到期的账单处理掉，让这笔余钱仍能用于下一项要求",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT08.V2",
+          "scene": "今晚报酬与下次上班",
+          "text": "结完一次班，你能看这笔工资和仍要付的账，BouncR 也有随后可接的工作。你先怎么安排？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_STORE",
+            "NT90_PCG",
+            "NT90_ACH2"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先应对已经到期的付款，把显示的这一项要求完成",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "把之后几天可能要上的班和要付的几笔费用一起排好，持续保留周转",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT08.V3",
+          "scene": "BouncR 两份常规班之间",
+          "text": "BouncR 有两份常规班可接，其中一家你已经值过班。目前还有钱支付眼前账单。你怎样接？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_STORE",
+            "NT90_PCG",
+            "NT90_ACH2"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选之前上过的场地，继续积累和这家店的工作进度",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按之后几天的班次和收支分布挑一份，给后面留出能轮替的选择",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "NT09.V1",
+          "scene": "初见 Dave 和之后的合作",
+          "text": "回想初到 King's Head 给 Dave 工作、之后还有机会再给他值班的经历，你为什么会想继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想看看自己长时间给同一家店工作，什么时候能从临时班升成首席门卫",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想知道 Dave 一边说112号工作认真、一边又有立场隔阂，后来他们怎样相处",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT09.V2",
+          "scene": "Tarquin 的贵宾队伍",
+          "text": "回想你在独立音乐节见过 Tarquin 走到贵宾入口，之后也看过他因门口的事找上112号。哪边让你更记得那一班？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_TALE",
+            "NT90_QUEUE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想弄清被挡之后他为什么还要来找112号，后续这两人怎么相处",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我更记得那晚来回换普通入口和名单入口时亲手操作的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT09.V3",
+          "scene": "Harrison 和 Lassy",
+          "text": "回想第三章 Harrison Pace 带着 Lassy 出现在门口，后来你也见过那张照片相关的场景。为何还会想回看？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_TALE",
+            "NT90_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想在重开的店里延续逐班积累首席门卫进度的过程，看到之后能拿到什么",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想重新理解他为什么还会带着 Lassy，后来又怎样对待那张照片",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "NT10.V1",
+          "scene": "回看 Tiki Head 两边的值班",
+          "text": "回想在 Tiki Head 选择过日班或夜班并为其中一边继续工作。什么更让你愿意重玩？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想继续从同一地点的初次值班做到首席门卫，重温那段累积过程",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想回到选择前再体验另一边，了解两位老板各自在物色什么样的人",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT10.V2",
+          "scene": "拿到三场音乐节的唱片",
+          "text": "回想跨章节从不同音乐节拿过唱片。什么更刺激你继续做这些班？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想在仍能交的章节让 Shannon 拿到唱片，想看她如何谈各自喜欢的音乐",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "即使各章结束时道具会消失，我也想让三张唱片都曾入手，补完还没拿到的那张",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT10.V3",
+          "scene": "公寓海报和搬迁住处",
+          "text": "回想住进 B 栋后曾通过 ShopR 给公寓添置海报。什么更像你愿意再选一次的理由？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_PCG",
+            "NT90_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "喜欢为同一个住处一次次添东西，让它逐步变成自己习惯待的样子",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "喜欢从这间住处接到来访和消息，想看看邻居与112号的生活怎样继续",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "NT11.V1",
+          "scene": "有效期过期仍有人排队",
+          "text": "回想一班从出生日期查到有效期、遇到过期证件并拒绝来客的经历。什么让你想再完成一班？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_LAUNCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "喜欢连续接身份证、看日期再点结果时掌控一连串操作的节奏",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "想把最容易漏掉的有效期检查练成习惯，几班后判断更稳定",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT11.V2",
+          "scene": "名单队的奖金与勾名",
+          "text": "回想 NEO 的两条队列，你曾看名单划名并在两队之间切换。何处更让你还想做下一班？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_QUEUE",
+            "NT90_GUEST"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想把切换轮次、名单需要人数与剩余时间做成可重复用的安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "喜欢在几张名字和证件之间快速互相对上，感受自己一步步完成操作",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT11.V3",
+          "scene": "续班时证件防伪项变多",
+          "text": "回想你后来值过必须核对照片和防伪标志的班次，什么使你愿意再做一轮？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_PCG",
+            "NT90_LAUNCH"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想再体验接卡、逐项扫过并立刻交还结果的连贯感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "想练先看照片、再看标志等细节的习惯，几班下来少漏一项",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    },
+    {
+      "id": "NT12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "NT12.V1",
+          "scene": "法庭回顾过去",
+          "text": "你在首作确实看到了庭审，有证人说起112号此前做过的事。哪一部分更吸引你重新走一遍？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_TALE",
+            "NT90_ACH2"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想理解 Dave、Mylarna 等人怎样回头看他们与112号相处时发生的事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想重走那些当初按112号的原则选过的具体做法，看看自己是否仍愿照同样原则行动",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT12.V2",
+          "scene": "收到 ResistR 后的做法",
+          "text": "回想收到 ResistR 且已经在一个班次做过取舍。哪个理由更让你想重玩其前后的剧情？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想重新用自己给112号定下的处事立场决定什么时候协助组织、什么时候先顾日常",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "想追邻居和同事如何受到监管与反抗组织行动的影响",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        },
+        {
+          "id": "NT12.V3",
+          "scene": "音乐节拿记录和与人相处",
+          "text": "回想第一次给音乐节连续值班、成为首席门卫而获准拿唱片。什么更能解释你后来再去做这类班？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "NT90_ACH2",
+            "NT90_TALE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想重复看同一场地工作逐渐累积成首席资格的过程",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想让不同章节的音乐节唱片都至少曾经拿到一张，逐个完成收集",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "只按明确行动及玩家自述的投入目标识别偏好。",
+          "interpretation_boundary": "以该班规则、可参与剧情和当前可用动作成立为前提。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+e6b648f39219"
+}

@@ -1,0 +1,645 @@
+{
+  "schema": "isolated_question_variant_additions.v1",
+  "status": "private_candidate_pending_integration_review",
+  "pack_id": "bg3",
+  "game_id": "steam-1086940",
+  "base_pack_version": "0.5.0+58cf57101878",
+  "base_pack_sha256": "63036efae88b5e71d88072ed61b90d59ad5815beba49801af36eafad72aabef0",
+  "scope": "Steam PC 原生本体第一、二幕；Patch 8 或更新版的场外拍照可用于 BG301。",
+  "additions": [
+    {
+      "slot_id": "BG301",
+      "append_variant": {
+        "id": "BG301.EXTRA1",
+        "text": "第一幕翡翠林地仍向你开放，商人阿伦还在谈封锁的事。你可以先交谈、交易，或离开对话在林地自由取景。你更想先做什么？",
+        "scene": "林地商人阿伦旁的停留",
+        "question_type": "situational_action",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_PHOTO",
+          "BG3EXT_ARRON"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "按自己守护流亡者的角色立场，先和阿伦聊封锁，再从实际出现的回应中表达这个立场",
+            "signal": "role_player"
+          },
+          {
+            "id": "B",
+            "label": "先看阿伦手上这次实际刷出的装备，挑一件能补现有出手方式的，买到后直接配给相应队员",
+            "signal": "build_alchemist"
+          },
+          {
+            "id": "C",
+            "label": "离开对话，把角色沿林地入口重新站位，用拍照模式调整镜头和人物姿势，拍出自己的画面",
+            "signal": "style_director"
+          }
+        ],
+        "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+        "interpretation_boundary": "要能进入林地且阿伦还在。取景用 Patch 8 或之后的拍照模式，在交谈之外启动。"
+      }
+    },
+    {
+      "slot_id": "BG302",
+      "append_variant": {
+        "id": "BG302.EXTRA1",
+        "text": "在翡翠林地，你替阿拉贝拉向卡哈求情，两次交涉最终都失败了。结果已发生，父母还在外面等消息，林地仍可自由活动。你先怎么处理？",
+        "scene": "替阿拉贝拉求情失败以后",
+        "question_type": "situational_action",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_ARABELLA",
+          "BG3EXT_KAGHA",
+          "BG3EXT_DICE"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "先出去告诉科米拉和洛克发生了什么，想听他们怎样理解孩子试图制止仪式的行为，以及他们打算如何面对这件事",
+            "signal": "story_keeper"
+          },
+          {
+            "id": "B",
+            "label": "先核对当时参与说服的角色有什么魅力熟练和加值，想弄清为什么这个结果比自己预料更难避免",
+            "signal": "inspect_check_rules"
+          },
+          {
+            "id": "C",
+            "label": "先去德鲁伊住处读荆棘仪式的线索，追查卡哈最近做的事，换一条能处理林地冲突的路线",
+            "signal": "seek_other_route"
+          }
+        ],
+        "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+        "interpretation_boundary": "只用于求情已失败、林地仍中立的存档，不要求读取旧存档。"
+      }
+    },
+    {
+      "slot_id": "BG303",
+      "append_variant": {
+        "id": "BG303.EXTRA1",
+        "text": "染疫村落的井下，你摸到低语深地的蜘蛛巢附近，尚未被发现。蛛网桥和边上的石台都看得见，你手边有可用火焰投掷物与抗毒药剂。你先怎么准备？",
+        "scene": "蜘蛛巢前安排能做的准备",
+        "question_type": "situational_action",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_SPIDER",
+          "BG3EXT_DEPTHS"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "把抗毒药留给打算留在蜘蛛攻击范围的人，同时让携带火焰投掷物的人站在能烧断网桥的位置，配出这场的分工",
+            "signal": "build_alchemist"
+          },
+          {
+            "id": "B",
+            "label": "先观察蛛后走哪段桥，核对火焰能到的位置与下面落差，再决定在哪里动手",
+            "signal": "puzzle_breaker"
+          },
+          {
+            "id": "C",
+            "label": "按受雇斥候的行事原则，让一人先绕石台侦察，其余人留在原地等他找出安全站位",
+            "signal": "role_player"
+          }
+        ],
+        "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+        "interpretation_boundary": "火焰、抗毒消耗品必须在手；不假定具有指定法术、升级菜单或必得的装备。"
+      }
+    },
+    {
+      "slot_id": "BG304",
+      "append_variant": {
+        "id": "BG304.EXTRA1",
+        "text": "第一幕翡翠林地的山坡上，阿尔菲拉还在苦恼如何为导师写完歌，交谈里可以用话鼓励，也能主动提出与她合奏。你会怎么选？",
+        "scene": "山坡上听阿尔菲拉的新曲",
+        "question_type": "situational_action",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_ALFIRA"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "先用话鼓励她，把注意力放在她完成这首歌后愿意怎么讲导师的事",
+            "signal": "story_keeper"
+          },
+          {
+            "id": "B",
+            "label": "以自己一贯随行艺人的身份，主动接过琴试着合奏，把这个角色会怎样安慰人的原则做出来",
+            "signal": "role_player"
+          },
+          {
+            "id": "C",
+            "label": "主动尝试合奏并完成屏幕上出现的演奏检定，把掌握乐器当作这次旅程里想留下的成长",
+            "signal": "growth_keeper"
+          }
+        ],
+        "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+        "interpretation_boundary": "人物尚在林地且首次协助仍可进行，合奏只是尝试，并不保证检定结果或获得熟练。"
+      }
+    },
+    {
+      "slot_id": "BG305",
+      "append_variant": {
+        "id": "BG305.EXTRA1",
+        "text": "第一幕破碎圣所，德罗尔·拉格兹林还未与你敌对。你已经找到通往王座厅上方横梁的梯子，也有可以射中挂灯铰链的远程武器。决定要打这一场前，先怎样准备？",
+        "scene": "拉格兹林的王座厅开打之前",
+        "question_type": "situational_action",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_RAGZLIN"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "把擅长远程的队员布到横梁，另一人负责牵动敌人注意力，先将拉怪和射击位置配成一组",
+            "signal": "build_alchemist"
+          },
+          {
+            "id": "B",
+            "label": "先把可能要用的药和消耗品在队里分好，检查动手后哪条路还能撤离，再按这个次序进战斗",
+            "signal": "systems_builder"
+          },
+          {
+            "id": "C",
+            "label": "给这场加一个限制，从第一轮起只用箭打铰链或可破坏的场景，先试不直接攻击地精能把战斗推多远",
+            "signal": "play_inventor"
+          }
+        ],
+        "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+        "interpretation_boundary": "需尚可接近王座厅、已经能走到横梁且满足射击条件。拉格兹林倒下会使营地敌对。"
+      }
+    },
+    {
+      "slot_id": "BG306",
+      "append_variant": {
+        "id": "BG306.EXTRA1",
+        "text": "第二幕月出之塔监牢，还能安全来往。你已经让乌尔布伦相信你来帮忙，他正等一件能砸墙的工具；你有可交给他的钝器，提夫林也还在隔壁牢房。你先做什么？",
+        "scene": "月出之塔地牢的越狱约定",
+        "question_type": "situational_action",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_PRISON"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "先去隔壁和提夫林说话，把他们和乌尔布伦为什么都被关在这里连起来",
+            "signal": "story_keeper"
+          },
+          {
+            "id": "B",
+            "label": "先查看每间牢房的位置、巡逻看守和可以藏身的路线，再判断交出锤子后哪一步最容易被看见",
+            "signal": "puzzle_breaker"
+          },
+          {
+            "id": "C",
+            "label": "按自己一贯从不留下囚犯的立场，先把能砸墙的钝器交给乌尔布伦，承担这个援助决定",
+            "signal": "role_player"
+          }
+        ],
+        "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+        "interpretation_boundary": "尚未触发失败或塔楼敌对，乌尔布伦和提夫林仍活着；只要求在当前回访能交谈、身上有钝器。"
+      }
+    },
+    {
+      "slot_id": "BG307",
+      "append_variant": {
+        "id": "BG307.EXTRA1",
+        "text": "第一幕精金熔炉，格里姆已被岩浆加热，正追着刚击中它的队员。这个回合，你有人能在中心锤台的另一侧继续引导，也有角色拿着能出手的钝击武器。你先怎么打？",
+        "scene": "格里姆第一轮去哪里",
+        "question_type": "situational_action",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_GRYM",
+          "BG3EXT_FORGE"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "用岩浆的过热状态配手上的钝击武器，先在安全站位打出这次相互补足的一击",
+            "signal": "build_alchemist"
+          },
+          {
+            "id": "B",
+            "label": "先用现有攻击跟走位转移它的追击目标，想验证它是否会沿预判路线走上中央砧座",
+            "signal": "puzzle_breaker"
+          },
+          {
+            "id": "C",
+            "label": "我按斥候自己订下的原则，先移动去不会踩到岩浆的抬高位置，亲自确认格里姆接下来的走向再通知队友",
+            "signal": "role_player"
+          }
+        ],
+        "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+        "interpretation_boundary": "必须是格里姆过热，题面只涉及当前能走位引导或进行钝击的路线；锻锤伤害依它尚过热且位于砧座。"
+      }
+    },
+    {
+      "slot_id": "BG308",
+      "append_variant": {
+        "id": "BG308.EXTRA1",
+        "text": "第二幕幽影诅咒之地，喀尼斯应召出现、愿意带人去月出之塔。你能答应同行、交涉要灯，或当场开战。你会选哪种推进方式？",
+        "scene": "蛛化精灵举着月亮提灯",
+        "question_type": "situational_action",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_CONVOY",
+          "BG3EXT_MOONRISE"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "先跟着喀尼斯，想听他怎样谈自己的使命，沿途观察他会怎么对待队伍和外面的人",
+            "signal": "story_keeper"
+          },
+          {
+            "id": "B",
+            "label": "按自己不愿受至上真神信徒指挥的角色原则，尝试让他把月亮提灯交出来，再自行推进",
+            "signal": "role_player"
+          },
+          {
+            "id": "C",
+            "label": "把护送改成正面战斗，取灯后自己走通去月出之塔的路",
+            "signal": "seek_other_route"
+          }
+        ],
+        "design_purpose": "只在当前真实菜单、已可进行对话或战斗行动中选择动机。",
+        "interpretation_boundary": "限实际出现的喀尼斯护送路线。要求交灯可能需要检定，战斗方式需要取胜并拿灯；拿灯后还要自行过诅咒区。"
+      }
+    },
+    {
+      "slot_id": "BG309",
+      "append_variant": {
+        "id": "BG309.EXTRA1",
+        "text": "回想你在第二幕确实到过仍有结界保护的终焉光芒旅店，当时没有开战，军需官塔利仍可交易，你也还记得旅店里难民的谈话。哪件当时做过的事更有分量？",
+        "scene": "终焉光芒旅店的歇脚",
+        "question_type": "experience_reflection",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_INN"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "在军需处清点后续路线要用的东西，把离开结界前的补给、出发和休息先后安排好并实行",
+            "signal": "systems_builder"
+          },
+          {
+            "id": "B",
+            "label": "听还留在大厅的人说同伴怎样被带走，把他们的话和第一幕在林地见过的难民联系起来",
+            "signal": "story_keeper"
+          },
+          {
+            "id": "C",
+            "label": "绕回熟悉的旅店大厅和炉边走一段，享受在外面全是幽影时还能回到亮处歇口气的安定",
+            "signal": "cozy_resident"
+          }
+        ],
+        "design_purpose": "只回顾已做过的回应、探索、构筑或个人记录，不拿未来重开愿望替代经历。",
+        "interpretation_boundary": "限定旅店结界完好、塔利和相关人物仍在的经历。"
+      }
+    },
+    {
+      "slot_id": "BG310",
+      "append_variant": {
+        "id": "BG310.EXTRA1",
+        "text": "回想你单人到过奥术塔并从奥术炮塔前进入塔区，你当时实际用过掩体和回合制，或者从附近寻找过供电室。哪项已做过的事最值得你记住？",
+        "scene": "单人抵达幽暗地域奥术塔",
+        "question_type": "experience_reflection",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_TOWER"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "沿外侧能落脚的菌菇一路找到塔底小花园，发现原本从入口根本看不见的空间",
+            "signal": "wanderer"
+          },
+          {
+            "id": "B",
+            "label": "实际把躲炮火、拿轻语花、让发电机恢复供电和乘电梯接成一条能执行的顺序",
+            "signal": "systems_builder"
+          },
+          {
+            "id": "C",
+            "label": "自己切到回合制，一次次从掩体跑到下个落点，看到炮塔射线被实物挡下去时最投入",
+            "signal": "feedback_engine"
+          }
+        ],
+        "design_purpose": "只回顾已做过的回应、探索、构筑或个人记录，不拿未来重开愿望替代经历。",
+        "interpretation_boundary": "只回顾实际探索。外侧菌菇路线以有合法跳跃落点为前提，电梯要先把轻语花放入发电机。"
+      }
+    },
+    {
+      "slot_id": "BG311",
+      "append_variant": {
+        "id": "BG311.EXTRA1",
+        "text": "回想你实际找到过瑰晨修道院的彩窗和武器祭坛，并为了看清它们动过武器、信息或镜头。你当时最在意哪种记录？",
+        "scene": "把瑰晨修道院彩窗留在记录里",
+        "question_type": "experience_reflection",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_ROSYMORN",
+          "BG3EXT_PHOTO"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "读祭坛铭牌与能找到的黎明大师记述，把这间房如何纪念他们的线索按人物留下来",
+            "signal": "story_keeper"
+          },
+          {
+            "id": "B",
+            "label": "按自己扮演的考据者做记录的习惯，实际查了祭坛，再把手头正确武器摆回相应位置",
+            "signal": "role_player"
+          },
+          {
+            "id": "C",
+            "label": "自己在屋内移到合适位置，把彩窗、角色和武器祭坛摆进想要的画面后截图",
+            "signal": "style_director"
+          }
+        ],
+        "design_purpose": "只回顾已做过的回应、探索、构筑或个人记录，不拿未来重开愿望替代经历。",
+        "interpretation_boundary": "只回顾本次确实做过的摆放、读字牌、造型或拍照。专用拍照模式需 Patch 8。"
+      }
+    },
+    {
+      "slot_id": "BG312",
+      "append_variant": {
+        "id": "BG312.EXTRA1",
+        "text": "回想你在第一幕追随埃塞尔穿过茶室壁炉，实际打过地穴里有梅丽娜囚笼的战斗。哪件你真正做过的事最接近当时的投入？",
+        "scene": "鬼婆地穴里那只着火的笼子",
+        "question_type": "experience_reflection",
+        "modes": [],
+        "source_ids": [
+          "BG3EXT_MAYRINA",
+          "BG3EXT_LAIR"
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "按自己这次先保住人质的角色原则，在能出手时优先扔水熄掉笼火，随后才追鬼婆",
+            "signal": "role_player"
+          },
+          {
+            "id": "B",
+            "label": "当时把洞里的戏法与壁炉之前听过的话接起来，打完后确实去听了梅丽娜怎么讲自己的决定",
+            "signal": "story_keeper"
+          },
+          {
+            "id": "C",
+            "label": "给自己定一轮只用水瓶、投掷物和场上互动的限制，在人员安全还能继续时亲手试过这套打法",
+            "signal": "play_inventor"
+          }
+        ],
+        "design_purpose": "只回顾已做过的回应、探索、构筑或个人记录，不拿未来重开愿望替代经历。",
+        "interpretation_boundary": "水瓶必须确实能掷向可覆盖笼子的位置，熄火并不结束战斗。回顾限已采取的打法。"
+      }
+    }
+  ],
+  "SOURCES": [
+    {
+      "id": "BG3EXT_PHOTO",
+      "title": "Larian Patch 8 和 PC 拍照模式",
+      "url": "https://baldursgate3.game/news/the-final-patch-new-subclasses-photo-mode-and-cross-play_138/",
+      "kind": "developer_official",
+      "supports": [
+        "PC 拍照模式与角色站姿、相机；场外自由构图。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_BUILD",
+      "title": "SteamDB Windows 公共构筑",
+      "url": "https://steamdb.info/app/1086940/depots/",
+      "kind": "build_registry",
+      "supports": [
+        "2026-09-29 Steam 公共构筑 25605617。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_FORGE",
+      "title": "Larian 铸造奥秘与复仇之炉公告",
+      "url": "https://baldursgate3.game/news/community-update-14-forging-the-arcane_44",
+      "kind": "developer_official",
+      "supports": [
+        "复仇之炉与原生武器操作的开发者背景说明。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_ARRON",
+      "title": "阿伦初谈与交易表实玩",
+      "url": "https://bg3.wiki/wiki/Arron",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "阿伦初谈封锁、对难民的回应与可交易装备。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_ARABELLA",
+      "title": "卡哈与阿拉贝拉求情对话",
+      "url": "https://bg3.wiki/wiki/Save_Arabella",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "失败后第二次交涉与结算，成功或失败都能向父母报告。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_KAGHA",
+      "title": "调查卡哈任务流程",
+      "url": "https://bg3.wiki/wiki/Investigate_Kagha",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "在德鲁伊驻地查看荆棘仪式文字可建立独立调查。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_DICE",
+      "title": "正式游戏能力检定规则",
+      "url": "https://bg3.wiki/wiki/Skill_check",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "魅力、熟练和检定加值；不要求读档或事后重掷。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_DEPTHS",
+      "title": "低语深地地图与蜘蛛巢",
+      "url": "https://bg3.wiki/wiki/Whispering_Depths",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "村井进低语深地、岩台、网桥与蛛后走动。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_SPIDER",
+      "title": "相位蜘蛛族母打法",
+      "url": "https://bg3.wiki/wiki/Phase_Spider_Matriarch",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "火能摧毁网桥，药剂可抵抗其毒伤。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_ALFIRA",
+      "title": "阿尔菲拉的两条协助方式",
+      "url": "https://bg3.wiki/wiki/Alfira",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "林地山坡、用话鼓励和非诗人可以尝试乐器合奏。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_RAGZLIN",
+      "title": "拉格兹林王座厅实玩打法",
+      "url": "https://bg3.wiki/wiki/Dror_Ragzlin",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "横梁、悬挂火盆及铰链，战斗对敌对状态的影响。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_PRISON",
+      "title": "月出之塔牢狱与越狱对话",
+      "url": "https://bg3.wiki/wiki/Rescue_the_Tieflings",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "隔壁牢房，乌尔布伦能接收钝击武器，交工具后可等发令。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_GRYM",
+      "title": "格里姆过热状态和首要目标",
+      "url": "https://bg3.wiki/wiki/Grym",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "钝击弱点与锻锤需过热；优先追击最近命中的角色。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_CONVOY",
+      "title": "喀尼斯和月亮提灯的护送分岔",
+      "url": "https://bg3.wiki/wiki/Follow_the_Convoy",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "应召后能答应护送、交涉取灯或进入战斗。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_MOONRISE",
+      "title": "进入月出之塔的任务分支",
+      "url": "https://bg3.wiki/wiki/Infiltrate_Moonrise_Towers",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "护送、月亮提灯和向塔推进的前后流程。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_INN",
+      "title": "终焉光芒旅店实玩地点和居民",
+      "url": "https://bg3.wiki/wiki/Last_Light_Inn",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "结界、塔利供应点、炉边及难民所谈及的营救任务。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_TOWER",
+      "title": "奥术塔掩体、菌菇与发电机",
+      "url": "https://bg3.wiki/wiki/Arcane_Tower",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "炮塔、从外墙跳菌菇、塔底花园、发电机与电梯。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_ROSYMORN",
+      "title": "瑰晨修道院彩窗与祭坛",
+      "url": "https://bg3.wiki/wiki/Rosymorn_Monastery",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "彩窗、武器类型和对应铭牌、日光大师记述。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_MAYRINA",
+      "title": "埃塞尔和梅丽娜的地穴战",
+      "url": "https://bg3.wiki/wiki/Save_Mayrina",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "茶室壁炉通道、囚笼、投掷水瓶熄火及战后的梅丽娜对话。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    },
+    {
+      "id": "BG3EXT_LAIR",
+      "title": "鬼婆地下通道场景实玩",
+      "url": "https://bg3.wiki/wiki/Overgrown_Tunnel",
+      "kind": "community_gameplay_reference",
+      "supports": [
+        "从茶室壁炉进地下，场地中的开关、火笼和路段。"
+      ],
+      "limits": "只支持列出的条件或场景；题包未作 PC 实机试答。",
+      "checked_at": "2026-11-15",
+      "access": "public_body_read"
+    }
+  ]
+}

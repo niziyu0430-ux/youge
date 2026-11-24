@@ -1,0 +1,1299 @@
+{
+  "id": "gi",
+  "title": "原神",
+  "game_ids": [
+    "genshin-impact"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "default",
+      "label": "按自己熟悉的体验回答",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "GI01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "GI01.V1",
+          "text": "当前正从蒙德野外去交一项不紧急的任务，眼前有未到过的遗迹、仙灵引导与熟悉主路。现在先怎样走？",
+          "scene": "探索途中改变路线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "去遗迹看看，想亲眼认识那片未知空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按自己已记下的区域宝箱缺项，跟完眼前仙灵并取到已知奖励",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "继续交当前任务，把刚才人物的后续接上",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己仍有精力，主动沿熟悉主路散步，享受这条老路带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以当前真实可做的行动区分动机，不以通关效率、角色获取或固定剧情选择作能力判断。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI01.CORE",
+          "text": "你已从蒙德城外开始一小段自由行动，眼前有未走过的高处、已发现仙灵与熟悉主路，也有可继续任务。先做什么？",
+          "scene": "当前蒙德旅途路线",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走向未到过的高处，先看看能发现什么新地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按自己惦记的区域宝箱缺项跟完眼前仙灵，取回已知奖励",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "接着走已经推进的任务，听清刚才人物的后续",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "自己仍有精力，主动重走熟悉安全小路，享受已经认识的环境与日常带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "GI01.EXTRA1",
+          "text": "城门外有尚未采集的蒲公英，你当前可以使用风元素，也可以沿可通行的城外道路走远一些。此刻你更想先做什么？",
+          "scene": "蒙德城门外",
+          "question_type": "situational_action",
+          "modes": [],
+          "source_ids": [
+            "GIEXTRA_20261112_DANDELION",
+            "GIEXTRA_20261112_DEV"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用风元素采下种子，补充自己正在记录的蒙德特产收集清单",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "沿一条还没走过的城外道路前进，看看通往哪里",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只按题面明示的动机及真实行动或回顾计分。",
+          "interpretation_boundary": "玩家必须确实满足情境及既有经历；未实机，三个情境不能保证人人可答。"
+        }
+      ]
+    },
+    {
+      "id": "GI02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "GI02.V1",
+          "text": "你已把几名现有角色编进队伍，正站在会打的一群野外敌人前，角色切换与已学技能都能用。当前先做什么？",
+          "scene": "元素队伍磨合",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照现有元素与技能，调整切人顺序并实际打出一轮反应配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "把普攻、移动与切人接起来，体验声音和动作的连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "给这小场定每名角色只准出手一次、必须切到下一名后才许继续攻击的规则，实际试轮流限制的打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先投入背包里当前够用的经验或突破材料，继续提升正在培养的同一名角色",
+              "signal": "growth_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以当前真实可做的行动区分动机，不以通关效率、角色获取或固定剧情选择作能力判断。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI02.CORE",
+          "text": "只用早期已经拥有的角色，你正站在一群会打的蒙德敌人前；现有切人和技能都可用，也有一份够用经验材料。先做什么？",
+          "scene": "当前元素与已有材料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把现有角色的元素与技能先后调整一轮，实际检验配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "连着移动、普攻与切人，体验每次出手的直接反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "规定这小场每名现有角色出手一次就必须切人，不许一人连续进攻，实际试这种轮流限制",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "先使用手头够用材料提升同一名已培养角色，再带他继续行动",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "GI02.EXTRA1",
+          "text": "面对一名普通丘丘人时，队伍里已有能施加火元素和风元素的角色，技能均可用；确认火攻击后敌人仍存活且身上仍有火元素附着。你更想接着做什么？",
+          "scene": "风与火",
+          "question_type": "situational_action",
+          "modes": [],
+          "source_ids": [
+            "GIEXTRA_20261112_DEV",
+            "GIEXTRA_20261112_SWIRL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "切换风元素角色触发扩散，再把这次的技能衔接与自己以前试过的顺序比较，调整想继续使用的元素组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "用风元素触发扩散后，留意自己亲手切人、施放技能与命中的操作反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明示的动机及真实行动或回顾计分。",
+          "interpretation_boundary": "玩家必须确实满足情境及既有经历；未实机，三个情境不能保证人人可答。"
+        }
+      ]
+    },
+    {
+      "id": "GI03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "GI03.V1",
+          "text": "一名已经拥有的角色还没常驻队伍，当前能查看已解锁故事语音，也能用现有材料培养并到野外试用。先做什么？",
+          "scene": "角色加入后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "带出去打熟悉敌人，体验普攻、战技与切人的连续反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "完成一项当前材料够用的角色等级、天赋或装备培养",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把旅行者扮作自定的巡路冒险家，据此编好现有角色并先走已选巡查路线",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "打开已经解锁的角色故事与语音，把这个人的经历读清",
+              "signal": "story_keeper"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以当前真实可做的行动区分动机，不以通关效率、角色获取或固定剧情选择作能力判断。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI03.CORE",
+          "text": "你已用现有角色走到蒙德附近安全处，故事语音有已开放条目，当前材料也够做一项培养。现在先做什么？",
+          "scene": "当前已有角色的使用",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿少用但已拥有的角色在熟悉敌人前试招，体验动作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "用手头够用的经验或培养材料，给同一角色留一次持续提升",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "按自定的巡路冒险家身份选现有队伍，先查已知道路再沿巡查路线走",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "阅读已开放的角色故事与语音，把他的前后经历联系起来",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "GI03.EXTRA1",
+          "text": "打开一名你已经拥有的角色界面：该角色有可以提升的天赋，所需材料与摩拉足够；你也仍可以关闭界面回到野外。你更想先做什么？",
+          "scene": "培养已有角色",
+          "question_type": "situational_action",
+          "modes": [],
+          "source_ids": [
+            "GIEXTRA_20261112_TALENT",
+            "GIEXTRA_20261112_DEV"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把材料用于这名自己打算长期使用的角色，继续积累其可保留的成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "暂时保留材料，回野外用这名角色试一试已有技能的出手与命中手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明示的动机及真实行动或回顾计分。",
+          "interpretation_boundary": "玩家必须确实满足情境及既有经历；未实机，三个情境不能保证人人可答。"
+        }
+      ]
+    },
+    {
+      "id": "GI04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "GI04.V1",
+          "text": "当前在角色与背包菜单前，两名已拥有角色缺不同材料，地图与已开放秘境也能查看，自己还能自由外出。现在先做什么？",
+          "scene": "材料安排",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_GROWTH",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对当前可进秘境、已有材料与采集地点，把这一趟准备和返回接成路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "用当前够用材料培养自己惦记的那名角色，留下会保留的提升",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "补上当前队伍一项元素与技能衔接，再去熟悉敌人前实际检验",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先去一条未走过的野外支路，发现那边有什么，不以采集缺料为目标",
+              "signal": "wanderer"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以当前真实可做的行动区分动机，不以通关效率、角色获取或固定剧情选择作能力判断。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI04.CORE",
+          "text": "当前已打开背包与角色菜单，手里有可用培养材料，也能自由到蒙德野外走动。现在先做什么？",
+          "scene": "当前材料路线与培养",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对已有材料与可达采集点，排好这一趟培养、出发与返回",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先使用够用材料提升正在培养的同一名角色",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "让现有元素角色的出手先后互补，再到熟悉敌人前打出一轮",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先走进未探过的可达支路，不为材料收获而绕行",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "GI04.EXTRA1",
+          "text": "你站在可用的烹饪点旁，已学会甜甜花酿鸡，鸟肉与甜甜花足够做多份；附近也有你已经确认安全、但尚未去过的道路。你更想先做什么？",
+          "scene": "给旅途备餐",
+          "question_type": "situational_action",
+          "modes": [],
+          "source_ids": [
+            "GIEXTRA_20261112_FOOD",
+            "GIEXTRA_20261112_DEV"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为之后多次外出检查鸟肉、甜甜花及现有料理的余量，先做一批甜甜花酿鸡，并计划以后何时补充食材",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "暂时不做饭，沿附近没有走过的道路看看新地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只按题面明示的动机及真实行动或回顾计分。",
+          "interpretation_boundary": "玩家必须确实满足情境及既有经历；未实机，三个情境不能保证人人可答。"
+        }
+      ]
+    },
+    {
+      "id": "GI05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "GI05.V1",
+          "text": "你已再次进入一只自己会打的世界首领的当前交战，现有队伍足够应付，也能退出换别的活动。先做什么？",
+          "scene": "世界首领的反复尝试",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定熟悉角色，专练一次已见招式的闪避和出手",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "调整现有角色与技能先后，再实际验证一轮元素配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "自定这场禁用普攻、只许已有角色战技与躲避的规则，实际试出限制后的打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "退出交战，走向地图上自己尚未亲自去过的可达区域",
+              "signal": "wanderer"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以当前真实可做的行动区分动机，不以通关效率、角色获取或固定剧情选择作能力判断。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI05.CORE",
+          "text": "一群已经会打的蒙德敌人就在眼前，现有角色都能切换，也能绕开去别处。现在先做什么？",
+          "scene": "当前蒙德普通交火",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用熟悉角色反复练一次已见攻击的闪避",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "调整现有元素角色的技能先后，实际打出一轮配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "规定这小场不用普攻、只许已有角色战技和躲避，亲自试这种限制怎样改变战斗",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "转去自己未到过的可达小路，看看那里有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "GI05.EXTRA1",
+          "text": "你再次遇见木盾丘丘人，当前队伍有能施加火元素的角色、敌人也能正常攻击。你更想把这次战斗用在哪里？",
+          "scene": "木盾战斗练习",
+          "question_type": "situational_action",
+          "modes": [],
+          "source_ids": [
+            "GIEXTRA_20261112_SHIELD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿用之前练过的闪避和反击方式，继续反复练习避开它的攻击时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手施放火元素烧掉它的木盾，感受施放技能和木盾燃烧的直接反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "只按题面明示的动机及真实行动或回顾计分。",
+          "interpretation_boundary": "玩家必须确实满足情境及既有经历；未实机，三个情境不能保证人人可答。"
+        }
+      ]
+    },
+    {
+      "id": "GI06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "GI06.V1",
+          "text": "你已经完成芙宁娜相关舞台故事并见过《轻涟》，现在已到枫丹廷可自由活动的街边；已完成任务文本与普通取景都可用。先做什么？",
+          "scene": "芙宁娜与轻涟",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_FURINA",
+            "GI_LOG_V5",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看已开放的任务对话，把她前后经历与这次登台联系清楚",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自己给旅行者定的剧场采风人身份，先走可达剧场外围，再与当前可交谈市民交流",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "挑街景与现有角色的位置，用普通镜头截出自己对这段舞台故事的主题画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "联系一位也真正体验过这段内容的真人熟人，聊聊彼此记住的不同细节",
+              "signal": "social_spark"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以当前真实可做的行动区分动机，不以通关效率、角色获取或固定剧情选择作能力判断。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI06.DRAFTALT1",
+          "text": "没玩过芙宁娜相关故事。当前已回到安全蒙德街边，最早人物对话已经开放，普通镜头与可交谈市民都能接触。现在先做什么？",
+          "scene": "较早的基础情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看已开放的最初任务对话，把人物为何同行联系清楚",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的城市采风人身份，先走城门附近再与当前可交谈市民交流",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "移动现有角色和镜头，截出自己安排的蒙德街景主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "走进城墙旁没看过的可达通路，看看那一边有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "独立蒙德早期情境；身份有实际行动，摄影有个人构图，未体验后期或联机不推断动机。",
+          "interpretation_boundary": "按当前情境解释；不假定与原题统计等值。"
+        },
+        {
+          "id": "GI06.CORE",
+          "text": "没玩过后期舞台故事。当前你已在蒙德安全街边，可以查看最早已开放的人物对话、移动角色与调整普通镜头。先做什么？",
+          "scene": "当前蒙德人物与取景",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看已开放对话，把最初人物为何同行联系清楚",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自定的城市采风人身份，先走城门外沿，再与当前可交谈市民交流",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "选择当前角色、城墙与街灯的位置，用普通截图做自己的蒙德主题画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "沿城墙旁未看过的可达通路走走，发现一个新角落",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "GI07.V1",
+          "text": "你已经历妮露在花神诞日献舞的故事，当前回到须弥城可自由走动的大巴扎，不需重播演出。现在先做什么？",
+          "scene": "花神之舞",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_DANCE",
+            "GI_CORE",
+            "GI_LOG_V5",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查看已经开放的任务对话，把庆典前后的人物愿望接起来",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选柱廊、帷布与当前角色的位置，用普通截图做一张自己安排的庆典主题画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "按自定的集市采风人身份，先查看可达舞台外沿，再与当前可交谈摊主交流",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "从大巴扎走进自己未看过的可达街巷，看看须弥城另一侧",
+              "signal": "wanderer"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以当前真实可做的行动区分动机，不以通关效率、角色获取或固定剧情选择作能力判断。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI07.DRAFTALT1",
+          "text": "没经历须弥演出。你现在已在蒙德自由活动，最初人物的话还记得，安全街景和小路都可走。先做什么？",
+          "scene": "较早的基础情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "停步把最初人物的话和刚见过的事件联系清楚",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选街角建筑、现有角色与镜头位置，截一张自己主题的城市画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "按自定巡城记录者身份，先走城门再查看城墙边缘，实际按这个习惯行走",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "转进未看过的可达小路，亲眼看看另一处街角",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "独立蒙德早期情境；身份有实际行动，摄影有个人构图，未体验后期或联机不推断动机。",
+          "interpretation_boundary": "按当前情境解释；不假定与原题统计等值。"
+        },
+        {
+          "id": "GI07.CORE",
+          "text": "你现在已回到能自由走动的蒙德，刚听过最初人物交流，主路与城墙边小路都可走。先做什么？",
+          "scene": "当前蒙德街景停留",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在可停步处把刚听过的话与眼前事件联系清楚",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选角色、街景与当前镜头的位置，截出自己安排的城市画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "按自定的巡城记录者习惯，先走城门再查城墙小路，实际维持这套行动次序",
+              "signal": "role_player"
+            },
+            {
+              "id": "D",
+              "label": "走进以前没看过的可达城墙通道，看看它通向哪边",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "GI08.V1",
+          "text": "尘歌壶当前空出一角，已有桌椅、建筑与道路摆设可放，想补的一组摆设也已学会且材料够。现在先做什么？",
+          "scene": "尘歌壶的一块空地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_TEAPOT",
+            "GI_START_V5",
+            "GI_HOUSING_DEV_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手调整建筑、路径与视线，排出自己选定的庭院主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把旅行者扮作自定的驿站主人，按这个身份布好待客桌椅与往来通道，再亲自走看",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "制作并摆上自己预先列入收藏目标的一组摆设，补齐已知缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "自己仍有精力，主动坐回熟悉壶中角落，享受已经布成的家园与惯常停留",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "以当前真实可做的行动区分动机，不以通关效率、角色获取或固定剧情选择作能力判断。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI08.DRAFTALT1",
+          "text": "没有使用尘歌壶。当前在蒙德一处已熟悉的安全风景前，已知旁边有一件尚未取的宝箱，主路与小路都可走。现在先做什么？",
+          "scene": "较早的基础情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动现有角色与镜头，把人物、树与城墙排成自己想表达的画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "按自定的野外巡路者身份，先查看路口再沿已选路线走完这一段",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "取回已确认位置的宝箱，补上自己预先记下的区域缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "自己仍有精力，主动重走熟悉小路，享受已经认识的环境与日常带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "独立蒙德早期情境；身份有实际行动，摄影有个人构图，未体验后期或联机不推断动机。",
+          "interpretation_boundary": "按当前情境解释；不假定与原题统计等值。"
+        },
+        {
+          "id": "GI08.CORE",
+          "text": "没有使用尘歌壶。当前你已到蒙德近郊一段安全熟路，有可调整镜头的树下空地，也知道附近一处尚未取的宝箱。先做什么？",
+          "scene": "当前近郊熟路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动现有角色与当前镜头，让树、城墙和远景排成自己的主题画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把旅行者当作自定巡路冒险家，按先查路口再沿边缘查看的习惯走完这一段",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "去取自己已经确认位置的宝箱，补上预先记着的区域缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "自己仍有精力，主动重走熟悉安全小路，享受已经认识的环境与日常带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "GI09.V1",
+          "text": "回想一次确实与真人熟人一起玩原神、且没有紧迫任务的同游，哪件你们真正做过的事最有分量？",
+          "scene": "联机之后的安排",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "边走边聊，把路上意外变成两个人共同记住的经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "说清各自材料需求与分工，按共同同意的路线实际推进了一段",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "亲自选地点、站位与镜头，拍出自己想呈现的一组同游画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，主动一起回熟悉地点从容停留，享受已经认识的环境带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "回顾本人已经做过的具体行为；不把未来愿望当成经历，也不强求联机、后期剧情或额外角色。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI09.DRAFTALT1",
+          "text": "没进入过彼此世界，只回想一次你确实与玩原神的真人熟人交流的经历，哪件已经做过的事最有分量？",
+          "scene": "较早的基础情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "互相讲过游戏里的事，彼此的不同记忆成了共同经历",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "约好共同制作一份蒙德采集路线，两人分区实地走过，再汇总彼此结果完成这份共同记录",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "亲自挑选已有截图并安排主题顺序，与对方交换过一组自己的旅途画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，各自在自己的世界重走熟悉安全小路，边随意聊边享受已有环境带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "真实过去的真人交流或共同目标安排；没有任何真人交流时使用单人CORE回顾。",
+          "interpretation_boundary": "按当前情境解释；不假定与原题统计等值。"
+        },
+        {
+          "id": "GI09.CORE",
+          "text": "没有真人同游经历，只回想自己在蒙德确实走过的一小段自由旅程，哪件已经做过的事最有分量？",
+          "scene": "真实单人蒙德旅程",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走入未去过的支路，亲眼发现了原先不知道的空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把已有任务、材料点与返回路线排好，实际走顺了一趟",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "移动现有角色与普通镜头，截出了自己主题的街景画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，主动重走熟悉安全小路，享受已经认识的环境与日常带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        }
+      ]
+    },
+    {
+      "id": "GI10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "GI10.V1",
+          "text": "回想一处自己确实遇过的野外元素机关，哪件当时真正做过的事最值得记住？",
+          "scene": "元素机关的卡点",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "调整元素与触发先后，记录结果并验证了自己的解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "暂时离开机关，走入附近未知支路，亲眼发现了新空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "查过针对当前步骤的一小段提示，余下仍由自己试完",
+              "signal": "guide_hint"
+            },
+            {
+              "id": "D",
+              "label": "看过完整做法并实际通过，把后续时间给了自己另一个想玩的内容",
+              "signal": "guide_full_solution"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "回顾本人已经做过的具体行为；不把未来愿望当成经历，也不强求联机、后期剧情或额外角色。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI10.CORE",
+          "text": "只回想自己最早真正遇过的一处蒙德野外互动装置，哪件当时做过的事最值得记住？",
+          "scene": "真实早期机关经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照图案、元素与触发结果，实际验证了一种解释",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先走入旁边没看过的通路，亲眼发现了另一处空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "查过当前步骤的一点提示，剩下仍自己试过",
+              "signal": "guide_hint"
+            },
+            {
+              "id": "D",
+              "label": "看过完整做法并实际通过，让自己能继续别的已选内容",
+              "signal": "guide_full_solution"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "GI10.EXTRA1",
+          "text": "回想你确实遇过一个位置较高的风神瞳，附近也有能够形成风场的风种子，你曾尝试取得它。哪件亲手做过的事更让你记得？",
+          "scene": "高处的风神瞳",
+          "question_type": "experience_reflection",
+          "modes": [],
+          "source_ids": [
+            "GIEXTRA_20261112_OCULUS",
+            "GIEXTRA_20261112_DEV"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时卡住后只看过当前步骤的一小段提示，再自行操作到达并取得它",
+              "signal": "guide_hint"
+            },
+            {
+              "id": "B",
+              "label": "猜想附近三个风种子能够形成风场，实际收集并借风场上升验证了自己的想法",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "只按题面明示的动机及真实行动或回顾计分。",
+          "interpretation_boundary": "玩家必须确实满足情境及既有经历；未实机，三个情境不能保证人人可答。"
+        }
+      ]
+    },
+    {
+      "id": "GI11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "GI11.V1",
+          "text": "回想一次自己真正回到熟悉风起地的停留，当时仍有精力也能接着做任务。哪件已经做过的事最有吸引力？",
+          "scene": "熟悉地点的停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "调整人物、时间与当前镜头，截出自己选定主题的树与旅行者画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "按自定的巡路冒险家身份编过现有队伍，并实际沿自己选定的巡查次序走完一段",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "主动重走熟悉树下与路边日常，享受已经认识的环境带来的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "与也玩过这里的真人熟人交换过这段经历，彼此的不同记忆成了共同话题",
+              "signal": "social_spark"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "回顾本人已经做过的具体行为；不把未来愿望当成经历，也不强求联机、后期剧情或额外角色。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI11.CORE",
+          "text": "没有同好交流或后期剧情经历，只回想自己在熟悉蒙德近郊真正停留过的一段，哪件事最有吸引力？",
+          "scene": "真实近郊熟悉停留",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移动现有角色和镜头，截出了自己选定主题的人物与树影画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "按自定的巡路冒险家身份选过现有队伍，并实际依自己的巡查次序走完熟路",
+              "signal": "role_player"
+            },
+            {
+              "id": "C",
+              "label": "当时仍有精力，主动重走熟悉安全小路，享受已经认识的环境与日常带来的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "把已听人物的话与路上见过的事联系起来，让最初同行有了前后故事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "GI11.EXTRA1",
+          "text": "回想你确实去过的一处熟悉、安全的蒙德野外，当时你仍有精力继续探索。哪种已经发生的经历更让你留恋？",
+          "scene": "熟悉的蒙德野外",
+          "question_type": "experience_reflection",
+          "modes": [],
+          "source_ids": [
+            "GIEXTRA_20261112_PHOTO",
+            "GIEXTRA_20261112_DEV"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "主动在熟悉的景色前停留，享受认识的环境带来的安定",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "调整人物与镜头构图，拍下自己喜欢的蒙德野外画面",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "只按题面明示的动机及真实行动或回顾计分。",
+          "interpretation_boundary": "玩家必须确实满足情境及既有经历；未实机，三个情境不能保证人人可答。"
+        }
+      ]
+    },
+    {
+      "id": "GI12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "GI12.V1",
+          "text": "回看已经玩过的提瓦特旅程，哪件自己真正做出的事最能说明当时的投入？",
+          "scene": "旅途记录的重点",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿陌生通路亲自走过，把原先没去过的地方连成了具体认识",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "持续投入同一角色的等级、天赋或装备强化，提升在后续仍能保留",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "调整现有角色、元素与技能次序，实际验证过一套互补组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "按自己明确记着的宝箱或物品收藏清单，取回并补齐过一个缺项",
+              "signal": "collector"
+            }
+          ],
+          "modes": [],
+          "design_purpose": "回顾本人已经做过的具体行为；不把未来愿望当成经历，也不强求联机、后期剧情或额外角色。",
+          "interpretation_boundary": "a须实际构图或布置；r须自定身份影响已有行动；g须保留角色培养；q/o只指明确真人。未体验可使用独立早期替代。"
+        },
+        {
+          "id": "GI12.CORE",
+          "text": "只回看最早用已有角色走过的蒙德旅程，哪件自己真做过的事最能说明投入？",
+          "scene": "已经走过的蒙德",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GI_CORE",
+            "GI_GROWTH",
+            "GI_START_V5",
+            "GI_LOG_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲自走进主路旁未知的小房间或山路，看到了新空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "给同一名已有角色投入过可保留的等级或培养材料，后续仍能使用提升",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "C",
+              "label": "让已有角色的元素与技能先后互补，实际试出了一套配合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "取回自己已确认位置且预先惦记的宝箱或物品，收藏少了一个缺口",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "手写蒙德早期独立情境；按当前行动或真实过去解释，不要求新角色、舞台故事、家园或真人同游。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "GI12.EXTRA1",
+          "text": "回想你在蒙德确实采集过的一段旅程，下面哪件曾经做过的事更体现你的投入？",
+          "scene": "风神瞳收集记录",
+          "question_type": "experience_reflection",
+          "modes": [],
+          "source_ids": [
+            "GIEXTRA_20261112_OCULUS_MAP",
+            "GIEXTRA_20261112_TALENT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照自己记下的风神瞳收集清单，亲自找到并补齐过一个缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "为长期培养的一名已有角色，持续收集其所需材料，并多次投入该角色的成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "只按题面明示的动机及真实行动或回顾计分。",
+          "interpretation_boundary": "玩家必须确实满足情境及既有经历；未实机，三个情境不能保证人人可答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+472ab1e7df84"
+}

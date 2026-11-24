@@ -1,0 +1,1000 @@
+{
+  "id": "goatsim3pc",
+  "title": "模拟山羊3",
+  "game_ids": [
+    "steam-850190"
+  ],
+  "scope": "Coffee Stain North《山羊模拟器3》Steam Windows 850190 单人基础地图圣安哥拉，围绕初始牧场、墓地和周边城区的本体事件，不依赖付费物品或扩展。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "圣安哥拉岛",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "GOATSIM3PC01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "第一座塔和入口",
+          "text": "下车后走到面前的第一座山羊塔，刚完成同步，塔下入口已经打开，附近的农田也能步行过去。你会先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_STORE",
+            "GOATSIM3PC_PC",
+            "GOATSIM3PC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先顺农田边的路绕一圈，回来再进城堡",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先进塔下入口，站上地板的感应板看城堡里有什么",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一座塔和入口」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC01.V1"
+        },
+        {
+          "scene": "红门前的山坡",
+          "text": "你顺着山坡走到了 Dilbo's Journey 的红门前，门还没撞开，外面的山坡能接着走。你会先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_SECRET"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先顶倒红门，看看藏在里面的东西",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先沿山坡继续走一段，红门位置记下来再回",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「红门前的山坡」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC01.ALT1"
+        },
+        {
+          "scene": "传送门刚搭好",
+          "text": "城郊的蓝家具已经拆出足够部件，屋里的传送门刚组好。你还记得旁边蓝家具所在的车库，门仍可进。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_SWE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿原路回车库，看先前运家具的通道还有什么没查看",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "进刚通电的门，看看 Swekia 仓库的另一头",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「传送门刚搭好」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "墓地洞口冒头",
+          "text": "墓地的打地鼠事件已经触发，当前洞口还够得着，旁边另一个洞口间的空地也能走。你想怎样应付时隐时现的掘墓人？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "守近处洞口，等他露头就撞",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "先移到两洞之间，让自己能转身追下一处露头",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「墓地洞口冒头」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC02.V1"
+        },
+        {
+          "scene": "停车场的弹头",
+          "text": "实验塔已经把弹头发射到停车场。你站在还没引爆的弹头旁，停车场还能自由走动。接下来你怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_RED"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先绕弹头和车位看清它落在哪里，再回来撞",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "这就撞弹头，看看爆炸把什么带起来",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「停车场的弹头」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC02.ALT1"
+        },
+        {
+          "scene": "评委还没亮勾",
+          "text": "农场才艺舞台的评委还没全亮绿勾，你站在舞台中央，能做空翻、叫喊或选表情。你会先试哪种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_JURY",
+            "GOATSIM3PC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在原地翻一遍，落稳后再接下一个动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "打开表情轮，挑一个完全不同的动作演给他们看",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "在跳跃之间加叫声，看两种动作接起来如何",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「评委还没亮勾」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "喷漆带哪一面墙",
+          "text": "你已经拿到市中心修壁画用的喷漆，Tell Us 广场后的人像和加油站对面的花图都还没补。你会先去哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_ART",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去加油站对面，爬上平台补花图",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先绕到广告牌后上楼梯，把女人像补起来",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「喷漆带哪一面墙」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC03.V1"
+        },
+        {
+          "scene": "仓门前的收割机",
+          "text": "收割机缺的部件正被绳子吊在谷仓上方，你刚看见通向二层的楼梯，还能在机器旁活动。你会先做哪步？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "站在机器旁看部件和机身怎么对得上，再上楼",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "直接上二层，把固定绳子的两个挂钩撞掉",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「仓门前的收割机」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC03.ALT1"
+        },
+        {
+          "scene": "食品厂两条入口",
+          "text": "食品厂的流水线坏了。你在厂房外，知道墙底有可钻的缺口，也确认屋顶的长输送带通到里面。你会从哪里进去？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_VIDEO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从外侧上屋顶，搭长输送带进入厂房",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "从墙底缺口钻进去，尽快到机器边",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「食品厂两条入口」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "排着的三个花盆",
+          "text": "园艺课要给三个大花盆施肥，再靠叫声催长。你已经用舌头拖着肥料袋，三盆都能走到，近处还有一盆没撒。你会怎么走这一趟？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GROW",
+            "GOATSIM3PC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿花盆排列的方向把袋子逐盆拖过去，三盆备好再回头叫",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "从较远的一盆开始拖回近侧，最后在刚撒的近处开始叫",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「排着的三个花盆」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC04.V1"
+        },
+        {
+          "scene": "鱼池里确认名字",
+          "text": "你在找 Steve，眼前几条鱼混在一起。舔中的东西会显示名字，池边是能上岸的。你会怎么搜？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_STEVE",
+            "GOATSIM3PC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿池边换个位置，挑更容易够到的鱼试，再核对名字",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "一条条舔过去，确认显示 Steve 后才往岸上拖",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「鱼池里确认名字」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC04.ALT1"
+        },
+        {
+          "scene": "城郊屋里的大锅",
+          "text": "城郊烹饪课的大锅接受各种能搬来的配料。当下锅边有松动道具，也有能舔住带走的路人。三样还没凑齐，你会先试什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用锅边顺手的道具投进去，观察计数再补齐",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用舌头把一个路人拉上锅边，试试游戏是否算这一份",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「城郊屋里的大锅」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "台前的小鸡食盆",
+          "text": "养鸡棚外有一只红盆和铃，对面桌上还有南瓜；你现在哪一样都还没动。你会从哪里下手？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_SECRET"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先撞一次铃看它本身有什么反应，再去搬南瓜",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先把南瓜舔到盆里，再去撞铃",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「台前的小鸡食盆」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC05.V1"
+        },
+        {
+          "scene": "发射按钮旁的面板",
+          "text": "你进了城郊实验塔，已经把会妨碍你的科学家赶开。坐标键和发射键都在面前。你会先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_RED",
+            "GOATSIM3PC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先分开试两个坐标按钮，看读数怎么变",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先以当前坐标发射一次，看结果再决定怎么改读数",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「发射按钮旁的面板」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC05.ALT1"
+        },
+        {
+          "scene": "货箱堆外的厕所",
+          "text": "上锁厕所周围还有没撞开的木箱。一小堆余下的低箱在另一边，上层木箱也看得见，对面墙可以借来起跳。你先撞哪处？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_VIDEO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先借对面墙起跳，试着把够得着的上层箱子撞开",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "从地面绕去撞余下的低处木箱，试试这一堆能不能出钥匙",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「货箱堆外的厕所」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "蓝家具从哪里拆",
+          "text": "城郊屋里的传送门还缺部件，院外车库和房内各有未拆的蓝色家具，你能自由进出。你会去哪拿下一件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_SWE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拆屋里离组装点较近的一件，少搬一段路",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先去开着的车库翻一翻，顺便看看院外还有哪些零件",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「蓝家具从哪里拆」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC06.V1"
+        },
+        {
+          "scene": "拖车已经能开",
+          "text": "搬迁事件旁的拖车能开，你还没发射牵引钩。车头前方留有转向空间，房屋外栏也看得见。你会先怎么摆车？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_TOW",
+            "GOATSIM3PC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先靠近围栏把钩挂上，再试着调整车的方向开走",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先把车摆到拉走时能直行的位置，再钩围栏",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「拖车已经能开」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC06.ALT1"
+        },
+        {
+          "scene": "抬头找下一层服务器",
+          "text": "你在工厂烟囱里的服务器室，楼下设备已经毁掉。你穿着可用的喷气背包，也站得到中央可把你弹起的装置边。你怎么去够上一层？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用喷气背包一点点调高度，对准上一层的平台",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先让中央装置把我弹起来，在空中观察能落在哪里",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「抬头找下一层服务器」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "戴着改车头饰",
+          "text": "牧场车库旁，你已经拿到改车头饰，眼前是游戏现在确实允许驾驶和改装的整车，车库外有能停的空地。你想先试哪种做法？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_RICER",
+            "GOATSIM3PC_GEAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把车开去门外空地，再下车用头饰，在能开动的位置试改完的车",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "就在车旁发动头饰技能，先看车上有哪些变化",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「戴着改车头饰」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC07.V1"
+        },
+        {
+          "scene": "先敲哪口钟",
+          "text": "你已站上墓地教堂钟楼，三口钟都够得着，还没把旋律敲对。接下来你会怎么试？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先各撞一下，分辨三口钟的音高再组旋律",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先把听过的开头按同样节奏敲一遍，再接着试后半段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「先敲哪口钟」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC07.ALT1"
+        },
+        {
+          "scene": "两座可用的风扇",
+          "text": "实验塔门高在头顶，塔脚有两台仍在转的风扇，任何一侧都能走过去。你会怎么尝试进门？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_RED"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先选自己更好瞄入口的一侧，调整落点再借风上去",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "走到较近那台就起跳，直奔塔顶入口",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「两座可用的风扇」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "墓碑旁还剩两处祭拜",
+          "text": "在墓地，你刚向一座带十字与鲜花的墓献过敬意，另外两座都可走到，你还没祭拜。你会怎样找齐？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿墓碑一排排查看标志，走到符合的那座便互动",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先往教堂旁绕过去，顺着走到新的一侧再找余下墓碑",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「墓碑旁还剩两处祭拜」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC08.V1"
+        },
+        {
+          "scene": "喷完羊图之前",
+          "text": "你已经带着喷漆抵达沿海表演台后方，楼上的羊图还没补，而加油站旁的花图也还在清单里。你会怎样排这两个点？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_ART",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回街边补一片低处墙面，把上楼这一段留到最后一趟",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "眼前先上楼补羊图，再回街边补花图",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「喷完羊图之前」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC08.ALT1"
+        },
+        {
+          "scene": "麦地边的最后一个稻草人",
+          "text": "圈里已有两个稻草人，还缺一个。近处地边和稍远的麦地里各有一个，舌头都可拖动。你会选哪条路线？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_VIDEO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拖地边最近那个，先把三个位置填上",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "去麦地深一点拖一个回来，顺手走一段刚才没绕过的田埂",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「麦地边的最后一个稻草人」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "头一回钻进仓库",
+          "text": "回想你组过 Swekia 的传送门，也穿过门进了仓库。这整件事里，你更愿意重来哪一段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_SWE",
+            "GOATSIM3PC_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "跳进刚拼成的门，走到完全没见过的仓库",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "拆不同房间的蓝家具，来回把缺件搬齐",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「头一回钻进仓库」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC09.V1"
+        },
+        {
+          "scene": "祭坛第一次给出本能",
+          "text": "回想第一次进城堡、吸收祭坛智慧以后，你既翻过本能列表，也用最初的羊练过空翻。当时哪一刻更让你想继续玩？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_PC",
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_TRICK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "打开列表发现原来能把那些古怪动作逐项做掉",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "离开菜单后把一次翻转做顺，亲眼看见这只羊落稳",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「祭坛第一次给出本能」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC09.ALT1"
+        },
+        {
+          "scene": "钓鱼池和三叉戟",
+          "text": "你在大量捕鱼事件里曾撞炸药入水，也捡过人鱼三叉戟试着抛鱼。哪一段更让你想再玩一会儿？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_VIDEO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用三叉戟抛鱼，把刚才的捕鱼事件变成另一种玩法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "一次次撞炸药，看水池状态和任务进度变动",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「钓鱼池和三叉戟」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "从普通羊换上稻草人",
+          "text": "你曾把三只稻草人拖进那个圈，也在得到外观后亲自换上过稻草人。两件事里你更常想起哪个瞬间？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_GEAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拖回最后一个，看到圈子终于收齐",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "换成刚召来的稻草人在田间走，感觉换了个角色",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「从普通羊换上稻草人」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC10.V1"
+        },
+        {
+          "scene": "两种完全不同的墓地声音",
+          "text": "在这片墓地，你试过撞教堂钟楼的三口钟，也追着不同洞口露头的掘墓人撞。哪一种让你更想和别人讲？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "追到下一处洞口撞中掘墓人，像自己站进了打地鼠机",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "敲钟时把分散的音高串成一段熟悉的旋律",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「两种完全不同的墓地声音」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC10.ALT1"
+        },
+        {
+          "scene": "墙面重新显色",
+          "text": "修街头画时，你曾上车用金属平台找第一幅鸟图，也到过海边找到羊图。哪种过程最让你愿意再去逛市中心？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_ART",
+            "GOATSIM3PC_INDEX"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在平台上用喷漆让眼前的鸟重新显色",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "绕过表演台跟着海边路线找到了另一面墙",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「墙面重新显色」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "拖房和接流水线",
+          "text": "回想你确实开拖车钩过围栏，也在食品厂把缺失的输送带零件拖回过安装位。哪种劳动更容易让你忘了看任务进度？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_TOW",
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_VIDEO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "逐件找回不同位置的零件，看流水线重新接起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "挂钩后加速，盯着整座房子被扯动",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「拖房和接流水线」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC11.V1"
+        },
+        {
+          "scene": "现场两个大型实验",
+          "text": "你亲手触发过发射塔的事件，也拼出过把羊送进仓库的门。哪种结果更符合你在圣安哥拉玩的乐趣？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_RED",
+            "GOATSIM3PC_SWE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让弹头从塔外飞到停车场，再用山羊头撞响它",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把零散的家具部件拼成一扇能亲自跳进去试用的门",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「现场两个大型实验」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC11.ALT1"
+        },
+        {
+          "scene": "小饰品和现场跳台",
+          "text": "在牧场附近，你曾找过改车店招牌上的小饰品，也开车走过有标记的跳台。哪一种经历更容易让你暂停正在做的任务？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_MAP",
+            "GOATSIM3PC_RAMP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看到跳台就想开车回来，重试一次起跳路线",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看见招牌上的小饰品就想换角度爬上去拿",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「小饰品和现场跳台」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "GOATSIM3PC12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "城郊导弹留下的衣服",
+          "text": "你在城郊触发完弹头爆炸，又穿过事件送的 Fallout Boi 造型。回想这件事，你最想留下的是什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_RED",
+            "GOATSIM3PC_GEAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "弹头从发射塔落到停车场再被我撞爆的整段小故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "奖励页里那套造型，之后出门还能一眼认出这只羊",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「城郊导弹留下的衣服」中的实际行动与取舍。",
+          "interpretation_boundary": "城郊、市中心和其他本体街区的可选行动。",
+          "id": "GOATSIM3PC12.V1"
+        },
+        {
+          "scene": "牛铃和花冠",
+          "text": "你在初到牧场时试穿过起始装备：走路时会响的牛铃和只改变造型的花冠。回想那段随便跑的时间，你更容易保留什么设置？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_STORE",
+            "GOATSIM3PC_GEAR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留下花冠，让截图里的羊保持自己喜欢的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "留下牛铃，每迈步都能听见这身装备在工作",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「牛铃和花冠」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场、农田和山羊塔附近可单人体验的基础行动。",
+          "id": "GOATSIM3PC12.ALT1"
+        },
+        {
+          "scene": "后院机器两次改变体形",
+          "text": "在后院实验中，你曾给机器的部件上油，也钻过入口体验缩小和恢复体形。哪一步最容易让你停下来多看一眼？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "GOATSIM3PC_GUIDE",
+            "GOATSIM3PC_VIDEO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "带着油踩对部件，看原本没法用的机器开始运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把山羊丢进机器，看场景突然变得和原先比例不同",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「后院机器两次改变体形」中的实际行动与取舍。",
+          "interpretation_boundary": "牧场边缘、墓地、工厂和水边的可独立探索情境。",
+          "id": "GOATSIM3PC12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+65e2e3588ebf"
+}

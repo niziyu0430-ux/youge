@@ -25,7 +25,8 @@ def bank():
 
 def pack_for(game_id,version=None):
     current=next((p for p in bank()['packs'] if game_id in p['game_ids']),None)
-    if current is None or version is None or current['version']==version:return current
+    if version is None:return current
+    if current is not None and current['version']==version:return current
     entry=next((e for e in bank()['pack_history'] if game_id in e['game_ids'] and e['version']==version),None)
     if entry:return json.loads((ROOT/entry['path']).read_text(encoding='utf-8'))
     return None
@@ -74,7 +75,7 @@ def public_question(item):
     return {k:deepcopy(item[k]) for k in fields if k in item}|{'options':[{'id':o['id'],'label':o['label']} for o in item['options']]}
 
 
-def normalize(raw):
+def _normalized_form(raw):
     if not isinstance(raw,dict) or not compatible(raw.get('versions')):raise InputError('答卷与专属题版本不同，请使用原版本查看。')
     gid=raw.get('game_id');pack=pack_for(gid,raw.get('pack_version'))
     if pack is None:raise InputError('这款游戏尚未接入本版专属题。')
@@ -92,10 +93,15 @@ def normalize(raw):
         if not isinstance(e,dict) or set(e)!={'question_id','answer'} or not isinstance(e['question_id'],str) or e['answer'] not in ('A','B','C','D'):raise InputError('补问记录不正确。')
     name=raw.get('display_name','玩家');rid=raw.get('respondent_id','local-player')
     if not isinstance(name,str) or len(name)>24 or not isinstance(rid,str) or len(rid)>100:raise InputError('档案称呼或标识不正确。')
-    return {'versions':deepcopy(VERSIONS),'pack_version':pack['version'],'mode_id':mode['id'],
+    response={'versions':deepcopy(VERSIONS),'pack_version':pack['version'],'mode_id':mode['id'],
             'question_variants':deepcopy(variants),'replacement_history':deepcopy(history),
             'respondent_id':rid,'display_name':name.strip() or '玩家','game_id':gid,
             'answers':deepcopy(answers),'extra_answers':deepcopy(extra),'fictional':raw.get('fictional') is True}
+    return response, pack, mode, form
+
+
+def normalize(raw):
+    return _normalized_form(raw)[0]
 
 
 def questions(game_id=None,raw=None,mode_id=None):
@@ -103,9 +109,9 @@ def questions(game_id=None,raw=None,mode_id=None):
         pack=pack_for(game_id)
         if pack is None:raise InputError('这款游戏尚未接入本版专属题。')
         raw={'versions':deepcopy(VERSIONS),'pack_version':pack['version'],'game_id':game_id,'mode_id':mode_id}
-    response=normalize(raw);pack=pack_for(response['game_id'],response['pack_version']);mode=mode_for(pack,response['mode_id'])
-    form=_form(pack,mode,response['question_variants'],response['replacement_history'])
-    return {'versions':deepcopy(VERSIONS),'game':v04.find_game(response['game_id']),
+    response, pack, _, form = _normalized_form(raw)
+    game=v04.find_game(response['game_id'])
+    return {'versions':deepcopy(VERSIONS),'game':game | v04.current_game_identity(game),
             'pack':descriptor(pack),'response':response,'questions':[public_question(q) for q in form]}
 
 
@@ -129,8 +135,7 @@ def _replacement_expansion(pack,game_id):
 
 
 def replace_question(raw,question_id,undo=False):
-    response=normalize(raw);pack=pack_for(response['game_id'],response['pack_version']);mode=mode_for(pack,response['mode_id'])
-    form=_form(pack,mode,response['question_variants'],response['replacement_history'])
+    response, pack, mode, form = _normalized_form(raw)
     current=next((q for q in form if q['id']==question_id and q['scope']=='anchor'),None)
     if current is None:raise InputError('只可替换当前作品的专属情境题。')
     key=current['slot_id'];history=response['replacement_history'].setdefault(key,[])
@@ -174,8 +179,7 @@ def _points(selected,tie_points):
 
 
 def score(raw):
-    response=normalize(raw);pack=pack_for(response['game_id'],response['pack_version']);mode=mode_for(pack,response['mode_id'])
-    items=_form(pack,mode,response['question_variants'],response['replacement_history'])
+    response, pack, mode, items = _normalized_form(raw)
     if len(response['answers'])!=16:raise InputError('请完成16道适用题目；没有体验过的情境可以换题。')
     selected=[];evidence={}
     def apply(item,answer):
@@ -258,7 +262,7 @@ def report(raw):
             cross_echo.append(claim('V05_CROSS_ECHO','本命作品与跨游戏选择中，都出现了“'+person['central_pull']+'”相关体验。',ar[:1]+cr[:1],'gaming'))
     game=v04.find_game(response['game_id'])
     result={'versions':deepcopy(VERSIONS),'fictional':response['fictional'],'display_name':response['display_name'],
-            'persona':persona,'game':{k:deepcopy(game[k]) for k in ('id','title','original_title','category_ids')},
+            'persona':persona,'game':{'id':game['id']} | v04.current_game_identity(game) | {'category_ids':deepcopy(game['category_ids'])},
             'one_line':profile['headline'],'personality_profile':profile,'report_sections':sections,
             'insights':insights,'attractions':attractions,'cross_echo':cross_echo[:2],
             'behavior_tags':behavior_tags,'advice':advice,'drains':[],

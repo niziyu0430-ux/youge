@@ -1,0 +1,1095 @@
+{
+  "id": "snowrunner173",
+  "title": "雪地奔驰 专属情境",
+  "game_ids": [
+    "steam-1465360"
+  ],
+  "scope": "Steam PC 本体，密歇根黑河开局与车库开放后的本体合同、车辆、装载和救援。",
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC 黑河越野与货运"
+    }
+  ],
+  "status": "private_candidate_independently_revised",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "单套题。两道合作情境只做替代，默认题可单人进行。没有题目要求 DLC、模组或硬核。",
+    "到达车库以前的短进度仍可能耗尽车库调校、手动装载、深度救援及部分回顾题替代。",
+    "英文任务和车型用于定位，中文货品名称采用描述性写法，未做 PC 简中界面逐字核对。",
+    "未 PC 实机和玩家试答。",
+    "独审收紧旧桥阶段、支腿／货位／摘钩、绞盘挂点和同悬挂可换轮胎条件；PC 实机和简中界面逐字核对待验收。"
+  ],
+  "slots": [
+    {
+      "id": "SN17301",
+      "number": 1,
+      "variants": [
+        {
+          "id": "SN17301.V1",
+          "scene": "CK1500 与第一座瞭望塔",
+          "text": "黑河开局开着 Chevrolet CK1500，第一座瞭望塔已经标出，地图也能打开。到岔口时，你先怎么走？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开地图核对已标出的塔与道路，再挑实线较清楚的一段走",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "先沿能走的小路朝塔开去，想看看拐过山坡还有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较依指引推进与主动探索未确认的地方。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17301.V2",
+          "scene": "发现 GMC 前的岔路",
+          "text": "黑河的 First Truck 已经可以追踪。开着 CK1500 的你在去找 GMC MH9500 的路上，也看到一段没走过的旁路。你先怎么走？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_TUT",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "看地图中 GMC 的目标方向与已知路口，再继续靠近",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "先看看没走过的旁路会通到哪里，回头再跟卡车标记",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较依指引推进与主动探索未确认的地方。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17301.V3",
+          "scene": "第一座塔揭开迷雾",
+          "text": "瞭望塔刚揭开黑河地图的一片区域，下一个活跃合同仍可继续。时间只够先做一件事，怎么安排？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前活跃的合同进度和下一站，再推进交付",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "B",
+              "label": "先去新露出来的一个地点，想看看那里会有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较依指引推进与主动探索未确认的地方。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17302",
+      "number": 2,
+      "variants": [
+        {
+          "id": "SN17302.V1",
+          "scene": "旧桥前的两种材料",
+          "text": "黑河的 Old Bridge Reconstruction 仍缺金属梁和木板。GMC MH9500 有能运这两类货的空货位，地图标出取货点。发车前你先？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_BRIDGE",
+            "SN173_CARGO"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "把镇上仓储点的金属梁、木材厂的木板和车辆货位分趟规划，卸货时再按任务要求的顺序交付",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先打开这一单，核对屏幕当前要求的是哪一批和剩余多少，再决定第一趟装什么",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "比较这次交付核对与跨多趟安排。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17302.V2",
+          "scene": "山桥交货区",
+          "text": "Mountain Bridge 尚未完工，任务页面能核对金属梁和混凝土块。你已经有可装货的车，如何决定先跑哪趟？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "先把剩余材料按货位和取货点分配趟数，连同这之后会用到桥的几单一起排开",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "对照任务记录和已交货品，确认当前还有哪项没到",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "比较这次交付核对与跨多趟安排。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17302.V3",
+          "scene": "清落石前兼顾两个项目",
+          "text": "黑河的 Rockslide 和 Road Block 都已到现场接取：前者还缺金属梁和维修备件，后者还缺维修备件。车上空位有限，你会？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_CARGO"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "把供货点、两处交货点和货位一起排，决定怎样连跑两单",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "只对照目前追踪的一单，确认此趟先装什么和去哪卸",
+              "signal": "quest_progress_review"
+            }
+          ],
+          "design_purpose": "比较这次交付核对与跨多趟安排。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17303",
+      "number": 3,
+      "variants": [
+        {
+          "id": "SN17303.V1",
+          "scene": "黑河货车陷在泥槽里",
+          "text": "黑河一辆已固定货物的卡车在泥槽里打滑，发动机仍在转。低挡可选，绞盘菜单里也显示了能用的树上挂点。你先？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_WINCH"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "选当前够得着的锚点挂绞盘，直接试一下拉力能否把车拽出泥槽",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先低挡轻给油，留意轮胎有没有重新咬住地面，再顺着手感修方向",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "比较脱困中亲手处理与重复练习。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17303.V2",
+          "scene": "CK1500 绞盘锚点",
+          "text": "CK1500 陷在黑河林边，车仍正立、发动机在运转。两侧的树都在绞盘菜单里，其中一侧能拉向硬地。你先？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_WINCH",
+            "SN173_MAP"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "试一次快速绞盘，看看游戏选中的挂点能否先拉动车身",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "手动选朝向硬地的那棵树，练习挂点方向、收绞盘和轻给油怎样配合",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "比较脱困中亲手处理与重复练习。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17303.V3",
+          "scene": "低挡与差速锁",
+          "text": "你的 Fleetstar 已装可切换的 AWD，这会儿 AWD 开着，挡位允许开启差速锁，锁当前还没开。前面有一段泥地，你先？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_FLEET"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "保持当前状态轻踩油门，先从打滑和方向反馈体会还有多少牵引",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "开差速锁，试试这一次有没有更多轮子能带着车走",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较脱困中亲手处理与重复练习。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17304",
+      "number": 4,
+      "variants": [
+        {
+          "id": "SN17304.V1",
+          "scene": "Fleetstar 换配置后重跑",
+          "text": "黑河车库已开放，Fleetstar F2070A 的 AWD 升级已拾到但还没装上，车库也有买得起、能装在这辆车上的另一种绞盘。又要跑熟悉的泥路，你会？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_FLEET",
+            "SN173_WINCH"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "在车库装上 AWD 并换另一款可用绞盘，用同一条泥路对比换前换后",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "保留上趟开过的配置，用同一处泥地继续练低挡和原来的绞盘怎么衔接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "比较装配组合、试车反馈与固定配置练习。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17304.V2",
+          "scene": "CK1500 的轮胎和悬挂",
+          "text": "CK1500 停在车库，同一套悬挂下有两组已解锁、买得起且可装的胎。你刚开熟悉的轮胎过了一次黑河泥坡，准备再去一趟。你会？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_CK"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "换一组可装的胎，悬挂不动，回同一处泥坡对照抓地和转向",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "保留现在的轮胎，用同一条坡练自己容易打滑的起步",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "比较装配组合、试车反馈与固定配置练习。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17304.V3",
+          "scene": "修好的 Fleetstar 与 GMC",
+          "text": "黑河车库已经开了，能用的 Fleetstar F2070A 和 GMC MH9500 都停在手边，下一趟的货位两辆都够。你会怎么选？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_FLEET",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "选之前较少开的那辆，想在熟悉路段亲手感受油门和转向的差别",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "开熟悉的车，继续做自己这趟定下的全程不呼叫救援目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "比较装配组合、试车反馈与固定配置练习。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17305",
+      "number": 5,
+      "variants": [
+        {
+          "id": "SN17305.V1",
+          "scene": "普通模式的带货车救援",
+          "text": "普通模式下，黑河一辆还带货的卡车陷得很深。已启用的车库能用回收，另一辆有绞盘的车也能赶过去。你先试哪项？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用本车的回收返回车库，实际看看车辆回库后要怎样重新出车",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "先调救援车试拉带货车，后续准备把能救援和能运货的车分工留在路上",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "比较可用救援或回收与车队安排。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17305.V2",
+          "scene": "侧翻后扶正",
+          "text": "黑河的货车侧翻，附近有一辆能切换驾驶、发动机正常的救援车。绞盘菜单显示侧翻车两个车身挂点都够得着。你先？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_WINCH"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "选侧面挂点，调整救援车与侧翻车的夹角，练习从侧边把车扶正",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先连能拉动车头的挂点短拉一下，看看车会朝什么方向转",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较可用救援或回收与车队安排。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17305.V3",
+          "scene": "刚到车库继续交货还是扫图",
+          "text": "Get To The Garage 已完成，你能从黑河车库开出卡车继续做合同，也有能驾驶的 CK1500。附近还有没看过的区域。你先做什么？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_DEV",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "先查当前想交的合同还和车库距离多远、有哪些货未交，再出车",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "B",
+              "label": "开 CK1500 去没看过的岔路，想看看那一带藏着什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较可用救援或回收与车队安排。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17306",
+      "number": 6,
+      "variants": [
+        {
+          "id": "SN17306.V1",
+          "scene": "装货区的自动与吊装",
+          "text": "黑河一个装货点能自动装木板，也能生成给吊机抓取的木板。卡车装着能同时使用的货台和小吊机，停车处可落支腿，货位还空着。你先？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_PCG",
+            "SN173_CARGO",
+            "SN173_CRANE"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "选手动装载，拉手刹、落支腿再吊上木板，感受货物转动和落到货台的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "选择卡车货台作为目标，试用自动装载把木板直接装进空货位",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较装载、固定和运送做法。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17306.V2",
+          "scene": "货物已经上板却交不了",
+          "text": "在黑河，你把一件掉落的货吊回车上并摘钩，车辆停稳，货位和功能菜单已允许固定。你先？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_CARGO",
+            "SN173_CRANE"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "暂不固定，把货再吊起放一次，练习对齐货位才能稳妥放下的手感",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "退出吊装后选固定货物，让它登记为已装载",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较装载、固定和运送做法。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17306.V3",
+          "scene": "旧桥任务中的挂车选择",
+          "text": "Old Bridge Reconstruction 的金属梁已经交完。你到木材厂时，仍有一辆已装木板、目前可以挂接的侧板挂车；自车货台也留够装木板的空位。怎么运？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_BRIDGE",
+            "SN173_CARGO"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "挂上现成的木板挂车，计划以后同类订单把挂车和自车货台分开调度",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "选择自车货台自动装木板，开自车把这批木板送到旧桥交货区",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "比较装载、固定和运送做法。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17307",
+      "number": 7,
+      "variants": [
+        {
+          "id": "SN17307.V1",
+          "scene": "油表低时的加油安排",
+          "text": "拉货车在黑河油量偏低，地图上已有能到的加油站，你也有能派去送油的车。当前两种办法都来得及，怎么安排？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "在地图核对现有加油站和铺装路，挑一条能到站的线路先加油",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "派补给车到运货路线旁，并把这一点纳入后续多趟的补给安排",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "比较加油及可见路线的先后。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17307.V2",
+          "scene": "地图图标与燃油挂车",
+          "text": "黑河发现了一辆仍有油的油罐挂车，CK1500 驶到近处就能用加油功能，剩余燃油也够跑另一条路到油站。你先去哪边？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "驶近挂车，用当前能用的加油功能从它那里取油",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "走还没开过的油站路线，想顺便看清另一边有哪些岔路和地形",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较加油及可见路线的先后。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17307.V3",
+          "scene": "已装货后的道路选择",
+          "text": "黑河这一趟已装好货。地图有条能绕开泥地的已知道路，也有一条你没开过、可驶入的支路。没有油量压力，怎么走？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "走已知道路，按自己定下的不中途救援目标把货送到",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "试着开进没走过的支路，想看看它会通向什么地方",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较加油及可见路线的先后。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17308",
+      "number": 8,
+      "variants": [
+        {
+          "id": "SN17308.V1",
+          "scene": "黑河车库里的车队分工",
+          "text": "黑河车库开通了。手上已有能开的 CK1500 和有货台的 GMC，当前交货路线还没跑熟。接下来怎么安排两台车？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "用 CK1500 看过装货点和交货点间的路再换 GMC，后续几单也分出探路和货运两种职责",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先把送货搁一会儿，用 CK1500 走一条和交货方向无关的岔路，看看那里有什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较长期分工以及当前优先事项。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17308.V2",
+          "scene": "木桥修好前的支线",
+          "text": "黑河的 Wooden Bridge 已在现场接取，桥还缺木板。另一份已接合同也可继续，手边的车能运木板。你先怎么安排？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_CARGO"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前合同的剩余目标，做完已计划的这趟交付再配车送木板",
+              "signal": "quest_progress_review"
+            },
+            {
+              "id": "B",
+              "label": "先安排木板修桥，把通车后的那条路线纳入之后多批货的调度",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "比较长期分工以及当前优先事项。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17308.V3",
+          "scene": "联机搭档与分头运送",
+          "text": "如果你在黑河和一位真实玩家联机，双方都有能驾驶的车，当前也有可做的运输合同。你更想怎么分？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_STORE",
+            "SN173_FOCUS",
+            "SN173_DEV"
+          ],
+          "question_type": "situational_action",
+          "options": [
+            {
+              "id": "A",
+              "label": "一起开这一段，愿意为当面配合拉车和到站交货多花些时间",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "分配一辆运输、一辆补给，把接下来几次取送与会合点提前排好",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "比较长期分工以及当前优先事项。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17309",
+      "number": 9,
+      "variants": [
+        {
+          "id": "SN17309.V1",
+          "scene": "黑河第一次看见地图展开",
+          "text": "回想开 CK1500 到第一座瞭望塔、地图一下展开时，哪件事更能让你继续玩？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "想把地图上能找到的塔都补齐，愿意为这片还没点亮的地方再绕路",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "想沿新露出的岔路开过去，看看还会遇到哪些没见过的地形",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较想继续探索、清单补全或在熟悉地图慢驾。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17309.V2",
+          "scene": "绕路找到 Scout 800",
+          "text": "你曾实际在黑河遇到 Scout 800。回想发现这辆车的过程，哪一点更让你愿意再找一辆？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "想逐辆补齐自己在密歇根地图能发现的原版车辆",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "想多去一处偏僻岔道，看看还有什么没料到的地点和东西",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较想继续探索、清单补全或在熟悉地图慢驾。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17309.V3",
+          "scene": "黑河地图的路况一层层揭开",
+          "text": "回想从第一座瞭望塔回来，原先看不清的黑河道路露出了一块。哪一点更让你愿意再开一段？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_MAP",
+            "SN173_PCG"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "喜欢不赶订单的慢速驾驶，愿意在已经认识的林路再放松地开一圈",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "希望继续走不知道通向哪里的路，遇到计划外的地点",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较想继续探索、清单补全或在熟悉地图慢驾。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17310",
+      "number": 10,
+      "variants": [
+        {
+          "id": "SN17310.V1",
+          "scene": "低挡蹭出深泥",
+          "text": "回想你在黑河用低挡一点点把车从深泥里蹭出来，哪一点最有吸引力？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_PCG"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "每次给一点油或回一点方向，轮胎和车身都会给我可感觉的变化",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "想把从打滑到重新带动整辆车的那套配合练稳，下次也能主动做出来",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "比较即时反馈、反复练习或低紧迫感体验。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17310.V2",
+          "scene": "过泥槽以后记住挂点",
+          "text": "回想用绞盘从黑河一处泥槽脱困后，哪件事更让你想再回来开？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_DEV",
+            "SN173_PCG"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "还想体验绞盘开始受力的时候，车辆转向和前轮抓地怎样跟着变",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "找下一处能练的泥槽，重复练习选锚点、收绞盘和轻给油的配合",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "比较即时反馈、反复练习或低紧迫感体验。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17310.V3",
+          "scene": "GMC 去旧桥的第一趟货",
+          "text": "回想第一次用 GMC MH9500 在黑河把桥料运到旧桥，哪一点更让你还想开一趟？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_BRIDGE",
+            "SN173_PCG"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "装货前后重心与转向的感觉变了，想再亲手操控一遍",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "想找个闲下来、不用赶进度的时段，开着这辆车沿熟悉的路慢慢送货",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "比较即时反馈、反复练习或低紧迫感体验。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17311",
+      "number": 11,
+      "variants": [
+        {
+          "id": "SN17311.V1",
+          "scene": "修通旧桥后的后续运输",
+          "text": "你已经用木板和金属梁交完旧桥合同。回想完工以后，哪件事更让你想到继续玩？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_BRIDGE",
+            "SN173_PCG"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "想沿桥过去看看先前还没到过的路和地区",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "想把修通的桥接进后续多单，重新安排车、货和每天的往返",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "比较完成一次运输之后愿意继续投入的部分。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17311.V2",
+          "scene": "货掉下来又吊回车上",
+          "text": "你曾在黑河把掉下来的货吊回兼容货台，摘钩之后在功能菜单固定。回想那次，哪一部分更吸引你回去再做？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_CARGO",
+            "SN173_CRANE"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "操作支腿和吊臂、让货慢慢落回车板时的反应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "愿意反复练把货稳稳落进货位的动作，让下次能一次放正",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "比较完成一次运输之后愿意继续投入的部分。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17311.V3",
+          "scene": "按材料跑完第一份桥料",
+          "text": "回想你用卡车把所缺的木板或金属梁送到黑河旧桥。哪件事更像是你愿意继续送货的理由？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_BRIDGE",
+            "SN173_PCG"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "喜欢沿熟悉道路慢慢运手续简单的货，空闲时愿意再跑一趟安稳的路",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "想记住供货点、空货位和车的分配，把后面一连串配送安排好",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "比较完成一次运输之后愿意继续投入的部分。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    },
+    {
+      "id": "SN17312",
+      "number": 12,
+      "variants": [
+        {
+          "id": "SN17312.V1",
+          "scene": "找回车库边的 Fleetstar",
+          "text": "回想黑河车库旁拿到并开出 Fleetstar F2070A 以后，什么更让你投入时间？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_FLEET",
+            "SN173_PCG"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "愿意换两种已经开放的车件搭配，拿同一段泥路对比整车表现",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "想把附近其他没找到的本体卡车也逐一收齐",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "比较车辆收集、装配搭配及真实队友动机。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17312.V2",
+          "scene": "黑河两人互相牵车",
+          "text": "和真实队友在黑河一起脱困过以后，回想那次，你为什么更想继续合作？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_STORE",
+            "SN173_FOCUS",
+            "SN173_DEV"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "想把运货、补给和救援职责分开，继续把几趟运输调度运转起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "想和那位队友再一起开，同一处泥地里答应来帮忙的过程最有意思",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "比较车辆收集、装配搭配及真实队友动机。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        },
+        {
+          "id": "SN17312.V3",
+          "scene": "打开车库以后再出发",
+          "text": "回想你沿黑河道路进车库、之后又从这儿开出去，哪一点更吸引你再回地图？",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "SN173_MAP",
+            "SN173_PCG",
+            "SN173_DEV"
+          ],
+          "question_type": "experience_reflection",
+          "options": [
+            {
+              "id": "A",
+              "label": "回到熟悉车库再跑一条没有赶工的路，让我愿意慢慢开一会儿",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "从车库有地方落脚了，就更想看看先前没敢拐进去的路通哪里",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "比较车辆收集、装配搭配及真实队友动机。",
+          "interpretation_boundary": "题面操作和装备均以玩家当前实际可用或曾体验为前提。按选项中明示的行为与动机判读。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+1218786d65ee"
+}

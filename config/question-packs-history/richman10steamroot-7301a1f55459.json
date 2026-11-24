@@ -1,0 +1,1016 @@
+{
+  "id": "richman10steamroot",
+  "title": "大富翁10 (RichMan 10)",
+  "game_ids": [
+    "steam-1162520"
+  ],
+  "scope": "《大富翁10》Steam Windows 母版 public 5524453。本地传统、热斗、故事、传记及实际同机热座。角色、房间、关卡与事件各按题面可用状态。每槽可换至普通本机玩法。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [
+    "本地模式→多人游戏可以独自与电脑对局，也支持同机热座与电脑混排。故事和角色传记按各自解锁状态。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam PC 本体棋盘",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "RICHMAN10STEAMROOT01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "新一局开传统还是热斗",
+          "text": "本地选图时，上海有传统和热斗可选。上一局用孙小美在传统模式买了几块地。今天只开一局，你选哪种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_MAP",
+            "RICHMAN10STEAMROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换热斗，看看熟悉的上海换成卡片格之后，会走出什么新局面。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "继续传统，想试同一条街有两块自己的地时，收租会差多少。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「新一局开传统还是热斗」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT01.V1"
+        },
+        {
+          "scene": "阿土伯和钱夫人",
+          "text": "角色选择中，阿土伯和钱夫人此时都能选。你刚和电脑打完一局，此刻最想用哪位再开？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_RULE",
+            "RICHMAN10STEAMROOT_MAP",
+            "RICHMAN10STEAMROOT_TURN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留在自己已经熟悉的阿土伯，想再听他的棋盘对白。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "换钱夫人，看看这位的角色表现和以前用的人有什么不同。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「阿土伯和钱夫人」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT01.ALT1"
+        },
+        {
+          "scene": "故事还是传记",
+          "text": "本地单人模式，你已经看到《幸运之星》，也解锁了孙小美传记第三幕《决战》。这次只挑一关，你先开哪关？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_STORY",
+            "RICHMAN10STEAMROOT_LUCK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "开《幸运之星》，想和电脑队友一起把这关打完。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "开《决战》，想接着看孙小美自己的故事。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「故事还是传记」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "先加盖还是留现金",
+          "text": "传统局停在自己已拥有的地产。当前确实出现加盖的选项，手上现金也可以继续留着。下一个对手还没到这一带，你怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_LUCK",
+            "RICHMAN10STEAMROOT_SHOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先加盖，想看到已经买下的这块地往上长一级。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先留现金，等下一圈不同地块和商店的机会。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「先加盖还是留现金」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT02.V1"
+        },
+        {
+          "scene": "把同一路段拼起来",
+          "text": "传统局轮到你，同一条街上还有一块空地，落点在一颗骰子的可选点数内。你已有这条街另一块地，手里有一张遥控骰子卡。你怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_DICE",
+            "RICHMAN10STEAMROOT_PC",
+            "RICHMAN10STEAMROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "照常掷骰，愿意换个地方买地，看看会出现什么机会。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "用遥控骰子卡停在空地，把这条街的连锁做起来。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「把同一路段拼起来」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT02.ALT1"
+        },
+        {
+          "scene": "未买的地产格",
+          "text": "传统模式一轮，骰子让你停在一块空白地产。买下以后钱还够玩几轮，但原先留的商店预算会少一块。你会怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_LUCK",
+            "RICHMAN10STEAMROOT_SHOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "买下，把这一局的地产先发展一点。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先保留刚算出的预算，等看到下一次商店能买什么再花。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「未买的地产格」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "柜台前面的反差",
+          "text": "银行面板显示了现金和存款，物价指数也刚涨过。现在付得起下一圈可能遇到的地租，你会怎么处理账户？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_SHOP",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先不存取，记住现在的额度，等下一圈真遇上地租再调整。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "重新分配手上的现金和存款，给下一次买地和交租各留一笔。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「柜台前面的反差」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT03.V1"
+        },
+        {
+          "scene": "路过银行的现金和存款",
+          "text": "传统局银行打开，前面还有没卖掉的小地产。手里的现金比平常多一些，你怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_SHOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "多留一点现金，等下一次落在可买的空地上。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "存回一部分，保持自己习惯的现金额度。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「路过银行的现金和存款」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT03.ALT1"
+        },
+        {
+          "scene": "路过银行是补现钱还是留原样",
+          "text": "传统局经过银行，存款足以取出一笔，但手上的现金可能不够买一块你看中的地。现在你会做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_SHOP",
+            "RICHMAN10STEAMROOT_LUCK",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "关掉银行面板，照自己平时的额度继续走。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先取出一笔，为下一次能买地做好准备。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「路过银行是补现钱还是留原样」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "在卡片店花一笔钱",
+          "text": "传统局进了卡片店，当前货架有遥控骰子卡和一张你没用过的卡。手上现金够买其中一张，你会选哪张？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_SHOP",
+            "RICHMAN10STEAMROOT_DICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "买遥控骰子卡，准备留给已经看好的地产格。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "买没用过的那张，想试试这一局会因此多出什么玩法。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「在卡片店花一笔钱」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT04.V1"
+        },
+        {
+          "scene": "这回先不动骰子卡",
+          "text": "轮到你，前方有一块你原本就想买的空地，落点在一颗骰子的可选点数内。现金够，手里还剩一张遥控骰子卡，你怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_DICE",
+            "RICHMAN10STEAMROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "掷普通骰子，把仅剩的一张卡留给下一次更关键的落点。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "用卡停在空地，把先前定下的买地目标完成。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「这回先不动骰子卡」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT04.ALT1"
+        },
+        {
+          "scene": "还可以多买一张吗",
+          "text": "卡片店里，你已经买下计划中的那张卡。店里还有一张没试过的卡可买，手上也付得起。你会怎样收尾？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_SHOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再买那张没试过的，想在这盘认识一种新卡。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "关掉商店，把剩下的现金留给下一个路段。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「还可以多买一张吗」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "新闻提示物价上升",
+          "text": "普通传统局出现物价指数提示。轮到你前，手头还能看各地的状态，也可以保持原来的走法。你会先怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留下原来走法，观察下一次实际弹出的账单有什么变化。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先核对现在常走的位置，把估计支付的地租重新想一遍。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「新闻提示物价上升」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT05.V1"
+        },
+        {
+          "scene": "魔法屋的当回合",
+          "text": "踩到魔法屋，屏幕上同时有让一名角色得卡和让一名角色失卡；目标由游戏抽。你自己手里只有一张，对手也有角色拿着好几张。你会选哪种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_SHOP",
+            "RICHMAN10STEAMROOT_PCNEW"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选得卡，想看随机加一张会给谁带来新机会。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "选失卡，想压低场上较多的手牌，也接受可能轮到自己。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「魔法屋的当回合」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT05.ALT1"
+        },
+        {
+          "scene": "看到两条岔路",
+          "text": "这一掷走到岔路，游戏请你选方向。一边是你认得的那排地产，另一边有没走过的事件格。你会往哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_MAP",
+            "RICHMAN10STEAMROOT_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "转向没走过的一边，想知道这里的事件格接到哪段路。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "走自己熟的一边，对那一排地会发生什么已有感觉。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「看到两条岔路」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "队友的地能一起加盖",
+          "text": "你已进入本体允许共建的组队传统局，走到队友的一块地，界面确实给出可加盖，需要使用你的游戏现金。你会怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_LUCK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先帮队友加盖，把这片两人经常路过的地方一起做起来。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先留钱，以便后面仍能承担自己负责的卡片和地产花费。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「队友的地能一起加盖」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT06.V1"
+        },
+        {
+          "scene": "大地产上的大饭店或研究所",
+          "text": "传统局停在一处可建设的大地产，界面同时显示大饭店和研究所可建。你今天想给这块地做成什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_BUILDINGS",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "建大饭店，想把它发展成对手踩到会收费和留宿的建筑。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "建研究所，想选一张卡，等它研究完成。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「大地产上的大饭店或研究所」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT06.ALT1"
+        },
+        {
+          "scene": "只改自己的一块地",
+          "text": "这次传统局你只有一段棋盘想先做完，能加盖已有的小地产，也看到下一处预备拿下的大地产。眼下停在已有的小地产，你怎么花钱？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_SHOP",
+            "RICHMAN10STEAMROOT_BUILDINGS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先加盖小地产，眼前的成长马上做掉。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "保存预算，留给将来确实到那处大地产时试另一类建筑。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「只改自己的一块地」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "上海传统的人机资金安排",
+          "text": "在上海传统局与电脑对局，银行面板弹出。现有现金够买一块小地产，且存款够你再取一笔。下一段有小地产也有卡片店，你怎样试这圈？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_MAP",
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_SHOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "关掉银行，看看只带一笔预算时，自己会不会临时选一种新卡而推迟买地。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "取出计划好的额度，练习一圈同时做好买地和选卡两笔开销。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「上海传统的人机资金安排」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT07.V1"
+        },
+        {
+          "scene": "先看热斗里的游戏钱",
+          "text": "刚开热斗，棋盘将一些熟悉的小地产格换成了卡片格。你还没掷第一把骰子。手边同时看得到两边现金和已有卡片，你先看什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看双方现金，弄清开局的游戏账目。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先读一张自己手中卡片的说明，弄懂什么时候能使用它。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「先看热斗里的游戏钱」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT07.ALT1"
+        },
+        {
+          "scene": "热斗里的土地公和卡片格",
+          "text": "热斗局里，土地公已经附身，踩到卡片格能拿两张。走到可选方向的岔路，一边接着有卡片格，另一边有你这局没遇到过的事件。你选哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_PC",
+            "RICHMAN10STEAMROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "转向有新事件的那边，想看看它会让这局怎么变。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "往卡片格走，想多拿一张牌解决手头的问题。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「热斗里的土地公和卡片格」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "开房先改物价还是留默认",
+          "text": "本地自订传统局里，这张图的物价上升天数可以改，也可以沿用默认。你想坐下来和电脑打个短局，会怎么开？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把间隔调短，让地租在同样长的对局里更早变化。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "留默认，从自己喜欢的节奏开始玩。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「开房先改物价还是留默认」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT08.V1"
+        },
+        {
+          "scene": "要不要用房里的角色天赋",
+          "text": "本地自订局能切换「开启天赋」。你在同一张图选了舞美拉，看到她的天赋能多带一张遥控骰子卡。第二盘打算怎样开？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_PATCH",
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保持上一盘没有天赋的设置，方便比较两次在同样起点能走出什么结果。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "这盘开天赋，看看多出来的一张卡会让我临时试哪种走法。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「要不要用房里的角色天赋」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT08.ALT1"
+        },
+        {
+          "scene": "热座选人怎么开",
+          "text": "你和一位朋友在同一台电脑玩，先把两个人都设成「我」。另外两个位置可以设电脑或关闭。你会怎么开这盘？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_HOT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "加进电脑，看看同桌两个人在一张更热闹的棋盘上会怎么聊彼此的走法。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "关掉多余位置，就和朋友轮流慢慢掷骰。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「热座选人怎么开」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "自由局的阿土伯对白",
+          "text": "你在本地传统局第一次用阿土伯，角色走过一圈后已经听过几句棋盘对白。这盘还有时间，你接着关注什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_RULE",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "打开棋盘详情，记住哪条街还差一块地，把已经定下的收地目标做完。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "继续听阿土伯遇到不同棋盘事件时会说什么，想拼出他是个怎样的角色。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「自由局的阿土伯对白」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT09.V1"
+        },
+        {
+          "scene": "阿土伯的故事这回为什么接着看",
+          "text": "你玩过阿土伯传记第三幕《线索》。从对白转到棋盘以后，哪件事最让你愿意继续下去？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "想知道阿土伯找到的线索，会把他的传记带到哪里。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想把当时还没打赢的《线索》推进到结算。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「阿土伯的故事这回为什么接着看」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT09.ALT1"
+        },
+        {
+          "scene": "幸运之星的电脑队友",
+          "text": "故事《幸运之星》里，电脑队友从对白加入棋局，之后也会自己买地和加盖。你想带别人认识这一关时，会先讲什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_LUCK",
+            "RICHMAN10STEAMROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "讲两个棋子的外观和动作出现在同一块棋盘上是什么感觉。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "讲一个人在故事里怎么从遇见队友变成两人并肩下棋。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「幸运之星的电脑队友」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "上海传统的两条路",
+          "text": "你在上海传统局已经和电脑掷过几轮。下一次轮到你时有两条路，一条还没走过，另一条经过自己已经记住的建筑。你最想去哪边？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_MAP",
+            "RICHMAN10STEAMROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去还没走过的那一段，看有哪些新格子。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "回自己喜欢的那段，想再看建筑和棋子经过时的动画。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「上海传统的两条路」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT10.V1"
+        },
+        {
+          "scene": "巴黎日夜两种开局",
+          "text": "你在本体选图时已确认巴黎白天和巴黎夜晚都能开。要挑一个版本重玩，为什么会选它？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_MAP",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "想回以前自己总开的那一版，棋盘的主要位置已经认熟。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "想多看从灯光和配色能够分出的那种效果。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「巴黎日夜两种开局」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT10.ALT1"
+        },
+        {
+          "scene": "节日小镇的第一次",
+          "text": "你刚在本地开了一盘节日小镇传统局。第一轮还没掷骰，想先看看这张小棋盘。你的视线会先去哪儿？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_TOWN",
+            "RICHMAN10STEAMROOT_RULE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看节日装饰和棋子在小镇上的样子。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "看出发格旁边的路线，找找自己最想绕去的一角。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「节日小镇的第一次」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "两队第一次一起加盖",
+          "text": "如果你玩过组队传统局也确实帮过队友加盖。回想当时，最值得拉同一个人再开一局的是什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_LUCK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "两人用各自的现金把同一区域安排出看得懂的变化。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "走到他的格子时，两个人当场商量一道把它建起来。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「两队第一次一起加盖」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT11.V1"
+        },
+        {
+          "scene": "和电脑打完一局时",
+          "text": "你在上海传统局和电脑打完一盘，准备再开一局传统。你更愿意怎么开始？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_MAP",
+            "RICHMAN10STEAMROOT_TOWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换到节日小镇，从空地开始，给自己定个在小地图上发展出一条街的目标。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "还选上海和刚才的角色，在熟悉的棋盘上轻松掷几圈。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「和电脑打完一局时」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT11.ALT1"
+        },
+        {
+          "scene": "和同伴还会再掷一次吗",
+          "text": "回想你在本机热座和朋友轮流掷骰，那一局有人在银行取钱，也有人不急着开商店。下次你最想重现哪个片段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_HOT",
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_SHOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看看同样的起局配置，这次大家的钱和地会走成什么样。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "轮到身边的人投骰，大家一起议论他要去哪边。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「和同伴还会再掷一次吗」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "RICHMAN10STEAMROOT12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "今天只留下一个目标",
+          "text": "本地游戏里还有没玩完的故事关《幸运之星》，本地地图也能另外开局。今天只想玩一小段，你更愿意先开哪里？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_LUCK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "开《幸运之星》，接着看同一阵营的队友怎样加入。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "开熟悉的本地传统棋局，按惯用的节奏掷几轮骰。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「今天只留下一个目标」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面已经能操作的卡片、建筑或多人配置作答。",
+          "id": "RICHMAN10STEAMROOT12.V1"
+        },
+        {
+          "scene": "这盘结束先记什么",
+          "text": "和朋友在本地打完一盘传统局，你们还记得末几轮物价变化和那把掷完就交了大笔地租的骰子。下一次开局前，你会先说起什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_HOT",
+            "RICHMAN10STEAMROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "聊起最后一把骰子出来时，同桌几个人抢着猜的场面。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "聊聊物价涨过之后，是哪次买地决定影响了自己的现金。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「这盘结束先记什么」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体普通本地棋局或已开放的界面作答。",
+          "id": "RICHMAN10STEAMROOT12.ALT1"
+        },
+        {
+          "scene": "换角色还是换规则的记忆",
+          "text": "用阿土伯在上海打完一盘传统局，想只换一个条件再开。阿土伯还可选，钱夫人也在角色列表里。你会怎样设置？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "RICHMAN10STEAMROOT_TURN",
+            "RICHMAN10STEAMROOT_STORE",
+            "RICHMAN10STEAMROOT_MAP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留阿土伯，改热斗，想看同一块棋盘出现卡片格后会怎么玩。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "留上海传统，选钱夫人，想听她遇到相同事件时会怎么说。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「换角色还是换规则的记忆」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经实际玩过的棋盘或模式作答。",
+          "id": "RICHMAN10STEAMROOT12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+7301a1f55459"
+}

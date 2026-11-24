@@ -1,0 +1,1053 @@
+{
+  "id": "grime169",
+  "title": "尘埃异变 GRIME 专属情境",
+  "game_ids": [
+    "steam-1123050"
+  ],
+  "scope": "Steam PC 原作单人本体；不依赖免费更新区域、二周目或续作。所有武器、特质、狩猎点、能力与道路均以题干已具备为前提。",
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC 原作单人经历",
+      "initial_variants": {
+        "GR16906": "GR16906.V2"
+      }
+    }
+  ],
+  "status": "private_draft_pending_independent_review",
+  "player_trial": "not_performed",
+  "editorial_notes": [
+    "12题位各三情境，默认8行动4回顾；PC未实机，攻略资料不保证全部同节点。",
+    "优先哭泣洞穴早期内容，部分特质、低语之母与 Shidra 场景需要对应进度；固定三情境无法保证所有人都有体验。",
+    "吸收练习、早期探索和特质搭配有重复；部分情境涉及回头、敌人复现或对话之后是否能立即离开，需独立复核。",
+    "v2 澄清红色可吸收血量与吸收本体，移除间歇超时的 Gamepur；早期攻略武器译名不一，以游戏内显示为准。",
+    "v4 移除未证落石的三处描述，改成来源可核的早期武器与吸收情境；重复和未实机限制仍在。",
+    "v5 将 06 默认改为 V2；原 V1 保留为中性替代。默认 06 与 07 同为早期破墙探索，存在明显重复。"
+  ],
+  "slots": [
+    {
+      "id": "GR16901",
+      "number": 1,
+      "variants": [
+        {
+          "id": "GR16901.V1",
+          "scene": "薄平台下的暗室",
+          "text": "哭泣洞穴里，你已发现薄平台下方有可到达的隐藏房间，也能继续沿当前路前进。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "跳下去看看尚未探索的房间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先沿已走的路线继续移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16901.V2",
+          "scene": "洞穴的高处",
+          "text": "哭泣洞穴里，你已能到达有罐子的尽头，也知道当前路线可以继续。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "尝试向上找隐藏通路，探索未知处",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先沿已知路线移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16901.V3",
+          "scene": "获得拉取后",
+          "text": "你已在岩地击败低语之母、获得拉取，并记得一处此前够不到、现在可到达的平台。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_PROGRESS",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "回去探索那处以前到不了的区域",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先继续当前已开放路线",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16902",
+      "number": 2,
+      "variants": [
+        {
+          "id": "GR16902.V1",
+          "scene": "脆弱手臂的攻击",
+          "text": "哭泣洞穴里，一只脆弱手臂正以可吸收的攻击接近，你能行动。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手把握时机吸收攻击，感受招架反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先操作闪避避开",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16902.V2",
+          "scene": "爬行者",
+          "text": "哭泣洞穴里，你已遇到爬行者，面对它一次可以吸收的攻击。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "尝试吸收，并感受反击时机",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先操作闪避",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16902.V3",
+          "scene": "首次取得武器",
+          "text": "哭泣洞穴里，你已从 Yon 处拿到第一把武器，面前是已发现可以破坏的石墙。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手挥动武器打破石墙，感受攻击动作",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先操作角色向旁边移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16903",
+      "number": 3,
+      "variants": [
+        {
+          "id": "GR16903.V1",
+          "scene": "特质与点数",
+          "text": "你已解锁两种猎物特质并拥有足够狩猎点，在替身处可以配置。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_TRAIT",
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较两种特质与当前武器的配合，再投入点数",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先保留点数继续探索",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16903.V2",
+          "scene": "洞穴属性提升",
+          "text": "你已在替身处积累足够质量提升属性，也有一把可用武器。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较属性与已用武器的需求，安排加点后继续",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先离开替身并操作角色前进",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16903.V3",
+          "scene": "恢复与防御特质",
+          "text": "你已解锁脆弱手臂与巨石头的特质，并在替身拥有足够狩猎点。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_TRAIT",
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较吸收后恢复体力与吸收失败减伤，结合打法选择配置",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先保留点数并继续行动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16904",
+      "number": 4,
+      "variants": [
+        {
+          "id": "GR16904.V1",
+          "scene": "吸收练习",
+          "text": "哭泣洞穴里，你发现自己吸收脆弱手臂的攻击常常失误，愿意反复练习。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复观察攻击并练吸收时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先操作闪避通过",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16904.V2",
+          "scene": "爬行者练习",
+          "text": "你已在哭泣洞穴遇到可反复交战的爬行者，吸收时机尚不稳定。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练习吸收，调整输入时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先操作移动避开",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16904.V3",
+          "scene": "手臂吸收练习",
+          "text": "哭泣洞穴里，你已遭遇过脆弱手臂并觉得吸收攻击的时机不稳定，现在又遇到可交战的同类。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练习吸收它的攻击，调整按键时机",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先操作闪避离开",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16905",
+      "number": 5,
+      "variants": [
+        {
+          "id": "GR16905.V1",
+          "scene": "脆弱手臂特质",
+          "text": "你已遇到脆弱手臂，也知道同种猎物的特质需要多次吸收才能发现。眼前一只已达到可吸收猎物本体的红色血量状态。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为收集更多猎物特质，尝试吸收它本体并继续寻找其他种类",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先操作闪避离开",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16905.V2",
+          "scene": "洞穴的质量",
+          "text": "在哭泣洞穴，你已看到罐子里可取得的质量，也可以沿当前道路前进。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为持续积累升级资源，打碎罐子并收取质量",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先操作角色继续移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16905.V3",
+          "scene": "寻找不同猎物",
+          "text": "你已知道吸收不同猎物可发现不同特质，眼前猎物的特质尚未发现，且已达到可吸收本体的红色血量状态。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "尝试吸收它的本体，为补充猎物特质清单继续寻找",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先用已有武器攻击",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16906",
+      "number": 6,
+      "variants": [
+        {
+          "id": "GR16906.V1",
+          "scene": "替身附近的捷径",
+          "text": "哭泣洞穴里，你发现打破两只拦路手臂就能开通返回替身的捷径。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "打通捷径，为之后多次往返做好准备",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "先沿现有道路继续移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16906.V2",
+          "scene": "锤子后的石墙",
+          "text": "你在哭泣洞穴已获得 Yon 给的武器，面前是已发现可以破坏的石墙。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "打破石墙，探索后面的未知空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先沿已经走过的路返回",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16906.V3",
+          "scene": "低语之母之后",
+          "text": "你已击败岩地的低语之母并获得拉取，当前有已知可拉动的平台可供操作。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_PROGRESS",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手拉动平台，感受新能力的操作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先操作角色移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16907",
+      "number": 7,
+      "variants": [
+        {
+          "id": "GR16907.V1",
+          "scene": "Yon 的礼物",
+          "text": "哭泣洞穴中你已从 Yon 处收到第一把武器，附近有已发现可以打破的石墙，也可返回已激活的替身。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用新武器打破石墙，探索墙后的未知空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先返回替身并操作角色移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16907.V2",
+          "scene": "世界之柱的委托",
+          "text": "你已在世界之柱遇见 Shidra 并收到他的委托。回到可行动状态后，你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_PROGRESS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续推进他的委托，想了解他与世界之柱的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先亲手操作角色移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16907.V3",
+          "scene": "猎物特质",
+          "text": "你已有足够狩猎点且两种已发现特质可选。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_TRAIT",
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较两种特质与自己现有武器的组合并配置",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先保留点数继续行动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16908",
+      "number": 8,
+      "variants": [
+        {
+          "id": "GR16908.V1",
+          "scene": "战斗自设限制",
+          "text": "哭泣洞穴中，你能用武器攻击，也能吸收这只猎物的可吸收攻击。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为尝试不同玩法，自定这次尽量不使用吸收并亲手战斗",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "按平常方式操作武器与吸收",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16908.V2",
+          "scene": "吸收与攻击",
+          "text": "你在洞穴已取得第一把武器，眼前是可吸收攻击的猎物。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自设这次尽量用吸收结束战斗，尝试另一种打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "按平常方式操作武器与吸收",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16908.V3",
+          "scene": "打破墙壁",
+          "text": "你已获得Yon 给的武器并回到洞穴可破坏石墙前。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手挥动这把武器打破石墙，感受武器动作",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先操作角色移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16909",
+      "number": 9,
+      "variants": [
+        {
+          "id": "GR16909.V1",
+          "scene": "洞穴探索回顾",
+          "text": "回想你确实探索过的哭泣洞穴，哪段体验更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "发现薄平台下面或高处的隐藏通路，继续寻找未知空间",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "亲手操作角色跳跃通过平台",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16909.V2",
+          "scene": "岩地探索回顾",
+          "text": "回想你确实到过岩地并获得拉取后的经历，哪段更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_PROGRESS",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "返回以前够不到的平台，探索新开辟的区域",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "亲手使用拉取操作一次平台",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16909.V3",
+          "scene": "首次使用武器回顾",
+          "text": "回想你确实用 Yon 给的武器打破哭泣洞穴中的石墙，哪段体验更接近你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "多次练习挥动武器，逐渐熟悉攻击动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手挥动武器并感受墙面破开的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16910",
+      "number": 10,
+      "variants": [
+        {
+          "id": "GR16910.V1",
+          "scene": "吸收战斗回顾",
+          "text": "回想你确实多次尝试过吸收脆弱手臂攻击，哪段更令你满意？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "反复调整输入，让吸收时机越来越稳定",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手感受吸收和反击动作",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16910.V2",
+          "scene": "首次武器回顾",
+          "text": "回想你从 Yon 处获得并用过第一把武器，哪种体验更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手挥动武器、感受攻击动作与命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "亲手操作角色在洞穴移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16910.V3",
+          "scene": "低语之母回顾",
+          "text": "回想你确实击败低语之母并用过拉取能力，哪种体验更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_PROGRESS",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手拉动目标时，感受新能力的操作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "亲手操作角色移动",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16911",
+      "number": 11,
+      "variants": [
+        {
+          "id": "GR16911.V1",
+          "scene": "特质搭配回顾",
+          "text": "回想你确实使用过狩猎点配置的猎物特质，哪段经历更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_TRAIT",
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较特质效果，并与武器和打法搭配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "亲手操作角色进行一次攻击",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16911.V2",
+          "scene": "猎物收集回顾",
+          "text": "回想你确实吸收过不同种类的猎物，哪段经历更接近你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为了补充猎物特质清单而持续寻找并吸收不同种类",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "亲手操作吸收攻击",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16911.V3",
+          "scene": "属性培养回顾",
+          "text": "回想你确实在替身处花质量提升过属性，哪段体验更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "根据使用的武器和打法比较属性，安排加点",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "亲手操作角色与猎物交战",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    },
+    {
+      "id": "GR16912",
+      "number": 12,
+      "variants": [
+        {
+          "id": "GR16912.V1",
+          "scene": "Yon 故事回顾",
+          "text": "回想你确实见过 Yon 并收到他的武器，哪段经历更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留意他的言行和他在这世界中的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "亲手挥动新武器的动作反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16912.V2",
+          "scene": "自设战斗规则回顾",
+          "text": "回想你曾自设过尽量不吸收、只用武器对抗猎物并实际尝试，哪种更接近你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_GUIDE",
+            "GR169_TRAIT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我喜欢自己增加限制，探索不同打法",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "我喜欢亲手挥动武器的动作反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        },
+        {
+          "id": "GR16912.V3",
+          "scene": "世界之柱回顾",
+          "text": "回想你确实见过 Shidra 并接受委托，哪段经历更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "GR169_PROGRESS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续了解他的委托以及世界之柱的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "亲手移动角色前往其他区域",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "仅根据玩家明确选择或体验解释信号。",
+          "interpretation_boundary": "仅在题干所述进度、资源与真实体验成立时使用；未PC实机。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+8049156fdf96"
+}

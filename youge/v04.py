@@ -26,13 +26,27 @@ def catalog():
     return _catalog_snapshot(path.stat().st_mtime_ns)
 
 
+@lru_cache(maxsize=1)
+def public_game_ids():
+    scope=json.loads((ROOT/'config/questionnaire-audience-1149.json').read_text(encoding='utf-8'))
+    return frozenset(scope['accepted_ids']) | {entry['game_id'] for entry in scope['selected']}
+
+
 def find_game(game_id):
-    game=next((g for g in catalog()['games'] if g['id']==game_id),None)
-    # Keep saved v0.4 responses readable while unverified names leave the public picker.
-    if game is None and game_id in catalog().get('legacy_game_ids',[]):
-        game=next((g for g in catalog().get('candidates',[]) if g['id']==game_id),None)
+    lib=catalog()
+    game=next((g for g in lib['games'] if g['id']==game_id),None)
+    if game is None:
+        candidates=lib.get('candidates',[]) if game_id in lib.get('legacy_game_ids',[]) else []
+        game=next((g for g in candidates+lib.get('legacy_archived',[]) if g['id']==game_id),None)
     if not game:raise InputError('这款作品尚未收录，请选择库内确实玩过并喜欢的作品。')
     return game
+
+
+def current_game_identity(game):
+    """Use corrected store identity for the current picker and new instrument."""
+    if 'display_original_title' in game:
+        return {'title':game['display_title'],'original_title':game['display_original_title']}
+    return {'title':game['title'],'original_title':game['original_title']}
 
 
 def questionnaire(game_id):
@@ -55,16 +69,28 @@ def public_question(item):
 
 def bootstrap():
     c=config();lib=catalog()
+    public_ids=public_game_ids()
     people=[]
     for p in c['personas']:
         copy={k:p[k] for k in ('id','name','central_pull','game_personality','portrait')}
         copy['personality_profile']=deepcopy(c['personality_portraits']['personas'][p['id']])
         copy['game_personality']=copy['personality_profile']['headline']
         people.append(copy)
-    public_fields=('id','title','original_title','aliases','category_ids','platforms','version_type','version_label','work_id','work_title','name_status','related_games')
-    public=lambda game:{key:deepcopy(game[key]) for key in public_fields if key in game}
-    archived=[public(game) for game in lib.get('candidates',[]) if game['id'] in lib.get('legacy_game_ids',[])]
-    return {'versions':c['versions'],'catalogue_release':lib['version'],'reference':c['reference'],'personas':people,'categories':lib['categories'],'games':[public(game) for game in lib['games']],'archived_games':archived,'featured':lib['featured'],'rules':{'base_count':16,'max_extra':2,'compatible_report_versions':c.get('compatible_report_versions',[c['versions']['report_rules']]),'report_only_question_ids':[q['id'] for q in c['common'] if all(not o['weights'] for o in q['options'])]}}
+    public_fields=('id','title','display_title','original_title','aliases','category_ids','platforms','version_type','version_label','work_id','work_title','name_status','related_games')
+    def public(game):
+        return {key:deepcopy(game[key]) for key in public_fields if key in game} | current_game_identity(game)
+    historical_candidates=[game for game in lib.get('candidates',[]) if game['id'] in lib.get('legacy_game_ids',[])]
+    hidden_games=[game for game in lib['games'] if game['id'] not in public_ids]
+    archived=[public(game) for game in historical_candidates+lib.get('legacy_archived',[])+hidden_games]
+    redirects={}
+    for identifier,entry in lib.get('search_redirects',{}).items():
+        targets=[game_id for game_id in entry['target_ids'] if game_id in public_ids]
+        if targets:
+            redirects[identifier]={'aliases':deepcopy(entry['aliases']),'target_ids':targets}
+    categories=[category | {'game_ids':[game_id for game_id in category['game_ids'] if game_id in public_ids]}
+                for category in lib['categories']]
+    featured=[game_id for game_id in lib['featured'] if game_id in public_ids]
+    return {'versions':c['versions'],'catalogue_release':lib['version'],'reference':c['reference'],'personas':people,'categories':categories,'games':[public(game) for game in lib['games'] if game['id'] in public_ids],'archived_games':archived,'search_redirects':redirects,'featured':featured,'rules':{'base_count':16,'max_extra':2,'compatible_report_versions':c.get('compatible_report_versions',[c['versions']['report_rules']]),'report_only_question_ids':[q['id'] for q in c['common'] if all(not o['weights'] for o in q['options'])]}}
 
 
 def normalize(raw):

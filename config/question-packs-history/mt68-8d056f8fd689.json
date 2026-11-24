@@ -1,0 +1,1085 @@
+{
+  "id": "mt68",
+  "title": "怪物火车",
+  "game_ids": [
+    "steam-1102190"
+  ],
+  "scope": "Steam PC《怪物火车》首作、本体五氏族、标准远征及已开放的本体挑战。",
+  "status": "private_candidate_pending_independent_release_review",
+  "author_review": "依据主审反馈重写9–12为确实经历过的回顾，替换第6组为删牌循环，第11组为洞穴叙事，第12组为日志补全；待主审核证。",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体列车",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "首作 Steam 1102190，本体五氏族和免费更新；标准远征、已有实际经历的本体挑战。36 个情境均不要求付费 DLC。",
+    "黑暗熔炉为共享节点；牌、费用、手牌、路线和随机事件限定实际显示。已移除 Steam 攻略及直接打不开的 Fandom 事件页已换源。",
+    "同槽有两道换题。早期玩家还没有参加外部挑战、遇到随机洞穴或解锁日志时，仍可能受可替换范围限制。未实机。"
+  ],
+  "slots": [
+    {
+      "id": "MT6801",
+      "number": 1,
+      "variants": [
+        {
+          "id": "MT6801.V1",
+          "scene": "Torch 补漏或给上层放后备",
+          "text": "本体远征中，底层有一名本轮会漏过去的敌人。你有能打到它的 Torch，也能把手中的 Train Steward 放到有空位的上层，当前费用够两者择一。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_COMBAT",
+            "MT68_SEED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用 Torch 处理眼前这名会漏的敌人",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "把 Train Steward 放到上层，配合下层主力建一条接住后续漏怪的防线",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6801.ALT1",
+          "scene": "中层的空位和上移指令",
+          "text": "底层前排将承受一大波伤害。你有可打出的 Hidden Passage，能把底层的可选友方单位移到中层。另有一张单位牌能从手里直接放进中层，这回合费用只够先选一样。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_COMBAT",
+            "MT68_COMBO"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把底层单位移上来，让它与原有中层队伍接力，再规划底层补位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用手里这张单位牌占住中层的空位",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6801.ALT2",
+          "scene": "首波敌人进列车前",
+          "text": "新战斗的第一回合，两张单位牌都能打出。可以把其中一张放底层、另一张放中层，也可以两张都放容量足够的中层。第一波下层敌人没法全清。你怎么放？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已选的两个单位集中在容量足够的中层，先完成眼前想打的首波布阵",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按能在各层挡住的敌人分两层部署，让两层有不同守备任务",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6802",
+      "number": 2,
+      "variants": [
+        {
+          "id": "MT6802.V1",
+          "scene": "Restore 给荆棘单位还是前排",
+          "text": "你用了觉者氏族。Thorned Hollow 和另一名单位都受了伤，都能被选中。手里只剩一张 Restore，你怎么分配这次治疗？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_SEED",
+            "MT68_COMBAT",
+            "MT68_OFFICIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把 Restore 给 Thorned Hollow，试自己这局的治疗、复原触发与荆棘防守搭配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先治疗另一个受伤单位，让它更可能扛过眼前这一波",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6802.ALT1",
+          "scene": "Ritual of Battle 的强化对象",
+          "text": "同一层里的两个己方单位都能被手中的 Ritual of Battle 指定。其中一位有多重攻击，另一位打一次但能应付眼前前排。费用足够施放一次。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_COMBO",
+            "MT68_OFFICIAL",
+            "MT68_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先给另一名单位，处理它眼前准备击倒的前排",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "让具备多重攻击的单位吃到 Rage，试自己想要的多次伤害搭配",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6802.ALT2",
+          "scene": "法术商人按费用还是伤害改",
+          "text": "法术商人正提供减费和加伤两项；你有一张可接受任一升级的伤害法术，经费够做一项。你先想怎么改？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_SHOP",
+            "MT68_OFFICIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把减费与本局常打的其他法术搭配，想试同一回合连打的组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先选加伤，应付下一战需要清理的敌人",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6803",
+      "number": 3,
+      "variants": [
+        {
+          "id": "MT6803.V1",
+          "scene": "冠军培养",
+          "text": "这趟远征的冠军已经沿一条分支强化过并经历多场战斗；当前黑暗熔炉确实同时提供继续该分支和另一分支。你选哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_MAP",
+            "MT68_FORGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续强化这条一路投入的冠军分支，想看它持续成长",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选择当前另一条可用分支，试试不同的冠军能力",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6803.ALT1",
+          "scene": "开局先定冠军还是先看遗物",
+          "text": "本体标准远征的第一环，黑暗熔炉和 Herzal 的遗物宝箱都还没打开。你会先去哪个节点？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MAP",
+            "MT68_FORGE",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先定冠军的第一条分支，想把这位核心队员一路练出自己的成长方向",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先看看遗物宝箱这次提供的效果，然后再选冠军分支",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6803.ALT2",
+          "scene": "铁匠前继续培养核心",
+          "text": "你到单位商店，已有一名用过数场的非冠军单位和一名刚招来的单位；当前显示的一项单位升级可合法用于任一位，金币足够做一次。你把升级给谁？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_SHOP",
+            "MT68_OFFICIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给刚招来的单位，试一下新成员接受升级后的效果",
+              "signal": "available_operation_trial"
+            },
+            {
+              "id": "B",
+              "label": "给跟了我多场的核心单位，继续看它在本趟远征成长",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6804",
+      "number": 4,
+      "variants": [
+        {
+          "id": "MT6804.V1",
+          "scene": "第八环复制卡或免费删牌",
+          "text": "第八环分岔图上，Hellvent 复制节点和 Unstable Vortex 删牌节点确实在两侧。你有可复制的升级过的非冠军牌，也有可移除的普通卡。走哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MAP",
+            "MT68_SHOP",
+            "MT68_SEED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "走 Hellvent，想用两张已经升级的同款卡搭配牌组中支持它们的效果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "走漩涡，先把自己已选定的早期废牌删掉",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6804.ALT1",
+          "scene": "第二环分岔的单位商人和法术商人",
+          "text": "本体第二环尚未选路。一边有单位商人，另一边有法术商人。你手上有仍能强化的非冠军单位和法术，带着可用金币。你先去哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MAP",
+            "MT68_SHOP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "走法术商人这边，想给伤害法术找一项能配合前排和增益法术的强化",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "走单位商人这边，先查看这次可以给前排的强化",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6804.ALT2",
+          "scene": "首领奖励把容量还是抽牌提高",
+          "text": "击败一个会给主强化奖励的首领后，界面列出了增加楼层容量和增加每轮抽牌，这次只能选一件。你选什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_BOSS",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选容量，我打算搭配更多前排和后排单位集中在同一层",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "选抽牌，并打算把它和后续删牌、减费一起纳入整副牌的循环",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6805",
+      "number": 5,
+      "variants": [
+        {
+          "id": "MT6805.V1",
+          "scene": "本体首波练习楼层布置",
+          "text": "本体普通战斗第一回合，Train Steward 和你的冠军都可以合法部署，合放同层或分开放两层都行。你怎么用这一回合？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_COMBAT",
+            "MT68_SEED",
+            "MT68_OFFICIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿用我掌握的同层前后排布置，先完成这一战",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把它们拆开放在两层，和上一场的同层布置做比较，看看漏怪在哪一层，再在后续修正",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6805.ALT1",
+          "scene": "练两张单位的前后站位",
+          "text": "一场战斗中，你还没部署两张能同时打出的单位牌，目标楼层足够容纳两者。你仍可选各自的前后位置。现在怎么放？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_COMBAT",
+            "MT68_SEED",
+            "MT68_OFFICIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "做一次与先前不同的前后排测试，观察谁先受伤，并在后续回合或战斗继续调整",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿用我已经熟悉的前后安排，先处理这一波",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6805.ALT2",
+          "scene": "排兵练习",
+          "text": "上一场敌人漏到火堆，你接下来遇到一场正常战斗，手牌与空间也确实允许重新布防。",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "尝试调整造成漏怪的那一层并观察结果，想把布防练熟",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "保留已掌握的做法推进眼前战斗",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6806",
+      "number": 6,
+      "variants": [
+        {
+          "id": "MT6806.V1",
+          "scene": "法术商人里的删牌和升级",
+          "text": "你到达法术商人。金币各够付一项，但不够同时删掉已选的初始牌和给法术做费用升级。两项均可用。你怎么花？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_SHOP",
+            "MT68_SEED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先删掉卡住循环的初始牌，把它和后续减费、出牌节奏一起安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先做这项法术减费，为下一场更容易打出它",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6806.ALT1",
+          "scene": "不稳定漩涡要删一张还是两张",
+          "text": "你来到不稳定漩涡，实际还可以移除两张牌。一张初始单位已经很少用，第二张法术有时还能清小怪。你打算？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MAP",
+            "MT68_SEED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先移除初始单位、保留清小怪的法术，完成我眼下只删一张的决定",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "两张都移除，让核心牌更常抽到，之后按它的循环调整剩下的应敌手段",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6806.ALT2",
+          "scene": "删一张卡还是重掷商店",
+          "text": "法术商人还能重掷库存，也能付费删去一张你已标定的牌。这两项均已显示，金币只够先付其中一项。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_SHOP",
+            "MT68_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先删牌，按我跨几战安排的抽牌节奏把多余的旧法术逐步清掉",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先重掷商店，查看这一轮出现的可用强化",
+              "signal": "available_operation_trial"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6807",
+      "number": 7,
+      "variants": [
+        {
+          "id": "MT6807.V1",
+          "scene": "氏族",
+          "text": "开新一趟列车时，你已经解锁两个可选的主氏族，一个熟悉，一个自己还没用过。",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择尚未体验的氏族，亲自看看它的卡牌如何运作",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "回到自己熟悉的氏族，继续享受已熟悉的选卡与守线节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6807.ALT1",
+          "scene": "氏族",
+          "text": "你已经解锁多个辅助氏族，其中一个从未与当前主氏族搭配过。",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "用当前主氏族搭配这位新辅助，实际试一趟",
+              "signal": "try_available_setup"
+            },
+            {
+              "id": "B",
+              "label": "保持自己熟悉的主辅搭配，享受熟悉的守线过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6807.ALT2",
+          "scene": "同一氏族的另一个冠军",
+          "text": "你准备再发一趟本体列车，想让主辅氏族维持原样。主氏族有两位可选冠军，其中一位是你已熟悉的，另一位是你还没用过的已解锁冠军。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MASTERY",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留熟悉的冠军，想在熟悉的出牌节奏里轻松打完一趟",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "用另一位冠军开一趟，试一试它的开局卡和能力",
+              "signal": "try_available_setup"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6808",
+      "number": 8,
+      "variants": [
+        {
+          "id": "MT6808.V1",
+          "scene": "个人挑战",
+          "text": "你已经通关某一已开放契约等级，也能再次选它；本人还想把某个已开放的更高等级打通。",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_STORE",
+            "MT68_MODES",
+            "MT68_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选更高等级并按自己的通关目标挑战",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "再玩熟悉的等级，享受已熟悉的过程",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6808.ALT1",
+          "scene": "个人挑战",
+          "text": "你已实际体验过每日挑战，当前也有正在开放的每日挑战和普通远征。",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_STORE",
+            "MT68_MODES",
+            "MT68_MAP"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "进入今日挑战，按自己想达到的个人分数努力",
+              "signal": "score_goal_attempt"
+            },
+            {
+              "id": "B",
+              "label": "回到自己喜欢的普通远征，享受熟悉的选卡和守线节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6808.ALT2",
+          "scene": "自定不复制挑战",
+          "text": "在本体远征开始时，你给自己加了一个不使用复制节点的限制。现在地图已经出现一个仍可操作的 Hellvent。你会怎么处理？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MAP",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "有意绕开 Hellvent，继续按自己定的规则完成这一趟挑战",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "放下这个限制，进 Hellvent 复制当前需要的那张合法牌",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6809",
+      "number": 9,
+      "variants": [
+        {
+          "id": "MT6809.V1",
+          "scene": "复盘失败",
+          "text": "你确实经历过火堆耗尽导致本局失败，也曾观察是哪层漏过敌人。回想当时，什么更让你想继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把先前漏怪的原因带到后来一局，亲手调整布防并观察结果",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先开始后来的一局，完成自己当时选定的目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6809.ALT1",
+          "scene": "主力失手后的消灭后排练习",
+          "text": "回想你确实有过本体远征失败，后来用同一对氏族又开一趟，并在下一趟面对过相似的后排敌人。哪件事更像你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_COMBAT",
+            "MT68_SEED"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我明确想练习先清掉危险后排，反复试不同的用牌时机，观察后排还能否漏上去",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "我沿用熟悉的防线，在下一趟继续完成自己定的通关目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6809.ALT2",
+          "scene": "回看一次实际的费用分配",
+          "text": "回想你在本体战斗中曾为了同时部署和打出法术而不够费用，又在之后一场调整过。哪种做法更像你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_OFFICIAL",
+            "MT68_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先解决当时已盯住的一名敌人，按眼前的守线目标分配费用",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我刻意练先后次序，重新在实战中练习何时留费用给法术",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6810",
+      "number": 10,
+      "variants": [
+        {
+          "id": "MT6810.V1",
+          "scene": "回顾一次敌人带尖刺的额外试炼",
+          "text": "回想你曾在本体标准局开启让普通敌人带尖刺的额外试炼，并在这场战斗实际调整过出牌。哪件事更像你当时的关注？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_TRIAL",
+            "MT68_OFFICIAL",
+            "MT68_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我曾试着让能扛反伤的前排配合伤害法术，找出一组应付尖刺的办法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "我更在意完成试炼并拿到当时界面列出的额外奖励",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6810.ALT1",
+          "scene": "标准局试炼的奖励和战斗条件",
+          "text": "回想你有一次在标准局战前面对可开可关的额外试炼，屏幕能看到加给敌人的条件和额外奖励。哪件事更接近你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_TRIAL",
+            "MT68_OFFICIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我给自己设了这趟只打开能够练到某种防守做法的试炼，遇到不合条件的就关着打",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "我依据写出的战斗条件和奖励决定开关，继续打这一站",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "比较自设赛程规则和常规战前检查。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6810.ALT2",
+          "scene": "模式与朋友",
+          "text": "你确实参加过地狱竞速，并在那次比赛里关注过其他玩家的排名。回想当时，什么更能激起你的兴趣？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MODES",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "和同场玩家比拼名次，争取超过对手",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "按自己的节奏完成那次挑战",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6811",
+      "number": 11,
+      "variants": [
+        {
+          "id": "MT6811.V1",
+          "scene": "终末战场的事件牌",
+          "text": "回想你确实遇到过隐秘洞穴的 Armageddon Battlefield，看到交战双方留下的战场，也见到剑、盾、头骨对应的事件牌。你更记得什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_FIELD",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先从这次可选的事件牌里拿一张当前需要的牌，继续守火堆",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "我会留意双方士兵和战场的文字，想了解这里发生过什么",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6811.ALT1",
+          "scene": "冰裂隙里的复制抉择",
+          "text": "回想你确实遇过冰裂隙迫使列车停下的 Fissure，也真实选过其中一种复制方式。哪部分更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_FISSURE",
+            "MT68_OFFICIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我留意列车被冰困住的描述，想知道地狱为何变成现在这样",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我在意复制后能不能和手里已经成形的增益牌一起配合，想试出组合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6811.ALT2",
+          "scene": "本体标准局战后选牌",
+          "text": "回想本体标准局里一次打完战斗打开氏族奖励包，你当时能挑一张牌，也能不拿。哪种更像你当时的做法？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_DRAFT",
+            "MT68_SKIP",
+            "MT68_OFFICIAL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "看到一张能接上我这套牌里已有的能力，我会专门拿来试这个组合",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "几张都不是眼下的防线要用的，我会跳过这包，继续这一趟",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "区分构筑组合动机和放弃当前奖励继续远征。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    },
+    {
+      "id": "MT6812",
+      "number": 12,
+      "variants": [
+        {
+          "id": "MT6812.V1",
+          "scene": "为日志补一组卡的熟练度标记",
+          "text": "回想你确实为了日志里没完成的几张卡安排过可计熟练度的本体标准局。哪件事更像你当时想完成的？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MASTERY",
+            "MT68_FRAMES",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想一张张把这组卡的熟练标记补齐，之后还会在日志里逐个核对",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "我更在意完成那一局给自己定下的通关目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6812.ALT1",
+          "scene": "复盘日志里的两次远征",
+          "text": "回想你确实打开过日志里的个人远征记录，比较过同一对氏族的两局。你回看它们主要为了什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MASTERY",
+            "MT68_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我想确认那两趟分别是否实现了我原先定下的远征目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我想找出布防调整有什么成效，再安排下一次有意识地复练这段",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        },
+        {
+          "id": "MT6812.ALT2",
+          "scene": "已解锁的熟练卡边框",
+          "text": "回想你实际解锁过熟练度边框并在日志里看过选项。哪种更像你当时做的事？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "MT68_MASTERY",
+            "MT68_FRAMES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留意还有哪些边框缺失，想把一组边框逐个解锁补完整",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "在已解锁的样式间挑一套自己喜欢的视觉效果，改成想要的牌面外观",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "按明确的玩家行动或投入动机解释信号。",
+          "interpretation_boundary": "以实际版本、手牌、费用、场地、解锁及已发生的经历为准。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+8d056f8fd689"
+}

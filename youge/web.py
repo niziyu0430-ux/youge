@@ -111,7 +111,8 @@ class Handler(SimpleHTTPRequestHandler):
         url=urlsplit(self.path)
         if url.path=='/api/health':
             return self.json_response({'app':'youge-local','status':'ok','versions':v04.config()['versions'],
-                                       'question_release':v05.bank()['version'],'authored_game_count':sum(len(p['game_ids']) for p in v05.bank()['packs'])})
+                                       'question_release':v05.bank()['version'],'authored_game_count':sum(len(p['game_ids']) for p in v05.bank()['packs']),
+                                       'public_game_count':len(v04.public_game_ids())})
         if url.path.startswith('/api/'):
             if not self.require_access():return
         if url.path=='/api/access/app-shell':
@@ -126,6 +127,11 @@ class Handler(SimpleHTTPRequestHandler):
             try:
                 gid=parse_qs(url.query).get('game_id',[''])[0]
                 query=parse_qs(url.query)
+                redirects=v04.catalog().get('search_redirects',{})
+                if gid not in v04.public_game_ids() and gid not in redirects:
+                    raise InputError('这款作品已不在新问卷的可选范围。')
+                if gid not in redirects and v05.pack_for(gid) is None:
+                    return self.json_response({'error':'这款作品的专属问卷暂未开放。'},409)
                 return self.json_response(questionnaires.questions(gid,instrument=query.get('instrument',[None])[0],mode_id=query.get('mode',[None])[0]))
             except InputError as error:return self.json_response({'error':str(error)},400)
         if url.path=='/api/v4/demo':

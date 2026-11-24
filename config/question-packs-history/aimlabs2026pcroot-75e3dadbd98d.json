@@ -1,0 +1,994 @@
+{
+  "id": "aimlabs2026pcroot",
+  "title": "Aimlabs（第一人称射击）",
+  "game_ids": [
+    "steam-714010"
+  ],
+  "scope": "Statespace Steam App 714010 Windows public build 26855839（2026-11-22）。仅本体虚拟任务的主页、菜单、视觉与声音、播放列表编辑、可见结果与社区检索。登录后在线功能及不上传的本机访客有各自前提，无付费或限时内容。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam PC 本体界面与创作",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "AIMLABS2026PCROOT01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "首页 Quick Play 还是已见任务列表",
+          "text": "你打开 Aimlabs 主页，看得到中间的 Quick Play，也能打开自己的 Tasks 列表。只有几分钟，你先点哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_LOAD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开 Tasks，看看上一次没试过的条目现在有哪些。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先开 Quick Play 的已见条目，得先找回上一回熟悉的画面。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「首页 Quick Play 还是已见任务列表」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT01.V1"
+        },
+        {
+          "scene": "第一页看单任务还是整份列表",
+          "text": "你在训练页已打开过单任务详情与播放列表。今天只打算浏览一个页面，想先弄清什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_LIST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看单任务的近期记录，让上次玩的那一项有个去处。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先打开播放列表，看看这几项在同一份列表怎么排。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一页看单任务还是整份列表」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT01.ALT1"
+        },
+        {
+          "scene": "从访客入口关掉排行榜的期待",
+          "text": "你曾在 Steam 版用访客模式运行过一项官方任务，也用自己的账号看过榜。今晚只打开已经知道可用的一边，你先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_GUEST",
+            "AIMLABS2026PCROOT_LOAD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进已有账号，想看同一项在账号页面里的记录。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "进本机访客档，在自己这台电脑上留一段轻松的体验。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「从访客入口关掉排行榜的期待」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "桌面启动后的近期与收藏筛选",
+          "text": "Tasks 里你已经发现 Recently Played 和 Favorites，自己也曾标过一些任务。只打开一种列表，你会选哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_LIST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去近期，看看昨天没来得及再看的一项。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "去收藏，先看看自己留下了哪些常用项目。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「桌面启动后的近期与收藏筛选」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT02.V1"
+        },
+        {
+          "scene": "给两份同名列表找正确作者",
+          "text": "在游戏里你通过搜索找到名字接近的两份播放列表，卡面都能显示作者。想找上次看的那份，你先比较什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_COMM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先点开自己记得的缩图样式，看详情能不能认出来。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先确认作者名字，缩小到知道的那一份。",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「给两份同名列表找正确作者」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT02.ALT1"
+        },
+        {
+          "scene": "官方 Gridshot 和热门目录",
+          "text": "你的 Aimlabs 菜单已经能开 Gridshot，也有 Tasks 的热门视图。再留一分钟，你会在哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_LOAD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回 Gridshot 熟悉的启动页，从上一次的地方接上。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "看热门面板，挑一个没翻过的任务介绍。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「官方 Gridshot 和热门目录」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "颜色与任务里已经熟悉的画面",
+          "text": "你见过 Aimlabs 已经打开过的任务画面，也看过其中可选的非目标背景配色。只能改一个地方，你先怎么看？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_CRE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先保留已经熟悉的默认背景，让画面接上上次的印象。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先换一种已有的背景配色，按自己喜欢的画面风格选择。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「颜色与任务里已经熟悉的画面」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT03.V1"
+        },
+        {
+          "scene": "背景明暗和界面声音",
+          "text": "你已在 Steam 版浏览过画面和声音选项。准备只看一项熟悉内容的界面，你想先给什么留一点时间？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_MON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看这项任务的背景画面，想让它符合自己喜欢的配色。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先查看声音菜单，回想自己习惯的软件音量。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「背景明暗和界面声音」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT03.ALT1"
+        },
+        {
+          "scene": "把窗口放在哪块屏幕",
+          "text": "你用同一台电脑的双屏打开 Aimlabs，Graphics 的 Selected Display 已列出两块。今天只看任务和结果，你会怎样配置显示位置？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_MON",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换到更容易看清界面布局的那块，想看看结果页的宽度够不够。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "留在一贯用的那块屏幕，熟悉的位置更省心。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「把窗口放在哪块屏幕」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "已看到的任务倒计时",
+          "text": "你第一晚已经看见任务会倒数，设置中也看到可以保留或关闭这段等待。下次从已熟悉的一项开始，你会怎么设？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_COUNT",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留可见倒数，让我认识自己准备开始的那几秒。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "关掉这段提示，让界面直接切到本轮。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「已看到的任务倒计时」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT04.V1"
+        },
+        {
+          "scene": "两项都能改时先确定哪边",
+          "text": "你已经找到 Game 的倒计时和 Graphics 的窗口设置，只打算先确定一项。还有一小段时间，你会怎么用？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_COUNT",
+            "AIMLABS2026PCROOT_MON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把显示模式弄到看起来舒服，再回来看倒数。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先确认倒数怎么显示，想把每轮开始的时点保持一致。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「两项都能改时先确定哪边」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT04.ALT1"
+        },
+        {
+          "scene": "只调整自己已经试过的提示",
+          "text": "你已经在两次实际运行里分别体验了带倒数和不显示倒数。下次重开同一任务，你希望屏幕上的开始怎样出现？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_COUNT",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留熟悉的可见等待，知道自己什么时候开始。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "把即刻进入留作已经熟悉的任务的设置，少看一页提示。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「只调整自己已经试过的提示」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "从描述或缩图继续编辑",
+          "text": "已能编辑自己的列表，里面已有几个条目，标题也填过。今天只改一处让自己下次认得，先改哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换一张一眼能认出来的缩图。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "写清这是给自己哪一种时间安排准备的。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「从描述或缩图继续编辑」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT05.V1"
+        },
+        {
+          "scene": "已有两份列表的排序问题",
+          "text": "你在 Created By Me 里已有一份短列表和一份收进更多项目的记录。今天只整理一份，你会先开哪一个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_COMM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先整短列表，把最常开启的入口留顺手。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先整内容更多的那份，想给存下来的内容留完整资料。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「已有两份列表的排序问题」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT05.ALT1"
+        },
+        {
+          "scene": "新建自己的第一份播放列表",
+          "text": "你在 Create 中打开 Manage Your Playlists，已经看到空白列表入口，任务库里也有自己玩过的一项。你先给新列表决定什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把那项已玩的内容放进去，再看要怎么称呼这份列表。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先点标题和缩图，想下次一眼认出这份列表。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「新建自己的第一份播放列表」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "官方入口与本人列表对照",
+          "text": "你已分别看过一份官方列表和自己的自建列表。今天打算查一个条目细节，你先在哪种列表里找？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "打开自己的那个，从手上已经保存的结构找回原条目。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "打开官方的那份，想看看同一个内容和别的任务怎么并列。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「官方入口与本人列表对照」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT06.V1"
+        },
+        {
+          "scene": "改现有列表的一项次序",
+          "text": "你已经打开自己可编辑的列表，里面至少有两项已玩过的任务。只想先动一处，你会怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把以前很少打开的那项移到前面，重新看一次它。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先把这两项的次序写得更清楚，延续自己一贯的打开顺序。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「改现有列表的一项次序」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT06.ALT1"
+        },
+        {
+          "scene": "描述说明想给未来自己留在哪里",
+          "text": "编辑页里已经有项目顺序，也有给整个列表写说明的位置。下次过了几天才回来，你先完善哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先写一行说明，记住当初为什么把这些内容放一起。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把列表顺序检查一遍，让未来自己打开就能看懂。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「描述说明想给未来自己留在哪里」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "先读详情记录或返回任务页",
+          "text": "打开玩过的官方任务详情，近期记录已经显示。想在退出前只看一处，会留在哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_LOAD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "返回 Tasks，把下一次想打开的项目先记下来。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先看本人近期的任务记录，回忆上一轮怎么结束的。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「先读详情记录或返回任务页」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT07.V1"
+        },
+        {
+          "scene": "在同一详情看个人数据和榜",
+          "text": "你已经登录且本来就能打开这项任务的近期数据和榜界面。只看一处，你更想先读什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_GUEST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读自己的数据，和上次在同一页看到的结果对照。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先看榜的展示形式，想知道自己熟悉的任务在社区页面是什么样。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「在同一详情看个人数据和榜」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT07.ALT1"
+        },
+        {
+          "scene": "已认证的收藏与访客的本机关联",
+          "text": "你了解本机访客和已登录账户分开，两个入口都曾用过。今天准备回看之前的一段体验，你会先找哪一边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_GUEST",
+            "AIMLABS2026PCROOT_LIST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回已登录页面，查以前自己实际收藏过的列表。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "回访客自己看过的本机入口，记住不用上传时的体验。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「已认证的收藏与访客的本机关联」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "在推荐和搜索里看到内容",
+          "text": "在训练页你看到 Featured 和 Search 都开启，并记得已有一份以前看过的列表。只用一个入口，你会怎么逛？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_COMM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看看精选又列了哪些内容，挑没见过的介绍。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先搜索已有的确切名字，把上次没看完的详情接上。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「在推荐和搜索里看到内容」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT08.V1"
+        },
+        {
+          "scene": "发布前要不要留在本地",
+          "text": "你已经有一份自己的列表，也实际看到了可用的创意工坊入口。今天要留下一个版本，你更愿意先做哪一步？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_COMM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在自己的编辑器添齐标题和说明，方便以后决定要不要发给别人。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先存为当前自己的版本，等下次回来再看。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「发布前要不要留在本地」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT08.ALT1"
+        },
+        {
+          "scene": "自己收过的内容按什么名字查",
+          "text": "你在训练页看到搜索栏，也能按 Favorites 筛选，已经知道自己要找的一份名称。今天先用哪种方式？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_LIST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "输准确名称直找，想在页面上对到那份记忆。",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "直接点收藏，顺手看看同时收过的其他记录。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「自己收过的内容按什么名字查」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "从详情或播放列表讲内容",
+          "text": "你实际见过一项官方任务的详情，也单独保存过一份包含多个条目的播放列表。要描述今天的使用感，你先从哪里说？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_LIST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从列表说起，那几项一起保留下来比较容易回头找。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "从单任务结果页说起，那里给自己的反馈更直接。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「从详情或播放列表讲内容」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT09.V1"
+        },
+        {
+          "scene": "初见页面哪些细节让人记住",
+          "text": "第一次打开新版 Aimlabs，已经点过中心 Quick Play 和左侧任务分类。过几天再开，会凭哪处找回自己的路线？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "记住 Quick Play 的所在，回来想从熟悉任务接上。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "记住任务分类和筛选，以后按自己的记录找。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「初见页面哪些细节让人记住」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT09.ALT1"
+        },
+        {
+          "scene": "把一份列表讲给别人听",
+          "text": "你以前做过一份自己的列表，能在编辑器里对照顺序和描述。朋友问这份有什么特点，你先解释哪一部分？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_COMM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先讲它的名字与选图，想让朋友一眼认出。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先讲它现在怎样分顺序，让人听清每页的关系。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「把一份列表讲给别人听」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "声音设置与任务背景",
+          "text": "在 Steam PC 版你已经调过一次已见任务的背景和应用声音。过一阵再想起这次使用，你先记得哪处？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_MON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "记得那一项任务画面的背景配色，觉得它最能留下个人印象。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "记得自己在设置里留的应用音量，觉得打开时的声响很熟悉。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「声音设置与任务背景」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT10.V1"
+        },
+        {
+          "scene": "倒数提示的个人感觉",
+          "text": "你已经玩过保留倒数和没有倒数的两种开头。回到设置复查时，最想保留哪种感受？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_COUNT",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留直接进入、尽快看到本轮画面的清楚时点。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "保留开始前有几秒等待的仪式感。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「倒数提示的个人感觉」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT10.ALT1"
+        },
+        {
+          "scene": "本地显示器与窗口布局",
+          "text": "你已经在一台有两块屏幕的电脑试过切换显示器，也看过不同窗口显示。回想留下哪项调整更明显？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_MON",
+            "AIMLABS2026PCROOT_FIRST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留下固定在同一块屏幕时的位置一致感。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "留下窗口布局让图与文字更容易一起看的感受。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「本地显示器与窗口布局」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "重回同一任务前检查哪里",
+          "text": "已经玩过 Gridshot，也开过它的详情。下一次进软件你想用哪一条路最舒服地回到它？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_LOAD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "通过自己保存的收藏，从手边整理好的那几项回来。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "通过近期记录，直接回上次实际停的地方。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「重回同一任务前检查哪里」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT11.V1"
+        },
+        {
+          "scene": "观察作品筛选的本机和在线边界",
+          "text": "你都体验过访客模式的本机界面和账号可见的在线页面。回想后者让你记住什么，哪项更自然？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_GUEST"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看到别人留下的内容后更愿意回来逛。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "看到自己已有的记录整理方式，比刚开始更容易认。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「观察作品筛选的本机和在线边界」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT11.ALT1"
+        },
+        {
+          "scene": "别人留存的列表怎么让你发现",
+          "text": "你在训练页面看到过已经实际能打开的公开列表，知道其中不只一份。挑一份回来再读，你最易被什么留下印象？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_COMM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "是作者在描述里写的用意，我想知道别人当初怎么挑的。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "是熟悉的卡面和标题，自己下次能认出来。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「别人留存的列表怎么让你发现」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "AIMLABS2026PCROOT12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "在训练页留下监视画面或列表",
+          "text": "你在改过显示位置的电脑上用过列表页和单任务内容。现在只记录一件以后想接着做的事，你留哪件？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_MON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留下之前的显示位置，好让自己的画面布局接回上一回。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "留下访问过的一份列表名称，下次便于直接打开。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「在训练页留下监视画面或列表」中的实际行动与取舍。",
+          "interpretation_boundary": "仅按实际登录或本机权限回看经历",
+          "id": "AIMLABS2026PCROOT12.V1"
+        },
+        {
+          "scene": "给一次短访问收尾",
+          "text": "准备退出 Aimlabs 前，你确实打开过一项官方任务详情，也知道自己的倒计时设置在哪里。只想留一个下次用的提醒，你选什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_FIRST",
+            "AIMLABS2026PCROOT_COUNT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "记住当时设置的开局提示，免得下次临时再找。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "记住上次打开的任务，以便下次直接重开。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「给一次短访问收尾」中的实际行动与取舍。",
+          "interpretation_boundary": "免费本体可见的常用界面",
+          "id": "AIMLABS2026PCROOT12.ALT1"
+        },
+        {
+          "scene": "自己的缩图和介绍二选一",
+          "text": "你回看一份已经编辑保存的列表，能看见标题说明和缩图。说到哪处最像你自己的作品，你会举哪个？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "AIMLABS2026PCROOT_LIST",
+            "AIMLABS2026PCROOT_COMM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "举标题说明，那一句话记下了自己为何做这份。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "举缩图，觉得颜色让它在一排列表里特别好认。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「自己的缩图和介绍二选一」中的实际行动与取舍。",
+          "interpretation_boundary": "使用过相同版本编辑或当页可见的功能",
+          "id": "AIMLABS2026PCROOT12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+75e3dadbd98d"
+}

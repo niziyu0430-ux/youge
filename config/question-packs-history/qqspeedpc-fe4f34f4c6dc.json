@@ -1,0 +1,1073 @@
+{
+  "id": "qqspeedpc",
+  "title": "QQ飞车",
+  "game_ids": [
+    "qq-speed"
+  ],
+  "scope": "腾讯国服 PC《QQ飞车》端游，覆盖新手教学、普通竞速、道具、车队和车库。",
+  "status": "private_candidate_pending_independent_review",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "腾讯 PC《QQ飞车》端游",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "12 槽各三景，首题八道行动和四道回顾。每个题槽都有不依赖车队或高阶技术的替代情境。",
+    "涉及道具、组队和特定车辆时，题面明确是否已在对应房间、赛道或配件权限下。赛事实况用于核验真实操作。",
+    "按 PC 端方向键、Shift 漂移、Ctrl 氮气或道具、R 复位和 F5 准备编写。没有使用手游触控操作、活动与排位规则。"
+  ],
+  "slots": [
+    {
+      "id": "QQSPDPC01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "QQSPDPC01.V1",
+          "scene": "初级驾照前把车头拉回来",
+          "text": "你刚开始玩端游，初级驾照的练习已经开放。上一趟在弯前按 Shift 漂移太早，出弯车头还斜着。下一趟你会先练什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "只改入弯点，看看同一个弯从更晚的一次漂移出去时车头会落在哪里",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先用同一套方向键和漂移操作，专练把车头拉正才出弯",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_GUIDE",
+            "QQSPDPC_TUTORIAL",
+            "QQSPDPC_PCPLAY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "按住方向和漂移后怎样把车带出弯",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC01.V2",
+          "scene": "十一城出弯先练一次喷还是双喷",
+          "text": "个人竞速里选到十一城。接下来是你已经能把车头及时摆正的一处弯，练过一次小喷，也会在这里接双喷。你这趟先练哪种？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先练即使对手挨得很近，也能稳定接出一次小喷",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "试把当前赛车的出弯动作和双喷接起来，找更适合这辆车的一套跑法",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_TRACK",
+            "QQSPDPC_CITY",
+            "QQSPDPC_PCPLAY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "按住方向和漂移后怎样把车带出弯",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC01.V3",
+          "scene": "驶离赛道后复位还是转回来",
+          "text": "你在端游竞速中驶出正常跑线，落在一处还能转向开回去的路边，复位键 R 此时也可用。前方有别的车经过。下一步先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "用复位回到赛道，照这一圈原定的跑法继续跑完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先用方向把车拉回赛道，练一次跑偏了也能处理",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_GUIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "按住方向和漂移后怎样把车带出弯",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "QQSPDPC02.V1",
+          "scene": "十一城出弯后已有一管氮气",
+          "text": "十一城的个人竞速里，刚过的那个弯已集满一管氮气。现在车头正了，面前直道可喷，下一组弯过后也有合适加速的路段。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "现在按氮气键，观察这一段提速能否把先前出弯的损失追回",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "按这圈的氮气安排留住一管，到下一处有把握连着跑的地方再用",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_CITY",
+            "QQSPDPC_TUTORIAL",
+            "QQSPDPC_GUIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "分配当前的氮气或加速道具",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC02.V2",
+          "scene": "玛雅古迹打中前车后的一次加速",
+          "text": "端游组队道具跑玛雅古迹，你手里有加速，刚用导弹打中前面的敌车。自己可以借当前空当超过它，也可把加速留到后面直线。你会？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先正常跑过这截，留给后面车头更顺的直线，按整段距离用加速",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "现在放加速，看看自己能不能抓住这次导弹刚打断的空隙",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_ITEMFINAL",
+            "QQSPDPC_GUIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "分配当前的氮气或加速道具",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC02.V3",
+          "scene": "准备在弯后把小喷和氮气串起来",
+          "text": "练习中上一趟已能在弯后做出小喷，手上也有一管氮气。这趟你可继续沿熟悉位置放氮气，或者把它改到能接小喷的同一段。你想先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已有跑法，把小喷和下一段氮气分别按准，再考虑改顺序",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把氮气挪到小喷附近，试做一套更符合这辆车出弯手感的组合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_TUTORIAL",
+            "QQSPDPC_PCPLAY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "分配当前的氮气或加速道具",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "QQSPDPC03.V1",
+          "scene": "老街仓库队友在前面领跑",
+          "text": "组队道具里，队友在老街仓库领跑，你跟另一台敌车并不远。你手里有可攻击前面敌车的道具，也可以先观察它接下来的路线。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先看前面敌车有无防护、接下来走哪一线，再决定在什么时候用道具",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "条件已够就打，先帮前面的队友拉开当前能干扰它的车",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_ITEMFINAL",
+            "QQSPDPC_ITEM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据前后车位置判断路线和威胁",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC03.V2",
+          "scene": "灵蛇传说内线前的一段跟车",
+          "text": "端游竞速到灵蛇传说，你刚缩近前车。它把车头留在外侧，内线有机会进入，但接下来还有飞跃点。你选择？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先跟一段，观察对手从外侧何时进弯、何时可能给出更稳的超车点",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "试从内线超一次，专练超过去后还能把进入飞跃点的车头摆正",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_RACEFINAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据前后车位置判断路线和威胁",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC03.V3",
+          "scene": "顺道具箱一侧还是提前选车线",
+          "text": "你在一局端游道具赛接近下一排会发放道具的箱子，箱子还没被别人吃完，两侧车线都能继续跑。你先走？",
+          "options": [
+            {
+              "id": "A",
+              "label": "沿前车可能改线的一侧看它怎么走，等看清落点再选能碰到的箱子",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "走能吃到剩余道具又最少转向的那条线，留足后面能做选择的资源",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_ITEM",
+            "QQSPDPC_GUIDE",
+            "QQSPDPC_BOX"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "根据前后车位置判断路线和威胁",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "QQSPDPC04.V1",
+          "scene": "十一城连续弯里练少打方向",
+          "text": "十一城连续几个弯，你已经会让车跑完整段，但上一次为贴内线车头修了好几下。现在你开同一辆车再进这段。你先试？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把线留宽一些，专练每个弯用更少的方向修正就出得去",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "只改第一个弯的入弯点，看看后面到底哪一处首先少了修正",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_CITY",
+            "QQSPDPC_PCPLAY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在同一道弯选择操作难度",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC04.V2",
+          "scene": "老街管道练完第一处弯",
+          "text": "老街管道跑了一趟，第一处容易蹭边的弯已经能过。你有时间再来一趟，可以重复刚才已跑成的路线，也能试更贴里的一条线。你会？",
+          "options": [
+            {
+              "id": "A",
+              "label": "试更贴里一趟，用出弯车头和成绩看看缩短路线值不值得",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "重复跑成的路线，练到这里每次都能顺利过去",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_TRACK",
+            "QQSPDPC_PIPE",
+            "QQSPDPC_TUTORIAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在同一道弯选择操作难度",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC04.V3",
+          "scene": "直接转向还是短漂通过一个缓弯",
+          "text": "端游普通竞速里，前面的缓弯不用漂移也转得过去，你这次也能控制短漂并留出修方向的距离。你更常先用哪一招？",
+          "options": [
+            {
+              "id": "A",
+              "label": "用方向键稳稳转过去，先把整圈少撞少修正的动作练起来",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "用自己已会的短漂，通过后接小喷，继续试同一套技术怎么适应缓弯",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_GUIDE",
+            "QQSPDPC_TUTORIAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在同一道弯选择操作难度",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "QQSPDPC05.V1",
+          "scene": "特区高速终点前的天使",
+          "text": "端游组队道具，特区高速最后一段，你领跑，手里有天使。队友也快到终点，后方有对手还在追。你会？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先看对手和来袭提示，把天使留给更能判断对方出手的那一刻",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先放天使保护这段冲刺，按这局守住领跑到冲线的计划继续开",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_ITEMFINAL",
+            "QQSPDPC_ITEM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在可用时机分配防御或冲刺",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC05.V2",
+          "scene": "海滨小镇前车进弯之前有酷比",
+          "text": "端游道具里跑海滨小镇，你前面有能被手中酷比攻击的对手，两辆车都快进弯。可现在用，也可等自己出弯后还有机会时再用。你倾向？",
+          "options": [
+            {
+              "id": "A",
+              "label": "这会儿就用，看看能否在它开始转向时打断速度",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先把自己的弯过好，有更稳的车线跟进时再用酷比",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_ITEMFINAL",
+            "QQSPDPC_ITEM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在可用时机分配防御或冲刺",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC05.V3",
+          "scene": "竞速终点前有一管氮气",
+          "text": "个人竞速最后一个弯将出，手里还有氮气。弯出口比较开，车正一点就可喷，前面还有一截直线可用。你偏向？",
+          "options": [
+            {
+              "id": "A",
+              "label": "等到车完全摆正后再放，练清最后弯出弯不蹭墙时的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "眼下能顺着出口开就放，照自己这圈要尽早冲线的计划跑完",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_GUIDE",
+            "QQSPDPC_TUTORIAL",
+            "QQSPDPC_RACEFINAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在可用时机分配防御或冲刺",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "QQSPDPC06.V1",
+          "scene": "端游车库里两辆可用的车",
+          "text": "这次要跑熟悉的端游竞速图。车库里有两辆已经拥有、这间房也能选的赛车，一辆平时最熟，另一辆车头响应与你常用的不同。你先上哪辆？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用已经熟练的，继续把同一辆车的过弯节奏掌握得更稳",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "换另一辆跑同一张图，比较之前容易错的弯这次做对没有",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_HOME",
+            "QQSPDPC_GARAGE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在换车与练当前赛车之间选",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC06.V2",
+          "scene": "同一辆车改引擎还是点火",
+          "text": "你正在开的车可改装，手里有适用的引擎部件和点火装置。原来经常靠出弯小喷恢复车速，也想试试直道上的提升。只打算先试一种改装，你选？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先试引擎，保留点火装置，用同一张图比较直道速度有没有实际变化",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先试点火，把改装用在我常靠小喷接起来的出弯打法上",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_GARAGE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在换车与练当前赛车之间选",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC06.V3",
+          "scene": "老街管道试熟车还是练新车",
+          "text": "老街管道还差一点就能稳定跑完。你现在有两辆可用车，一辆总能在这一图完成全程，另一辆刚试过一次、方向回正需要再适应。剩下两趟你用哪辆？",
+          "options": [
+            {
+              "id": "A",
+              "label": "用熟车，按今天要完成两次干净跑完的目标走",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "用新车，专门练在每个出弯点都能及时把它拉回来",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_PIPE",
+            "QQSPDPC_GARAGE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在换车与练当前赛车之间选",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "QQSPDPC07.V1",
+          "scene": "端游房间已可准备",
+          "text": "你在一间可选图的端游竞速房，房里有朋友一起练。大家都能按 F5 准备，房主还可以在开始前讨论换图。你这一次提议？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿已有选图按准备，抓紧把自己原定的那段出弯跑过一轮",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先商量一个大家都能完成的图，一起练然后对照彼此路线",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_GUIDE",
+            "QQSPDPC_HOME"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在准备前把个人和车队时间用到哪里",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC07.V2",
+          "scene": "车队约跑前还够练一张",
+          "text": "和车队成员约了晚些在房间跑，目前还够进一趟竞速。你可自己重跑一张地图，或者跟已在线的队员先对跑一趟。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先独自练那个容易失误的弯，感觉稳了再去跟车队跑",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先和已经来的队员一起跑，顺便搞清彼此的正常进弯和超车习惯",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_TEAM",
+            "QQSPDPC_RACEFINAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在准备前把个人和车队时间用到哪里",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC07.V3",
+          "scene": "新手时间只够一轮训练和一轮实跑之一",
+          "text": "已经能打开端游的入门教学，也能进现在这间个人竞速房。你这会儿只能做一项，最近练过出弯后的小喷。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "直接去房里跑一场，看看跟不同车在场时依旧在哪个弯接不上小喷",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先照教学把按键动作再练精确一点，等稍熟再进实跑",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_TUTORIAL",
+            "QQSPDPC_GUIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "在准备前把个人和车队时间用到哪里",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "QQSPDPC08.V1",
+          "scene": "瓦特厂房队友领跑时要不要追",
+          "text": "端游车队竞速的瓦特厂房，队友在前，你和一辆对手挨得近。你车上有氮气，有空线可试着先超这个对手，也可留住近处的跟车位置。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "替领跑队友盯住附近这个对手，先守可配合的线路",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "自己有机会就用氮气尝试超过它，继续把本轮名次目标往前推",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_RACEFINAL",
+            "QQSPDPC_OFFICIALRACE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "用同一条赛道安排一次新的尝试",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC08.V2",
+          "scene": "道具赛窄处前面已有障碍",
+          "text": "端游道具赛里，你能在前方看见一个已经落在原跑线上的香蕉皮。两侧仍能绕过，左侧和右侧可用空间不同，前后车也正在到来。你先？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先观察前车会往哪边避，挑另一处能避开它的时机和路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "选不用抢位置、自己能完整绕开的那一侧，让路线先安全过去",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_ITEM",
+            "QQSPDPC_GUIDE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "用同一条赛道安排一次新的尝试",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC08.V3",
+          "scene": "单人复跑开头段落还是末段",
+          "text": "单人竞速一张熟图开跑前，你已经知道一个起步后常失准的弯和接近终点的急弯。今天只有一趟可以专注其中一段，其他先按熟悉线路走。你先选？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把注意力放在起步后的弯，练从初段车速接到第一处转向",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "专注终点前急弯，先改变最影响我刚才那趟完赛目标的动作",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_TUTORIAL",
+            "QQSPDPC_PCPLAY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "用同一条赛道安排一次新的尝试",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "QQSPDPC09.V1",
+          "scene": "飞跃点之前明明已经超车",
+          "text": "回想端游竞速里，像灵蛇传说这样的飞跃路段，自己曾经超到前面又因为进飞跃方向不对丢回位置。你更想记什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "保留超车路线，只换进入飞跃的一次转向，看看会不会再丢位置",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把超车后的进弯和飞跃方向串起来，弄懂哪一步带歪了路线",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_RACEFINAL",
+            "QQSPDPC_TUTORIAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾什么时候看懂一处赛道或道具反馈",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC09.V2",
+          "scene": "冲线之前天使恰好接上",
+          "text": "回想端游组队道具一局，领跑时最后一段放了天使，关键一轮没被打断。哪一部分对你印象更深？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想弄清对手那时准备怎样出手、为什么那个时机能躲过去",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "想记住队友配合牵制的时机，下次换我去保护领跑的人",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_ITEMFINAL",
+            "QQSPDPC_ITEM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾什么时候看懂一处赛道或道具反馈",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC09.V3",
+          "scene": "十一城不同走线带来不同车头",
+          "text": "回想跑端游十一城，有一次把一个弯的入弯点挪了，出弯车头回正的位置也变了。更想记住？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想用同一辆车把两个位置各跑一遍，看看哪种反馈更容易重现",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "想把入弯、反打方向和出弯落点顺着想清楚",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_CITY",
+            "QQSPDPC_PCPLAY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾什么时候看懂一处赛道或道具反馈",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "QQSPDPC10.V1",
+          "scene": "从只会漂移到接得上小喷",
+          "text": "回想在端游练习连续几趟后，第一次出弯能在车头正的时候接上小喷。哪件事让你还愿意练？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想把方向回正和按前进接起来，下一次也能不慌地做成",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "想看到这次能加速、上次没加速时成绩的差别，再改自己的节奏",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_TUTORIAL",
+            "QQSPDPC_PCPLAY",
+            "QQSPDPC_KEYVIDEO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾一个键鼠动作练成以后的体验",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC10.V2",
+          "scene": "段位双喷训练后的第一场实跑",
+          "text": "回想看过端游段位双喷教学，再把练过的操作带进一局竞速。你最在意哪个收获？",
+          "options": [
+            {
+              "id": "A",
+              "label": "发现这次可以把双喷和自己常开的车的出弯特点连在一起",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "手在对手贴近时依旧能按对，觉得把这一段练进了日常跑法",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_TUTORIAL",
+            "QQSPDPC_PCPLAY"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾一个键鼠动作练成以后的体验",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC10.V3",
+          "scene": "空喷或落地喷后终于没擦墙",
+          "text": "回想端游通过一处能做空喷或落地喷的飞跃段，前几趟着地就擦墙，这一趟成功接下去。你希望接着怎样做？",
+          "options": [
+            {
+              "id": "A",
+              "label": "反复练落点和方向修正，试到好几次都能顺利出去",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "和前几趟对比，想知道是提前放喷还是着陆后修正带来的变化",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_TUTORIAL",
+            "QQSPDPC_RACEFINAL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾一个键鼠动作练成以后的体验",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "QQSPDPC11.V1",
+          "scene": "自己车库里常开的旧车",
+          "text": "回想端游很多辆赛车里，仍单独留下你早期就用的一辆。再打开车库时，什么让你愿意回去开它？",
+          "options": [
+            {
+              "id": "A",
+              "label": "它是之前积累下来的一辆，想把不同手感的赛车都再开一遍",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "一直用它从早期跑到现在，想继续练成以前不会的路线",
+              "signal": "growth_keeper"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_HOME",
+            "QQSPDPC_GARAGE"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾车辆和长期积累",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC11.V2",
+          "scene": "同一张图试车后去下一图",
+          "text": "回想在端游用同一张图试了两辆都已拥有的车，后来有一辆手感能跟自己的出弯习惯接起来。为什么还想去试另一图？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想给这辆车配出从缓弯到连续弯都合用的跑法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "想看看它在另一张不那么熟的图里会带我发现怎样的线路",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_GARAGE",
+            "QQSPDPC_TRACK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾车辆和长期积累",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC11.V3",
+          "scene": "搭配车库已有的赛车皮肤",
+          "text": "回想用已经拥有、适配当前赛车的皮肤跑过一场端游。你更享受？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把以前获得却很少用的皮肤拿出来跑，想让收藏过的皮肤逐个都有机会亮相",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "让这辆常开的赛车和自己的角色装扮配成我喜欢的样子",
+              "signal": "style_director"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_HOME",
+            "QQSPDPC_LOOK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾车辆和长期积累",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    },
+    {
+      "id": "QQSPDPC12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "QQSPDPC12.V1",
+          "scene": "车队同场有人领跑有人牵制",
+          "text": "回想端游组队竞速，有队友领跑，你在后面跟其他车交锋，大家各跑一段把优势守下来。你更愿意为什么再跑一局？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想和这几个人再合跑，一起把谁领跑谁补位配合得更好",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "想专练后位追车时的路线控制，下次换我保护队友也能稳定",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_RACEFINAL",
+            "QQSPDPC_TEAM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾愿意再开一局的原因",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC12.V2",
+          "scene": "海滨小镇最后的反超",
+          "text": "回想海滨小镇的端游道具对战，落后的车用一个已经准备好的攻击道具抓到机会追上。你更想重来哪种感受？",
+          "options": [
+            {
+              "id": "A",
+              "label": "想重新预判当时各车的相对顺序，找到这次反超机会最早出现的信号",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "想对照两次释放时机，看道具差一点早放或晚放会怎样",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_ITEMFINAL",
+            "QQSPDPC_ITEM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾愿意再开一局的原因",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        },
+        {
+          "id": "QQSPDPC12.V3",
+          "scene": "自己重跑同一段老街管道",
+          "text": "回想一个人重跑老街管道，后来发现同一段可以避开原来一直碰的边。再开一趟更想要什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把那段已经找对的过法越跑越熟，下次不用临时修车头",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "找找这张图还有哪一处以往都沿习惯走过去，也许还有想试的线路",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "QQSPDPC_PIPE",
+            "QQSPDPC_TRACK"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾愿意再开一局的原因",
+          "interpretation_boundary": "腾讯 QQ 飞车 PC 端游。只按已进入的模式、赛道和手头实际可用的按键、道具和赛车作答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+fe4f34f4c6dc"
+}

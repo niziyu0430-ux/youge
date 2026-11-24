@@ -1,0 +1,1090 @@
+{
+  "id": "hs71",
+  "title": "迷走深空 碎舰师",
+  "game_ids": [
+    "steam-1161580"
+  ],
+  "scope": "PC本体拆船、资源、船型与失重作业；不默认有计时或某船必有特定设备",
+  "status": "private_candidate_independently_revised",
+  "author_review": "independent_document_and_structural_review",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体拆船作业",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "8 行动、4 回顾，每槽 3 个不同作业或回顾节点。",
+    "按 Steam PC 本体，职业叙事、升级和贴纸写明界面前置；拆解操作按当前船型与实际可用处置。",
+    "只采用可交叉核对的固定机制，题面不使用回收价格、班长与等级的固定数字。"
+  ],
+  "slots": [
+    {
+      "id": "HS7101",
+      "number": 1,
+      "variants": [
+        {
+          "id": "HS7101.V1",
+          "scene": "初期铝框和座椅的不同出口",
+          "text": "船舱已经无压。一张可抓出的座椅标去驳船，已分离的铝板标去熔炉，两条路线都能走。你先做哪件？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_BAY",
+            "HS175_SALVAGE",
+            "HS175_DEV"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拉出座椅，把舱内大件腾开，再沿侧面连续把几块铝板送熔炉",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先把我这一轮给自己定下要送的铝板送进熔炉",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "拆船中统筹回收顺序、探索结构或完成即时目标。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7101.ALT1",
+          "scene": "Mackerel 外壳和登船口",
+          "text": "扫描显示 Mackerel 一侧外壳还有连接点。从已打开的舱口也够得到一件标去驳船的设备。舱室已无压。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_MACK",
+            "HS175_BAY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从现成舱口拉出这件我决定优先收的设备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先切开这侧连接点，让后续几件设备都能从大开口运下去",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "拆船中统筹回收顺序、探索结构或完成即时目标。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7101.ALT2",
+          "scene": "开班扫描三种回收去向",
+          "text": "新开一班，扫描器已能区分处理器、熔炉与驳船的回收件，船侧还有另一段能飞近查看的骨架。你先花这几分钟在哪？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_BAY",
+            "HS175_SALVAGE",
+            "HS175_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先绕到看不清的另一侧，弄清从没走过的船体外部路线",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先把扫描看到的三类部件排好顺序，免得不同去向的重件挤在一起",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "拆船中统筹回收顺序、探索结构或完成即时目标。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7102",
+      "number": 2,
+      "variants": [
+        {
+          "id": "HS7102.V1",
+          "scene": "独立舱的可用大气调节器",
+          "text": "你沿气闸进入一间受压舱，所在室有可用大气调节器。另一处已标为无压，也还有可安全完成的切点。你现在先做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_AIR",
+            "HS175_HAZARDS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "退回已无压的那边，先完成我刚才选定的一组切点",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "用调节器把这间舱降压，留意仪表变化，练到能认出何时可以下刀",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "同一气压节点比较学会操作、诊断隔舱和场外作业。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7102.ALT1",
+          "scene": "驾驶舱降压后仍隔着另一道门",
+          "text": "你刚用调节器给驾驶舱降压，另一扇门后的空间读数仍不同，门可以保持关闭，入口也能安全返回。你接下来先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_AIR",
+            "HS175_HAZARDS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先保留门的状态，从扫描读数和边界找出为什么另一间没跟着降压",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先退回去拿自己这轮优先要回收的无压区部件",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "同一气压节点比较学会操作、诊断隔舱和场外作业。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7102.ALT2",
+          "scene": "经气闸进入前的压力判断",
+          "text": "船外扫描已经发现一处有压力的船舱。可用气闸旁有已分离的纳米碳板，去处理器的线路畅通。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_AIR",
+            "HS175_BAY",
+            "HS175_MACK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把外面这块板送走，清出后续舱内大件搬出来时要走的路线",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先经气闸进舱并核对压力，练习完整进出一趟再开始解体",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "同一气压节点比较学会操作、诊断隔舱和场外作业。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7103",
+      "number": 3,
+      "variants": [
+        {
+          "id": "HS7103.V1",
+          "scene": "大块纳米碳板绕开处理器边缘",
+          "text": "一块已经切下的纳米碳板要送处理器。入口侧缘有遮挡，外面的 Jax 可作为系索落点。系索余量够。你先怎么牵？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_GRAPPLE",
+            "HS175_BAY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用 Jax 把板牵离卡口，再改向处理器，让两段路都能接上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先练拉出一段时怎样估算摆动，边观察板的转向边调落点",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "抓钩、系索和物体惯性提供不同的操作反馈与路线规划。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7103.ALT1",
+          "scene": "座椅被抓钩取出后对准驳船",
+          "text": "一张已拆离的座椅标给驳船。下方没有挡路物，抓钩和系索都能用。你想怎么把它送下去？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_GRAPPLE",
+            "HS175_BAY",
+            "HS175_SALVAGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把座椅直接用系索系到驳船，把这回要交的部件送完",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "用抓钩慢慢推送并自己修正方向，感受座椅在失重中的移动",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "抓钩、系索和物体惯性提供不同的操作反馈与路线规划。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7103.ALT2",
+          "scene": "轻铝板在熔炉航道上偏转",
+          "text": "一块可以用抓钩带得动的铝板已分离，扫描标去熔炉。它正缓慢转向，炉口前有空地，你可以重新牵住它。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_GRAPPLE",
+            "HS175_BAY",
+            "HS175_DEV"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手用抓钩修一下角度，观察铝板转动对我输入的反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先在炉口外练减小摆动，把板调到能直着送进开口的角度",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "抓钩、系索和物体惯性提供不同的操作反馈与路线规划。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7104",
+      "number": 4,
+      "variants": [
+        {
+          "id": "HS7104.V1",
+          "scene": "一级反应堆还在底座",
+          "text": "一级反应堆仍装在底座，到下方驳船的通道已清空；抓钩、系索可用，旁边也有可先搬走的控制台。你从哪件开始？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_HAZARDS",
+            "HS175_GRAPPLE",
+            "HS175_BAY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先移走旁边的控制台并确认后续小件的路径，再进入取堆芯那一步",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "趁线路完整，练从拉下堆芯到往驳船送的连续操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "在反应堆开始失稳前比较先后顺序与练习动机。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7104.ALT1",
+          "scene": "可能碰撞的反应堆出舱点",
+          "text": "Mackerel 的一级反应堆还没取。扫描能看见通驳船的短路，但有一块已分离外板挡在边上，另一侧留下更宽的路线。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_MACK",
+            "HS175_HAZARDS",
+            "HS175_BAY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拖开那块外板，给堆芯和同侧下一批件都留出同一个直通口",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先从较宽的一侧来回试一遍进出路线，再练完整的出堆动作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "在反应堆开始失稳前比较先后顺序与练习动机。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7104.ALT2",
+          "scene": "二级反应堆最后一侧连接",
+          "text": "二级反应堆还在架上，燃油侧已断，冷却侧还连着。冷却罐可取，但运去驳船的路线仍有零件能挪。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_REACTOR",
+            "HS175_HAZARDS",
+            "HS175_BAY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先检查环境控制单元到堆芯的管路与当前连接状态，确认倒计时在哪一步触发再动手",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先把路线整段清完，再断开冷却，一进入熔毁倒计时就能立刻搬堆芯",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "在反应堆开始失稳前比较先后顺序与练习动机。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7105",
+      "number": 5,
+      "variants": [
+        {
+          "id": "HS7105.V1",
+          "scene": "燃料阀与近旁切点",
+          "text": "一段有燃料的管线标了危险，附近有可用的燃料截止阀。另一侧已经分离的纳米碳板不在这段管线旁。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_HAZARDS",
+            "HS175_SALVAGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先关阀并确认燃料系统状态，再安排旁边几处切割和燃料件的回收",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "保持阀原样，先送走另一侧我准备这一班交的纳米碳板",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "对危险设备分别练习、规划或查明拆解次序。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7105.ALT1",
+          "scene": "Atlas 夸萨推进器还没切离",
+          "text": "Atlas 一具夸萨推进器的外盖已经拆掉，内部通道还被推进器挡住。你可以留它到以后，也能先研究四周能看到的燃油切点。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_ATLAS",
+            "HS175_HAZARDS",
+            "HS175_UPDATE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回船体另一侧，完成我已选好的一块外壳回收",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先找出哪些切点还连着燃油，并对照进舱后去找截止开关的路线",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "对危险设备分别练习、规划或查明拆解次序。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7105.ALT2",
+          "scene": "Atlas 推进器切离，通向截止开关",
+          "text": "一具 Atlas 夸萨推进器已移开，吊舱有燃料管在烧，内部仍能通到截止开关。你也能退出吊舱。你现在先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_ATLAS",
+            "HS175_HAZARDS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "在仍可通行的空档穿过去关燃料，练着看准火线的位置再进",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先退出吊舱，继续这一班给自己设下的船体其他部件回收目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "对危险设备分别练习、规划或查明拆解次序。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7106",
+      "number": 6,
+      "variants": [
+        {
+          "id": "HS7106.V1",
+          "scene": "抓钩系索持续与切割冷却",
+          "text": "职业模式下班后，设备终端显示抓钩系索持续时间和切割器冷却各有一项买得起的升级。本班你的大件搬运和连切都遇到了瓶颈。你先投资哪边？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_STORE",
+            "HS175_UPGRADES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给切割器加冷却，补已有系索配置的短处，让切割和拖运能衔接",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "继续给一路用熟的抓钩加升级，想让它能陪我处理更重的船壳",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "职业设备升级中比较持续培养和组合改装。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7106.ALT1",
+          "scene": "头盔氧气和抓钩升级",
+          "text": "你在职业模式开启了耗氧。头盔氧气升级与抓钩升级都已解锁，点数只够先买一项。接下来的船要多趟进舱。你选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_UPGRADES",
+            "HS175_UPDATE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给头盔加氧气储备，与目前工具搭出更适合多趟进舱的配置",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "继续把点数投给自己一直在用的抓钩，想看它越来越好用",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "职业设备升级中比较持续培养和组合改装。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7106.ALT2",
+          "scene": "用切割开口配合抓钩或系索",
+          "text": "职业或自由拆船中，Mackerel 的一块纳米碳板已经切离，但内侧铝框仍挡着它去处理器的直线。铝框有可安全切开的点，也能先用抓钩把板从旁边宽口引出。你先怎么做？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_MODES",
+            "HS175_DEV",
+            "HS175_MACK",
+            "HS175_GRAPPLE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿已有宽口用抓钩带板转向，边推边感受这块板对操作的响应",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先把切割和系索搭起来，定好需要多大的直达口，再动刀打开它并牵出外板",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "职业设备升级中比较持续培养和组合改装。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7107",
+      "number": 7,
+      "variants": [
+        {
+          "id": "HS7107.V1",
+          "scene": "Mackerel 目录中的熟悉和陌生变型",
+          "text": "职业选船目录同时有你熟悉的 Mackerel 变型，以及一艘已解锁但从未进去的变型。你下一班先接哪艘？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_STORE",
+            "HS175_UPDATE",
+            "HS175_MACK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选没拆过的变型，想看看与上次相比舱内布局变了什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "选熟悉的变型，先完成自己想单独拆完一艘船的目标",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "从船型目录或局部路线判断探新与持续推进。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7107.ALT1",
+          "scene": "Atlas 在目录可选",
+          "text": "目录里 Atlas 已可开工，旁边也有一艘以前打理过的船。你还没进去看过 Atlas 的推进器吊舱。你下一班选？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_UPDATE",
+            "HS175_ATLAS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "接熟悉的船，完成我给这一班设下的材料回收目标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "选 Atlas，先沿外侧去看吊舱和此前的船有什么不同",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "从船型目录或局部路线判断探新与持续推进。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7107.ALT2",
+          "scene": "Gecko 开班先看下一处隔段",
+          "text": "你第一次接一艘 Gecko。前面有一段没到过的空间，已确认入口可通，舱外也有你选中并可安全回收的外板。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_GECKO",
+            "HS175_BAY",
+            "HS175_STORE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿入口看看陌生的隔段，想知道它怎么接到船后部",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先把已经圈好的外板送对地方，这件结束再看远处",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "从船型目录或局部路线判断探新与持续推进。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7108",
+      "number": 8,
+      "variants": [
+        {
+          "id": "HS7108.V1",
+          "scene": "职业船舱里的数据盘和已分离的座椅",
+          "text": "职业作业中，已能安全进入的舱里有一个可捡的数据盘，一张已拆离、能抓去驳船的座椅也近在眼前。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_DATA",
+            "HS175_BAY",
+            "HS175_SALVAGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这一班自己优先回收的座椅送进驳船",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先拿数据盘，回居所恢复它，想知道留信息的人发生了什么",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "回收过程中比较叙事、收集与已定作业。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7108.ALT1",
+          "scene": "HAB 中可贴的工具贴纸",
+          "text": "你本班解锁了一张贴纸，回居所后装备界面可以应用。工具上还有能换下来的旧贴纸。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_UPDATE",
+            "HS175_STICKER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把新贴纸和旧的拼成自己喜欢的一套外观，再出下一班",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先看这一组里还缺哪张，挑接下来能完成的解锁条件去收",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回收过程中比较叙事、收集与已定作业。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7108.ALT2",
+          "scene": "先凑齐一组座椅还是先处理外壳",
+          "text": "职业或自由拆船中，扫描器确认两个已打开、无压的舱里各有一张可取的座椅，都标去驳船。舱外一块已分离的纳米碳板也可送处理器。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_MODES",
+            "HS175_BAY",
+            "HS175_MACK",
+            "HS175_SALVAGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先兑现自己开工前定下的目标，把这块纳米碳板送进处理器",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "接连把两个舱的座椅收齐，再查还有没有漏掉这类部件",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "回收过程中比较叙事、收集与已定作业。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7109",
+      "number": 9,
+      "variants": [
+        {
+          "id": "HS7109.V1",
+          "scene": "用切割器开黄色连接点",
+          "text": "回想第一次对准黄色连接点切开，外板随后在眼前离开船身。哪一点让你想再拆一次？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_DEV",
+            "HS175_MACK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "看自己一刀下去连接点亮起、断开，随后外板开始漂动",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "想再练准切割方向，下次只切连接点，少碰到相邻部件",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "回顾亲手操作与练习的不同动力。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7109.ALT1",
+          "scene": "系索牵大板绕过硬点",
+          "text": "回想用系索牵一块大外板，后来换了锚点才把它送进处理器。你最想再体验哪一段？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_GRAPPLE",
+            "HS175_BAY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查清板第一次卡住是碰了什么，以及锚点和惯性怎么一起改变路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "看自己改了牵引角度以后，大板真的沿新的方向慢慢动起来",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "回顾亲手操作与练习的不同动力。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7109.ALT2",
+          "scene": "抓钩送反应堆入驳船",
+          "text": "回想一级反应堆已经离架，你亲手调整它的方向把它送到驳船。什么更像你愿意重复这段的理由？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_HAZARDS",
+            "HS175_GRAPPLE",
+            "HS175_BAY"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "看堆芯应着我的每次输入转向，最后钻进驳船的回收区",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "想把从离架到送进驳船的控制练得更稳，下一次少作临时修正",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "回顾亲手操作与练习的不同动力。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7110",
+      "number": 10,
+      "variants": [
+        {
+          "id": "HS7110.V1",
+          "scene": "已跑过铝与纳米碳的两条航线",
+          "text": "回想一艘船上你先后把铝板送熔炉、把纳米碳板送处理器。哪件事更像你下一班还想做的？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_BAY",
+            "HS175_SALVAGE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己制定先清空一侧再换边的规则，看看按这个限制能做到什么程度",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "重新排两条运输线，让先移走的部件给后面的板件腾出空间",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾从小处操作组合成作业路线，或发现原因。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7110.ALT1",
+          "scene": "一次调节器只改变所在区的读数",
+          "text": "回想给船舱降压后，另一隔离区仍有压力。什么让你愿意多花时间研究那艘船？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_AIR",
+            "HS175_HAZARDS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "查是哪道门隔开了两个读数，弄清为什么只变了其中一间",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "重新排从进气闸、分区降压到运出零件的顺序，让各段拆解能接上",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "回顾从小处操作组合成作业路线，或发现原因。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7110.ALT2",
+          "scene": "一场完整 Atlas 吊舱拆解",
+          "text": "回想拆 Atlas 时你成功取出推进器，又穿过吊舱去关燃料截止开关。你愿意再拆是因为？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_ATLAS",
+            "HS175_HAZARDS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想继续调整一整套顺序，让另一具吊舱和外壳回收能顺着接起来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "想把移出推进器后入舱和关阀这一段练顺，少在入口犹豫",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "回顾从小处操作组合成作业路线，或发现原因。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7111",
+      "number": 11,
+      "variants": [
+        {
+          "id": "HS7111.V1",
+          "scene": "升级系索后的较长搬运路径",
+          "text": "回想买了抓钩的系索持续时间升级，后来在大板搬运中用到了它。哪一点更能让你继续攒点数？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_UPGRADES",
+            "HS175_GRAPPLE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "熟悉的抓钩又能多做一件事，我想继续把它一路升下去",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想把可牵引更久的系索搭配不同的切割开口，让较重板件也能成组移走",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "回顾升级后的长期培养与具体配置效果。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7111.ALT1",
+          "scene": "切割器更换冷却属性后连续切点",
+          "text": "回想升级切割器冷却以后，一班连续处理了好几个外壳连接点。哪部分更让你愿意再投资？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_UPGRADES",
+            "HS175_DEV"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把冷却和已有的热容量搭起来，再试哪种组合最适合我这套拆法",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "看一路在用的切割器能逐步处理更密的切点",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "回顾升级后的长期培养与具体配置效果。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7111.ALT2",
+          "scene": "连续拆两块板时调整切割器",
+          "text": "回想在职业或自由拆船的一次无压作业里，你连续用切割器拆下两块板，慢慢学会每次开刀前怎么对准连接点。哪一点更让你想再试？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_MODES",
+            "HS175_DEV",
+            "HS175_MACK"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想再练几次找准切点和收刀，让后面的几块板也能稳稳分开",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "想试试先切哪一侧、把系索设在哪里，才能让拆开的板组合成更顺手的搬运路线",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "回顾升级后的长期培养与具体配置效果。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    },
+    {
+      "id": "HS7112",
+      "number": 12,
+      "variants": [
+        {
+          "id": "HS7112.V1",
+          "scene": "幽灵船的自动舱门与 AI 节点",
+          "text": "回想第一次在一艘幽灵船上看到舱门在没有操作时自己开合，后来找到了贴在部件上的 AI 节点。什么让你记住了这艘船？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_GHOST",
+            "HS175_RETRO"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想把哪扇门发生异动、附近哪里有节点对照起来，确定下一次该先检查什么",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "想知道船上的人后来怎样了，以及那些系统为什么会自己动",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "从职业记录、本人规则与反馈回顾独特体验。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7112.ALT1",
+          "scene": "给重件保留系索的自设挑战",
+          "text": "回想同一班里你有大块铝板要进熔炉，也有可用抓钩拖动的座椅要进驳船，系索已经可用。哪种体验更像你愿意继续拆这艘船的原因？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_BAY",
+            "HS175_SALVAGE",
+            "HS175_GRAPPLE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我给自己定下系索只留给大板的规则，想试试其它小件能怎样靠抓钩送完",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "我喜欢按每个物件的惯性自由换工具，亲眼看它们怎样响应我的推拉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "从职业记录、本人规则与反馈回顾独特体验。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        },
+        {
+          "id": "HS7112.ALT2",
+          "scene": "职业居所的轮班结算和剧情",
+          "text": "回想职业模式结束一班、回居所结算后又听到船工之间的通话。哪件事更吸引你继续开工？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "HS175_STORE",
+            "HS175_UPDATE",
+            "HS175_RETRO"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "想继续积攒资源给我一直使用的工具加升级，看看它们下一班能做什么",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "想知道这些船工接下来怎样对待 LYNX 的规定，想继续听他们之间的事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "从职业记录、本人规则与反馈回顾独特体验。",
+          "interpretation_boundary": "Steam PC 本体，以实际船型、作业模式、工具和当前可用控件为准。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+0887a41edbc0"
+}

@@ -1,0 +1,1005 @@
+{
+  "id": "pummelpartypcroot",
+  "title": "揍击派对",
+  "game_ids": [
+    "steam-880940"
+  ],
+  "scope": "揍击派对，Steam 880940 Windows 本体，公开构建 20246854。本地电脑玩家、棋盘、已实装的小游戏与本人实际用过的可选多人或编辑菜单。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam Windows 棋盘、小游戏与本地电脑玩家",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "PUMMELPARTYPCROOT01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "海盗乐园先定总回合还是奖杯线",
+          "text": "你在原版 Pirate Paradise（海盗乐园）开本地棋盘，已经加好电脑玩家。大厅里「总回合」和「获胜所需奖杯」两栏独立可改。今晚只先定一项，你想改哪栏？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_SET",
+            "PUMMELPARTYPCROOT_GAME",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先定总回合上限，让这整张棋盘的长度贴合今晚的时间",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先定奖杯线，让打开宝箱成为这局主要想追的目标",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「海盗乐园先定总回合还是奖杯线」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT01.V1"
+        },
+        {
+          "scene": "只玩小游戏还是先走一圈棋盘",
+          "text": "在揍击派对大厅等朋友，两种游戏都已经能开。一群人只够开一局，你想先用哪种方式热身？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_SAVE",
+            "PUMMELPARTYPCROOT_GAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开只有小游戏的一局，集中找回原来玩熟的节奏",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先开棋盘，让刚到的朋友各走一小段，互相认认自己的角色",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "了解玩家在「只玩小游戏还是先走一圈棋盘」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT01.ALT1"
+        },
+        {
+          "scene": "棋盘玩家缺一位时怎么开始",
+          "text": "四人棋盘准备完毕。朋友还有一位要晚到，当前你们可以用电脑玩家补上，也可以留在大厅再等一会儿。你会怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GAME",
+            "PUMMELPARTYPCROOT_SAVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先等最后一人，开局时大家一起看第一次骰出的顺序",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先开电脑玩家补齐的房间，把这一局尽快开始",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "了解玩家在「棋盘玩家缺一位时怎么开始」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "指向奖杯的金线与岔口",
+          "text": "本地和电脑玩家走海盗乐园，轮到你时金色提示线指向一个已经刷出的奖杯。你骰出了可选择岔路的步数，还有另一条没走过的路。你会先选哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_GAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拐到没走过的格子，记下它们怎么连着宝箱那一侧",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "顺着奖杯提示走，给已经攒过的钥匙找到下一步",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "了解玩家在「指向奖杯的金线与岔口」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT02.V1"
+        },
+        {
+          "scene": "Pummeltown 的两个已启用目标箱",
+          "text": "你在本地和电脑玩家玩 Pummeltown，这次开的是启用多个目标宝箱的规则，眼前确实看见两处奖杯宝箱。到了能选方向的路口，你先往哪边走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_GOALS",
+            "PUMMELPARTYPCROOT_GAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先往已经确认钥匙够开、而且更近的宝箱方向走",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先往以前少走的另一侧，认清它通向哪几个格子",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「Pummeltown 的两个已启用目标箱」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT02.ALT1"
+        },
+        {
+          "scene": "好友问下一回合去哪里",
+          "text": "在线棋盘里，朋友问你游戏里的金色提示该跟哪边。你们这轮各有一次经过分岔的机会，也看得到同一处奖杯提示。怎么回应他？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GAME",
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用游戏聊天说明当前提示指向哪里，把自己的回合推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先互相说自己看见的两个分岔，再各选一边验证想法",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "了解玩家在「好友问下一回合去哪里」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "Fractured Faces 先旋转还是先摆块",
+          "text": "你和电脑玩家进了 Fractured Faces。手上的拼图片方向还不对，桌面也有一处你认得的空位。你会从哪里开始？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_PATCH",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先对照头像把块旋到正确方向，再试那个位置",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先把最容易认得的块放到旁边试手，随后再用旋转逐个核对",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "了解玩家在「Fractured Faces 先旋转还是先摆块」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT03.V1"
+        },
+        {
+          "scene": "Rockin Rhythm 的按键说明和一次重试",
+          "text": "你和电脑玩家刚用手柄玩过 Rockin Rhythm，有一个图标提示没跟上。休息时设置页能打开这项小游戏所属的专属操作分类。下一轮前你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_PATCH",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿用现有绑定再练一趟，想确定困难来自节奏还是看错提示",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先核手柄绑定和刚才没跟上的图标，再对照这次的提示",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「Rockin Rhythm 的按键说明和一次重试」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT03.ALT1"
+        },
+        {
+          "scene": "Memory Menu 先记什么",
+          "text": "你在原生 Memory Menu 看见要找的几种食材，等会儿得把它们带到锅边。提示还没消失，你会怎样记这次？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按画面顺序记一遍，等真正找的时候就照这一串核",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先找自己一下就能认出的那样，其余拿两三处颜色区别记住",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "了解玩家在「Memory Menu 先记什么」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "手头钥匙够开箱，下一步怎么走",
+          "text": "你在本地棋盘已经攒够眼下宝箱显示的钥匙。骰子让你走到可选路的分岔，一边接近宝箱，一边是还没尝试过的道具格。你会去哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_SET",
+            "PUMMELPARTYPCROOT_GAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走道具格的方向，看看这局拿到新道具后棋盘会怎么变",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先沿靠近宝箱的路走，想把这一段积累换成奖杯",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "了解玩家在「手头钥匙够开箱，下一步怎么走」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT04.V1"
+        },
+        {
+          "scene": "Overgrowth 三个箱子开始换位",
+          "text": "你在 Overgrowth 第一回真的见到三个箱子调换位置。动画开始，刚才装有奖杯的那只现在还看得见。你把注意放在哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从头盯住那只箱子，尽量让视线跟上它每一次交换",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先记它旁边的两个位置，用相邻的交换顺序来确认它最后到了哪儿",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "了解玩家在「Overgrowth 三个箱子开始换位」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT04.ALT1"
+        },
+        {
+          "scene": "掷骰前要不要开小游戏礼物",
+          "text": "轮到你在本地电脑棋盘走格，还没掷骰。物品栏里的礼物已经可用，会打开选择接下来小游戏的界面。现在你会怎样安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GOALS",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先掷骰继续这轮棋盘，礼物留给已有计划的下个回合",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先打开礼物，从这条规则实际给我的候选里挑一个平时很少玩的",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「掷骰前要不要开小游戏礼物」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "小游戏名次作为下一轮顺序",
+          "text": "本地棋盘上一轮小游戏刚结算，这局规则会按小游戏名次排下一轮棋盘顺序。结算面板上还有这次的结果。你下一步先看什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_GAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看下一轮从哪位电脑玩家开始，认自己排在第几位",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先核小游戏结果里自己的名次，和刚才记忆中的表现做个对照",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「小游戏名次作为下一轮顺序」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT05.V1"
+        },
+        {
+          "scene": "Rotor Race 看加速圈还是直接完成",
+          "text": "你在本地 Rotor Race 刚看见一个加速圈，旁边是自己能飞稳的普通路线。游戏在这一段允许两种走法，想先试哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_PATCH",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿熟悉路线飞完，等我能稳定看清转弯后再试圈",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先改走能穿过加速圈的路，看这一圈飞起来有什么差别",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "了解玩家在「Rotor Race 看加速圈还是直接完成」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT05.ALT1"
+        },
+        {
+          "scene": "分队小游戏先聊分工还是先看计分",
+          "text": "和朋友开了现有的 Teams 分队，小游戏结算开始显示你所在组的表现。下次排上来前，你想先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_NEWS",
+            "PUMMELPARTYPCROOT_GAME",
+            "PUMMELPARTYPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先问队友最擅长的小游戏是哪种，决定下回有什么可以顾及对方",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先看结果的组别和自己的位置，再整理这一轮怎么计进团队",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "了解玩家在「分队小游戏先聊分工还是先看计分」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "本地暂停后继续还是换地图",
+          "text": "单人和电脑玩家开的揍击派对棋盘，在当前版本按暂停后游戏已停住。你原本想午后回来继续，也想换一种地图。此时你会怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_PATCH",
+            "PUMMELPARTYPCROOT_GAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "等结束当前对局后重新开棋盘，试另一张没走过几圈的图",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先保持暂停，等我能静下心再接这张已经走过一圈的图",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "了解玩家在「本地暂停后继续还是换地图」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT06.V1"
+        },
+        {
+          "scene": "本机读取上次的纯小游戏存档",
+          "text": "你在 Load Save 里看到一份自己上次保存的纯小游戏对局，也能从大厅新开一局。下班只想找回手感，你会先点哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_SAVE",
+            "PUMMELPARTYPCROOT_GAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "读可见的旧档，接着练刚才那组小游戏",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "新开一份纯小游戏对局，看看不同的游戏顺序更不更合适",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "了解玩家在「本机读取上次的纯小游戏存档」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT06.ALT1"
+        },
+        {
+          "scene": "限时重连后怎样接回棋子",
+          "text": "有一次在线棋盘断开，电脑玩家临时接手。你在断线后 20 分钟内接受了主菜单的重连提示，原房仍在活动。下个回合控制已经归还，你会先确认什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_SAVE",
+            "PUMMELPARTYPCROOT_GOALS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先问朋友代玩时棋盘走到了哪里，再接手继续",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先认自己的棋子位置、钥匙和当前奖杯提示，再选这一回合的行动",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「限时重连后怎样接回棋子」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "默认骰点还是本地自定义范围",
+          "text": "开本地电脑玩家的熟图时，大厅上次用的默认规则还在，自定义规则的骰点最小值和最大值也都可改。今晚你想先用哪种办法开局？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GAME",
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_DICE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用默认规则，把这张图按前一局熟悉的速度走一遍",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "只改骰点范围并选为现用规则，再看看相同棋盘的节奏会怎么变",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「默认骰点还是本地自定义范围」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT07.V1"
+        },
+        {
+          "scene": "已订阅小游戏如何带入这局",
+          "text": "你在大厅有一款下载完的外部小游戏，朋友都已经进房。当前游戏默认没启用它，你可以切换规则集或照原样开。你怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_RULES",
+            "PUMMELPARTYPCROOT_WORK",
+            "PUMMELPARTYPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先照大家熟悉的规则开这局，等大家一起挑时再换已有的小游戏",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "用大厅规则集把这项小游戏设好并启用，再确认大家开在哪个模式",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "了解玩家在「已订阅小游戏如何带入这局」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT07.ALT1"
+        },
+        {
+          "scene": "只做本地试走还是先分享棋盘",
+          "text": "你在原生编辑器已经做了一张原创棋盘，放了落脚格，能够先在本地看它怎么衔接。你接下来会把时间花在哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_WORK",
+            "PUMMELPARTYPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "本地先把分岔和落脚格走一遍，改完了再看要不要分享",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "等它达到自己愿意展示的状态，约好友从开头试一局看看哪里迷路",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "了解玩家在「只做本地试走还是先分享棋盘」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "Searing Spotlights 看结算的哪个指标",
+          "text": "你和电脑玩家刚玩完 Searing Spotlights。最后还在场的人按剩余生命排过名，界面也给出这一局的结果。你要再玩时更想改什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_NEWS",
+            "PUMMELPARTYPCROOT_ACH",
+            "PUMMELPARTYPCROOT_GAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回忆最容易错过的一束光，从开始重新练一遍观察",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "对照本轮剩余生命和结果，找自己上次为什么排在这里",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "了解玩家在「Searing Spotlights 看结算的哪个指标」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT08.V1"
+        },
+        {
+          "scene": "Snowy Spin 的一小段滑行",
+          "text": "本地 Snowy Spin 开始后，你看到自己还能在雪地上一段可用的平台移动。再开一轮，你最想先注意什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_ACH",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先练同一块平台怎么看和怎么停，把刚才滑过头的感觉试明白",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先用这轮多看一眼平台还剩哪些地方，把空间认明白再走",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "了解玩家在「Snowy Spin 的一小段滑行」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT08.ALT1"
+        },
+        {
+          "scene": "已拥有的帽子和披风",
+          "text": "进了角色搭配界面，你已有一顶可穿的帽子，也有一件以前常用的披风。今天只想在本机电脑棋盘前改一处外观，你会先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_PATCH",
+            "PUMMELPARTYPCROOT_NEWS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先保留以前常用的披风搭配，让熟悉的角色样子延续到这一局",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先试这顶帽子和当前衣服摆在一起的样子",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「已拥有的帽子和披风」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "Fractured Faces 做完才发现哪步拖慢",
+          "text": "回想你有一局在 Fractured Faces 终于拼完头像。后来要重玩，哪一步最值得用一轮去练？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在脑中认清那些很像的拼块分别接哪一角",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "练在摆放之前把每块转到正确方向，让过程走得顺一些",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "了解玩家在「Fractured Faces 做完才发现哪步拖慢」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT09.V1"
+        },
+        {
+          "scene": "海盗地图里先回宝箱还是先看棋盘",
+          "text": "回想你在海盗乐园为一只奖杯箱攒过钥匙，也在一处岔口绕过远路。再打一局，你更想重走哪一段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_SET"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从当时拐错的岔口走一次，看看路线通往哪个新格子",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先回原来那只奖杯的路线，想看看这次几回合能到",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "了解玩家在「海盗地图里先回宝箱还是先看棋盘」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT09.ALT1"
+        },
+        {
+          "scene": "有朋友时想开哪种重玩",
+          "text": "回想你既和这群朋友玩过整张棋盘，也单开过一组小游戏。今晚还是原来几个人，你更想回到哪边？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_SAVE",
+            "PUMMELPARTYPCROOT_GAME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回棋盘，边走边聊之前哪个人最先发现了好玩的格子",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先开小游戏模式，重试那次我们都觉得手感没找对的小项目",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "了解玩家在「有朋友时想开哪种重玩」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "结算里的小游戏胜次和钥匙奖",
+          "text": "回想一局本地棋盘结束，规则已经开启「最多小游戏胜次」和「最多获得钥匙」这两项 Pummel Awards。结果出来后，你下次更愿意追哪边？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_SET",
+            "PUMMELPARTYPCROOT_AWD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看自己积累钥匙的表现，下局还想按这个目标走棋盘",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先把小游戏赢过的次数记下来，希望下场多拿几个第一",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「结算里的小游戏胜次和钥匙奖」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT10.V1"
+        },
+        {
+          "scene": "The Rift 那次换方向",
+          "text": "你打过 The Rift，看见棋盘连接方向和自己上一局记得的不一样。重回这张图，你最想先对照什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_SAVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去和上次分岔位置不同的地方，看看现在哪两段连起来了",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先查通往当前奖杯的金色提示和当前位置，再决定走哪条",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "了解玩家在「The Rift 那次换方向」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT10.ALT1"
+        },
+        {
+          "scene": "Memory Menu 让你记住了什么",
+          "text": "回想在 Memory Menu 那次你拿过最难记的两样游戏食材，也见过锅边这轮开始计分。再进同场时哪种习惯更想保留？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先练短时间内认住两样最像的食材，把容易拿错的那步改掉",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先记住需要的全套，再按还缺的原料决定走哪边",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "了解玩家在「Memory Menu 让你记住了什么」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "海盗乐园的三栏限制",
+          "text": "回想你在本地 Pirate Paradise 看过总回合、单回合时限和取胜所需奖杯这三栏。下次只改一栏，你会优先改什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_SET",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "改总回合，想控制整局大概占今晚多长时间",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "改取胜奖杯线，让每次接近宝箱时都更想算进自己的目标",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「海盗乐园的三栏限制」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT11.V1"
+        },
+        {
+          "scene": "Rotor Race 一圈的速度来自哪里",
+          "text": "回想你在 Rotor Race 有一段飞得很稳，也有一次正好经过了加速圈。下次比赛你更想重试哪个片段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_PATCH",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先改走加速圈那条线，看看这轮是否和上次又有不同",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先按原来的路线重复一次，对照它本身能不能走得更顺",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "了解玩家在「Rotor Race 一圈的速度来自哪里」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT11.ALT1"
+        },
+        {
+          "scene": "再读 Winterglow 的同一份档",
+          "text": "回想你本地玩过 Winterglow，旧棋盘档还可读，里面那一局的迷宫没有重开。今天选继续与新开两个入口，你更愿做哪件？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_SAVE",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先读旧棋盘，把记得的迷宫路线继续走下去",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先选新局，看看重新开始后自己会怎么认这张图",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "了解玩家在「再读 Winterglow 的同一份档」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PUMMELPARTYPCROOT12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "只够做一件的棋盘收尾",
+          "text": "回想在一局本地棋盘，你曾在临近最后几轮时放下继续，下次能读到这份存档。如果又碰到这种情况你会怎样安排？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_SAVE",
+            "PUMMELPARTYPCROOT_SET",
+            "PUMMELPARTYPCROOT_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先新开一份，用另一张地图试试以前没用过的规则",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先从已有的那局接着玩完，把一直想去的那几个格走到",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "了解玩家在「只够做一件的棋盘收尾」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT12.V1"
+        },
+        {
+          "scene": "哪种朋友之间的约定更重要",
+          "text": "回想你和原来那群朋友在同一桌开过分队局，也用过在线游戏聊天。再坐一次，你更想一开始先约定什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_GAME",
+            "PUMMELPARTYPCROOT_NEWS",
+            "PUMMELPARTYPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先讨论怎么让刚来的伙伴跟上大家的节奏",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先把分队和这局怎么结束聊清楚，让开局后不用一直找设置",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "了解玩家在「哪种朋友之间的约定更重要」的安排和关注点。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT12.ALT1"
+        },
+        {
+          "scene": "拼图与飞行先启用哪一项",
+          "text": "回想你和电脑玩家既玩过 Fractured Faces，又试过 Rotor Race。你准备在纯小游戏的规则列表中让其中一项进入下一局候选，界面上两个开关都可以用。会先启用哪一个？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "PUMMELPARTYPCROOT_PATCH",
+            "PUMMELPARTYPCROOT_SAVE",
+            "PUMMELPARTYPCROOT_GUIDE",
+            "PUMMELPARTYPCROOT_AWD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先启用 Rotor Race，想重练上次在加速圈附近放丢的节奏",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先启用 Fractured Faces，想再看自己常把哪一类拼块认错",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「拼图与飞行先启用哪一项」的实际行动选择。",
+          "interpretation_boundary": "按本人实际在 Windows 玩过、当前界面可选的局与规则作答。",
+          "id": "PUMMELPARTYPCROOT12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+4eff8aa9e66b"
+}

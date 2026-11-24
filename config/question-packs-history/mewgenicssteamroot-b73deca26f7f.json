@@ -1,0 +1,1009 @@
+{
+  "id": "mewgenicssteamroot",
+  "title": "喵喵的结合",
+  "game_ids": [
+    "steam-686060"
+  ],
+  "scope": "《喵喵的结合》Mewgenics，Steam 原生 Windows 单人本体，公开构建 25143593，对应版本 1.1.21239。题面以简中名称和游戏里的小巷、普通冒险、房子、职业项圈和已解锁委托为准。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam PC 单人本体",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "MEWGENICSSTEAMROOT01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "冒险盒里还剩一个位置",
+          "text": "教程后，冒险盒已经装进三只猫。还剩一个位置，两只候选都已成年且没退休，一只是原先留在家里的，另一只是刚到的新猫。谁来补最后一位？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_HOME",
+            "MEWGENICSSTEAMROOT_ADVENTURE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "带新来的，先试试这个没见过的组合。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "带在家已经认熟的那只，想看它第一次出门时能做什么。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「冒险盒里还剩一个位置」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT01.V1"
+        },
+        {
+          "scene": "第一次出发要不要戴项圈",
+          "text": "小巷出发前，分配职业的界面可以给同一只猫留空，也可以给它戴可选的法师项圈。锁定前你会选哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_CLASSES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "不戴，想看看这只猫用原有能力会走成什么样。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "戴法师项圈，用它显示的智力加成来定这次队伍。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次出发要不要戴项圈」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT01.ALT1"
+        },
+        {
+          "scene": "第一次拿到牧师项圈",
+          "text": "完成小巷并向布奇（Butch）领到牧师项圈后，这次队里有一只能戴牧师或坦克项圈的猫。最后你会给它配哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_BUTCH",
+            "MEWGENICSSTEAMROOT_CLASSES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "戴熟悉的坦克项圈，照自己已经玩过的搭配再做一遍。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "戴牧师项圈，给这支原本没有牧师的队伍试一个新角色。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次拿到牧师项圈」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "小巷垃圾桶事件的两个判定",
+          "text": "小巷的问号事件翻出一个盖子半开的垃圾桶。触发事件的猫智力和灵巧差不多，菜单既有检查，也有翻找。你会选哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ALLEY",
+            "MEWGENICSSTEAMROOT_BIN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用智力选检查，先弄清里面有什么线索。",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "用灵巧选翻找，想看看这只猫直接动爪会翻出什么。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「小巷垃圾桶事件的两个判定」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT02.V1"
+        },
+        {
+          "scene": "下水道之后出现难路",
+          "text": "已经通关过下水道，小巷中段这次确实显示普通路和困难路。你想权衡这趟能拿回家的食物和难路奖励，走哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ALLEY",
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_CHAPTER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走普通路，先完成这次带食物回家的目标。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "走困难路，想比较这次和以往的小巷通关成绩。",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「下水道之后出现难路」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT02.ALT1"
+        },
+        {
+          "scene": "小巷出口的房屋图标",
+          "text": "这趟打通小巷时，下水道已经开放。地图上房屋图标和下水道路线现在都能选。这时队伍已经带了几件想保留的物品。你会点哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_CHAPTER",
+            "MEWGENICSSTEAMROOT_ALLEY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "点房屋，把这一趟攒下的东西先带回去。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "接着去下水道，想用这支队第一次看看那一区域。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「小巷出口的房屋图标」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "买来的储粮箱还得摆出来",
+          "text": "P Mart 已经上架储粮箱，你买得起，但回家还得留位置摆放。现有粮食离上限只差一点，你想怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_FOOD",
+            "MEWGENICSSTEAMROOT_FURNITURE",
+            "MEWGENICSSTEAMROOT_TRACY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂留房间和钱，按现在的储粮上限安排一次短冒险。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "买下并摆进房子，下一趟回来有更大的储粮上限。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「买来的储粮箱还得摆出来」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT03.V1"
+        },
+        {
+          "scene": "按结束今天以前看什么",
+          "text": "今晚家里的食物够用。点结束今天前，你还能看食物数量，也能点开一只新来猫的资料。你会先看哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_HOME",
+            "MEWGENICSSTEAMROOT_FOOD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对粮食和现在的猫数，知道明天还余多少。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先打开新来的猫的资料，想趁它刚到家记住那只猫。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「按结束今天以前看什么」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT03.ALT1"
+        },
+        {
+          "scene": "P Mart 的十份食物",
+          "text": "地图上的 P Mart 已开，今天的货架上还有一组 5 枚金币买 10 份的食物。账面过一晚还够。你这次会买下来吗？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_FOOD",
+            "MEWGENICSSTEAMROOT_TOWN",
+            "MEWGENICSSTEAMROOT_TRACY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "省下这五枚金币，等库存再低些时才补。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "买一组，给接下来几天的消耗留点余量。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「P Mart 的十份食物」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "先摆一件会改变整屋属性的家具",
+          "text": "刚开启家具栏，手上有一件加吸引力的家具，也有一件加舒适度的家具。这次房里只想先摆一件，你选哪一个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_HOME",
+            "MEWGENICSSTEAMROOT_FURNITURE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先摆加吸引力的，看看后来上门的流浪猫有什么不同。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先摆加舒适度的，先照顾这间屋里已经住下的猫。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「先摆一件会改变整屋属性的家具」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT04.V1"
+        },
+        {
+          "scene": "同一间房家具布局怎么改",
+          "text": "同一件加舒适度的家具在同一房间有两个空位能摆。挪位置前，你这次更想做哪一步？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_HOME",
+            "MEWGENICSSTEAMROOT_FURNITURE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开房间的属性说明，确认这一件摆在这间房仍符合我想要的用途。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先挪到自己更喜欢的那一侧，让房间的画面先好看起来。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「同一间房家具布局怎么改」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT04.ALT1"
+        },
+        {
+          "scene": "弗兰克开了新房以后",
+          "text": "弗兰克（Frank）已经帮你打开阁楼。楼下现在也能用，你手上只有一件可搬动的舒适家具，会把它放哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_FRANK",
+            "MEWGENICSSTEAMROOT_HOME",
+            "MEWGENICSSTEAMROOT_FURNITURE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留在楼下，让现在住在老房间的那几只继续用。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "搬到阁楼，先给新房间补上舒适度。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「弗兰克开了新房以后」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "给谁戴上同一件装备",
+          "text": "出发前的装备页，两只猫都有匹配的空位，但储物箱只有一件提供游戏属性加成的装备。你会给谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_ITEMS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给同一支队里还没有拿到装备的那只，补上它的空位。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "给已经能跟这项加成搭配起来的那只。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「给谁戴上同一件装备」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT05.V1"
+        },
+        {
+          "scene": "布奇的第一档九格变十六格",
+          "text": "收纳刚开始是 3×3。布奇的第一档奖励已经出现，你也有一只符合条件的退休猫。要不要现在交给布奇？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_BUTCH",
+            "MEWGENICSSTEAMROOT_HOME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "现在送过去，把格子尽快从 9 个扩到 16 个。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把这只留在家里，等下一只符合条件再考虑扩容。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「布奇的第一档九格变十六格」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT05.ALT1"
+        },
+        {
+          "scene": "今晚只有一个收纳格能留",
+          "text": "从小巷安全回到家，格子放不下两件新带回的道具。结束今天前可以在收纳和待丢弃区调整，这两件都没有损坏。你留哪件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_HOME",
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_ITEMS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留熟悉的道具，手头已经知道下一队该给谁。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "留没见过的道具，想下一回弄明白它有什么用。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「今晚只有一个收纳格能留」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "给两只猫标记不同图案",
+          "text": "汀可（Tink）的名字标记已解锁。点名字旁边的图形就可以给两只常看混的猫加记号。你会用什么做区分？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_HOME",
+            "MEWGENICSSTEAMROOT_TINK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按下次出门的候选和留家的名单分别做记号。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "按哪只猫给我留下怎样的印象，分别选一个贴合的图形。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「给两只猫标记不同图案」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT06.V1"
+        },
+        {
+          "scene": "冒险商店里会让猫升级的糖",
+          "text": "小巷临近终点的普通商店有一颗 10 金币、能升一级的糖（Rare Candy），还有一件喜欢的道具。你现在的钱只够买一样，选哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_SHOP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "买那件道具，把这一趟的装备配置补起来。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "买糖，让选中的一只猫现在就升一级。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「冒险商店里会让猫升级的糖」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT06.ALT1"
+        },
+        {
+          "scene": "第一次升级弹出两个中意技能",
+          "text": "小巷一场遭遇结束后，有只猫升到 2 级。菜单给了几项主动能力，其中有一项自己见过，另一项没用过。你会学哪一个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_LEVEL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "学以前用过的，想把熟练的接法做得更顺。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "学描述里没试过的，想看看它在这一趟会怎样改变选择。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次升级弹出两个中意技能」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "小巷地图上要不要先存档离开",
+          "text": "刚结束小巷一个节点，地图已经显示后面的去向，也有存档退出的入口。你只剩一点游戏时间，怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_BUTCHD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接着点下一格，先多完成一个节点再停。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先存档退出，把当前冒险留在这个节点后。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「小巷地图上要不要先存档离开」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT07.V1"
+        },
+        {
+          "scene": "当场金币快到九十九",
+          "text": "这趟冒险身上已经接近 99 枚金币。路上的商店有一件合用的饰品，后面还可能捡到钱。走之前先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_SHOP",
+            "MEWGENICSSTEAMROOT_COINS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "买饰品，既用掉一点金币，又能试这件道具。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先不买，把现有金币尽量留到安全回家时再带回去。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「当场金币快到九十九」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT07.ALT1"
+        },
+        {
+          "scene": "出发去第一幕还是任务图标处",
+          "text": "第一、第二幕都已经开放。在出发选幕页面，当前装备的委托物品图标标在第二幕。你会怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_CHAPTER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选第一幕，先试熟图和这支队的搭配，这趟暂缓那项委托。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "选第二幕，按图标的目的地先推进这项委托。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「出发去第一幕还是任务图标处」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "第一次回家后换新成员",
+          "text": "第一趟小巷回来的猫已经退休。第二天冒险盒重新可用，屋里有两只仍合资格的新队员，你只想再加一只。会挑谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_HOME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "带此前一直帮它留着位置的那只，让它第一次出门。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "带属性更配接下来要分的项圈的那只。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次回家后换新成员」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT08.V1"
+        },
+        {
+          "scene": "P Mart 要不要送出一只猫",
+          "text": "P Mart 的特蕾西（Tracy）已显示能接收一只已经 6 天大的猫。这只是你家熟悉的成员，送去可以推进当前奖励。这一次要送吗？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_TRACY",
+            "MEWGENICSSTEAMROOT_TOWN",
+            "MEWGENICSSTEAMROOT_NPC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先留下它，等别的猫长到游戏里要求的年龄再想。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "这次送去，把商店下一项奖励往前推进。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「P Mart 要不要送出一只猫」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT08.ALT1"
+        },
+        {
+          "scene": "一只退休猫先给谁",
+          "text": "第一次完成小巷并过了一晚，布奇和弗兰克都显示会接收这只退休猫，两人也都还差一只领奖。你把它送到哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_BUTCH",
+            "MEWGENICSSTEAMROOT_FRANK",
+            "MEWGENICSSTEAMROOT_NPC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "送给布奇，优先多留格子给后面的冒险道具。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "送给弗兰克，优先给留家的猫腾出一个新房间。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「一只退休猫先给谁」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "小巷出口两个地区图标",
+          "text": "回想你已经开启汽车坟场（Junkyard）之后，小巷出口第一次同时看见它和下水道时，哪边更让你想用这支队继续？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ALLEY",
+            "MEWGENICSSTEAMROOT_CHAPTER",
+            "MEWGENICSSTEAMROOT_JUNK",
+            "MEWGENICSSTEAMROOT_LOCATIONS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "新开放的汽车坟场，想看看之前没走到的节点。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "更熟悉的下水道，想比较不同队伍在同一段的表现。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「小巷出口两个地区图标」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT09.V1"
+        },
+        {
+          "scene": "小巷通关后打开什么",
+          "text": "第一次小巷回家，冒险收集到的东西进了家里的收纳，而退休猫也还在房间里。你会先点开哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ALLEY",
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_HOME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先翻本次带回的物品，看看第一次见到的道具。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先点这趟回来的猫，看看它结束冒险后留在家庭页的资料。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「小巷通关后打开什么」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT09.ALT1"
+        },
+        {
+          "scene": "三级时换一种被动思路",
+          "text": "这趟小巷有只猫升到 3 级，菜单恰好同时给了一项跟现有能力相配的被动和一项没试过的被动。你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_LEVEL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选没用过的，下一个节点看看新的被动好不好玩。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "选跟现有能力能组合起来的，想让这只猫擅长的事更鲜明。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「三级时换一种被动思路」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "小巷提示框太挤时怎么读",
+          "text": "回想在小巷停下来读装备说明、找到设置里的提示框大小时，你最在乎哪个效果？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "提示框放大了，装备和能力说明更容易读清楚。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "提示框维持小一点，打开时能同时看见附近节点和背景。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「小巷提示框太挤时怎么读」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT10.V1"
+        },
+        {
+          "scene": "小杰克本周的两件家具",
+          "text": "小杰克（Baby Jack）店里这周恰好有两件家具，你只打算买一件。一件的画风喜欢，另一件明确会加房间现在缺的舒适度。你选哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_JACK",
+            "MEWGENICSSTEAMROOT_FURNITURE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "买加舒适度的那一件，先把房间的用途配好。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "买看着喜欢的那一件，先把自己想要的画面做出来。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「小杰克本周的两件家具」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT10.ALT1"
+        },
+        {
+          "scene": "汀可解锁的两种属性数字",
+          "text": "汀可（Tink）的属性拆分已解锁，猫的资料可以分开看基础值和额外加成。你还要为下一趟挑成员，先看哪一列？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_TINK",
+            "MEWGENICSSTEAMROOT_HOME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看基础值，想弄清这只猫没有额外加成时有什么特点。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先看额外加成，想知道现在的效果为什么让它更合适。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「汀可解锁的两种属性数字」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "出门的装备已经磨损过",
+          "text": "回想从小巷带回一件显示磨损但还能用的装备。隔天重新配队时，哪件事让你更愿意动这件装备？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_ITEMS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "它是上趟难得留下的东西，我更想暂时把它放在仓库。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "它能组进当时想试的搭配，让我愿意承担再次出门的损坏风险。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「出门的装备已经磨损过」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT11.V1"
+        },
+        {
+          "scene": "看冒险盒侧面的空项圈预览",
+          "text": "你已经买过空项圈，冒险盒侧面的图标显示它今天会变成哪种职业项圈。这次有两只猫可以分到同样的职业。你会怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_HOME",
+            "MEWGENICSSTEAMROOT_HOMECN",
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_TRACY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用这枚额外项圈，试试这次有两只同职业的配置。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "仍按不同职业分配，让两只猫分别有不同的作用。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「看冒险盒侧面的空项圈预览」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT11.ALT1"
+        },
+        {
+          "scene": "门口管道旁的新猫",
+          "text": "过了一晚，又有一只流浪猫来到门口的管道旁。家里食物充足但已经住了几只猫，你有权现在把它带进屋，也可以照常结束今天。怎么决定？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_HOME",
+            "MEWGENICSSTEAMROOT_STRAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "这一天先不增加住户，按现有的房间安排继续。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先带它进来，多认识一只刚见到的猫。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「门口管道旁的新猫」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "MEWGENICSSTEAMROOT12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "回到选项圈页查通关印记",
+          "text": "打通第一幕山洞后，选职业时悬停项圈能看到通关印记。回想你接着组队时，哪件事更能让你愿意再跑同一条路线？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_MARKS",
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_CAVES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给还没拿到山洞印记的熟悉职业补一个。",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "再带已经有印记的职业，看看它和不同队友还能组成怎样的队。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「回到选项圈页查通关印记」中的实际行动与取舍。",
+          "interpretation_boundary": "按题面所涉人物页、地图或房间已实际开放后作答。",
+          "id": "MEWGENICSSTEAMROOT12.V1"
+        },
+        {
+          "scene": "清点第一次冒险之后的夜晚",
+          "text": "从小巷回家的当晚，冒险盒暂时收起来了。你可以现在查房间和收纳，也可以过夜后再准备下一队。你会怎么收尾？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_ADVENTURE",
+            "MEWGENICSSTEAMROOT_HOME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "确认能正常过夜就结束今天，等冒险盒出现后开始配新队。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先看看房间里刚回来的那些猫，再打开收纳慢慢清点。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「清点第一次冒险之后的夜晚」中的实际行动与取舍。",
+          "interpretation_boundary": "按本体开局、房子或最早的小巷经历作答。",
+          "id": "MEWGENICSSTEAMROOT12.ALT1"
+        },
+        {
+          "scene": "家里的广播和小巷的曲子",
+          "text": "你听过房间里的 WMEW 99.9，也听过小巷地图上的 Eatin’ Rats。回想游戏里会让你停一会的声音，哪边更容易想起来？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "MEWGENICSSTEAMROOT_RADIO",
+            "MEWGENICSSTEAMROOT_MUSIC",
+            "MEWGENICSSTEAMROOT_ALLEY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "家里播歌时主持人偶尔插一句，让看猫的时候愿意多停一会。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "小巷地图每次出现都带着那段旋律，光听就会想起它的画面。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「家里的广播和小巷的曲子」中的实际行动与取舍。",
+          "interpretation_boundary": "按自己已经玩过的冒险、房间和道具作答。",
+          "id": "MEWGENICSSTEAMROOT12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+b73deca26f7f"
+}

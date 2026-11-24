@@ -4,13 +4,21 @@ export function normalizeGameQuery(value) {
     .replace(/[^\p{L}\p{N}]+/gu, '');
 }
 
-export function createGameIndex(games) {
+export function createGameIndex(games, redirects = {}) {
+  const redirectTerms = new Map();
+  for (const {aliases, target_ids} of Object.values(redirects)) {
+    const terms = aliases.map(normalizeGameQuery).filter(Boolean);
+    for (const id of target_ids) {
+      redirectTerms.set(id, [...(redirectTerms.get(id) || []), ...terms]);
+    }
+  }
   return games.map((game, order) => ({
     game, order,
     title: normalizeGameQuery(game.title),
     original: normalizeGameQuery(game.original_title),
-    terms: [...new Set([game.title, game.original_title, ...(game.aliases || [])]
+    terms: [...new Set([game.display_title, game.title, game.original_title, ...(game.aliases || [])]
       .map(normalizeGameQuery).filter(Boolean))],
+    redirectTerms: redirectTerms.get(game.id) || [],
   }));
 }
 
@@ -26,7 +34,7 @@ export function searchGames(index, query = '', {category = '', featured = []} = 
     if (needle) {
       if (item.title === needle) score = 1000;
       else if (item.original === needle) score = 980;
-      else if (item.terms.includes(needle)) score = 960;
+      else if (item.terms.includes(needle) || item.redirectTerms.includes(needle)) score = 960;
       else if (item.terms.some(term => term.startsWith(needle))) score = 850;
       else if (!shortLatin && item.terms.some(term => term.includes(needle))) score = 750;
       else if (words.length > 1 && words.every(word => word.length >= 3) &&

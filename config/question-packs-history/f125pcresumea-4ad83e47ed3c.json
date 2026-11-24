@@ -1,0 +1,987 @@
+{
+  "id": "f125pcresumea",
+  "title": "F1 25（竞速）",
+  "game_ids": [
+    "steam-3059520"
+  ],
+  "scope": "Codemasters／EA SPORTS F1® 25，Steam App 3059520 原生 Windows，公开构建 26566308，官方 v1.27。只使用标准本体 2025 的车手生涯、车队经营、Braking Point 3、单机比赛、计时赛、F1 World 涂装与个人设置。出现另行解锁、设备或章节条件时按玩家已有界面。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam Windows · 2025 标准本体",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "F125PCRESUMEA01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "2025 车手档开场身份",
+          "text": "在《F1 25》的 2025 车手生涯新档，你可以自创车手，也可以选用现有 F1 车手。想有一条玩几季的故事，你会怎么开档？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_CAREER",
+            "F125PCRESUMEA_OWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用自己的身份开新档，慢慢形成独有履历",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "保留现实车手已有的身份和背景，续写他的赛季",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「2025 车手档开场身份」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA01.V1"
+        },
+        {
+          "scene": "自创车手从哪里起步",
+          "text": "《F1 25》的 2025 车手生涯里，你已经选了自创身份，现在两种级别都可作为起点。你更想怎样开始？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_CAREER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先跑 F2，在游戏履历里留一段成长过程",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "直接从 F1 新人开始，把第一季的目标放在顶级赛事",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「自创车手从哪里起步」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA01.ALT1"
+        },
+        {
+          "scene": "名将也能被电脑车队签约",
+          "text": "在《F1 25》新建 2025 生涯时，你的档案里已可选择名将并能控制电脑车队是否招募名将。这一次你会怎么设？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_OWN",
+            "F125PCRESUMEA_CAREER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让电脑车队沿常规名单发展，把这档的起跑阵容记清楚",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "允许电脑车队引入名将，让名单发展得更出乎意料",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「名将也能被电脑车队签约」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "银石常规和逆向",
+          "text": "《F1 25》的单人大赛菜单里，银石常规和逆向都可选。你只想开一场短局，会选哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_DO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选熟悉的常规布局，保留我原本对银石的印象",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "选逆向布局，从不同朝向看相同的场馆和看台",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「银石常规和逆向」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA02.V1"
+        },
+        {
+          "scene": "第二季放不放进逆向布局",
+          "text": "《F1 25》的 2025 车手档已进入可调整第二季赛历的阶段，能把赞德沃特逆向加入。你会怎样编排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_DO",
+            "F125PCRESUMEA_CAREER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留普通赛历，继续按第一年熟悉的比赛安排记录",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "加入逆向版本，让这档赛历有一点不同",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「第二季放不放进逆向布局」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA02.ALT1"
+        },
+        {
+          "scene": "铃鹿樱花和赛道重现",
+          "text": "在《F1 25》的 2025 计时赛里尝试玩过铃鹿后，屏幕外景多了樱花树和地面细节。下一次进熟悉赛道，你会先观察什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_DO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看樱花、树林怎样让这条赛道更容易辨认",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "看路面纹理和游戏光影怎样让画面更有质感",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「铃鹿樱花和赛道重现」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "Konnersport 离开故事模式",
+          "text": "《F1 25》的 Braking Point 3 已完成，Konnersport 已可带入 2025 生涯的新档。你想怎样延续它？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_STORY",
+            "F125PCRESUMEA_STFEAT",
+            "F125PCRESUMEA_CAREER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在我的车队新档经营它，从车队管理面认识这支队",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "新开车手生涯，让它以第十一支车队加入同一赛季",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「Konnersport 离开故事模式」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA03.V1"
+        },
+        {
+          "scene": "Braking Point 3 初始难度",
+          "text": "第一次打开《F1 25》的 Braking Point 3，你主要想看 Konnersport 怎么继续发展。故事模式有不同难度，你会怎么开始？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_STFEAT",
+            "F125PCRESUMEA_ABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选比较宽松的一档，留更多注意力给剧情",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选较高的一档，把关卡达成也当成故事体验",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「Braking Point 3 初始难度」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA03.ALT1"
+        },
+        {
+          "scene": "卡莉和艾登的可选视角",
+          "text": "《F1 25》的 Braking Point 3 已到一个确实让你在卡莉·迈耶和艾登·杰克逊之间选驾驶员的场次。你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_STORY",
+            "F125PCRESUMEA_STVID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选艾登，看他作为长期角色如何接续同一段故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选卡莉，从她的视角看她在队内承担的角色",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「卡莉和艾登的可选视角」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "贴花位置和轮廓",
+          "text": "《F1 25》的我的车队开档后，贴花编辑器里你选好一张已有的赞助贴花，位置可以微调。你的第一版设计会怎样摆？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_DO",
+            "F125PCRESUMEA_OWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挪到自己觉得能看清的车身位置，当成画面焦点",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把贴花对齐原有底纹，让整车先形成统一版式",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「贴花位置和轮廓」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA04.V1"
+        },
+        {
+          "scene": "两种车身号码风格",
+          "text": "《F1 25》的我的车队设计中，车身不同位置的号码能显示不同字体和颜色。你更愿意怎么用？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_DO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把两个位置做成一套字体和配色，当成车队共同标记",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让两处号码用不同颜色或样式，单独配合各处底色",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「两种车身号码风格」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA04.ALT1"
+        },
+        {
+          "scene": "有标题赞助的底纹",
+          "text": "《F1 25》创建新车队时，已可见和所选主赞助相配的涂装底板，以及普通底板。你想以哪种作为起点？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_DO",
+            "F125PCRESUMEA_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用已有赞助底纹，顺着它的视觉风格继续加贴花",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "用普通底纹，自己重新想整辆车的视觉布局",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「有标题赞助的底纹」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "下一项先布局研究或落实已有成果",
+          "text": "《F1 25》我的车队 2.0 已把研究和制造分开，你手头既有完成研究可转制造的项目，也有另一项目可研究。只有空先处理一页，你会打开哪页？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_OWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开研究，看看下一项长期计划推进到哪里",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先去安排已经完成研究的项目进入制造",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「下一项先布局研究或落实已有成果」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA05.V1"
+        },
+        {
+          "scene": "款项在几个周末间安排",
+          "text": "《F1 25》2025 我的车队已有研发和员工的预算待安排。手里的游戏资金现在足够投一项，你更习惯怎么决策？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_OWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看公司部门的整季预算，给后面的工作留余额",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "明确选一项眼下已经计划好的工作，先落实这一单",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「款项在几个周末间安排」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA05.ALT1"
+        },
+        {
+          "scene": "工程部研究和制造先后",
+          "text": "在《F1 25》的我的车队 2.0 工程部门，你刚研究完成一款零件，两个车手都能纳入制造安排。游戏资金有限，你怎样下单？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_OWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先给一位车手制造，选择更早完成这一份",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "给两辆车一起造，愿意多等一点来节省游戏内成本",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「工程部研究和制造先后」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "新周末亲自代表谁",
+          "text": "《F1 25》的我的车队 2.0 马上开启下个周末，界面有自己的两位车手供选。你想选哪位代表车队参赛？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_OWN",
+            "F125PCRESUMEA_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选最近较少由我控制的那位，也体会他的故事",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "选我上个周末已熟悉的那位，留住连续感",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「新周末亲自代表谁」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA06.V1"
+        },
+        {
+          "scene": "人事部下一份合同",
+          "text": "《F1 25》的我的车队 2.0 人事部门已经能安排两位候选车手的合同谈判。你当前还没决定下赛季人选，会怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_OWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把主要时间留给已有明确意向的一人，减少同时谈判",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先分别约谈两人，听过各自条件再决定",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「人事部下一份合同」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA06.ALT1"
+        },
+        {
+          "scene": "再加一批员工或先维持成本",
+          "text": "在《F1 25》的我的车队 2.0，你刚看到现有员工已可承担正在排队的项目，但也可以扩大团队。你会怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_OWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "扩员工规模，换取更快的游戏内开发和设施建设",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "暂时按当前规模运行，把工资留在计划内",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「再加一批员工或先维持成本」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "字幕底框与透明度",
+          "text": "《F1 25》的 Braking Point 3 第一批对话已能显示字幕。亮色服装经过字幕后方时，你想怎样设字幕框？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_ABLE",
+            "F125PCRESUMEA_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留若隐若现的底框，多保留一点画面",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把背景调得更不透明，优先确保对白能看清",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「字幕底框与透明度」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA07.V1"
+        },
+        {
+          "scene": "让字幕颜色和角色服装分开",
+          "text": "《F1 25》的 Braking Point 3 里，Konnersport 的黄色制服在过场中很醒目。你打开了可调字幕颜色的选项，会怎么决定？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_ABLE",
+            "F125PCRESUMEA_STVID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "试一种跟画面区分更明显的字幕颜色",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "保持自己习惯的颜色，不重新适应",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「让字幕颜色和角色服装分开」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA07.ALT1"
+        },
+        {
+          "scene": "两位角色说话时的语音混音",
+          "text": "看《F1 25》剧情对白时，当前语言可用且声音都正常，但你觉得菜单和过场衔接时音乐比对白更突出。你会先试哪个音量滑块？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_ABLE",
+            "F125PCRESUMEA_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把音乐音量调低一些，让整体听着更轻松",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先把语音音量调高一点，保留背景音乐氛围",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「两位角色说话时的语音混音」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "接受眼前的车内画面或关闭动画",
+          "text": "《F1 25》已选用能看到虚拟方向盘的视角，你觉得它的动画在画面里很突出。看画面时你更愿意怎么设？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_ABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留着方向盘动画，保持更有代入感的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "关掉画面里的方向盘动画，少一个会动的元素",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「接受眼前的车内画面或关闭动画」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA08.V1"
+        },
+        {
+          "scene": "PC 光线效果的画质选择",
+          "text": "《F1 25》的 Windows 设置里，你这台电脑已经能切换路径追踪。你想重看熟悉的赛道反光和阴影，会先选哪种体验？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_DO",
+            "F125PCRESUMEA_ABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "暂时用已确认稳定的显示设置，先保留和上次一致的画面",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "试开路径追踪，用同一段画面看新的光照表现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「PC 光线效果的画质选择」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA08.ALT1"
+        },
+        {
+          "scene": "首次菜单对动态模糊的决定",
+          "text": "《F1 25》PC 的 2025 计时赛画面转动时，你发现动态模糊让屏幕看久了有些不舒服。你会如何设置？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F125PCRESUMEA_ABLE",
+            "F125PCRESUMEA_DO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把动态模糊大幅降低或关掉，舒适优先",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "调到较轻的一档，仍保留一点画面的动感",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「首次菜单对动态模糊的决定」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "已有车队里想先选车手还是车队",
+          "text": "《F1 25》的 2025 车手档已把 Konnersport 作为可选第十一队加入。建档时你最想先决定什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_CAREER",
+            "F125PCRESUMEA_STORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先决定要从哪个车队的故事出发，再定车手身份",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先想自己要扮演谁，再看适合在哪支车队发展",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「已有车队里想先选车手还是车队」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA09.V1"
+        },
+        {
+          "scene": "F1 World 与我的车队的设计分工",
+          "text": "《F1 25》中你打算第一次认真做车身号码，F1 World 和我的车队两处都已开放对应设计。你想先在哪边用它？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_DO",
+            "F125PCRESUMEA_OWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在 F1 World 做一套只代表自己的号码风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先在我的车队做一套能配合车队整体配色的号码",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「F1 World 与我的车队的设计分工」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA09.ALT1"
+        },
+        {
+          "scene": "赞助贴花是否先统一排版",
+          "text": "《F1 25》的我的车队里，两张已取得的赞助贴花都能放进同一涂装。你做第一版时想怎么处理？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_DO",
+            "F125PCRESUMEA_OWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按各自形状独立摆位，给其中一张更醒目的位置",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "用同一排版规则，把两张组成一组",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「赞助贴花是否先统一排版」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "听菜单音乐还是留安静",
+          "text": "《F1 25》停在设置或生涯菜单时，2025 本体的官方菜单歌曲正在播放。你想慢一点做新档决定，会怎样设？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_ALBUM",
+            "F125PCRESUMEA_ABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留着音乐，感受这一作菜单的气氛",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把音乐音量降下来，给自己更安静的挑选时间",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「听菜单音乐还是留安静」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA10.V1"
+        },
+        {
+          "scene": "看音画设置时尝试游戏预听",
+          "text": "《F1 25》的无障碍选项有耳鸣舒缓滤波，并有预听按钮。你只想了解筛掉部分声音后的游戏听感，会怎么比较？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_PREVIEW",
+            "F125PCRESUMEA_ABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留熟悉的滤波状态，暂时按已有设置继续",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "点一次预听，比较滤波前后的声音感受",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「看音画设置时尝试游戏预听」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA10.ALT1"
+        },
+        {
+          "scene": "一边发声更舒服的游戏音频",
+          "text": "用双声道设备玩《F1 25》时，你发现过场中的声音从目前的左右平衡听起来不舒服。你会先尝试哪种游戏内设置？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_ABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "调一下左右平衡，听同一段对白的差别",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "试单声道输出，让两边听到相同内容",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「一边发声更舒服的游戏音频」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "反向赛道作为大赛而非一人计时",
+          "text": "在《F1 25》里，你只想体验红牛环逆向这版地图。2025 的单人大赛和一人计时都能选，你会先开哪种？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_DO",
+            "F125PCRESUMEA_FAQ"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "开单人大赛，体验这条地图作为赛事出现的氛围",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "开计时赛，在更简单的界面里看自己的记录",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「反向赛道作为大赛而非一人计时」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA11.V1"
+        },
+        {
+          "scene": "回溯选项在允许的单机存档里",
+          "text": "《F1 25》当前这项单人比赛支持即时回溯。刚出现一个你想再看一遍的虚拟片段，你更倾向怎么做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_ABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "打开即时回溯，看完后从刚才的一点继续",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "保持这局原样，继续按已经发生的进度完成",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「回溯选项在允许的单机存档里」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA11.ALT1"
+        },
+        {
+          "scene": "环境不同的三条逆向赛道",
+          "text": "《F1 25》2025 年度的计时赛都有逆向银石、赞德沃特和红牛环。你这次只开一张此前玩过的逆向地图，会怎么挑？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_DO"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑红牛环逆向，留意山景和赛道外的景观",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "挑银石逆向，回到我更熟悉那套看台和场馆",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "挑赞德沃特逆向，重看海边赛道的视觉印象",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「环境不同的三条逆向赛道」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F125PCRESUMEA12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "车队数据和车手履历的不同读法",
+          "text": "你在《F1 25》的 2025 赛季已经有我的车队档和车手生涯档。重开游戏只想先看一个进度，你更会选哪条？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_OWN",
+            "F125PCRESUMEA_CAREER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "进我的车队，看人员、设施和预算接下来要处理什么",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "进车手生涯，看这季自创车手累积下来的表现和声望",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「车队数据和车手履历的不同读法」中的实际行动与取舍。",
+          "interpretation_boundary": "仅当题中功能、设备或解锁条件已满足时作答。",
+          "id": "F125PCRESUMEA12.V1"
+        },
+        {
+          "scene": "从哪条记录继续第一场",
+          "text": "《F1 25》主界面已有你刚开过的 2025 车手生涯和 Braking Point 3 两个档。今天只有一点空闲，你更想先接哪条？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_CAREER",
+            "F125PCRESUMEA_STFEAT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "接自己的生涯，让自创车手的第一季再往前一点",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "接 Konnersport 的剧情，看看上一段留下的事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「从哪条记录继续第一场」中的实际行动与取舍。",
+          "interpretation_boundary": "可在入门设置或普通模式初期体验。",
+          "id": "F125PCRESUMEA12.ALT1"
+        },
+        {
+          "scene": "回顾 Konnersport 对话肖像",
+          "text": "《F1 25》Braking Point 3 已看过一段 Konnersport 队内过场。再和玩过的朋友聊起那段，你会先说什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F125PCRESUMEA_STORY",
+            "F125PCRESUMEA_STFEAT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先说哪位角色的表情改变了我对他的话的理解",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先说那段对话让队伍处境发生了什么变化",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「回顾 Konnersport 对话肖像」中的实际行动与取舍。",
+          "interpretation_boundary": "按已有的 2025 车手／车队档或已经体验的章节。",
+          "id": "F125PCRESUMEA12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+4ad83e47ed3c"
+}

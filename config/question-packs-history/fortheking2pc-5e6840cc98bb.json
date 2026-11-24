@@ -1,0 +1,1031 @@
+{
+  "id": "fortheking2pc",
+  "title": "为了吾王2",
+  "game_ids": [
+    "steam-1676840"
+  ],
+  "scope": "IronOak Games《为了吾王2》Steam Windows 1676840，当前1.15.17。本体战役，可单人控制队伍。共有规则与第一冒险抵抗军的已见场景。随机相邻单位、已有能力、事件可选项或在售物品由题面明确。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体战役冒险",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "FORTHEKING2PC01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "再走一格能否让队友进红格",
+          "text": "世界棋盘上，队伍正要找一个野怪开战。红色参战范围边上还差一格能把这名队友送进去，路线畅通，轮到他走但普通移动点已用完，但本回合尚未结束，其他队员也还没开战。他仍有专注。怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FOC",
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_SEEN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留住专注，这一轮先不让其他队员开战，等他下轮靠拢。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "花一点专注加一格，走进红色范围，让下次开战带上他。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「再走一格能否让队友进红格」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC01.V1"
+        },
+        {
+          "scene": "盾后这一格要不要留",
+          "text": "战斗网格前排有一名持盾队友，他身后的格子显示有护卫。现在轮到学者，身上没被限制移动，次要行动还在。另有一个离溅射目标更远的后排空格。你怎么安排学者？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_ACTIONS",
+            "FORTHEKING2PC_GUARD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用次要行动移到盾后，避开敌人把学者直接选为主要目标。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把学者移到另一列空格，先尽量和容易被波及的队友拉开。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「盾后这一格要不要留」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC01.ALT1"
+        },
+        {
+          "scene": "囚车与身后的下一位",
+          "text": "「抵抗军」的解救任务已经开启，你找到了主线里呼救的囚车，但现在只有一名角色走到格子边。交互按钮已亮，另一位队员也能在下一个地图回合走过来。你打算怎样开这一步？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_PLAY",
+            "FORTHEKING2PC_ENC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先停在囚车边，等有更多专注的队员靠过来后，再由他开事件。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让已经到的人先按交互，看现有角色能怎样处理。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「囚车与身后的下一位」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "成排敌人先用炸弹吗",
+          "text": "敌军一名核心目标旁边挨着两名小怪。当前队员有可用的炸弹，落点预览显示能打中这三个，手上的普通武器也能直接攻击核心。你先用哪件东西？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_ACTIONS",
+            "FORTHEKING2PC_ATTACK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用次要行动把炸弹扔到显示覆盖三个的格子。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先用主要行动攻击核心，留好炸弹给之后的敌群。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「成排敌人先用炸弹吗」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC02.V1"
+        },
+        {
+          "scene": "抵抗军营地给你二选一",
+          "text": "第一冒险里你遇到一处抵抗军营地，交互菜单当前同时列出补一次队伍生命次数和降一点混沌，这两个都没有到上限或下限。选下去就要离开营地。你先选哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_PLAY",
+            "FORTHEKING2PC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让混沌减一，给队伍接下来的行动争取时间。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把奖励换成一次队伍生命次数，给接下来的战斗多一个能救人的机会。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「抵抗军营地给你二选一」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC02.ALT1"
+        },
+        {
+          "scene": "战斗范围内多一个敌人",
+          "text": "野外眼前一个普通敌人。交互画面写着交战会带上邻近敌人，队友也在范围内。伏击选项可用，当前发起者的意识检定可以加专注。你先选什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_SEEN",
+            "FORTHEKING2PC_FOC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "尝试伏击，把面前这一个从别的敌人里拆出来。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "直接让附近队友都进战，按站位和武器打这组敌人。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「战斗范围内多一个敌人」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "旧地窖和废弃下水道都可进",
+          "text": "「抵抗军」里下一步要离开当前区域，地图上老地窖和废弃下水道都已经揭开，队伍能先去任何一边。大家还有补给。你想从哪里过？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_SEWER",
+            "FORTHEKING2PC_PLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走老地窖，按避开沼泽移动损耗的路线继续找人。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先走废弃下水道，看看毒性敌人和另一侧沼泽怎么处理。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「旧地窖和废弃下水道都可进」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC03.V1"
+        },
+        {
+          "scene": "这一回合准备怎样补专注",
+          "text": "队伍的两名角色专注见底。手上有火绒袋，当前是能搭营的空格；还有足够移动力和金币去已揭开且提供冥想服务的城镇。两处附近都没有立即要打的敌人。你会怎样补给？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_OVER",
+            "FORTHEKING2PC_CAMP",
+            "FORTHEKING2PC_FOC",
+            "FORTHEKING2PC_TOWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在现在的格子搭安全营地，安排需要的队员来休息。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用掉当前移动力去镇里，付费冥想补足专注后从另一条路出发。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「这一回合准备怎样补专注」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC03.ALT1"
+        },
+        {
+          "scene": "这回合最后一格专注",
+          "text": "轮到未中毒的马倌，他还有一个主要行动和最后一点专注，这个回合还没有触发过他的加行动技能。眼前有能打的敌人，也能普通出手。你怎么分配？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_FOC",
+            "FORTHEKING2PC_SKILL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留专注，先按当前命中率正常攻击，把剩下的专注留待下一回合。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "在这一击里用最后一点专注，争取命中，同时让本回合多一次主要行动。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「这回合最后一格专注」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "同一笔钱买武器还是留药",
+          "text": "一座早期城镇的市场同时有可买的神赐芒草和一件适配队友主要属性的新武器。你当下的钱够任买一种，但两样加起来不够。你先买哪样？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_TOWN",
+            "FORTHEKING2PC_OVER",
+            "FORTHEKING2PC_CNITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先换武器，让这个角色在接下来的几场稳定有输出。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先带上神赐芒草，把保命补给准备好再走。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「同一笔钱买武器还是留药」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC04.V1"
+        },
+        {
+          "scene": "从中间移开再出手",
+          "text": "轮到一名没被击晕的队员，次要和主要行动都还在。前一轮一记溅射同时打到了他和旁边的人。另一列有能到的空格，移过去仍能用手上的远程武器。你打算怎么动？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_ACTIONS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从当前位置集中打威胁最大的敌人，把换位留给之后的需要。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先花次要行动换空格，和同伴错开再出手。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「从中间移开再出手」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC04.ALT1"
+        },
+        {
+          "scene": "翻倒的马车就在旁边",
+          "text": "在「抵抗军」里，你已经接到找丈夫的目标，山麓的翻倒马车已经被揭开，按钮可交互。最近的镇也能到，你还没补队里需要的物件。现在先去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_CART",
+            "FORTHEKING2PC_PLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去翻车那里调查，看看委托人等待的那个人发生了什么。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先在镇里做完原定补给，再回来查翻车的情况。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「翻倒的马车就在旁边」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "猎人的普通射击与穿甲",
+          "text": "轮到拿初始弓的猎人，弓上普通射击和穿甲都亮着。带厚甲的前排和护甲薄的另一名敌人都能瞄到，你当前还能用专注。先把这一箭给谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_ATTACK",
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_BOW"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用普通射击打护甲薄的目标，保留专注再判断下一轮。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "给厚甲目标用穿甲射击，用专注争取完美检定以绕开护甲。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「猎人的普通射击与穿甲」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC05.V1"
+        },
+        {
+          "scene": "主线之外的炼金术士囚车",
+          "text": "「抵抗军」已经打过哨所，你也救出了主线囚车里的人并听到下一条任务。另一辆有炼金术士呼救的囚车也已被队伍发现，当前可以交互，但离主线不是同一方向。你先走哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_ENC",
+            "FORTHEKING2PC_PLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先绕一点路，看看能否把另一辆囚车里的人也救出来。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先沿刚得到的主线方向推进，暂缓另一辆囚车。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「主线之外的炼金术士囚车」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC05.ALT1"
+        },
+        {
+          "scene": "同一个镇要接哪单",
+          "text": "这个城镇的告示板还有一次可接任务的机会。当前明确显示两个可选委托，讨伐拿资源和清混沌营地。两处都已经看见，队伍暂时都能去。你接哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_TOWN",
+            "FORTHEKING2PC_OVER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先接降混沌的单，给后续主线多留一些余地。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先接讨伐单，试着把看得见的奖励拿到手。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「同一个镇要接哪单」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "准备好进强盗王藏身处了吗",
+          "text": "第一冒险后段，地图上的强盗王藏身处已经能进，附近探索过的路也还允许回到镇里。队伍生命和道具够试一次，你想怎样处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_PLAY",
+            "FORTHEKING2PC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在当前队伍状态进入藏身处，把这一段主线打下去。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先回附近城镇把药、专注和装备补齐，再全队来门口。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「准备好进强盗王藏身处了吗」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC06.V1"
+        },
+        {
+          "scene": "躲过去还是转开",
+          "text": "你的角色还剩移动点，走到一个普通野怪的交互格。界面显示能做速度潜行判定，也能选择撤回。你按下去之前倾向怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_FOC",
+            "FORTHEKING2PC_SEEN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接撤回这次接触，把这条路之后交给更适合的队员。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "试一次潜行，成功就从它这块格继续前进。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「躲过去还是转开」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC06.ALT1"
+        },
+        {
+          "scene": "不能再把后排和主攻绑在一列",
+          "text": "盾手当前站在前排，自己面板还余次要行动。原列身后是能射箭的人，另一列后排还有一个急需保护的队友，前面的格子空着并能移动过去。你怎么安排盾手？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_ACTIONS",
+            "FORTHEKING2PC_GRID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "移到另一列前排，让盾保护眼下更脆弱的队友。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "保持原位继续护住射手，把行动留给现在可用的道具。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「不能再把后排和主攻绑在一列」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "稀有检定和下一段路",
+          "text": "地图上碰到一个可尝试、允许用专注的遗迹事件；奖励预览也看得见。你手里正有可用的专注。你可以现在给检定锁定一个成功格，也可以留到以后多走一步。你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FOC",
+            "FORTHEKING2PC_OVER",
+            "FORTHEKING2PC_ENC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先放弃这一处检定，把专注留给跨地图时补移动。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "在这里用一点专注补一格检定，争取拿到可带走的奖励。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「稀有检定和下一段路」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC07.V1"
+        },
+        {
+          "scene": "次要动作先用治疗还是换位",
+          "text": "战斗里轮到一个失血的人。他有一株可用的神赐芒草，次要行动还没花，想去的空格也可达。当前敌人的溅射刚打到他附近的两人。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_ACTIONS",
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_CNITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用神赐芒草抬高现在的生命，让他能扛下一次伤害。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用这次次要行动移到与队友错开的格子，减少同时被打。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「次要动作先用治疗还是换位」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC07.ALT1"
+        },
+        {
+          "scene": "过关后的补给与支路",
+          "text": "你在「抵抗军」里刚从老地窖路线抵达下一片区域。地图上已经揭开本地镇和新目标，队伍都在可移动状态。目前哪些事值得先办？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_SEWER",
+            "FORTHEKING2PC_TOWN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先停到已揭开的镇里整补，带着恢复后的队伍再去目标。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "沿任务标记继续走，争取先接上后续的主线目标。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「过关后的补给与支路」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "暗黑法术打得宽还是打得重",
+          "text": "你带着已解锁并选作起始装备的黑暗法书。轮到你时敌人分布在好几格，溅射预览可给核心更高伤害，另一项范围攻击则可以覆盖更多人。这回合只剩一次主要行动。怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_ATTACK",
+            "FORTHEKING2PC_DARK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用溅射攻击把伤害重点放在核心目标，邻格也一同波及。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "用范围攻击铺得更宽，让更多敌人一起掉血。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「暗黑法术打得宽还是打得重」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC08.V1"
+        },
+        {
+          "scene": "王后卫队货船前的检定",
+          "text": "你在「抵抗军」第一幕的秋林找到了王后卫队货船，点燃货船的交互已经开放。界面列出本次使用哪项属性检定，可以直接掷，也可以花专注。当前操作者还有专注。你怎么开这一步？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_PLAY",
+            "FORTHEKING2PC_FOC",
+            "FORTHEKING2PC_SHIP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前属性不加专注尝试，把专注留给离开货船事件后的行动。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先花专注锁一个成功格，把重点放在让这次任务顺利通过。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「王后卫队货船前的检定」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC08.ALT1"
+        },
+        {
+          "scene": "圣坛的祝福先给谁",
+          "text": "你发现一座还有祝福的普通圣坛。现在靠近的是没祝福的猎人，另一名同样没祝福的队友下一回合也够得到。现场可不交互直接走。你把这次机会留给谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "FORTHEKING2PC_OVER",
+            "FORTHEKING2PC_LORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让猎人先祈求祝福，把这一份给眼下最需要提升的远攻。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先让猎人不动圣坛，留给下一回合赶到的队友。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「圣坛的祝福先给谁」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "回看最初的两个地下出口",
+          "text": "你先后从「抵抗军」的老地窖和废弃下水道到过下一片区域。重新开第一章，更想重温哪条路？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_SEWER",
+            "FORTHEKING2PC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再走老地窖，比较怎样更快让四人从地牢整队通过。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "再走废弃下水道，比较毒怪和出来后的沼泽路线。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「回看最初的两个地下出口」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC09.V1"
+        },
+        {
+          "scene": "离哪个队友近才开打",
+          "text": "在一次本体冒险里，你见过红色交战范围把同伴拉进战斗，也有一次等落在范围外的人走近以后才进战。下次遇到差一两格的情况，你更想练哪一种？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_SEEN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重练如何先把全队移进同一参战范围，再挑正式开战的时点。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "重练怎样按范围内当下的人手判断，什么时点可以少一个人先打。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「离哪个队友近才开打」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC09.ALT1"
+        },
+        {
+          "scene": "回看护卫和避溅射的两次站位",
+          "text": "你既把脆弱的队友放过盾后，也主动把两位后排分到远一点的列。重玩这段更想重试哪一项？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_GUARD"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重做后排错位，比较敌人打同一列旁边时谁能躲过溅射。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "重做一整个前后排盾护组合，看看哪些单体攻击不会直接选中盾后的队友。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「回看护卫和避溅射的两次站位」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "城镇服务是怎么把状态拉回来的",
+          "text": "你曾先去城镇用服务恢复，也在野外搭过火绒袋营地。重开本体战役，哪种补给做法更想再研究？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_TOWN",
+            "FORTHEKING2PC_OVER",
+            "FORTHEKING2PC_CAMP"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "复盘城镇支出，看看离下一战还有多少资源可用。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "复盘全队如何赶到营地并分别休息，安排他们一同出发。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「城镇服务是怎么把状态拉回来的」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC10.V1"
+        },
+        {
+          "scene": "马倌那次多出来的行动",
+          "text": "你曾用马倌消耗最后一点专注多做过一个动作，也保留过专注应付下一轮。回想第一次能稳定出两次主要动作的对局，哪一段更想练？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_SKILL",
+            "FORTHEKING2PC_FOC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重练先留专注的打法，专注下回合关键攻击再花。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "重练怎样用掉最后一点专注，让两个主要行动配合。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「马倌那次多出来的行动」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC10.ALT1"
+        },
+        {
+          "scene": "主线囚车和炼金术士囚车",
+          "text": "你在「抵抗军」救过主线任务里的囚车角色，也从另外出现的囚车救过炼金术士。重新跑一局，哪一个节点更吸引你？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_ENC",
+            "FORTHEKING2PC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回看主线里获救成员说的话，理解接下来的联络路线。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "再去找额外囚车，回顾自己怎样从地图上的呼救发现它。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「主线囚车和炼金术士囚车」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "防不住的伤害如何选目标",
+          "text": "你曾用物理攻击打过缺护甲的敌人，也用魔法打过抵抗低的敌人。下次遇到同场两个抗性不同的对手，你更愿重练哪个判断？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_ATTACK",
+            "FORTHEKING2PC_GRID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重练把魔法留给低抵抗的目标，比较同队武器怎么分工。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "重练对低护甲敌人的物理收尾，先看实际能少挨几回合。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「防不住的伤害如何选目标」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC11.V1"
+        },
+        {
+          "scene": "队伍资源不足时的抵抗军营地",
+          "text": "你曾把「抵抗军」营地奖励用来降混沌，也拿过额外生命次数。重开这一段，你更想回顾哪种取舍？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回顾在哪些混沌进度下先降一点，留更多回合给任务。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "回顾何时保一份能救人的生命次数，避免某名队员提前离队。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「队伍资源不足时的抵抗军营地」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC11.ALT1"
+        },
+        {
+          "scene": "潜行省一场还是伏击拆人",
+          "text": "你面对地图野怪试过速度潜行，也尝试过用意识伏击。在两种判定都出现过的对局里，哪一段更想重新走？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_FOC",
+            "FORTHEKING2PC_SEEN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重试能把普通敌人拆出来的伏击，比较先攻能给队伍做什么。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "重试潜行，看看能不能省掉一次战斗把脚程留给目标。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「潜行省一场还是伏击拆人」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "FORTHEKING2PC12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "抵抗军结尾想重试哪条准备",
+          "text": "你到过强盗王藏身处，试过当下就进去，也在另一轮回镇补好再打。重玩抵抗军，你对哪种安排更有兴趣？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_FIRST",
+            "FORTHEKING2PC_PLAY",
+            "FORTHEKING2PC_CART"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重试在没有额外补给时打第一场，验证当前配置能应付多少。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "重走进门前的回补路线，比较应该为哪名队员重新补物。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「抵抗军结尾想重试哪条准备」中的实际行动与取舍。",
+          "interpretation_boundary": "本体第一冒险「抵抗军」已经到达的任务阶段与路线。",
+          "id": "FORTHEKING2PC12.V1"
+        },
+        {
+          "scene": "第一次在城镇取公告委托",
+          "text": "你在不同局的本体城镇接过讨伐拿奖励，也做过清混沌营地的委托。重开同一个早期区域，你更想重做哪一种？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_TOWN",
+            "FORTHEKING2PC_OVER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重试接减混沌委托后怎样算路线和剩余回合。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "重试如何按讨伐的地图线索拿资源，再接回正在走的目标。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次在城镇取公告委托」中的实际行动与取舍。",
+          "interpretation_boundary": "本体地图、城镇、移动、扎营及遇敌窗口。",
+          "id": "FORTHEKING2PC12.ALT1"
+        },
+        {
+          "scene": "回看一个次行动值不值",
+          "text": "战斗里你曾把次要行动花在换位躲溅射，也有一次先用神赐芒草回血。重打类似一轮，更想盯哪种结果？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "FORTHEKING2PC_COM",
+            "FORTHEKING2PC_ACTIONS",
+            "FORTHEKING2PC_GRID",
+            "FORTHEKING2PC_CNITEM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回看换格后的队友分布，观察下一次攻击能波及几人。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "回看先回血的机会，比较哪个血量真的能多撑一轮。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「回看一个次行动值不值」中的实际行动与取舍。",
+          "interpretation_boundary": "本体4×2战斗网格及已见的装备、能力和可用行动。",
+          "id": "FORTHEKING2PC12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+5e6840cc98bb"
+}

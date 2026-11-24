@@ -64,7 +64,7 @@ class ReplacementExpansionTests(unittest.TestCase):
     def test_only_explicit_exhausted_replacement_uses_new_scene(self):
         with self.mocked_lookup():
             exhausted=self.exhaust_old();raw=exhausted['response'];old_question=exhausted['questions'][0]
-            raw['answers'][old_question['id']]='C'
+            raw['answers'][old_question['id']]=old_question['options'][-1]['id']
             raw['extra_answers']=[{'question_id':'obsolete-test-followup','answer':'A'}]
             before=deepcopy(raw)
             other_answers={key:value for key,value in raw['answers'].items() if key!=old_question['id']}
@@ -79,7 +79,7 @@ class ReplacementExpansionTests(unittest.TestCase):
             self.assertEqual(result['response']['extra_answers'],[])
             self.assertIn(old_question['id'],result['response']['replacement_history'][old_question['slot_id']])
             with self.assertRaises(InputError):v05.report(result['response'])
-            result['response']['answers'][self.addition['id']]='D'
+            result['response']['answers'][self.addition['id']]=self.addition['options'][-1]['id']
             report=finish(result['response'])['report']
             self.assertNotIn('answer:'+old_question['id'],report['evidence'])
             self.assertEqual(report['evidence']['answer:'+self.addition['id']]['question'],self.addition['text'])

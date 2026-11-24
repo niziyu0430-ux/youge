@@ -1,0 +1,1892 @@
+{
+  "id": "cs2",
+  "title": "反恐精英2",
+  "game_ids": [
+    "steam-730"
+  ],
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "modes": [
+    {
+      "id": "defusal",
+      "label": "拆弹玩法",
+      "initial_variants": {}
+    },
+    {
+      "id": "gunplay",
+      "label": "死斗／军备竞赛",
+      "initial_variants": {
+        "CS201": "CS201.CORE",
+        "CS202": "CS202.CORE",
+        "CS203": "CS203.CORE",
+        "CS204": "CS204.CORE",
+        "CS205": "CS205.CORE",
+        "CS206": "CS206.CORE",
+        "CS207": "CS207.CORE",
+        "CS208": "CS208.CORE",
+        "CS209": "CS209.CORE",
+        "CS210": "CS210.CORE",
+        "CS211": "CS211.CORE",
+        "CS212": "CS212.CORE"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "CS201",
+      "number": 1,
+      "variants": [
+        {
+          "id": "CS201.V1",
+          "text": "当前拆弹回合尚未结束，自己持枪来到已熟悉的转角，真人队友能交流，眼前有几种可行行动。先做什么？",
+          "scene": "当前拆弹回合的转角",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手接一次停枪、拉枪与射击，体验连续的声音和命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "选一个自己仍不稳的出身位或急停时机，趁当前交火亲手练它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "向真人队友确认这回合的共同目标，报清位置后按分工跟进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "以这场自己明确想争取的比分结果为目标，争取眼前这次关键对抗",
+              "signal": "rank_worker"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "当前场景内选择可立即执行的动作。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS201.CORE",
+          "text": "当前正在自己玩过的死斗或军备竞赛，已持有本次允许的枪，真人对手可能从熟悉转角出现。现在先做什么？",
+          "scene": "当前持枪交火",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手接一次移动、停枪与射击，体验连续声音和命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "固定一个仍不稳的预瞄或出手时机，亲手多试几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "换站位核对视线与遮挡，验证对手从哪处能看见自己",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "以这场已设定的个人计分或名次目标为参照，争取眼前这次对抗",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS201.BASIC",
+          "text": "不要求完整比赛或真人对手。当前在已玩过的枪械练习里，手中这把枪可用，眼前有目标和熟悉转角。先做什么？",
+          "scene": "当前持枪交火",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手接一段开枪与移动，享受声音和命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "固定一个仍不顺的预瞄或停枪细节，亲手重复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "给这段练习定每次开火后必须退回起手掩体、重新出身位才能再开火的规则，亲自试这种限制的变化",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "换几处站位核对视线与遮挡，弄清目标从哪里可见",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS201.RESPAWN",
+          "scene": "半匣后选普通或静音换弹",
+          "text": "死斗或军备里你退回掩体，弹匣式步枪还有几发，备用匣未空。听见附近脚步，可以快速换弹，也可以静音换弹，后者更慢。你怎么处理？",
+          "source_ids": [
+            "CS2G187_RELOAD",
+            "CS2G187_QUIET",
+            "CS2G187_CROSS",
+            "CS2G187_MODES"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "比较装填节奏、实操反馈与出手练习。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "先留住这几发，等打得差不多、附近又安全时才换，免得现在耗掉一个备用弹匣",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "改用静音换弹，练判断何时能赶在对手探出来前完成动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "快速换匣，想摸准从换弹动作结束到举枪能开火的手感",
+              "signal": "feedback_engine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS202",
+      "number": 2,
+      "variants": [
+        {
+          "id": "CS202.V1",
+          "text": "当前与真人熟人在已熟悉的拆弹地图自由练习，眼前一处少用进点角度可以反复走，枪与投掷物均已可用。先做什么？",
+          "scene": "可反复走的进点角度",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "换几处站位比较可见区域，把视线与遮挡关系画清",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "固定一个出身位与瞄点，亲手重复同一段动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "与真人同伴先约烟、闪和进点的共同目标，分清各自步骤后接一次",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "从另一条当前可达支路接近这个点，试一次自己较少用的进入方向",
+              "signal": "route_choice"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "当前场景内选择可立即执行的动作。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS202.CORE",
+          "text": "当前在已熟悉的死斗或军备竞赛地图，手持本次允许的枪，眼前有一处少走的通道角度。现在先做什么？",
+          "scene": "当前地图通道角度",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换几处位置核对可见区域，弄清视线和遮挡关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "沿同一处出身位与瞄点亲手多试几次，把动作练稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "改从另一条当前可达通路进入，试一次自己较少用的接近方向",
+              "signal": "route_choice"
+            },
+            {
+              "id": "D",
+              "label": "用手头枪接一段交火，享受开枪和命中的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS202.BASIC",
+          "text": "不要求自由换枪或队伍配合。当前手持可用的枪来到已经走过的通道，眼前几个站位都能移动过去。先做什么？",
+          "scene": "当前地图通道角度",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换位置比较遮挡和视线，把空间关系画清",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "固定一段出身位、预瞄与停枪，亲手重复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "改沿通道另一侧接近，试一次自己较少用的进入方向",
+              "signal": "route_choice"
+            },
+            {
+              "id": "D",
+              "label": "用手中枪接一段射击，享受熟悉动作与命中反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS202.RESPAWN",
+          "scene": "实际楼梯连接上下层",
+          "text": "打 Dust II 死斗时，你在 B 洞楼梯口，上到 B 点和下到中路的两边都通。打 Baggage 军备时，也有能留在传送带高处或从侧边下楼的时刻。按你玩过的其中一处，你先怎么走？",
+          "source_ids": [
+            "CS2G187_DMPLAY",
+            "CS2G187_DUST",
+            "CS2G187_ARPLAY",
+            "CS2G187_AR"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "比较地图层高的验证与陌生路线。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "先走上层，弄清从高处能看见哪些路口，下一次再到下面对照死角",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先走下层，看看这段楼梯出来之后还能从哪些路回到地图另一边",
+              "signal": "wanderer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS203",
+      "number": 3,
+      "variants": [
+        {
+          "id": "CS203.V1",
+          "text": "当前是真人熟人队拆弹回合的购买时间，几个人预算不同，几套可负担的购买与行动都已摆在眼前。你先做什么？",
+          "scene": "购买时间中的回合准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_RULES",
+            "CS2_CORE",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "核对本回合和后续回合的经济，把购买与部署接成连续安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "问清各位这回合想做什么，把共同目标、购买与跟进分工说清",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "用当前可买的枪械与烟闪组成配合，确定它们怎样互相创造机会",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "围绕自己明确要争取的比赛结果，选一套准备去竞争这一分",
+              "signal": "rank_worker"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "当前场景内选择可立即执行的动作。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS203.CORE",
+          "text": "当前在死斗或军备竞赛的一次重生后，已拿到本次允许的枪；不假设能自由换枪或购买。出发前先做什么？",
+          "scene": "当前持枪后的出发准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把想练的路段、观察点和动作排成几个接得上的步骤，再按这个安排出发",
+              "signal": "practice_route_plan"
+            },
+            {
+              "id": "B",
+              "label": "核对眼前枪、通路距离与遮挡，验证一条射击条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "挑一个仍不顺的出手时机，出发后亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "围绕这场已设定的个人计分或名次目标，去争取当前对抗",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS203.BASIC",
+          "text": "不要求购买、换枪或真人对手。当前已在熟悉地图持有可用的枪，眼前有通道和目标。先做什么？",
+          "scene": "当前持枪后的出发准备",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清要走的路段、观察点与练习动作，再按这个安排开始",
+              "signal": "practice_route_plan"
+            },
+            {
+              "id": "B",
+              "label": "对照这把枪、距离与遮挡，验证一次目标是否可见",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "选一个仍不顺的出手时机，亲手重复练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "规定这一小段每次开火后必须回到起手遮挡，再许下次开火，亲自试新增限制后的节奏",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS203.RESPAWN",
+          "scene": "奖励枪和推进等级刚拿到的枪",
+          "text": "如果打死斗，你刚切到提示中的奖励枪；如果打军备，一次击杀刚推进一档，手里已换成这一阶的枪。眼前有一条长视线，旁边有能打近身的通路。你先？",
+          "source_ids": [
+            "CS2G187_MODES",
+            "CS2G187_AR",
+            "CS2G187_DCFG",
+            "CS2G187_ACFG"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "拿到新枪后按距离安排或练习。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "优先找有希望马上拿分或推进枪阶的对抗方向，争取追上本场目标",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "先走近路，练几次新枪的瞄准、出手时机，把第一次出手做顺",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先选能检验枪械有效距离判断的一条路，之后去另一个距离对照",
+              "signal": "puzzle_breaker"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS204",
+      "number": 4,
+      "variants": [
+        {
+          "id": "CS204.V1",
+          "text": "当前在已开放的自由练习地图里，你有枪和烟闪，眼前这颗烟的常用投法已会，真人同伴也愿意一起练。先增加什么？",
+          "scene": "烟雾与枪械的当前练习",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定站位与出手，亲手反复把烟投到自己的目标位置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把烟遮挡的通路与持枪观察、闪光出手组合起来，试它们怎样互相创造机会",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "C",
+              "label": "与真人同伴约清烟后进点的共同目标，分开投掷与跟进职责再接一次",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "用枪火暂时扰动眼前烟雾，再换站位对照可见区域，验证烟雾与视线怎样变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "当前场景内选择可立即执行的动作。 观察烟雾与视线变化为规则验证，不因改出手顺序推创造玩法。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS204.CORE",
+          "text": "当前正在已熟悉的死斗或军备竞赛地图，不需要投掷物，手中是本次允许的枪。眼前转角先怎样处理？",
+          "scene": "当前枪械与遮挡",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定移动、停枪与预瞄，亲手重复同一段动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "对照几个站位的距离与遮挡，验证这把枪能看见和打到哪里",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "从另一条当前可达路线经过转角，试一次平时较少用的进入方向",
+              "signal": "route_choice"
+            },
+            {
+              "id": "D",
+              "label": "沿熟悉角度接一段射击，享受声音、动作和命中的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS204.BASIC",
+          "text": "不使用投掷物。当前已走过的地图路线有几个可选转角，手中枪可以继续使用。先怎样尝试？",
+          "scene": "当前枪械与遮挡",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定路线和瞄点，把同一段移动与停枪亲手多做几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "换几个位置作对照，验证视线、距离与遮挡关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "从当前可达的另一侧绕入，试一次平时较少用的进入方向",
+              "signal": "route_choice"
+            },
+            {
+              "id": "D",
+              "label": "沿熟悉路段接一串射击，享受声音与命中反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS204.RESPAWN",
+          "scene": "动态准星提示当前散布",
+          "text": "死斗或军备中你开了动态准星。走到掩体边，在停止移动和开枪后看到准星从散开往回收；外面还有可打的目标。你怎样用这次机会？",
+          "source_ids": [
+            "CS2G187_CROSS",
+            "CS2G187_BASE"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "比较准星提示、观察验证和动作反馈。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "在掩体边对照走动和停下的准星，核对这把枪何时适合出第一枪",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "挑一个能重做的停步动作，专练准星收回后打第一枪",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "等准星收回就亲手接一下出掩体、瞄准和开枪，体会动作怎样回应",
+              "signal": "feedback_engine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS205",
+      "number": 5,
+      "variants": [
+        {
+          "id": "CS205.V1",
+          "text": "当前真人固定队已在熟悉拆弹地图布好一次可重复的回防练习，地点与装备都明确，各种常规做法都可试。先做什么？",
+          "scene": "已经布好的回防练习",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_RULES",
+            "CS2_CORE",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一处预瞄或停枪细节，亲手多次处理",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先确认回防的共同目标，约清报点、道具和出身位的分工再接一次",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "换几个站位作对照，解释彼此视线怎样互相制约",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "以已约定的练习回合胜负或成绩为目标，实际争取这次结果",
+              "signal": "rank_worker"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "当前场景内选择可立即执行的动作。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS205.CORE",
+          "text": "当前在死斗或军备竞赛的一段熟悉交火区，手持本次允许的枪，真人对手也在进行较量。先做什么？",
+          "scene": "当前基础交火练习",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一个预瞄或急停细节，亲手反复练它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "换几个站位比较彼此视线，验证可利用的角度",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "给这段交火定只能在自己选定的两处可达位置开火、其他地方禁射的规则，实际试这种限制",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "按自己事先设定的本场计分或名次目标，争取眼前这次对抗",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS205.BASIC",
+          "text": "没有团队分工或比赛成绩要求。当前在熟悉地图里用可用的枪面对一处交火片段，先做什么？",
+          "scene": "当前基础交火练习",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一次急停或预瞄，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "换位置观察墙角与遮挡，验证几处视线怎样相接",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "给这段练习圈定两处当前可达位置，规定只能在这两处开火，亲自试新增限制后的变化",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "D",
+              "label": "亲手接一串移动、开枪与命中，享受直接反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS205.RESPAWN",
+          "scene": "结束前追分或面对军备最后刀阶",
+          "text": "死斗里，你的分数离想追上的位置已经不远；军备竞赛里，你看到对面有人到了最后刀阶。按你所在的模式，还有机会选择这一波怎么接战。你会？",
+          "source_ids": [
+            "CS2G187_AR",
+            "CS2G187_MODES",
+            "CS2G187_POINT",
+            "CS2G187_HUD"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "比较追本局结果、临场练手与操作反馈。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "挑手头枪最顺的距离接一波，想把动作、声音和命中连起来",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "用这一波练自己总是提前出手的动作，换成看准对方停下之后再打",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "选一次有希望改变本场名次或胜负的交火，主动去争取结果",
+              "signal": "rank_worker"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS206",
+      "number": 6,
+      "variants": [
+        {
+          "id": "CS206.V1",
+          "text": "当前你与真人熟人正在看一段可用的拆弹对局录像，只留一小段时间；画面与语音线索都能查看。先做什么？",
+          "scene": "当前录像的具体核对",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "圈出自己开枪前不顺的一次移动，随后立刻亲手练这段动作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把当时声音、露出位置和遮挡接起来，验证对手可能经过的路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "问清真人同伴当时各自收到的信息，重新确认共同目标与跟进分工",
+              "signal": "quest_board"
+            },
+            {
+              "id": "D",
+              "label": "把前后回合的购买、部署与当前交火接成流程草图",
+              "signal": "systems_builder"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "当前场景内选择可立即执行的动作。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS206.CORE",
+          "text": "不要求录像。当前刚经历死斗或军备竞赛的一段交火，声音和位置仍记得，接下来还能继续实际练习。先做什么？",
+          "scene": "当前刚结束交火的核对",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "指出自己移动或瞄准不顺的一拍，马上亲手再练",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把当时声音与可见位置接起来，验证对手经过的路线",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "继续接一段熟悉的移动与射击，体验动作和命中的即时反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "把下一段要走的路、停的位置和练习动作排成顺序，再照安排开始",
+              "signal": "practice_route_plan"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS206.BASIC",
+          "text": "没有录像。当前刚结束一段自己还记得的枪械交火，接下来仍能用这把枪继续尝试。先做什么？",
+          "scene": "当前刚结束交火的核对",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "指出自己不顺的一处动作，马上亲手再练几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把听到的声音与看见的位置接起来，验证对手如何出现",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "沿熟悉位置再接一串射击，享受声音与命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "把接下来路段、观察点和练习动作排好先后，再照安排尝试",
+              "signal": "practice_route_plan"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS206.RESPAWN",
+          "scene": "击倒后看见对手用的枪",
+          "text": "死斗或军备中你刚被打倒，击杀提示显示对手用的枪。很快会重新复活，你还记得两人露面的位置。这条信息怎么用？",
+          "source_ids": [
+            "CS2G187_HUD",
+            "CS2G187_MODES",
+            "CS2G187_DMPLAY",
+            "CS2G187_ARPLAY"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "比较局内复活后如何利用击杀提示练习。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "比对枪种和当时的距离，下一次换个位置确认那把枪在什么角度占优",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "选刚才没做顺的一拍，下次碰到相似距离先练怎么瞄到他出现的位置",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "先排好这次复活后的观察次序，检查背后的入口、上次受击方向，再决定往哪走",
+              "signal": "systems_builder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS207",
+      "number": 7,
+      "variants": [
+        {
+          "id": "CS207.V1",
+          "text": "当前在可自由练习的拆弹地图，手边有常用枪与已会用的烟闪，真人同伴也同意进行有成绩目标的练习。现在先做什么？",
+          "scene": "常用枪与投掷物的练习",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一个点射或急停时机，亲手反复做几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "沿熟悉位置打一段，体验开枪、动作和命中的即时反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "把枪械与烟闪安排成能互相创造机会的一组配合并实际试用",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "以事先约好的练习成绩或回合胜负为目标，投入眼前这次对抗",
+              "signal": "rank_worker"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "当前场景内选择可立即执行的动作。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS207.CORE",
+          "text": "当前正在死斗或军备竞赛，手中只有本次允许的枪，眼前一段熟悉路口可继续交火。先做什么？",
+          "scene": "当前可用枪械的操作",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一个点射或停枪细节，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手接一串射击，体验声音、动作与命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "换位置核对视线、距离和遮挡，验证这把枪的一条使用条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "给自己定这小段只许蹲姿开火、站立时禁射的规则，用手中可用枪实际试这种限制",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS207.BASIC",
+          "text": "不要求已有常用武器。当前手中只有本次可用的枪，眼前有熟悉通道与可攻击目标。先做什么？",
+          "scene": "当前可用枪械的操作",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一个移动或出手细节，亲手多次练它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "亲手接一串开枪和命中，享受动作与声音反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "换位置核对距离与遮挡，验证这把枪的一条射击条件",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "规定这段只准蹲姿开火、站立时不能射击，用本次可用枪试自己加的新限制",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS207.RESPAWN",
+          "scene": "FAMAS 用三发点射或全自动",
+          "text": "死斗或军备里你当前持有 FAMAS，子弹足够，掩体外是中距离交火。界面上的三发点射和全自动都可切换。你用哪一种接下一次？",
+          "source_ids": [
+            "CS2G187_BURST",
+            "CS2G187_DMPLAY",
+            "CS2G187_MODES"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "比较具体开火模式、节奏练习与反馈。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "留在全自动，用一次短连射体会自己控准星时枪声和弹着的连贯反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "开三发点射，练一组打完后怎样留准下一次出枪的空当",
+              "signal": "practice_seeker"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS208",
+      "number": 8,
+      "variants": [
+        {
+          "id": "CS208.V1",
+          "text": "当前原定对局已结束，自己仍有精力；可以留在熟悉的自由练习地图，真人同伴也在线。眼前先做什么？",
+          "scene": "对局后当前自由时间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留一个明确动作目标，亲手再练几次急停或预瞄",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "改走一条当前可达但自己较少用的进点路线，实际试这次接近方式",
+              "signal": "route_choice"
+            },
+            {
+              "id": "C",
+              "label": "用手边枪打一段交火，享受熟悉的声音和命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "与真人同伴聊刚结束的回合和彼此趣事，把共同经历接着聊下去",
+              "signal": "social_spark"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "当前场景内选择可立即执行的动作。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS208.CORE",
+          "text": "当前正在熟悉的死斗或军备竞赛地图，手持本次允许的枪，身旁还有从未进去看过的可达支路。先做什么？",
+          "scene": "当前枪械与可达支路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "固定一个急停或预瞄细节，亲手多试几次",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "从当前可达的另一侧接近交火，实际试一次较少用的进入方向",
+              "signal": "route_choice"
+            },
+            {
+              "id": "C",
+              "label": "继续用手头枪打一段，享受熟悉的声音与命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "进入那条自己还没看过的支路，发现地图里的新角落",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS208.BASIC",
+          "text": "没有同伴，也不要求自由换枪。当前在熟悉地图持有可用枪，旁边有一处未去过的可达小角落。先做什么？",
+          "scene": "当前枪械与可达支路",
+          "question_type": "situational_action",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一个急停、预瞄或出手时机，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "改从眼前转角另一条可达路线经过，实际试一次较少用的进入方向",
+              "signal": "route_choice"
+            },
+            {
+              "id": "C",
+              "label": "沿熟悉路段接一串射击，享受声音与命中反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "走进那个从没看过的可达角落，发现地图里新的位置",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS208.RESPAWN",
+          "scene": "A 大门或泳池侧通道",
+          "text": "如果你正在玩 Dust II 死斗，可从 A 大附近走向 A 大门外侧；如果正在玩 Pool Day 军备，可沿泳池边走进侧通道。眼前这处通道之外也有正在交火的开阔面。你先？",
+          "source_ids": [
+            "CS2G187_DUST",
+            "CS2G187_DMPLAY",
+            "CS2G187_POOL",
+            "CS2G187_MODES"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "比较对地图新节点和熟悉交火的兴趣。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "沿开放的侧通道多走一段，想看看它从自己没见过的一头出来是什么地方",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先留在有交火的开阔面，亲手打一波，享受熟悉的枪与命中反馈",
+              "signal": "feedback_engine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS209",
+      "number": 9,
+      "variants": [
+        {
+          "id": "CS209.V1",
+          "text": "回想一次确实整理过已有武器外观的经历；当时有可用外观和尚未使用的贴纸，不涉及新增购买。哪件真正做过的事最有分量？",
+          "scene": "实际整理过的已有外观",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己挑选贴纸位置与朝向后贴上，搭出一把想表达的主题武器",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "用当时外观截图与真人熟人聊共同打过的回合，延续那段关系",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "对照自己的外观记录清单，补记已有但尚未记录的物品与截图",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，主动拿熟悉外观回到常走的练习路段，享受熟悉环境带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "只比较实际完成的过去行为，不把重开意愿或未来计划当回顾。 已有物品或经历的补记只保留行为描述，不计收藏画像分。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS209.CORE",
+          "text": "只用默认武器外观。回想一段自己确实玩过的CS2枪械内容，不要求整理过记录，哪件已经做过的事最有分量？",
+          "scene": "真实默认外观与地图经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己选地图、持枪角度和普通镜头位置，拍出一张有主题的截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "拿一段截图或文字与真人同好聊亲历的状况，接起共同话题",
+              "signal": "social_spark"
+            },
+            {
+              "id": "C",
+              "label": "对照自己的枪械与地点记录清单，补拍已经体验但未留记录的内容",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "当时仍有精力，主动重走熟悉的练习路段，享受环境与操作惯例带来的安定",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS209.SOLO",
+          "text": "只回想自己确实单人用默认武器玩过的一段熟悉地图，不要求留下记录或与人交流。哪件已经做过的事最有分量？",
+          "scene": "真实默认外观与地图经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己选普通视角、持枪角度与场景，拍出一张有主题的截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "进入当时从未去过的可达角落，发现并记录新的地点",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "对照自己的枪械和地点记录清单，补拍已经体验但尚未留图的内容",
+              "signal": "game_recording"
+            },
+            {
+              "id": "D",
+              "label": "用当时可用的枪亲手接出一串射击，享受熟悉声音与命中的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS209.RESPAWN",
+          "scene": "墙边照明下检视已有武器",
+          "text": "回想你打死斗或军备时在暂时安全的墙边检视了一次手里的枪，看见翻转时两侧纹理和边缘受光的变化。哪件你真正做过的事最值得记？",
+          "source_ids": [
+            "CS2G187_INSP",
+            "CS2G187_BASE",
+            "CS2G187_ARPLAY",
+            "CS2G187_DMPLAY"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "在默认或已有外观下回顾审美布置或枪械档案。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手按出检视又收回，享受这把枪转过去再回到手里的动作反馈",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "把这把枪翻转时新看清的细节记进我以前的武器记录，补上一条遗漏",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "特意站到我选的墙边光线里，等翻枪动画到中间，看出自己想要的颜色和轮廓",
+              "signal": "style_director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS210",
+      "number": 10,
+      "variants": [
+        {
+          "id": "CS210.V1",
+          "text": "回想一次确实与真人熟人打完有起伏的拆弹比赛，哪件当时真正发生过的事最有吸引力？",
+          "scene": "真实熟人比赛的回顾",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比赛后仍一起聊回合之外的趣事，把这次同玩变成共同记忆",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "共同说清目标、确认各自分工，并在比赛里把约好的步骤实际接上",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "按事先约定的比赛或比分目标投入较量，用实际结果检验准备",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "亲手接出几段熟悉的射击与停枪，过程中的反馈本身就很畅快",
+              "signal": "feedback_engine"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "只比较实际完成的过去行为，不把重开意愿或未来计划当回顾。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS210.CORE",
+          "text": "回想一段自己确实单人进入过的死斗或军备竞赛时间，不要求固定队伍。哪件当时真正做过的事最有分量？",
+          "scene": "真实单人枪械经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给自己定过一小段只准蹲姿开火、站立时禁射的规则，并亲自试出了限制后的变化",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把当时要走的路段、观察点和动作排清先后，并按这套练习安排实际完成",
+              "signal": "practice_route_plan"
+            },
+            {
+              "id": "C",
+              "label": "围绕事先设定的本场计分或名次目标投入对抗，用结果检验准备",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "D",
+              "label": "亲手接出熟悉的移动与射击，享受声音和命中的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS210.BASIC",
+          "text": "不要求固定队伍或排名。回想自己确实参加过的一段枪械内容，哪件当时真正做过的事最有分量？",
+          "scene": "真实单人枪械经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "规定过一小段只能在自己圈定的两处可达位置开火，并实际试过限制怎样改变这段交火",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把路段、观察点与练习动作先排成步骤，再按这套练习安排实际完成",
+              "signal": "practice_route_plan"
+            },
+            {
+              "id": "C",
+              "label": "换位置核对声音、距离与遮挡，验证了一条空间关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "亲手接出熟悉移动与射击，享受动作和命中的反馈",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS210.RESPAWN",
+          "scene": "完成一次限时奖励枪或跨过枪阶",
+          "text": "回想在死斗用界面指定的奖励枪打出过一次加分击杀，或在军备用当前枪推进过一档。对亲身玩过的那一次，什么最有分量？",
+          "source_ids": [
+            "CS2G187_MODES",
+            "CS2G187_AR",
+            "CS2G187_POINT"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾武器从临时尝试到推进本场成绩。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "我特意赶在加分机会结束前或对手继续升级前出手，结果拉近了自己想追的位置",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "我主动试了那把平时少用的枪，听到枪声再看到击杀出现，那下很过瘾",
+              "signal": "feedback_engine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS211",
+      "number": 11,
+      "variants": [
+        {
+          "id": "CS211.V1",
+          "text": "回想一场自己确实没有赢下的拆弹对局，哪件已经做过的事仍最值得记住？",
+          "scene": "未赢对局中的已做行为",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门练的一类预瞄或急停，在那场亲手处理好了",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "与真人队友先约共同目标和分工，再把一套说好的配合真正打出来",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "几次移动、开枪与命中反馈连起来，自己玩得很畅快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "给自己定过一小段每次开火后必须换到另一处可达遮挡、不能留原位连打的规则，并在当时实际试过",
+              "signal": "play_inventor"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "只比较实际完成的过去行为，不把重开意愿或未来计划当回顾。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS211.CORE",
+          "text": "回想死斗或军备竞赛里一段确实未达预期的交火，哪件已经做过的事仍值得记住？",
+          "scene": "真实未达预期的交火",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "专门反复练的一处动作，在那次亲手做顺了",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把听到的声音与看见的位置接起来，验证了一条空间线索",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "几次移动与射击反馈连起来，过程本身很畅快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "给自己定过这小段只准蹲姿开火、站立时禁射的规则，并用当时枪械真正试过",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS211.BASIC",
+          "text": "不要求完整比赛。回想一段自己确实未达预期的枪械交火，哪件已经做过的事仍值得记住？",
+          "scene": "真实未达预期的交火",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "针对一处不顺的动作亲手多次尝试，逐步掌握了它",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把当时声音与位置线索接起来，验证一条空间关系",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "几次移动、开枪与命中反馈连起来，过程本身很畅快",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "给自己定过只能在选定两处可达位置开火的短段规则，并在当时亲自实行",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS211.RESPAWN",
+          "scene": "换完弹没赶上刚才的对手",
+          "text": "回想打死斗或军备时有次先换匣，举枪恢复时没赶上正在交火的对手，你随后又复活继续打。哪件当时真的做过的事更值得记？",
+          "source_ids": [
+            "CS2G187_RELOAD",
+            "CS2G187_QUIET",
+            "CS2G187_MODES"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾一次未达预期后的具体改动。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "我给后面几次交火加了要带着原匣余弹离开原处、到下一块掩体才换的规则，亲手试出节奏变化",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "我在后面试过不同的遮挡，弄清在哪边换才能不让上一处的视线直接看到自己",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "我后来练过专门等脚步过去再换，并在后面一轮亲手做成了",
+              "signal": "practice_seeker"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CS212",
+      "number": 12,
+      "variants": [
+        {
+          "id": "CS212.V1",
+          "text": "回看已经玩过的一段拆弹时间，哪项自己实际完成的投入最接近当时重点？",
+          "scene": "已完成的拆弹投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_SMOKE_V5",
+            "CS2_DM_V5"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕明确的比赛、比分或个人成绩目标参赛，用实际结果检验准备",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "与真人熟人队约定共同目标，分清报点、烟闪与跟进并多次执行",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "每次选一处急停、预瞄或射击节奏，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "实际用枪械与投掷物组成不同配合，记录它们如何相互创造机会",
+              "signal": "build_alchemist"
+            }
+          ],
+          "modes": [
+            "defusal"
+          ],
+          "design_purpose": "只比较实际完成的过去行为，不把重开意愿或未来计划当回顾。",
+          "interpretation_boundary": "不以技术正确性、战绩或饰品价值判断能力；协作只指真人明确约定共同目标，单枪与地形关系不算构筑。"
+        },
+        {
+          "id": "CS212.CORE",
+          "text": "回看自己已经玩过的一段死斗或军备竞赛时间，哪项实际完成的投入最接近当时重点？",
+          "scene": "已经完成的枪械投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "围绕事先明确的本场计分或名次目标参赛，用实际结果检验准备",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "把地图路段、观察点与练习动作排清先后，并按这套练习安排实际完成",
+              "signal": "practice_route_plan"
+            },
+            {
+              "id": "C",
+              "label": "针对急停、预瞄或射击节奏的一处细节，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "对照站位、声音与遮挡，实际验证几处位置如何互相看见",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "手写死斗/军备竞赛共同初始路径，只用本次允许的枪，不要求拆弹经济或任意换枪。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS212.BASIC",
+          "text": "不要求排名、真人对手或固定队。回看自己确实玩过的枪械内容，哪项已经完成的投入最接近当时重点？",
+          "scene": "已经完成的枪械投入",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "CS2_CORE",
+            "CS2_RULES",
+            "CS2_ARMS_V5",
+            "CS2_ARMS_MIRROR_V5",
+            "CS2_DM_V5"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自定过一小段只准蹲姿开火、站立时禁射的规则，并真正按这项限制试过",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把地图路段、观察点与动作先排成步骤，并按这套练习安排实际实行",
+              "signal": "practice_route_plan"
+            },
+            {
+              "id": "C",
+              "label": "针对急停、预瞄或射击节奏的一处细节，亲手多次练习",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "换站位核对声音、距离与遮挡，验证几处位置如何相互看见",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "手写基础独立替代，不要求比赛、真人、换枪、投掷物或已有饰品；9—12只回顾亲自做过的行为。",
+          "interpretation_boundary": "只依据这次实际选择；不由未体验或替换次数推断动机。"
+        },
+        {
+          "id": "CS212.RESPAWN",
+          "scene": "赛后看到死斗分数或军备卡关时的下一场投入",
+          "text": "回想几场确实玩过的死斗或军备。你曾看到死斗记分板列出的分数和伤害，或注意到军备有某一档枪总让自己卡很久。之后哪项实际投入最接近你的重点？",
+          "source_ids": [
+            "CS2G187_HUD",
+            "CS2G187_MODES",
+            "CS2G187_POINT",
+            "CS2G187_AR"
+          ],
+          "modes": [
+            "gunplay"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾连续投入，按可见指标的目标、练习和自定规则。",
+          "interpretation_boundary": "仅限 PC 死斗或军备竞赛，按题面本局已观察到的条件作答。",
+          "options": [
+            {
+              "id": "A",
+              "label": "我下一场给自己定了要追过的死斗名次，或军备要超过的对手等级，实际投入去追",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "我在后面的对局里继续专门练较弱的那种开火方式，想做到连续几次都稳",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "我为下一段自定同一条路线只许用单发或点射的限制，有当前允许的枪时确实按这个办法试过",
+              "signal": "play_inventor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+2ce75a8ba989"
+}

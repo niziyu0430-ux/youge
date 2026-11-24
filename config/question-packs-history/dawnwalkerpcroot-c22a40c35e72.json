@@ -1,0 +1,1003 @@
+{
+  "id": "dawnwalkerpcroot",
+  "title": "The Blood of Dawnwalker 黎明行者之血",
+  "game_ids": [
+    "steam-3751260"
+  ],
+  "scope": "Rebel Wolves《黎明行者之血》Windows Steam 3751260 公开 build 26580083。单人标准版当前 1.2，含早前 1.1 免费功能。通关尾声后才有 NG+；题面包括科恩、游戏内时间、日夜、探索、手记、普通装备与辅助设置，日蚀版数字资料无需拥有。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "黎明行者之血 Windows 本体",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DAWNWALKERPCROOT01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "时钟标记和路边风景",
+          "text": "科恩的手记已经有一项带时间标记的进展。你从所在的山谷小路还能沿无提示的岔路走一段。要在今晚先做一件，你选哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_TIME",
+            "DAWNWALKERPCROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把手记里的那条推进，愿意让科恩用掉标出的时段。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先顺岔路看那段地形，想记下平时赶路会错过什么。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「时钟标记和路边风景」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT01.V1"
+        },
+        {
+          "scene": "先追家人的线还是新认识的人",
+          "text": "家人的时间已经写在游戏日程里，一位你见过的本地人物也有可继续的线索，并且两项都显示会耗时。现在决定下一步，你先接哪条？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_STORE",
+            "DAWNWALKERPCROOT_TIME",
+            "DAWNWALKERPCROOT_HAND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先追家人这边的线索，想接上科恩目前最在意的故事。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先回应已认识的本地人物，愿意把剩余时间留一点给这段关系。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「先追家人的线还是新认识的人」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT01.ALT1"
+        },
+        {
+          "scene": "剩下一个时段先对照自己那份日程",
+          "text": "你这轮科恩的当前阶段只剩一次自己愿意投入的时段。手记有一件已经做过前半的事，也有一项才出现的城内消息，两项时间提示都看过。你去哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_TIME",
+            "DAWNWALKERPCROOT_HAND",
+            "DAWNWALKERPCROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走新线索看看本档还能遇到什么，接受那件旧事等到下次。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先收尾做到一半的那件，想让此前几个时段有一个完整结果。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「剩下一个时段先对照自己那份日程」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "重回已见过的屋顶或白天街道",
+          "text": "你用过科恩夜间在斯瓦特劳走屋顶的能力，也记得白天同一片街市的布置。这个档将迎来下个可自由行动的时段，你先选什么时候重访？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_VALLEY",
+            "DAWNWALKERPCROOT_TIME"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "夜里重回已走过的屋顶，想从街面看不到的高度认这片城区。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "白天回同一带，从居民的对白接着认识城里的人。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「重回已见过的屋顶或白天街道」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT02.V1"
+        },
+        {
+          "scene": "同一处白夜的两张画面",
+          "text": "你确实在白天与夜晚都到过斯瓦特劳同一街区，回放印象时只想留一个能认出此地的视角。你留哪一种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_VALLEY",
+            "DAWNWALKERPCROOT_SCENE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留白天有人来往的街角，记这里平常住着什么样的人。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "留第一眼看到月光落在瓦片上的视角，记这个城市夜里的色调。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「同一处白夜的两张画面」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT02.ALT1"
+        },
+        {
+          "scene": "斯瓦特劳走进去还是登高看",
+          "text": "第一次走到你已经能自由逛的斯瓦特劳街区，白天街面有人活动，视线里也能看到屋顶轮廓。只先认识一处，你看什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_VALLEY",
+            "DAWNWALKERPCROOT_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先留在街面看几个在场人物，想先记住街坊的生活。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先看屋顶和石墙的层次，想分辨城市给自己的第一眼印象。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「斯瓦特劳走进去还是登高看」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "找能看见废墟的旧路",
+          "text": "你已经能在相关神龛间移动，也亲自经过过附近废墟。下次想体验这一带却没有固定任务，你会从哪头开始？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_VALLEY",
+            "DAWNWALKERPCROOT_SHRINE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看游戏神龛地图，想把已经开放的几个锚点和废墟位置认牢。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "回到亲自走过的废墟外，顺着山坡慢慢找自己漏看的方向。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「找能看见废墟的旧路」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT03.V1"
+        },
+        {
+          "scene": "回神龛还是沿谷底过去",
+          "text": "你已解锁出发地与目的地的神龛。两点间那条山谷路你还没看仔细，赶往目的地时先选哪种走法？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_SHRINE",
+            "DAWNWALKERPCROOT_VALLEY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "从神龛直接过去，想先用自己已经认熟的移动入口。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "走山谷路过去，给自己留机会再看一遍沿途风景。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「回神龛还是沿谷底过去」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT03.ALT1"
+        },
+        {
+          "scene": "出发要不要换掉已经熟悉的路线",
+          "text": "这次从已经激活的两处神龛之间移动，地图认可那处常用目的地，也可以沿已亲自走过的路去。只回去找一个在场人物，你会怎么走？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_SHRINE",
+            "DAWNWALKERPCROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按记得的那条路走回去，想顺路经过已经熟悉的几处景物。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "用神龛先到目的地，想把和那个人的下一次交谈接上。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「出发要不要换掉已经熟悉的路线」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "先看人物条目还是先接话",
+          "text": "科恩已经记下一位在附近遇见的人，对方也在当前时段愿意继续交谈。你只有几分钟游戏时间，先做哪件事？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PEOPLE",
+            "DAWNWALKERPCROOT_CODEX",
+            "DAWNWALKERPCROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先翻已经解开的那个人物条目，想带着来龙去脉接话。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先去和对方聊，想看看上次来往有没有让话题变得不同。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「先看人物条目还是先接话」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT04.V1"
+        },
+        {
+          "scene": "安卡的条目和当时的话",
+          "text": "你在序章与 Anca 谈过话，随后也打开过她的人物条目。想把她在科恩身边的经历接回来，你会先从哪里看？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PEOPLE",
+            "DAWNWALKERPCROOT_CODEX",
+            "DAWNWALKERPCROOT_PROLOGUE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回想安卡当面怎么说，记住那场对白为什么让科恩愿意听下去。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先把人物条目的文字和自己记得的序章时间对起来，看先前漏掉了哪处。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「安卡的条目和当时的话」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT04.ALT1"
+        },
+        {
+          "scene": "同一处进度只有一轮来往",
+          "text": "手记记录的两位角色现在都有可做的交流，一位接着你与家人的消息，另一位接着你上次答应的帮忙。若只能先做一次，你选谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PEOPLE",
+            "DAWNWALKERPCROOT_STORE",
+            "DAWNWALKERPCROOT_JOURNAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去问与家人有关的那位，接上科恩一路在追的消息。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先去找答应过的人，让自己在这份存档中的来往有始有终。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「同一处进度只有一轮来往」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "装备预设从角色还是外观读",
+          "text": "你已经为科恩设过两套日夜预设，两套都有可以查看的已装备项目。现在要为夜间整理一套新样子，你先处理什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PATCH",
+            "DAWNWALKERPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查两套共同装着的东西，把通用部分理顺再考虑要不要换。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先调一件外观变化最大的已有物品，把夜里的轮廓做得和白天分清。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「装备预设从角色还是外观读」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT05.V1"
+        },
+        {
+          "scene": "检查卖出的东西时的取舍",
+          "text": "你亲手用过 1.1 后商人回购页。曾卖出的那件普通物品目前仍能回购，你也还想留游戏币给另一件可买物品。你会先怎么花？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回购那一件已经用过的旧物，想把属于这段故事的收藏拿回。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "把钱留给原来想换进去的新物，打算让下一套预设和旧档不一样。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「检查卖出的东西时的取舍」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT05.ALT1"
+        },
+        {
+          "scene": "白昼和夜晚的预设共用一件",
+          "text": "你已经打开新版的日夜预设，手里一件普通装备确认两个时段都能装。你希望怎么配？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PATCH",
+            "DAWNWALKERPCROOT_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只在一个时段用它，另一个时段试自己已经有的不同物品。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "两套都沿用同一件，想在时段切换后仍一眼认得自己配的科恩。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「白昼和夜晚的预设共用一件」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "沼泽一带和山地一带",
+          "text": "你亲自走过这座山谷的沼泽与山路，两处各有自己愿意再看的景色。半小时散步路线只安排一处，你更想去哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_VALLEY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回沼泽看水面和低处的光线，想认清自己最记得的色调。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "沿熟悉的山路再去高处，想从那边看山谷和之前去过的地点如何连成一片。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「沼泽一带和山地一带」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT06.V1"
+        },
+        {
+          "scene": "和绵延远景相比的一只动物",
+          "text": "在装好 1.1 以后的本体，路上你实际看到一只可以互动的动物，前面还能继续走向山坡。只有空停一次，你选哪处？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PATCH",
+            "DAWNWALKERPCROOT_VALLEY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先向山坡走一截，想从更高处看看谷地。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先停下来摸摸自己已经走近的那只动物，给科恩这一段留点闲时间。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「和绵延远景相比的一只动物」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT06.ALT1"
+        },
+        {
+          "scene": "街区熟识和废墟好奇",
+          "text": "你已经认得斯瓦特劳白天一处街角，也亲自看过近郊废墟的外观。今天不继续耗时任务，只想散步，你去哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_VALLEY",
+            "DAWNWALKERPCROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回常去的街角，愿意从自己认得的人和环境继续逛。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "走向废墟外，想把之前只从远处看过的地形接上。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「街区熟识和废墟好奇」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "字幕要一口气改到什么程度",
+          "text": "你用简中字幕读过科恩与山谷居民的一场对话。设置页能独立调字幕字号、也能把所有对话加上字幕。只先改一项，你选什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PATCH",
+            "DAWNWALKERPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先调到自己看得清的字号，想沿已熟悉的界面继续读。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先打开所有对话的字幕，想把路过听见的故事也读进去。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「字幕要一口气改到什么程度」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT07.V1"
+        },
+        {
+          "scene": "重看序章先听还是先读",
+          "text": "你已经看过序章的一段科恩与家人相关的对白，也在旧存档里试过加大简中字幕。从有效的旧档重玩对应场景时你更愿怎样听和读？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_SCENE",
+            "DAWNWALKERPCROOT_PATCH",
+            "DAWNWALKERPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把字幕调到能一眼读清的大小，先把当时错过的人物说法接起来。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "用自己习惯的显示方式，注意那一幕语气、配乐和画面怎样合起来。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「重看序章先听还是先读」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT07.ALT1"
+        },
+        {
+          "scene": "停留在同一段头一次看全",
+          "text": "回读一段已玩过的斯瓦特劳对白时，你确认 1.1 已有字号和所有对白开关。手边只能先解决一个问题，你先改哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_SCENE",
+            "DAWNWALKERPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先调整字号让画面和文字都好看，想保留这场白天街景的构图。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先把全对白字幕打开，想弄清人群与主要角色说的内容分别从哪儿来。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「停留在同一段头一次看全」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "看过重学道具再决定用法",
+          "text": "你确实已经获得可重学能力的游戏内道具。当前存档仍能保留自己的能力设置，使用它则可以重新分配。今天更偏向？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用它试另一套已了解的配置，好观察科恩日夜变化时自己喜欢哪种。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先留在包里，愿意继续用自己已经熟悉的配置走下去。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「看过重学道具再决定用法」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT08.V1"
+        },
+        {
+          "scene": "一局两种已试过的输入方式",
+          "text": "你用键鼠和手柄各打开过正式 PC 版地图，补丁后的控制器设置也能读。下次只想继续沿谷地走一会，你打算用哪种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PATCH",
+            "DAWNWALKERPCROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用手柄的已测试设置，想从不同控制体验看看日夜切换时自己更喜欢哪套。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "用已经熟悉的键鼠，想沿现成地图记忆轻松走完。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「一局两种已试过的输入方式」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT08.ALT1"
+        },
+        {
+          "scene": "新档沿用还是试不同讲法",
+          "text": "你已经跑过序章，当前新存档菜单也确实可选 1.1 增加的故事难度。短时间重开，你先如何配置？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PATCH",
+            "DAWNWALKERPCROOT_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "沿用自己已经习惯的档，想对照这次是否能更顺地回到自由探索。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "选新版故事设置，想把注意力留给科恩的对白和处境。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「新档沿用还是试不同讲法」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "把家人剧情和更广阔的谷地连起来",
+          "text": "你已经有处理过家人线索的存档，也亲自读过山谷手记的另一位人物。若留下一件要接着做的小事，你先留哪个方向？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_LIVE",
+            "DAWNWALKERPCROOT_VALLEY",
+            "DAWNWALKERPCROOT_PEOPLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留另一位人物的未完来往，希望把已经认识的人当成这趟旅程的一部分。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "留目前还待接上的家人线索，下次读档要先看它的时间。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「把家人剧情和更广阔的谷地连起来」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT09.V1"
+        },
+        {
+          "scene": "首章科恩如何继续",
+          "text": "看完开头已能行动的部分，你刚知道科恩白天是什么样，也已经看到他的家人为何成为这趟故事的牵挂。你下次会最先回顾什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_STORE",
+            "DAWNWALKERPCROOT_SCENE",
+            "DAWNWALKERPCROOT_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回看触发家人目标的情节，想讲清这趟旅程怎么开始。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "回顾白日的科恩，想确定自己这种角色在后面故事里会怎样选择。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「首章科恩如何继续」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT09.ALT1"
+        },
+        {
+          "scene": "相同人物的白昼片段与夜间片段",
+          "text": "你已经亲历过白日与夜间的科恩，也在两种状态下走过同一处地点。若挑一个来介绍这作的主角，你说哪一段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_STORE",
+            "DAWNWALKERPCROOT_VALLEY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "说夜里路线改变的那一段，想展示同一个地方如何成了另一种体验。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "说白天作为普通人和居民来往的经历，想让别人懂科恩原先是谁。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「相同人物的白昼片段与夜间片段」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "安卡问要不要再留一会",
+          "text": "序章这次和 Anca 谈完家里的事，她问科恩要不要再留一会儿读书。画面已经给出继续留下或起身离开的选择，你怎么答？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PROLOGUE",
+            "DAWNWALKERPCROOT_PEOPLE",
+            "DAWNWALKERPCROOT_JOURNAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留下和安卡一起读一点，想听这个熟人怎样带科恩读下去。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "这次先回家，把游戏的下个时段留给家里的正事。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「安卡问要不要再留一会」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT10.V1"
+        },
+        {
+          "scene": "沿山走或留在山谷入口",
+          "text": "你在正式版走过山间路线和谷底，当前都能重新到达。若只有二十分钟想回来看看，你选哪段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_VALLEY",
+            "DAWNWALKERPCROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回谷底自己认熟的交叉路，想从已经自在的方向慢慢走。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "从山路沿之前停下的地方再向前探一段。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「沿山走或留在山谷入口」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT10.ALT1"
+        },
+        {
+          "scene": "已见城市和未知地形的地图",
+          "text": "地图已标出你能直接回的城市附近神龛，也能沿自己认得的旧路去一处尚未观察完的地形。今天不为交任务，你去哪？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_VALLEY",
+            "DAWNWALKERPCROOT_SHRINE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回城市神龛，愿意把以前顺手的一小段街区再走一遍。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "沿旧路把那片地形认完，留一点走错也无妨的时间。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「已见城市和未知地形的地图」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "等待夜景还是先走白天支路",
+          "text": "你在旧档里确认一条线索要回到夜间，旁边还可以自由走一段白天山路。只想舒服玩一小会儿，你会怎么安排？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_TIME",
+            "DAWNWALKERPCROOT_VALLEY",
+            "DAWNWALKERPCROOT_HAND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按现有进度推进到夜里，想把已经等着的线索接起来。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "白天先走山路，想把不用消耗计时的自由活动留给自己。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「等待夜景还是先走白天支路」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT11.V1"
+        },
+        {
+          "scene": "把已读手记分成时间与人",
+          "text": "准备结束这一轮，任务手记能查看当前已经消耗的时段，你也记得上一项决定里跟谁有过来往。给自己留一句备忘，你写什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_PEOPLE",
+            "DAWNWALKERPCROOT_JOURNAL",
+            "DAWNWALKERPCROOT_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "写下已用掉的游戏日程，想知道下回还能用多久。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "写下那个人与科恩说过的话，想从这次决定带来的变化接着读。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「把已读手记分成时间与人」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT11.ALT1"
+        },
+        {
+          "scene": "这次的游戏内时间够做哪一件",
+          "text": "手记中两项都已有时间标记。你已知道自己不想把科恩的当前时段花两遍，先推进哪边？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_TIME",
+            "DAWNWALKERPCROOT_HAND"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先做最想知道后续的一条，愿意让其余进展等下一段日夜。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先做显示用时适合当前安排的那件，把余量留给自己本来的计划。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「这次的游戏内时间够做哪一件」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DAWNWALKERPCROOT12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "全新开始还是用终章档开二周目",
+          "text": "你已经玩完原版尾声，并在 1.2 的主菜单看到自己可用的二周目起源存档。这次想从头重看科恩的开场，你选哪种？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_NG",
+            "DAWNWALKERPCROOT_STORE",
+            "DAWNWALKERPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "开二周目，想把上一局已得到的成长在新一局继续接起来。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "开普通新局，想试开场就换一种自己以前没用过的日程安排。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「全新开始还是用终章档开二周目」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验两处地点或新版设置后，可从个人存档处境选择。",
+          "id": "DAWNWALKERPCROOT12.V1"
+        },
+        {
+          "scene": "最后回一个熟悉场景",
+          "text": "已经从序章走进山谷，在现在的存档中你既能回到白日走过的道路，也有一次夜间重访街区的机会。下次先回哪里？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_LIVE",
+            "DAWNWALKERPCROOT_VALLEY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回到夜间街区，想观察同一地点到另一个时段自己会先注意什么。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "走白天那条已记住的路，想从最熟悉的科恩状态接着玩。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「最后回一个熟悉场景」中的实际行动与取舍。",
+          "interpretation_boundary": "已体验开放探索、日夜变化或相关的普通本体入口。",
+          "id": "DAWNWALKERPCROOT12.ALT1"
+        },
+        {
+          "scene": "给科恩的一局留一个私人纪念",
+          "text": "这档里你已经整理过科恩的日夜预设，也在图鉴读过一位自己想记住的人物条目。离开前只看一个地方，你翻哪边？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DAWNWALKERPCROOT_CODEX",
+            "DAWNWALKERPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看日夜设好后的差别，想留下这一局的角色样子。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "看那人的图鉴条目，想留住科恩在故事里怎样记下对方。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「给科恩的一局留一个私人纪念」中的实际行动与取舍。",
+          "interpretation_boundary": "亲自触发题述的斯瓦特劳、日夜和相应任务进度。",
+          "id": "DAWNWALKERPCROOT12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+c22a40c35e72"
+}

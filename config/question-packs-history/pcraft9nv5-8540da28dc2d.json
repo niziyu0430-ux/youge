@@ -1,0 +1,3036 @@
+{
+  "id": "pcraft9nv5",
+  "title": "星球工匠：材料规则与免费建造",
+  "game_ids": [
+    "steam-1284190"
+  ],
+  "scope": "Steam PC 1284190 正式本体，2026-11-15 公开 Build 26411416；涵盖材料会消耗或已启用 Freebuild 的单人和同星球合作存档。",
+  "author_review": "对照已有逐槽阅读记录和公开分支补充审查。",
+  "player_trial": "not_performed",
+  "status": "private_candidate_pending_independent_release_review",
+  "editorial_notes": [
+    "本体公开 Build 26411416 自 11 月 4 日部署，近一份有公开版本号的正式玩法公告为 2.103。",
+    "按存档实际是否消耗制作和建筑材料选择题路。Freebuild、All Unlocked、生命值消耗和用电消耗按各自设置判断。",
+    "星球旅行以完整改造起始星球、实际可选目的地和实际可用旅行火箭为条件。抵达后返程需以当地平台另造火箭，缺平台时先建。合作玩家保持同一颗星球。",
+    "所有题槽均有单人情境，第 12 槽的合作回顾是第二替代，第一替代适用于刚建好房屋的单人玩家。",
+    "每条题路独立提供八道行动题、四道回顾题及各两道替代。未做 PC 实机或正常问卷入口验收。"
+  ],
+  "modes": [
+    {
+      "id": "resource_rules",
+      "label": "材料会消耗",
+      "initial_variants": {
+        "PCRAFT9NV501": "PCRAFT9NV501.RESOURCE_RULES.V1",
+        "PCRAFT9NV502": "PCRAFT9NV502.RESOURCE_RULES.V1",
+        "PCRAFT9NV503": "PCRAFT9NV503.RESOURCE_RULES.V1",
+        "PCRAFT9NV504": "PCRAFT9NV504.RESOURCE_RULES.V1",
+        "PCRAFT9NV505": "PCRAFT9NV505.RESOURCE_RULES.V1",
+        "PCRAFT9NV506": "PCRAFT9NV506.RESOURCE_RULES.V1",
+        "PCRAFT9NV507": "PCRAFT9NV507.RESOURCE_RULES.V1",
+        "PCRAFT9NV508": "PCRAFT9NV508.RESOURCE_RULES.V1",
+        "PCRAFT9NV509": "PCRAFT9NV509.RESOURCE_RULES.V1",
+        "PCRAFT9NV510": "PCRAFT9NV510.RESOURCE_RULES.V1",
+        "PCRAFT9NV511": "PCRAFT9NV511.RESOURCE_RULES.V1",
+        "PCRAFT9NV512": "PCRAFT9NV512.RESOURCE_RULES.V1"
+      }
+    },
+    {
+      "id": "free_build",
+      "label": "免费建造（Freebuild）",
+      "initial_variants": {
+        "PCRAFT9NV501": "PCRAFT9NV501.FREE_BUILD.V1",
+        "PCRAFT9NV502": "PCRAFT9NV502.FREE_BUILD.V1",
+        "PCRAFT9NV503": "PCRAFT9NV503.FREE_BUILD.V1",
+        "PCRAFT9NV504": "PCRAFT9NV504.FREE_BUILD.V1",
+        "PCRAFT9NV505": "PCRAFT9NV505.FREE_BUILD.V1",
+        "PCRAFT9NV506": "PCRAFT9NV506.FREE_BUILD.V1",
+        "PCRAFT9NV507": "PCRAFT9NV507.FREE_BUILD.V1",
+        "PCRAFT9NV508": "PCRAFT9NV508.FREE_BUILD.V1",
+        "PCRAFT9NV509": "PCRAFT9NV509.FREE_BUILD.V1",
+        "PCRAFT9NV510": "PCRAFT9NV510.FREE_BUILD.V1",
+        "PCRAFT9NV511": "PCRAFT9NV511.FREE_BUILD.V1",
+        "PCRAFT9NV512": "PCRAFT9NV512.FREE_BUILD.V1"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "PCRAFT9NV501",
+      "number": 1,
+      "variants": [
+        {
+          "text": "你在材料会消耗的存档，已有灯、解构芯片和足够补给，来到一处当前能进的残骸；没走过的舱段、已看见但未读的数据板和待运回基地的物资都在，自己还惦记缺一种作物种子。先把这趟用在哪件事？",
+          "scene": "残骸里这一趟带回什么",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_early",
+            "pcraft9n_deconstruct",
+            "pcraft9n_logs",
+            "pcraft9n_food"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为补个人种子集那种真正未得的作物种子，实际搜可开的储物处，允许这趟没找到",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先沿没走过的舱段深入，想发现里面是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "细读眼前真实数据板，想了解写下它的人经历了什么",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把运料回基地选作这轮目标，实际装运当前已拿到的物资",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "未得种子集缺项的实际追求才c；功能材料搬运或第一次装备只是当前目标。残骸无固定战斗敌人，数据板不当真人联机。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV501.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "你还没进过残骸，已能建基本居住舱、门、钻机和Vegetube，手上有一份可用花种；当前有可建舱的崖旁空地，补给足，材料只够先投入一个方向，附近一片地形还没看。你先做什么？",
+          "scene": "残骸里这一趟带回什么的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_early",
+            "pcraft9n_deconstruct",
+            "pcraft9n_logs",
+            "pcraft9n_food"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想住的临崖小屋主题实际放舱与门，优先做出想要的空间",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把提升本星球氧气选作这轮目标，实际建当前Vegetube并装已有花种",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先去看看还没走近的可达地形，未知景象更吸引我",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先亲手采一段眼前矿石，主要想重温光束、破碎声与拾取紧跟输入的手感",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "未得种子集缺项的实际追求才c；功能材料搬运或第一次装备只是当前目标。残骸无固定战斗敌人，数据板不当真人联机。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV501.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "你只玩到初舱起步：当前制作设备与配方可用，现料能先完成背包、氧气补给、或建造芯片连同第一间舱与门中的一项目标；附近可达蓝箱还没查看，身体余量允许任选。你先做哪件？",
+          "scene": "残骸里这一趟带回什么的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_early",
+            "pcraft9n_deconstruct",
+            "pcraft9n_logs",
+            "pcraft9n_food"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把扩大这趟携带量选作目标，实际制作并装备当前背包",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "把第一间自己的小屋选作目标，实际做建造芯片并带现料去放可建房件",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "按现有材料与配方排清氧气胶囊制作及产物收整，再亲自照顺序做",
+              "signal": "crafting_action_sequence"
+            },
+            {
+              "id": "D",
+              "label": "先走近没查看过的蓝箱，想发现这次装了什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "未得种子集缺项的实际追求才c；功能材料搬运或第一次装备只是当前目标。残骸无固定战斗敌人，数据板不当真人联机。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV501.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "你当前启用了Freebuild，已有可用房件、窗和灯，眼前能建一片观景基地；也有没去过的可达高台、已收到的真实人物信息和能继续启用的改造设备。你先投入哪里？",
+          "scene": "免费建造里的第一片基地",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_rules",
+            "pcraft9n_early",
+            "pcraft9n_two",
+            "pcraft9n_logs"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己荒野观测站的主题，实际把已有房件、窗和灯安排成想要的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先去看看没走近的可达高台，未知景象本身更吸引我",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "细读当前真实收到的人物信息，想了解这颗星球的处境",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把推进这一批当前改造参数选作目标，实际放并启用已开放且条件满足的设备",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "免费建材不等于全蓝图/全藏品、免费供电或原生飞行；表达必须亲自布局/取景，欣赏画面不自动a。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV501.FREE_BUILD.V1"
+        },
+        {
+          "text": "你刚用免费建造开始，只开放基本居住舱、门和钻机，当前电力足，身边一条岩坡没看过；房件可在允许点位搭建，已有空房件可拆回再建。你先用这段时间做什么？",
+          "scene": "免费建造里的第一片基地的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_rules",
+            "pcraft9n_early",
+            "pcraft9n_two",
+            "pcraft9n_logs"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己双舱山脚小屋的主题实际选摆位、接房间并放门",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把这一排气压设备选作当前目标，实际放可用钻机并让它运行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先走到没看过的可达岩坡，想发现那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先把一件当前可拆空房件拆回，再在另一处允许位置重建，亲手查看这次编辑结果",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "免费建材不等于全蓝图/全藏品、免费供电或原生飞行；表达必须亲自布局/取景，欣赏画面不自动a。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV501.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "你只在免费建造的初舱开始，建造芯片、基本房件、风力发电与屏幕当前可用，也有初舱真实文字和未查看的附近地形。你先做哪件？",
+          "scene": "免费建造里的第一片基地的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_rules",
+            "pcraft9n_early",
+            "pcraft9n_two",
+            "pcraft9n_logs"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续读初舱真实文字，想了解流放改造的叙述",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自己“从舱门看荒野”的主题实际安排可用房间与站位，做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把第一处可用能源设施选作这轮目标，实际放下当前能用的发电设备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先走近没查看的可达地形，想发现初舱外是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "免费建材不等于全蓝图/全藏品、免费供电或原生飞行；表达必须亲自布局/取景，欣赏画面不自动a。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV501.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV502",
+      "number": 2,
+      "variants": [
+        {
+          "text": "你本次供电要求启用，几台设备忽然没按预期继续工作，原因还不明；已有发电设备、可拆空置设备和能源屏幕，材料也足以加一台当前发电机。旁边没看过的洞口与温室扩建同样可去。你先做什么？",
+          "scene": "不明停机与仍可推进的事",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_rules",
+            "pcraft9n_early",
+            "pcraft9n_food",
+            "pcraft9n_deconstruct"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对屏幕已经显示的供能、耗能和设备状态，再决定改哪处",
+              "signal": "device_status_review"
+            },
+            {
+              "id": "B",
+              "label": "先把扩建温室选作目标，实际投入现料去搭当前可建房件",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先去看尚未走近的可达洞口，想发现里面的地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先提出本星球供电余量不足的解释，其它设备保持不变，只加这一台发电机，再实测原设备是否恢复",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "p不先告知停机答案，自己的供电解释必须单项试验且可被否定；本作不虚构接电缆。无故障替代保真实目标而非硬推理。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV502.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "你还没有停机经历，当前风力发电和钻机都可建，现有供电足以运行其中一台新用电设备，旁边也能放基本舱；材料和一小段时间只够先做一个方向。你先投入哪里？",
+          "scene": "不明停机与仍可推进的事的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_rules",
+            "pcraft9n_early",
+            "pcraft9n_food",
+            "pcraft9n_deconstruct"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把预留下一批供电选作这轮目标，实际添当前发电设备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按自己的“矿场外侧一圈风车”主题选择摆位并实际建出一段",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先去看看钻机外还没走近的坡后，不以确定奖励为前提",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把继续推进气压选作这轮目标，实际添当前可建钻机",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "p不先告知停机答案，自己的供电解释必须单项试验且可被否定；本作不虚构接电缆。无故障替代保真实目标而非硬推理。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV502.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "你只刚做出第一个能源屏幕，设备目前都能运行，尚无故障；手头材料可用来添灯、扩一间舱或留给下一台钻机，附近矿石也可亲手采。你先做哪件？",
+          "scene": "不明停机与仍可推进的事的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_rules",
+            "pcraft9n_early",
+            "pcraft9n_food",
+            "pcraft9n_deconstruct"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把多一间可用房间选作这轮目标，实际建当前舱与门",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先亲手采这批眼前矿石，想体验瞄准、光束和破碎声连着操作的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前已开放的供电与用电建设方案，再决定这轮材料怎样花",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "按自己想要的夜间门廊效果实际布一盏当前可用灯",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "p不先告知停机答案，自己的供电解释必须单项试验且可被否定；本作不虚构接电缆。无故障替代保真实目标而非硬推理。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV502.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "你的存档开启了免费建造，设备仍会耗电。种植机和几台设备同时停下来，原因还没确定。能源屏幕可用，你也能加一台发电机而让原设备和种子保持原样。附近还有未探的洞口和可以布置的屋顶。你先做什么？",
+          "scene": "免费建造仍遇到的设备停顿",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_rules",
+            "pcraft9n_early",
+            "pcraft9n_food",
+            "pcraft9n_deconstruct"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对能源屏幕已经显示的供能、耗能和设备状态，再决定改哪处",
+              "signal": "device_status_review"
+            },
+            {
+              "id": "B",
+              "label": "按自己的屋顶观察台主题实际安排当前可建房件与灯",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先去看没走近的可达洞口，想发现里面是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先提出供电余量不足的解释，只加这一台发电机、其余保持，再实测原设备是否恢复",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "未先告知停机原因才可p，免费规则不取消已启用的能源要求；单项添机器、种植等待不y/f。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV502.FREE_BUILD.V1"
+        },
+        {
+          "text": "你还没有停机经历，在免费建造里已有一台可工作的FoodGrower和实际取得的食用种子，另有花种可放Vegetube；可扩的居住舱、未看过的可达残骸都在，电力满足任选一项。你先投入哪里？",
+          "scene": "免费建造仍遇到的设备停顿的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_rules",
+            "pcraft9n_early",
+            "pcraft9n_food",
+            "pcraft9n_deconstruct"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把推进氧气选作当前目标，实际添当前Vegetube并装已得花种",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按自己的小温室主题实际安排当前房件和种植机的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "先进入没看过的可达残骸部分，未知内容本身更吸引我",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把这一批可收获食物选作自选目标，实际种好已得食用种子并收起成熟产物",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "未先告知停机原因才可p，免费规则不取消已启用的能源要求；单项添机器、种植等待不y/f。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV502.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "你的免费建造存档刚开放基础风力发电机、钻机和房件。按存档目前的耗电设置，再添一台钻机也可以运行。附近谷口没走过，时间只够先做一件。你先做什么？",
+          "scene": "免费建造仍遇到的设备停顿的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_rules",
+            "pcraft9n_early",
+            "pcraft9n_food",
+            "pcraft9n_deconstruct"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的风车外缘主题，实际选摆位并建出这段已有蓝图的发电设备",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先走近没看过的可达谷口，想发现那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前已可选的能源、钻机与房间建设方案，再决定下一步怎样安排",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "D",
+              "label": "把继续推进当前气压选作目标，实际添可用钻机并启用",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "未先告知停机原因才可p，免费规则不取消已启用的能源要求；单项添机器、种植等待不y/f。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV502.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV503",
+      "number": 3,
+      "variants": [
+        {
+          "text": "你这次在Prime，已有种茄子的FoodGrower、湖中藻类设备、硫库存与Biolab，化肥和户外农场配方当前可做；已实际运行几轮种植、收料和化肥制作，产物也能投入下一批农场。另有未得花种想找，家中可布置，身体精力足。先投入哪里？",
+          "scene": "蔬菜收成接向哪一项",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_food",
+            "pcraft9n_early",
+            "pcraft9n_auto",
+            "pcraft9n_drone",
+            "pcraft9n_moons",
+            "pcraft9n_bioloop"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的温室工作角主题实际拆回再摆当前可拆空置房件或设备",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "精力补给足仍自愿从容收一轮熟悉作物，安稳熟悉的过程本身值得",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "继续接好茄子、藻类、硫的供料与化肥制作，跟几轮库存和农场扩建后的需求，再调下一轮供给",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "为补个人花种集那份真正未得的种类，实际去搜可达残骸，不要求这次找到",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "只有已多轮运行的种植—原料—生化反馈用y；菜成熟不是玩家操作手感。种子留下复种，不虚构玩家浇水、动物化人或第一台自动成长g。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV503.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "你还没有生化链，只刚能用FoodGrower，已有可放的食用种子和足够供电；另有可达残骸未走过、已读到一块当地数据板，基本舱也可扩。你先用这段时间做什么？",
+          "scene": "蔬菜收成接向哪一项的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_food",
+            "pcraft9n_early",
+            "pcraft9n_auto",
+            "pcraft9n_drone",
+            "pcraft9n_moons",
+            "pcraft9n_bioloop"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续细读那块真实数据板，想了解留下记录的人",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "按自己的“小屋里第一株菜”主题布置种植角并选站位做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把稳定自己的下一批食物选作目标，实际建种植机并放已有食用种子",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先进入没走过的可达残骸部分，想发现这里是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只有已多轮运行的种植—原料—生化反馈用y；菜成熟不是玩家操作手感。种子留下复种，不虚构玩家浇水、动物化人或第一台自动成长g。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV503.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "你刚解锁并有材料可建AtmosphericWaterCollector，已有基本植物生长设备；未看过的峡口当前可达，种植房还可扩，现有食水氧气够继续。你先做哪件？",
+          "scene": "蔬菜收成接向哪一项的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_food",
+            "pcraft9n_early",
+            "pcraft9n_auto",
+            "pcraft9n_drone",
+            "pcraft9n_moons",
+            "pcraft9n_bioloop"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按个人紧凑温室主题实际扩建并摆好当前可用房件",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先比较当前可选的供水、种植与房间建设方案，再决定这轮怎样投入",
+              "signal": "compare_management_options"
+            },
+            {
+              "id": "C",
+              "label": "把家中补水储备选作这轮目标，实际建当前集水设备，待这一批产出后收起瓶装水",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先去看看没走近的可达峡口，未知景象本身更吸引我",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "只有已多轮运行的种植—原料—生化反馈用y；菜成熟不是玩家操作手感。种子留下复种，不虚构玩家浇水、动物化人或第一台自动成长g。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV503.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "你免费建造存档已开放当前可用的两层房件、室内楼梯和玻璃部件，眼前空间允许搭；已有种植角也能扩，旁边山脊没去过。先把这一段用在哪件事？",
+          "scene": "连通、楼梯与个人空间",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_two",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_early",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把扩大现有种植角选作当前目标，实际添当前可建房件与已有种植机",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去没走近的可达山脊，想发现那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "按自己的“楼上看星、楼下种植”主题实际搭房间、楼梯与玻璃呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先排清这一轮房间、楼梯和窗的放置调整步骤，再照安排亲手做",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "普通相邻部件与通路不b/i/y；p是自己未知吸附解释的单项实测，可失败。原生操作是允许拆回再建，不虚构抓取移动或Undo。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV503.FREE_BUILD.V1"
+        },
+        {
+          "text": "你还没有楼梯，只在免费建造中放过两个基本房间；这次它们没形成预想通路，原因尚不明，当前空房件可拆回再放，门与相邻空地都可用。旁边也有没查看的坡后。先做什么？",
+          "scene": "连通、楼梯与个人空间的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_two",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_early",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把一间能正常进入的独立屋选作当轮目标，实际给当前房间放可用门",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先去看看没查看的可达坡后，未知景象更吸引我",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先提出这次没有真正吸附相连的解释，保持同种房件与其它设置，只改第二间的放置点，再实测是否形成通路",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "按自己分开的双屋庭院主题实际重建这处空房与门",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "普通相邻部件与通路不b/i/y；p是自己未知吸附解释的单项实测，可失败。原生操作是允许拆回再建，不虚构抓取移动或Undo。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV503.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "你只放过第一个基本舱，免费建造当前可用门、基础地基和外部楼梯，地面允许这些放置；近旁一处可达小沟没看过。你先做哪件？",
+          "scene": "连通、楼梯与个人空间的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_two",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_early",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走进没看过的可达小沟，想发现那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先试调整一件当前可用台阶的允许位置或朝向，亲手看这次编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "按自己的架高门廊主题，实际安排地基、舱门和可用台阶的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "把方便进出这间舱选作目标，实际建当前能用的门与台阶",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "普通相邻部件与通路不b/i/y；p是自己未知吸附解释的单项实测，可失败。原生操作是允许拆回再建，不虚构抓取移动或Undo。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV503.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV504",
+      "number": 4,
+      "variants": [
+        {
+          "text": "你已有可用发射平台，当前GPS火箭与一种推进改造参数的火箭都已开放，材料只够先做一枚；补给与地图设备满足后续使用，平台周围可整修，外面未查看的岩脊当前可达。你先投入哪里？",
+          "scene": "火箭、信标与新的行进范围",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_volcanic",
+            "pcraft9n_rover",
+            "pcraft9n_two"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去看发射台外没查看过的可达岩脊，想发现那里的景象",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把获得当前地图信息选作目标，实际制作发射已开放GPS火箭，再使用已经满足条件的地图",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "把推进这颗星球的当前改造参数选作目标，实际制作发射对应已开放火箭",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "按自己的“荒野航天站”主题实际安排平台旁现有可用房件与装饰",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "火箭是明确当前可做目标0，不把发射动画当f，也不套含产物收整的CraftingUI文案；实际Jetpack练习与手感分开，当前已有信标才改名色。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV504.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "你还没有火箭，主基地已有一个Beacon，也已能再建一个；外面一处去过的矿洞当前可到，另一条山坡没走过，这份材料也能先投入基本房间，补给允许任选。你先做哪件？",
+          "scene": "火箭、信标与新的行进范围的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_volcanic",
+            "pcraft9n_rover",
+            "pcraft9n_two"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想住的双舱小屋主题实际投入房间布置",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把矿洞往返定位选作这轮目标，实际到当前点位放可用信标并设清楚名称",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "按自己给各前哨的颜色主题实际调整当前信标名与颜色",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先走向没去过的可达山坡，想发现那边是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "火箭是明确当前可做目标0，不把发射动画当f，也不套含产物收整的CraftingUI文案；实际Jetpack练习与手感分开，当前已有信标才改名色。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV504.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "你已有可用Jetpack，眼前低矮开阔地可反复起落，也能直接去旁边没走过的高台边；身体与装备条件允许，当前还有房间布局可做。你先用这段时间做什么？",
+          "scene": "火箭、信标与新的行进范围的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_volcanic",
+            "pcraft9n_rover",
+            "pcraft9n_two"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按个人“基地上方一跃”主题选站位和时机，做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "主动重复几次起落与落点控制，重点是练熟这段以前没掌握的操作，不要求练成",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "再飞过这段熟悉短途，主要想重温推力、镜头与落地紧跟输入的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "先去没走近的可达高台边看看，未知景象更吸引我",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "火箭是明确当前可做目标0，不把发射动画当f，也不套含产物收整的CraftingUI文案；实际Jetpack练习与手感分开，当前已有信标才改名色。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV504.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "你在免费建造中已有可用Beacon与地图，几个实际前哨都已去过，当前能改信标名称和颜色；另一条未走过的山谷也可去，基地外还可放新房间。你先投入哪里？",
+          "scene": "信标既指路也留下自己的样子",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_volcanic",
+            "pcraft9n_decoration",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有地图和信标显示的方位位置，再决定这一趟去向",
+              "signal": "navigation_information_review"
+            },
+            {
+              "id": "B",
+              "label": "按自己给各前哨定的命名与颜色主题，实际调整已有信标，让世界留下自己的风格",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把下一处实际可用前哨选作当前目标，带当前可用设备去建房间与定位信标",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先走向没走过的可达山谷，想发现那边是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "信标设置真实可用才写，未有信标的替代不虚构路标控件；定位规划不y，普通地形绕路不i。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV504.FREE_BUILD.V1"
+        },
+        {
+          "text": "你没有地图火箭，已有主屋、一处去过的矿口与主屋旁一座Beacon，也已能免费再建信标；当前位置能放、改名色，也能扩家或看没走过的地形。你先做什么？",
+          "scene": "信标既指路也留下自己的样子的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_volcanic",
+            "pcraft9n_decoration",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的高地小屋主题实际搭当前可用房件与灯",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把矿口定位选作这轮目标，实际在当前可用点位建信标并设名称",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "按自己的“冷色矿口、暖色住处”主题实际设置已有信标呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先去看没走过的可达地形，未知景象本身更吸引我",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "信标设置真实可用才写，未有信标的替代不虚构路标控件；定位规划不y，普通地形绕路不i。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV504.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "你尚未解锁Beacon，免费建造只用基本房件；已经去过的两个路口当前可达，也有一条没走过的岔向，能放基本舱与门。你先做哪件？",
+          "scene": "信标既指路也留下自己的样子的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_volcanic",
+            "pcraft9n_decoration",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先排清这处中途屋的布局、门和地基放置步骤，再照安排实际做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "把其中一个路口的中途房间选作当前目标，实际去搭可用舱与门",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "按自己“一条路一座小屋”的主题实际选择外观摆位并建出一处",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先走向没看过的可达岔向，想发现那里是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "信标设置真实可用才写，未有信标的替代不虚构路标控件；定位规划不y，普通地形绕路不i。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV504.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV505",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已有种豆设备、产蜂蜜的蜂箱和AutoCrafter，高级食物配方已解锁且在当前贸易菜单可卖；无人机已让原料、食物储存与贸易发运运行过几轮，需求端分流可调。另有可达程序残骸和个人模型缺项。你先做什么？",
+          "scene": "种豆、蜂蜜与贸易的持续分流",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_auto",
+            "pcraft9n_drone",
+            "pcraft9n_early",
+            "pcraft9n_moons",
+            "pcraft9n_effigy",
+            "pcraft9n_decoration",
+            "pcraft9n_food_auto"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续跟几轮豆类与蜂蜜供料、高级食物加工、库存和发运，调需求端分流后看整条流程能否持续运转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先进入自己没看过的可达残骸房间，想发现这次有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "为补个人模型集那种真正未得的实物，实际搜索当前可达来源，不要求找到",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "按自己想要的整洁工厂外观实际拆回再摆当前可拆空置房件与装饰",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "y需豆类和蜂蜜供料、高级食物加工、储存与贸易发运的真实多轮反馈；第一台采掘机取矿或手工补给只是0目标，需求优先不假供给加速。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV505.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "你还没有无人机，刚放出第一台可用OreExtractor，已在它的界面看到当前实际可采矿类，产出也可取用；另有熟悉地表矿石、未走过的可达谷边和可扩矿站。身体精力足。你先投入哪里？",
+          "scene": "种豆、蜂蜜与贸易的持续分流的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_auto",
+            "pcraft9n_drone",
+            "pcraft9n_early",
+            "pcraft9n_moons",
+            "pcraft9n_effigy",
+            "pcraft9n_decoration",
+            "pcraft9n_food_auto"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这处矿料储备选作目标，实际收取这台现有采掘机已产出的矿料并存入当前储存处",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "精力补给足仍自愿慢慢采一小段熟悉地表矿石，安稳过程本身值得",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先走到没看过的可达谷边，想发现那边景象",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "按自己的矿站主题实际布置当前可建房间与灯",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "y需豆类和蜂蜜供料、高级食物加工、储存与贸易发运的真实多轮反馈；第一台采掘机取矿或手工补给只是0目标，需求优先不假供给加速。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV505.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "你只到手工种菜和集水阶段，现有作物、瓶装水、钴矿与可制作氧气胶囊的设备配方可用，还没开始自动采掘；眼前可扩种植舱，也能去一处没进过的小残骸。你先做哪件？",
+          "scene": "种豆、蜂蜜与贸易的持续分流的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_auto",
+            "pcraft9n_drone",
+            "pcraft9n_early",
+            "pcraft9n_moons",
+            "pcraft9n_effigy",
+            "pcraft9n_decoration",
+            "pcraft9n_food_auto"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把多一批随身补给选作这轮目标，实际收取现成作物和水，整理到这趟携带中",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "按现有钴矿与配方排清氧气胶囊的确认用料、制作和收整，再亲自做",
+              "signal": "crafting_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "先进入没看过的小残骸，想发现这次内容",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "按个人温室走廊主题实际扩房并安排当前已有种植机的位置",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "y需豆类和蜂蜜供料、高级食物加工、储存与贸易发运的真实多轮反馈；第一台采掘机取矿或手工补给只是0目标，需求优先不假供给加速。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV505.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "你在免费建造里当前GeneticSynthesizer、Shelter与Extractor都已可用，已有几份实际特征可预览；个人还惦记一个未得物种特征，已养动物能供食，没看过的野外可去。先做哪件？",
+          "scene": "免费建造不等于所有生物实物已得",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_one",
+            "pcraft9n_two",
+            "pcraft9n_genetics",
+            "pcraft9n_explosive",
+            "pcraft9n_food",
+            "pcraft9n_rules",
+            "pcraft9n_incubator"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己想要的动物外形与配色主题，实际选已有特征预览并生成可做DNA，在当前Shelter呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "为补个人物种特征集那个真正未得类型，实际去当前可达来源寻找，不要求得到",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "把这批已有动物供食选作当轮目标，实际取用当前可用食品去喂养",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先去看没走近的可达野外，想发现那里是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "免费配方仍以实际开放、材料和生物实物确实可用为准；全目录不是c/g，预览后自己主题选择才a。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV505.FREE_BUILD.V1"
+        },
+        {
+          "text": "你还没有动物合成，只在免费建造中已有Incubator和实际取得的幼虫及当前配方可用材料；自己惦记一类未得蝶种，旁边已得幼虫也可放现有展示/生产装置，屋外没走过的地形可去。先投入哪里？",
+          "scene": "免费建造不等于所有生物实物已得的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_one",
+            "pcraft9n_two",
+            "pcraft9n_genetics",
+            "pcraft9n_explosive",
+            "pcraft9n_food",
+            "pcraft9n_rules",
+            "pcraft9n_incubator"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为补个人蝶种集那个真正未得类型，实际做当前可用孵育尝试，不要求这一批得到",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "按自己的昆虫观察角主题实际选择已得幼虫与当前可放装置的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把现有蜂类产出选作这轮目标，实际把已有可用幼虫放进当前适用设备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "先走近没看过的可达地形，想发现那边是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "免费配方仍以实际开放、材料和生物实物确实可用为准；全目录不是c/g，预览后自己主题选择才a。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV505.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "你还只在免费建造中取得一份花种，当前Vegetube与基本房件可用，室内电力足；自己还想扩屋，附近没看的蓝箱当前可达。你先做什么？",
+          "scene": "免费建造不等于所有生物实物已得的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_one",
+            "pcraft9n_two",
+            "pcraft9n_genetics",
+            "pcraft9n_explosive",
+            "pcraft9n_food",
+            "pcraft9n_rules",
+            "pcraft9n_incubator"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的“第一株花与荒野”主题实际放好Vegetube和已有花种，选站位做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "把推进当前氧气选作目标，实际让这台已有花种的Vegetube运行",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先去看没查看过的可达蓝箱，想发现这次内容",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "把多一间可用屋选作这轮目标，实际搭当前基本房件与门",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "免费配方仍以实际开放、材料和生物实物确实可用为准；全目录不是c/g，预览后自己主题选择才a。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV505.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV506",
+      "number": 6,
+      "variants": [
+        {
+          "text": "你已有当前可用的GeneticSynthesizer、AnimalShelter与已得特征，合成器能预览几种可做外形；已有动物可喂，自己还惦记一种未得物种特征，另有可达野外没走过。先投入哪里？",
+          "scene": "生成新动物还是寻找生物缺项",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_one",
+            "pcraft9n_two",
+            "pcraft9n_genetics",
+            "pcraft9n_explosive",
+            "pcraft9n_food",
+            "pcraft9n_incubator",
+            "pcraft9n_logs"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为补个人特征集那种真正未得的物种，实际搜索当前可达来源，不要求本次拿到",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "把现有动物这一轮供食选作目标，实际制作或取用当前可用食品并投入喂养",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "先去没走近的可达野外，想发现那里的景象与生物",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "按自己的配色与外形主题实际选已有特征、预览并生成可做DNA，再在现有Shelter呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "实际特征主题是a；孵育研究按钮不自动是玩家未知假说p，不要求随机得到所求才答。喂一次或动物自动加值不g，NPC不真人。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV506.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "你还没有哺乳动物，只已有可用Incubator、实际显示的配方与所需幼虫和材料；自己有一类未得蝶种想收，蜂箱方向也有当前可做目标，刚收到一条真实昆虫阶段信息。你先做什么？",
+          "scene": "生成新动物还是寻找生物缺项的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_one",
+            "pcraft9n_two",
+            "pcraft9n_genetics",
+            "pcraft9n_explosive",
+            "pcraft9n_food",
+            "pcraft9n_incubator",
+            "pcraft9n_logs"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把已有蜂类生产目标选作这轮重点，实际投入当前幼虫和设备去推进",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "细读真实收到的信息，想了解Sentinel怎样看待这些生命与任务",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "按自己的昆虫观察角主题实际安排当前可放装置与展示",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "为补个人蝶种集那份真正未得的种类，实际按当前可用配方尝试孵育，不要求这批得到",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "实际特征主题是a；孵育研究按钮不自动是玩家未知假说p，不要求随机得到所求才答。喂一次或动物自动加值不g，NPC不真人。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV506.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "你还只用Vegetube，手上已得两种当前兼容花种，室内能再放一台；补给足，当前可达的蓝箱与岩坡没看过，也可先给基本舱做外观安排。你先做什么？",
+          "scene": "生成新动物还是寻找生物缺项的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_one",
+            "pcraft9n_two",
+            "pcraft9n_genetics",
+            "pcraft9n_explosive",
+            "pcraft9n_food",
+            "pcraft9n_incubator",
+            "pcraft9n_logs"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己的花色成组主题实际选择已有花种与摆位，让这一角符合想要的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先去看没查看的可达蓝箱和旁边地形，未知内容更吸引我",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "先比较当前已有花种与设备的可选配置，再决定这轮用哪一种",
+              "signal": "compare_available_setup"
+            },
+            {
+              "id": "D",
+              "label": "把本星球氧气推进选作这轮目标，实际建当前Vegetube并装已有花种",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "实际特征主题是a；孵育研究按钮不自动是玩家未知假说p，不要求随机得到所求才答。喂一次或动物自动加值不g，NPC不真人。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV506.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "你在免费建造中已有可用Rover，当前一段开阔地允许反复驾驶，也能驶向没看过的可达山脚，自己搭的车站还可布置。你先用这段时间做什么？",
+          "scene": "在自己搭的世界里亲手行进",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_rover",
+            "pcraft9n_two",
+            "pcraft9n_early",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "重开一段熟悉路线，主要想体验转向、声音与地面回应紧跟输入的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先开向没走近的可达山脚，想发现那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "按自己的荒野车站主题实际安排当前房件与车旁构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "主动反复试这段转向与地形处理，重点是练熟以前没掌握的操作，不要求练成",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Freebuild不假原生飞行；t/f来自本人实际驾驶/飞行/工具输入而非生成动画或自动机器，不要求后续技术提升。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV506.FREE_BUILD.V1"
+        },
+        {
+          "text": "你还没开过车，在免费建造里已有当前能用的Jetpack和一段低矮可起落地；身边新高台边没看过，自己刚搭的屋顶也可取景。你先做哪件？",
+          "scene": "在自己搭的世界里亲手行进的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_rover",
+            "pcraft9n_two",
+            "pcraft9n_early",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "再飞一段熟悉短途，主要重温推力、镜头与落地跟着输入的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先去没走近的可达高台边看看，未知景象更吸引我",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "按个人屋顶起飞的主题选择站位与时机，做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "自愿反复试这段起落与落点，重点是练熟以前没掌握的操作，不要求最后成功",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "Freebuild不假原生飞行；t/f来自本人实际驾驶/飞行/工具输入而非生成动画或自动机器，不要求后续技术提升。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV506.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "你还没用过车或喷气背包，在免费建造里只用过步行、手持采矿工具和基本房件。现在能安全步行到附近矿石或没去过的岩坡，也可回初舱看里面的文字。你先做什么？",
+          "scene": "在自己搭的世界里亲手行进的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_rover",
+            "pcraft9n_two",
+            "pcraft9n_early",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先走向没看过的可达岩坡，想发现那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按自己“荒地与第一间屋”的主题实际安排房件和站位，做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "继续读初舱真实文字，想了解这段流放改造叙述",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "亲手再采一段当前矿石，主要重温光束、破碎声和拾取紧跟输入的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "Freebuild不假原生飞行；t/f来自本人实际驾驶/飞行/工具输入而非生成动画或自动机器，不要求后续技术提升。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV506.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV507",
+      "number": 7,
+      "variants": [
+        {
+          "text": "你这次在Prime，已收到Riley关于异常地质的真实坐标信息，当前位置和补给允许去找；另有个人模型缺项的可达搜索方向、还没进过的洞段和基地待运物资。你先投入哪里？",
+          "scene": "人物线索与第一枚蓝图芯片",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_logs",
+            "pcraft9n_early",
+            "pcraft9n_effigy",
+            "pcraft9n_current"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先进入没看过的可达洞段，未知内容本身更吸引我",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把基地运料选作这轮目标，实际把当前已拿到的物资送回可用储存处",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "沿这条真实坐标线索实际前往，想知道Riley所指的异常怎样接进这颗星球的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "为补个人模型集那个真正未得类型，实际去可达来源寻找，不要求这次得到",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "Prime人物叙述可直接入题但不虚构回信或改变固定剧情；没有Prime/Riley经历的较早替代采用本次确可解码的蓝图芯片与基础制作/探索。首次解码不c/g/p。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV507.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "你只在Prime初舱读到Sentinel发来的真实任务条款，还没收到Riley坐标；现有材料能做建屋或装备，外面可采矿、可看没走过的地形。你先做哪件？",
+          "scene": "人物线索与第一枚蓝图芯片的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_logs",
+            "pcraft9n_early",
+            "pcraft9n_effigy",
+            "pcraft9n_current"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "亲手采一段当前矿石，主要想重温光束、碎屑和声音连着输入的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "按个人“初到荒星”的主题选站位构图，做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "继续读实际条款与人物处境，想了解这场服刑改造的叙述",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "把更长一趟外出选作目标，实际制作当前允许的补给或装备并出门",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "Prime人物叙述可直接入题但不虚构回信或改变固定剧情；没有Prime/Riley经历的较早替代采用本次确可解码的蓝图芯片与基础制作/探索。首次解码不c/g/p。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV507.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "你还没收到人物坐标线索，只在自己的起始地图做过基本建设；刚捡到第一枚BlueprintMicrochip，现有解锁屏幕明确仍有可解码配方，钴矿和氧气胶囊制作设备也可用，近旁洞口未看。你先投入哪件事？",
+          "scene": "人物线索与第一枚蓝图芯片的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_logs",
+            "pcraft9n_early",
+            "pcraft9n_effigy",
+            "pcraft9n_current"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先进入没查看过的可达洞口，想发现里面是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "按自己的科学工作角主题实际安排当前可用屏幕、桌面与房间的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "把这枚芯片的当前解码选作目标，实际去可用解锁屏幕提交并尝试解码",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "把下一趟氧气补给选作目标，实际用现有钴矿制作可用胶囊并带上",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "Prime人物叙述可直接入题但不虚构回信或改变固定剧情；没有Prime/Riley经历的较早替代采用本次确可解码的蓝图芯片与基础制作/探索。首次解码不c/g/p。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV507.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "你在免费建造的 Prime 基地，实际取得了几件能放进展示柜的模型，还缺一种模型和一种家具蓝图。有一处程序生成残骸可以进入，另有一份你已在固定遗迹找到的 Ikhlas 记录可读。你先做什么？",
+          "scene": "模型与家具留在什么位置",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_effigy",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_logs",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "为补个人家具配方集那个真正未解锁类型，实际在残骸找可拆对象尝试取得",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "细读已在固定遗迹找到的 Ikhlas 记录，想了解他在这里的经历",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "按自己的“荒星足迹”主题实际选择已有模型、摆位与观看角度，做出想留下的展陈",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "为补个人模型集那个真正未得类型，实际搜索当前可达来源，不要求本次拿到",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "全蓝图、未放置旧物不当收藏缺项；模型必须实际得到，摆放为表达a或真实编辑0，不假任意展品生成。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV507.FREE_BUILD.V1"
+        },
+        {
+          "text": "你还没有程序残骸或展示柜，只在免费建造中实际拿到一件可放模型；已有一件当前空置可拆桌面，基本房件和柜子可建，附近一处可达残骸没看过。你先做什么？",
+          "scene": "模型与家具留在什么位置的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_effigy",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_logs",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把多一间储物屋选作这轮目标，实际搭当前可用房件与柜子",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先拆回一件当前空置可拆桌面，再换允许摆位重建，亲手查看这次编辑结果",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "按自己的第一件荒星纪念物主题，实际把已得模型放在当前桌面并选构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先进入没看过的可达残骸，想发现那边是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "全蓝图、未放置旧物不当收藏缺项；模型必须实际得到，摆放为表达a或真实编辑0，不假任意展品生成。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV507.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "你连模型也还没有，只在免费建造里可用基本桌椅、房件和灯；当前能看未走过的地形，也有初舱真实文字可读。你先把这段时间给哪件事？",
+          "scene": "模型与家具留在什么位置的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_effigy",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_logs",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "细读初舱真实文字，想了解人物被放到这里的处境",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "把一间能使用的工作屋选作当前目标，实际搭房间、门与当前桌面",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "按自己“临门工作台”的主题实际布置已有蓝图的桌椅与灯",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先走向未查看的可达地形，未知景象本身更吸引我",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "全蓝图、未放置旧物不当收藏缺项；模型必须实际得到，摆放为表达a或真实编辑0，不假任意展品生成。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV507.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV508",
+      "number": 8,
+      "variants": [
+        {
+          "text": "你已完整改造起始星球，现在在 Prime。出发平台上已建成星际旅行火箭，菜单可选你还没去过的 Aqualis。你也备好了落地后另建返程平台和火箭的材料，且 Prime 与去过的 Selenea 之间已经用过交换设备。你这次先做什么？",
+          "scene": "离开首星以前与以后",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_moons",
+            "pcraft9n_skeo",
+            "pcraft9n_early",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_logs"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己星际出发站的主题实际调整当前可拆空置房件与已有装饰",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "实际前往还没去过的免费Aqualis，想发现这颗新月是什么样",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "留在 Prime 调整与 Selenea 的采掘、库存和交换，继续跟几轮补货，看这条供应能不能稳定运行",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "细读Prime已经收到的真实人物信息，想了解当前故事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "免费月球进入和返程条件明确，Skeo非起始地图；资源星球可同路径但不假每图都有Prime遗迹。配方未得才c，已解锁没放不算。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV508.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "你还没有星际旅行，当前已能进入一处程序残骸；装备和补给满足，里面有没看过的房间、可运物资，自己有真正未得的家具配方想收，当前也可停下取景。你先投入哪里？",
+          "scene": "离开首星以前与以后的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_moons",
+            "pcraft9n_skeo",
+            "pcraft9n_early",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_logs"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把这一批有用物资运回选作目标，实际装运已经取得的东西",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "为补个人家具配方集那个真正未解锁类型，实际找当前可拆对象尝试取得，不要求本次遇到",
+              "signal": "collector"
+            },
+            {
+              "id": "C",
+              "label": "先看没走过的房间，未知内容本身更吸引我",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "按自己的荒废舱门主题，利用眼前已有光线选站位构图，做普通PC截图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "免费月球进入和返程条件明确，Skeo非起始地图；资源星球可同路径但不假每图都有Prime遗迹。配方未得才c，已解锁没放不算。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV508.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "你还没去程序残骸，刚在Prime看到先前挡路的冰已融，当前洞段可进入；补给够，里面可见矿石、地形还没看完，回基地扩屋也做得到。你先做哪件？",
+          "scene": "离开首星以前与以后的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_moons",
+            "pcraft9n_skeo",
+            "pcraft9n_early",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_logs"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把基地再多一间屋选作这轮目标，实际带现料回去搭当前房件",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "先进入没走过的可达洞段，想发现融冰后是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "把这批眼前矿料储备选作目标，实际采集并送回现有储存处",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "按个人“旧冰口重新打开”的主题选构图，做普通PC截图",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "免费月球进入和返程条件明确，Skeo非起始地图；资源星球可同路径但不假每图都有Prime遗迹。配方未得才c，已解锁没放不算。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV508.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "你在免费建造中已经完整改造起始星球。出发平台上有可用的星际旅行火箭，菜单显示还没去过的 Aqualis 可选，抵达后另建返程设施的条件也已备好。现在还可以在基地用已得到的 DNA 和动物庇护所、读现有消息或布置房间。你先做什么？",
+          "scene": "免费星球和仍未见的地方",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_moons",
+            "pcraft9n_skeo",
+            "pcraft9n_logs",
+            "pcraft9n_early",
+            "pcraft9n_rules",
+            "pcraft9n_one",
+            "pcraft9n_genetics"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把新增一处动物栖居区选作当前目标，实际搭当前可建Shelter并放入已得DNA",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "搭星际旅行火箭去还没去过的 Aqualis，想看看新月球是什么样",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "按自己已有星际基地的主题实际调整当前可用房件、灯和装饰",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "继续细读当前星球已经取得的真实人物文字，想了解故事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "星际旅行必须本次真实已开放，不因AllUnlocked就推断剧情、地图、返回设施全满足。Skeo另有首星完整改造前置，不说今天初舱直达。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV508.FREE_BUILD.V1"
+        },
+        {
+          "text": "你没有星际旅行，只在Prime当前已有可进残骸和Riley实际坐标线索；想补的个人模型缺项有当前可达搜索方向，家中也能扩屋。免费建造不阻止这些去向。你先做什么？",
+          "scene": "免费星球和仍未见的地方的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_moons",
+            "pcraft9n_skeo",
+            "pcraft9n_logs",
+            "pcraft9n_early",
+            "pcraft9n_rules",
+            "pcraft9n_one",
+            "pcraft9n_genetics"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己荒星通信站主题实际扩房并安排当前已有设备的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "沿真实Riley线索实际去找，想了解异常地点怎样接进故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "为补个人模型集那个真正未得类型，实际去当前可达来源寻找，不要求这趟找到",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "先进入没看过的可达残骸舱段，未知内容本身更吸引我",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "星际旅行必须本次真实已开放，不因AllUnlocked就推断剧情、地图、返回设施全满足。Skeo另有首星完整改造前置，不说今天初舱直达。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV508.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "你只在免费建造里搭好第一个当前可用天线与信息屏，确实收到早期来信，还没有坐标或旅行权限；现有房件可布置、气压设备可启用，附近小残骸没看过。先做什么？",
+          "scene": "免费星球和仍未见的地方的第二替代情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "pcraft9n_moons",
+            "pcraft9n_skeo",
+            "pcraft9n_logs",
+            "pcraft9n_early",
+            "pcraft9n_rules",
+            "pcraft9n_one",
+            "pcraft9n_genetics"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去看没进入过的可达小残骸，想发现这次内容",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "细读真实来信，想了解发信者为何联系这颗荒星",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "把这一批气压推进选作当前目标，实际放并启用已可用设备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "按自己第一间通信室主题实际安排房件、屏幕与灯",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "星际旅行必须本次真实已开放，不因AllUnlocked就推断剧情、地图、返回设施全满足。Skeo另有首星完整改造前置，不说今天初舱直达。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV508.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV509",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想你确实遇到过几台设备突然停机的一次。当时存档的用电规则有效，原因还不明，但可以开能源屏幕也有材料建发电机。哪件你实际做过的事最接近当时的重点？",
+          "scene": "自己确实处理过的停机或生产分流",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_auto",
+            "pcraft9n_drone",
+            "pcraft9n_food",
+            "pcraft9n_food_auto",
+            "pcraft9n_effigy",
+            "pcraft9n_decoration"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先提出供电余量不足的解释，只加一台可用发电机、其余不变，再实测原设备，不要求解释成立",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我先核对已经显示的供能、耗能和设备状态再决定改处",
+              "signal": "device_status_review"
+            },
+            {
+              "id": "C",
+              "label": "我把当轮补足供电选作目标，实际投入材料去建可用发电设备",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我给当时已经搭建的电源与房间补了自己的建设过程记录",
+              "signal": "construction_process_recording"
+            }
+          ],
+          "design_purpose": "所有过去已经做过，不以恢复供电、产出成功或找到藏品为门槛；p真正自提未知解释，h不是被迫等成熟。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV509.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "回想你确实让种豆、蜂蜜、AutoCrafter高级食物和当前可卖食物的贸易运行过几轮；当时也有可布置的工厂、个人模型缺项和可达残骸，你实际先选过一项。哪件已发生的事最接近当时重点？",
+          "scene": "自己确实处理过的停机或生产分流的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_auto",
+            "pcraft9n_drone",
+            "pcraft9n_food",
+            "pcraft9n_food_auto",
+            "pcraft9n_effigy",
+            "pcraft9n_decoration"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我跟过多轮豆类、蜂蜜供料与高级食物加工、储存和发运余量，调整需求端分流后继续看整条流程",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "我按自己的整洁工厂主题实际拆回再摆过可拆空置房件与装饰",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我为个人模型集一个真正未得类型实际出门找过，不要求当时拿到",
+              "signal": "collector"
+            },
+            {
+              "id": "D",
+              "label": "我先进入没看过的可达残骸房间，想发现这次内容",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "所有过去已经做过，不以恢复供电、产出成功或找到藏品为门槛；p真正自提未知解释，h不是被迫等成熟。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV509.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "回想你确实只到手工FoodGrower阶段，还没有无人机；当时有成熟作物、钴矿和氧气胶囊配方，也能扩房或外出，身体精力足，你实际先选过一项。哪件已发生的事最接近？",
+          "scene": "自己确实处理过的停机或生产分流的第二替代情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_auto",
+            "pcraft9n_drone",
+            "pcraft9n_food",
+            "pcraft9n_food_auto",
+            "pcraft9n_effigy",
+            "pcraft9n_decoration"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我精力足仍自愿从容收了熟悉小批作物，安稳过程本身值得",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "我按现有钴矿与配方排过氧气胶囊的确认用料、制作和收整，再亲自做",
+              "signal": "crafting_action_sequence"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的温室主题实际扩过房并安排种植角",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我先去了没走过的可达峡口，想发现那边是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "所有过去已经做过，不以恢复供电、产出成功或找到藏品为门槛；p真正自提未知解释，h不是被迫等成熟。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV509.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "回想你确实在免费建造中用已有房件、玻璃或室内楼梯搭过两层空间，并实际选择过继续布置、其它目标或补记的一段经历。哪件已发生的事最接近当时重点？",
+          "scene": "自己实际搭出过的空间",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_two",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_early",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的楼上观景、楼下工作主题实际安排了房件、楼梯和玻璃的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先排清了这一轮布局与放置调整步骤，再亲自照安排做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "我给本人已经做过的房件放置、拆除或重建及已见结果补了记录",
+              "signal": "scene_edit_process_recording"
+            },
+            {
+              "id": "D",
+              "label": "我先去了没走近的可达山脊，想发现那里是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "实际已做的编辑过程才80；没有原生Undo就不写，完成所有房间或弄清吸附不作为可答门槛。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV509.FREE_BUILD.V1"
+        },
+        {
+          "text": "回想你只在免费建造里放过基本房间，曾发现两个房间没有预想通路，原因当时不明，而且可拆空置房件再放的一次。哪件已发生的事最接近当时重点？",
+          "scene": "自己实际搭出过的空间的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_two",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_early",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先提出未真正吸附相连的解释，只改第二房间的放置点、其它保持，再实测通路，不要求解释成立",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "我按自己分开的双屋庭院主题实际重建过当时房间与门",
+              "signal": "style_director"
+            },
+            {
+              "id": "C",
+              "label": "我把可进入的独立屋选作当轮目标，实际放了当时可用门",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我给本人已经尝试的房件放置、拆回再建与已见结果补了记录",
+              "signal": "scene_edit_process_recording"
+            }
+          ],
+          "design_purpose": "实际已做的编辑过程才80；没有原生Undo就不写，完成所有房间或弄清吸附不作为可答门槛。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV509.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "回想你在免费建造中只搭过第一间基本舱与门，还没做两层空间或连通试验，曾继续建屋、看周边或读过初舱文字的一次。哪件已发生的事最接近？",
+          "scene": "自己实际搭出过的空间的第二替代情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_two",
+            "pcraft9n_decoration",
+            "pcraft9n_deconstruct",
+            "pcraft9n_early",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的山脚小屋主题实际选过摆位并放舱与门",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我把有一间可用房选作当轮目标，实际搭了当时房件和门",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我先走向没查看过的可达地形，想发现那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我细读了初舱真实文字，想了解这段流放叙述",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "实际已做的编辑过程才80；没有原生Undo就不写，完成所有房间或弄清吸附不作为可答门槛。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV509.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV510",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想你确实有可用Rover，在一段当前能反复驾驶的地形练过、重温过或把车用于别的去向的一次，不要求开得更好。哪件已发生的事最接近重点？",
+          "scene": "载具与手工具真正吸引过自己的环节",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_rover",
+            "pcraft9n_two",
+            "pcraft9n_early"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我重开了熟悉短段，主要想重温转向、声音和地面反应紧跟输入的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "我把车开向自己没查看过的可达地形，想发现那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的荒野车站主题实际布置当前可用房件与车旁构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我自愿反复尝试那段转向与地形处理，重点是练熟以前没掌握的操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "f只本人即时输入，t是实际自愿重练且不要求进步；自动机器、火箭片段、一次装备不自动给这些分。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV510.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "回想你确实刚有Jetpack，在当前可反复起落的低矮地形花过时间，也能去看未走过高台边的一次。哪件已发生的事最接近当时重点？",
+          "scene": "载具与手工具真正吸引过自己的环节的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_rover",
+            "pcraft9n_two",
+            "pcraft9n_early"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我重飞熟悉一段，想体验推力、镜头与落地连着输入的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "我先去了没看过的可达高台边，想发现那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我按个人飞跃基地的主题选过时机与构图，做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我主动反复试起落与落点控制，重点是练熟以前没掌握的操作，不要求练成",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "f只本人即时输入，t是实际自愿重练且不要求进步；自动机器、火箭片段、一次装备不自动给这些分。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV510.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "回想你确实只用过最早的采矿工具，在补给足且能去其它目标时，实际采矿、建屋或看过周边的一段经历。哪件已发生的事最接近当时重点？",
+          "scene": "载具与手工具真正吸引过自己的环节的第二替代情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_rover",
+            "pcraft9n_two",
+            "pcraft9n_early"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把第一间屋选作自己的当轮目标，实际采料并搭出当前可用房件",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我先走向没看过的可达岩坡，想发现那边景象",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的初舱与荒野主题选过站位构图，做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我亲手又采了一段矿石，主要享受光束、碎屑与声音紧跟输入的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "f只本人即时输入，t是实际自愿重练且不要求进步；自动机器、火箭片段、一次装备不自动给这些分。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV510.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "回想你确实在免费建造中有可用Rover，曾在可重复地形花过时间，也能去未知山脚或布置车站的一次。哪件已发生的事最接近当时重点？",
+          "scene": "亲手操作与标记留下来的印象",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_rover",
+            "pcraft9n_two",
+            "pcraft9n_early",
+            "pcraft9n_volcanic",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我重开熟悉短段，主要享受转向、声音与地面回应紧跟输入的感觉",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "我先开向没看过的可达山脚，想发现那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我按自己的荒野车站主题实际安排了当时房件与构图",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我自愿反复试那段转向与地形处理，重点是练熟以前没掌握的操作，不要求后来进步",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "标记改字配色补记仅81，不能混为搭建筑80；t/f均真实本人操作，无后来进步/更快的门槛，纯生成/观看不f。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV510.FREE_BUILD.V1"
+        },
+        {
+          "text": "回想你确实在免费建造中已有两个实际前哨和可用Beacon，曾亲自改过名称或颜色，也能出门或继续建屋的一次。哪件已发生的事最接近重点？",
+          "scene": "亲手操作与标记留下来的印象的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_rover",
+            "pcraft9n_two",
+            "pcraft9n_early",
+            "pcraft9n_volcanic",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为本人已经试过的改名、调色步骤与当时已见结果补了记录",
+              "signal": "text_color_edit_process_recording"
+            },
+            {
+              "id": "B",
+              "label": "我把一处新的中途屋选作当轮目标，实际去搭了当时可用舱与门",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我先走向没看过的可达岔向，想发现那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的前哨命名与配色主题，实际调整了已有信标的呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "标记改字配色补记仅81，不能混为搭建筑80；t/f均真实本人操作，无后来进步/更快的门槛，纯生成/观看不f。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV510.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "回想还没有车或信标时，你在免费建造里用过采矿工具、基本房件和初舱文字。附近地形可安全往返，当时你实际做过下面哪件事？",
+          "scene": "亲手操作与标记留下来的印象的第二替代情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_rover",
+            "pcraft9n_two",
+            "pcraft9n_early",
+            "pcraft9n_volcanic",
+            "pcraft9n_rules"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的第一间荒星屋主题实际安排了房件和站位，做普通PC截图",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先走向没看过的可达岩坡，想发现那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我继续读初舱真实文字，想了解这段人物处境",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我亲手又采了一段矿石，主要想重温光束、碎屑和声音跟着输入的感觉",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "标记改字配色补记仅81，不能混为搭建筑80；t/f均真实本人操作，无后来进步/更快的门槛，纯生成/观看不f。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV510.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV511",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你在同一Prime存档已多次亲自投入改造，看见已保留的阶段变化；当时茄子、藻类、硫与化肥供料流程已运行，可继续培养星球、调流程、找模型缺项或读真实信息，你实际先选过一项。哪件最接近理由？",
+          "scene": "同一颗星球留下来的理由",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_early",
+            "pcraft9n_one",
+            "pcraft9n_moons",
+            "pcraft9n_logs",
+            "pcraft9n_effigy",
+            "pcraft9n_bioloop"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为个人模型集那种真正未得的实物实际寻找，想补自己的缺项",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "我继续读真实人物信息，想了解这颗星球的故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "我继续亲自添改适用设备并培养这颗已经投入过的星球，愿意看它在同一存档继续长成下一阶段",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我继续跟多轮茄子、藻类、硫到化肥的库存与户外农场扩建需求，调整后续供给，想让体系持续运转",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "g只同一已多次亲自投入、已保留阶段的对象继续培养动机；自动指数上涨或第一菜单不够。第一次工具替代不强配g。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV511.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "回想你还没到动物阶段，但同一存档已经多次亲自推进过供氧、升温或气压，看见已保留的阶段变化；当时也能外出、布置房间或读信息，你实际选过一项。哪件最接近理由？",
+          "scene": "同一颗星球留下来的理由的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_early",
+            "pcraft9n_one",
+            "pcraft9n_moons",
+            "pcraft9n_logs",
+            "pcraft9n_effigy",
+            "pcraft9n_bioloop"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的高地小屋主题实际调整了当前可用房件与灯",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我细读了当时已有的真实人物来信，想了解叙述",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "C",
+              "label": "我实际继续添了当前适用的改造设备，关心这颗已经亲手培养过的星球沿同一存档逐步长成接下来的样子",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我先去了没走近的可达地形，想发现那边是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "g只同一已多次亲自投入、已保留阶段的对象继续培养动机；自动指数上涨或第一菜单不够。第一次工具替代不强配g。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV511.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "回想你只在新存档刚做过第一批工具和房间，还没有长期培养或阶段变化；当时补给够，矿料、舱室与周边都可处理，你实际先选过一项。哪件最接近？",
+          "scene": "同一颗星球留下来的理由的第二替代情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_early",
+            "pcraft9n_one",
+            "pcraft9n_moons",
+            "pcraft9n_logs",
+            "pcraft9n_effigy",
+            "pcraft9n_bioloop"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先去看了没查看过的可达地形，想发现本次内容",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我为已经到过的初舱和取得的物品补了自己的记录",
+              "signal": "game_recording"
+            },
+            {
+              "id": "C",
+              "label": "我把一批外出补给选作当轮目标，实际制作并整理好当前可用产物",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "D",
+              "label": "我按自己第一间荒星小屋的主题实际放过舱与门",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "g只同一已多次亲自投入、已保留阶段的对象继续培养动机；自动指数上涨或第一菜单不够。第一次工具替代不强配g。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV511.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "回想你在同一免费建造存档已多次亲自投入改造，看见星球已保留的阶段变化，当前仍会继续积累；当时也有已有特征动物可做、地方可探索，你实际选过一项。哪件最接近理由？",
+          "scene": "已有世界继续培养或改成自己的作品",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_rules",
+            "pcraft9n_one",
+            "pcraft9n_two",
+            "pcraft9n_genetics",
+            "pcraft9n_food"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先去了没走过的可达地形，想发现那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我把现有动物这轮供食选作目标，实际取用可用食品做了喂养",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "C",
+              "label": "我实际继续添改了当时适用的改造设备，关心这颗已投入过的星球沿同一存档逐步长成后续阶段",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的动物外形与配色主题实际选已有特征、预览并生成可用DNA呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "g需同一已实际多次投入并有保留阶段的对象，免费材料/全解锁本身不g；h须自愿熟悉平静而非疲劳与等成熟。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV511.FREE_BUILD.V1"
+        },
+        {
+          "text": "回想你还没做动物，在同一免费建造存档已实际搭过温室并收过几轮熟悉作物，精力足，也能扩屋或出门，你实际选择过一项。哪件已发生的事最接近重点？",
+          "scene": "已有世界继续培养或改成自己的作品的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_rules",
+            "pcraft9n_one",
+            "pcraft9n_two",
+            "pcraft9n_genetics",
+            "pcraft9n_food"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我把多一间可用屋选作当轮目标，实际搭了当时可用房件与门",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我先去了没看过的可达谷口，想发现那边是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我精力充足仍自愿从容收了一轮熟悉作物，安稳熟悉的过程本身值得",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的温室走廊主题实际改过当前房件与种植角呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "g需同一已实际多次投入并有保留阶段的对象，免费材料/全解锁本身不g；h须自愿熟悉平静而非疲劳与等成熟。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV511.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "回想你只刚试免费建造，尚无长期改造或收获经历，只放过基本房件并走出初舱的一次。哪件已发生的事最接近当时重点？",
+          "scene": "已有世界继续培养或改成自己的作品的第二替代情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_store",
+            "pcraft9n_rules",
+            "pcraft9n_one",
+            "pcraft9n_two",
+            "pcraft9n_genetics",
+            "pcraft9n_food"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先去看了没走近的可达地形，想发现那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我给本人已经做过的房件放置或拆除及已见结果补了记录",
+              "signal": "scene_edit_process_recording"
+            },
+            {
+              "id": "C",
+              "label": "我按自己初舱旁第一片工作区的主题实际安排了房件和站位",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我把启用一台当前钻机选作当轮目标，实际放并启用了当时可用设备",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "g需同一已实际多次投入并有保留阶段的对象，免费材料/全解锁本身不g；h须自愿熟悉平静而非疲劳与等成熟。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV511.FREE_BUILD.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "PCRAFT9NV512",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想你确实已能在免费星球间旅行，某次在去未见月球、继续现有基地、读真实线索与找个人缺项之间做过选择。哪件已发生的事最接近当时重点？",
+          "scene": "实际把时间给过哪些可做目标",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_moons",
+            "pcraft9n_logs",
+            "pcraft9n_deconstruct",
+            "pcraft9n_effigy",
+            "pcraft9n_early",
+            "pcraft9n_one"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的星际出发站主题实际调整过当前可用房件与已有装饰",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先去了没去过的当前可达免费月球，想发现新环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我继续细读当前星球已经取得的真实线索，想了解故事",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "D",
+              "label": "我为个人集一个真正未得的实物实际去找，不要求那趟得到",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "真实过去，不要求通关、完美改造或收齐；q/o仅实际真人联机，不把Riley/程序动物代入。联机不同星球同时行动不假可用。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV512.RESOURCE_RULES.V1"
+        },
+        {
+          "text": "回想材料会消耗的存档里，你搭出第一间有门的居住舱后做的事。附近的岩坡还没走过，舱旁还有矿能采，手头的矿料可送回舱里。什么最像你的实际做法？",
+          "scene": "材料会消耗的第一间小屋",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_store",
+            "pcraft9n_deconstruct"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我给新舱挑了一个能拍到舱门和荒地的角度，想把它拍出自己想要的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我先走向没看过的岩坡，想知道坡后面有什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我在舱外亲手连续采过一小段矿，喜欢光束瞄准和矿块破碎的手感",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "D",
+              "label": "我先把这趟已经拿到的矿料送进舱里，留给接下来的制作",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "回顾第一间实际建出的舱及附近区域已做过的行动。",
+          "interpretation_boundary": "单人和合作均可作答。先建好普通带门舱即可；只选实际做过的行动。",
+          "id": "PCRAFT9NV512.RESOURCE_RULES.ALT1"
+        },
+        {
+          "text": "回想你确实与真人朋友在同一颗星球联机，当时两人都可参与搜残骸、运料或建设，曾实际选择分工、聊天或自己的目标的一次。哪件已发生的事最接近？",
+          "scene": "同一星球上的真人合作经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_moons",
+            "pcraft9n_logs",
+            "pcraft9n_deconstruct",
+            "pcraft9n_effigy",
+            "pcraft9n_early",
+            "pcraft9n_one"
+          ],
+          "modes": [
+            "resource_rules"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我按自己的共同基地主题实际安排了当前可建房件的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "我和真人伙伴商量共同的运料与建设目标，实际对齐谁先搜、谁先带回、怎样接着做",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "我先和真人伙伴聊这趟见闻、回应彼此，互动本身就是当时重点",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "我先去了自己没走过的可达舱段，想发现那边是什么",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "真实过去，不要求通关、完美改造或收齐；q/o仅实际真人联机，不把Riley/程序动物代入。联机不同星球同时行动不假可用。",
+          "interpretation_boundary": "仅用于实际在同一星球上合作过的玩家。单人玩家可换首次搭舱回顾，或在已满足条件时换跨星球回顾。",
+          "id": "PCRAFT9NV512.RESOURCE_RULES.ALT2"
+        },
+        {
+          "text": "回想你确实在免费建造中已能星际旅行，当时能去未见免费月球，也能继续当前基地、读真实信息或找个人实物缺项，你实际选过一项。哪件最接近当时重点？",
+          "scene": "实际让自己留下或出发的目标",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_rules",
+            "pcraft9n_moons",
+            "pcraft9n_logs",
+            "pcraft9n_effigy",
+            "pcraft9n_decoration",
+            "pcraft9n_one",
+            "pcraft9n_early"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我为个人模型集那个真正未得实物实际去找，不要求那趟得到",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "我先去了没去过的当前可达免费月球，想发现新环境",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我按自己星际基地的主题实际改了当时房件、灯与已有装饰的呈现",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我细读了当前星球已经取得的真实人物信息，想了解故事",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "已发生投入而非未来想法；q/o只真人且同星球联机，单人玩家可用本槽其它真实路径，不保证三候选覆盖全部经历。",
+          "interpretation_boundary": "只解释题中实际行动的投入重点，不据效率、成功、能力或现实品德判断；未体验不计分，继续换同槽其他已经核实的专属情境。",
+          "id": "PCRAFT9NV512.FREE_BUILD.V1"
+        },
+        {
+          "text": "回想你在免费建造里搭好第一间有门的舱后做的事。附近还有没走近的地形，基础部件可再放，选的房间目前空着也能按需拆建。什么最像你的实际做法？",
+          "scene": "免费放下第一座舱之后",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_early",
+            "pcraft9n_store",
+            "pcraft9n_deconstruct",
+            "pcraft9n_rules",
+            "pcraft9n_volcanic"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我接着用现有部件加了一小段入口，想尽快做成自己选定的进门路线",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "我走向舱外尚未去过的地形，想知道这个起步点附近还有哪里可去",
+              "signal": "wanderer"
+            },
+            {
+              "id": "C",
+              "label": "我照自己的荒野小屋风格选过门的朝向，想让进门时就能看到自己喜欢的景色",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "我把实际能拆的空房件拆一件再放回，亲自试试不同摆位的变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "回顾第一间实际建出的舱及附近区域已做过的行动。",
+          "interpretation_boundary": "单人和合作均可作答。先建好普通带门舱即可；只选实际做过的行动。",
+          "id": "PCRAFT9NV512.FREE_BUILD.ALT1"
+        },
+        {
+          "text": "回想你确实与真人伙伴在同一免费建造星球联机，两人都有实际可用房件和共同基地可做，也能各自探索，实际先选过一项。哪件已发生的事最接近？",
+          "scene": "同一星球上的真人合作经历",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "pcraft9n_rules",
+            "pcraft9n_moons",
+            "pcraft9n_logs",
+            "pcraft9n_effigy",
+            "pcraft9n_decoration",
+            "pcraft9n_one",
+            "pcraft9n_early"
+          ],
+          "modes": [
+            "free_build"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先走向自己没看过的可达地形，想发现那里是什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "我和真人伙伴商量共同基地这段先做哪里、谁接哪项，并实际协调了推进安排",
+              "signal": "quest_board"
+            },
+            {
+              "id": "C",
+              "label": "我先和真人伙伴聊这次创作见闻、回应彼此，互动本身就是重点",
+              "signal": "social_spark"
+            },
+            {
+              "id": "D",
+              "label": "我按自己的基地外观主题实际安排了当时可建房件的呈现",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "已发生投入而非未来想法；q/o只真人且同星球联机，单人玩家可用本槽其它真实路径，不保证三候选覆盖全部经历。",
+          "interpretation_boundary": "仅用于实际在同一星球上合作过的玩家。单人玩家可换首次搭舱回顾，或在已满足条件时换跨星球回顾。",
+          "id": "PCRAFT9NV512.FREE_BUILD.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+8540da28dc2d"
+}

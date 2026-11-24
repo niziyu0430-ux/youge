@@ -1,0 +1,1036 @@
+{
+  "id": "wingspanv5",
+  "title": "展翅翱翔",
+  "game_ids": [
+    "steam-1054490"
+  ],
+  "scope": "PC数字版本体牌组，不依赖扩展或联网",
+  "status": "first_release_content_reviewed",
+  "author_review": "Reviewed 36 scenes, rewrote four practice options to include explicit practice and improvement; player trials pending.",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "统一题包",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "8行动4回顾，各题两个替代；同一回合只选择一种行动，蛋位、食物、目标、卡牌均写为条件。",
+    "普通渡鸦及美洲白鹈鹕使用桌游附录所列译名；未实机逐卡核对中文译名与界面；对应题位有不依赖特定鸟种的替代。",
+    "未实际游玩，机制与人格信号仍需独立审阅、玩家试答；资源循环与收集信号可能集中。"
+  ],
+  "slots": [
+    {
+      "id": "WSP01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "WSP01.V1",
+          "scene": "开局保留",
+          "text": "开局你拿到五张鸟牌和五种食物，保留每张鸟牌需要放弃一个食物。你会怎样决定保留？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留下自己定好要先放进保护区的鸟及所需食物",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "比较鸟牌的栖地和能力，留下几张可能互相配合的鸟",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP01.V2",
+          "scene": "开局食物",
+          "text": "开局可保留五张鸟牌和五种食物中的共五项；你看到一张喜欢的鸟和它需要的食物。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "留足这种食物和那张鸟牌，围绕它安排前几次行动",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "多保留几张不同鸟种，尝试丰富这局的保护区",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP01.V3",
+          "scene": "起手奖金",
+          "text": "开局两张奖金卡中，一张与你留下的鸟牌吻合，另一张鼓励翼展大于65厘米的鸟。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES",
+            "WS79_APPENDIX"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择大翼展鸟目标，之后尝试收集符合条件的不同鸟种",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "选择与现有鸟牌吻合的目标，围绕它安排出牌",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "WSP02.V1",
+          "scene": "森林或湿地",
+          "text": "你手中有一只森林鸟和一只湿地鸟，都能支付食物和所需蛋，每回合只能出一只。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较两只鸟的能力与已有栖地，先放能接上现有能力链的那只",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先放自己尚未拥有、很想加入保护区的鸟种",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP02.V2",
+          "scene": "不同能力",
+          "text": "森林与草原各有空位，手中两只不同鸟都符合各自栖地并能付费。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打出自己很喜欢的那只新鸟，丰富保护区",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先比较鸟的能力与已有鸟，选择能连起来的组合",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP02.V3",
+          "scene": "草原伙伴",
+          "text": "草原仍有空位，你有两只可支付费用的草原鸟：一只能力可配合已有鸟，另一只是从没放过的鸟种。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较两只鸟和已有能力，尝试形成可重复触发的搭配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先放没有拥有过的鸟种，扩大鸟类收集",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "WSP03.V1",
+          "scene": "森林行动",
+          "text": "轮到你行动，手里有需要种子的鸟，喂鸟器里可取种子；草原上的鸟还有空蛋位。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "让草原鸟产蛋，逐步建立以后出鸟和计分所需的蛋储备",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "从森林取种子，准备之后支付这只鸟的食物费用",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP03.V2",
+          "scene": "蛋与食物",
+          "text": "当前你的鸟有空蛋位，喂鸟器里也有手中鸟所需食物。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "让草原产蛋，并计划把蛋留作后续出鸟的费用",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "取所需食物，先准备打出自己选中的鸟",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP03.V3",
+          "scene": "资源循环",
+          "text": "你已在森林和草原各放了鸟，森林可取鸟牌需要的食物，草原能产蛋。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "先产蛋，为后续一轮轮出鸟准备可持续的资源",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先取食物，向打出手中那只鸟的目标迈进一步",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "WSP04.V1",
+          "scene": "明牌或盲抽",
+          "text": "湿地行动允许你抽一张鸟牌：展示区有一种你尚未收集的鸟，也可以从牌堆顶抽取。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿展示区那只新鸟，慢慢增加保护区里的鸟种",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "从牌堆顶抽一张，再比较它和现有鸟的能力能否形成搭配",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP04.V2",
+          "scene": "湿地挑鸟",
+          "text": "你选择湿地抽牌，展示区有一只能配合已有鸟能力的鸟，也有你从没收集过的鸟。你会拿哪只？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿能和现有鸟能力形成组合的鸟，之后尝试连动",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "拿没收集过的鸟，增加可拥有的鸟种",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP04.V3",
+          "scene": "可见选择",
+          "text": "湿地展示区有两张不同鸟牌，一张能配合你已出的鸟，另一张是你喜欢的新鸟种；这次只能拿一张。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿能与已有鸟搭配的牌，继续完善能力链",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "拿喜欢的新鸟种，之后争取把它加入保护区",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "WSP05.V1",
+          "scene": "普通渡鸦",
+          "text": "你的普通渡鸦已在草原，其他鸟身上有蛋；本次草原行动触发它时，可以弃一枚其他鸟的蛋换两份食物。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_APPENDIX"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留这枚蛋，留作终局得分或后续出鸟费用",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "弃蛋换取需要的食物，继续运转产蛋与取食的资源循环",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP05.V2",
+          "scene": "美洲白鹈鹕",
+          "text": "你的美洲白鹈鹕能力被触发，个人储备中有鱼：可以弃一份鱼，将牌堆顶两张牌压在它下面。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_APPENDIX"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "支付一份鱼压入两张牌，继续维持获取鱼与积累压牌的循环",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "保留鱼，准备支付手中另一只鸟的食物费用",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP05.V3",
+          "scene": "公开鸟牌",
+          "text": "你在湿地抽牌时，展示区有一只自己尚未收集的鸟，也有一只与已出鸟能力相配的鸟，本次只能拿一张。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较另一只鸟与现有能力，拿它来尝试新的搭配",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "拿尚未收集过的鸟，争取之后将它加入保护区",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "WSP06.V1",
+          "scene": "鸟蛋位置",
+          "text": "你执行草原产蛋，能把新蛋放在两只都有空位的鸟上；其中一只的巢型符合本轮目标。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把蛋放在符合本轮目标的鸟上，争取完成该目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "B",
+              "label": "把蛋分配到自己喜欢的多只鸟上，欣赏保护区逐渐热闹起来",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP06.V2",
+          "scene": "额外产蛋",
+          "text": "本次草原行动的开放格允许支付一份食物多产一枚蛋；已有鸟有足够空位，你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "按基本数量产蛋并保留食物，慢慢欣赏鸟和栖地",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "支付食物多产一枚，积累下一次出鸟所需的蛋",
+              "signal": "stated_objective_progress"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP06.V3",
+          "scene": "额外抽牌",
+          "text": "湿地当前开放格允许弃一枚蛋多抽一张鸟牌；你有蛋，也可以不用这个转换。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "弃蛋多抽一张，寻找尚未收集过的新鸟",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "保留这枚蛋，为自己正在追求的本轮蛋数目标留着",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "WSP07.V1",
+          "scene": "回合目标",
+          "text": "本轮只剩一次行动，回合目标统计某种巢型上的蛋；你既能选择草原产蛋，也能打出手里符合费用的鸟。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "打出自己想纳入保护区的另一只鸟，增加鸟种",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "让符合巢型的鸟产蛋，争取本轮目标的得分",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP07.V2",
+          "scene": "终局取舍",
+          "text": "最后一轮只剩一次行动，已有鸟有可放蛋的空间，你手中也有可支付费用的新鸟。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "产蛋，尝试为自己设定的最终分数目标多积累几分",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "打出还没收集过的鸟种，让保护区的鸟更丰富",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP07.V3",
+          "scene": "奖金卡取舍",
+          "text": "终局前剩一次行动：手中一只鸟满足你的奖金卡条件且可支付费用，草原也能产蛋。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "让草原产蛋，静静看已有鸟和蛋铺满栖地",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "打出符合奖金卡条件的鸟，向自己定下的奖金目标推进",
+              "signal": "self_selected_goal_progress"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "WSP08.V1",
+          "scene": "本体对局",
+          "text": "打完一局后，你既可以重开本体对局，也可以先查看鸟牌资料。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_STEAM",
+            "WS79_BIRDS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "再开一局，复盘上局资源浪费，练习改善出鸟顺序",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "翻看鸟牌插画与资料，享受安静观察的时间",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP08.V2",
+          "scene": "再来一局",
+          "text": "刚结束一局本体游戏，你想接着玩。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_STEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "再玩一局，看看这次能遇见和收集哪些不同的鸟",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "再开一局，反复练习安排森林和湿地的行动，减少资源不足的失误",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP08.V3",
+          "scene": "重新尝试",
+          "text": "上一局你在森林行动中多次拿食物。下一局开始，你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_STEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "练习调整出鸟顺序，减少上局遇到的食物不足",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "优先把从未收集过的鸟加入保护区，认识更多鸟种",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "WSP09.V1",
+          "scene": "开局回顾",
+          "text": "回想开局选择保留哪些鸟牌和食物时，什么让你最投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "挑选一只想先打出的鸟，并为它留下对应食物",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "比较鸟的能力与栖地，设想可能形成的搭配",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP09.V2",
+          "scene": "打出鸟牌回顾",
+          "text": "回想支付食物、把一只鸟放进森林或湿地的经历，什么更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把不同鸟的能力组合起来，观察是否可以连动",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "看到不同鸟种逐渐加入自己的保护区",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP09.V3",
+          "scene": "选鸟回顾",
+          "text": "回想你从展示区选鸟并把它加入手牌的经历，什么更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "遇到并收下以前没收集过的鸟种",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "对照已有鸟能力，寻找能相互配合的新牌",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "WSP10.V1",
+          "scene": "森林回顾",
+          "text": "回想在森林行动中获得食物并触发已有鸟能力的经历，什么更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "观察拿食物、消耗食物与出鸟如何形成连续循环",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "看森林里逐渐出现多种不同的鸟",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP10.V2",
+          "scene": "草原回顾",
+          "text": "回想多次在草原产蛋，积累蛋并支付出鸟费用的经历，什么更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把蛋摆在喜欢的鸟上，享受安静观察栖地的过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "让产蛋与出鸟需要的资源逐步形成顺畅循环",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP10.V3",
+          "scene": "湿地回顾",
+          "text": "回想你反复选择湿地抽鸟牌、再利用食物打出鸟牌的过程，什么更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "安排抽牌和食物获取，让鸟牌持续进入栖地",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "每次抽牌时遇见不同鸟种的期待",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "WSP11.V1",
+          "scene": "渡鸦回顾",
+          "text": "回想普通渡鸦以其他鸟的蛋换取食物，并把食物用于其他鸟的经历，什么更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_APPENDIX"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "决定是否为自己选定的鸟保留一枚蛋",
+              "signal": "self_selected_goal_progress"
+            },
+            {
+              "id": "B",
+              "label": "观察产蛋、换食物和出鸟之间逐渐形成的循环",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP11.V2",
+          "scene": "鹈鹕回顾",
+          "text": "回想使用美洲白鹈鹕消耗鱼、压入两张牌的经历，什么更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_APPENDIX"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "将获取的鱼转化为压牌分数，维持自己的资源安排",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "观察鹈鹕并把它与其他不同鸟种一起留在保护区",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP11.V3",
+          "scene": "草原行动回顾",
+          "text": "回想你多次用草原行动产蛋，为后续打出鸟牌积累资源时，什么更让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "把蛋放到不同的鸟上，安静看着栖地逐渐成形",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "安排产蛋与出鸟的节奏，让之后的资源供应更顺畅",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    },
+    {
+      "id": "WSP12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "WSP12.V1",
+          "scene": "赛后回顾",
+          "text": "回想一局结束查看总分时，你最想回顾什么？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "比较不同栖地与鸟牌能力如何搭配，想下一局怎样调整",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "慢慢欣赏最终保护区里鸟类与栖地的画面",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP12.V2",
+          "scene": "重赛回顾",
+          "text": "回想重打一局并改变栖地发展顺序的经历，哪一点让你投入？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_RULES"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "慢慢看每局不同的鸟在保护区出现",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "比较前后两局资源和得分，并继续练习改善下一局的安排",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        },
+        {
+          "id": "WSP12.V3",
+          "scene": "鸟鸣回顾",
+          "text": "回想数字版中鸟牌展示和鸟鸣，什么更让你想继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "WS79_STEAM"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "label": "欣赏自己这一局遇见的不同鸟种及其声音",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "安静看着鸟栖在不同区域，享受缓慢的节奏",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "仅映射选项直接表达的游戏内偏好，不以胜负推断人格。",
+          "interpretation_boundary": "需实际体验相应牌组、动作或鸟牌；题中抽牌、费用、空位均为条件设定；未体验可换题。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+e32c3364b964"
+}

@@ -1,0 +1,999 @@
+{
+  "id": "starcraft2battlenetpc",
+  "title": "星际争霸2",
+  "game_ids": [
+    "starcraft-ii"
+  ],
+  "scope": "中国大陆战网 PC《星际争霸Ⅱ》现行客户端，兼顾原生免费《自由之翼》战役、常规对战和合作任务。每槽三个实际情境分别适用于战役、对战或合作亲历。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "战网 Windows 自由之翼、对战与合作",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "STARCRAFT2BATTLENETPC01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "零点行动的桥口",
+          "text": "《零点行动》撤离倒计时还在走。桥头一个地堡已经受损，附近有能维修的 SCV，兵营旁还有几名能进地堡的陆战队员，矿也够补一座。你先安排什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在桥口内侧再造一座地堡，给能调动的陆战队第二个射击点",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先让 SCV 修桥头地堡，陆战队进驻，把这条防线稳住",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「零点行动的桥口」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC01.V1"
+        },
+        {
+          "scene": "人族对战的第一笔矿",
+          "text": "常规一对一你用人类，兵营空闲，还空一格人口，也有可动用的 SCV 和能落补给站的斜坡空地。矿只够现在先做一件，你先？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_LIVE",
+            "STARCRAFT2BATTLENETPC_BUILD",
+            "STARCRAFT2BATTLENETPC_CTL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在斜坡把补给站补上，让后续增兵和堵口都有余量",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先下一个陆战队员支援现有前线，补给站由稍后回来的矿补",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「人族对战的第一笔矿」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC01.ALT1"
+        },
+        {
+          "scene": "夜前留住一个入口",
+          "text": "合作《亡者之夜》离入夜很近，你和队友都有部队。自家一侧还有缺口，外侧有一小排能快速拆的感染建筑。你负责这一路，先做哪件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_COOPT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先拆掉近处那排感染建筑，踩着天黑前的窗口再回守",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先撤回缺口，排好防线等第一波夜袭",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「夜前留住一个入口」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "警报后还有矿没走",
+          "text": "《恶魔游乐场》低地开始响熔岩预警，你已经在高地布好退路，最后一队 SCV 正在低矿区；手头有一小段时间还能操作。怎么撤？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "马上把低地工人全拉上高台，先保住下一轮采矿能力",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先撤最远的工人，留近坡的一批把已采好的矿送到仍在运作的基地后撤",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「警报后还有矿没走」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC02.V1"
+        },
+        {
+          "scene": "异虫供给将满的一批幼虫",
+          "text": "常规对战你用异虫，孵化场留有幼虫，人口还空一格，矿够先变一只工蜂或一只王虫。你先变哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_ZERG",
+            "STARCRAFT2BATTLENETPC_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把最后一格人口留给工蜂，让矿线先多拍一只",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先用幼虫变王虫，把下一批单位的补给预留出来",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「异虫供给将满的一批幼虫」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC02.ALT1"
+        },
+        {
+          "scene": "熔火退后谁先走下坡",
+          "text": "合作《熔火危机》熔岩刚退，近处低地有一颗水晶，计时还够。自己有工人和部队，敌人的小队还挡在它旁边，队友也准备往这边。你先派谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先派兵清理水晶边，再把一个工人叫下来采集",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先让工人贴坡等队友部队到身边，同时指挥自己的兵压住侧路",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「熔火退后谁先走下坡」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "三条轨道出现列车标记",
+          "text": "《火车大劫案》下一列火车线路已标出，你有游戏给的响尾蛇和能守基地的步兵。还能沿另一侧路到铁路前方。怎么用车队？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让响尾蛇绕侧路先到列车前方开火，留步兵在基地守家",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "让响尾蛇贴着已出现的列车跟进，发挥它移动时也能打的能力",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「三条轨道出现列车标记」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC03.V1"
+        },
+        {
+          "scene": "散开的追猎者进退",
+          "text": "常规对战你用星灵，追猎者已研究闪烁、技能可用，前面正敌对且视野里有开阔地。两只前排护盾刚掉，剩余部队离得不远。先怎么打？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_PROTOSS",
+            "STARCRAFT2BATTLENETPC_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "只把掉盾前排闪到队伍后方，剩余追猎者继续枪线",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "让整队先拉开，保留闪烁应付对方接下来的追击",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「散开的追猎者进退」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC03.ALT1"
+        },
+        {
+          "scene": "两列车同时驶上铁轨",
+          "text": "合作《湮灭快车》已进入两条主要轨道各出现一列车的波次。你和队友都有能打地面的完整部队，能沟通，两个方向都来得及到。你怎么分？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_EXPR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和队友先在同轨集中火力，然后一起转向仍在轨道里的另一列车",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "和队友各守一轨，同时截住两列车",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「两列车同时驶上铁轨」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "大爆发最后一段白天",
+          "text": "《大爆发》天快黑了，近处仍有受感染建筑，你已经编好一队恶火和一队能守基地的步兵。恶火离入口不远。你先怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOLCN2",
+            "STARCRAFT2BATTLENETPC_WOL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让恶火在白天末段再烧一排近处建筑，准备立刻回撤",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "提前把恶火和步兵都放回基地入口，夜袭解决后再出门",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「大爆发最后一段白天」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC04.V1"
+        },
+        {
+          "scene": "轨道指挥部剩一次能量",
+          "text": "常规对战中，轨道指挥部现在只够使用一次扫描或叫一次矿骡。矿线还没满，你又刚失去对方主矿附近的视野。先花能量做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_DETECT",
+            "STARCRAFT2BATTLENETPC_SCOUT",
+            "STARCRAFT2BATTLENETPC_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "扫对方关键建筑的位置，先看到对手正要做什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "把矿骡丢到己方安全矿区，先补眼下的矿收入",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「轨道指挥部剩一次能量」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC04.ALT1"
+        },
+        {
+          "scene": "科哈尔看得见的裂片",
+          "text": "合作《克哈裂痕》下一组虚空裂片已经标出。基地正有一队不远的敌人过来，你和队友都能动，当前剩余时间允许先处理一边。你怎么请队友分头？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_CVID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让队友回防，你先带兵打能到的裂片",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "和队友先清完基地来袭部队，再集合拆这组裂片",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「科哈尔看得见的裂片」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "实验室第一档异虫研究",
+          "text": "休伯利安号异虫研究刚解锁第一档，可选让地堡更耐打，或在地堡顶加自动炮塔。你还没进行这档永久选择，手头一批部队以后会经常防守。你会？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_TECH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选地堡顶的自动炮塔，让空着的副防线也能自己开火",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "选地堡加固，靠驻军和维修维持一个更耐打的火力点",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「实验室第一档异虫研究」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC05.V1"
+        },
+        {
+          "scene": "女王只有一次施法能量",
+          "text": "常规对战中，己方女王这一刻只有一次技能能量，孵化场可以注卵，分矿前也有现成菌毯能放肿瘤。你先用在哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_QUEEN",
+            "STARCRAFT2BATTLENETPC_CREEP",
+            "STARCRAFT2BATTLENETPC_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先给孵化场注卵，准备下一批工蜂和部队",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先在菌毯边布肿瘤，把视野和地面机动延向分矿",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「女王只有一次施法能量」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC05.ALT1"
+        },
+        {
+          "scene": "吉娜拉身边是否要留一个",
+          "text": "合作《升格之链》双方有地面部队来到吉娜拉附近。你和队友都能留单位在她身边，前面同时有阻路的敌人。你会怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_CVID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "两人先合兵处理眼前敌人，清开后再把队伍带回她身边",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "两边各留一个可用单位推动吉娜拉，其余分去打前面障碍",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「吉娜拉身边是否要留一个」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "海文听完双方以后的决定",
+          "text": "自由之翼海文分岔已出现。汉森请你保护殖民地，塞兰迪斯要求阻止感染扩散。你点哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选择和汉森一起保护殖民者，迎战正准备净化他们的星灵",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "接受塞兰迪斯的请求，由雷诺一方主动清除受感染的殖民地",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「海文听完双方以后的决定」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC06.V1"
+        },
+        {
+          "scene": "观察者是留下还是过去",
+          "text": "常规对战你用星灵，观察者跟着地面部队；附近已看到两片可能有潜地单位的区域，前线仍在安全地带，观察者可移动。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_DETECT",
+            "STARCRAFT2BATTLENETPC_SCOUT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让观察者先探较远那片，确定有没有潜地伏击再安排部队",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "让观察者继续伴主力，让主力先处理近处的威胁",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「观察者是留下还是过去」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC06.ALT1"
+        },
+        {
+          "scene": "天锁刚清出两边的路",
+          "text": "《天界封锁》里你和队友刚清出一座可占的空锁。附近另一座已锁定的天锁有敌军靠近，但还没被夺走。从这里两处都来得及到。你主张先去哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_LOCK"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "两家各派单位进眼前的圈，拿了新锁再转去守旧锁",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "两家先回头清威胁旧锁的敌军，稳住再回来一起占新锁",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「天锁刚清出两边的路」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "殖民者车队刚从门口出发",
+          "text": "单人《大撤离》运输车刚出门，火蝠和陆战队都跟到了路口，基地后方已有守军。前面一段开始能见到异虫。先怎样护送？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "让陆战队展开先清车旁的远处目标，火蝠贴住运输车处理冲进来的小群",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把火蝠送到车前烧近身异虫，让陆战队从后方补射",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「殖民者车队刚从门口出发」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC07.V1"
+        },
+        {
+          "scene": "医疗运输机该装谁",
+          "text": "对战你用人类，医疗运输机已到，手下有一队健康步兵和一队残血步兵。安全撤口与一处绕行落点都在短途范围。你先让运输机做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CTL",
+            "STARCRAFT2BATTLENETPC_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留在主力旁，先用治疗把残血步兵拉回可战状态",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先装健康的一小队绕去已确认可落地的侧路，残血队暂住安全处",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「医疗运输机该装谁」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC07.ALT1"
+        },
+        {
+          "scene": "净化装置停在终端",
+          "text": "《净网行动》里奥罗娜的载具正在终端净化，队友留了兵。近处有额外下载奖励，已有资源足够启动，防线暂时能顶。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_MAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把队伍继续留在净化终端，到本轮敌人打完再考虑奖励点",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "跟队友说好以后，分一队过去处理奖金点，用资源开始下载人格",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「净化装置停在终端」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "托什和诺娃各求一件事",
+          "text": "自由之翼舰桥上诺娃与托什的两条分支都已显示。你现在可以帮托什越狱救幽魂，也可以接诺娃的行动去摧毁幽魂设施。你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "帮托什攻打新福尔松，把被关押的幽魂救出来",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "帮诺娃切断幽魂计划，去摧毁制造和控制他们的关键设备",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「托什和诺娃各求一件事」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC08.V1"
+        },
+        {
+          "scene": "赛后先看回放还是排下一局",
+          "text": "常规对战输了，而赛后画面已经显示回放和再来一局。你刚注意到对方扩张比你预计早，想用一会儿处理刚打完这场。怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_REPLAY",
+            "STARCRAFT2BATTLENETPC_SCOUT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "带着这个猜测直接再打同类对战，下局提前派单位去验证",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先看回放，从对方视角找到漏看扩张的具体时间",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「赛后先看回放还是排下一局」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC08.ALT1"
+        },
+        {
+          "scene": "装置零件与奖励列车同来",
+          "text": "《聚铁成兵》这一轮还需零件，队友正在有零件的区域清守军，奖励列车也已经进图。你有一队能拦车的地面部队，现在两边来得及选。你先？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_PART"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和队友分工，你转去拦奖励列车，他继续收零件",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先带队帮清阻挡零件的守军，保住启动巴利俄斯的进度",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「装置零件与奖励列车同来」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "回玛·萨拉第一关看什么",
+          "text": "回想《自由日》你跟雷诺沿街前进，打过帝国驻军，也拆过宣传全息牌。重走玛·萨拉开场，你最想多留时间在哪？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重做雷诺与小队的第一场街仗，练先打威胁谁",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "沿街找宣传全息牌，重看反抗是怎样被带到居民身边",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「回玛·萨拉第一关看什么」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC09.V1"
+        },
+        {
+          "scene": "二对二谁先打信号",
+          "text": "回想你曾和朋友打常规二对二，既分头查过对手位置，也在一个集合点合兵突袭。下一场更想先把哪件事做细？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_TEAM",
+            "STARCRAFT2BATTLENETPC_SCOUT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和队友讲好合兵的点与先打谁，再在地图上打信号",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先分头探各自没查过的入口和分矿，把视野拼起来",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「二对二谁先打信号」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC09.ALT1"
+        },
+        {
+          "scene": "虚空降临的科研船与穿梭机",
+          "text": "回想《虚空降临》你们拦过主线穿梭机，也护送过额外科研船。如果重新匹配到这一图，你更想重做哪段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_LAUNCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "和队友重分科研船护航，让它到现场时地面已有人接",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "重新按穿梭机去向布置对空，尽量提前到拦截点",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「虚空降临的科研船与穿梭机」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "深入虫穴的小队",
+          "text": "回想自由之翼潜入查尔虫穴埋设炸药，你用过雷诺的小队，也跟着他们往撤出口移动。若重来这段，你更想回到哪一刻？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再控雷诺、泰凯斯、斯旺和斯台特曼推进到放置炸药的地点",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "回到炸药布完后的撤离，重听几人在虫巢里的对话",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「深入虫穴的小队」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC10.V1"
+        },
+        {
+          "scene": "菌毯和兵线的第一次团战",
+          "text": "回想一次你用异虫，分矿前连起过菌毯，也在同一处用两队单位包过对手。重走这场时，哪步更想练？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CREEP",
+            "STARCRAFT2BATTLENETPC_CTL",
+            "STARCRAFT2BATTLENETPC_LIVE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练进场时两队从不同方向同时合围，争取先挤开后排",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "重做菌毯连接和视野，让自己在开打前能看到靠近路线",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「菌毯和兵线的第一次团战」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC10.ALT1"
+        },
+        {
+          "scene": "往日神庙外的空档",
+          "text": "回想《往日神庙》，你既守过多路来敌，也出门打过奖励的泽尼斯巨石。下一次更想重新做顺哪个？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_CVID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "练每波兵到之前来回换防，神庙路口少漏一边",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "从清过的路线去摸巨石，掌握什么时候能在下一波回来",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「往日神庙外的空档」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "媒体轰炸最后一个塔还没完",
+          "text": "回想重打《媒体轰炸》时，你曾留最后一个广播台没上传，去地图东南打过中立科学设施并捡到秘密文件，也正面打过广播塔守军。复刻这关，你更愿先重做哪段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_SHROUD",
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再对付广播塔守军，练把部队带到上传点的时机",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "再去东南摧毁科学设施、拾起文件，重走解锁隐藏任务的路",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「媒体轰炸最后一个塔还没完」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC11.V1"
+        },
+        {
+          "scene": "扫描和主动侦察比哪种",
+          "text": "回想一盘人类对战，你在轨道指挥部用过扫描找敌方科技，也用腾得出手的 SCV 查过二矿。下一盘更想提前安排哪种侦察？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_SCOUT",
+            "STARCRAFT2BATTLENETPC_DETECT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给轨道指挥部留扫描能量，把没看清的科技建筑一次扫出来",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "安排 SCV 先走侧路看二矿，想了解哪些位置不靠扫描也能确认",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「扫描和主动侦察比哪种」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC11.ALT1"
+        },
+        {
+          "scene": "移民船预热时的防区",
+          "text": "回想《营救矿工》里你为预热的移民船守过近处，也从附近已清的位置出击截过一波来敌。如果重打一局，你愿花时间再练哪边？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_COOPT"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重跑从前面截击的一段，练把敌人留在离船较远的地方",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "重新站到移民船旁编防，保护预热到起飞",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「移民船预热时的防区」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "STARCRAFT2BATTLENETPC12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "查尔临战的那条命令",
+          "text": "回想查尔进攻前有两个方式影响《背水一战》。如果回到可在战役星图选其一时，你更想亲手试哪路？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_WOL",
+            "STARCRAFT2BATTLENETPC_WOLCN2"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "去毁掉轨道平台，先减少决战里要应付的空中威胁",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "带小队去虫穴炸掉坑道，先减少决战里从地下来的威胁",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「查尔临战的那条命令」中的实际行动与取舍。",
+          "interpretation_boundary": "按《自由之翼》当前存档或题面已完成的任务，按单人战役机制回答。若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC12.V1"
+        },
+        {
+          "scene": "分矿被发现后怎么复盘",
+          "text": "回想一次常规对战，敌人打断你开二矿，回放能看小地图，也能在那场战斗切视角。对于这盘录像你最想反复看哪段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_REPLAY",
+            "STARCRAFT2BATTLENETPC_SCOUT",
+            "STARCRAFT2BATTLENETPC_TEAM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "看自己的经济和侦察安排，核对哪一步让后续防守跟不上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "切到对方视角，找到他第一次看到我分矿的位置和路径",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「分矿被发现后怎么复盘」中的实际行动与取舍。",
+          "interpretation_boundary": "按战网常规对战的阵营和题面已完成的科技回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC12.ALT1"
+        },
+        {
+          "scene": "重锤军士要塞最后一段",
+          "text": "回想《虚空撕裂》你保过重锤军士的要塞，一局里也打过额外的大天使机甲。再次遇到这张图更想重玩哪一段？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "STARCRAFT2BATTLENETPC_CNC",
+            "STARCRAFT2BATTLENETPC_CVID"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再把当时最快威胁要塞的那一组虚空撕裂者清掉",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "重打大天使机甲的那场交火，跟队友试试哪个出兵时机更顺",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「重锤军士要塞最后一段」中的实际行动与取舍。",
+          "interpretation_boundary": "按合作任务本局已有的指挥官部队、队友与目标回答；若没经历过可以换题。",
+          "id": "STARCRAFT2BATTLENETPC12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+c8915c8c5377"
+}

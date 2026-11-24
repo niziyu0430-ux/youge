@@ -1,0 +1,1008 @@
+{
+  "id": "dotaunderlordspcroot",
+  "title": "刀塔霸业",
+  "game_ids": [
+    "steam-1046930"
+  ],
+  "scope": "Valve Steam Windows 正式《刀塔霸业》赛季一，公共构建 12606359，采用正式版标准、快速淘汰、双打、自定义自由模式与已实际解锁的街头闯荡。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Steam PC 标准、快速淘汰与双打",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "DOTAUNDERLORDSPCROOT01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "第三只同名英雄和新联盟",
+          "text": "标准局备战阶段，场上有一只你常用的一星英雄，板凳上还有一只同名的一星，商店出了第三只。另一名可买的英雄已经有位置能上场开联盟。金钱只够先买一个，你选谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_SEASON",
+            "DOTAUNDERLORDSPCROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先买能上场激活联盟的新英雄，把那两只同名棋子留给后续商店",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先买第三只，把这三只同名一星合成二星，再给它安排场上的位置",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「第三只同名英雄和新联盟」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT01.V1"
+        },
+        {
+          "scene": "快速淘汰的初始班底",
+          "text": "快速淘汰开局能选一套初始阵容。选项里一套有你熟悉的联盟方向，另一套是没用顺过的英雄组合。你先拿哪套？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_KOHISTORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选能接上自己熟悉联盟的班底，在已有组合上继续买棋子",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "选自己少用过的班底，看看前几轮能接出哪条新联盟",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「快速淘汰的初始班底」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT01.ALT1"
+        },
+        {
+          "scene": "金币还是一名现成棋子",
+          "text": "双打时朋友想补一名英雄。你手上正有他缺的那只，界面允许转交；他板凳也有空。你也可以直接发些金钱。你先给哪样？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_DUO",
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把一部分金币转过去，他可自己看下一轮在升级和商店之间怎么花",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "直接把他缺、我方又允许转出的那名英雄送去，让他立刻进场",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「金币还是一名现成棋子」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "快速淘汰剩余两次失利",
+          "text": "快速淘汰中再输两次就会出局。商店有一个能直接上场的英雄，也能花金钱刷新找主力的升星牌。你先做哪件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_KOHISTORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先买能上场补位的棋子，让下一轮棋盘马上调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先刷一次找已经在养的主力，想把它升起来再改阵",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「快速淘汰剩余两次失利」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT02.V1"
+        },
+        {
+          "scene": "对同一张棋局做改动",
+          "text": "你在自由模式摆好要测试的两边队伍，这次已经可以开战，也能先换一件装备。你只想用这一轮做一个判断，先怎么跑？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_DUO",
+            "DOTAUNDERLORDSPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先换目标英雄的装备，观察这一场它改后能参与什么",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "保持目前站位和装备，先打一次当对照",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「对同一张棋局做改动」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT02.ALT1"
+        },
+        {
+          "scene": "标准回合的物品重选",
+          "text": "标准的物品选择界面出现三件，现有一件能给刚上场的前排，另一种你想要的方向在首轮没出。重选按钮仍可用，换掉后三件不会留下。你怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_SEASON",
+            "DOTAUNDERLORDSPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "收下眼前能立即分给前排的那一件",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "用本轮重选，看是否出现更适合当前阵容职责的装备",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「标准回合的物品重选」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "双打替补席几乎满了",
+          "text": "双打中朋友只剩一个空板凳位，商店里有他打算买的低星英雄。你这边有另一只他想接、现在可转交的英雄，朋友还没买。你会先怎么配合？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_DUO",
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先留着待送英雄，让朋友把眼前商店的那只买下来，等他腾位后再转",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先让朋友确认这回合更要哪只；如果决定要我的，就在空位还在时送过去",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「双打替补席几乎满了」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT03.V1"
+        },
+        {
+          "scene": "标准商店锁定与自然刷新",
+          "text": "标准局备战阶段，商店有两名你正想买的英雄，但要等下轮收入才买得起。当前可以锁定，也可以留它自动刷新。你选哪种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_STYLE",
+            "DOTAUNDERLORDSPCROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "锁住这一页，等拿到金币优先买眼前已经在养的人",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "让商店按回合刷新，保留转成另一类阵容的机会",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「标准商店锁定与自然刷新」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT03.ALT1"
+        },
+        {
+          "scene": "快速淘汰物品给谁",
+          "text": "快速淘汰的物品已经选好，是一件能补输出的装备。盘上一个角色能活得较久，另一个是这轮刚完成升星的输出位置，两人都还没装备。你给谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给刚升完星、现在承担更多输出的英雄，先试中段能打多少",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先给能稳定站到后半段的人，多留一点持续表现",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「快速淘汰物品给谁」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "两种霸主可以接同一队",
+          "text": "标准局到了霸主选择，当前显示一个能补现有前排的流派，也有一个支援自己正在养的输出队伍的流派。你只挑一次，先看哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STYLE",
+            "DOTAUNDERLORDSPCROOT_SEASON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选能填上前面空位的那个，补当前前后排的缺口",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "选支援现有输出的那个，让已成形的打法继续加深",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「两种霸主可以接同一队」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT04.V1"
+        },
+        {
+          "scene": "快速淘汰的第二轮班底",
+          "text": "快速淘汰已到可选霸主的画面。两个当前流派你都能选，一个专补这套快速班底缺少的支援，一个的打法你在线下练过。你怎么挑？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_STYLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选已操作熟悉的流派，先用它的站位习惯应对这一盘",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "选能补开局班底的流派，看它怎样和这几个英雄一起进场",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「快速淘汰的第二轮班底」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT04.ALT1"
+        },
+        {
+          "scene": "街头闯荡的两个开放节点",
+          "text": "街头闯荡地图上，这次已经开放一个棋局谜题和一处街头混战。你今晚只能玩一项。会先进哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_SEASON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先进谜题，尝试在给定条件里拆开那套固定阵容",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先进街头混战，往这个街区还没拿下的路线走",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「街头闯荡的两个开放节点」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "快速淘汰对手老从一侧进",
+          "text": "快速淘汰上轮你被绕到了后排，下一轮对手还没确定。现在能重新换棋子的位置，换到两边也不影响已激活联盟。你先怎么布？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把核心换到另一边，试一轮位置变化能躲掉多少压力",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先把防守英雄挪去上回被绕的边线",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「快速淘汰对手老从一侧进」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT05.V1"
+        },
+        {
+          "scene": "发金币后谁升级",
+          "text": "双打备战时，你差一点金钱就能买到眼前的升星棋子，朋友也有想买的英雄。你想先按游戏里的请求，还是留到下一轮？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_DUO",
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先请朋友分一点金钱给我，和他确认这回合能不能同时办完两边的事",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "这一轮先不向伙伴请求金钱，让他用自己的商店做阵，我等下轮再找",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「发金币后谁升级」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT05.ALT1"
+        },
+        {
+          "scene": "靠近利息门槛能不能守一轮",
+          "text": "标准局还在备战，金钱刚好踩在下一档利息。现在买下这名能即刻开联盟的英雄，预计利息就会少一档。你还有血量余量。先怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STYLE",
+            "DOTAUNDERLORDSPCROOT_SEASON",
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "买下这只能激活联盟的英雄，拿下一轮实战来测阵",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "留住金币和利息，先用现有棋盘再过一轮",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「靠近利息门槛能不能守一轮」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "谜题阵容里的第一条假设",
+          "text": "你在已经解锁的街头闯荡棋局谜题，棋子和物品里都有当前仍可调整的内容。上次只差一小步。你重试时先动哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_SEASON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先换前后排，沿用上回的物品来隔离这个变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "站位先照上回，把关键的那件物品换给另一个人",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「谜题阵容里的第一条假设」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT06.V1"
+        },
+        {
+          "scene": "标准局的前排装备挪法",
+          "text": "这轮准备阶段，新上的前排还没装备；老前排穿着你唯一的抗性装。两个角色都能穿，当前没有卖掉任何人。你想先怎么放？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_SEASON",
+            "DOTAUNDERLORDSPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "装备留给一直用顺的那位，先只试新前排的站位",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "把抗性装调给新的前排，让它测试现在能不能担当主坦",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「标准局的前排装备挪法」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT06.ALT1"
+        },
+        {
+          "scene": "刷新还是沿现阵换一角",
+          "text": "快速淘汰又进入备战阶段。眼前商店的一只英雄能直接替换你最薄前排的一个位置，现在也可以重抽商店。你先动哪边？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_PATCH",
+            "DOTAUNDERLORDSPCROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先买到眼前合适的棋子，把能调整的那一格换掉",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "刷新商店，找比眼前更符合目前联盟的候选",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "记录玩家在「刷新还是沿现阵换一角」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "标准的升人口和追星",
+          "text": "标准局下轮前，棋盘位置快不够。手上的金币可以推进升级进度，也可以买下已在商店出现的升星目标。先花哪一笔？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_STYLE",
+            "DOTAUNDERLORDSPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先买同名棋子，把现有主力合起来再考虑加人",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先投升级，把目标放在开出下一格上场位置",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「标准的升人口和追星」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT07.V1"
+        },
+        {
+          "scene": "第二道隔墙摆核心还是侧线",
+          "text": "快速淘汰备战阶段你拿到了可部署的「隔墙」。第一道已经摆好了，还要给第二道选格子。两个空位现在都能放，一个靠核心英雄，另一个在侧线。你放哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_PATCH",
+            "DOTAUNDERLORDSPCROOT_ROTATION",
+            "DOTAUNDERLORDSPCROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把第二道也放到核心附近，想让它身边多一处阻隔",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把第二道放到侧线，试试另一边绕行时棋子会怎么走",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「第二道隔墙摆核心还是侧线」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT07.ALT1"
+        },
+        {
+          "scene": "并排查看两块棋盘",
+          "text": "双打目前能查看同伴棋盘。他已开始攒一组有进展的英雄，你也有一组路线相近、尚未接成的牌。你们只有一轮可协商，先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_DUO",
+            "DOTAUNDERLORDSPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先说自己打算找一条不同的连线，下一次商店各看一边",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先问对方缺哪张，把能转的棋子留给更接近完成的人",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「并排查看两块棋盘」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "快局低血不是同一回事",
+          "text": "快局只余一次可以输。商店出了能即时上场的棋子，也有一只如果下一次出同名才会升级的棋子。金币不足同时买两只。你先拿谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_STYLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿能当轮上场补位的那一个，先打这盘还没结的回合",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "拿能继续养的同名棋子，赌下一次买牌能把它合上",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「快局低血不是同一回事」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT08.V1"
+        },
+        {
+          "scene": "走向新的街区解锁",
+          "text": "你在街头闯荡已经打开一个街区。这里有一场待通关的街头混战，也有一项能继续积累进度的挑战。今晚准备先推进一个，你选哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_SEASON"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先做可继续的挑战目标，把眼前那段街区进度推进",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先进混战，把现在过不去的那局重新打一次",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「走向新的街区解锁」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT08.ALT1"
+        },
+        {
+          "scene": "标准对方快合三星",
+          "text": "标准局你查看其余存活棋盘，看到一位对手也在攒本来想追的低阶英雄。这轮你还能按现状刷商店或先给成形的另一位买替补。你会怎么开支？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_PATCH",
+            "DOTAUNDERLORDSPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先继续找我已经攒好的那一组，看到合适的才买",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先买能扩另一条联盟的棋子，为改阵准备位置",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「标准对方快合三星」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "双打里最有用的一次转交",
+          "text": "回想你玩过的双打，朋友既帮你过了买牌缺钱的时候，也给过能当轮补上的英雄。如果今天换你先支援，你更常给哪类？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_DUO",
+            "DOTAUNDERLORDSPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "优先等一次关键准备，把金币给对方灵活处理",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先听他现在缺哪一个能立即上场的棋子，再按他报的给",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「双打里最有用的一次转交」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT09.V1"
+        },
+        {
+          "scene": "标准复盘是阵形还是金币",
+          "text": "回想一局标准，你在掉血前还有利息，也多次改过前后排站位。如果要为下一局保留一项经验，你会先保留哪种安排？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_STYLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "保留先看金币档位的习惯，再决定哪回合出手",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "保留先看阵形保护谁的习惯，再决定需要哪些棋子",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「标准复盘是阵形还是金币」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT09.ALT1"
+        },
+        {
+          "scene": "快速淘汰的一次好开局",
+          "text": "回想快速淘汰有一局你用完初始班底，又从商店补了几名星级更高的英雄。下一次同类开局你会更愿意练什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "多试另一套班底，比较各自第一轮能发展到什么样",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "再熟悉这套开局怎么站、先把谁放到前面",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「快速淘汰的一次好开局」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "选完第一件装备的印象",
+          "text": "回想标准的物品轮，当时你在挑合当前阵的装备和保留用重选找另一档之间选过。现在遇到相似的一轮，你更常怎么做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_SEASON",
+            "DOTAUNDERLORDSPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先锁定和我当前主力匹配的装备，减少改阵时的浪费",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "用掉重选机会，看看是否能让阵容转出更有意思的一路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「选完第一件装备的印象」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT10.V1"
+        },
+        {
+          "scene": "四次失利之前最想验证",
+          "text": "在快速淘汰里你打完一轮就能看到还有几次失利空间。回想局势紧张时，你更常用下一轮验证什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "换现有的一小组棋子，让联盟调整在实战直接出结果",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "只换关键棋子位置，比较这回合与上回输在什么地方",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「四次失利之前最想验证」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT10.ALT1"
+        },
+        {
+          "scene": "地图收藏先看哪一处",
+          "text": "回想你在街头闯荡里看到两条可继续玩的奖励路线。一条可以解锁霸主外观，另一条可以解锁你还没收集的悬赏海报图样。你更想先完成哪条？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_SEASON",
+            "DOTAUNDERLORDSPCROOT_UI"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "按霸主外观所在的路线先推进，看它装上的样子",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先拿悬赏海报，想把这个街区相关的一组物品补齐",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「地图收藏先看哪一处」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "快局的最后一条反馈",
+          "text": "回想一局快速淘汰结束时，最后两轮你改变了物品分配，也临时选了第二种站位。下局如果只能先重试一种，你怎么选？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先重新走那一轮站位，练怎样在准备时间里快速调整",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先试相同物品在不同位置英雄上的表现",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录玩家在「快局的最后一条反馈」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT11.V1"
+        },
+        {
+          "scene": "双打最常从谁的板凳看起",
+          "text": "玩双打时两人阵容都已铺开，先前你既有主动看同伴板凳，也有先按自己的棋子规划再联系的时候。类似局面下你更常怎么做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_DUO",
+            "DOTAUNDERLORDSPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "优先问朋友眼下在合什么，看能不能马上帮到他",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先把自己下一回合要买的定好，再告诉朋友哪些可以转",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「双打最常从谁的板凳看起」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT11.ALT1"
+        },
+        {
+          "scene": "标准老班底和新联盟",
+          "text": "回想标准局有个旧班底已成形，也有一条没试过的联盟开始显出缺一格。只在下一轮先追一条，你更经常怎么做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_PATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给新联盟保留可以买牌的空间，看看这一局能不能开出来",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "继续腾资源给旧班底，先把熟悉的棋子完善",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「标准老班底和新联盟」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "DOTAUNDERLORDSPCROOT12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "自由模式继续试哪一种",
+          "text": "回想你进自由模式放过固定两支阵，已经看到过几次胜负。若要把这个棋盘改完再试，你更常留住哪类问题？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_DUO",
+            "DOTAUNDERLORDSPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留一边不动，每次只测试一个装备或站位变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "两边各换上一组不同的英雄，看看组合放一起会不会出现新局面",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「自由模式继续试哪一种」中的实际行动与取舍。",
+          "interpretation_boundary": "按已经体验的双打、街头闯荡或自由模式作答。",
+          "id": "DOTAUNDERLORDSPCROOT12.V1"
+        },
+        {
+          "scene": "标准排位和离线对练",
+          "text": "回想你已经能进标准排位，也用电脑对手试过阵。你对一套刚从低阶棋子过渡到后期的打法还有问题。今晚通常先去哪个？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_STORE",
+            "DOTAUNDERLORDSPCROOT_LADDER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先和电脑打一轮，不耗排位分来练这套过渡",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先加入标准排位，拿真实对手的变化检验进度",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「标准排位和离线对练」中的实际行动与取舍。",
+          "interpretation_boundary": "按刀塔霸业标准模式当局商店、棋盘或物品面板作答。",
+          "id": "DOTAUNDERLORDSPCROOT12.ALT1"
+        },
+        {
+          "scene": "快速淘汰最想留下的打法",
+          "text": "回想有局快速淘汰你靠早期英雄很快做出升星，也有局靠临时转进新联盟走得远。再看初始选择时，你通常先想复现哪一次？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "DOTAUNDERLORDSPCROOT_KO",
+            "DOTAUNDERLORDSPCROOT_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先找可从开局留下持续养的英雄，把已有尝试做得更稳",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先看不同班底怎样临时接一条新联盟，继续练转换",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「快速淘汰最想留下的打法」中的实际行动与取舍。",
+          "interpretation_boundary": "按玩过的快速淘汰状态作答，特定英雄和物品以那场已显示的为准。",
+          "id": "DOTAUNDERLORDSPCROOT12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+138ecf844755"
+}

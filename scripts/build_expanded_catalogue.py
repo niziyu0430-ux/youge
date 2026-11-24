@@ -424,6 +424,10 @@ def main():
     category_names = {category['id']:category['name'] for category in categories}
     published, candidates = [], []
     for game in games.values():
+        if game['id'] == 'steam-1506980':
+            # The developer describes 葬花 as a visual novel. Ignore the FPS user tag.
+            game['category_ids'] = [category for category in game['category_ids'] if category != 'fps']
+            game['mechanic_family'] = 'story'
         game.setdefault('version_type', edition_details(game['original_title'])[0])
         game.setdefault('version_label', edition_details(game['original_title'])[1])
         game.setdefault('work_id',game['id'])
@@ -468,11 +472,35 @@ def main():
                   'chinese_audience_threshold':manifest['chinese_review_minimum'],
                   'threshold_meaning':'仅作有中文玩家受众的工程筛选证据，不等于总体知名度或97%覆盖率',
                   'sources_frozen':True,'build_offline':True,'data_release_separate_from_instrument':True}}
+    from identity_policy import apply_catalogue, archive_cod_launcher
+    apply_catalogue(output)
+    # Reviewed community names remain searchable across catalogue rebuilds.
+    overrides = read(BASE/'reviewed-name-overrides.json', {})
+    for game in output['games']:
+        override = overrides.get(game['id'])
+        if not override:
+            continue
+        apply_name_override(game, override)
+    archive_cod_launcher(output)
     write(ROOT/'config/games.v0.5.0.json',output)
     write(BASE/'identity-issues.json',identity_issues)
     write(BASE/'excluded-products.json',excluded)
     write_exports(output)
     print(json.dumps({key:output[key] for key in ['game_count','candidate_count','category_count','category_assignment_count']},ensure_ascii=False))
+
+
+def apply_name_override(game, override):
+    game['display_title'] = override['display_title']
+    if 'name_status' in override:
+        game['name_status'] = override['name_status']
+    if 'display_original_title' in override:
+        game['display_original_title'] = override['display_original_title']
+    removed = set(override.get('remove_aliases', ()))
+    aliases = [alias for alias in game['aliases'] if alias not in removed]
+    game['aliases'] = list(dict.fromkeys([*aliases, override['display_title'], *override['aliases']]))
+    evidence = override['name_evidence']
+    if evidence not in game.setdefault('name_evidence', []):
+        game['name_evidence'].append(evidence)
 
 
 def apply_relationships(games):
@@ -509,7 +537,7 @@ def write_exports(catalogue):
         for identifier in category['game_ids']:
             game=by_id[identifier]
             aliases='、'.join(alias for alias in game['aliases'] if alias not in [game['title'],game['original_title']])
-            row=[game['title'],game['original_title'],aliases,game['version_label'],f'[产品资料]({game["source_url"]})']
+            row=[game.get('display_title') or game['title'],game.get('display_original_title',game['original_title']),aliases,game['version_label'],f'[产品资料]({game["source_url"]})']
             lines.append('| '+' | '.join(value.replace('|',' / ').replace('\n',' ') for value in row)+' |')
         lines.append('')
     (ROOT/'exports/游格-游戏分类清单.md').write_text('\n'.join(lines),encoding='utf-8')

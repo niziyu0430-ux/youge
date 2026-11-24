@@ -20,6 +20,8 @@ def questions(game_id=None,raw=None,instrument=None,mode_id=None):
         if not isinstance(raw.get('versions'),dict):raise InputError('答卷缺少题库版本。')
         instrument=raw['versions'].get('instrument')
         game_id=raw.get('game_id')
+    elif isinstance(game_id,str) and game_id in v04.catalog().get('search_redirects', {}):
+        raise InputError('请在作品库搜索并选择你玩过的具体作品。')
     if instrument=='0.5.0' or (instrument is None and v05.pack_for(game_id)):
         return v05.questions(game_id,raw,mode_id)
     if instrument not in (None,'0.4.0'):raise InputError('这份答卷的题库版本暂不支持。')

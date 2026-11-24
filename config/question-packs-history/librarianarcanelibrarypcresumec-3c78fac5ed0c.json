@@ -1,0 +1,1018 @@
+{
+  "id": "librarianarcanelibrarypcresumec",
+  "title": "图书管理员：整理魔法图书馆吧！",
+  "game_ids": [
+    "steam-4197610"
+  ],
+  "scope": "ArtRising《图书管理员：整理魔法图书馆吧！》Steam Windows App 4197610，正式 1.0.13/public 24263394。图书馆本体普通整理、可见分类、魔法、保存、设置与档内完成。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "本体 · 魔法图书馆",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "刚进馆先处理哪一角",
+          "text": "校长留下了整理全馆的要求。你刚能自己捡书，眼前一边是教程让你试排的一套，一边是散在脚边的书。先从哪里开始？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先捡手边另一册读书脊，想弄明白散书是怎么分到不同区域的。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先做完教程那一排，想看正确排架时游戏怎样表示完成。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「刚进馆先处理哪一角」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC01.V1"
+        },
+        {
+          "scene": "从怪物学还是占星开始",
+          "text": "你已看见楼下的怪物学与占星、占卜相关分区，脚边各有一本明确属于这两类的书。想让第一趟搬书容易接续，你先捡哪类？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先捡能和手上同系列接起来的怪物学。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先拿占星类，想顺便认熟附近另一排怎么标。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「从怪物学还是占星开始」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC01.ALT1"
+        },
+        {
+          "scene": "分开恋爱小说和异世界纪行",
+          "text": "你已用过二楼墙图，手边两册的封面颜色相近，读出标题后辨认出一本是恋爱小说，一本是异世界纪行。只先送一册，你按什么排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先送异世界纪行，想把二楼墙图上刚记住的另一节走熟。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先送自己已能准确定位的恋爱小说，想把有把握的一本先归齐。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「分开恋爱小说和异世界纪行」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "二楼数学和艺术在面前",
+          "text": "你已经用墙图找到数学与艺术书架，手上也拿着分别属于两区的书。想走完这一趟，你先处理哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把手上能同排继续的数学书放完，想缩短下一次折返。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先把刚靠封面认出来的艺术书送去，想看看同一分区的外观是否跟自己猜的一致。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「二楼数学和艺术在面前」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC02.V1"
+        },
+        {
+          "scene": "楼层名称与书架字母之间",
+          "text": "你已记得一册书属于二楼的恋爱小说，也能在墙图找到这类书架的字母。现在只想停一下把这趟路线记住，你会先认哪一种线索？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "记住这一类别实际书架旁边的画面，下次想靠视觉辨回来。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "记墙图写的分区字母，下次准备直接找那一段。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「楼层名称与书架字母之间」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC02.ALT1"
+        },
+        {
+          "scene": "第一次看两张墙图",
+          "text": "刚进馆已经看到楼下的墙图，也正好能上楼去看二楼的。想在手里还没装多少书之前认路，你先看哪张？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看本层墙图，想让脚边第一批书找得到去处。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先去二楼那张墙图，想先知道上层的题材跟本层有什么区别。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次看两张墙图」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "书都摆上了还没完成这一排",
+          "text": "在自己档里，一排位置已经放满，完成排的数字却没增加。眼前有两种自己能查看的线索，你先查哪一项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "对照完整书名，先找那本颜色很像却不属于同系列的书。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "仔细对照册号顺序，先排除同一套放错先后的情况。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「书都摆上了还没完成这一排」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC03.V1"
+        },
+        {
+          "scene": "同系列先比编号或封面",
+          "text": "你拿到教程附近同一套书的几册，读得清书脊卷号，也能看出同组封面。刚开始排前你先用什么检查？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先从卷号顺序核一遍，想确保第一排不会因为前后颠倒而没算完成。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先看是不是同一套的封面，想排除手里混进的另一本近似题材。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「同系列先比编号或封面」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC03.ALT1"
+        },
+        {
+          "scene": "一排差一本还是另一排从头",
+          "text": "玩到现在，眼前一排差最后一卷，你也能从附近散书凑出另一排的开头。只够认真处理一件，你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先认新一套的标题，想下一次再看到这种封面就知道去哪。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先找齐差一卷的这排，想让完成排数先加一。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「一排差一本还是另一排从头」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "地上的下一册先去哪里",
+          "text": "手上只拿着一小叠书，旁边有一册书一眼能认出题材，也能把已确定归属的书先送回架。还有几分钟，你先做哪件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把已找对位置的书送回架，给下趟捡书空出手。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先捡那本一眼能认出的书，想让下一趟多整理一个已知分区。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「地上的下一册先去哪里」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC04.V1"
+        },
+        {
+          "scene": "持有整摞时第一次用的新功能",
+          "text": "你手里已有同类几册，要腾出手看旁边一排，游戏也刚提示可把手上的书一次整齐放到地上。你会怎么办？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_NEWS",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把手上最外面、已经认到位置的几册上架，再留手里还没核对的。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先把这摞整齐放下来，回来能当成已经分好的一个待办。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「持有整摞时第一次用的新功能」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC04.ALT1"
+        },
+        {
+          "scene": "桌边先做临时分堆",
+          "text": "你已经用过整摞放下，也找到自己常用的临时摆书处。手里两套书需要分开处理，你先怎样整理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_NEWS",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把能够当一组处理的那摞先整齐放在一起，想待会直接认出来。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先把位置已确定的那一册送走，想顺路再看另一类架上的标示。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「桌边先做临时分堆」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "第一枚魔法点挑一种能力",
+          "text": "你已经得到可投入的魔法点，选单同时列可学的洞察之眼与手到擒来。只打算先学一项，在刚起步时你先挑什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "学手到擒来，想让自己已认出的一本帮着把同系列册数带来。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "学洞察之眼，想先亲手见到同系列书在哪些地方发光。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一枚魔法点挑一种能力」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC05.V1"
+        },
+        {
+          "scene": "有点数后先练哪个已会的",
+          "text": "你已经使用过洞察之眼，也学会了自动上架，正在考虑当前还可升级的项目。只有一次调整，你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "继续强化找同系列书的能力，想让下一摞书在找的时候更顺。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先强化自动上架，想让已经找齐的一排更利落地摆进去。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「有点数后先练哪个已会的」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC05.ALT1"
+        },
+        {
+          "scene": "当前读到第一排的提示",
+          "text": "你第一次确实看到完成一排的反馈。继续动手前只准备再留一分钟，你先关注哪块？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "拿附近一本还读得清书脊的新书，想试试下个系列自己能不能认。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "确认首排完成的图标或数字，想记住自己达成第一个小目标。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「当前读到第一排的提示」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "已经找全后用不用自动上架",
+          "text": "手上的同系列书已凑齐，眼前是它对应的一排，你也已学会且可用自动上架。今天特意留了一小段整理时间，你怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用自动上架收尾，想把精力留给下一套缺书。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "继续亲手把册数逐一放好，想留住这排完成时的节奏。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「已经找全后用不用自动上架」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC06.V1"
+        },
+        {
+          "scene": "没有技能也认得第一批书",
+          "text": "还没用魔法时，你手上有一册已看清系列的书，刚从一排标出的类别前经过。现在找到了该去的分区，先怎样处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看看附近同一套还有哪些卷，想知道自己下次拿书先认什么。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先读出该卷编号再放，想把手作的第一次归位办得准确。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「没有技能也认得第一批书」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC06.ALT1"
+        },
+        {
+          "scene": "洞察之眼和逐册目检之间",
+          "text": "你已经用过洞察之眼，面前还散着一套暂时只读到一册的书。还剩一点时间，下一步选什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "开洞察之眼找同系列亮起来的书，想验证另一册在哪里。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先用手把看起来相近的书读一遍，想留一点自己辨书的时间。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「洞察之眼和逐册目检之间」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "手拿书看先前的墙图",
+          "text": "你读清手上那本书的题材，却想不起来哪边是该类书架。脚边可以继续捡，墙图也走得到。你先做哪件？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先捡附近能看出属于同一类的书，想找够一批再去核图。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "去墙图核分区，想把手上这本送对之后再加新书。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「手拿书看先前的墙图」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC07.V1"
+        },
+        {
+          "scene": "用Shelf Guide还是再读一次",
+          "text": "Shelf Guide 这种寻架魔法已经学会，手上这册的题材却没有立刻拿准。继续整理前，你先依靠哪种线索？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用技能确认该去的书架，想把时间花在下一批捡书上。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先仔细查书名、系列与墙图，想下次见到同类不靠提示也能认出。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「用Shelf Guide还是再读一次」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC07.ALT1"
+        },
+        {
+          "scene": "找到四色钥匙前的一次短停",
+          "text": "你已经在自己档里看到明确可拾取的一把彩色钥匙，也有一册拿了就要归位的书。只想多做一项，你先怎么办？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_KEYS",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先完成手头的归位，想按自己熟悉的整理节奏结束。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "拿钥匙并记住见过的对应箱子，想下回把这段小探索接上。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「找到四色钥匙前的一次短停」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "放下几排书后再听同一处",
+          "text": "你已整理过多排，发现原先也站过的一处大厅现在听起来不同。想确认这段变化，你会怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在同一处停一会儿，听背景音与回声现在怎么混在一起。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "看已经亮起的完成排数，给自己留个和当时声音对应的进度。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「放下几排书后再听同一处」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC08.V1"
+        },
+        {
+          "scene": "先改视野还是暗角",
+          "text": "当前版本选项已见到 FOV 与暗角。上、下楼都玩过一次后，你只想改一项改善看书脊时的感觉，先试什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_NEWS",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先改暗角，想看书堆边缘的颜色在现在的屏幕上是否适合自己。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先试自己舒服的视野范围，想改变搜书时一次看到的桌、梯与书架面积。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「先改视野还是暗角」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC08.ALT1"
+        },
+        {
+          "scene": "书架未满时该先听还是看",
+          "text": "还在图书馆早期，已经听过书架还空着时大厅的声音，也看得见一大片散书。想给这款游戏留下一处起初印象，先记什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "记当时大厅的声音和回响，想有个能跟以后对照的感觉。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "记楼梯边书堆和地板最先变清爽的一角，想看空间怎么一点点露出来。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「书架未满时该先听还是看」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "技巧教学和继续普通整理",
+          "text": "你已亲自操作过整摞堆书，也还有一个基础教学提示没仔细看。只剩几分钟，打算怎么用？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_NEWS",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先按原来的方式收完手头的书，下一轮有空再读这段。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "先在游戏选项保留教学显示，读清这次出现的说明。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「技巧教学和继续普通整理」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC09.V1"
+        },
+        {
+          "scene": "想留一个短暂停点",
+          "text": "你刚把一册书归到架上，要离开几分钟，当前可手动保存，最近的自动存档也已经更新。你会先做什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_NEWS",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "手动另留一格好记的停点，回来好认当前的排架进度。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "保留已经更新的自动记录，愿意直接接着这份现有进度。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「想留一个短暂停点」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC09.ALT1"
+        },
+        {
+          "scene": "有两个手动档时如何回去",
+          "text": "你已经在两个手动档保存过同一馆的不同进展，都能在读档列表看到。下次要继续一小段，你先开哪个？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_NEWS",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先打开较早的档，想对比自己现在认分区的方式哪里不同。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先开较近的档，想把上次眼前没处理的一摞接着做。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「有两个手动档时如何回去」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "先累计册数还是先齐一排",
+          "text": "你刚学会看屏幕上册数和完成排数，眼前同时有能归位的散册和马上可凑齐的一排。想给今天定个小目标，你先选什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让确定能还的散册归位，想把大厅地板多清出一点。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先补一排最后缺的册，想让第一项完整记录先出现。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「先累计册数还是先齐一排」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC10.V1"
+        },
+        {
+          "scene": "蓝标出现后下面接哪段",
+          "text": "本体这一档里，你已看见一类分区完成后标记亮蓝，旁边是未完成的另一类别。临时多出一小段时间，你会先做什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去相邻未完成区，想趁还记得这层布局认识一套新书。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先把这片蓝标和已满的排观察一遍，想确认自己把一整区收完了。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「蓝标出现后下面接哪段」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC10.ALT1"
+        },
+        {
+          "scene": "最终找最后几册的取舍",
+          "text": "书已归位到只剩少数，当前游戏也实际显示能用 Recall Stone。还有一处自己的未搜书堆想看，你先怎么做？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_NEWS",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先用已经可用的召回石，把最后几本拉回看得到的地方。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先检查自己记得的那堆书，想沿自己记住的线索找一本。",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录玩家在「最终找最后几册的取舍」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "重新尝试不同的整理过程",
+          "text": "你已整理完自己的普通流程，并打算用另一个本体档开新一轮。看过 Steam 两个目标后，这次你把精力给哪个？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_NEWS",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "尝试不使用主要魔法的目标，想重新感受逐册识别与归位的过程。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "尝试三小时以内的效率目标，愿意按进度观察自己的时间。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「重新尝试不同的整理过程」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC11.V1"
+        },
+        {
+          "scene": "已进入本体特别阶段后",
+          "text": "你亲自完成过正篇并进入过特别阶段，已经实见该阶段可用的终极技能，也还有一份能读的普通整理档。眼下想再体验短短一段，你会怎么选？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先去特别阶段体验终极技能收尾，想看看这段和普通整理区别在哪。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先回到可读的普通整理档，想用自己已经熟悉的一轮收尾。",
+              "signal": "cozy_resident"
+            }
+          ],
+          "design_purpose": "记录玩家在「已进入本体特别阶段后」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC11.ALT1"
+        },
+        {
+          "scene": "清出第一片地面后做什么",
+          "text": "已经有第一小片地面不再被书堆遮住，附近又有一组没放齐。想让今天有个具体的结束，你会怎么选？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再把眼前这组能找齐的册数补完，想给结束留一项完成反馈。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "先停在入口回看清出来的那一角，想看看它现在跟开头差多少。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「清出第一片地面后做什么」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "LIBRARIANARCANELIBRARYPCRESUMEC12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "结算后先看校长哪条",
+          "text": "你已经完成过一次正篇，确实读到校长评价，也记得最终正确排架的数字。想看自己这轮做得怎么样，你先留什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_ACH",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_NEWS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留校长给的一次评价，用结果判断下轮对精度投入多少。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "留自己最终归齐的排数，想用具体完成记录记住这趟。",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录玩家在「结算后先看校长哪条」中的实际行动与取舍。",
+          "interpretation_boundary": "按已见的具体提示、阶段、魔法或本机另一存档作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC12.V1"
+        },
+        {
+          "scene": "回想第一次还对的一册",
+          "text": "回到暂停画面，想起你在魔法图书馆第一次确实觉得自己找到正确书位。朋友问这款游戏的开头怎么样，你从什么讲？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAY",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先讲原来被书挡住的那一点地板终于露出来，让对方想象那间大厅。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先讲自己怎么由卷号认出本来位置，那一刻像解开第一道题。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「回想第一次还对的一册」中的实际行动与取舍。",
+          "interpretation_boundary": "按第一次进图书馆就可见的图书、书架、墙上地图或基本设置作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC12.ALT1"
+        },
+        {
+          "scene": "已整理过一层后给自己留什么",
+          "text": "你确实在本体大厅上下两层整理过书。回顾这一段，你更愿拿哪一个体验当主线？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "LIBRARIANARCANELIBRARYPCRESUMEC_WALL",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_BASE",
+            "LIBRARIANARCANELIBRARYPCRESUMEC_PLAYER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先讲把同一系列的书从两层陆续带回来，楼层分区是自己慢慢走熟的。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先讲场地回声与颜色的变化，空出来的图书馆让自己在意得更多。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「已整理过一层后给自己留什么」中的实际行动与取舍。",
+          "interpretation_boundary": "按当前档已经开启、自己亲手做过的整理状态作答。",
+          "id": "LIBRARIANARCANELIBRARYPCRESUMEC12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+3c78fac5ed0c"
+}

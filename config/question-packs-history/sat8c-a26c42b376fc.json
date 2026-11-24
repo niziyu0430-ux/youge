@@ -1,0 +1,1270 @@
+{
+  "id": "sat8c",
+  "title": "幸福工厂：正式版的带路、供能与第一人称建设",
+  "game_ids": [
+    "steam-526870"
+  ],
+  "scope": "PC正式版基础单人；与旧EA差异按当前实际工具，12独立早期替代用HUB、便携矿机、普通手工部件及最初内置燃烧器/熔炉",
+  "author_review": "source_checked_and_editorially_revised",
+  "player_trial": "not_performed",
+  "status": "released_exploratory",
+  "editorial_notes": [
+    "独立生物质燃烧器按1.0以后有带入口；便携矿机无带接口且不耗燃料或电，取回不用拆解枪。两者不混。",
+    "管线泵只核方向、供电与液体上升，不用精确扬程/吞吐或1.2流体波动细则；工作台不手搓替代配方和电梯项目件。",
+    "替代配方、管线、固定机器、蓝图与Customizer都可换到逐槽手写早期路径；不要求联机、扩展、Mod或完工巨厂。",
+    "b只是真正接通并运行互补配方，y要多轮供给与能量；当次背包和施工先后0分，预览、单件改位与本机保存0分。",
+    "不由产量、厂房整齐、职业设定、操作速度或对野生动物的选择推现实能力道德；h只在有精神且能继续时主动享受熟悉过程。"
+  ],
+  "modes": [
+    {
+      "id": "default",
+      "label": "PC正式版基础单人；与旧EA差异按当前实际工具，12独立早期替代用HUB、便携矿机、普通手工部件及最初内置燃烧器/熔炉",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "SAT8C01",
+      "number": 1,
+      "variants": [
+        {
+          "text": "正式版单人：固定采矿机、熔炉、构造器和储存容器已能运行，电力有余；其中一台构造器偶尔等料，输入输出状态可看，另有材料能调整短带。先做什么？",
+          "scene": "矿机到构造器之间的停顿",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_STORE",
+            "SAT8C_LINE",
+            "SAT8C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先解释等料是否来自其中一段连接方向，只改那一段再看机器输入核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把采矿、冶炼、构造、仓储和供电余量接成持续供给，再随几轮库存调整",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "先核对当前机器输入输出与输送带说明，再回这条线动手",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "在旁边备用空地重复搭一种已会的短带到机器连接，专门练熟自己的端口与朝向操作",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "固定矿机与便携矿机分开。p自提因果单改，y跨多系统持续供给；读说明0分，t是玩家重复练工具。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C01.V1"
+        },
+        {
+          "text": "只有最早便携矿机也能答：它放在铁矿点上，背包有空位，当前矿机停着且存储有矿，HUB工作台已有可做的基础部件。先做什么？",
+          "scene": "矿机到构造器之间的停顿的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜是矿机存储占满才停下，只取出一部分矿，再观察是否恢复核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这趟取矿、回HUB做部件和留出背包空间的先后再行动",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先核对便携矿机现有说明，再回这台机器取矿",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先沿一段安全可达但没亲自看过的矿点边缘走走，想看看那里的地形",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "固定矿机与便携矿机分开。p自提因果单改，y跨多系统持续供给；读说明0分，t是玩家重复练工具。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C01.ALT1"
+        },
+        {
+          "id": "SAT8C01.THIRD",
+          "scene": "监视器下的铁板缺口",
+          "text": "铁板线上已经装了吞吐量监视器。你刚调整一处分流，读数还没吃满一分钟，后段有积压也能走到机器面板。第一步做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8CTHIRD_LOGISTICS",
+            "SAT8CTHIRD_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先让它跑完一段采样，再对照读数和分流口的拥堵处",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先检查后段构造器现在缺什么或堆了什么，找一个能马上看到结果的点",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录「监视器下的铁板缺口」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C02",
+      "number": 2,
+      "variants": [
+        {
+          "text": "正式版的独立生物质燃烧器已有可接带输入，现有该机可接受的固体生物燃料和带够用，电网当前稳定，也能继续加设备。先怎样投入这段时间？",
+          "scene": "独立生物质燃烧器的新入口",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_10",
+            "SAT8C_POWER",
+            "SAT8C_LINE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜新带是否真的接到了燃烧器输入，只改这一段连接再观察燃料进入核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "给这次小设备组新增不使用本来可用的自动送燃料入口的规则，自己手动补料并实际运行几轮",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次备燃料、放储存容器与接短带的施工先后，再照步骤做",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "把燃料制作、储存送入、电网需求与后续补料接成几轮持续供能，再看余量调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "1.0独立燃烧器能接带，不能把旧EA手动必需当性格。i必须新增禁用本已可用自动化且实际执行；普通手动补料不自动计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C02.V1"
+        },
+        {
+          "text": "还没建独立发电组：一台便携矿机已在铁矿点上采矿，存储尚有空位；手上还有装备工坊做出的另一台，当前预览能把它也放在同一矿点的空处，另一处矿点也安全可达，背包能装回矿机。先做什么？",
+          "scene": "独立生物质燃烧器的新入口的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜同一矿点的两台便携矿机会不会各自存矿，保留第一台、只放第二台，再看各自存储核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先把这一趟要带回的铁矿、要留的空格与回HUB路线排清",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "反复练一次已经会的装备矿机、放下与打开存储操作，重心是让自己用熟这套工具",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "D",
+              "label": "拿起一台现有便携矿机并放到另一处可用矿点，亲手看新的布置",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "1.0独立燃烧器能接带，不能把旧EA手动必需当性格。i必须新增禁用本已可用自动化且实际执行；普通手动补料不自动计i。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C02.ALT1"
+        },
+        {
+          "id": "SAT8C02.THIRD",
+          "scene": "煤电已经有净余量",
+          "text": "你已经用煤电供厂房，现在厂里耗电时高时低。电网有余量，新发电机已经可建，也能装通电后会充电的电力储存器。材料只够马上建一种。先接什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8CTHIRD_BUFFER",
+            "SAT8CTHIRD_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先加一台现有煤炭线和供水管都能供应的发电机，抬高日常供电余量",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先接电力储存器，让空闲时的余电留给短时峰值",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录「煤电已经有净余量」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C03",
+      "number": 3,
+      "variants": [
+        {
+          "text": "取水机和一台管线泵均已供电，煤电组有燃料，水管要送上高处；当前泵方向可重设、状态可查看，也有材料能改接。先把注意给什么？",
+          "scene": "向高处送水的那一段",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_PIPE",
+            "SAT8C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把这次要保留的管、泵与改接顺序排清，再实施当前修改",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "B",
+              "label": "先核对泵的方向与扬程说明，再回来处理这段上坡水管",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先提出泵方向可能让水过不去的解释，只改这一台方向，再看其前后管段的水与泵状态核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "把供煤、取水、泵用电、发电和持续用电负荷一起复核，再随后面几轮运行调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "主情境不考高度数字，泵不产水也不保证增加最大流量；p单改方向看真实结果，y跨煤水电持续运作。ALT只给铁板暂不可做及可查库存，不直接告诉缺铁锭的答案；自己提出解释后只做一批铁锭核对，普通制作顺序和比较0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C03.V1"
+        },
+        {
+          "text": "没用过水管也可以：便携矿机已有铁矿，HUB工作台能手工做铁锭、铁板和铁杆；眼前铁板暂时不能制作，现有铁锭和铁矿数量都能查看，铁矿够先做一批铁锭，背包也有空间。现在先选什么？",
+          "scene": "向高处送水的那一段的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜铁板当前不能做是否只差铁锭，只先做一批铁锭，保持其他库存不动，再核对铁板能否制作",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先读当前工作台铁锭与部件的制作需求，再回自己的这一批手工制作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先排清这次取矿、做铁锭、再做板杆和保留建造料的先后，再照着进行",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "D",
+              "label": "先比较当前铁板与铁杆的实际铁锭需求和手头材料，再决定本轮做哪批",
+              "signal": "compare_production_options"
+            }
+          ],
+          "design_purpose": "主情境不考高度数字，泵不产水也不保证增加最大流量；p单改方向看真实结果，y跨煤水电持续运作。ALT只给铁板暂不可做及可查库存，不直接告诉缺铁锭的答案；自己提出解释后只做一批铁锭核对，普通制作顺序和比较0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C03.ALT1"
+        },
+        {
+          "id": "SAT8C03.THIRD",
+          "scene": "把一楼的铜片送到二楼",
+          "text": "你已铺好上下两层。要把铜片送入楼上制作电路板的装配器，机器边有能穿楼板孔的入口，也可以让升降机沿外墙走到二楼另一处接带位。两路的带都有材料。你选哪路？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8CTHIRD_LIFT",
+            "SAT8CTHIRD_LOGISTICS",
+            "SAT8CTHIRD_COPPER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "走已经对好的楼板孔，让铜片在机器旁直接出带",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "把升降机放外墙，看能否从边上的接带位让室内动线更好走",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录「把一楼的铜片送到二楼」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C04",
+      "number": 4,
+      "variants": [
+        {
+          "text": "当前有两条能工作的基础部件线和普通储存容器，一处出口带上东西停住；机器配方、电力和容器存储均可看，该下游容器已有可取物品，背包也能收，材料够重接一小段。先怎样继续？",
+          "scene": "容器出口与分开的供料",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_LINE",
+            "SAT8C_POWER",
+            "SAT8C_INVENTORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对普通容器的输入输出端口说明，再回到自己的这处连接",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先解释是不是出口所接的下游占满，只腾出这个下游容器一处空间，再看这一段流动核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "把两条线的进料、成品缓冲和后续消耗接成持续安排，随几轮库存再调",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "D",
+              "label": "先换一个当前可放的容器位置和短带走向，亲手看本次布局",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "主情境容器与带的背压要可见，p只腾一处空间再看流动，y须持续供料消耗，普通重摆0。ALT是矿没全取走的实际现象，不先断言背包容量就是原因；自提余位解释后只暂存一类物品再取矿核对，普通存取清单0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C04.V1"
+        },
+        {
+          "text": "只在最早HUB附近活动也能选：便携矿机里的这批矿刚才没能全部拿走，个人存储箱仍有空位，背包能装回矿机，物品与堆叠可逐格查看且有一类材料能暂存，工作台的基础制作也可继续。先做什么？",
+          "scene": "容器出口与分开的供料的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE",
+            "SAT8C_INVENTORY"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前存储与取矿说明，再回这次HUB往返操作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "先把这次要带在身上、要留箱里和要去取的原料顺序排清",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先取回一台便携矿机再换到当前可用位置，亲手看看布局",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先猜这次收矿受背包余位限制，只把背包里一类已有材料存回空箱，再实际取矿核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "主情境容器与带的背压要可见，p只腾一处空间再看流动，y须持续供料消耗，普通重摆0。ALT是矿没全取走的实际现象，不先断言背包容量就是原因；自提余位解释后只暂存一类物品再取矿核对，普通存取清单0。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C04.ALT1"
+        },
+        {
+          "id": "SAT8C04.THIRD",
+          "scene": "哪条铁锭流先用",
+          "text": "两条铁锭带已经接到优先合并器，出带速度比两条的总和低。其中一支来自旧库存，另一支连着新开的专线。两条都在走，想先用哪股？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8CTHIRD_LOGISTICS",
+            "SAT8CTHIRD_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "提高常跑专线的优先级，让旧存货在专线没料时再补",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "提高库存入口的优先级，先腾出旧箱空间",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录「哪条铁锭流先用」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C05",
+      "number": 5,
+      "variants": [
+        {
+          "text": "你已解锁Iron Wire和Stitched Iron Plate，现有铁锭、铁板、构造器和组装器均够用，电力有余；旧的普通配方线也能保留。先怎样继续？",
+          "scene": "铁线与缝合铁板的实际搭配",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_WIRE",
+            "SAT8C_PLATE",
+            "SAT8C_BENCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "实际把铁锭产线材的构造器接到用铁板和线材的缝合铁板组装器，运行这组互补配方，看它如何接上现有铁供应",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先比较这两条已开放配方与普通螺丝配方的真实输入，再决定采用哪条",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "C",
+              "label": "把这次保留旧线、备新机器和接料的步骤按手头材料排清，再施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "把铁板、线材、强化板用途与供电接成几轮供需安排，随持续库存调整",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "b是实际互补配方连接并运行，不是抽硬盘或看配方菜单；不称最优、不用数字。工作台不能手搓这些替代配方。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C05.V1"
+        },
+        {
+          "text": "替代配方还没用过：HUB内置生物质燃烧器已经可用，现有叶子能手动放入；它正给早期熔炉供电，熔炉有铁矿可烧，目前没有自动补燃料安排，机器待机与电网状态都能查看。先做什么？",
+          "scene": "铁线与缝合铁板的实际搭配的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE",
+            "SAT8C_HUB",
+            "SAT8C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜这台内置燃烧器的耗料是否随当前用电变化，只把这台熔炉切到待机，保留原燃料和连接，再核对用电与耗料变化",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先排清这一趟取铁矿、给内置燃烧器留叶子和手动添料的先后，再实际做",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "先排清这一轮挪熔炉、保留HUB供电点和重新接电线的编辑步骤，再动手",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "先核对当前HUB内置燃烧器与熔炉供电的已有说明，再回来处理这组设备",
+              "signal": "game_reference_first"
+            }
+          ],
+          "design_purpose": "b是实际互补配方连接并运行，不是抽硬盘或看配方菜单；不称最优、不用数字。工作台不能手搓这些替代配方。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C05.ALT1"
+        },
+        {
+          "id": "SAT8C05.THIRD",
+          "scene": "第一次扫描的两种配方",
+          "text": "MAM 里有一块刚扫完的硬盘，界面正显示两种解锁项和一次重扫机会。其中一项现有厂房会用，另一条产线还没上。你这次怎么处理？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8CTHIRD_DRIVE",
+            "SAT8CTHIRD_STABLE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先收走能接进现有厂房的一项，回头试新用料",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "用还剩的一次重扫，看下一对里会不会出现现在更想收的项目",
+              "signal": "collector"
+            }
+          ],
+          "design_purpose": "记录「第一次扫描的两种配方」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C06",
+      "number": 6,
+      "variants": [
+        {
+          "text": "蓝图设计器当前能用；你自己搭的一组普通机器全在当前边界内，已经可保存，材料与空地也够再放一组。现在先做什么？",
+          "scene": "设计器里的一组构造模块",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_BP",
+            "SAT8C_LOCAL",
+            "SAT8C_10"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜这组预览转向后输入端口会朝哪边，实际放下一组再核对可接的一侧",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "先换一次这组预览的朝向，亲手查看本次占位变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "C",
+              "label": "先把这次放模块与接外部带、电线需要的材料和先后排清，再施工",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "把当前满足保存条件的模块存为自己的本机蓝图，保留这次设计",
+              "signal": "creative_save_local"
+            }
+          ],
+          "design_purpose": "保存0分，预览转向0分；p要实际摆放核对自己的预想。只用当前能装进设计器的普通模块，不假定外部带会自动接通。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C06.V1"
+        },
+        {
+          "text": "蓝图还没开放：你已在HUB旁矿点放过便携矿机，装备工坊和普通部件工作台都能使用，当前材料够再做一台矿机。先选什么？",
+          "scene": "设计器里的一组构造模块的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对当前物品属于工作台部件还是装备工坊装备，再回去实际制作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "重复做一次已会的装备矿机、放置与取矿，重心是练熟自己的这套操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "C",
+              "label": "把一台已有便携矿机取回并换到当前可用位置，亲手体验另一种布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "D",
+              "label": "先排清工作台备普通部件、去装备工坊制矿机与带到矿点的步骤",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "保存0分，预览转向0分；p要实际摆放核对自己的预想。只用当前能装进设计器的普通模块，不假定外部带会自动接通。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C06.ALT1"
+        },
+        {
+          "id": "SAT8C06.THIRD",
+          "scene": "第二座图纸要接住主干带",
+          "text": "你在蓝图设计器存过一组铁板构造模块。第二组要放在第一组旁边，至关重要的两根接带都在面前，自动连接模式的预览确实对上其中一处。你先怎么落？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8CTHIRD_LOGISTICS",
+            "SAT8CTHIRD_BLUE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "用普通放置把站位对准现有格子，下地后逐条手接",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先用能对准的自动连接落下去，主动检查另一端并补带",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录「第二座图纸要接住主干带」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C07",
+      "number": 7,
+      "variants": [
+        {
+          "text": "Customizer已经开放，一块常规色板当前被两台机器使用；已有墙面和地基可改色，也有新工程能做。现在先把这段编辑给什么？",
+          "scene": "已经能用的色板与厂房",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_STYLE",
+            "SAT8C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接给一台当前可上色物件换一次可用色块，亲手看看本次变化",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对当前常规与自定义色板的说明，再回来改自己的这一区",
+              "signal": "tool_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "实际选配机器、墙面与地基的颜色和轮廓，完成自己想表达的厂区主题",
+              "signal": "style_director"
+            },
+            {
+              "id": "D",
+              "label": "先猜只改这块常规色板会不会一起影响两台机器，记原色、只改该板再核对",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "a需自己主题成形；p确有两台已用同一常规板且改单板核对，不把普通刷色本身计推理。未开放Customizer有独立早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C07.V1"
+        },
+        {
+          "text": "还没用过外观工具：资源扫描器当前已能扫铁和铜，你在原地能查看标记，手头有可用便携矿机与基础部件。先做什么？",
+          "scene": "已经能用的色板与厂房的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE",
+            "SAT8C_SCAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把现有便携矿机换到当前可放的另一处，亲手看看这个矿点的布置",
+              "signal": "creative_edit_trial"
+            },
+            {
+              "id": "B",
+              "label": "先核对扫描器当前已开放矿种与操作说明，再回自己的勘探",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "先猜切换当前可扫矿种会怎样改变同一位置的标记，只换扫描种类再核对",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "D",
+              "label": "先排清这趟要带的矿机、背包空位和回HUB所需部件，再出发",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "a需自己主题成形；p确有两台已用同一常规板且改单板核对，不把普通刷色本身计推理。未开放Customizer有独立早期替代。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C07.ALT1"
+        },
+        {
+          "id": "SAT8C07.THIRD",
+          "scene": "沉降券先拿去哪里",
+          "text": "厂边的沉降器已经打出一批券。商店当前的券只够先买一项，双层坡道包和步行走道包都能购买。你正打算把厂房连起来。先买哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8CTHIRD_SINK",
+            "SAT8CTHIRD_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先买双层坡道，给不同高度的平台补一段坡",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "先买走道，把机器之间原来只能绕路的位置连起来",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录「沉降券先拿去哪里」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C08",
+      "number": 8,
+      "variants": [
+        {
+          "text": "单人正式版工厂已能维持，你本人有精神，材料够继续新工程；眼前是熟悉生产区，附近另有一条安全可步行、还没亲自看过的通道。先做什么？",
+          "scene": "已能持续工作的厂区旁",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_STORE",
+            "SAT8C_LINE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "在备用空地重复搭一段已会的短带连接，专门练熟自己对端口和高度的操作",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "仍沿熟悉机器与输送带走一圈，听认得的生产声、看物料流动，享受这套熟悉过程",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看那条陌生通道，想亲眼知道它连接的地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次新工程要带的部件、施工位置和往返先后，再动手",
+              "signal": "creative_workflow_plan"
+            }
+          ],
+          "design_purpose": "h是精力足且材料可推进时主动喜欢熟悉厂区，非等生产或疲劳；w不保证宝物；单次施工计划0分，练操作不看现实手速。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C08.V1"
+        },
+        {
+          "text": "只走过最早HUB与矿点也可答：你有精神，便携矿机能继续工作，手头有材料可再做部件，旁边还有安全可达但未看过的地形。先选什么？",
+          "scene": "已能持续工作的厂区旁的另一情境",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先核对已有工作台部件说明，回来继续这一次制作",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "B",
+              "label": "仍沿走熟的矿点到HUB路线收矿做一批熟悉部件，喜欢这套过程的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "先去看看那片未亲自看过的地形，不先查那里产什么",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "先排清这次要取的矿、要做的普通部件和背包留位，再操作",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "h是精力足且材料可推进时主动喜欢熟悉厂区，非等生产或疲劳；w不保证宝物；单次施工计划0分，练操作不看现实手速。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C08.ALT1"
+        },
+        {
+          "id": "SAT8C08.THIRD",
+          "scene": "下一处石灰石还没探过",
+          "text": "第一处石灰石矿旁的便携采矿机已经放好，机器里有能取的石灰石。扫描器也显示另一个你没看过的同种矿点，附近有可走的路。你先做什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "SAT8CTHIRD_SCAN",
+            "SAT8CTHIRD_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先顺着另一处信号走，看看两个矿点哪边有更好接进来的空地",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先拿现成矿石回去做混凝土，给这段地基开工",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录「下一处石灰石还没探过」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C09",
+      "number": 9,
+      "variants": [
+        {
+          "text": "回想正式版里你确实搭过的固定矿机、机器与输送带，不要求产量或解锁到哪一级。哪种已发生过程更有分量？",
+          "scene": "回看一条真正接过的生产线",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8C_LINE",
+            "SAT8C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先对等料或堵住提出过解释，只改一处后看机器状态核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "把采矿、冶炼、制作、缓冲与用电接成多轮供给，并随库存调整过",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "C",
+              "label": "按当时材料排清过放机、接带与接电的当次先后，并真的做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "D",
+              "label": "为练熟端口与朝向，主动重复搭过同一段已会的短带机器连接",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "全为真实过去；没有把产量高低或布局整齐推现实能力。y不是单次铺线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C09.V1"
+        },
+        {
+          "text": "只回想早期便携矿机与HUB：哪种你真正做过的过程更贴近？",
+          "scene": "回看一条真正接过的生产线的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先猜过矿机满仓才停止，只取出矿后观察核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "B",
+              "label": "按那次背包空位排过取矿和制作普通部件的先后，并照着做过",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "C",
+              "label": "走到过一处当时安全可达却没亲眼看过的矿点边缘",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "亲手取回再换过一台便携矿机的位置，看过新的摆放",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "全为真实过去；没有把产量高低或布局整齐推现实能力。y不是单次铺线。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C09.ALT1"
+        },
+        {
+          "id": "SAT8C09.THIRD",
+          "scene": "满仓以后的余料",
+          "text": "你实际用过智能分流器把满仓后的余料送进沉降器，也试过让仓库满了以后上游传送带停住。回看哪边更想再试？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8CTHIRD_SINK",
+            "SAT8CTHIRD_LOGISTICS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "重新核对溢流出口，让机器在仓库满后还能继续跑",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "测一次满仓什么时候开始顶住上游，把刚好缺多少空间看明白",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录「满仓以后的余料」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C10",
+      "number": 10,
+      "variants": [
+        {
+          "text": "回想正式版里你用过的独立生物质燃烧器，而非旧EA没有带入口的记忆。哪种已发生的投入更像？",
+          "scene": "回看独立燃烧器的那一轮",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8C_10",
+            "SAT8C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "当时明明能自动送燃料，仍给小设备组新增过禁用这个入口的规则，手动补料运行过几轮",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "先解释过一段输入为什么没料，只改单处连接后核对过",
+              "signal": "puzzle_breaker"
+            },
+            {
+              "id": "C",
+              "label": "先核对过已有燃料与电网说明，回来实际处理过自己的设备",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "把燃料制作、储存输送与后续用电接成几轮循环，并据余量调整过",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "手动补料只有本来可自动、自己确实新增限制才i；不把旧EA操作被迫当新玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C10.V1"
+        },
+        {
+          "text": "没建过独立燃烧器也可回顾：只想你已经用过HUB内置燃烧器给第一批熔炉供电的过程。哪项确实发生过？",
+          "scene": "回看独立燃烧器的那一轮的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE",
+            "SAT8C_HUB",
+            "SAT8C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "排过那一趟取矿、保留叶子和手动补燃料的先后，并实际执行过",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "先排清过一次挪熔炉和接回HUB电线的编辑步骤，随后实际照着做过",
+              "signal": "creative_workflow_plan"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时内置燃烧器与供电说明，随后回来真正处理过自己的设备",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "D",
+              "label": "先解释过内置燃烧器耗料与用电负荷的关系，只让一台熔炉待机，保留原料和其他连接，再核对过状态变化",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "手动补料只有本来可自动、自己确实新增限制才i；不把旧EA操作被迫当新玩法。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C10.ALT1"
+        },
+        {
+          "id": "SAT8C10.THIRD",
+          "scene": "煤电扛不住的那一分钟",
+          "text": "你曾接上煤电来提高常态容量，也亲眼见过电力储存器在工厂临时超负荷时开始放电。什么更想复盘？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8CTHIRD_BUFFER",
+            "SAT8CTHIRD_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "回看峰值出现时还有多少存量，决定该把短缺留多长的余量",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "回头看煤和水的供给够不够支撑后来加上的机组",
+              "signal": "build_alchemist"
+            }
+          ],
+          "design_purpose": "记录「煤电扛不住的那一分钟」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C11",
+      "number": 11,
+      "variants": [
+        {
+          "text": "回想你确实让Iron Wire构造器与Stitched Iron Plate组装器相接运行过的一段建设，只按真做过的过程回答；未用过这组配方可换早期情境。哪种更贴近当时重点？",
+          "scene": "回看互补替代配方的选择",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8C_WIRE",
+            "SAT8C_PLATE",
+            "SAT8C_LINE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较过当时已开放配方的真实输入，再决定采用哪条",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "先核对过当时配方和机器的限制，之后回来实际布置过自己的机器",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "实际让铁锭产的线材供给缝合铁板配方，运行过这组互补连接，重点看组合怎样接上铁供应",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "D",
+              "label": "先对机器等料提出过自己的解释，只改一段输入后实际核对过",
+              "signal": "puzzle_breaker"
+            }
+          ],
+          "design_purpose": "b必须真用这组互补配方，其他已开配方经历可选实际p或0分路径；未用替代配方有完整早期替代。不把读配方菜单计构筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C11.V1"
+        },
+        {
+          "text": "没用过替代配方：只回想你实际做过的一次早期HUB升级与普通部件制作，哪项更贴近当时投入？",
+          "scene": "回看互补替代配方的选择的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE",
+            "SAT8C_HUB",
+            "SAT8C_POWER"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先比较过当时工作台已开放部件的真实输入，再决定制作哪一批",
+              "signal": "compare_production_options"
+            },
+            {
+              "id": "B",
+              "label": "核对过当时已有工作台与HUB交料说明，随后回来亲手做过部件并处理交付",
+              "signal": "game_reference_first"
+            },
+            {
+              "id": "C",
+              "label": "核对过当时已列出的HUB升级交付条件，把手头匹配部件实际交入，重点是推进那次明确目标",
+              "signal": "stated_objective_progress"
+            },
+            {
+              "id": "D",
+              "label": "先排清过当次铁矿、铁锭、板杆与背包空位的处理先后，真的照着做过",
+              "signal": "tool_operation_plan"
+            }
+          ],
+          "design_purpose": "b必须真用这组互补配方，其他已开配方经历可选实际p或0分路径；未用替代配方有完整早期替代。不把读配方菜单计构筑。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C11.ALT1"
+        },
+        {
+          "id": "SAT8C11.THIRD",
+          "scene": "把零件放进异次元仓库",
+          "text": "你在同一个档里用传送带给异次元仓库的上传器供过货，也用随身上传放进过手头的材料。下次修一段远处厂房，想先重做哪种准备？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8CTHIRD_DEPOT",
+            "SAT8CTHIRD_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先整理上传器接哪条常跑的供货线，让常用零件能陆续补上",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先挑这趟会突然用到的手头零件随身上传，试一次轻装走远路",
+              "signal": "play_inventor"
+            }
+          ],
+          "design_purpose": "记录「把零件放进异次元仓库」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    },
+    {
+      "id": "SAT8C12",
+      "number": 12,
+      "variants": [
+        {
+          "text": "回想一次你本人有精神、厂区能运行且材料够继续建设的正式版游玩。哪种已发生停留更像？",
+          "scene": "回想一次自己选择的熟悉厂区",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8C_STORE",
+            "SAT8C_STYLE",
+            "SAT8C_BP",
+            "SAT8C_LOCAL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "把当时已满足边界和保存条件的自制模块存入过本机蓝图，保留那次设计",
+              "signal": "creative_save_local"
+            },
+            {
+              "id": "B",
+              "label": "仍沿熟悉机器与传送带走过一圈，因为认得的声音和物料流让自己安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "走到过一段当时没亲自看过的安全通道，想发现地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "用当时已经可用的外观工具改过墙面与机器，完成了自己选的厂区主题",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "全部真实过去；h精力与可推进都在，外观a要真主题，本机保存0分而非收藏/培养。单人不要求真人伙伴。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C12.V1"
+        },
+        {
+          "text": "只玩过最早HUB也可以回顾：当时你有精神、已有材料可做新部件，便携矿机也能继续工作。哪项确实发生过？",
+          "scene": "回想一次自己选择的熟悉厂区的另一情境",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8C_MINER",
+            "SAT8C_BENCH",
+            "SAT8C_STORE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "排清过这一次要取的矿与要做的部件顺序，并真的照着进行了",
+              "signal": "tool_operation_plan"
+            },
+            {
+              "id": "B",
+              "label": "仍按用惯的矿点到HUB步骤慢慢收矿制作，喜欢这套认得过程的安稳",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "C",
+              "label": "去看过当时未亲自到过的一片安全可达地形",
+              "signal": "wanderer"
+            },
+            {
+              "id": "D",
+              "label": "拿起现有便携矿机再换过位置，亲手看过布置变化",
+              "signal": "creative_edit_trial"
+            }
+          ],
+          "design_purpose": "全部真实过去；h精力与可推进都在，外观a要真主题，本机保存0分而非收藏/培养。单人不要求真人伙伴。",
+          "interpretation_boundary": "只解释这次情境的偏好；不由效率、胜负或未体验推断能力与现实人格。",
+          "id": "SAT8C12.ALT1"
+        },
+        {
+          "id": "SAT8C12.THIRD",
+          "scene": "出门扫矿兼看坠机点",
+          "text": "你实际用扫描器重新定位过一处铁矿，也在外出时找到坠机点并拆到一块硬盘。回想两趟路，什么更愿意来一遍？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "SAT8CTHIRD_SCAN",
+            "SAT8CTHIRD_DRIVE",
+            "SAT8CTHIRD_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "再去记得的坠机区域，核对那次捡到的硬盘及回厂后扫出的配方",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "再沿矿的方向走一次，把平时没注意过的坡道和矿口连起来",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录「出门扫矿兼看坠机点」的真实行动与取舍。",
+          "interpretation_boundary": "《幸福工厂》Steam 526870 的 Windows 正式 1.2 系列基础单人玩法。以玩家的 HUB、MAM、建造菜单和已运行的设备为准。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+a26c42b376fc"
+}

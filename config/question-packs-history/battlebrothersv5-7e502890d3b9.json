@@ -1,0 +1,1088 @@
+{
+  "id": "battlebrothersv5",
+  "title": "战场兄弟",
+  "game_ids": [
+    "steam-365360"
+  ],
+  "scope": "Steam App 365360 PC 本体单人战团、随机地图、合约、战斗和退役。",
+  "status": "private_candidate_independently_revised",
+  "author_review": "source_checked_structural_review",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "统一题套",
+      "initial_variants": {
+        "BB09": "BB09.V3"
+      }
+    }
+  ],
+  "editorial_notes": [
+    "12 题位各三情境，前八行动、后四回顾。地图地名由种子生成，所以用已核实的聚落设施、地形和合同定位。",
+    "沿途护送口粮按官方后续说明由商队供给；独立旅行仍需自用口粮。",
+    "战前布阵与战斗轮次明确区分，轮次用题中可用的行动点、疲劳、技能及控制区状态。",
+    "全部来源统一 BB87_ 前缀。未 PC 实机或玩家试答。"
+  ],
+  "slots": [
+    {
+      "id": "BB01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "BB01.V1",
+          "scene": "护送商队出城或走向河边",
+          "text": "城镇的护送商队还没签，目的地是一座陌生城镇。你也有足够自用口粮去探附近的河谷。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_CONTRACT",
+            "BB87_PROVISIONS",
+            "BB87_ESCORT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "wanderer",
+              "label": "暂不签约，走出城去看看河谷那条没去过的路线"
+            },
+            {
+              "id": "B",
+              "signal": "quest_progress_review",
+              "label": "确认护送目的地和报酬，接下这趟随商队走的大路"
+            }
+          ],
+          "design_purpose": "比较签约目的和探路意愿。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB01.V2",
+          "scene": "送货至另一聚落或沿河谷支路",
+          "text": "村里有一份运送货物的合同，昨天在地图上也看见河谷有一条没试过的路。你会先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_CONTRACT",
+            "BB87_JOBS",
+            "BB87_ESCORT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "quest_progress_review",
+              "label": "核对运送货物的目的地，再接这次能直接送往聚落的合同"
+            },
+            {
+              "id": "B",
+              "signal": "wanderer",
+              "label": "沿河谷没走过的小路探过去，想知道附近还能往哪儿走"
+            }
+          ],
+          "design_purpose": "比较签约目的和探路意愿。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB01.V3",
+          "scene": "酒馆里的山地藏身处传闻",
+          "text": "大地图上一处有酒馆的城镇，酒客说丘陵可能有隐蔽的据点。你还有粮食可以远行，也能继续挑当地委托。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_TAVERN",
+            "BB87_WORLD",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "quest_progress_review",
+              "label": "看当地现有合同的目标和报酬，再决定下一次离城的方向"
+            },
+            {
+              "id": "B",
+              "signal": "wanderer",
+              "label": "朝酒客提到的丘陵走，想自己确认那种地形里藏着什么"
+            }
+          ],
+          "design_purpose": "比较签约目的和探路意愿。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "BB02.V1",
+          "scene": "村郊战后腿伤",
+          "text": "追讨货物的战斗结束，前排老兵腿伤并未痊愈，名单上还有一位能出战的预备队员。现在地图上有足够口粮，也能继续接战。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_INJURY",
+            "BB87_CONTRACT",
+            "BB87_JOBS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "growth_keeper",
+              "label": "暂把老兵调入预备队，在村附近先留些恢复时间，等这名兄弟好转再带他接活"
+            },
+            {
+              "id": "B",
+              "signal": "available_operation_trial",
+              "label": "换健康的预备队员去前排，先用这个阵容立刻出发做下一单"
+            }
+          ],
+          "design_purpose": "比较留住长期培养对象和解决当前战力或补给。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB02.V2",
+          "scene": "城镇神庙或预备休息",
+          "text": "回到有神庙的城镇，常用盾手出战时留下会康复的伤势。你有钱付治疗，也能让他休养。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_INJURY",
+            "BB87_WORLD"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "systems_builder",
+              "label": "把伤员留在预备队，用手头的费用维持轮休、口粮和薪金，让后续几趟还能照计划出人"
+            },
+            {
+              "id": "B",
+              "signal": "growth_keeper",
+              "label": "去神庙为他付治疗费，想让这个熟悉的盾手好起来后继续和我走"
+            }
+          ],
+          "design_purpose": "比较留住长期培养对象和解决当前战力或补给。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB02.V3",
+          "scene": "永久伤残后的岗位安排",
+          "text": "一名跟你很久的前排老兵倒地后幸存，永久伤使他近身作战更吃力。战斗结束了，也有能替补的兄弟。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_INJURY",
+            "BB87_STATS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "growth_keeper",
+              "label": "让他留下，找一个仍适合他的岗位，继续培养这名一起走了很久的老兵"
+            },
+            {
+              "id": "B",
+              "signal": "build_alchemist",
+              "label": "让其他人接替前排，重新配盾手和后排的武器，让新阵容各有分工"
+            }
+          ],
+          "design_purpose": "比较留住长期培养对象和解决当前战力或补给。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "BB03.V1",
+          "scene": "强盗路障前选轻重甲",
+          "text": "和劫道强盗交手前仍可换装。你有一件更重的甲，盾手穿上后可用的疲劳空间会变少。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_STATS",
+            "BB87_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "available_operation_trial",
+              "label": "保持他身上已经能用的轻一些的甲，先打这一仗体验现有配置"
+            },
+            {
+              "id": "B",
+              "signal": "build_alchemist",
+              "label": "对照护甲、盾墙所需的疲劳和站位，再为盾手配一套便于持续防守的装备"
+            }
+          ],
+          "design_purpose": "战前在装备、疲劳与武器技能之间取舍。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB03.V2",
+          "scene": "盾手与长柄兵的战前队列",
+          "text": "城外要打强盗，两名队员可以部署。库存里有盾、单手武器和一件能打两格的长柄武器。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_COMBAT",
+            "BB87_POSITION"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "build_alchemist",
+              "label": "让能扛的兄弟持盾在前、另一名拿长柄在后，用攻击距离补前排空档"
+            },
+            {
+              "id": "B",
+              "signal": "available_operation_trial",
+              "label": "沿用两人现在已经会用的武器和队列，先打一场看实际效果"
+            }
+          ],
+          "design_purpose": "战前在装备、疲劳与武器技能之间取舍。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB03.V3",
+          "scene": "截击前分配破盾武器",
+          "text": "追上带盾的强盗之前，可以改变阵型和换武器。有人能用斧，有人适合站在后排打两格。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_COMBAT",
+            "BB87_POSITION"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "available_operation_trial",
+              "label": "保持现有武器，让已在前排的战士直接进这场截击"
+            },
+            {
+              "id": "B",
+              "signal": "build_alchemist",
+              "label": "把能破盾的斧配给够得着敌盾的队员，后排用长柄接上攻击"
+            }
+          ],
+          "design_purpose": "战前在装备、疲劳与武器技能之间取舍。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "BB04.V1",
+          "scene": "相邻盾兵已支起盾墙",
+          "text": "轮到一名拿盾和单手武器的兄弟，相邻同伴已支起盾墙。面前有相邻敌人，他的行动点和疲劳够盾墙或普通攻击，但无法两样都做。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_COMBAT",
+            "BB87_CONTROL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "build_alchemist",
+              "label": "自己也支起盾墙，想利用两名相邻盾兵互相加强的站位"
+            },
+            {
+              "id": "B",
+              "signal": "available_operation_trial",
+              "label": "普通攻击这个已经够得着的敌人，先试着打开前线缺口"
+            }
+          ],
+          "design_purpose": "比较同一名战士在同一回合确实可做的动作。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB04.V2",
+          "scene": "强盗冲锋前的矛墙",
+          "text": "这名持矛兄弟还没被贴身，敌人正在靠近。你能立即开矛墙，也能走到一个不会受控的空格；两种动作本轮只能做一种。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_COMBAT",
+            "BB87_CONTROL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "available_operation_trial",
+              "label": "先移动到另一侧空格，亲自试一试这个位置接下来能否挡住敌人"
+            },
+            {
+              "id": "B",
+              "signal": "practice_seeker",
+              "label": "在原位开矛墙，练习判断敌人从哪格接近、何时会被自己的长矛挡住"
+            }
+          ],
+          "design_purpose": "比较同一名战士在同一回合确实可做的动作。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB04.V3",
+          "scene": "疲劳快满的后排长柄兵",
+          "text": "轮到后排持长柄的兄弟，敌人正好两格远。他的行动点和剩余疲劳只够打一击，也还能结束回合。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_STATS",
+            "BB87_POSITION",
+            "BB87_CONTROL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "practice_seeker",
+              "label": "先结束回合，让疲劳下一轮回落，练习控制输出节奏"
+            },
+            {
+              "id": "B",
+              "signal": "available_operation_trial",
+              "label": "用完这次还够的行动和疲劳，先打眼前可选的目标"
+            }
+          ],
+          "design_purpose": "比较同一名战士在同一回合确实可做的动作。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "BB05.V1",
+          "scene": "招到十二人的志向",
+          "text": "战团在大地图接到选择志向的提示，其中一项是扩充到十二人，也可暂不选志向。眼前有能招人的村镇和还没走过的岔路。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_AMBITION",
+            "BB87_CONTRACT",
+            "BB87_DEFER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "wanderer",
+              "label": "暂不选，先走向没去过的岔路，看看能发现什么"
+            },
+            {
+              "id": "B",
+              "signal": "self_selected_goal_progress",
+              "label": "选十二人的志向，先去能招人的村镇，让我选的招募目标往前一步"
+            }
+          ],
+          "design_purpose": "比较达成志向、长期投入和地图发现。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB05.V2",
+          "scene": "制作战旗的志向",
+          "text": "战旗志向和暂不选志向都能点，战团还没有足够的克朗，也有可自由探索的空当。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_AMBITION",
+            "BB87_CONTRACT",
+            "BB87_DEFER"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "growth_keeper",
+              "label": "选战旗，并为这支一直带着的战团积攒克朗，想看它有自己的旗"
+            },
+            {
+              "id": "B",
+              "signal": "wanderer",
+              "label": "暂不选志向，带队去一段没走过的路看看"
+            }
+          ],
+          "design_purpose": "比较达成志向、长期投入和地图发现。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB05.V3",
+          "scene": "追踪当前志向与下一座城镇",
+          "text": "已选定当前志向，地图上可以查看完成条件。你手里还有粮食，下一座有合同的聚落可达，旁边是未探明林地。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_AMBITION",
+            "BB87_WORLD",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "wanderer",
+              "label": "先往林边没有走过的地方看看，想发现新的路线或据点"
+            },
+            {
+              "id": "B",
+              "signal": "quest_progress_review",
+              "label": "先打开志向进度，核对下一座城镇能帮我满足的具体条件"
+            }
+          ],
+          "design_purpose": "比较达成志向、长期投入和地图发现。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "BB06.V1",
+          "scene": "接受前的袭击商队委托",
+          "text": "一位雇主在你尚未接约前，请你拦截他指名的商队。委托可以接受也能拒绝。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_RAID",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "role_player",
+              "label": "拒绝，按我为战团设定的不袭击民用商旅的原则选择"
+            },
+            {
+              "id": "B",
+              "signal": "available_operation_trial",
+              "label": "接下合同，动身去找正在两处聚落之间行进的目标商队"
+            }
+          ],
+          "design_purpose": "在本体委托和野外事件中明确角色原则与行动。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB06.V2",
+          "scene": "受劫掠的村子求援",
+          "text": "一座村子近来遭到强盗劫掠，给你一份对付强盗的委托。战团还没有别的在途合同。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_CONTRACT",
+            "BB87_JOBS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "quest_progress_review",
+              "label": "先核对眼下的报酬、食物和现有兵力，决定是不是值得签这份"
+            },
+            {
+              "id": "B",
+              "signal": "role_player",
+              "label": "接下委托，按我扮演的会替被劫掠村民出力的战团行事"
+            }
+          ],
+          "design_purpose": "在本体委托和野外事件中明确角色原则与行动。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB06.V3",
+          "scene": "路边已经在交战的商队",
+          "text": "大地图上，一支商队和敌人已经交战，接近后有加入作战的选项。你也可以继续走。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_ESCORT",
+            "BB87_UPDATE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "role_player",
+              "label": "选择相助，照我给战团定下的保护行旅原则行事"
+            },
+            {
+              "id": "B",
+              "signal": "available_operation_trial",
+              "label": "不参与眼前的交战，继续沿已经选好的大路赶往自己的目的地"
+            }
+          ],
+          "design_purpose": "在本体委托和野外事件中明确角色原则与行动。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "BB07.V1",
+          "scene": "失物委托出了村便见足迹",
+          "text": "从村子接下找回失物的委托后，村外能看见一串符合任务方向的足迹。主路也能通向更前面的岔路。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_TAVERN",
+            "BB87_JOBS",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "wanderer",
+              "label": "先离开脚印，走进以前没去过的林边小路看看还能通向哪里"
+            },
+            {
+              "id": "B",
+              "signal": "quest_progress_review",
+              "label": "先对照委托方向和脚印，跟上这串最像任务目标的足迹"
+            }
+          ],
+          "design_purpose": "比较读大地图上的线索与按合同推进。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB07.V2",
+          "scene": "已发现林地的强盗据点",
+          "text": "你在林地边看见一处已经发现的强盗据点，暂时还没点进去，也能返回大路回到熟悉的市场城镇。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_TAVERN",
+            "BB87_WORLD",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "wanderer",
+              "label": "先靠近查看这处以前不知道的据点，想弄清野外藏着什么"
+            },
+            {
+              "id": "B",
+              "signal": "available_operation_trial",
+              "label": "先回城镇市场，用眼前可走的大路继续自己的行程"
+            }
+          ],
+          "design_purpose": "比较读大地图上的线索与按合同推进。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB07.V3",
+          "scene": "护送抵达陌生聚落之后",
+          "text": "护送商队已经到达陌生聚落并结算，现在可以自由行走。你有自用口粮，也能在镇内看下一份工作。先做什么？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_PROVISIONS",
+            "BB87_ESCORT",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "quest_progress_review",
+              "label": "先看镇里可用的委托，核对报酬与任务要到哪里"
+            },
+            {
+              "id": "B",
+              "signal": "wanderer",
+              "label": "走出镇看看还没有到过的地方，顺着岔路了解这里地形"
+            }
+          ],
+          "design_purpose": "比较读大地图上的线索与按合同推进。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "BB08.V1",
+          "scene": "已有名望的战团可以退役",
+          "text": "在大地图的战役中，当前可以让这支已有名望的战团退役，也能继续接下一单。现在你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_RETIRE",
+            "BB87_AMBITION",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "story_keeper",
+              "label": "选择退役，想看看这支战团离开我指挥以后会被怎样讲述"
+            },
+            {
+              "id": "B",
+              "signal": "growth_keeper",
+              "label": "继续经营现有战团，想看跟自己走到现在的兄弟还能怎样成长"
+            }
+          ],
+          "design_purpose": "比较保存战团经历与继续经营或改变具体方法。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB08.V2",
+          "scene": "阵亡名单已新增条目",
+          "text": "一场战斗结束，战团回到大地图，阵亡名单已能看到失去的兄弟，现有成员也还可以接下一份工作。你先？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_FINAL",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "growth_keeper",
+              "label": "先给现在还在的队员重新分配工作，准备带这批兄弟往下走"
+            },
+            {
+              "id": "B",
+              "signal": "story_keeper",
+              "label": "打开阵亡名单看看他们的经历，回想这一场对战团意味着什么"
+            }
+          ],
+          "design_purpose": "比较保存战团经历与继续经营或改变具体方法。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB08.V3",
+          "scene": "战团在城中可以按新规则招募",
+          "text": "战团在有求职者的聚落休整，名单中有多种出身候选。你有足够的钱招人，也想接着培养现有队员。你会？",
+          "question_type": "situational_action",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_ESCORT",
+            "BB87_CONTRACT",
+            "BB87_AMBITION"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "play_inventor",
+              "label": "给自己加一条接下来只招一种出身的规则，从这次招人开始试"
+            },
+            {
+              "id": "B",
+              "signal": "growth_keeper",
+              "label": "先把钱留给这支熟悉的队伍，继续培养已走过几场战斗的成员"
+            }
+          ],
+          "design_purpose": "比较保存战团经历与继续经营或改变具体方法。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "BB09.V1",
+          "scene": "命名武器与名字外观",
+          "text": "回想拿到一把有自己名字、外观也特别的战利品武器。哪一点更有吸引力？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_NAMED",
+            "BB87_STATS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "collector",
+              "label": "把它与其他有名字的战利品留下，慢慢攒出不同的稀有武器"
+            },
+            {
+              "id": "B",
+              "signal": "build_alchemist",
+              "label": "把它交给技能和疲劳能配得上的战士，看看对我现有队伍会有什么变化"
+            }
+          ],
+          "design_purpose": "比较保存不同战利品和把装备投入实战。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB09.V2",
+          "scene": "一面命名盾牌",
+          "text": "回想你得到一面命名盾牌。哪种体验更吸引你？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_NAMED",
+            "BB87_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "collector",
+              "label": "把这面盾和其他不一样的命名装备一起收藏"
+            },
+            {
+              "id": "B",
+              "signal": "build_alchemist",
+              "label": "比较盾的性能和现有队员位置，想找到和它搭配的防线"
+            }
+          ],
+          "design_purpose": "比较保存不同战利品和把装备投入实战。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB09.V3",
+          "scene": "击败劫匪后的普通战利品",
+          "text": "回想击退劫道强盗之后，战利品里有你这支队伍此前很少见的武器。你喜欢怎么处理？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_OFF",
+            "BB87_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "build_alchemist",
+              "label": "把新武器立刻配进现有阵型，弄清它和盾手、后排怎样配合"
+            },
+            {
+              "id": "B",
+              "signal": "collector",
+              "label": "把少见的型号留在仓里，想攒出不同用途的战利品"
+            }
+          ],
+          "design_purpose": "比较保存不同战利品和把装备投入实战。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "BB10.V1",
+          "scene": "贴盾后普通攻击或等待",
+          "text": "回想遇到拉起盾墙的强盗，你曾试着先等对方行动再换一个能打的目标。什么更让你想继续练？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_COMBAT",
+            "BB87_CONTROL"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "practice_seeker",
+              "label": "反复练习何时等、何时攻击，想让自己更能掌握敌我行动顺序"
+            },
+            {
+              "id": "B",
+              "signal": "feedback_engine",
+              "label": "一次次按下攻击后看到命中或落空的反应，再亲手调整下一次出手"
+            }
+          ],
+          "design_purpose": "比较手感、操控练习与战团成长。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB10.V2",
+          "scene": "后排长柄跨两格攻击",
+          "text": "回想把一名持长柄的战士放在盾手后方，亲手从两格外选中敌人攻击。你更喜欢哪部分？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_COMBAT",
+            "BB87_POSITION"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "feedback_engine",
+              "label": "喜欢点下攻击后看到敌人吃招和阵线变化的反馈"
+            },
+            {
+              "id": "B",
+              "signal": "build_alchemist",
+              "label": "看后排的攻击距离怎样补上前排的进攻空档，想继续调整两排配置"
+            }
+          ],
+          "design_purpose": "比较手感、操控练习与战团成长。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB10.V3",
+          "scene": "伤员归队后的第一次出阵",
+          "text": "回想一名在预备队养过腿伤的老兵回来参战。什么最让你想继续带他？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_INJURY",
+            "BB87_STATS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "growth_keeper",
+              "label": "看他从受伤休整一步步回到曾经的位置，我想继续培养他"
+            },
+            {
+              "id": "B",
+              "signal": "build_alchemist",
+              "label": "看他回来以后能和哪些武器、护甲与队形配起来，再试新的分工"
+            }
+          ],
+          "design_purpose": "比较手感、操控练习与战团成长。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "BB11.V1",
+          "scene": "战旗第一次带上战场",
+          "text": "回想完成制作战旗的志向，并让兄弟把旗带进过战斗。你最满意哪一段？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_AMBITION",
+            "BB87_COMBAT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "growth_keeper",
+              "label": "我一直带着同一支队伍，喜欢看他们从拿不到旗走到能扛着它上阵"
+            },
+            {
+              "id": "B",
+              "signal": "self_selected_goal_progress",
+              "label": "我把攒克朗定为明确目标，逐份选择合同，最后真的凑齐了"
+            }
+          ],
+          "design_purpose": "回顾战团里程碑、叙事和个人目标。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB11.V2",
+          "scene": "退役后出现的战团结尾",
+          "text": "回想你让一支战团退役并看完结尾，哪一层更留在你脑海？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_RETIRE"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "story_keeper",
+              "label": "想知道他们在没有我领导之后发生了什么"
+            },
+            {
+              "id": "B",
+              "signal": "growth_keeper",
+              "label": "更记得我长期带着这些兄弟走到这一刻的过程"
+            }
+          ],
+          "design_purpose": "回顾战团里程碑、叙事和个人目标。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB11.V3",
+          "scene": "贵族战争期间的委托",
+          "text": "回想这支队伍经历贵族战争，面前出现过与某一方有关的工作。哪一件事你更在意？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_RETIRE",
+            "BB87_OFF",
+            "BB87_JOBS"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "growth_keeper",
+              "label": "我会留意跟自己很久的成员怎样一起渡过这段危局"
+            },
+            {
+              "id": "B",
+              "signal": "role_player",
+              "label": "我会按自己定下的立场决定接谁的工作"
+            }
+          ],
+          "design_purpose": "回顾战团里程碑、叙事和个人目标。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    },
+    {
+      "id": "BB12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "BB12.V1",
+          "scene": "限制不同出身的征募",
+          "text": "回想从有求职者的城镇招人时，你曾主动给这支新战团限制过可招的出身。哪件事让你更愿意继续？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_ESCORT",
+            "BB87_AMBITION",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "play_inventor",
+              "label": "想看我规定只招特定出身，会怎样改变这轮遇到的合同和打起来的队伍"
+            },
+            {
+              "id": "B",
+              "signal": "growth_keeper",
+              "label": "想持续带着实际招进来的这些人，看他们能一路发展到哪里"
+            }
+          ],
+          "design_purpose": "回顾玩家自己明确采用的原则或可执行限制。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB12.V2",
+          "scene": "委托的袭击目标",
+          "text": "回想遇到要求袭击商队的委托，哪一点最能对应你实际做过的判断？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_RAID",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "story_keeper",
+              "label": "我想读清雇主为什么要动这支商队，好理解世界里的各方关系"
+            },
+            {
+              "id": "B",
+              "signal": "role_player",
+              "label": "我按先前给战团定下的原则决定接不接这份工作"
+            }
+          ],
+          "design_purpose": "回顾玩家自己明确采用的原则或可执行限制。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        },
+        {
+          "id": "BB12.V3",
+          "scene": "行军中给自己加一条绕路规则",
+          "text": "回想出去接下一份委托时，战团有粮，地图上也看得到河上的桥和别处可涉的浅滩。哪种尝试让你更愿意再走一次？",
+          "question_type": "experience_reflection",
+          "modes": [
+            "default"
+          ],
+          "source_ids": [
+            "BB87_ESCORT",
+            "BB87_WORLD",
+            "BB87_CONTRACT"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "signal": "play_inventor",
+              "label": "我曾给自己规定这趟遇河只走已看到的浅滩，试试这样的绕路会怎样影响行程"
+            },
+            {
+              "id": "B",
+              "signal": "wanderer",
+              "label": "我想顺便探一探还不熟悉的河岸，看看哪里能接上另一条道路"
+            }
+          ],
+          "design_purpose": "回顾玩家自己明确采用的原则或可执行限制。",
+          "interpretation_boundary": "Steam PC 本体。仅当题面合同、地点、角色和技能当前已经可用时作答。地图不固定，选择记录该次动机。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+7e502890d3b9"
+}

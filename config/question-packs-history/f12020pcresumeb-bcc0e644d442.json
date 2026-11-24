@@ -1,0 +1,1030 @@
+{
+  "id": "f12020pcresumeb",
+  "title": "F1 2020（竞速）",
+  "game_ids": [
+    "steam-1080110"
+  ],
+  "scope": "Codemasters《F1 2020》Steam 1080110 原生 Windows，最终已公开构建 6711724。使用标准版本机大奖赛、计时赛、车手生涯、My Team 和双人分屏。保留 2020 游戏内车队与赛程；不依赖 F1 2021 以后的功能、舒马赫特别版物品、在线排行榜或联机可用性。",
+  "author_review": "source_checked",
+  "player_trial": "not_performed",
+  "status": "private_candidate_source_checked",
+  "editorial_notes": [],
+  "modes": [
+    {
+      "id": "default",
+      "label": "Windows · 2020 标准版 · 本机模式",
+      "initial_variants": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "F12020PCRESUMEB01",
+      "number": 1,
+      "variants": [
+        {
+          "scene": "第一次在河内先开大奖赛还是计时赛",
+          "text": "你已用普通版在河内赛道的单人大奖赛和计时赛各跑过一次。今天只有一小会儿，你会从哪个入口开始？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_FIA",
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先开一场短大奖赛，想在 2020 年车阵里把一轮名次跑完。",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "先开计时赛，把注意力留给自己在这条赛道的圈时。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「第一次在河内先开大奖赛还是计时赛」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB01.V1"
+        },
+        {
+          "scene": "和同机第二位玩家选赛道",
+          "text": "身边的朋友已用第二个输入设备加入本机分屏。你们都玩过且此时都能选摩纳哥和赞德沃特，一人没有明显偏好。你更想建议去哪？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_FIA",
+            "F12020PCRESUMEB_SPLIT",
+            "F12020PCRESUMEB_STEAM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选一起跑熟悉的摩纳哥，想让两个人都能轻松接着上一回。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "选赞德沃特，想看同一屏幕里两个人怎样感觉这条 2020 新赛道。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「和同机第二位玩家选赛道」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB01.ALT1"
+        },
+        {
+          "scene": "用十站还是完整赛季开局",
+          "text": "你的第一支 My Team 正在选赛历，系统给短赛季或完整赛季，两种都能用。这一次你想安排哪一档？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_FTR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选二十二站，尽量把 2020 游戏内的全部赛道留进首季。",
+              "signal": "collector"
+            },
+            {
+              "id": "B",
+              "label": "选十站，想在较短的日程里先走完一整年的车队经营。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「用十站还是完整赛季开局」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB01.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB02",
+      "number": 2,
+      "variants": [
+        {
+          "scene": "计时赛最快圈已经有回放",
+          "text": "你在计时赛里有一圈已经能从当次的最快圈回放打开。剩的时间只够做一件事，你选再跑一次，还是先重看？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_REPLAY",
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看本局最快圈回放，想确认自己刚才记住的画面有没有遗漏。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "直接再跑一圈，用同一辆车看能不能跑出接近的单圈。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「计时赛最快圈已经有回放」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB02.V1"
+        },
+        {
+          "scene": "加拿大一站资格赛长度",
+          "text": "你准备在本机大奖赛跑加拿大，设置页当前确实能选单圈排位和自己熟悉的较长排位。你这次会用哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_MATCH",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选较长排位，想在同一个周末里有机会多跑几次，对照每次圈时。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "选单圈排位，让赛程快些进入我想玩的正赛。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「加拿大一站资格赛长度」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB02.ALT1"
+        },
+        {
+          "scene": "赞德沃特单人圈时先看哪处",
+          "text": "你在赞德沃特计时赛已经跑出有效圈，屏幕上的分段和整圈用时都看过。暂停前只先记一项，你怎么选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_FIA",
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先看分段变化，想知道这一圈我的哪一段和前次差别最大。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先记整圈时间，想给下次定一个明确的游戏内成绩目标。",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「赞德沃特单人圈时先看哪处」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB02.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB03",
+      "number": 3,
+      "variants": [
+        {
+          "scene": "新车队的另一位车手",
+          "text": "建 My Team 时，预算只够你从显示可签的两位 F2 车手中选一位。一位评级更高，另一位更合你预留的经营开支。你先签谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_DETAIL",
+            "F12020PCRESUMEB_GUIDE"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "签较省预算的，把账上的余地留到车队设施开支。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先签评级高的，想知道他一进队能和自己争到怎样的积分。",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「新车队的另一位车手」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB03.V1"
+        },
+        {
+          "scene": "2020 车阵里先挑人还是挑队",
+          "text": "本机大奖赛已经显示 2020 年正赛车队和名单，你只打算跑一场。这次更愿意从哪里开始选？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_FIA",
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先挑自己想扮演的车手，再接受他在这份 2020 名单里的车队。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先挑想体验的车队，再从两位游戏内车手中找适合这场的一位。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「2020 车阵里先挑人还是挑队」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB03.ALT1"
+        },
+        {
+          "scene": "F2 背景还是直接从 F1 车手开始",
+          "text": "你准备新开车手生涯，已在入口看见本作所支持的 F2 前段与直接开始 F1 的选项。这个存档你会从哪边开？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_FTR",
+            "F12020PCRESUMEB_MATCH",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "直接从 F1 开始，想早点进入自己想跑的那份完整车手赛季。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "从 F2 的经历走起，想给后来升到 F1 的车手留一段前史。",
+              "signal": "story_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「F2 背景还是直接从 F1 车手开始」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB03.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB04",
+      "number": 4,
+      "variants": [
+        {
+          "scene": "用休闲或标准设置回到熟悉赛道",
+          "text": "你已试过本作的休闲和标准比赛风格。同一辆车在本机单人大奖赛都有这两个选项，下次想在熟悉的赛道轻松跑一场，你会留哪档？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_STEAM",
+            "F12020PCRESUMEB_MATCH",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "休闲档，想把这一场主要留给赛道和赛事气氛。",
+              "signal": "cozy_resident"
+            },
+            {
+              "id": "B",
+              "label": "标准档，想再按自己以前练过的菜单搭配跑一次。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「用休闲或标准设置回到熟悉赛道」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB04.V1"
+        },
+        {
+          "scene": "分屏开赛前先让谁调选项",
+          "text": "本机分屏已经显示两个画面。朋友第一次尝试想用辅助，你也实际用过这个入口里的相应设定。开始前你会怎么安排？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_SPLIT",
+            "F12020PCRESUMEB_MATCH",
+            "F12020PCRESUMEB_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先把共同的比赛风格与场次说定，双方有时间各自试熟显示的选项。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先让朋友把自己看得顺的设置确认好，等他表示准备好再开跑。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「分屏开赛前先让谁调选项」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB04.ALT1"
+        },
+        {
+          "scene": "F1 车手生涯的调参时间",
+          "text": "你进入自己的车手生涯，周末准备页能调整已试过的 AI 车手等级。现在时间紧，你会先怎么做？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_PC",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "维持上一站的等级，想先拿这一站当同样难度下的练习。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "调到另一个已用过的等级，想看看赛事和自己第一站印象有什么不一样。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「F1 车手生涯的调参时间」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB04.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB05",
+      "number": 5,
+      "variants": [
+        {
+          "scene": "先配车队主色还是车徽",
+          "text": "你刚进 My Team 的创建界面，普通版已经能改涂装颜色和车队标记。你会先定哪项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_DETAIL",
+            "F12020PCRESUMEB_MATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先定队标和队名相关的风格，想让车队像一个已有来历的新队。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先定涂装主色，想让整辆比赛用车先有一眼能认的样子。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「先配车队主色还是车徽」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB05.V1"
+        },
+        {
+          "scene": "新赛车亮相先定什么",
+          "text": "你已经建过 My Team，看过赛季前自己那辆车的亮相。下一次设计车队时，最想先把变化留给哪里？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_DETAIL",
+            "F12020PCRESUMEB_FTR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "给车在亮相画面里的颜色与图形，想第一眼就知道这一次与上次不同。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "给队伍里自己和队友的组合，想看亮相时谁和谁一起出现在新车队。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「新赛车亮相先定什么」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB05.ALT1"
+        },
+        {
+          "scene": "单人先挑现代还是经典",
+          "text": "在本机计时赛的车辆列表里，一辆标准版经典赛车和一辆 2020 现代赛车都已经开过，也都在可选列表。只够再跑一回，你选谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_FIA",
+            "F12020PCRESUMEB_FTR",
+            "F12020PCRESUMEB_MODES"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "选 2020 车，想让这次单圈能和我上次用的同年份体验直接比较。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "选那辆经典车，想在游戏里重温以前车子的外观和声音。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「单人先挑现代还是经典」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB05.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB06",
+      "number": 6,
+      "variants": [
+        {
+          "scene": "车队日历空三天只能排一项",
+          "text": "My Team 的活动日程只空出几天。屏幕上刚好有一项队友模拟器活动，也有一项团队宣传性质的活动，两项均能排但加起来超过空档。你会先放进哪一项？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_DETAIL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先放队友的模拟器活动，想把这一段时间留给他在游戏里的成长。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先放团队宣传，想让两站之间的日程为整个车队发展服务。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「车队日历空三天只能排一项」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB06.V1"
+        },
+        {
+          "scene": "单场赛后看总结果还是圈时",
+          "text": "刚在本机跑完一场包含 2020 车队的大奖赛，结果页已经在眼前。你记得自己这场跑过的一次好圈，也能看到正式名次。先看什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_PC",
+            "F12020PCRESUMEB_FIA"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先回看自己圈时留下的印象，想弄清那一圈为什么格外记得。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先核最终名次，想知道这场对着整列车最终排在哪。",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「单场赛后看总结果还是圈时」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB06.ALT1"
+        },
+        {
+          "scene": "比赛周末先做哪个练习项目",
+          "text": "2020 生涯周末的练习菜单里，你已见过赛道熟悉和轮胎管理两种项目，两项目前都能选。只够认真跑一个，你眼下会先点哪个？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_PATCH",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先跑赛道熟悉，把这个游戏场地的反馈抄进记忆里。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先试轮胎管理，看项目结算里怎样反馈这次模拟成绩。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「比赛周末先做哪个练习项目」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB06.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB07",
+      "number": 7,
+      "variants": [
+        {
+          "scene": "本机显示视角调整",
+          "text": "你在本机暂停菜单已经实际试过座舱与车身上方两个镜头。接下来只跑一小段，准备换个视觉感受，先用哪种？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_MAN",
+            "F12020PCRESUMEB_PC",
+            "F12020PCRESUMEB_MATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "切到上方镜头，想多看到一眼赛车配色和场地轮廓。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "先留座舱，想感到我在替 2020 名单里那个人坐在车中。",
+              "signal": "role_player"
+            }
+          ],
+          "design_purpose": "记录玩家在「本机显示视角调整」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB07.V1"
+        },
+        {
+          "scene": "本地比一场还是把好友当共同熟悉对象",
+          "text": "你和同机的朋友已经各跑过这站。再开分屏之前，想先说好这一局各自关注什么。你会主张什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_SPLIT",
+            "F12020PCRESUMEB_MATCH",
+            "F12020PCRESUMEB_FTR"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "约定看比赛赛后的两个人名次，当作今天的一轮小比试。",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "约定跑完说说两边画面哪个部分最有意思，想知道对方注意到什么。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「本地比一场还是把好友当共同熟悉对象」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB07.ALT1"
+        },
+        {
+          "scene": "部室预算先留给人员还是市场",
+          "text": "My Team 的设施区里，你的余款只够当前能买的一个项目，人员相关和市场相关都能点。你这次先去哪一栏？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_PRESS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先投市场设施，想让计划中的车队活动获得更合适的支撑。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先投人员设施，想给队友在这个存档留更长远的成长空间。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「部室预算先留给人员还是市场」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB07.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB08",
+      "number": 8,
+      "variants": [
+        {
+          "scene": "主赞助的合同目标和签约款",
+          "text": "你的 My Team 开局出现两份确实可签的主赞助合约。一份起始可用资金更合适，另一份的赛季目标更符合你原本要跑的安排。这一档你更想签谁？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_DETAIL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "签启动资金更合适的，想先把车和队友的可选范围保住。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "签目标更贴近原计划的，想按自己本来就准备完成的赛季方向推进。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「主赞助的合同目标和签约款」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB08.V1"
+        },
+        {
+          "scene": "两笔研发资源只能投入一处",
+          "text": "你已进入 My Team 研发图，当前展示空气动力学和耐久两条都可买的节点，但资源点只够一条。按你当下真正的玩法，会先挑什么？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_PRESS"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先投耐久，想给未来几站的运营留一个更稳定的基础。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先投空气动力学，想在几场后按游戏反馈对照这次改进有没有感觉。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「两笔研发资源只能投入一处」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB08.ALT1"
+        },
+        {
+          "scene": "暂停菜单里的比赛体验先做什么",
+          "text": "你在本地大奖赛打开过比赛内的暂停选项。这场刚完成一次可显示信息的圈，你想先停一下观察还是继续？",
+          "question_type": "situational_action",
+          "source_ids": [
+            "F12020PCRESUMEB_MAN",
+            "F12020PCRESUMEB_PC",
+            "F12020PCRESUMEB_STEAM"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先在暂停后回想刚看到的计时变化，继续前确认记得的是哪个分段。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先回到比赛把眼下这段跑完整，再在结果页核对这一回。",
+              "signal": "quest_board"
+            }
+          ],
+          "design_purpose": "记录玩家在「暂停菜单里的比赛体验先做什么」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB08.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB09",
+      "number": 9,
+      "variants": [
+        {
+          "scene": "My Team 新车队第一次出现在车阵",
+          "text": "你亲历过自己的 My Team 赛车与官方 2020 队伍同场。哪一部分让你第一次觉得这辆车是自己带来的？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_FIA",
+            "F12020PCRESUMEB_DETAIL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先想到为了这场赛历做过哪些安排，车阵把此前的经营变成看得见的结果。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "我先看见自己定的涂装夹在原本熟悉的队色之间。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「My Team 新车队第一次出现在车阵」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB09.V1"
+        },
+        {
+          "scene": "两种本体新赛道的场景记忆",
+          "text": "你确实已经在本机分别跑过河内和赞德沃特，回想 2020 这一作的新增赛道，哪类画面更先回来？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_FIA",
+            "F12020PCRESUMEB_FTR",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "赞德沃特；我先想到赛道坡度和看台在画面里给我的印象。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "河内；我先想到场地周围的城市轮廓，总想知道弯过去能看到什么新建筑。",
+              "signal": "wanderer"
+            }
+          ],
+          "design_purpose": "记录玩家在「两种本体新赛道的场景记忆」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB09.ALT1"
+        },
+        {
+          "scene": "两个不同镜头后的同一场摩纳哥",
+          "text": "你实际在 2020 本地摩纳哥体验过两个视角，后来又看过已显示的比赛重播或片段。最想重看的是什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_PC",
+            "F12020PCRESUMEB_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "自己比赛进展最出乎意料的那几秒，想回到当时觉得局面变了的时刻。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "车从建筑和护栏之间掠过时，远处建筑在不同镜头怎样入画。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「两个不同镜头后的同一场摩纳哥」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB09.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB10",
+      "number": 10,
+      "variants": [
+        {
+          "scene": "计时赛画面离手还记得什么",
+          "text": "你刚完成一次本机计时赛，把该次圈时打开过，也看见有画面可回看。合上游戏后最容易让自己明天回来的是哪一部分？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_REPLAY",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我记得跑出的时间，想知道自己下一次能不能靠近那个数。",
+              "signal": "rank_worker"
+            },
+            {
+              "id": "B",
+              "label": "我记得赛道和车身一起入画的样子，想回到同一个地点再看看。",
+              "signal": "style_director"
+            }
+          ],
+          "design_purpose": "记录玩家在「计时赛画面离手还记得什么」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB10.V1"
+        },
+        {
+          "scene": "两类颁奖情绪",
+          "text": "你在本机赢得过一次登台，也实际看到该局虚拟领奖。让你更愿意记住这次的是哪一面？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_FTR",
+            "F12020PCRESUMEB_FIA",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "是看到PC 画面里这名 2020 车手出现在领奖台时的感觉，像给他的周末补了个片尾。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "是赛事结果让我等到了这个画面，记得那场给自己定过的成绩。",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「两类颁奖情绪」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB10.ALT1"
+        },
+        {
+          "scene": "My Team 一次换队友后的赛季印象",
+          "text": "你已实际在 My Team 的合同期重新选过一位队友。后来回想赛季变化，最先看哪一侧？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_DETAIL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "我先想新队友加入后，这支车队像不像在两个人之间磨合。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "我先想合同、日程和工资怎样接到之后的计划，觉得调整本身更有意思。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「My Team 一次换队友后的赛季印象」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB10.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB11",
+      "number": 11,
+      "variants": [
+        {
+          "scene": "分屏比赛结束后的相处",
+          "text": "和同一位朋友在家完成过 F1 2020 分屏比赛。说起这回想继续玩，哪一种后续安排对你最有吸引力？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_SPLIT",
+            "F12020PCRESUMEB_FTR",
+            "F12020PCRESUMEB_MATCH"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "下回约同一个组合，再比较我们两次的结果有什么变化。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "下回换朋友来选车和赛道，想玩他有兴趣的一场。",
+              "signal": "social_spark"
+            }
+          ],
+          "design_purpose": "记录玩家在「分屏比赛结束后的相处」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB11.V1"
+        },
+        {
+          "scene": "记住车队季前的两种投资记录",
+          "text": "玩过 My Team 首季前几站，回想自己做过一次设施升级，也比较过一回活动日程。下次接着玩最想先查哪一栏？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_DETAIL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查设施项目，想知道这几站慢慢累积下来的建设走到哪一步。",
+              "signal": "growth_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先查接下来的活动日程，想给下一站之前的空档重新做安排。",
+              "signal": "systems_builder"
+            }
+          ],
+          "design_purpose": "记录玩家在「记住车队季前的两种投资记录」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB11.ALT1"
+        },
+        {
+          "scene": "下回大奖赛选熟悉或新赛道",
+          "text": "你在本机从大奖赛完成画面回到赛事菜单，已经决定下次还会选 2020 车阵。下回最想继续哪种感受？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_MATCH",
+            "F12020PCRESUMEB_PC"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "改选另一场尚未走过的赛道，想知道本作赛事换个地方会是什么样。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "回同一条赛道跑一小场，想把上次还不熟的部分练顺。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "design_purpose": "记录玩家在「下回大奖赛选熟悉或新赛道」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB11.ALT2"
+        }
+      ]
+    },
+    {
+      "id": "F12020PCRESUMEB12",
+      "number": 12,
+      "variants": [
+        {
+          "scene": "继续旧车队存档先开哪块",
+          "text": "已玩过自己的 My Team，并在本机存下一个已经跑过赛事的赛季。两条进度都令你有兴趣，之后再开档你打算先去哪里？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_TEAM",
+            "F12020PCRESUMEB_GUIDE",
+            "F12020PCRESUMEB_DETAIL"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先查下一站赛程和空出来的活动日期，想把时间先排明白。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先检视自己和队友在队内的已有进展，想知道他们这一季已经积累了多少。",
+              "signal": "growth_keeper"
+            }
+          ],
+          "design_purpose": "记录玩家在「继续旧车队存档先开哪块」中的实际行动与取舍。",
+          "interpretation_boundary": "My Team、赛事周末或某项配置已确实开放并亲历，未体验可换。",
+          "id": "F12020PCRESUMEB12.V1"
+        },
+        {
+          "scene": "回到主菜单前先记地图名还是成绩",
+          "text": "单人大奖赛结束前，你已经知道自己在《F1 2020》里选的是赞德沃特，也能看到比赛结果。只想记一个东西给以后再玩，你会记什么？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_FIA",
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "留着看台和赛道一起入画的印象，下回先按这个念头选一条。",
+              "signal": "style_director"
+            },
+            {
+              "id": "B",
+              "label": "留着这场的游戏名次作为下一次目标。",
+              "signal": "rank_worker"
+            }
+          ],
+          "design_purpose": "记录玩家在「回到主菜单前先记地图名还是成绩」中的实际行动与取舍。",
+          "interpretation_boundary": "本机基础赛道、单人菜单、大奖赛或计时赛，不要求已开生涯。",
+          "id": "F12020PCRESUMEB12.ALT1"
+        },
+        {
+          "scene": "赛后先留游戏记忆还是看结果",
+          "text": "你看过这场本机大奖赛的自动精彩片段，当前游戏也曾显示正赛结果。只想在离开前花片刻回顾，你会优先哪一边？",
+          "question_type": "experience_reflection",
+          "source_ids": [
+            "F12020PCRESUMEB_MODES",
+            "F12020PCRESUMEB_PC",
+            "F12020PCRESUMEB_MAN"
+          ],
+          "modes": [],
+          "options": [
+            {
+              "id": "A",
+              "label": "先重看片段，把这场自己最想说的一幕留下。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "先核结果，再把当时那一幕和实际进度对在一起。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "design_purpose": "记录玩家在「赛后先留游戏记忆还是看结果」中的实际行动与取舍。",
+          "interpretation_boundary": "本机赛事、车手生涯或分屏，实际已体验才答。",
+          "id": "F12020PCRESUMEB12.ALT2"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+bcc0e644d442"
+}

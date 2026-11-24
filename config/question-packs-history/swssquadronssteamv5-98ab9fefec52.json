@@ -1,0 +1,1110 @@
+{
+  "id": "swssquadronssteamv5",
+  "title": "星球大战™：战机中队",
+  "game_ids": [
+    "steam-1222730"
+  ],
+  "scope": "Steam 1222730 Motive《星球大战™：战机中队》Windows 原作，覆盖战役、练习、单人对 AI 舰队和亲历真人舰队。",
+  "status": "private_candidate_pending_independent_review",
+  "player_trial": "not_performed",
+  "modes": [
+    {
+      "id": "default",
+      "label": "战机中队飞行和舰队战",
+      "initial_variants": {}
+    }
+  ],
+  "editorial_notes": [
+    "12个题位各有战役或练习与单人 AI 舰队情境。真人情境按玩家已经参加的对局解释，可回退到单人 AI 替代。",
+    "单人 AI 从多人及训练进入舰队战对抗 AI 后选 Solo，允许不找真人，和合作对 AI、练习及真人舰队不是同一模式。无需 VR。",
+    "不同飞机按是否有护盾分配或紧急转换。题面要求飞机、载荷或指令当前可用。不假设实时匹配、单机应用服务器数值或离线掉落奖励。"
+  ],
+  "slots": [
+    {
+      "id": "SWSQGR01",
+      "number": 1,
+      "variants": [
+        {
+          "id": "SWSQGR01.V1",
+          "scene": "练习场里第一轮计时",
+          "text": "你在《战机中队》的练习模式里驾驶 X 翼，眼前有能自由穿过的舰骸，暂停菜单也可启动计时障碍赛。现在先飞哪一段？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先不启动计时，挑一条没穿过的舰骸间空隙飞过去。",
+              "signal": "wanderer"
+            },
+            {
+              "id": "B",
+              "label": "先开启计时障碍赛，按同一组标记练一遍转弯节奏。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_MAN",
+            "SWSQGR_PRACT",
+            "SWSQGR_PRACTVID"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "先选进场路线还是先处理阵形",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR01.V2",
+          "scene": "单人舰队开局两类航迹",
+          "text": "你在舰队战对抗 AI 的单人局驾驶 X 翼，舰队开局仍在中线争士气。目标轮可以筛出普通 AI 编队，眼前另有一架正接近你们、能用机头直接选中的敌方中队战机。两边都能接近，你先盯谁？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先沿普通 AI 编队的航线打一轮，为推进士气积累击落。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先用机头选中一架已露出转向路线的敌机，顺着眼前窗口攻击。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_MODE",
+            "SWSQGR_FLEET",
+            "SWSQGR_MAN",
+            "SWSQGR_CTRL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "先选进场路线还是先处理阵形",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR01.V3",
+          "scene": "真人飞进埃塞莱斯",
+          "text": "回到你确实玩过的一局埃塞莱斯（Esseles）多人舰队战，双方还在中线争夺。你有两条能飞的线：与队友一起过开阔处，或从空间设施外侧靠。先怎么上去？",
+          "options": [
+            {
+              "id": "A",
+              "label": "按设施外侧可以遮住视线的路线提前占位，给下一次接敌留退路。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "保持与已出发的真人队友相互看得到，一起接敌。",
+              "signal": "social_spark"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_FLEET",
+            "SWSQGR_P20",
+            "SWSQGR_LUCAS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "先选进场路线还是先处理阵形",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR02",
+      "number": 2,
+      "variants": [
+        {
+          "id": "SWSQGR02.V1",
+          "scene": "雅汶上空的护盾方向",
+          "text": "战役第 2 关 The Skies of Yavin，你驾驶 X 翼，前向护盾仍有余量。一架战机从后方追，你也来得及加速进脱离路线。先动哪个系统？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先把护盾集中到后方，扛住眼下正从机尾打来的火力。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先把功率拨给引擎，离开对方射线，再准备下一次转回来。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M2",
+            "SWSQGR_PCVID",
+            "SWSQGR_MAN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "机上能量和护盾面对哪个威胁",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR02.V2",
+          "scene": "单人舰队 X 翼打开攻击窗口",
+          "text": "单人对 AI 舰队战转入进攻。你的 X 翼还有距离才进入舰炮区，护盾与激光都可充能，下次穿过敌方巡洋舰外侧时只够先调一项。你怎么做？",
+          "options": [
+            {
+              "id": "A",
+              "label": "护盾能量先充足，再按刚选好的路线进舰炮区。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先将功率给激光积蓄火力，用这次进场换一轮更集中的输出。",
+              "signal": "build_alchemist"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_FLEET",
+            "SWSQGR_MAN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "机上能量和护盾面对哪个威胁",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR02.V3",
+          "scene": "帝国 TIE 的能量转换",
+          "text": "练习场里你用无护盾且可做紧急能量转换的 TIE 战机。刚离开一段舰骸，敌方练习编队在前面，两侧都有转向空间。你想先试哪一手？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先把能量转向武器，练短时间内把准星贴住目标的射击。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "先把能量转向引擎，试试用加速拉开后从另一侧回来。",
+              "signal": "play_inventor"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_PRACT",
+            "SWSQGR_MAN",
+            "SWSQGR_CTRL"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "机上能量和护盾面对哪个威胁",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR03",
+      "number": 3,
+      "variants": [
+        {
+          "id": "SWSQGR03.V1",
+          "scene": "第一关的导弹接近警告",
+          "text": "战役第 1 关 Form the Vanguard，导弹警告显示弹体已发射。X 翼带着可用反制，引擎也已有足够加速储备，前方有无障碍的脱离空间。先用哪种？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先用练熟的加速转向脱离，不急着花掉这一份反制。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "看导弹接近提示，在反制有效的时机部署它。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M1",
+            "SWSQGR_PCVID",
+            "SWSQGR_MAN",
+            "SWSQGR_TIPS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "导弹、漂移与重新进场",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR03.V2",
+          "scene": "单人舰队要甩开拦截机",
+          "text": "单人对 AI 舰队战，有敌机跟着你的 A 翼飞，前面有可绕的障碍和一段空域。加速槽有存量，半油门转向和加速漂移你都能做。你选哪个？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先加速到障碍边再漂移，改变机头方向，看看能不能让敌机错过这条线。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "把油门稳在高机动区，沿熟悉的圆弧绕到掩护另一边。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_FLEET",
+            "SWSQGR_MAN",
+            "SWSQGR_TIPS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "导弹、漂移与重新进场",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR03.V3",
+          "scene": "练习场的两个返回方向",
+          "text": "在练习场计时障碍赛开始前，你已经用引擎充出加速，能用按键做加速与漂移。穿过破口后想练急转回到入口。你想先怎么试？",
+          "options": [
+            {
+              "id": "A",
+              "label": "换到另一段可通行的破口，再试不同的漂移起点能不能转入原先走不到的角度。",
+              "signal": "play_inventor"
+            },
+            {
+              "id": "B",
+              "label": "在同一个宽破口重复加速和漂移，先练准触发时机。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_MAN",
+            "SWSQGR_PRACT",
+            "SWSQGR_TIPS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "导弹、漂移与重新进场",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR04",
+      "number": 4,
+      "variants": [
+        {
+          "id": "SWSQGR04.V1",
+          "scene": "先锋中队搜到残骸之后",
+          "text": "战役第 1 关 Form the Vanguard，搜到侦察机残骸后，干扰舰和 TIE 都已出现，玩家可以先打任一类。接下来先处理谁？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先打当前目标里的干扰舰，尽快给增援腾出进来的机会。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先按自己已经练过的锁敌节奏清 TIE，再回身去打干扰舰。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M1",
+            "SWSQGR_PCVID"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "先标什么目标和先打哪一架",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR04.V2",
+          "scene": "单人舰队防守时的临时优先项",
+          "text": "你在单人对 AI 舰队战的防守阶段，己方巡洋舰还在。护航敌任务舰正在逼近，一架敌机也正掉头到你够得着的位置。你选哪一个？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先抓敌机掉头露出的射线，尽量在它重新加速前把它压走。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "先锁正在逼近的任务舰，集中攻击眼前威胁己方军舰的目标。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_FLEET",
+            "SWSQGR_MODE",
+            "SWSQGR_AIVID"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "先标什么目标和先打哪一架",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR04.V3",
+          "scene": "舰队频道里标识轰炸机",
+          "text": "回到你打过的一局真人舰队战，敌方轰炸机已经进场，你和队友都看得到它。你能给当前目标发标记，也能马上发起射击。先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先给队友标记这架轰炸机，让大家知道我在看哪一架。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先利用它正在接近的角度，从有效射程内射击。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_MAN",
+            "SWSQGR_FLEET",
+            "SWSQGR_LUCAS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "先标什么目标和先打哪一架",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR05",
+      "number": 5,
+      "variants": [
+        {
+          "id": "SWSQGR05.V1",
+          "scene": "雅汶扫描Victorum 号进场线",
+          "text": "战役第 2 关，你已到扫描Victorum 号歼星舰的阶段，舰桥后方和别处发亮的候选点都能贴近扫描。你想先查哪里？",
+          "options": [
+            {
+              "id": "A",
+              "label": "按当前进场方向先扫更近的标记部位，再利用后续航线去其他标记。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先绕到任务简报提过的舰桥后方找突破点。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M2",
+            "SWSQGR_PCVID"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "对大舰是一口气打舰体还是优先拆系统",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR05.V2",
+          "scene": "单人 AI 舰队的旗舰子系统",
+          "text": "单人对 AI 舰队战已进入攻击敌旗舰的阶段，你的 X 翼能抵达帝国歼星舰护盾内可打到的角度。瞄准系统和一座仍完好的护盾发生器都有射界。先打哪处？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先打护盾发生器，推进压掉旗舰护盾的目标。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先打瞄准系统，让旗舰炮塔往后的射击更难命中。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_FLEET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "对大舰是一口气打舰体还是优先拆系统",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR05.V3",
+          "scene": "阵线已进到旗舰腹侧",
+          "text": "真人舰队战里你确实参加过帝国歼星舰攻击阶段。此刻动力系统已经被摧毁，旗舰护盾在你攻击的部位已经不挡射线，机头正对一处露出的弱点，但另一侧舰体也能打。你先打哪儿？",
+          "options": [
+            {
+              "id": "A",
+              "label": "沿队伍既定的进出线路攻击这边能打的舰体，少做一次横向改线。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "沿当前角度用主炮打刚亮出的舰体弱点。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_FLEET",
+            "SWSQGR_LUCAS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "对大舰是一口气打舰体还是优先拆系统",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR06",
+      "number": 6,
+      "variants": [
+        {
+          "id": "SWSQGR06.V1",
+          "scene": "先锋 X 翼的补给提示",
+          "text": "战役第 1 关，X 翼机体受伤、反制也少了，战役补给请求已经能用。前面仍有一架可射击的 TIE，你也可先沿已看到的空域拉开。你先做什么？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先请求补给并经过投放点，补回机体和消耗品再回到交火。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "趁这架 TIE 仍在当前射界里先打一轮，再处理补给。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M1",
+            "SWSQGR_PCVID",
+            "SWSQGR_SETTINGS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "自己保住续航还是先帮队伍撑住",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR06.V2",
+          "scene": "单人舰队巡洋舰旁的短返航",
+          "text": "单人对 AI 舰队战推进时，己方仍活着的巡洋舰显示能补给，你的辅助弹药快空，但机体还能打一趟。旗舰机库也仍可用。你选哪处？",
+          "options": [
+            {
+              "id": "A",
+              "label": "回己方旗舰机库补给，并换成已经保存的下一阶段装配再出发。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "去眼前能补给的巡洋舰，补弹后尽快回来接着攻。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_FLEET",
+            "SWSQGR_MODE",
+            "SWSQGR_P20",
+            "SWSQGR_SOLO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "自己保住续航还是先帮队伍撑住",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR06.V3",
+          "scene": "U 翼两个同伴都在射程内",
+          "text": "真人舰队战里，你用装有补给机器人（Supply Droid）的 U 翼。补给机器人还有可用次数，两名真人队友都能锁定且在投送范围内，一架受损快撤，另一架刚缺弹却能继续攻。这次先给谁？",
+          "options": [
+            {
+              "id": "A",
+              "label": "锁定并投送给受损更重的那一架，帮对方安全回到队形。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先锁定并投送给还在射击的一架，让小队这一轮攻击维持得住。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_FLEET",
+            "SWSQGR_ARM",
+            "SWSQGR_MAN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "自己保住续航还是先帮队伍撑住",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR07",
+      "number": 7,
+      "variants": [
+        {
+          "id": "SWSQGR07.V1",
+          "scene": "战役第三关 A 翼出击前",
+          "text": "战役第 3 关 Through Enemy Lines，你在 A 翼出击前看见当前可选辅助件。原装的快速锁定导弹可用，也能换上已开放的无制导齐射火箭。任务要护住Victorum 号。你先保留哪个方案？",
+          "options": [
+            {
+              "id": "A",
+              "label": "把可用的无制导火箭装进一侧辅助槽，补上不依赖导弹锁定的攻击办法。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "保留已经飞顺的原有配装，这次把接近轰炸机的手法练好。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M3",
+            "SWSQGR_M3GEAR",
+            "SWSQGR_PCVID",
+            "SWSQGR_ARM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "可选载荷和角色定位",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR07.V2",
+          "scene": "单人舰队战中的两副 X 翼装配",
+          "text": "单人对 AI 舰队战出击前，机库允许选择两套已存 X 翼装配。一套带离子武器，另一套侧重命中后削减舰体。你想先飞哪套？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先出带离子辅助件的机，给后续标准火力打开机会。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "开练熟的舰体攻击配置，先把自己那轮命中反复做稳。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_ARM",
+            "SWSQGR_FLEET",
+            "SWSQGR_P20",
+            "SWSQGR_SOLO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "可选载荷和角色定位",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR07.V3",
+          "scene": "真人舰队攻击换出轰炸机",
+          "text": "在你玩过的真人舰队战里，新共和国已能向巡洋舰推进。你已经在机库，可保留 X 翼也可改飞带对舰投弹配置的 Y 翼，两者都已可选。你先出哪架？",
+          "options": [
+            {
+              "id": "A",
+              "label": "换 Y 翼，把适合打大舰的载荷用在这一段攻势。",
+              "signal": "build_alchemist"
+            },
+            {
+              "id": "B",
+              "label": "继续飞熟悉的 X 翼，按原本练过的快速掠过路线进攻。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_ARM",
+            "SWSQGR_FLEET",
+            "SWSQGR_P20",
+            "SWSQGR_SOLO"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "可选载荷和角色定位",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR08",
+      "number": 8,
+      "variants": [
+        {
+          "id": "SWSQGR08.V1",
+          "scene": "护航时叫僚机还是自己去",
+          "text": "战役第 3 关，你要护住Victorum 号，Lambda 穿梭机已经到，战役里的命令可用。两架敌穿梭机分别在可跟踪方向。你想怎样分开处理？",
+          "options": [
+            {
+              "id": "A",
+              "label": "用目标标记下令让 AI 僚机攻击一架，自己去截另一架。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "先亲自跟上近处穿梭机，练准一次接敌，再切换到另一架。",
+              "signal": "practice_seeker"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M3",
+            "SWSQGR_PCVID",
+            "SWSQGR_MAN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "调整队伍分工、任务节拍与撤离",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR08.V2",
+          "scene": "单人舰队变成防守的瞬间",
+          "text": "单人对 AI 舰队战中，士气已经变成防守。你正从敌占区撤回，己方巡洋舰还在，前侧能看到一架追击战机。你是先往安全空域飞，还是回身处理追击？",
+          "options": [
+            {
+              "id": "A",
+              "label": "撤退途中在己方一侧有遮挡的位置回头，抓追击战机继续暴露的机会反打。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "拉回己方巡洋舰一侧，及时重整防线再找目标。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_FLEET",
+            "SWSQGR_MODE",
+            "SWSQGR_AIVID"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "调整队伍分工、任务节拍与撤离",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR08.V3",
+          "scene": "队友已标了破口",
+          "text": "真人舰队战进攻中，一位已在位的真人队友标出可打的敌方巡洋舰，你能回应标记，也能从当前角度去挡紧追我方队友的敌机。你先怎么做？",
+          "options": [
+            {
+              "id": "A",
+              "label": "响应标记，和已经进场的人把火力放在同一艘舰。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "先拦截威胁己方进场路线的敌机，替之后的火力轮留出空间。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_MAN",
+            "SWSQGR_FLEET",
+            "SWSQGR_LUCAS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "situational_action",
+          "design_purpose": "调整队伍分工、任务节拍与撤离",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR09",
+      "number": 9,
+      "variants": [
+        {
+          "id": "SWSQGR09.V1",
+          "scene": "穿过练习场残骸以后",
+          "text": "回想你真正飞过练习模式，在残骸间绕过一圈，也试过能计时的障碍路线。哪件实际做过的事更愿意再做？",
+          "options": [
+            {
+              "id": "A",
+              "label": "重飞同一计时路线，反复修正进弯油门和机头偏差。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "刻意离开已飞熟的线，找一个原先没注意到的残骸缝穿过去。",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_PRACT",
+            "SWSQGR_TIPS",
+            "SWSQGR_MAN"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾练习节奏或坐舱信息",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR09.V2",
+          "scene": "AI 局里改过目标轮筛选",
+          "text": "回想一场单人对 AI 舰队战，你在目标轮切换过普通 AI 筛选和所有敌方目标，又在实际交火中用了它。下次最想留住哪件做过的事？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在不同阶段预先切好筛选，让目标列表按这轮分工工作。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "看到目标突然脱离后，立刻切到另一类目标，让自己能跟上眼前的战机。",
+              "signal": "feedback_engine"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_MAN",
+            "SWSQGR_CTRL",
+            "SWSQGR_FLEET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾练习节奏或坐舱信息",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR09.V3",
+          "scene": "坐舱里的任务显示选项",
+          "text": "回想某次战役，你确实试过在 PC 设置打开或关闭飞行界面的目标提示。哪一种自己实际做过的尝试更想继续？",
+          "options": [
+            {
+              "id": "A",
+              "label": "保留目标提示，把主要任务和可选目标按先后排好再飞。",
+              "signal": "systems_builder"
+            },
+            {
+              "id": "B",
+              "label": "减少任务提示后，更多靠战斗显示和无线电，把自己当成靠坐舱读数飞的飞行员。",
+              "signal": "role_player"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_SETTINGS",
+            "SWSQGR_EA"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾练习节奏或坐舱信息",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR10",
+      "number": 10,
+      "variants": [
+        {
+          "id": "SWSQGR10.V1",
+          "scene": "第一关的干扰舰与护航标记",
+          "text": "回想通关 Form the Vanguard 时，你确实重玩过干扰舰与护航 TIE 同场的区段。什么最值得再做一遍？",
+          "options": [
+            {
+              "id": "A",
+              "label": "按奖章条件先清护航战机，再处理干扰舰，完成这次预定的目标。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "先处理干扰舰，等 AI 增援赶到后一起压向最后的轻巡洋舰。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M1",
+            "SWSQGR_PCVID",
+            "SWSQGR_MEDALS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾把什么当作一场战斗的成果",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR10.V2",
+          "scene": "回看单人 AI 舰队的最后一击",
+          "text": "回想你曾在单人对 AI 舰队战打到敌旗舰，自己有飞进护盾空缺攻击过。哪件做过的事更想再做好？",
+          "options": [
+            {
+              "id": "A",
+              "label": "在已经能命中的角度反复飞过，把准星留在能打到的舰体位置。",
+              "signal": "practice_seeker"
+            },
+            {
+              "id": "B",
+              "label": "锁定当时还没拆掉的发生器，盯住这一项拆除目标做到它损毁。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_FLEET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾把什么当作一场战斗的成果",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR10.V3",
+          "scene": "雅汶扫描的另一条航线",
+          "text": "回想战役第 2 关，你重复过Victorum 号的扫描，也确实找到过舰桥后方可扫描的位置。哪部分更想带到下一次？",
+          "options": [
+            {
+              "id": "A",
+              "label": "再次按照简报的提示优先找出舰桥后方的突破点，尝试拿相应奖章。",
+              "signal": "quest_board"
+            },
+            {
+              "id": "B",
+              "label": "沿不同舰面飞一小圈，主动看看上次直接略过的歼星舰部位。",
+              "signal": "wanderer"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M2",
+            "SWSQGR_PCVID"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾把什么当作一场战斗的成果",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR11",
+      "number": 11,
+      "variants": [
+        {
+          "id": "SWSQGR11.V1",
+          "scene": "第七关护送 GR-75",
+          "text": "回想战役第 7 关 Into the Abyss，你护送过 GR-75，也拦过正在接近船队的 TIE 轰炸机。哪件行动你还想再做？",
+          "options": [
+            {
+              "id": "A",
+              "label": "看到轰炸机靠过来后迅速调头，抓它正式进入攻击路径前的机会去拦截。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "按自己扮演的护航飞行员习惯尽量保持在船队旁，继续掩护同一列运输船。",
+              "signal": "role_player"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M7",
+            "SWSQGR_PCVID"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾飞行角色与实际护航",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR11.V2",
+          "scene": "单人舰队 Y 翼的投弹航线",
+          "text": "回想你在单人对 AI 舰队战，确实驾驶装有质子炸弹的 Y 翼飞临敌舰上方投过弹。哪件实做过的事更值得留到下一场？",
+          "options": [
+            {
+              "id": "A",
+              "label": "按自己作为轰炸机飞行员的习惯紧盯敌方大舰，专心完成对舰轰炸。",
+              "signal": "role_player"
+            },
+            {
+              "id": "B",
+              "label": "先选好能从目标上方经过的进入和撤出航线，再把炸弹用在这一轮预定的部位。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_ARM",
+            "SWSQGR_FLEET"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾飞行角色与实际护航",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR11.V3",
+          "scene": "用离子炮飞 TIE 收割者",
+          "text": "回想战役第 5 关 The Trail from Desevro，你驾驶带离子炮的 TIE 收割者，已经用它瘫痪过一艘 GR-75。哪件实做过的事最有感觉？",
+          "options": [
+            {
+              "id": "A",
+              "label": "看到离子攻击令目标停下后，及时把火力转到下一个还能动的目标。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "继续按编队支援机的职责压停运输船，让同队战机去处理其他目标。",
+              "signal": "role_player"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M5",
+            "SWSQGR_PCVID",
+            "SWSQGR_ARM"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾飞行角色与实际护航",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    },
+    {
+      "id": "SWSQGR12",
+      "number": 12,
+      "variants": [
+        {
+          "id": "SWSQGR12.V1",
+          "scene": "雅汶简报与弗里斯克的求援",
+          "text": "回想战役第 2 关，你听过夺取歼星舰的简报，也实际参战并追过攻击弗里斯克（Frisk）的敌机。哪件实做过的事最值得重飞？",
+          "options": [
+            {
+              "id": "A",
+              "label": "先听清简报为什么要夺舰，再飞到舰桥后方观察预先讲过的弱处。",
+              "signal": "story_keeper"
+            },
+            {
+              "id": "B",
+              "label": "留意弗里斯克求援出现时的提示，赶去处理那些被标出的追击机。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_M2",
+            "SWSQGR_PCVID"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾最后最值得保留的路线和选择",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR12.V2",
+          "scene": "单人舰队由进攻转防守",
+          "text": "回想你在单人对 AI 舰队战里确实经历过士气倒向对方、从敌舰附近撤回。哪件做过的事更愿意带进下一局？",
+          "options": [
+            {
+              "id": "A",
+              "label": "观察敌军追出来的时机，在己方半场抓住它暴露的进攻线再转火。",
+              "signal": "feedback_engine"
+            },
+            {
+              "id": "B",
+              "label": "切换到防守后迅速整理返航和补给路线，拿实际资源支撑再出动。",
+              "signal": "systems_builder"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_FLEET",
+            "SWSQGR_MODE",
+            "SWSQGR_AIVID"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾最后最值得保留的路线和选择",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        },
+        {
+          "id": "SWSQGR12.V3",
+          "scene": "真人舰队的末次冲锋",
+          "text": "回想一场你确实参加过的真人舰队战，你的小队进到敌旗舰阶段，也发过或回应过队友的攻击标记。哪件做过的事更想保留？",
+          "options": [
+            {
+              "id": "A",
+              "label": "回应真人队友的子系统标记并和他从不同角度汇合，把最后一轮火力落到同处。",
+              "signal": "social_spark"
+            },
+            {
+              "id": "B",
+              "label": "选中当时还有射界的舰体目标，持续攻击，亲手把这次冲锋推进到旗舰损毁。",
+              "signal": "quest_board"
+            }
+          ],
+          "source_ids": [
+            "SWSQGR_EA",
+            "SWSQGR_FLEET",
+            "SWSQGR_MAN",
+            "SWSQGR_LUCAS"
+          ],
+          "modes": [
+            "default"
+          ],
+          "question_type": "experience_reflection",
+          "design_purpose": "回顾最后最值得保留的路线和选择",
+          "interpretation_boundary": "Motive《星球大战：战机中队》Steam Windows。本作战役和练习可用普通屏幕；在线或离线舰队均以实际对局作答。"
+        }
+      ]
+    }
+  ],
+  "version": "0.5.0+98ab9fefec52"
+}
