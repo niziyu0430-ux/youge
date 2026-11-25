@@ -61,10 +61,22 @@ class ProductionTests(unittest.TestCase):
         response = self.request('/assets/mark.svg')
         self.assertEqual(response['status'], 200)
         self.assertIn(b'<svg', response['body'])
+        self.assertEqual(self.request('/wardrobe.js')['status'], 404)
+        for old, current in (
+            ('/assets/personas/style_director.png', '/assets/personas-v2/style_director-r2.png'),
+            ('/assets/personas-hero/v1/wanderer.webp', '/assets/personas-hero/v2/wanderer.webp'),
+            ('/assets/personas-ribbon/v1/wanderer.webp', '/assets/personas-ribbon/v2/wanderer.webp'),
+        ):
+            with self.subTest(path=old):
+                previous, latest = self.request(old), self.request(current)
+                self.assertEqual(previous['status'], 200)
+                self.assertEqual(latest['status'], 200)
+                self.assertEqual(previous['body'], latest['body'])
 
     def test_login_bootstrap_questions_and_report(self):
         self.assertEqual(self.request('/api/v4/bootstrap')['status'], 401)
         token = self.login()
+        self.assertEqual(self.request('/api/access/app-shell?app=wardrobe', token=token)['status'], 400)
         for path in ('/api/access/app-shell?app=main', '/api/v4/bootstrap', '/api/v4/demo?case=A'):
             self.assertEqual(self.request(path, token=token)['status'], 200, path)
         demo = json.loads(self.request('/api/v4/demo?case=A', token=token)['body'])

@@ -1,8 +1,8 @@
 /* Reader-facing essays; evidence and scoring records remain outside the presentation. */
-export function renderPersonalityReport(r,{esc,arrow,artControls=''}){
+export function renderPersonalityReport(r,{esc,arrow}){
  const profile=r.personality_profile;
  return `<section class="report-shell report-essay">
-  <div class="report-toolbar"><span class="quiet-label">YOUGE · YOUR PLAYER PORTRAIT</span>${artControls}<button class="text-button" data-action="review">回看与修改答案${arrow}</button></div>
+  <div class="report-toolbar"><span class="quiet-label">YOUGE · YOUR PLAYER PORTRAIT</span></div>
   ${r.fictional?'<div class="sample-banner notice sample"><span>虚构示例 · 用于展示格式，不是真实玩家数据。</span><button data-action="begin-fresh">开始自己的测试</button></div>':''}
   <article class="persona-cover">
    <div class="cover-copy"><div class="result-persona-label">你的玩家人格</div><div class="cover-kicker">${esc(r.display_name)}，你是</div>

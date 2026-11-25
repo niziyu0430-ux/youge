@@ -94,6 +94,15 @@ class Handler(SimpleHTTPRequestHandler):
         if normalized.startswith('/api/'):
             if self.require_access():self.json_response({'error':'请使用相应接口的GET或POST方法。'},405)
             return None
+        # Old image links in exported reports resolve to the current artwork.
+        if normalized.startswith('/assets/personas/'):
+            manifest=json.loads((WEB_ROOT/'assets/personas-v2/preview.json').read_text(encoding='utf-8'))
+            latest=next((asset['v2'] for asset in manifest['assets'] if asset['v1']==normalized),None)
+            if latest:self.path=latest
+        for folder in ('personas-hero','personas-ribbon'):
+            prefix=f'/assets/{folder}/v1/'
+            if normalized.startswith(prefix):
+                self.path=f'/assets/{folder}/v2/'+normalized.removeprefix(prefix)
         # Every document load starts at the access page, even after a prior successful login.
         if normalized in ('/','/login') or normalized.endswith(('.html','.htm')):
             original=self.path
@@ -117,10 +126,9 @@ class Handler(SimpleHTTPRequestHandler):
             if not self.require_access():return
         if url.path=='/api/access/app-shell':
             app=parse_qs(url.query).get('app',['main'])[0]
-            if app not in ('main','wardrobe'):
+            if app!='main':
                 return self.json_response({'error':'这个页面不存在。'},400)
-            name,module=('index.html','/v4.js') if app=='main' else ('wardrobe.html','/wardrobe.js')
-            return self.json_response({'html':(WEB_ROOT/name).read_text(encoding='utf-8'), 'module':module})
+            return self.json_response({'html':(WEB_ROOT/'index.html').read_text(encoding='utf-8'), 'module':'/v4.js'})
         if url.path=='/api/v4/bootstrap':
             return self.json_response(questionnaires.bootstrap())
         if url.path=='/api/v4/questions':

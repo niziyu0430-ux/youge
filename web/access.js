@@ -15,7 +15,7 @@ showPassword.addEventListener('click',()=>{
 });
 
 async function mountApplication(payload) {
-  if (!['/v4.js','/wardrobe.js'].includes(payload.module)) throw new Error('页面没有加载成功，请刷新后重新登录。');
+  if (payload.module!=='/v4.js') throw new Error('页面没有加载成功，请刷新后重新登录。');
   const parsed=new DOMParser().parseFromString(payload.html,'text/html');
   parsed.querySelectorAll('script').forEach(script=>script.remove());
   await Promise.all([...parsed.head.querySelectorAll('link[rel="stylesheet"]')].map(style=>new Promise((resolve,reject)=>{
@@ -27,7 +27,7 @@ async function mountApplication(payload) {
   password.value='';
   document.body.className=parsed.body.className;
   document.body.replaceChildren(...[...parsed.body.childNodes].map(node=>document.importNode(node,true)));
-  if (payload.module==='/v4.js') history.replaceState(null,'',`${location.pathname}#home`);
+  history.replaceState(null,'','/#home');
   await import(payload.module);
   window.scrollTo({top:0,behavior:'instant'});
 }
@@ -45,8 +45,7 @@ form.addEventListener('submit',async event=>{
     const data=await response.json();
     if(!response.ok)throw new Error(data.error||'暂时无法登录，请稍后重试。');
     setAccessToken(data.access_token);
-    const app=location.pathname.toLowerCase().endsWith('/wardrobe.html')?'wardrobe':'main';
-    const shellResponse=await authorizedFetch('/api/access/app-shell?app='+app);
+    const shellResponse=await authorizedFetch('/api/access/app-shell');
     if(!shellResponse.ok)throw new Error('页面没有加载成功，请稍后重试。');
     await mountApplication(await shellResponse.json());
   }catch(error){

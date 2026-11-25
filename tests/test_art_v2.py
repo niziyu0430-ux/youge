@@ -1,4 +1,4 @@
-"""Art rollback and presentation isolation; no questionnaire scoring changes."""
+"""Current portrait selection and preservation of archived artwork."""
 import base64
 import hashlib
 import json
@@ -35,18 +35,19 @@ class ArtEditionTests(unittest.TestCase):
                 self.assertTrue((ROOT / 'web' / persona['v1'].lstrip('/')).is_file())
 
     @unittest.skipUnless(shutil.which('node'), 'Node is needed for the browser art module check')
-    def test_switch_changes_only_presentation_and_saves_separate_preference(self):
+    def test_current_portraits_ignore_an_older_saved_preference(self):
         module = base64.b64encode((ROOT / 'web/v4-art.js').read_bytes()).decode('ascii')
         manifest = (ROOT / 'web/assets/personas-v2/preview.json').read_text(encoding='utf-8-sig')
         script = r"""
 import assert from 'node:assert/strict';
 const manifest = MANIFEST;
-const storage = new Map();
-globalThis.localStorage = {getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)};
-globalThis.fetch = async()=>({ok:true,json:async()=>manifest});
+globalThis.localStorage = {getItem:()=> 'v1'};
 const art = await import('data:text/javascript;base64,MODULE');
-await art.initArt();
-assert.equal(art.artEdition(),'v2');
+for (const asset of manifest.assets) {
+  assert.equal(art.portraitFor({id:asset.id,portrait:asset.v1}),asset.v2);
+  assert.equal(art.ribbonPortraitFor(asset),`/assets/personas-ribbon/v2/${asset.id}.webp`);
+  assert.equal(art.heroPortraitFor(asset),`/assets/personas-hero/v2/${asset.id}.webp`);
+}
 const original = {persona:{id:'style_director',name:'A',portrait:'/assets/personas/style_director.png'}, scores:{EXP:75}, response:{answers:{Q01:'A'}}, versions:{scoring:'0.4.0'}};
 const frozenJSON = JSON.stringify(original);
 const v2 = art.styledReport(original);
@@ -55,19 +56,6 @@ assert.equal(JSON.stringify(original),frozenJSON);
 assert.deepEqual(v2.scores,original.scores);
 assert.deepEqual(v2.response,original.response);
 assert.notEqual(v2.persona,original.persona);
-assert.equal(art.setArtEdition('v1'),true);
-assert.equal(art.styledReport(original).persona.portrait,original.persona.portrait);
-assert.deepEqual([...storage.keys()],['youge-art-edition']);
-assert.equal(art.setArtEdition('invalid'),false);
-assert.equal(JSON.stringify(original),frozenJSON);
-await art.initArt();
-assert.equal(art.artEdition(),'v1');
-globalThis.fetch=async()=>{throw Error('unavailable')};
-await art.initArt();
-assert.equal(art.artEdition(),'v1');
-assert.equal(art.setArtEdition('v2'),false);
-assert.equal(art.portraitFor(original.persona),original.persona.portrait);
-console.log('Art switching, persistence, immutable reports and fallback passed');
 """.replace('MANIFEST', manifest).replace('MODULE', module)
         result = subprocess.run(['node', '--input-type=module', '-e', script], capture_output=True, text=True, encoding='utf-8', cwd=ROOT)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
