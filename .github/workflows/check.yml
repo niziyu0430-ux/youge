@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '22'
       - run: pip install -r requirements.txt
-      - run: python -m unittest tests.test_access tests.test_web tests.test_v04 tests.test_production
+      - run: python -m unittest tests.test_access tests.test_web tests.test_v04 tests.test_production tests.test_recommendations
       - run: gunicorn --check-config --config gunicorn.conf.py 'youge.production:create_app()'
         env:
           YOUGE_ACCESS_PASSWORD: ci-only-test-password

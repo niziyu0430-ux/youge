@@ -1,5 +1,12 @@
 /* Reader-facing essays; evidence and scoring records remain outside the presentation. */
-export function renderPersonalityReport(r,{esc,arrow}){
+function gameRecommendations(games,{esc,heading,id}){
+ if(games.length<3)return '';
+ return `<section class="game-recommendations" aria-labelledby="${id}"><${heading} id="${id}">你可能感兴趣的游戏</${heading}><ul role="list">${games.map(game=>
+  `<li><div class="recommended-game-title"><strong>${esc(game.title)}</strong> <span>${esc(game.platform)}</span></div><p>${esc(game.reason)}</p></li>`
+ ).join('')}</ul></section>`;
+}
+
+export function renderPersonalityReport(r,{esc,arrow,recommendations=[]}){
  const profile=r.personality_profile;
  return `<section class="report-shell report-essay">
   <div class="report-toolbar"><span class="quiet-label">YOUGE · YOUR PLAYER PORTRAIT</span></div>
@@ -13,12 +20,16 @@ export function renderPersonalityReport(r,{esc,arrow}){
    </div><div class="cover-figure"><img src="${r.persona.portrait}" alt="${esc(r.persona.name)}的专属3D卡通角色" fetchpriority="high"></div>
   </article>
   <div class="personality-reading">${r.report_sections.map((s,i)=>`<section class="report-section personality-chapter" aria-labelledby="portrait-${s.id}"><div class="chapter-heading"><span class="chapter-index">0${i+1}</span><h2 id="portrait-${s.id}">${esc(s.title)}</h2></div><div class="chapter-prose">${i===0?`<blockquote class="personality-credo">${esc(profile.credo)}</blockquote>`:''}${s.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}</div></section>`).join('')}</div>
+  ${gameRecommendations(recommendations,{esc,heading:'h2',id:'report-recommended-games'})}
   <div class="report-end"><div class="button-row"><button class="primary-button" data-action="poster">保存完整长图${arrow}</button><button class="secondary-button" data-action="export">导出答卷</button><button class="text-button" data-action="rename">留个称呼</button><button class="text-button" data-action="print">打印 / PDF</button><button class="text-button" data-action="begin-fresh">再开启一次</button></div></div>
   <p class="report-fineprint">${esc(r.scope_note)} · 侧写 ${esc(r.versions.report_rules)}</p>
  </section>`;
 }
 
-export function renderPersonaDescription(p,{esc,arrow,header}){
+export function renderPersonaDescription(p,{esc,arrow,header,recommendations=null}){
  const profile=p.personality_profile;
- return `${header(p.name)}<div class="persona-detail-intro"><img src="${p.portrait}" alt="${esc(p.name)}"><div><p class="persona-detail-line">${esc(profile.headline)}</p><div class="pill-group">${profile.traits.map(t=>`<span class="pill">${esc(t)}</span>`).join('')}</div><blockquote>${esc(profile.credo)}</blockquote></div></div><div class="persona-detail-prose"><h3>你的性格底色</h3>${profile.inner_world.map(t=>`<p>${esc(t)}</p>`).join('')}<h3>与你相处的方式</h3>${profile.with_others.map(t=>`<p>${esc(t)}</p>`).join('')}</div><div class="modal-actions"><button class="primary-button" data-action="close-and-library">选择我的本命游戏${arrow}</button></div>`;
+ const recommended=recommendations===null
+  ? '<p class="recommendation-hint">完成测试后，可在你的角色介绍里看到游戏推荐。</p>'
+  : gameRecommendations(recommendations,{esc,heading:'h3',id:'persona-recommended-games'});
+ return `${header(p.name)}<div class="persona-detail-intro"><img src="${p.portrait}" alt="${esc(p.name)}"><div><p class="persona-detail-line">${esc(profile.headline)}</p><div class="pill-group">${profile.traits.map(t=>`<span class="pill">${esc(t)}</span>`).join('')}</div><blockquote>${esc(profile.credo)}</blockquote></div></div><div class="persona-detail-prose"><h3>你的性格底色</h3>${profile.inner_world.map(t=>`<p>${esc(t)}</p>`).join('')}<h3>与你相处的方式</h3>${profile.with_others.map(t=>`<p>${esc(t)}</p>`).join('')}</div>${recommended}<div class="modal-actions"><button class="primary-button" data-action="close-and-library">选择我的本命游戏${arrow}</button></div>`;
 }

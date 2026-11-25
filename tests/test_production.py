@@ -82,6 +82,14 @@ class ProductionTests(unittest.TestCase):
         demo = json.loads(self.request('/api/v4/demo?case=A', token=token)['body'])
         response = self.request('/api/v4/report', 'POST', demo['response'], token)
         self.assertEqual(response['status'], 200)
+        self.assertNotIn('recommendations', json.loads(response['body']))
+        real_response = {**demo['response'], 'fictional': False}
+        response = self.request('/api/v4/report', 'POST', real_response, token)
+        self.assertEqual(response['status'], 200)
+        result = json.loads(response['body'])
+        self.assertTrue(3 <= len(result['recommendations']) <= 5)
+        self.assertNotIn('recommendations', result['report'])
+        self.assertNotIn('recommendations', result['response'])
 
     def test_wrong_password_refresh_and_logout(self):
         self.assertEqual(self.request('/api/access/login','POST',{'password':'incorrect'})['status'],401)

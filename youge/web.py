@@ -12,7 +12,7 @@ import sys
 from urllib.parse import parse_qs,urlsplit,unquote
 
 from .engine import InputError,build_report,compare_reports,load_config
-from . import v04,v05,questionnaires
+from . import v04,v05,questionnaires,recommendations
 from .access import AccessController
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -186,7 +186,11 @@ class Handler(SimpleHTTPRequestHandler):
             if path=='/api/v4/replace-question':
                 if not isinstance(body,dict) or type(body.get('undo',False)) is not bool:raise InputError('换题请求不正确。')
                 return self.json_response(v05.replace_question(body.get('response'),body.get('question_id'),body.get('undo',False)))
-            if path=='/api/v4/report':return self.json_response(questionnaires.report(body))
+            if path=='/api/v4/report':
+                result=questionnaires.report(body)
+                if result['complete'] and not result['report']['fictional']:
+                    result['recommendations']=recommendations.for_report(result['report'])
+                return self.json_response(result)
             if path=='/api/v4/compare':
                 if not isinstance(body,dict) or 'left' not in body or 'right' not in body:raise InputError('请选择两份完整答卷。')
                 return self.json_response(questionnaires.compare(body['left'],body['right']))
